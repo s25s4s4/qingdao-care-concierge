@@ -16,10 +16,10 @@
   <meta property="og:url" content="https://s25s4s4.github.io/qingdao-care-concierge/">
   <meta property="og:type" content="website">
 
-  <!-- Modern Inter & Outfit Typography -->
+  <!-- Google Fonts: Newsreader (Editorial Serif) + Plus Jakarta Sans + JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -29,22 +29,23 @@
         extend: {
           fontFamily: {
             sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-            display: ['"Outfit"', 'sans-serif'],
+            display: ['"Newsreader"', 'Georgia', 'serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
           },
           colors: {
             brand: {
               50: '#f0fdfa',
               100: '#ccfbf1',
-              500: '#14b8a6',
-              600: '#0d9488',
-              700: '#0f766e',
-              800: '#115e59',
-              900: '#134e4a',
-              950: '#042f2e',
+              500: '#0d9488',
+              600: '#0f766e',
+              700: '#115e59',
+              800: '#134e4a',
+              900: '#042f2e',
             },
-            marine: {
+            navy: {
+              800: '#1e293b',
               900: '#0f172a',
-              950: '#020617',
+              950: '#061325',
             }
           }
         }
@@ -121,10 +122,10 @@
             <span>Direct Partner with State Tertiary Grade-A Teaching Hospitals</span>
           </div>
           
-          <h1 class="font-display text-4xl sm:text-5xl xl:text-6xl font-extrabold text-slate-950 tracking-tight leading-[1.12]">
-            Elite Healthcare at <br class="hidden sm:block">
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-teal-500">70% Less Cost.</span><br>
-            Recover by the Pacific Ocean.
+          <h1 class="font-display text-4xl sm:text-5xl xl:text-6xl font-medium text-slate-950 tracking-tight leading-[1.12]">
+            World-class healthcare at <br class="hidden sm:block">
+            <span class="italic text-brand-600 font-normal">60–70% less cost.</span><br>
+            Recover by the ocean.
           </h1>
 
           <p class="text-base sm:text-lg text-slate-600 max-w-xl mx-auto lg:mx-0 leading-relaxed">
