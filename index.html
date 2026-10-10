@@ -150,25 +150,38 @@
 
         <!-- HERO VISUAL CARDS -->
         <div class="lg:col-span-5 relative">
-          <div class="relative mx-auto max-w-md lg:max-w-none">
+          <div class="relative mx-auto max-w-md lg:max-w-none space-y-4">
             <!-- Coastal Image Card -->
-            <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900 relative aspect-[4/3]">
-              <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80" alt="Qingdao Coastal Resort" class="w-full h-full object-cover opacity-90 hover:scale-105 transition duration-700">
-              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+            <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900 relative aspect-[16/10]">
+              <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80" alt="Qingdao Coastal Resort" class="w-full h-full object-cover opacity-90 hover:scale-105 transition duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-transparent"></div>
               <div class="absolute bottom-5 left-5 right-5 text-white">
-                <span class="inline-block px-2.5 py-1 bg-brand-500/90 text-white text-[11px] font-bold rounded-md uppercase tracking-wider mb-1.5 backdrop-blur-sm">Seaside Recovery</span>
-                <p class="font-display font-bold text-lg leading-snug">Recover in Qingdao: Famous for fresh sea breezes, German heritage & Olympic sailing bay.</p>
+                <span class="inline-block px-2.5 py-1 bg-brand-500 text-white text-[10px] font-bold rounded-md uppercase tracking-wider mb-1.5 shadow-sm">Seaside Healing Retreat</span>
+                <p class="font-display font-bold text-base leading-snug">Recover in Coastal Qingdao: Famous for ocean air, Badaguan European architecture & 5-star beachfront resorts.</p>
+              </div>
+            </div>
+
+            <!-- Clinical Excellence Photo Card -->
+            <div class="rounded-3xl overflow-hidden shadow-xl border-4 border-white bg-slate-900 relative aspect-[16/9]">
+              <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=80" alt="Modern Sterile Hospital Facility" class="w-full h-full object-cover opacity-90 hover:scale-105 transition duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-transparent to-transparent"></div>
+              <div class="absolute bottom-4 left-5 right-5 text-white flex justify-between items-end">
+                <div>
+                  <span class="text-emerald-400 text-xs font-bold block">✓ State-of-the-Art Operating Suites</span>
+                  <span class="text-xs text-slate-300">Grade-A Tertiary Clinical Standards</span>
+                </div>
+                <span class="text-[11px] bg-white/20 backdrop-blur-md px-2.5 py-1 rounded-lg font-mono">QDUH & ICQD</span>
               </div>
             </div>
 
             <!-- Floating Trust Badge -->
-            <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-3 max-w-[240px]">
-              <div class="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 shrink-0">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            <div class="bg-white p-4 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 shrink-0 text-lg">
+                🛡️
               </div>
               <div class="text-xs">
                 <span class="font-bold text-slate-900 block">JCI / Tertiary Standards</span>
-                <span class="text-slate-500 text-[11px]">English clinical dossiers & QR trackable implants</span>
+                <span class="text-slate-500 text-[11px]">Full English clinical dossiers & QR-trackable Swiss implants</span>
               </div>
             </div>
           </div>
@@ -352,76 +365,78 @@
       <div class="grid lg:grid-cols-2 gap-8">
         
         <!-- HOSPITAL 1 -->
-        <div class="bg-white rounded-3xl p-8 sm:p-10 border border-slate-200/80 shadow-md flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between pb-6 border-b border-slate-100">
-              <div>
-                <span class="text-xs font-bold text-brand-600 uppercase tracking-wider">Top University Medical Center</span>
-                <h3 class="font-display font-bold text-2xl text-slate-900 mt-1">Affiliated Hospital of Qingdao University (QDUH)</h3>
-              </div>
-              <span class="text-xs bg-slate-100 text-slate-700 px-3 py-1 rounded-full font-mono">Est. 1898</span>
-            </div>
-
-            <p class="text-sm text-slate-600 my-6 leading-relaxed">
-              Ranked the #1 university medical complex in Shandong Province. The dedicated International Medical Wing is situated at the brand-new <strong>Laoshan Medical Complex (No. 59 Haier Road)</strong>, adjacent to the picturesque Shilaoren National Beach Resort.
-            </p>
-
-            <div class="space-y-3 bg-slate-50 p-5 rounded-2xl text-xs sm:text-sm text-slate-700">
-              <div class="flex items-center gap-2">
-                <span class="font-bold text-slate-900">📍 Location:</span>
-                <span>Laoshan Bay District (Near Shilaoren Beach & Hyatt Regency)</span>
-              </div>
-              <div class="flex items-center gap-2">
-                <span class="font-bold text-slate-900">🏆 Key Strengths:</span>
-                <span>Refractive Surgery Center, Executive Cancer Screening, 3.0T MRI</span>
-              </div>
-              <div class="flex items-center gap-2">
-                <span class="font-bold text-slate-900">🌐 International Desk:</span>
-                <span>Bilingual Physicians, Private Fast-Track Wing, Direct Insurance Billing</span>
-              </div>
+        <div class="bg-white rounded-3xl overflow-hidden border border-slate-200/80 shadow-md flex flex-col justify-between hover:shadow-xl transition">
+          <div class="h-48 relative overflow-hidden bg-slate-900">
+            <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=1000&q=80" alt="QDUH Modern Campus" class="w-full h-full object-cover opacity-85 hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent"></div>
+            <div class="absolute bottom-4 left-6 right-6 flex justify-between items-end text-white">
+              <span class="text-xs bg-brand-600 px-3 py-1 rounded-full font-bold uppercase tracking-wider">Teaching Hospital</span>
+              <span class="text-xs font-mono bg-white/20 px-2 py-0.5 rounded">Est. 1898</span>
             </div>
           </div>
+          <div class="p-8 sm:p-10 flex flex-col justify-between flex-1">
+            <div>
+              <span class="text-xs font-bold text-brand-600 uppercase tracking-wider">Ranked #1 University Hospital in Shandong</span>
+              <h3 class="font-display font-bold text-2xl text-slate-900 mt-1">Affiliated Hospital of Qingdao University (QDUH)</h3>
 
-          <div class="mt-8 pt-6 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500 font-mono">
-            <span>Official Hotline: 0532-82912071</span>
-            <span class="text-brand-600 font-bold">Grade-A Tertiary Hospital &check;</span>
+              <p class="text-sm text-slate-600 my-4 leading-relaxed">
+                The flagship medical complex of Shandong Province. Its brand-new International Medical Wing is located at the <strong>Laoshan Medical Complex (No. 59 Haier Road)</strong>, minutes from Shilaoren National Beach.
+              </p>
+
+              <div class="space-y-2.5 bg-slate-50 p-4 rounded-2xl text-xs sm:text-sm text-slate-700">
+                <div class="flex items-center gap-2">
+                  <span class="font-bold text-slate-900">📍 Location:</span>
+                  <span>Laoshan Bay, Stone Old Man Beachfront</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="font-bold text-slate-900">🏆 Key Depts:</span>
+                  <span>Refractive Laser Wing, Executive Screening, 3.0T MRI</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500 font-mono">
+              <span>VIP Hotline: 0532-82912071</span>
+              <span class="text-brand-600 font-bold">Grade-A Tertiary &check;</span>
+            </div>
           </div>
         </div>
 
         <!-- HOSPITAL 2 -->
-        <div class="bg-white rounded-3xl p-8 sm:p-10 border border-slate-200/80 shadow-md flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between pb-6 border-b border-slate-100">
-              <div>
-                <span class="text-xs font-bold text-brand-600 uppercase tracking-wider">Pioneer in Expat Healthcare</span>
-                <h3 class="font-display font-bold text-2xl text-slate-900 mt-1">Qingdao Municipal Hospital International Clinic (ICQD)</h3>
-              </div>
-              <span class="text-xs bg-slate-100 text-slate-700 px-3 py-1 rounded-full font-mono">Est. 1916</span>
-            </div>
-
-            <p class="text-sm text-slate-600 my-6 leading-relaxed">
-              Founded in 2003 as Shandong Province's first dedicated international clinic. Staffed by US and South Korean-trained specialists, it offers over 20 years of continuous foreign patient care, insurance reimbursement, and specialized dental implant surgery.
-            </p>
-
-            <div class="space-y-3 bg-slate-50 p-5 rounded-2xl text-xs sm:text-sm text-slate-700">
-              <div class="flex items-center gap-2">
-                <span class="font-bold text-slate-900">📍 Location:</span>
-                <span>Historic Old Town (Zhongshan Road / Zhanqiao Pier Boardwalk)</span>
-              </div>
-              <div class="flex items-center gap-2">
-                <span class="font-bold text-slate-900">🏆 Key Strengths:</span>
-                <span>Implantology Center (US/Korean Dentists), Authentic TCM Acupuncture</span>
-              </div>
-              <div class="flex items-center gap-2">
-                <span class="font-bold text-slate-900">🌐 Insurance Network:</span>
-                <span>MSH, Bupa, Cigna, Allianz, Direct Billing Protocol</span>
-              </div>
+        <div class="bg-white rounded-3xl overflow-hidden border border-slate-200/80 shadow-md flex flex-col justify-between hover:shadow-xl transition">
+          <div class="h-48 relative overflow-hidden bg-slate-900">
+            <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1000&q=80" alt="Specialized Dental and Clinic" class="w-full h-full object-cover opacity-85 hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent"></div>
+            <div class="absolute bottom-4 left-6 right-6 flex justify-between items-end text-white">
+              <span class="text-xs bg-cyan-600 px-3 py-1 rounded-full font-bold uppercase tracking-wider">Implant & Wellness Center</span>
+              <span class="text-xs font-mono bg-white/20 px-2 py-0.5 rounded">Est. 1916</span>
             </div>
           </div>
+          <div class="p-8 sm:p-10 flex flex-col justify-between flex-1">
+            <div>
+              <span class="text-xs font-bold text-brand-600 uppercase tracking-wider">Shandong's First Expat Clinic</span>
+              <h3 class="font-display font-bold text-2xl text-slate-900 mt-1">Qingdao Municipal Hospital International Clinic (ICQD)</h3>
 
-          <div class="mt-8 pt-6 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500 font-mono">
-            <span>Specialized Dental Wing</span>
-            <span class="text-brand-600 font-bold">20+ Yrs Expat Service &check;</span>
+              <p class="text-sm text-slate-600 my-4 leading-relaxed">
+                Founded in 2003, ICQD features US & South Korean trained dental surgeons and 20+ years of continuous international patient care and direct insurance billing networks.
+              </p>
+
+              <div class="space-y-2.5 bg-slate-50 p-4 rounded-2xl text-xs sm:text-sm text-slate-700">
+                <div class="flex items-center gap-2">
+                  <span class="font-bold text-slate-900">📍 Location:</span>
+                  <span>Historic Old Town (Zhongshan Road / Zhanqiao Pier)</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="font-bold text-slate-900">🏆 Key Depts:</span>
+                  <span>All-on-4 Implantology, Authentic TCM Pain Relief</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500 font-mono">
+              <span>Foreigners Desk</span>
+              <span class="text-brand-600 font-bold">20+ Yrs Expat Service &check;</span>
+            </div>
           </div>
         </div>
 
