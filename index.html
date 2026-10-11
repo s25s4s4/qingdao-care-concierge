@@ -7,12 +7,12 @@
   <meta name="description" content="100% price transparency. Pay accredited public university hospitals directly at official cost. Swiss Straumann implants, Zeiss SMILE vision, and executive checkups in coastal Qingdao with a simple flat concierge fee.">
 
   <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌊</text></svg>">
+  <link rel="icon" type="image/jpeg" href="images/brand_logo.jpg">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Qingdao Care | Transparent Medical Concierge & Healthcare Travel">
   <meta property="og:description" content="Direct hospital payment at official Chinese state rates. Save 60-70% with zero markups. Dedicated English-speaking concierge, chauffeured transfers, and verified Swiss/German hardware.">
-  <meta property="og:image" content="https://s25s4s4.github.io/qingdao-care-concierge/images/qingdao_badaguan_coast.jpg">
+  <meta property="og:image" content="https://s25s4s4.github.io/qingdao-care-concierge/images/brand_logo.jpg">
   <meta property="og:url" content="https://s25s4s4.github.io/qingdao-care-concierge/">
   <meta property="og:type" content="website">
 
@@ -127,18 +127,22 @@
       color: inherit;
     }
     .brand-mark {
-      width: 40px;
-      height: 40px;
+      width: 44px;
+      height: 44px;
       border-radius: 10px;
-      background: var(--navy);
-      color: #fff;
+      overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-family: var(--font-display);
-      font-size: 22px;
-      font-style: italic;
-      font-weight: 600;
+      box-shadow: 0 2px 8px rgba(13, 110, 100, 0.15);
+      border: 1px solid var(--border);
+      background: #fff;
+    }
+    .brand-mark img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
     .brand-text h1 {
       font-size: 18px;
@@ -1200,7 +1204,9 @@
   <nav class="site-nav">
     <div class="wrap">
       <a href="#" class="brand">
-        <div class="brand-mark">Q</div>
+        <div class="brand-mark">
+          <img src="images/brand_logo.jpg" alt="Qingdao Care Official Emblem">
+        </div>
         <div class="brand-text">
           <h1>Qingdao Care</h1>
           <span>Transparent Medical Concierge</span>
