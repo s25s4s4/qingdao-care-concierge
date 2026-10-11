@@ -1289,10 +1289,11 @@
 
       <ul class="nav-links">
         <li><a href="#transparency">How It Works</a></li>
-        <li><a href="#included">Concierge Inclusions</a></li>
-        <li><a href="#pricing">Itemized Costs</a></li>
-        <li><a href="#tour">Optional Leisure</a></li>
-        <li><a href="#hospitals">Partner Hospitals</a></li>
+        <li><a href="#included">Inclusions</a></li>
+        <li><a href="#pricing">Costs</a></li>
+        <li><a href="#calculator">Calculator</a></li>
+        <li><a href="#visa-guide">Visa Guide</a></li>
+        <li><a href="#hospitals">Hospitals</a></li>
         <li><a href="#faq">FAQ</a></li>
       </ul>
 
@@ -1766,6 +1767,131 @@
 
       </div>
 
+      <!-- INTERACTIVE PRICE & SAVINGS CALCULATOR -->
+      <div id="calculator" style="margin-top: 60px; background: #ffffff; border: 1px solid var(--border); border-radius: 16px; padding: 40px; box-shadow: 0 10px 30px rgba(15,23,42,0.06);">
+        <div style="text-align: center; max-width: 680px; margin: 0 auto 32px;">
+          <span style="font-size: 12px; font-weight: 700; color: var(--teal); text-transform: uppercase; letter-spacing: 0.1em; background: rgba(13,148,136,0.08); padding: 5px 12px; border-radius: 999px;">Transparent Self-Quote Tool</span>
+          <h3 class="serif-display" style="font-size: 26px; color: var(--ink); margin-top: 12px; margin-bottom: 8px;">Interactive Treatment & Travel Estimator</h3>
+          <p style="font-size: 14px; color: var(--ink-muted); margin: 0;">Calculate exact hospital fees, hotel nights, and our flat $1,200 concierge logistics. See your verified savings compared to US/UK private care.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; align-items: start;">
+          <!-- CONTROLS -->
+          <div style="background: #f8fafc; padding: 24px; border-radius: 12px; border: 1px solid #e2e8f0;">
+            <div style="margin-bottom: 20px;">
+              <label style="display: block; font-size: 13px; font-weight: 700; color: var(--ink); margin-bottom: 8px;">1. Select Clinical Procedure</label>
+              <select id="calc-procedure" class="form-control" style="background: #fff; font-size: 14px;" onchange="updateLiveEstimate()">
+                <option value="implant-1">1x Swiss Straumann Implant + Zirconia Crown</option>
+                <option value="implant-2">2x Swiss Straumann Implants + Zirconia Crowns</option>
+                <option value="implant-3" selected>3x Swiss Straumann Implants + Zirconia Crowns</option>
+                <option value="implant-4">4x Swiss Straumann Implants (Bridge / Arch)</option>
+                <option value="smile">Carl Zeiss SMILE Laser Eye Surgery (Both Eyes)</option>
+                <option value="mri">Executive Cancer & 3.0T MRI Screening Suite</option>
+                <option value="tcm">TCM Chronic Pain & Acupuncture 7-Day Protocol</option>
+              </select>
+            </div>
+
+            <div style="margin-bottom: 20px;">
+              <label style="display: block; font-size: 13px; font-weight: 700; color: var(--ink); margin-bottom: 8px;">2. Seaside Hotel Choice (7 Nights)</label>
+              <select id="calc-hotel" class="form-control" style="background: #fff; font-size: 14px;" onchange="updateLiveEstimate()">
+                <option value="comfort" selected>Beachfront 4-Star Comfort (~$55/night, e.g. Atour)</option>
+                <option value="luxury">5-Star Oceanfront Luxury (~$120/night, e.g. Hyatt Regency)</option>
+                <option value="none">I Will Book My Own Accommodation ($0)</option>
+              </select>
+            </div>
+
+            <div>
+              <label style="display: block; font-size: 13px; font-weight: 700; color: var(--ink); margin-bottom: 8px;">3. Concierge & Logistics Package</label>
+              <div style="font-size: 13px; color: #475569; background: #fff; border: 1px solid #cbd5e1; padding: 12px; border-radius: 8px; line-height: 1.5;">
+                <span style="color: var(--teal); font-weight: 700;">Flat $1,200</span> • Includes airport transfers, dedicated hospital escort, certified bilingual interpreter, local 5G SIM card, and medical record translation.
+              </div>
+            </div>
+          </div>
+
+          <!-- LIVE BREAKDOWN -->
+          <div style="background: var(--navy); color: #fff; padding: 28px; border-radius: 12px; box-shadow: 0 10px 25px rgba(15,23,42,0.15);">
+            <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: #94a3b8; margin-bottom: 16px;">Live Estimated Cost Breakdown</div>
+
+            <div style="border-bottom: 1px solid rgba(255,255,255,0.12); padding-bottom: 12px; margin-bottom: 12px;">
+              <div style="display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 6px;">
+                <span style="color: #cbd5e1;">Hospital Cashier (Paid on-site):</span>
+                <span id="calc-hosp-fee" style="font-weight: 700; color: #38bdf8;">$3,600</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 6px;">
+                <span style="color: #cbd5e1;">Hotel Stay (7 Nights):</span>
+                <span id="calc-hotel-fee" style="font-weight: 700;">$385</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 13px;">
+                <span style="color: #cbd5e1;">Full Concierge & Chauffeur:</span>
+                <span style="font-weight: 700;">$1,200</span>
+              </div>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 16px;">
+              <span style="font-size: 15px; font-weight: 600;">Total All-In Trip Cost:</span>
+              <span id="calc-total" style="font-size: 28px; font-weight: 800; color: #2dd4bf;">$5,185</span>
+            </div>
+
+            <div style="background: rgba(45,212,191,0.12); border: 1px solid rgba(45,212,191,0.3); border-radius: 8px; padding: 12px 16px; margin-bottom: 20px;">
+              <div style="display: flex; justify-content: space-between; font-size: 12px; color: #94a3b8; margin-bottom: 4px;">
+                <span>Estimated US/UK Self-Pay Cost:</span>
+                <span id="calc-western" style="text-decoration: line-through;">$14,500</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 14px; font-weight: 700; color: #2dd4bf;">
+                <span>Total Estimated Savings:</span>
+                <span id="calc-savings">Save ~$9,315 (64%)</span>
+              </div>
+            </div>
+
+            <button onclick="applyEstimateToForm()" class="btn btn-primary" style="width: 100%; padding: 12px; font-size: 14px; font-weight: 700; background: #0d9488; border-color: #0d9488;">
+              Apply This Estimate to Inquiry Form &darr;
+            </button>
+            <div style="font-size: 11px; color: #94a3b8; text-align: center; margin-top: 10px;">
+              Official state hospital invoices provided. Zero hidden broker markups.
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 144-HOUR VISA-FREE & ENTRY POLICY -->
+  <section id="visa-guide" style="padding: 70px 0; background: #f8fafc; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
+    <div class="wrap">
+      <div class="section-head" style="margin-bottom: 36px;">
+        <span class="section-eyebrow" style="color: var(--teal);">Hassle-Free Arrival</span>
+        <h2 class="serif-display section-title">Real Visa & 144-Hour Transit Guide</h2>
+        <p class="section-desc">
+          Visiting Qingdao for medical care is easier than ever. China has introduced unprecedented unilateral visa waivers and transit facilitation.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+        <div style="background: #fff; padding: 28px; border-radius: 12px; border: 1px solid #e2e8f0;">
+          <div style="font-size: 24px; margin-bottom: 10px;">🇪🇺 🇨🇭 🇸🇬</div>
+          <h4 style="font-size: 17px; font-weight: 700; color: var(--ink); margin-bottom: 8px;">15-Day Unilateral Visa-Free Entry</h4>
+          <p style="font-size: 13.5px; color: #64748b; line-height: 1.6; margin: 0;">
+            Citizens of <strong>Germany, France, Italy, Spain, the Netherlands, Switzerland, Belgium, Austria, Australia, New Zealand, Malaysia, Singapore</strong> and other eligible countries can enter China visa-free for up to 15/30 days. No embassy visit or visa application required.
+          </p>
+        </div>
+
+        <div style="background: #fff; padding: 28px; border-radius: 12px; border: 1px solid #e2e8f0;">
+          <div style="font-size: 24px; margin-bottom: 10px;">🇬🇧 🇺🇸 🇨🇦</div>
+          <h4 style="font-size: 17px; font-weight: 700; color: var(--ink); margin-bottom: 8px;">144-Hour (6-Day) Transit Visa-Free at TAO Airport</h4>
+          <p style="font-size: 13.5px; color: #64748b; line-height: 1.6; margin: 0;">
+            Citizens of the <strong>UK, USA, Canada, and 54 countries</strong> transiting through Qingdao Jiaodong International Airport (TAO) to a 3rd country/region (e.g., London &rarr; Qingdao &rarr; Seoul/Tokyo/HK) can stay in Shandong Province for up to 144 hours completely visa-free. Perfect for quick SMILE or implant placement.
+          </p>
+        </div>
+
+        <div style="background: #fff; padding: 28px; border-radius: 12px; border: 1px solid #e2e8f0;">
+          <div style="font-size: 24px; margin-bottom: 10px;">📋 🏥</div>
+          <h4 style="font-size: 17px; font-weight: 700; color: var(--ink); margin-bottom: 8px;">Official Medical Invitation Letter</h4>
+          <p style="font-size: 13.5px; color: #64748b; line-height: 1.6; margin: 0;">
+            If you require an extended stay (such as a 30-day L-visa or medical visa), Qingdao Care coordinates with the hospital international affairs desk to provide an expedited official bilingual appointment notice for your local Chinese visa application center.
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -2022,7 +2148,7 @@
           <h3>Begin Your Case Review</h3>
           <p class="form-sub">Direct link to our confidential patient intake desk.</p>
 
-          <form action="https://formsubmit.co/ybs2211871@gmail.com" method="POST">
+          <form action="https://formsubmit.co/ybs2211871@gmail.com" method="POST" enctype="multipart/form-data">
             <!-- FormSubmit Configurations -->
             <input type="hidden" name="_subject" value="New Transparent Medical Inquiry (Qingdao Care)">
             <input type="hidden" name="_captcha" value="false">
@@ -2054,8 +2180,8 @@
 
             <div class="form-group">
               <label>Primary Treatment Sought *</label>
-              <select name="procedure" class="form-control">
-                <option value="Swiss Straumann Dental Implants">Swiss Straumann Dental Implants (3+ Units or Full Arch)</option>
+              <select name="procedure" id="form-procedure-select" class="form-control">
+                <option value="Swiss Straumann Dental Implants">Swiss Straumann Dental Implants (1 to Multiple Units or Full Arch)</option>
                 <option value="Carl Zeiss SMILE Laser Eye Surgery">Carl Zeiss SMILE Laser Eye Surgery (Both Eyes)</option>
                 <option value="Executive Cancer & 3.0T MRI Screening">Executive Cancer & 3.0T MRI Full-Body Screening</option>
                 <option value="TCM Chronic Pain & Wellness Retreat">TCM Acupuncture & Chronic Pain Relief Retreat</option>
@@ -2066,7 +2192,7 @@
             <div class="form-row">
               <div class="form-group">
                 <label>Hotel Preference</label>
-                <select name="hotel_preference" class="form-control">
+                <select name="hotel_preference" id="form-hotel-select" class="form-control">
                   <option value="Comfort Beachfront (~$50-60/night)">Comfort Beachfront (~$50–60/night)</option>
                   <option value="5-Star Oceanfront Luxury Hyatt (~$110-130/night)">5-Star Luxury Hyatt (~$110–130/night)</option>
                   <option value="I Will Book My Own Hotel">I Will Book My Own Hotel Directly</option>
@@ -2082,8 +2208,14 @@
             </div>
 
             <div class="form-group">
+              <label>Attach Dental X-Ray / Vision Prescription / Quote (Optional)</label>
+              <input type="file" name="attachment" accept=".pdf,.jpg,.jpeg,.png,.doc,.docx" class="form-control" style="padding: 9px; font-size: 13px; background: #fff;">
+              <div style="font-size: 11px; color: var(--ink-muted); margin-top: 4px;">Supports OPG panoramic dental X-rays, corneal maps, or local estimates (Max 10MB). Direct to Chief Surgeon review.</div>
+            </div>
+
+            <div class="form-group">
               <label>Case Notes / Prior Estimates</label>
-              <textarea name="message" class="form-control" placeholder="Briefly describe your situation, e.g. 'Quoted £9,000 for 3 molars in London, looking for genuine Straumann implants in Qingdao in November...'"></textarea>
+              <textarea name="message" id="form-message-area" class="form-control" placeholder="Briefly describe your situation, e.g. 'Quoted £9,000 for 3 molars in London, looking for genuine Straumann implants in Qingdao in November...'"></textarea>
             </div>
 
             <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px; font-size: 15px;">
@@ -2368,6 +2500,72 @@
           autoDisplay: false
         }, 'google_translate_element');
       } catch (e) {}
+    }
+
+    const CALC_DATA = {
+      'implant-1': { name: '1x Swiss Straumann Dental Implant', procVal: 'Swiss Straumann Dental Implants', hosp: 1200, western: 4800 },
+      'implant-2': { name: '2x Swiss Straumann Dental Implants', procVal: 'Swiss Straumann Dental Implants', hosp: 2400, western: 9600 },
+      'implant-3': { name: '3x Swiss Straumann Dental Implants', procVal: 'Swiss Straumann Dental Implants', hosp: 3600, western: 14500 },
+      'implant-4': { name: '4x Swiss Straumann Dental Implants (Bridge)', procVal: 'Swiss Straumann Dental Implants', hosp: 4800, western: 19000 },
+      'smile': { name: 'Carl Zeiss SMILE Laser Eye Surgery (Both Eyes)', procVal: 'Carl Zeiss SMILE Laser Eye Surgery', hosp: 2200, western: 6200 },
+      'mri': { name: 'Executive Cancer & 3.0T MRI Screening Suite', procVal: 'Executive Cancer & 3.0T MRI Screening', hosp: 1100, western: 4500 },
+      'tcm': { name: 'TCM Chronic Pain & Acupuncture 7-Day Protocol', procVal: 'TCM Chronic Pain & Wellness Retreat', hosp: 800, western: 3200 }
+    };
+
+    const HOTEL_DATA = {
+      'comfort': { fee: 385, name: 'Comfort Beachfront (~$50-60/night)' },
+      'luxury': { fee: 840, name: '5-Star Oceanfront Luxury Hyatt (~$110-130/night)' },
+      'none': { fee: 0, name: 'I Will Book My Own Hotel' }
+    };
+
+    function updateLiveEstimate() {
+      const procKey = document.getElementById('calc-procedure').value;
+      const hotelKey = document.getElementById('calc-hotel').value;
+      const p = CALC_DATA[procKey] || CALC_DATA['implant-3'];
+      const h = HOTEL_DATA[hotelKey] || HOTEL_DATA['comfort'];
+      const concierge = 1200;
+
+      const total = p.hosp + h.fee + concierge;
+      const savings = p.western - total;
+      const percent = Math.round((savings / p.western) * 100);
+
+      document.getElementById('calc-hosp-fee').innerText = '$' + p.hosp.toLocaleString();
+      document.getElementById('calc-hotel-fee').innerText = '$' + h.fee.toLocaleString();
+      document.getElementById('calc-total').innerText = '$' + total.toLocaleString();
+      document.getElementById('calc-western').innerText = '$' + p.western.toLocaleString();
+      document.getElementById('calc-savings').innerText = 'Save ~$' + savings.toLocaleString() + ' (' + percent + '%)';
+    }
+
+    function applyEstimateToForm() {
+      const procKey = document.getElementById('calc-procedure').value;
+      const hotelKey = document.getElementById('calc-hotel').value;
+      const p = CALC_DATA[procKey];
+      const h = HOTEL_DATA[hotelKey];
+      
+      const procSelect = document.getElementById('form-procedure-select');
+      const hotelSelect = document.getElementById('form-hotel-select');
+      const msgArea = document.getElementById('form-message-area');
+
+      if (procSelect) {
+        for (let opt of procSelect.options) {
+          if (opt.value.includes(p.procVal)) {
+            procSelect.value = opt.value;
+            break;
+          }
+        }
+      }
+      if (hotelSelect) {
+        hotelSelect.value = h.name;
+      }
+      if (msgArea) {
+        const total = p.hosp + h.fee + 1200;
+        msgArea.value = 'Generated from Self-Quote Tool: ' + p.name + ' + Hotel: ' + h.name + '. Estimated trip total: $' + total.toLocaleString() + '. Looking forward to confirmation.';
+      }
+
+      const quoteSec = document.getElementById('quote');
+      if (quoteSec) {
+        quoteSec.scrollIntoView({ behavior: 'smooth' });
+      }
     }
 
     document.addEventListener('DOMContentLoaded', function() {
