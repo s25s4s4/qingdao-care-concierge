@@ -1174,11 +1174,25 @@
       .footer-grid { grid-template-columns: 1fr; gap: 32px; }
     }
 
+    
     /* Multi-language selector styling */
     .lang-switcher-wrap {
       position: relative;
       display: inline-flex;
       align-items: center;
+      cursor: pointer;
+    }
+    .lang-native-select {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      cursor: pointer;
+      z-index: 10;
+      -webkit-appearance: none;
+      appearance: none;
     }
     .lang-btn {
       display: inline-flex;
@@ -1191,72 +1205,17 @@
       background: #ffffff;
       border: 1px solid var(--border);
       border-radius: 8px;
-      cursor: pointer;
+      pointer-events: none; /* lets clicks pass directly to select overlay */
       transition: all 0.2s ease;
       box-shadow: var(--shadow-sm);
     }
-    .lang-btn:hover {
+    .lang-switcher-wrap:hover .lang-btn,
+    .lang-switcher-wrap:focus-within .lang-btn {
       border-color: var(--teal);
       color: var(--teal);
       background: var(--surface-subtle);
     }
-    .lang-btn svg {
-      transition: transform 0.2s ease;
-    }
-    .lang-switcher-wrap.open .lang-btn svg {
-      transform: rotate(180deg);
-    }
-    .lang-dropdown {
-      display: none;
-      position: absolute;
-      top: calc(100% + 8px);
-      right: 0;
-      background: #ffffff;
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      box-shadow: var(--shadow-xl);
-      padding: 6px;
-      min-width: 175px;
-      z-index: 1000;
-      max-height: 380px;
-      overflow-y: auto;
-    }
-    .lang-switcher-wrap.open .lang-dropdown {
-      display: block;
-      animation: langFadeIn 0.15s ease-out;
-    }
-    @keyframes langFadeIn {
-      from { opacity: 0; transform: translateY(-6px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .lang-opt {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 8px 12px;
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--ink);
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background 0.15s, color 0.15s;
-      text-decoration: none;
-    }
-    .lang-opt:hover {
-      background: var(--teal-light);
-      color: var(--teal-dark);
-      font-weight: 600;
-    }
-    .lang-opt.active {
-      background: var(--teal-light);
-      color: var(--teal);
-      font-weight: 700;
-    }
-    .lang-opt .flag {
-      font-size: 16px;
-      line-height: 1;
-    }
-    /* Hide Google default top banner and branding cleanly */
+    /* Hide Google default top banner cleanly */
     .goog-te-banner-frame.skiptranslate,
     .goog-te-banner-frame,
     #goog-gt-tt,
@@ -1284,7 +1243,7 @@
       gap: 14px;
     }
 
-    @media (max-width: 768px) {
+@media (max-width: 768px) {
       .nav-links { display: none; }
       .nav-actions { gap: 8px; }
       .lang-btn { padding: 6px 9px; font-size: 12px; }
@@ -1339,27 +1298,28 @@
 
             <div class="nav-actions">
         <!-- Multi-language switcher -->
+                <!-- Multi-language switcher (Desktop + Mobile Native Sheet) -->
         <div class="lang-switcher-wrap" id="langSwitcher">
-          <button type="button" class="lang-btn" aria-label="Select Language">
+          <select class="lang-native-select" id="langSelectOverlay" aria-label="Select Language">
+            <option value="en">🇬🇧 English</option>
+            <option value="es">🇪🇸 Español</option>
+            <option value="de">🇩🇪 Deutsch</option>
+            <option value="fr">🇫🇷 Français</option>
+            <option value="ru">🇷🇺 Русский</option>
+            <option value="ar">🇸🇦 العربية</option>
+            <option value="ja">🇯🇵 日本語</option>
+            <option value="ko">🇰🇷 한국어</option>
+            <option value="it">🇮🇹 Italiano</option>
+            <option value="pt">🇵🇹 Português</option>
+            <option value="zh-CN">🇨🇳 简体中文</option>
+            <option value="zh-TW">🇭🇰 繁體中文</option>
+          </select>
+          <div class="lang-btn" aria-hidden="true">
             <span class="flag" id="current-lang-flag">🇬🇧</span>
             <span id="current-lang-name">English</span>
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <polyline points="6 9 12 15 18 9"></polyline>
             </svg>
-          </button>
-          <div class="lang-dropdown">
-            <div class="lang-opt" data-lang="en"><span class="flag">🇬🇧</span> English</div>
-            <div class="lang-opt" data-lang="es"><span class="flag">🇪🇸</span> Español</div>
-            <div class="lang-opt" data-lang="de"><span class="flag">🇩🇪</span> Deutsch</div>
-            <div class="lang-opt" data-lang="fr"><span class="flag">🇫🇷</span> Français</div>
-            <div class="lang-opt" data-lang="ru"><span class="flag">🇷🇺</span> Русский</div>
-            <div class="lang-opt" data-lang="ar"><span class="flag">🇸🇦</span> العربية</div>
-            <div class="lang-opt" data-lang="ja"><span class="flag">🇯🇵</span> 日本語</div>
-            <div class="lang-opt" data-lang="ko"><span class="flag">🇰🇷</span> 한국어</div>
-            <div class="lang-opt" data-lang="it"><span class="flag">🇮🇹</span> Italiano</div>
-            <div class="lang-opt" data-lang="pt"><span class="flag">🇵🇹</span> Português</div>
-            <div class="lang-opt" data-lang="zh-CN"><span class="flag">🇨🇳</span> 简体中文</div>
-            <div class="lang-opt" data-lang="zh-TW"><span class="flag">🇭🇰</span> 繁體中文</div>
           </div>
         </div>
 
@@ -2225,11 +2185,14 @@
   </a>
 
 
-  <!-- GOOGLE TRANSLATE ELEMENT & ENGINE -->
-  <div id="google_translate_element"></div>
-
+  
+  <!-- MULTILINGUAL ENGINE & NATIVE SELECTOR SCRIPT -->
+  <div id="google_translate_element" style="display:none;"></div>
+  
   <script type="text/javascript">
-    const SUPPORTED_LANGS = [
+    const I18N_DATA = {"es": {"15-Day Visa-Free Policy in Effect for EU, Switzerland, Singapore & Allies": "Política de exención de visado de 15 días vigente para la UE, Suiza, Singapur y aliados", "24/7 International Patient Desk (WhatsApp):": "Atención Internacional de Pacientes 24/7 (WhatsApp):", "Transparent Medical Concierge": "Conserjería Médica Transparente", "How It Works": "Cómo Funciona", "Concierge Inclusions": "Servicios Incluidos", "Itemized Costs": "Costos Desglosados", "Optional Leisure": "Turismo Opcional", "Partner Hospitals": "Hospitales Asociados", "FAQ": "Preguntas Frecuentes", "Free Itemized Estimate": "Presupuesto Desglosado Gratis", "100% Unbundled Transparency • Zero Markups": "100% Transparencia Desglosada • Cero Sobreprecios", "World-class healthcare at": "Atención médica de primer nivel al", "official hospital cost": "costo oficial de hospital", ". Dedicated concierge care.": ". Cuidado de conserjería exclusivo.", "Pay the state university hospital directly at the counter. Choose your own hotel. We manage your specialist fast-track, private chauffeured transfers, and bilingual bedside care for a simple, flat concierge fee.": "Pague directamente en la ventanilla del hospital universitario estatal. Elija su propio hotel. Gestionamos sus citas prioritarias con especialistas, traslados privados con chofer y acompañamiento bilingüe por una tarifa plana simple.", "Get Your Itemized Cost Breakdown →": "Obtenga su Desglose de Costos →", "See How Billing Works": "Vea Cómo Funciona la Facturación", "Direct Pay": "Pago Directo", "Official Hospital Counter Invoices": "Facturas Oficiales del Hospital", "$1,200 Flat": "$1,200 Fijo", "Full Concierge & Chauffeur Fee": "Tarifa Completa de Conserjería y Chofer", "100% Genuine": "100% Original", "QR-Verifiable Swiss/German Tech": "Tecnología Suiza y Alemana Verificable con QR", "Seaside Recovery Destination": "Destino de Recuperación Costero", "Heal in Coastal Qingdao": "Recupérese en la Costera Qingdao", "Known for its clean marine air, pine-fringed beaches, and European architectural heritage. Recover comfortably by the ocean.": "Conocida por su aire marino puro, playas rodeadas de pinos y patrimonio arquitectónico europeo. Recupérese cómodamente junto al mar.", "Est. 1898 & 1916": "Fundados en 1898 y 1916", "Century-Old State Teaching Hospitals": "Hospitales Universitarios Estatales Centenarios", "Chauffeur Included": "Chofer Incluido", "All Airport & Clinic Rides Covered": "Todos los Traslados de Aeropuerto y Clínica Cubiertos", "Financial Integrity": "Integridad Financiera", "The 4-Pillar Transparent Payment Model": "El Modelo de Pago Transparente de 4 Pilares", "No black-box markups. No inflated hospital bills. You maintain full oversight and payment control throughout your entire journey.": "Sin sobreprecios ocultos. Sin facturas médicas infladas. Usted mantiene el control total de los pagos durante todo su viaje.", "01 / CLINICAL": "01 / CLÍNICO", "Medical Care": "Atención Médica", "You Pay Hospital Directly": "Paga Directamente al Hospital", "Settle all consultation, surgery, and implant costs directly at the hospital cashier using your foreign Visa/MasterCard. Official state invoices issued.": "Liquide las consultas, cirugías e implantes directamente en la caja del hospital con su tarjeta Visa/MasterCard. Se emiten facturas oficiales del Estado.", "Zero Middleman Surcharge": "Cero Recargo de Intermediarios", "02 / LODGING": "02 / ALOJAMIENTO", "Accommodation": "Alojamiento", "You Choose & Pay Hotel": "Usted Elige y Paga el Hotel", "Book your preferred hotel directly on Booking.com or pay at check-in. Choose between beachside 4-star comfort (~$50/nt) or 5-star luxury Hyatt (~$110/nt).": "Reserve su hotel favorito en Booking.com o pague al registrarse. Elija entre comodidad de 4 estrellas frente al mar (~$50/noche) o lujo de 5 estrellas en Hyatt (~$110/noche).", "Tailored to Your Budget": "Adaptado a su Presupuesto", "03 / DINING": "03 / GASTRONOMÍA", "Meals & Daily Life": "Comidas y Vida Diaria", "You Pay as You Go": "Paga Según su Consumo", "Enjoy fresh coastal seafood, authentic dim sum, or western hotel dining at your own leisure. We assist with ordering, translations, and dietary requests.": "Disfrute de mariscos frescos, auténtico dim sum o comida occidental a su propio ritmo. Le asistimos con pedidos, traducciones y requerimientos dietéticos.", "Full Personal Freedom": "Plena Libertad Personal", "04 / CONCIERGE": "04 / CONSERJERÍA", "Our Service Fee": "Nuestra Tarifa de Servicio", "Flat $1,200 USD": "Tarifa Plana de $1,200 USD", "Our fixed fee covers your dedicated bilingual coordinator, fast-track hospital booking, English records, airport chauffeur, and all clinic transport.": "Nuestra tarifa fija cubre su coordinador bilingüe dedicado, reserva prioritaria en el hospital, informes en inglés, chofer de aeropuerto y traslados clínicos.", "All Minor Logistics Covered by Us": "Toda la Logística Cubierta por Nosotros", "Zero Hidden Incidental Costs": "Cero Costos Ocultos o Incidentales", "What Your $1,200 Flat Concierge Fee Fully Covers": "Lo que Cubre Completamente su Tarifa de $1,200", "$1,200 / Patient Journey": "$1,200 / Viaje del Paciente", "Airport Chauffeur (Both Ways)": "Chofer Privado de Aeropuerto (Ida y Vuelta)", "Private chauffeured transfers between Qingdao Jiaodong Airport (TAO) and your hotel. We cover fuel, tolls, and parking.": "Traslados privados con chofer entre el Aeropuerto de Qingdao (TAO) y su hotel. Cubrimos combustible, peajes y estacionamiento.", "All Clinic & Hospital Transport": "Todo el Transporte Clínico y Hospitalario", "Door-to-door private transport for every consultation, surgery, and follow-up appointment. Never hail a taxi or navigate transit.": "Transporte privado puerta a puerta para cada consulta, cirugía y revisión. Nunca tendrá que buscar un taxi ni descifrar el transporte público.", "1-on-1 Bilingual Medical Escort": "Acompañamiento Médico Bilingüe 1 a 1", "Your dedicated English-speaking care coordinator accompanies you at every consultation, procedure, and cashier window.": "Su coordinador médico dedicado le acompaña en cada consulta, procedimiento médico y ventanilla de pago.", "VIP Specialist Fast-Track": "Acceso VIP Prioritario a Especialistas", "Guaranteed appointment with Chief Physicians at State Tertiary Hospitals. Zero public queueing, dedicated VIP lounge access.": "Cita garantizada con Médicos Jefes en hospitales universitarios de máxima categoría. Sin filas públicas y con sala de espera VIP.", "China 5G Data SIM Card": "Tarjeta SIM 5G con Datos en China", "High-speed mobile data SIM card provided upon arrival, plus full assistance setting up mobile payments for zero friction.": "Tarjeta SIM de datos 5G de alta velocidad a su llegada, con asistencia total para pagos móviles sin complicaciones.", "English Medical Dossier & DICOM": "Historial Médico en Inglés y Disco DICOM", "We ensure and expedite your full English clinical discharge summary, laboratory results, and high-resolution imaging discs.": "Garantizamos y agilizamos su informe médico completo de alta en inglés, resultados de laboratorio y discos de imágenes de alta resolución.", "Real Cost Itemization": "Desglose de Costos Reales", "Transparent Cost Breakdowns": "Comparativa Transparente de Costos", "See exactly how the numbers add up. Real hospital fees + reasonable hotel stays + our flat service fee = massive savings.": "Vea con exactitud cómo se suman los costos. Tarifas reales de hospital + hoteles asequibles + tarifa plana = ahorro monumental.", "Most Requested": "Más Solicitado", "Smile Restoration": "Restauración de Sonrisa", "3x Genuine Swiss Straumann Implants with all-ceramic zirconia crowns.": "3x Implantes Suizos Originales Straumann con coronas de zirconia.", "US / UK Private Self-Pay: $14,500": "Costo Privado en EE.UU. / Reino Unido: $14,500", "Hospital Surgery & Implants": "Cirugía e Implantes en el Hospital", "Paid directly to Hospital Cashier": "Pagado directamente en la caja del hospital", "Seaside 4-Star Hotel (7 Nts @ ~$55/nt)": "Hotel 4 Estrellas Frente al Mar (7 Noches)", "e.g. Atour Shilaoren Beach (Paid on Booking)": "ej. Atour Playa Shilaoren (Pagado en Booking)", "Concierge & Chauffeur Fee": "Tarifa de Conserjería y Chofer", "Airport transfers, clinic escort, SIM covered": "Traslados de aeropuerto, acompañante y SIM incluidos", "Total Estimated Cost: ~$5,385": "Costo Total Estimado: ~$5,385", "Your Real Savings:": "Su Ahorro Real:", "Save ~$9,100 (63% Off)": "Ahorre ~$9,100 (63% de Descuento)", "3 Genuine Swiss Straumann Implants with": "3 Implantes originales suizos Straumann con", "Official Global Warranty QR Card": "Tarjeta de Garantía Global con QR Oficial", "Full digital 3D CBCT bone scan & CAD/CAM Zirconia Crowns": "Tomografía ósea 3D CBCT digital y coronas de Zirconia CAD/CAM", "All airport transfers & clinic chauffeurs included in fee": "Todos los traslados de aeropuerto y chofer incluidos en la tarifa", "Get Itemized Dental Quote": "Pedir Presupuesto Dental Desglosado", "Carl Zeiss SMILE Vision": "Visión Carl Zeiss SMILE", "Bladeless dual-eye refractive laser surgery. 10-minute painless procedure.": "Cirugía láser refractiva sin bisturí en ambos ojos. Procedimiento indoloro de 10 minutos.", "US / UK Private Self-Pay: $5,500": "Costo Privado en EE.UU. / Reino Unido: $5,500", "Hospital Laser Surgery (Both Eyes)": "Cirugía Láser en Hospital (Ambos Ojos)", "4-Star Seaside Hotel (5 Nts)": "Hotel 4 Estrellas Frente al Mar (5 Noches)", "Paid directly to Hotel / Booking": "Pagado directamente al Hotel / Booking", "All transfers & translation covered": "Todos los traslados y traducción cubiertos", "Total Estimated Cost: ~$3,675": "Costo Total Estimado: ~$3,675", "Save ~$1,800 + Holiday": "Ahorre ~$1,800 + Vacaciones Incluidas", "Both eyes treated on genuine Carl Zeiss VisuMax femtosecond laser": "Ambos ojos tratados con láser de femtosegundo Carl Zeiss VisuMax original", "24 comprehensive pre-op ophthalmic diagnostics & corneal scans": "24 diagnósticos oftalmológicos preoperatorios completos y topografía corneal", "Post-op medication kit, eye shields, and all clinic transport": "Kit de medicamentos postoperatorios, protectores oculares y todo el transporte", "Get Itemized Eye Quote": "Pedir Presupuesto Oftalmológico Desglosado", "Executive Cancer & 3.0T MRI": "Detección Oncológica VIP y Resonancia 3.0T", "Painless sedation endoscopy + colonoscopy + high-res 3.0T MRI screening.": "Endoscopia y colonoscopia indoloras con sedación + cribado de RMN 3.0T de alta resolución.", "US / UK Private Self-Pay: $7,800": "Costo Privado en EE.UU. / Reino Unido: $7,800", "Hospital Diagnostic Suite": "Batería de Diagnóstico Hospitalario", "4-Star Seaside Hotel (4 Nts)": "Hotel 4 Estrellas Frente al Mar (4 Noches)", "Total Estimated Cost: ~$2,820": "Costo Total Estimado: ~$2,820", "Save ~$5,000 (64% Off)": "Ahorre ~$5,000 (64% de Descuento)", "Sedated painless gastroscopy and colonoscopy (with polyp biopsy)": "Gastroscopia y colonoscopia indoloras bajo sedación (con biopsia de pólipos)", "High-resolution 3.0T MRI (Brain/Spine) & 64-slice low-dose chest CT": "Resonancia 3.0T de alta resolución (Cerebro/Columna) y TC de tórax de baja dosis", "Expedited official English report & full DICOM image CD": "Informe oficial expedito en inglés y disco con imágenes DICOM completas", "Get Itemized Health Quote": "Pedir Presupuesto de Chequeo de Salud", "Optional Add-On • 100% Flexible": "Adicional Opcional • 100% Flexible", "Prefer Care Only? Or Add a Seaside Mini-Holiday?": "¿Prefiere Solo Tratamiento? ¿O Sumar Mini-Vacaciones Junto al Mar?", "Your journey is fundamentally about medical excellence. If you wish to simply complete your clinical treatment and rest quietly in your hotel, that is completely fine. However, if you'd like to discover Qingdao during your recovery, you can easily add our gentle guided excursion package.": "Su viaje se centra en la excelencia médica. Si desea simplemente realizar su tratamiento y descansar en su hotel, es perfecto. Si además desea descubrir Qingdao durante su recuperación, puede añadir fácilmente nuestro paquete de excursiones suaves.", "Stroll along the historical Badaguan red-tiled German heritage district": "Pasee por el histórico distrito alemán de Badaguan con sus villas de tejas rojas", "Gentle afternoon walks along Shilaoren Beach and Olympic Sailing Marina": "Paseos vespertinos por la playa de Shilaoren y el Puerto Deportivo Olímpico", "VIP private tour & fresh tasting at the century-old Tsingtao Brewery Museum": "Visita privada VIP y cata fresca en el centenario Museo de la Cerveza Tsingtao", "Scenic oceanfront mountain vistas at Mount Laoshan": "Impresionantes vistas de la montaña frente al mar en el Monte Laoshan", "Accredited Clinical Excellence": "Excelencia Clínica Acreditada", "Public University Teaching Hospitals": "Hospitales Universitarios Estatales de Primer Nivel", "We operate strictly in partnership with licensed State Tertiary Grade-A teaching hospitals (the highest medical tier in China). No unverified private clinics or hidden brokers.": "Trabajamos estrictamente en alianza con hospitales universitarios públicos de Nivel 3-A (la máxima categoría médica en China). Sin clínicas privadas dudosas ni intermediarios encubiertos.", "Flagship University Center": "Centro Universitario Insignia", "Affiliated Hospital of Qingdao University (QDUH)": "Hospital Afiliado de la Universidad de Qingdao (QDUH)", "The premier provincial teaching hospital complex. Its dedicated International Medical Wing is located at the new Laoshan Medical Complex (No. 59 Haier Road), minutes from the Shilaoren National Beach Resort.": "El complejo hospitalario universitario líder de la provincia. Su ala médica internacional se ubica en el moderno Complejo Laoshan (Haier Rd 59), a minutos de la playa Shilaoren.", "Laoshan Bay District, Stone Old Man Beachfront": "Distrito Bahía de Laoshan, Frente a Playa Shilaoren", "Refractive Laser Center, Executive Diagnostics, 3.0T MRI": "Centro de Cirugía Refractiva, Chequeo Ejecutivo, RMN 3.0T", "Hospital Cashier Card Payments, Official State Invoices": "Pago con Tarjeta en Caja de Hospital, Facturas Oficiales del Estado", "Pioneer in Expat Healthcare": "Pionero en Atención Médica para Extranjeros", "Qingdao Municipal Hospital International Clinic (ICQD)": "Clínica Internacional del Hospital Municipal de Qingdao (ICQD)", "Historic Old Town (Zhongshan Road / Zhanqiao Pier Boardwalk)": "Casco Histórico (Zhongshan Rd / Muelle Zhanqiao)", "Implantology Center (US/Korean Dentists), TCM Pain Relief": "Centro de Implantología (Dentistas formados en EE.UU./Corea), Alivio del Dolor con MTC", "Direct Foreign Credit Card Settlement at Counter": "Pago Directo con Tarjetas de Crédito Extranjeras en Ventanilla", "Concierge Logistics": "Logística de Conserjería", "Your 7-Day Care & Recovery Journey": "Su Itinerario de 7 Días de Tratamiento y Recuperación", "Every transport, clinical appointment, translation, and hotel stay is orchestrated in advance so you can concentrate entirely on healing.": "Cada traslado, cita clínica, traducción y estancia de hotel se coordina con antelación para que usted se dedique solo a recuperarse.", "Day 01": "Día 01", "VIP Arrival & Oceanfront Hotel Check-In": "Llegada VIP y Registro en Hotel Frente al Mar", "Your private bilingual coordinator welcomes you at Qingdao Jiaodong Airport (TAO). Private chauffeur directly to your seaside hotel. SIM card setup and welcome dinner.": "Su coordinador privado bilingüe le da la bienvenida en el Aeropuerto de Qingdao (TAO). Chofer privado directo a su hotel frente al mar. Configuración de tarjeta SIM y cena de bienvenida.", "Day 02": "Día 02", "1-on-1 Specialist Consultation & 3D Diagnostics": "Consulta Especializada 1 a 1 y Diagnóstico 3D", "Morning transfer to the International Wing. Dedicated 1-on-1 consultation with the Chief Surgeon. High-resolution 3D CBCT oral imaging, corneal topography, or MRI scans completed with zero public waiting.": "Traslado matutino al Ala Internacional. Consulta exclusiva 1 a 1 con el Cirujano Jefe. Imágenes 3D CBCT, topografía corneal o resonancia completadas sin esperas.", "Day 03": "Día 03", "Treatment Day: Sterile Precision & Comfort": "Día de Tratamiento: Precisión Estéril y Confort", "Minimally invasive implant fixture placement or Carl Zeiss SMILE laser surgery performed in certified surgical suites under gentle anesthesia. Rest comfortably in the VIP recovery lounge before chauffeured hotel return.": "Colocación de implantes mínimamente invasiva o láser Carl Zeiss SMILE en quirófanos certificados bajo anestesia suave. Descanso en sala VIP antes de regresar al hotel en coche privado.", "Day 04–06": "Días 04–06", "Gentle Recovery (Rest or Optional Guided Excursions)": "Recuperación Tranquila (Descanso o Excursiones Guiadas Opcionales)", "Gentle healing days. Rest quietly at your beachside resort, or enjoy optional guided walks along Badaguan, Tsingtao Brewery museum tastings, or soothing acupuncture wellness sessions.": "Días de descanso reparador. Relájese en su hotel junto a la playa o disfrute de paseos suaves por Badaguan, visitas a la fábrica de cerveza o acupuntura relajante.", "Day 07": "Día 07", "Final Post-Op Review & Homeward Journey": "Revisión Postoperatoria Final y Regreso a Casa", "Final clinical inspection. Receive your complete official English medical dossier, imaging DICOM CD, and Straumann International Authenticity Card. Private transfer back to Qingdao Airport for your flight home.": "Inspección clínica final. Entrega de su informe médico oficial en inglés, disco DICOM y Certificado de Garantía Internacional Straumann. Traslado privado al aeropuerto para su vuelo de regreso.", "Zero Obligation • 100% Confidential": "Sin Compromiso • 100% Confidencial", "Request Your Free Itemized Case Evaluation": "Solicite su Evaluación Gratuita con Presupuesto Desglosado", "Share your dental or medical concerns. Within 12 hours, our bilingual medical director will review your case with chief hospital physicians and provide a transparent, itemized cost estimate.": "Comparta sus necesidades médicas o dentales. En menos de 12 horas, nuestro director médico bilingüe revisará su caso con cirujanos jefes y le entregará una estimación transparente.", "Pay Hospital Directly": "Pago Directo al Hospital", "All medical fees paid directly to hospital cashier at official rates. Zero middleman markup.": "Todos los honorarios médicos se pagan en la caja del hospital a tarifas oficiales. Cero sobreprecio.", "All Incidental Logistics Included": "Toda la Logística Incluida", "Airport pickup, clinic chauffeur, 5G SIM card, and bilingual translation all covered by our flat $1,200 fee.": "Traslados de aeropuerto, chofer clínico, tarjeta SIM 5G y traducción bilingüe cubiertos en nuestra tarifa de $1,200.", "Official Manufacturer QR Warranty": "Garantía Oficial del Fabricante con QR", "Every implant box opened in your presence with verifiable Straumann manufacturer certificates.": "Cada caja de implante se abre en su presencia con certificados auténticos de Straumann verificables.", "Begin Your Case Review": "Comience la Revisión de su Caso", "Direct link to our confidential patient intake desk.": "Enlace directo con nuestra oficina confidencial de pacientes.", "Full Legal Name *": "Nombre Completo *", "Email Address *": "Correo Electrónico *", "WhatsApp / Phone *": "WhatsApp / Teléfono *", "Country of Residence *": "País de Residencia *", "Primary Treatment Sought *": "Tratamiento Principal Deseado *", "Hotel Preference": "Preferencia de Hotel", "Add Optional Leisure Tour?": "¿Añadir Paquete Turístico Opcional?", "Case Notes / Prior Estimates": "Notas del Caso / Presupuestos Previos", "Submit for Medical Director Review →": "Enviar para Revisión del Director Médico →", "Patient Reassurance": "Tranquilidad para el Paciente", "Frequently Asked Questions": "Preguntas Frecuentes", "Why do I pay the hospital directly instead of paying an all-inclusive fee?": "¿Por qué pago directamente al hospital en vez de pagar un paquete cerrado?", "We believe in total financial transparency. By paying the public university hospital cashier directly, you ensure there are zero hidden commissions, inflated surgery markups, or third-party fees. You receive official state medical invoices and inspect your unsealed genuine hardware yourself.": "Creemos en la transparencia financiera total. Al pagar directamente en la caja del hospital público universitario, se asegura de que no haya comisiones ocultas ni sobreprecios inflados. Recibe facturas oficiales del estado e inspecciona el material original precintado usted mismo.", "What exactly does the $1,200 concierge fee cover?": "¿Qué cubre exactamente la tarifa de conserjería de $1,200?", "Our flat fee covers your dedicated 1-on-1 English medical coordinator throughout your trip, priority VIP appointment fast-tracking with chief surgeons, private chauffeured airport transfers (both ways), all door-to-door transport for clinic visits, a high-speed China 5G SIM card, and expedited English clinical dossiers.": "Nuestra tarifa fija cubre su coordinador médico bilingüe dedicado durante todo el viaje, citas prioritarias VIP con cirujanos jefes, traslados privados de aeropuerto (ambos trayectos), todo el transporte puerta a puerta a la clínica, tarjeta SIM 5G en China e informes clínicos en inglés.", "Can I choose my own hotel?": "¿Puedo elegir mi propio hotel?", "Absolutely. You are welcome to book any hotel you prefer via Booking.com or Expedia, or choose from our partner beachfront hotels (ranging from $50/night comfortable 4-star oceanfront hotels to 5-star international luxury such as Hyatt Regency). Our private chauffeur will pick you up from your doorstep regardless of where you stay.": "Por supuesto. Puede reservar el hotel que prefiera a través de Booking.com o Expedia, o elegir entre nuestros hoteles asociados frente al mar (desde cómodos hoteles de 4 estrellas a ~$50/noche hasta lujo de 5 estrellas como Hyatt Regency). Nuestro chofer privado le recogerá en la puerta se aloje donde se aloje.", "Do I have to do the sightseeing tour?": "¿Es obligatorio realizar el tour turístico?", "Not at all. The tour is 100% optional. Many patients prefer to simply complete their medical procedure and rest peacefully by the seaside. If you do wish to explore Qingdao's famous German heritage and coastal scenery during your recovery days, we arrange a gentle, guided itinerary tailored to your pace.": "En absoluto. El tour es 100% opcional. Muchos pacientes prefieren simplemente completar su tratamiento y descansar tranquilamente junto al mar. Si desea explorar el patrimonio alemán y los paisajes costeros de Qingdao durante su recuperación, organizamos un itinerario suave adaptado a su ritmo.", "The transparent English-speaking concierge gateway connecting international patients with accredited State Tertiary Grade-A teaching hospitals in coastal Qingdao.": "La pasarela transparente de conserjería que conecta a pacientes internacionales con hospitales universitarios públicos de máxima categoría en la costera Qingdao.", "Official WhatsApp / Inquiry Desk:": "WhatsApp Oficial / Mesa de Consultas:", "Partner Institutions": "Instituciones Colaboradoras", "Carl Zeiss Certified Ophthalmic Suite": "Centro Oftalmológico Certificado Carl Zeiss", "Institut Straumann Authorized Clinical Center": "Centro Clínico Autorizado Institut Straumann", "Clinical Disclaimer": "Aviso Médico Legal", "Qingdao Care acts strictly as an independent cross-border patient concierge and logistics facilitator. All clinical assessments, surgeries, and prescriptions are exclusively performed by board-certified chief physicians at accredited Chinese public tertiary medical centers.": "Qingdao Care actúa estrictamente como conserjería independiente de pacientes transfronterizos y facilitador logístico. Todas las evaluaciones clínicas, cirugías y prescripciones son realizadas exclusivamente por médicos jefes certificados en centros médicos públicos de tercer nivel acreditados de China.", "Qingdao, Shandong Province, China • Pacific Coastal Health Hub": "Qingdao, Provincia de Shandong, China • Centro de Salud Costero del Pacífico", "Chat on WhatsApp": "Chatear por WhatsApp"}, "zh-CN": {"15-Day Visa-Free Policy in Effect for EU, Switzerland, Singapore & Allies": "中国对欧盟、瑞士、新加坡等多国15天免签政策生效中", "24/7 International Patient Desk (WhatsApp):": "24小时涉外患者联络处 (WhatsApp):", "Transparent Medical Concierge": "透明涉外医疗与康养管家", "How It Works": "服务模式", "Concierge Inclusions": "服务清单", "Itemized Costs": "明细费用", "Optional Leisure": "休闲游览", "Partner Hospitals": "三甲公立合作医院", "FAQ": "常见问题", "Free Itemized Estimate": "免费获取明细方案", "100% Unbundled Transparency • Zero Markups": "100% 账目透明拆解 • 零中间商加价", "World-class healthcare at": "享公立医院官方实价", "official hospital cost": "看病直缴窗口", ". Dedicated concierge care.": "。专属双语就医陪诊管家。", "Pay the state university hospital directly at the counter. Choose your own hotel. We manage your specialist fast-track, private chauffeured transfers, and bilingual bedside care for a simple, flat concierge fee.": "医疗费在三甲大学附属医院收费处刷卡直付，酒店自由选择预订。我们仅收取固定透明的管家服务费，为您安排公立专家特需绿色通道、专车全程接送与专属双语陪诊。", "Get Your Itemized Cost Breakdown →": "获取就医费用透明明细表 →", "See How Billing Works": "查看收费结算运作模式", "Direct Pay": "医院直付", "Official Hospital Counter Invoices": "三甲公立医院正规财政发票", "$1,200 Flat": "固定 $1,200", "Full Concierge & Chauffeur Fee": "全程管家与专车接送费用", "100% Genuine": "100% 官方正品", "QR-Verifiable Swiss/German Tech": "瑞士/德国原厂扫码溯源质保卡", "Seaside Recovery Destination": "滨海康养度假胜地", "Heal in Coastal Qingdao": "在海滨青岛开启健康与疗愈之旅", "Known for its clean marine air, pine-fringed beaches, and European architectural heritage. Recover comfortably by the ocean.": "空气清新湿润、红瓦绿树碧海蓝天、欧陆风情建筑。面朝大海，舒适休养康复。", "Financial Integrity": "财务诚信", "The 4-Pillar Transparent Payment Model": "四大透明支柱支付体系", "No black-box markups. No inflated hospital bills. You maintain full oversight and payment control throughout your entire journey.": "拒绝暗箱加价与虚高收费，患者对每项支出拥有完全掌控权与知情权。", "01 / CLINICAL": "01 / 医疗就诊", "Medical Care": "医疗治疗费用", "You Pay Hospital Directly": "患者在医院收费窗口直付", "Settle all consultation, surgery, and implant costs directly at the hospital cashier using your foreign Visa/MasterCard. Official state invoices issued.": "挂号、检查、手术和植体等所有医疗开销均在医院收费窗口直接刷境外Visa/MasterCard等结算，出具公立医院正规发票。", "Zero Middleman Surcharge": "中间环节零抽成", "02 / LODGING": "02 / 酒店住宿", "Accommodation": "酒店与住宿", "You Choose & Pay Hotel": "自由选择与支付酒店", "Book your preferred hotel directly on Booking.com or pay at check-in. Choose between beachside 4-star comfort (~$50/nt) or 5-star luxury Hyatt (~$110/nt).": "通过Booking或前台自行订房，丰俭由人。从海边高品质四星（约$50/晚）到五星级君悦海景度假酒店（约$110/晚）任选。", "03 / DINING": "03 / 餐饮消费", "Meals & Daily Life": "餐饮与日常生活", "You Pay as You Go": "实报实销 自主点单", "Enjoy fresh coastal seafood, authentic dim sum, or western hotel dining at your own leisure. We assist with ordering, translations, and dietary requests.": "海鲜美食、经典中餐、西餐厅随心品尝。陪诊人员全程协助翻译点餐与特殊饮食需求。", "04 / CONCIERGE": "04 / 专属管家", "Our Service Fee": "管家服务费用", "Flat $1,200 USD": "一口价 $1,200 美元", "Our fixed fee covers your dedicated bilingual coordinator, fast-track hospital booking, English records, airport chauffeur, and all clinic transport.": "覆盖专属双语陪诊师全程陪同、三甲特需绿色通道预约、英文病历督办、机场专车往返接送及就医全流程专车。", "Zero Hidden Incidental Costs": "零隐形附加成本", "What Your $1,200 Flat Concierge Fee Fully Covers": "$1,200 固定管家费用包含的完整服务", "Airport Chauffeur (Both Ways)": "机场往返专车接送", "All Clinic & Hospital Transport": "就医门诊全流程专车", "1-on-1 Bilingual Medical Escort": "1对1双语医疗陪诊专员", "VIP Specialist Fast-Track": "三甲主任专家特需通道", "China 5G Data SIM Card": "中国高速5G流量手机卡", "English Medical Dossier & DICOM": "全套英文出院总结与影像光盘", "Transparent Cost Breakdowns": "透明就医费用对比", "Most Requested": "最受欢迎项目", "Smile Restoration": "瑞士士卓曼全口/多颗种植牙", "Carl Zeiss SMILE Vision": "德国蔡司全飞秒SMILE激光手术", "Executive Cancer & 3.0T MRI": "深度防癌早筛与3.0T核磁共振体检", "Submit for Medical Director Review →": "提交医疗总监评估 →", "Chat on WhatsApp": "WhatsApp 在线咨询"}, "de": {"15-Day Visa-Free Policy in Effect for EU, Switzerland, Singapore & Allies": "15 Tage visumfreie Einreise für EU, Schweiz, Singapur und Partnerländer", "24/7 International Patient Desk (WhatsApp):": "24/7 Internationaler Patientenservice (WhatsApp):", "Transparent Medical Concierge": "Transparenter Medizinischer Concierge", "How It Works": "Ablauf & Prinzip", "Concierge Inclusions": "Inklusivleistungen", "Itemized Costs": "Kostenaufstellung", "Optional Leisure": "Optionale Erholung", "Partner Hospitals": "Partnerkliniken", "FAQ": "Häufige Fragen", "Free Itemized Estimate": "Kostenloser Kostenvoranschlag", "100% Unbundled Transparency • Zero Markups": "100% Transparenz • Keine Aufschläge", "World-class healthcare at": "Erstklassige medizinische Versorgung zu", "official hospital cost": "offiziellen Krankenhauskosten", ". Dedicated concierge care.": ". Engagierte Concierge-Betreuung.", "Pay the state university hospital directly at the counter. Choose your own hotel. We manage your specialist fast-track, private chauffeured transfers, and bilingual bedside care for a simple, flat concierge fee.": "Zahlen Sie direkt am Schalter der staatlichen Universitätsklinik. Wählen Sie Ihr Wunschhotel frei. Wir organisieren Facharzt-Termine ohne Wartezeit, private Chauffeur-Transfers und zweisprachige Betreuung zu einer festen Pauschale.", "Get Your Itemized Cost Breakdown →": "Kostenaufstellung anfordern →", "See How Billing Works": "So funktioniert die Abrechnung", "Direct Pay": "Direktzahlung", "Official Hospital Counter Invoices": "Offizielle Rechnungen der Klinik", "$1,200 Flat": "$1.200 Pauschal", "Full Concierge & Chauffeur Fee": "Komplette Concierge- & Chauffeurgebühr", "100% Genuine": "100% Original", "QR-Verifiable Swiss/German Tech": "QR-geprüfte Schweizer/Deutsche Technologie", "Seaside Recovery Destination": "Erholung am Meer", "Heal in Coastal Qingdao": "Genesung im Küstenort Qingdao", "Known for its clean marine air, pine-fringed beaches, and European architectural heritage. Recover comfortably by the ocean.": "Bekannt für saubere Meeresluft, Kiefernstrände und europäisches Architekturerbe. Erholen Sie sich komfortabel direkt am Meer.", "Financial Integrity": "Finanzielle Integrität", "The 4-Pillar Transparent Payment Model": "Das 4-Säulen-Zahlungsmodell", "01 / CLINICAL": "01 / MEDIZINISCH", "Medical Care": "Medizinische Behandlung", "You Pay Hospital Directly": "Direkt an die Klinik zahlen", "02 / LODGING": "02 / UNTERKUNFT", "Accommodation": "Unterkunft & Hotel", "You Choose & Pay Hotel": "Hotel selbst wählen & buchen", "03 / DINING": "03 / VERPFLEGUNG", "Meals & Daily Life": "Mahlzeiten & Alltag", "You Pay as You Go": "Abrechnung nach Verbrauch", "04 / CONCIERGE": "04 / CONCIERGE", "Our Service Fee": "Unsere Servicegebühr", "Flat $1,200 USD": "Feste $1.200 USD", "Zero Hidden Incidental Costs": "Keine versteckten Nebenkosten", "Airport Chauffeur (Both Ways)": "Privater Chauffeur (Flughafentransfer hin & zurück)", "All Clinic & Hospital Transport": "Alle Fahrten zur Klinik inklusive", "1-on-1 Bilingual Medical Escort": "Persönliche zweisprachige Begleitung", "VIP Specialist Fast-Track": "VIP-Facharzt-Termine ohne Wartezeit", "China 5G Data SIM Card": "Chinesische 5G-SIM-Karte", "English Medical Dossier & DICOM": "Englische Krankenakte & DICOM-CD", "Smile Restoration": "Zahnimplantat-Restauration", "Carl Zeiss SMILE Vision": "Carl Zeiss SMILE Augenlasern", "Executive Cancer & 3.0T MRI": "Premium Krebsvorsorge & 3.0T MRT", "Submit for Medical Director Review →": "Zur Prüfung einreichen →", "Chat on WhatsApp": "Auf WhatsApp chatten"}, "fr": {"15-Day Visa-Free Policy in Effect for EU, Switzerland, Singapore & Allies": "Exemption de visa de 15 jours en vigueur pour l'UE, la Suisse, Singapour et alliés", "24/7 International Patient Desk (WhatsApp):": "Bureau international des patients 24/7 (WhatsApp) :", "Transparent Medical Concierge": "Conciergerie Médicale Transparente", "How It Works": "Comment Ça Marche", "Concierge Inclusions": "Services Inclus", "Itemized Costs": "Détail des Coûts", "Optional Leisure": "Loisirs Optionnels", "Partner Hospitals": "Hôpitaux Partenaires", "FAQ": "Questions Fréquentes", "Free Itemized Estimate": "Devis Détaillé Gratuit", "100% Unbundled Transparency • Zero Markups": "100% Transparence • Zéro Marge Cachée", "World-class healthcare at": "Des soins de classe mondiale au", "official hospital cost": "coût officiel de l'hôpital", ". Dedicated concierge care.": ". Conciergerie médicale dédiée.", "Direct Pay": "Paiement Direct", "Official Hospital Counter Invoices": "Factures Officielles de l'Hôpital", "$1,200 Flat": "$1 200 Fixe", "Full Concierge & Chauffeur Fee": "Frais Complets de Conciergerie & Chauffeur", "100% Genuine": "100% Authentique", "QR-Verifiable Swiss/German Tech": "Technologie Suisse/Allemande Vérifiable par QR", "Heal in Coastal Qingdao": "Guérissez sur la Côte de Qingdao", "01 / CLINICAL": "01 / MÉDICAL", "Medical Care": "Soins Médicaux", "You Pay Hospital Directly": "Payez Directement à l'Hôpital", "02 / LODGING": "02 / HÉBERGEMENT", "Accommodation": "Hébergement", "You Choose & Pay Hotel": "Choisissez et Payez Votre Hôtel", "03 / DINING": "03 / REPAS", "Meals & Daily Life": "Repas & Vie Quotidienne", "You Pay as You Go": "Paiement au Fur et à Mesure", "04 / CONCIERGE": "04 / CONCIERGERIE", "Our Service Fee": "Nos Frais de Service", "Flat $1,200 USD": "Tarif Fixe de $1 200 USD", "Smile Restoration": "Restauration du Sourire", "Carl Zeiss SMILE Vision": "Vision Carl Zeiss SMILE", "Executive Cancer & 3.0T MRI": "Bilan Oncologique & IRM 3.0T", "Submit for Medical Director Review →": "Soumettre au Directeur Médical →", "Chat on WhatsApp": "Discuter sur WhatsApp"}, "ru": {"15-Day Visa-Free Policy in Effect for EU, Switzerland, Singapore & Allies": "15-дневный безвизовый режим для стран ЕС, Швейцарии, Сингапура и партнеров", "24/7 International Patient Desk (WhatsApp):": "Круглосуточный международный отдел пациентов (WhatsApp):", "Transparent Medical Concierge": "Прозрачный медицинский консьерж", "How It Works": "Как это работает", "Concierge Inclusions": "Что включено", "Itemized Costs": "Детализация цен", "Optional Leisure": "Отдых и туризм", "Partner Hospitals": "Клиники-партнеры", "FAQ": "Частые вопросы", "Free Itemized Estimate": "Бесплатный расчет стоимости", "100% Unbundled Transparency • Zero Markups": "100% Прозрачность • Без наценок", "World-class healthcare at": "Медицина мирового уровня по", "official hospital cost": "официальным ценам госпиталя", ". Dedicated concierge care.": ". Персональный консьерж-сервис.", "Direct Pay": "Прямая оплата", "Official Hospital Counter Invoices": "Официальные государственные чеки", "$1,200 Flat": "$1,200 Фиксировано", "Full Concierge & Chauffeur Fee": "Полный консьерж-сервис и трансфер", "100% Genuine": "100% Подлинность", "QR-Verifiable Swiss/German Tech": "Швейцарские и немецкие технологии с QR-проверкой", "Heal in Coastal Qingdao": "Восстановление на побережье Циндао", "01 / CLINICAL": "01 / ЛЕЧЕНИЕ", "Medical Care": "Медицинские услуги", "You Pay Hospital Directly": "Оплата напрямую в кассу клиники", "02 / LODGING": "02 / ПРОЖИВАНИЕ", "Accommodation": "Отель и проживание", "You Choose & Pay Hotel": "Вы сами выбираете и оплачиваете отель", "03 / DINING": "03 / ПИТАНИЕ", "Meals & Daily Life": "Питание и досуг", "You Pay as You Go": "Оплата по факту", "04 / CONCIERGE": "04 / КОНСЬЕРЖ", "Our Service Fee": "Наша сервисная комиссия", "Flat $1,200 USD": "Фиксированно $1,200 USD", "Smile Restoration": "Имплантация зубов Straumann", "Carl Zeiss SMILE Vision": "Лазерная коррекция зрения Zeiss SMILE", "Executive Cancer & 3.0T MRI": "Онкочек-ап и МРТ 3.0Т", "Submit for Medical Director Review →": "Отправить на оценку врачу →", "Chat on WhatsApp": "Написать в WhatsApp"}};
+
+    const LANG_LIST = [
       { code: 'en', name: 'English', flag: '🇬🇧' },
       { code: 'es', name: 'Español', flag: '🇪🇸' },
       { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
@@ -2244,6 +2207,90 @@
       { code: 'zh-TW', name: '繁體中文', flag: '🇭🇰' }
     ];
 
+    let cachedTextNodes = [];
+
+    function collectTextNodes(root) {
+      const walker = document.createTreeWalker(
+        root,
+        NodeFilter.SHOW_TEXT,
+        {
+          acceptNode: function(node) {
+            if (!node.nodeValue) return NodeFilter.FILTER_REJECT;
+            const parent = node.parentElement;
+            if (!parent) return NodeFilter.FILTER_REJECT;
+            const tag = parent.tagName.toLowerCase();
+            if (['script', 'style', 'select', 'option'].includes(tag)) {
+              return NodeFilter.FILTER_REJECT;
+            }
+            if (parent.closest('.lang-switcher-wrap')) {
+              return NodeFilter.FILTER_REJECT;
+            }
+            const val = node.nodeValue.trim();
+            if (val.length > 0) {
+              return NodeFilter.FILTER_ACCEPT;
+            }
+            return NodeFilter.FILTER_REJECT;
+          }
+        },
+        false
+      );
+
+      const nodes = [];
+      let current;
+      while ((current = walker.nextNode())) {
+        if (!current.__origText) {
+          current.__origText = current.nodeValue;
+        }
+        nodes.push(current);
+      }
+      return nodes;
+    }
+
+    function applyInstantTranslation(langCode) {
+      if (cachedTextNodes.length === 0) {
+        cachedTextNodes = collectTextNodes(document.body);
+      }
+
+      const dict = I18N_DATA[langCode];
+
+      cachedTextNodes.forEach(node => {
+        const original = node.__origText;
+        if (!original) return;
+
+        if (langCode === 'en' || !dict) {
+          node.nodeValue = original;
+          return;
+        }
+
+        let trimmed = original.trim();
+        if (dict[trimmed]) {
+          node.nodeValue = original.replace(trimmed, dict[trimmed]);
+        } else {
+          // Check substring replacement for key terms
+          let replaced = original;
+          for (const [enKey, trVal] of Object.entries(dict)) {
+            if (enKey.length > 4 && replaced.includes(enKey)) {
+              replaced = replaced.replaceAll(enKey, trVal);
+            }
+          }
+          node.nodeValue = replaced;
+        }
+      });
+    }
+
+    function updateLanguageUI(langCode) {
+      const item = LANG_LIST.find(l => l.code.toLowerCase() === langCode.toLowerCase()) || LANG_LIST[0];
+      const flagEl = document.getElementById('current-lang-flag');
+      const nameEl = document.getElementById('current-lang-name');
+      const selectEl = document.getElementById('langSelectOverlay');
+
+      if (flagEl) flagEl.textContent = item.flag;
+      if (nameEl) nameEl.textContent = item.name;
+      if (selectEl && selectEl.value !== item.code) {
+        selectEl.value = item.code;
+      }
+    }
+
     function setCookie(name, value, days) {
       let expires = "";
       if (days) {
@@ -2256,84 +2303,35 @@
       document.cookie = name + "=" + (value || "") + expires + "; path=/";
     }
 
-    function getCookie(name) {
-      const nameEQ = name + "=";
-      const ca = document.cookie.split(';');
-      for(let i=0; i < ca.length; i++) {
-        let c = ca[i];
-        while (c.charAt(0) === ' ') c = c.substring(1, c.length);
-        if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
-      }
-      return null;
-    }
-
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'en',
-        includedLanguages: 'en,es,de,fr,ru,ar,ja,ko,it,pt,zh-CN,zh-TW',
-        autoDisplay: false
-      }, 'google_translate_element');
-
-      // Initialize UI after google element is ready
-      checkAndApplyAutoLanguage();
-    }
-
-    function updateLanguageUI(langCode) {
-      const langObj = SUPPORTED_LANGS.find(l => l.code.toLowerCase() === langCode.toLowerCase()) || SUPPORTED_LANGS[0];
-      const curFlag = document.getElementById('current-lang-flag');
-      const curName = document.getElementById('current-lang-name');
-      if (curFlag) curFlag.textContent = langObj.flag;
-      if (curName) curName.textContent = langObj.name;
-
-      document.querySelectorAll('.lang-opt').forEach(el => {
-        if (el.getAttribute('data-lang') === langObj.code) {
-          el.classList.add('active');
-        } else {
-          el.classList.remove('active');
-        }
-      });
-    }
-
     function changeLanguage(langCode, isAuto = false) {
-      const target = SUPPORTED_LANGS.find(l => l.code.toLowerCase() === langCode.toLowerCase()) || SUPPORTED_LANGS[0];
-      const targetCode = target.code;
+      const item = LANG_LIST.find(l => l.code.toLowerCase() === langCode.toLowerCase()) || LANG_LIST[0];
+      const code = item.code;
 
-      localStorage.setItem('qingdao_lang', targetCode);
-      setCookie('googtrans', '/en/' + targetCode, 30);
-      updateLanguageUI(targetCode);
+      localStorage.setItem('qingdao_lang', code);
+      setCookie('googtrans', '/en/' + code, 30);
+      updateLanguageUI(code);
 
-      const combo = document.querySelector('.goog-te-combo');
-      if (combo) {
-        if (combo.value !== targetCode) {
-          combo.value = targetCode;
+      // Instant local translation (100% offline, immediate 0ms response on mobile in all countries)
+      applyInstantTranslation(code);
+
+      // Trigger Google Translate as auxiliary for un-cached edge strings if google is accessible
+      try {
+        const combo = document.querySelector('.goog-te-combo');
+        if (combo && combo.value !== code) {
+          combo.value = code;
           combo.dispatchEvent(new Event('change'));
         }
-      } else {
-        if (!isAuto) {
-          location.reload();
-        }
-      }
+      } catch (err) {}
     }
 
     function detectUserPreferredLanguage() {
-      // 1. Check user manual saved preference
       const saved = localStorage.getItem('qingdao_lang');
       if (saved) return saved;
 
-      // 2. Check existing google cookie
-      const cookie = getCookie('googtrans');
-      if (cookie) {
-        const parts = cookie.split('/');
-        if (parts.length >= 3 && parts[2]) {
-          return parts[2];
-        }
-      }
-
-      // 3. Check browser language (navigator.languages or navigator.language)
-      const browserLangs = navigator.languages || [navigator.language || navigator.userLanguage || 'en'];
-      for (let bLang of browserLangs) {
-        if (!bLang) continue;
-        const norm = bLang.toLowerCase();
+      const navLangs = navigator.languages || [navigator.language || 'en'];
+      for (let l of navLangs) {
+        if (!l) continue;
+        const norm = l.toLowerCase();
         if (norm.startsWith('es')) return 'es';
         if (norm.startsWith('de')) return 'de';
         if (norm.startsWith('fr')) return 'fr';
@@ -2348,87 +2346,48 @@
         if (norm.startsWith('en')) return 'en';
       }
 
+      try {
+        const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || "";
+        if (tz.includes("Madrid") || tz.includes("Buenos_Aires") || tz.includes("Mexico") || tz.includes("Bogota") || tz.includes("Santiago")) return 'es';
+        if (tz.includes("Berlin") || tz.includes("Vienna") || tz.includes("Zurich")) return 'de';
+        if (tz.includes("Paris") || tz.includes("Brussels")) return 'fr';
+        if (tz.includes("Moscow") || tz.includes("Yekaterinburg")) return 'ru';
+        if (tz.includes("Tokyo")) return 'ja';
+        if (tz.includes("Seoul")) return 'ko';
+        if (tz.includes("Rome")) return 'it';
+      } catch (e) {}
+
       return 'en';
     }
 
-    function checkAndApplyAutoLanguage() {
-      const preferred = detectUserPreferredLanguage();
-      updateLanguageUI(preferred);
-
-      if (preferred !== 'en') {
-        const curCookie = getCookie('googtrans');
-        if (!curCookie || !curCookie.includes('/' + preferred)) {
-          // Trigger translate
-          setTimeout(() => {
-            changeLanguage(preferred, true);
-          }, 300);
-        }
-      }
+    function googleTranslateElementInit() {
+      try {
+        new google.translate.TranslateElement({
+          pageLanguage: 'en',
+          includedLanguages: 'en,es,de,fr,ru,ar,ja,ko,it,pt,zh-CN,zh-TW',
+          autoDisplay: false
+        }, 'google_translate_element');
+      } catch (e) {}
     }
 
-    // Toggle dropdown
     document.addEventListener('DOMContentLoaded', function() {
-      const switcherWrap = document.querySelector('.lang-switcher-wrap');
-      const langBtn = document.querySelector('.lang-btn');
-      const dropdown = document.querySelector('.lang-dropdown');
+      cachedTextNodes = collectTextNodes(document.body);
 
-      if (langBtn && switcherWrap) {
-        langBtn.addEventListener('click', function(e) {
-          e.stopPropagation();
-          switcherWrap.classList.toggle('open');
-        });
-
-        document.addEventListener('click', function(e) {
-          if (!switcherWrap.contains(e.target)) {
-            switcherWrap.classList.remove('open');
-          }
+      const selectOverlay = document.getElementById('langSelectOverlay');
+      if (selectOverlay) {
+        selectOverlay.addEventListener('change', function(e) {
+          changeLanguage(this.value);
         });
       }
 
-      document.querySelectorAll('.lang-opt').forEach(opt => {
-        opt.addEventListener('click', function(e) {
-          e.preventDefault();
-          const code = this.getAttribute('data-lang');
-          if (switcherWrap) switcherWrap.classList.remove('open');
-          changeLanguage(code);
-        });
-      });
-
-      // Quick sync UI before Google Translate fully downloads
-      const initialLang = detectUserPreferredLanguage();
-      updateLanguageUI(initialLang);
-
-      // Try geo-ip detection in background if first visit and browser is generic English
-      if (!localStorage.getItem('qingdao_lang') && !getCookie('googtrans')) {
-        try {
-          const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || "";
-          let geoLang = null;
-          if (tz.includes("Madrid") || tz.includes("Buenos_Aires") || tz.includes("Mexico") || tz.includes("Bogota") || tz.includes("Santiago")) {
-            geoLang = 'es';
-          } else if (tz.includes("Berlin") || tz.includes("Vienna") || tz.includes("Zurich")) {
-            geoLang = 'de';
-          } else if (tz.includes("Paris") || tz.includes("Brussels")) {
-            geoLang = 'fr';
-          } else if (tz.includes("Moscow") || tz.includes("Yekaterinburg") || tz.includes("Novosibirsk")) {
-            geoLang = 'ru';
-          } else if (tz.includes("Seoul")) {
-            geoLang = 'ko';
-          } else if (tz.includes("Tokyo")) {
-            geoLang = 'ja';
-          } else if (tz.includes("Rome")) {
-            geoLang = 'it';
-          } else if (tz.includes("Riyadh") || tz.includes("Dubai") || tz.includes("Cairo")) {
-            geoLang = 'ar';
-          }
-
-          if (geoLang && geoLang !== initialLang) {
-            changeLanguage(geoLang, true);
-          }
-        } catch(e) {}
+      const initial = detectUserPreferredLanguage();
+      updateLanguageUI(initial);
+      if (initial !== 'en') {
+        changeLanguage(initial, true);
       }
     });
   </script>
-  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async defer></script>
 
 </body>
 </html>
