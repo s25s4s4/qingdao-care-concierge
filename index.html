@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Qingdao Care Concierge | Premier Cross-Border Healthcare & Coastal Healing</title>
-  <meta name="description" content="Accredited Swiss Straumann Dental Implants, Zeiss SMILE Eye Surgery, and Full-Body Executive Screening at Qingdao's Top University Hospitals. Save 70% with VIP Concierge.">
-  
-  <!-- Favicon SVG -->
+  <title>Qingdao Care | Transparent Medical Concierge & Healthcare Travel</title>
+  <meta name="description" content="100% price transparency. Pay accredited public university hospitals directly at official cost. Swiss Straumann implants, Zeiss SMILE vision, and executive checkups in coastal Qingdao with a simple flat concierge fee.">
+
+  <!-- Favicon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌊</text></svg>">
-  
-  <!-- Open Graph Meta Tags (for Facebook / Twitter link preview cards) -->
-  <meta property="og:title" content="Qingdao Care Concierge | World-Class Healthcare at 70% Less Cost">
-  <meta property="og:description" content="Genuine Swiss Straumann Dental Implants, Zeiss SMILE Surgery & Full-Body Executive Health Checkups in coastal Qingdao. Direct partners with State Tertiary Grade-A Hospitals.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Qingdao Care | Transparent Medical Concierge & Healthcare Travel">
+  <meta property="og:description" content="Direct hospital payment at official Chinese state rates. Save 60-70% with zero markups. Dedicated English-speaking concierge, chauffeured transfers, and verified Swiss/German hardware.">
   <meta property="og:image" content="https://s25s4s4.github.io/qingdao-care-concierge/images/qingdao_badaguan_coast.jpg">
   <meta property="og:url" content="https://s25s4s4.github.io/qingdao-care-concierge/">
   <meta property="og:type" content="website">
@@ -19,446 +19,1774 @@
   <!-- Google Fonts: Newsreader (Editorial Serif) + Plus Jakarta Sans + JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-            display: ['"Newsreader"', 'Georgia', 'serif'],
-            mono: ['"JetBrains Mono"', 'monospace'],
-          },
-          colors: {
-            brand: {
-              50: '#f0fdfa',
-              100: '#ccfbf1',
-              500: '#0d9488',
-              600: '#0f766e',
-              700: '#115e59',
-              800: '#134e4a',
-              900: '#042f2e',
-            },
-            navy: {
-              800: '#1e293b',
-              900: '#0f172a',
-              950: '#061325',
-            }
-          }
-        }
-      }
-    }
-  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
-    .glass-nav {
-      background: rgba(255, 255, 255, 0.85);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+    :root {
+      --bg: #fafaf8;
+      --surface: #ffffff;
+      --surface-subtle: #f4f4f0;
+      --ink: #14171a;
+      --ink-muted: #536471;
+      --ink-faint: #8b98a5;
+      --border: #e1e3de;
+      --border-subtle: #eceee8;
+
+      --teal: #0d6e64;
+      --teal-dark: #084c45;
+      --teal-light: #e8f4f2;
+      --navy: #0e2038;
+      --navy-dark: #071220;
+      --amber: #b45309;
+      --amber-light: #fef3c7;
+
+      --font-display: 'Newsreader', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+
+      --shadow-sm: 0 1px 2px rgba(14, 32, 56, 0.04);
+      --shadow-md: 0 4px 16px -2px rgba(14, 32, 56, 0.06), 0 2px 6px -1px rgba(14, 32, 56, 0.04);
+      --shadow-lg: 0 16px 36px -4px rgba(14, 32, 56, 0.08), 0 4px 12px -2px rgba(14, 32, 56, 0.04);
+      --shadow-xl: 0 24px 56px -6px rgba(14, 32, 56, 0.12);
     }
-    .hero-glow {
-      background: radial-gradient(circle at 50% 30%, rgba(20, 184, 166, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    .wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    .serif-display {
+      font-family: var(--font-display);
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      line-height: 1.14;
+      color: var(--navy);
+    }
+    .serif-italic {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    .top-strip {
+      background: var(--navy);
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 13px;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .top-strip .wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .status-dot {
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #22c55e;
+      margin-right: 8px;
+      box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.25);
+    }
+
+    nav.site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(250, 250, 248, 0.94);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+    nav.site-nav .wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 74px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+      color: inherit;
+    }
+    .brand-mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: var(--navy);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-style: italic;
+      font-weight: 600;
+    }
+    .brand-text h1 {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: var(--navy);
+      line-height: 1.2;
+    }
+    .brand-text span {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--teal);
+      font-weight: 600;
+      display: block;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--ink-muted);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.15s;
+    }
+    .nav-links a:hover { color: var(--teal); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 11px 22px;
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+      border: 1px solid transparent;
+      white-space: nowrap;
+    }
+    .btn-primary {
+      background: var(--teal);
+      color: #fff;
+      box-shadow: 0 1px 2px rgba(13, 110, 100, 0.2), 0 4px 12px rgba(13, 110, 100, 0.15);
+    }
+    .btn-primary:hover {
+      background: var(--teal-dark);
+      transform: translateY(-1px);
+    }
+    .btn-secondary {
+      background: var(--surface);
+      color: var(--navy);
+      border-color: var(--border);
+    }
+    .btn-secondary:hover {
+      background: var(--surface-subtle);
+    }
+
+    section.hero {
+      padding: 64px 0 72px;
+      border-bottom: 1px solid var(--border);
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 56px;
+      align-items: center;
+    }
+    .pill-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--teal-light);
+      color: var(--teal-dark);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 999px;
+      margin-bottom: 22px;
+      border: 1px solid rgba(13, 110, 100, 0.15);
+    }
+    .hero-h1 {
+      font-size: clamp(36px, 4.2vw, 56px);
+      margin-bottom: 22px;
+    }
+    .hero-lead {
+      font-size: 17.5px;
+      color: var(--ink-muted);
+      line-height: 1.6;
+      margin-bottom: 32px;
+      max-width: 600px;
+    }
+    .hero-cta-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+
+    .trust-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      padding-top: 30px;
+      border-top: 1px solid var(--border);
+    }
+    .trust-stat strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 28px;
+      color: var(--navy);
+      line-height: 1.1;
+      font-weight: 600;
+    }
+    .trust-stat span {
+      font-size: 13px;
+      color: var(--ink-muted);
+      display: block;
+      margin-top: 4px;
+    }
+
+    .hero-gallery {
+      position: relative;
+    }
+    .gallery-card-main {
+      background: var(--surface);
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-lg);
+    }
+    .gallery-img-wrapper {
+      position: relative;
+      width: 100%;
+      height: 290px;
+      background: #111;
+      overflow: hidden;
+    }
+    .gallery-img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+    .gallery-badge {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      background: rgba(14, 32, 56, 0.88);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 5px 11px;
+      border-radius: 6px;
+      backdrop-filter: blur(8px);
+    }
+    .gallery-content {
+      padding: 22px 24px;
+    }
+    .gallery-content h3 {
+      font-family: var(--font-display);
+      font-size: 20px;
+      color: var(--navy);
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .gallery-content p {
+      font-size: 13.5px;
+      color: var(--ink-muted);
+      line-height: 1.5;
+    }
+
+    .gallery-float-card {
+      margin-top: 14px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .mini-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px 14px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .mini-card-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: var(--teal-light);
+      color: var(--teal-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+      flex-shrink: 0;
+    }
+    .mini-card-text strong {
+      display: block;
+      font-size: 12.5px;
+      color: var(--navy);
+      font-weight: 600;
+      line-height: 1.2;
+    }
+    .mini-card-text span {
+      font-size: 11px;
+      color: var(--ink-muted);
+    }
+
+    .section-head {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 52px;
+    }
+    .section-eyebrow {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--teal);
+      font-weight: 700;
+      display: block;
+      margin-bottom: 10px;
+    }
+    .section-title {
+      font-size: clamp(28px, 3.2vw, 42px);
+      margin-bottom: 14px;
+    }
+    .section-desc {
+      font-size: 16px;
+      color: var(--ink-muted);
+      line-height: 1.6;
+    }
+
+    section.pillars {
+      padding: 84px 0;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+    }
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .pillar-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.2s ease;
+    }
+    .pillar-card:hover {
+      border-color: var(--teal);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .pillar-card.highlight {
+      background: #f0fdfa;
+      border: 2px solid var(--teal);
+    }
+    .pillar-num {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--teal);
+      font-weight: 700;
+      margin-bottom: 12px;
+      display: block;
+    }
+    .pillar-title {
+      font-family: var(--font-display);
+      font-size: 20px;
+      color: var(--navy);
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .pillar-who {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--teal-dark);
+      background: rgba(13, 110, 100, 0.1);
+      padding: 3px 8px;
+      border-radius: 4px;
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+    .pillar-desc {
+      font-size: 13.5px;
+      color: var(--ink-muted);
+      line-height: 1.5;
+      margin-bottom: 16px;
+      flex-grow: 1;
+    }
+    .pillar-footer {
+      font-size: 12px;
+      color: var(--navy);
+      font-weight: 600;
+      padding-top: 12px;
+      border-top: 1px dashed var(--border);
+    }
+
+    section.concierge-included {
+      padding: 84px 0;
+      background: var(--surface-subtle);
+      border-bottom: 1px solid var(--border);
+    }
+    .included-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 40px 44px;
+      box-shadow: var(--shadow-md);
+    }
+    .included-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding-bottom: 28px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .included-top h3 {
+      font-family: var(--font-display);
+      font-size: 28px;
+      color: var(--navy);
+      font-weight: 600;
+    }
+    .included-price-tag {
+      font-family: var(--font-display);
+      font-size: 36px;
+      font-weight: 600;
+      color: var(--teal);
+      line-height: 1;
+    }
+    .included-price-tag span {
+      font-family: var(--font-sans);
+      font-size: 14px;
+      color: var(--ink-muted);
+      font-weight: 400;
+    }
+    .included-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .inc-box {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+    .inc-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: var(--teal-light);
+      color: var(--teal-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+    .inc-text h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+    .inc-text p {
+      font-size: 13px;
+      color: var(--ink-muted);
+      line-height: 1.45;
+    }
+
+    section.pricing {
+      padding: 92px 0;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+    }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      align-items: stretch;
+    }
+    .price-card {
+      background: var(--surface);
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      transition: all 0.25s ease;
+      position: relative;
+    }
+    .price-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-xl);
+      border-color: #cbd5e1;
+    }
+    .price-card.featured {
+      border: 2px solid var(--teal);
+      box-shadow: var(--shadow-lg);
+    }
+    .featured-ribbon {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      background: var(--teal);
+      color: #fff;
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 999px;
+    }
+    .price-img-thumb {
+      height: 180px;
+      background: #1e293b;
+      position: relative;
+      overflow: hidden;
+    }
+    .price-img-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .price-img-caption {
+      position: absolute;
+      bottom: 10px;
+      left: 12px;
+      right: 12px;
+      background: rgba(14, 32, 56, 0.78);
+      color: #fff;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      padding: 4px 8px;
+      border-radius: 4px;
+      backdrop-filter: blur(4px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .price-card-body {
+      padding: 28px 26px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .price-card-title {
+      font-family: var(--font-display);
+      font-size: 24px;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+    .price-card-sub {
+      font-size: 13px;
+      color: var(--ink-muted);
+      margin-bottom: 20px;
+      min-height: 38px;
+    }
+
+    .itemized-stack {
+      background: var(--bg);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 18px 20px;
+      margin-bottom: 22px;
+    }
+    .item-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12.5px;
+      margin-bottom: 8px;
+    }
+    .item-row .who {
+      font-size: 11px;
+      color: var(--ink-faint);
+      display: block;
+    }
+    .item-row .cost {
+      font-family: var(--font-mono);
+      font-weight: 600;
+      color: var(--navy);
+    }
+    .item-row.western {
+      color: var(--ink-muted);
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px dashed var(--border);
+    }
+    .item-row.western .cost {
+      text-decoration: line-through;
+      color: #dc2626;
+    }
+    .total-est-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding-top: 10px;
+      border-top: 1px solid var(--border);
+      margin-top: 6px;
+    }
+    .total-est-row .label {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--navy);
+    }
+    .total-est-row .total-val {
+      font-family: var(--font-display);
+      font-size: 26px;
+      font-weight: 600;
+      color: var(--teal);
+    }
+    .savings-pill {
+      background: #ecfdf5;
+      color: #047857;
+      border: 1px solid #a7f3d0;
+      font-size: 11.5px;
+      font-weight: 700;
+      padding: 5px 10px;
+      border-radius: 6px;
+      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    .specs-list {
+      list-style: none;
+      font-size: 13px;
+      color: var(--ink);
+      margin-bottom: 26px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .specs-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      line-height: 1.45;
+    }
+    .specs-list li svg {
+      width: 16px;
+      height: 16px;
+      color: var(--teal);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    section.optional-tour {
+      padding: 88px 0;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+    }
+    .tour-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      box-shadow: var(--shadow-sm);
+    }
+    .tour-img {
+      position: relative;
+      background: #111;
+      min-height: 340px;
+    }
+    .tour-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .tour-content {
+      padding: 44px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .tour-tag {
+      font-size: 11.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 700;
+      color: var(--amber);
+      background: var(--amber-light);
+      padding: 4px 10px;
+      border-radius: 4px;
+      display: inline-block;
+      margin-bottom: 14px;
+    }
+    .tour-content h3 {
+      font-family: var(--font-display);
+      font-size: 26px;
+      color: var(--navy);
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .tour-content p {
+      font-size: 14px;
+      color: var(--ink-muted);
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .tour-points {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--navy);
+      margin-bottom: 24px;
+    }
+    .tour-points li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .tour-footer {
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--ink-muted);
+    }
+
+    section.hospitals {
+      padding: 92px 0;
+      border-bottom: 1px solid var(--border);
+      background: var(--surface-subtle);
+    }
+    .hospital-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+    }
+    .hospital-card {
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      overflow: hidden;
+      background: var(--surface);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      transition: all 0.2s ease;
+    }
+    .hospital-card:hover {
+      box-shadow: var(--shadow-lg);
+    }
+    .hospital-header-img {
+      height: 220px;
+      position: relative;
+      background: #0f172a;
+    }
+    .hospital-header-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      opacity: 0.92;
+    }
+    .hospital-tag {
+      position: absolute;
+      bottom: 14px;
+      left: 18px;
+      background: rgba(14, 32, 56, 0.85);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 6px;
+      backdrop-filter: blur(6px);
+    }
+    .hospital-body {
+      padding: 32px 30px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: space-between;
+    }
+    .hospital-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 10px;
+    }
+    .hospital-meta .rank {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--teal);
+    }
+    .hospital-meta .founded {
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      color: var(--ink-faint);
+    }
+    .hospital-name {
+      font-family: var(--font-display);
+      font-size: 24px;
+      color: var(--navy);
+      font-weight: 600;
+      margin-bottom: 12px;
+      line-height: 1.25;
+    }
+    .hospital-desc {
+      font-size: 14px;
+      color: var(--ink-muted);
+      line-height: 1.6;
+      margin-bottom: 22px;
+    }
+    .hospital-bullets {
+      background: var(--bg);
+      border-radius: 12px;
+      padding: 16px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 13px;
+      margin-bottom: 24px;
+    }
+    .hospital-bullet-row {
+      display: flex;
+      gap: 8px;
+    }
+    .hospital-bullet-row strong {
+      color: var(--navy);
+      white-space: nowrap;
+    }
+    .hospital-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 18px;
+      border-top: 1px solid var(--border-subtle);
+      font-size: 12.5px;
+      color: var(--ink-faint);
+      font-family: var(--font-mono);
+    }
+
+    section.itinerary {
+      padding: 92px 0;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+    }
+    .timeline-wrap {
+      max-width: 840px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .timeline-wrap::before {
+      content: "";
+      position: absolute;
+      top: 24px;
+      bottom: 24px;
+      left: 31px;
+      width: 2px;
+      background: var(--border);
+    }
+    .timeline-step {
+      display: flex;
+      gap: 28px;
+      margin-bottom: 38px;
+      position: relative;
+    }
+    .timeline-step:last-child { margin-bottom: 0; }
+    .step-marker {
+      width: 64px;
+      height: 64px;
+      border-radius: 16px;
+      background: var(--surface);
+      border: 2px solid var(--teal);
+      color: var(--teal);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-weight: 700;
+      box-shadow: var(--shadow-sm);
+      z-index: 1;
+    }
+    .step-marker .day-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .step-marker .day-num { font-size: 18px; line-height: 1; margin-top: 2px; }
+
+    .step-box {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 22px 26px;
+      flex-grow: 1;
+      box-shadow: var(--shadow-sm);
+    }
+    .step-box h4 {
+      font-family: var(--font-display);
+      font-size: 21px;
+      color: var(--navy);
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .step-box p {
+      font-size: 14px;
+      color: var(--ink-muted);
+      line-height: 1.55;
+    }
+
+    section.quote-section {
+      padding: 96px 0;
+      background: var(--navy);
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+    section.quote-section::before {
+      content: "";
+      position: absolute;
+      top: -300px;
+      right: -300px;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(13, 110, 100, 0.25) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .quote-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 64px;
+      align-items: flex-start;
+    }
+    .quote-info h2 {
+      color: #fff;
+      font-size: clamp(32px, 3.8vw, 48px);
+      margin-bottom: 20px;
+    }
+    .quote-info p {
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 36px;
+    }
+    .guarantee-list {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .guarantee-item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+    .guarantee-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: rgba(13, 110, 100, 0.4);
+      color: #2dd4bf;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .guarantee-text strong {
+      display: block;
+      color: #fff;
+      font-size: 14.5px;
+      margin-bottom: 2px;
+    }
+    .guarantee-text span {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.6);
+      line-height: 1.4;
+      display: block;
+    }
+
+    .form-card {
+      background: var(--surface);
+      color: var(--ink);
+      border-radius: 20px;
+      padding: 40px 36px;
+      box-shadow: var(--shadow-xl);
+    }
+    .form-card h3 {
+      font-family: var(--font-display);
+      font-size: 26px;
+      color: var(--navy);
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .form-card .form-sub {
+      font-size: 13px;
+      color: var(--ink-muted);
+      margin-bottom: 24px;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+    .form-group {
+      margin-bottom: 18px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+    .form-control {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-family: var(--font-sans);
+      font-size: 14px;
+      color: var(--ink);
+      background: var(--surface);
+      transition: all 0.15s;
+    }
+    .form-control:focus {
+      outline: none;
+      border-color: var(--teal);
+      box-shadow: 0 0 0 3px rgba(13, 110, 100, 0.12);
+    }
+    textarea.form-control { resize: vertical; min-height: 90px; }
+
+    section.faq {
+      padding: 88px 0;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+    }
+    .faq-grid {
+      max-width: 820px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .faq-item {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px 28px;
+      background: var(--surface);
+    }
+    .faq-item h4 {
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+    .faq-item p {
+      font-size: 14px;
+      color: var(--ink-muted);
+      line-height: 1.6;
+    }
+
+    footer.site-footer {
+      background: var(--navy-dark);
+      color: rgba(255, 255, 255, 0.6);
+      padding: 64px 0 32px;
+      font-size: 13px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+    .footer-col h5 {
+      color: #fff;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      letter-spacing: -0.01em;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col ul li { line-height: 1.4; }
+    .footer-bottom {
+      padding-top: 32px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 12px;
+    }
+
+    @media (max-width: 992px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 44px; }
+      .pillars-grid { grid-template-columns: 1fr 1fr; }
+      .included-grid { grid-template-columns: 1fr; }
+      .pricing-grid { grid-template-columns: 1fr; max-width: 500px; margin: 0 auto; }
+      .tour-card { grid-template-columns: 1fr; }
+      .hospital-grid { grid-template-columns: 1fr; }
+      .quote-grid { grid-template-columns: 1fr; gap: 40px; }
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+    }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .pillars-grid { grid-template-columns: 1fr; }
+      .trust-strip { grid-template-columns: 1fr; gap: 18px; }
+      .timeline-wrap::before { left: 24px; }
+      .timeline-step { gap: 18px; }
+      .step-marker { width: 50px; height: 50px; border-radius: 12px; }
+      .step-marker .day-num { font-size: 15px; }
+      .form-row { grid-template-columns: 1fr; gap: 0; }
     }
   </style>
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-500 selection:text-white">
+<body>
 
-  <!-- TOP ANNOUNCEMENT BAR -->
-  <div class="bg-marine-950 text-slate-300 text-xs py-2 px-4 border-b border-slate-800">
-    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
-      <div class="flex items-center gap-2">
-        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+  <!-- TOP STRIP -->
+  <div class="top-strip">
+    <div class="wrap">
+      <div>
+        <span class="status-dot"></span>
         <span>15-Day Visa-Free Policy in Effect for EU, Switzerland, Singapore & Allies</span>
       </div>
-      <div class="flex items-center gap-4 text-slate-400">
-        <span>Bilingual VIP Hotline: +86-532-82912071</span>
-        <span>•</span>
-        <a href="#quote" class="text-brand-500 hover:text-brand-100 transition font-medium">Inquire Directly &rarr;</a>
+      <div>
+        <span>Hospital Direct Desk: <strong>+86 (0532) 8291-2071</strong></span>
       </div>
     </div>
   </div>
 
-  <!-- NAVIGATION -->
-  <nav class="sticky top-0 z-50 glass-nav border-b border-slate-200/80 transition-all">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
-      <a href="#" class="flex items-center gap-3 group">
-        <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-brand-600 to-cyan-500 flex items-center justify-center text-white shadow-md shadow-brand-500/20 group-hover:scale-105 transition">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-          </svg>
-        </div>
-        <div>
-          <span class="font-display font-extrabold text-xl text-slate-900 tracking-tight block">Qingdao Care</span>
-          <span class="text-[11px] font-semibold text-brand-600 tracking-widest uppercase block -mt-0.5">International Medical Concierge</span>
+  <!-- SITE NAV -->
+  <nav class="site-nav">
+    <div class="wrap">
+      <a href="#" class="brand">
+        <div class="brand-mark">Q</div>
+        <div class="brand-text">
+          <h1>Qingdao Care</h1>
+          <span>Transparent Medical Concierge</span>
         </div>
       </a>
 
-      <div class="hidden md:flex items-center gap-8 font-medium text-sm text-slate-600">
-        <a href="#savings" class="hover:text-brand-600 transition">Price Transparency</a>
-        <a href="#hospitals" class="hover:text-brand-600 transition">Accredited Hospitals</a>
-        <a href="#itinerary" class="hover:text-brand-600 transition">Care & Recovery Tour</a>
-        <a href="#qa" class="hover:text-brand-600 transition">FAQ</a>
-      </div>
+      <ul class="nav-links">
+        <li><a href="#transparency">How It Works</a></li>
+        <li><a href="#included">Concierge Inclusions</a></li>
+        <li><a href="#pricing">Itemized Costs</a></li>
+        <li><a href="#tour">Optional Leisure</a></li>
+        <li><a href="#hospitals">Partner Hospitals</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
 
-      <div class="flex items-center gap-3">
-        <a href="#quote" class="px-5 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-semibold text-sm shadow-md shadow-brand-600/20 hover:shadow-lg transition">
-          Request Estimate
-        </a>
-      </div>
+      <a href="#quote" class="btn btn-primary">Free Itemized Estimate</a>
     </div>
   </nav>
 
   <!-- HERO SECTION -->
-  <header class="relative pt-12 pb-24 overflow-hidden hero-glow">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6">
-      <div class="grid lg:grid-cols-12 gap-12 items-center">
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
         
-        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-50 border border-brand-200/60 text-brand-700 text-xs font-semibold">
-            <span class="text-sm">🏥</span>
-            <span>Direct Partner with State Tertiary Grade-A Teaching Hospitals</span>
+        <div class="hero-text">
+          <div class="pill-kicker">
+            <span>100% Unbundled Transparency • Zero Markups</span>
           </div>
-          
-          <h1 class="font-display text-4xl sm:text-5xl xl:text-6xl font-medium text-slate-950 tracking-tight leading-[1.12]">
-            World-class healthcare at <br class="hidden sm:block">
-            <span class="italic text-brand-600 font-normal">60–70% less cost.</span><br>
-            Recover by the ocean.
+
+          <h1 class="serif-display hero-h1">
+            World-class healthcare at <span class="serif-italic" style="color: var(--teal);">official hospital cost</span>. Dedicated concierge care.
           </h1>
 
-          <p class="text-base sm:text-lg text-slate-600 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-            Eliminate endless NHS queues and five-figure US private bills. Experience genuine Swiss Straumann implants, Carl Zeiss SMILE laser surgery, and luxury health checkups with 1-on-1 English concierge care in historic Qingdao.
+          <p class="hero-lead">
+            Pay the state university hospital directly at the counter. Choose your own hotel. We manage your specialist fast-track, private chauffeured transfers, and bilingual bedside care for a simple, flat concierge fee.
           </p>
 
-          <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-            <a href="#quote" class="w-full sm:w-auto px-8 py-4 bg-brand-600 hover:bg-brand-700 text-white font-bold rounded-xl shadow-xl shadow-brand-600/25 transition flex items-center justify-center gap-2">
-              <span>Calculate Your Savings</span>
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          <div class="hero-cta-row">
+            <a href="#quote" class="btn btn-primary" style="padding: 13px 28px; font-size: 15px;">
+              Get Your Itemized Cost Breakdown &rarr;
             </a>
-            <a href="#hospitals" class="w-full sm:w-auto px-8 py-4 bg-white hover:bg-slate-50 text-slate-700 font-semibold rounded-xl border border-slate-300 transition">
-              Explore Partner Hospitals
+            <a href="#transparency" class="btn btn-secondary" style="padding: 13px 24px; font-size: 15px;">
+              See How Billing Works
             </a>
           </div>
 
-          <!-- Trust Badges -->
-          <div class="pt-8 border-t border-slate-200 grid grid-cols-3 gap-4 text-left">
-            <div>
-              <div class="font-display font-extrabold text-2xl text-slate-900">$10,000+</div>
-              <div class="text-xs text-slate-500 font-medium">Avg. Cash Saved / Patient</div>
+          <div class="trust-strip">
+            <div class="trust-stat">
+              <strong>Direct Pay</strong>
+              <span>Official Hospital Counter Invoices</span>
             </div>
-            <div>
-              <div class="font-display font-extrabold text-2xl text-slate-900">Zero</div>
-              <div class="text-xs text-slate-500 font-medium">Waitlist for Specialist Care</div>
+            <div class="trust-stat">
+              <strong>$1,200 Flat</strong>
+              <span>Full Concierge & Chauffeur Fee</span>
             </div>
-            <div>
-              <div class="font-display font-extrabold text-2xl text-slate-900">100%</div>
-              <div class="text-xs text-slate-500 font-medium">Official Swiss/German Hardware</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- HERO VISUAL CARDS -->
-        <div class="lg:col-span-5 relative">
-          <div class="relative mx-auto max-w-md lg:max-w-none space-y-4">
-            <!-- Coastal Image Card -->
-            <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900 relative aspect-[16/10]">
-              <img src="images/qingdao_badaguan_coast.jpg" alt="Qingdao Coastal Resort & Heritage" class="w-full h-full object-cover opacity-95 hover:scale-105 transition duration-700">
-              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-transparent"></div>
-              <div class="absolute bottom-5 left-5 right-5 text-white">
-                <span class="inline-block px-2.5 py-1 bg-brand-500 text-white text-[10px] font-bold rounded-md uppercase tracking-wider mb-1.5 shadow-sm">Seaside Healing Retreat</span>
-                <p class="font-display font-bold text-base leading-snug">Recover in Coastal Qingdao: Famous for ocean air, Badaguan European architecture & 5-star beachfront resorts.</p>
-              </div>
-            </div>
-
-            <!-- Clinical Excellence Photo Card -->
-            <div class="rounded-3xl overflow-hidden shadow-xl border-4 border-white bg-slate-900 relative aspect-[16/9]">
-              <img src="images/dental_implant_suite.jpg" alt="International Dental & Surgical Center" class="w-full h-full object-cover opacity-95 hover:scale-105 transition duration-700">
-              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-transparent to-transparent"></div>
-              <div class="absolute bottom-4 left-5 right-5 text-white flex justify-between items-end">
-                <div>
-                  <span class="text-emerald-400 text-xs font-bold block">✓ Swiss Straumann Certified Surgical Suite</span>
-                  <span class="text-xs text-slate-300">Grade-A Tertiary Clinical Standards</span>
-                </div>
-                <span class="text-[11px] bg-white/20 backdrop-blur-md px-2.5 py-1 rounded-lg font-mono">QDUH & ICQD</span>
-              </div>
-            </div>
-
-            <!-- Floating Trust Badge -->
-            <div class="bg-white p-4 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-3">
-              <div class="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 shrink-0 text-lg">
-                🛡️
-              </div>
-              <div class="text-xs">
-                <span class="font-bold text-slate-900 block">JCI / Tertiary Standards</span>
-                <span class="text-slate-500 text-[11px]">Full English clinical dossiers & QR-trackable Swiss implants</span>
-              </div>
+            <div class="trust-stat">
+              <strong>100% Genuine</strong>
+              <span>QR-Verifiable Swiss/German Tech</span>
             </div>
           </div>
         </div>
 
-      </div>
-    </div>
-  </header>
-
-  <!-- SAVINGS CALCULATOR / PACKAGES -->
-  <section id="savings" class="py-24 bg-white border-y border-slate-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6">
-      
-      <div class="text-center max-w-2xl mx-auto mb-16">
-        <span class="text-brand-600 font-bold uppercase tracking-widest text-xs">Direct Price Transparency</span>
-        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-slate-950 mt-2 mb-4">Compare & Save: How Much You Keep</h2>
-        <p class="text-slate-600 text-sm sm:text-base">All our packages are turn-key: Hospital treatment, VIP translation, private airport transfers, and 4/5-star sea-view hotel are fully included.</p>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-8">
-        
-        <!-- CARD 1: DENTAL -->
-        <div class="rounded-3xl border-2 border-brand-500 bg-brand-50/20 p-8 flex flex-col justify-between shadow-xl shadow-brand-500/5 relative hover:-translate-y-1 transition duration-300">
-          <div class="absolute -top-3.5 right-6 bg-brand-600 text-white text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
-            Most Popular
-          </div>
-          <div>
-            <!-- Real Hardware Image -->
-            <div class="h-44 rounded-2xl overflow-hidden mb-6 border border-slate-200 relative group">
-              <img src="images/straumann_implant_real.jpg" alt="Genuine Swiss Straumann Dental System" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent"></div>
-              <span class="absolute bottom-3 left-3 text-[11px] font-mono text-white bg-slate-900/80 px-2 py-0.5 rounded backdrop-blur-sm">Official Straumann® SLA/SLActive</span>
+        <div class="hero-gallery">
+          <div class="gallery-card-main">
+            <div class="gallery-img-wrapper">
+              <img src="images/qingdao_badaguan_coast.jpg" alt="Qingdao coastal scenery and Badaguan villas">
+              <span class="gallery-badge">Seaside Recovery Destination</span>
             </div>
-
-            <h3 class="font-display font-bold text-2xl text-slate-950">Smile Restoration Package</h3>
-            <p class="text-xs text-slate-500 mt-1 mb-6">3x Genuine Swiss Straumann Implants with all-ceramic crowns.</p>
-
-            <div class="bg-white p-5 rounded-2xl border border-slate-200 mb-6 space-y-2.5">
-              <div class="flex justify-between items-center text-sm">
-                <span class="text-slate-500">US / UK Private Self-Pay:</span>
-                <span class="line-through text-rose-500 font-semibold text-base">$14,500</span>
-              </div>
-              <div class="flex justify-between items-center pt-2 border-t border-slate-100">
-                <span class="font-bold text-slate-900">Qingdao All-Inclusive:</span>
-                <span class="font-display font-extrabold text-2xl text-brand-600">$5,800</span>
-              </div>
-              <div class="text-xs text-emerald-600 font-bold bg-emerald-50 py-1 px-2.5 rounded-lg text-center mt-2">
-                💰 You Pocket: Save ~$8,700 (60% Lower)
-              </div>
+            <div class="gallery-content">
+              <h3>Heal in Coastal Qingdao</h3>
+              <p>Known for its clean marine air, pine-fringed beaches, and European architectural heritage. Recover comfortably by the ocean.</p>
             </div>
-
-            <ul class="text-xs sm:text-sm text-slate-600 space-y-2.5 mb-8">
-              <li class="flex items-start gap-2.5">
-                <span class="text-brand-600 font-bold">✓</span>
-                <span>3 Genuine Swiss Straumann Implants (Lifetime Guarantee Card)</span>
-              </li>
-              <li class="flex items-start gap-2.5">
-                <span class="text-brand-600 font-bold">✓</span>
-                <span>CAD/CAM All-Ceramic Zirconia Crowns & 3D CT Scans</span>
-              </li>
-              <li class="flex items-start gap-2.5">
-                <span class="text-brand-600 font-bold">✓</span>
-                <span><strong>7 Nights 4/5-Star Seaside Hotel</strong> & Daily Breakfast</span>
-              </li>
-              <li class="flex items-start gap-2.5">
-                <span class="text-brand-600 font-bold">✓</span>
-                <span>Private Chauffeur Airport & Clinic Transfers</span>
-              </li>
-            </ul>
           </div>
 
-          <a href="#quote" class="w-full py-3.5 bg-brand-600 hover:bg-brand-700 text-white font-bold rounded-xl text-center text-sm shadow-md transition">
-            Book Free Dental Evaluation
-          </a>
-        </div>
-
-        <!-- CARD 2: EYE LASIK -->
-        <div class="rounded-3xl border border-slate-200 bg-white p-8 flex flex-col justify-between shadow-sm hover:shadow-lg transition duration-300">
-          <div>
-            <!-- Real Hardware Image -->
-            <div class="h-44 rounded-2xl overflow-hidden mb-6 border border-slate-200 relative group">
-              <img src="images/zeiss_laser_suite_real.jpg" alt="Carl Zeiss Refractive Suite" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent"></div>
-              <span class="absolute bottom-3 left-3 text-[11px] font-mono text-white bg-slate-900/80 px-2 py-0.5 rounded backdrop-blur-sm">Carl Zeiss VisuMax® Platform</span>
-            </div>
-
-            <h3 class="font-display font-bold text-2xl text-slate-950">Carl Zeiss SMILE Vision</h3>
-            <p class="text-xs text-slate-500 mt-1 mb-6">Bladeless dual-eye laser refractive correction (10 min procedure).</p>
-
-            <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 mb-6 space-y-2.5">
-              <div class="flex justify-between items-center text-sm">
-                <span class="text-slate-500">US / UK Private Self-Pay:</span>
-                <span class="line-through text-rose-500 font-semibold text-base">$5,500</span>
-              </div>
-              <div class="flex justify-between items-center pt-2 border-t border-slate-200">
-                <span class="font-bold text-slate-900">Qingdao All-Inclusive:</span>
-                <span class="font-display font-extrabold text-2xl text-indigo-600">$3,600</span>
-              </div>
-              <div class="text-xs text-emerald-600 font-bold bg-emerald-50 py-1 px-2.5 rounded-lg text-center mt-2">
-                💰 You Pocket: Save ~$1,900 + Free Vacation
+          <div class="gallery-float-card">
+            <div class="mini-card">
+              <div class="mini-card-icon">🏛️</div>
+              <div class="mini-card-text">
+                <strong>Est. 1898 & 1916</strong>
+                <span>Century-Old State Teaching Hospitals</span>
               </div>
             </div>
-
-            <ul class="text-xs sm:text-sm text-slate-600 space-y-2.5 mb-8">
-              <li class="flex items-start gap-2.5">
-                <span class="text-indigo-600 font-bold">✓</span>
-                <span>Both Eyes Carl Zeiss VisuMax Laser Correction</span>
-              </li>
-              <li class="flex items-start gap-2.5">
-                <span class="text-indigo-600 font-bold">✓</span>
-                <span>24 Specialized Pre-Op Corneal Topography Checks</span>
-              </li>
-              <li class="flex items-start gap-2.5">
-                <span class="text-indigo-600 font-bold">✓</span>
-                <span><strong>5 Nights Oceanfront Hotel</strong> & Local Sightseeing</span>
-              </li>
-              <li class="flex items-start gap-2.5">
-                <span class="text-indigo-600 font-bold">✓</span>
-                <span>Post-Op Eye Protective Kit & Dedicated Bilingual Escort</span>
-              </li>
-            </ul>
+            <div class="mini-card">
+              <div class="mini-card-icon">🚗</div>
+              <div class="mini-card-text">
+                <strong>Chauffeur Included</strong>
+                <span>All Airport & Clinic Rides Covered</span>
+              </div>
+            </div>
           </div>
-
-          <a href="#quote" class="w-full py-3.5 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-xl text-center text-sm transition">
-            Book Free Eye Evaluation
-          </a>
-        </div>
-
-        <!-- CARD 3: FULL BODY HEALTH CHECKUP -->
-        <div class="rounded-3xl border border-slate-200 bg-white p-8 flex flex-col justify-between shadow-sm hover:shadow-lg transition duration-300">
-          <div>
-            <div class="w-12 h-12 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center text-2xl mb-5">🩺</div>
-            <h3 class="font-display font-bold text-2xl text-slate-950">Executive Cancer & Body MRI</h3>
-            <p class="text-xs text-slate-500 mt-1 mb-6">Painless Endoscopy, Colonoscopy & 3.0T MRI. Fast 3-day results.</p>
-
-            <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 mb-6 space-y-2.5">
-              <div class="flex justify-between items-center text-sm">
-                <span class="text-slate-500">US / UK Private Self-Pay:</span>
-                <span class="line-through text-rose-500 font-semibold text-base">$7,800</span>
-              </div>
-              <div class="flex justify-between items-center pt-2 border-t border-slate-200">
-                <span class="font-bold text-slate-900">Qingdao All-Inclusive:</span>
-                <span class="font-display font-extrabold text-2xl text-teal-600">$2,900</span>
-              </div>
-              <div class="text-xs text-emerald-600 font-bold bg-emerald-50 py-1 px-2.5 rounded-lg text-center mt-2">
-                💰 You Pocket: Save ~$4,900 (63% Lower)
-              </div>
-            </div>
-
-            <ul class="text-xs sm:text-sm text-slate-600 space-y-2.5 mb-8">
-              <li class="flex items-start gap-2.5">
-                <span class="text-teal-600 font-bold">✓</span>
-                <span>Full-Sedation Painless Gastroscopy & Colonoscopy</span>
-              </li>
-              <li class="flex items-start gap-2.5">
-                <span class="text-teal-600 font-bold">✓</span>
-                <span>High-Definition 3.0T MRI (Brain/Spine) & 64-slice Chest CT</span>
-              </li>
-              <li class="flex items-start gap-2.5">
-                <span class="text-teal-600 font-bold">✓</span>
-                <span>Official English Comprehensive Diagnostic Dossier & DICOM Disc</span>
-              </li>
-              <li class="flex items-start gap-2.5">
-                <span class="text-teal-600 font-bold">✓</span>
-                <span><strong>4 Nights Seaside Hotel</strong> + Traditional Acupressure Session</span>
-              </li>
-            </ul>
-          </div>
-
-          <a href="#quote" class="w-full py-3.5 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-xl text-center text-sm transition">
-            Book Screening Assessment
-          </a>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- ACCREDITED HOSPITALS SECTION (REAL FACTS) -->
-  <section id="hospitals" class="py-24 bg-slate-100">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+  <!-- 4-PILLAR TRANSPARENCY MODEL -->
+  <section id="transparency" class="pillars">
+    <div class="wrap">
       
-      <div class="max-w-3xl mb-16">
-        <span class="text-brand-600 font-bold uppercase tracking-widest text-xs">Accredited Clinical Excellence</span>
-        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-slate-950 mt-2 mb-4">
-          World-Class Medical Centers in Coastal Qingdao
-        </h2>
-        <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
-          We operate exclusively with accredited, government-supervised Tertiary Grade-A teaching hospitals (the highest medical tier in China). No back-alley cosmetic shops or unverified clinics.
+      <div class="section-head">
+        <span class="section-eyebrow">Financial Integrity</span>
+        <h2 class="serif-display section-title">The 4-Pillar Transparent Payment Model</h2>
+        <p class="section-desc">
+          No black-box markups. No inflated hospital bills. You maintain full oversight and payment control throughout your entire journey.
         </p>
       </div>
 
-      <div class="grid lg:grid-cols-2 gap-8">
+      <div class="pillars-grid">
         
-        <!-- HOSPITAL 1 -->
-        <div class="bg-white rounded-3xl overflow-hidden border border-slate-200/80 shadow-md flex flex-col justify-between hover:shadow-xl transition">
-          <div class="h-56 relative overflow-hidden bg-slate-900">
-            <img src="images/qduh_hospital_exterior.jpg" alt="QDUH Laoshan International Medical Center" class="w-full h-full object-cover opacity-95 hover:scale-105 transition duration-500">
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent"></div>
-            <div class="absolute bottom-4 left-6 right-6 flex justify-between items-end text-white">
-              <span class="text-xs bg-brand-600 px-3 py-1 rounded-full font-bold uppercase tracking-wider">Teaching Hospital</span>
-              <span class="text-xs font-mono bg-white/20 px-2 py-0.5 rounded">Est. 1898</span>
+        <div class="pillar-card">
+          <div>
+            <span class="pillar-num">01 / CLINICAL</span>
+            <h3 class="pillar-title">Medical Care</h3>
+            <span class="pillar-who">You Pay Hospital Directly</span>
+            <p class="pillar-desc">
+              Settle all consultation, surgery, and implant costs directly at the hospital cashier using your foreign Visa/MasterCard. Official state invoices issued.
+            </p>
+          </div>
+          <div class="pillar-footer">Zero Middleman Surcharge</div>
+        </div>
+
+        <div class="pillar-card">
+          <div>
+            <span class="pillar-num">02 / LODGING</span>
+            <h3 class="pillar-title">Accommodation</h3>
+            <span class="pillar-who">You Choose & Pay Hotel</span>
+            <p class="pillar-desc">
+              Book your preferred hotel directly on Booking.com or pay at check-in. Choose between beachside 4-star comfort (~$50/nt) or 5-star luxury Hyatt (~$110/nt).
+            </p>
+          </div>
+          <div class="pillar-footer">Tailored to Your Budget</div>
+        </div>
+
+        <div class="pillar-card">
+          <div>
+            <span class="pillar-num">03 / DINING</span>
+            <h3 class="pillar-title">Meals & Daily Life</h3>
+            <span class="pillar-who">You Pay as You Go</span>
+            <p class="pillar-desc">
+              Enjoy fresh coastal seafood, authentic dim sum, or western hotel dining at your own leisure. We assist with ordering, translations, and dietary requests.
+            </p>
+          </div>
+          <div class="pillar-footer">Full Personal Freedom</div>
+        </div>
+
+        <div class="pillar-card highlight">
+          <div>
+            <span class="pillar-num">04 / CONCIERGE</span>
+            <h3 class="pillar-title">Our Service Fee</h3>
+            <span class="pillar-who">Flat $1,200 USD</span>
+            <p class="pillar-desc">
+              Our fixed fee covers your dedicated bilingual coordinator, fast-track hospital booking, English records, airport chauffeur, and all clinic transport.
+            </p>
+          </div>
+          <div class="pillar-footer" style="color: var(--teal); font-weight: 700;">All Minor Logistics Covered by Us</div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WHAT IS COVERED BY CONCIERGE FEE -->
+  <section id="included" class="concierge-included">
+    <div class="wrap">
+      
+      <div class="included-card">
+        <div class="included-top">
+          <div>
+            <span class="section-eyebrow" style="margin-bottom: 6px;">Zero Hidden Incidental Costs</span>
+            <h3>What Your $1,200 Flat Concierge Fee Fully Covers</h3>
+          </div>
+          <div class="included-price-tag">
+            $1,200 <span>/ Patient Journey</span>
+          </div>
+        </div>
+
+        <div class="included-grid">
+          <div class="inc-box">
+            <div class="inc-icon">✈️</div>
+            <div class="inc-text">
+              <h4>Airport Chauffeur (Both Ways)</h4>
+              <p>Private chauffeured transfers between Qingdao Jiaodong Airport (TAO) and your hotel. We cover fuel, tolls, and parking.</p>
             </div>
           </div>
-          <div class="p-8 sm:p-10 flex flex-col justify-between flex-1">
-            <div>
-              <span class="text-xs font-bold text-brand-600 uppercase tracking-wider">Ranked #1 University Hospital in Shandong</span>
-              <h3 class="font-display font-bold text-2xl text-slate-900 mt-1">Affiliated Hospital of Qingdao University (QDUH)</h3>
 
-              <p class="text-sm text-slate-600 my-4 leading-relaxed">
-                The flagship medical complex of Shandong Province. Its brand-new International Medical Wing is located at the <strong>Laoshan Medical Complex (No. 59 Haier Road)</strong>, minutes from Shilaoren National Beach.
+          <div class="inc-box">
+            <div class="inc-icon">🚘</div>
+            <div class="inc-text">
+              <h4>All Clinic & Hospital Transport</h4>
+              <p>Door-to-door private transport for every consultation, surgery, and follow-up appointment. Never hail a taxi or navigate transit.</p>
+            </div>
+          </div>
+
+          <div class="inc-box">
+            <div class="inc-icon">👩‍⚕️</div>
+            <div class="inc-text">
+              <h4>1-on-1 Bilingual Medical Escort</h4>
+              <p>Your dedicated English-speaking care coordinator accompanies you at every consultation, procedure, and cashier window.</p>
+            </div>
+          </div>
+
+          <div class="inc-box">
+            <div class="inc-icon">⚡</div>
+            <div class="inc-text">
+              <h4>VIP Specialist Fast-Track</h4>
+              <p>Guaranteed appointment with Chief Physicians at State Tertiary Hospitals. Zero public queueing, dedicated VIP lounge access.</p>
+            </div>
+          </div>
+
+          <div class="inc-box">
+            <div class="inc-icon">📶</div>
+            <div class="inc-text">
+              <h4>China 5G Data SIM Card</h4>
+              <p>High-speed mobile data SIM card provided upon arrival, plus full assistance setting up mobile payments for zero friction.</p>
+            </div>
+          </div>
+
+          <div class="inc-box">
+            <div class="inc-icon">📑</div>
+            <div class="inc-text">
+              <h4>English Medical Dossier & DICOM</h4>
+              <p>We ensure and expedite your full English clinical discharge summary, laboratory results, and high-resolution imaging discs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ITEMIZED PRICING EXAMPLES -->
+  <section id="pricing" class="pricing">
+    <div class="wrap">
+      
+      <div class="section-head">
+        <span class="section-eyebrow">Real Cost Itemization</span>
+        <h2 class="serif-display section-title">Transparent Cost Breakdowns</h2>
+        <p class="section-desc">
+          See exactly how the numbers add up. Real hospital fees + reasonable hotel stays + our flat service fee = massive savings.
+        </p>
+      </div>
+
+      <div class="pricing-grid">
+        
+        <!-- CARD 1: DENTAL IMPLANTS -->
+        <div class="price-card featured">
+          <span class="featured-ribbon">Most Requested</span>
+          
+          <div class="price-img-thumb">
+            <img src="images/straumann_implant_real.jpg" alt="Official Swiss Straumann Dental Implant System">
+            <div class="price-img-caption">
+              <span>Hardware</span>
+              <span>Straumann® SLA/SLActive</span>
+            </div>
+          </div>
+
+          <div class="price-card-body">
+            <h3 class="price-card-title">Smile Restoration</h3>
+            <p class="price-card-sub">3x Genuine Swiss Straumann Implants with all-ceramic zirconia crowns.</p>
+
+            <div class="itemized-stack">
+              <div class="item-row western">
+                <span>US / UK Private Self-Pay:</span>
+                <span class="cost">$14,500</span>
+              </div>
+              <div class="item-row">
+                <div>
+                  <strong>Hospital Surgery & Implants</strong>
+                  <span class="who">Paid directly to Hospital Cashier</span>
+                </div>
+                <span class="cost">~$3,800</span>
+              </div>
+              <div class="item-row">
+                <div>
+                  <strong>4-Star Seaside Hotel (7 Nts)</strong>
+                  <span class="who">Paid directly to Hotel / Booking</span>
+                </div>
+                <span class="cost">~$385</span>
+              </div>
+              <div class="item-row">
+                <div>
+                  <strong>Concierge & Chauffeur Fee</strong>
+                  <span class="who">All transfers & translation covered</span>
+                </div>
+                <span class="cost">$1,200</span>
+              </div>
+              <div class="total-est-row">
+                <span class="label">Total Estimated Cost:</span>
+                <span class="total-val">~$5,385</span>
+              </div>
+              <div class="savings-pill">
+                <span>Your Real Savings:</span>
+                <strong>Save ~$9,100 (63% Off)</strong>
+              </div>
+            </div>
+
+            <ul class="specs-list">
+              <li>
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <span>3 Genuine Swiss Straumann Implants with <strong>Official Global Warranty QR Card</strong></span>
+              </li>
+              <li>
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <span>Full digital 3D CBCT bone scan & CAD/CAM Zirconia Crowns</span>
+              </li>
+              <li>
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <span>All airport transfers & clinic chauffeurs included in fee</span>
+              </li>
+            </ul>
+
+            <a href="#quote" class="btn btn-primary" style="width: 100%;">Get Itemized Dental Quote</a>
+          </div>
+        </div>
+
+        <!-- CARD 2: ZEISS SMILE LASIK -->
+        <div class="price-card">
+          <div class="price-img-thumb">
+            <img src="images/zeiss_laser_suite_real.jpg" alt="Carl Zeiss VisuMax 800 Femtosecond Laser Platform">
+            <div class="price-img-caption">
+              <span>Platform</span>
+              <span>Carl Zeiss VisuMax®</span>
+            </div>
+          </div>
+
+          <div class="price-card-body">
+            <h3 class="price-card-title">Carl Zeiss SMILE Vision</h3>
+            <p class="price-card-sub">Bladeless dual-eye refractive laser surgery. 10-minute painless procedure.</p>
+
+            <div class="itemized-stack">
+              <div class="item-row western">
+                <span>US / UK Private Self-Pay:</span>
+                <span class="cost">$5,500</span>
+              </div>
+              <div class="item-row">
+                <div>
+                  <strong>Hospital Laser Surgery (Both Eyes)</strong>
+                  <span class="who">Paid directly to Hospital Cashier</span>
+                </div>
+                <span class="cost">~$2,200</span>
+              </div>
+              <div class="item-row">
+                <div>
+                  <strong>4-Star Seaside Hotel (5 Nts)</strong>
+                  <span class="who">Paid directly to Hotel / Booking</span>
+                </div>
+                <span class="cost">~$275</span>
+              </div>
+              <div class="item-row">
+                <div>
+                  <strong>Concierge & Chauffeur Fee</strong>
+                  <span class="who">All transfers & translation covered</span>
+                </div>
+                <span class="cost">$1,200</span>
+              </div>
+              <div class="total-est-row">
+                <span class="label">Total Estimated Cost:</span>
+                <span class="total-val">~$3,675</span>
+              </div>
+              <div class="savings-pill">
+                <span>Your Real Savings:</span>
+                <strong>Save ~$1,800 + Holiday</strong>
+              </div>
+            </div>
+
+            <ul class="specs-list">
+              <li>
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <span>Both eyes treated on genuine Carl Zeiss VisuMax femtosecond laser</span>
+              </li>
+              <li>
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <span>24 comprehensive pre-op ophthalmic diagnostics & corneal scans</span>
+              </li>
+              <li>
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <span>Post-op medication kit, eye shields, and all clinic transport</span>
+              </li>
+            </ul>
+
+            <a href="#quote" class="btn btn-secondary" style="width: 100%;">Get Itemized Eye Quote</a>
+          </div>
+        </div>
+
+        <!-- CARD 3: EXECUTIVE CHECKUP -->
+        <div class="price-card">
+          <div class="price-img-thumb">
+            <img src="images/qduh_vip_suite.jpg" alt="Presidential Inpatient & Recovery Suite">
+            <div class="price-img-caption">
+              <span>Facility</span>
+              <span>VIP Executive Diagnostic Wing</span>
+            </div>
+          </div>
+
+          <div class="price-card-body">
+            <h3 class="price-card-title">Executive Cancer & 3.0T MRI</h3>
+            <p class="price-card-sub">Painless sedation endoscopy + colonoscopy + high-res 3.0T MRI screening.</p>
+
+            <div class="itemized-stack">
+              <div class="item-row western">
+                <span>US / UK Private Self-Pay:</span>
+                <span class="cost">$7,800</span>
+              </div>
+              <div class="item-row">
+                <div>
+                  <strong>Hospital Diagnostic Suite</strong>
+                  <span class="who">Paid directly to Hospital Cashier</span>
+                </div>
+                <span class="cost">~$1,400</span>
+              </div>
+              <div class="item-row">
+                <div>
+                  <strong>4-Star Seaside Hotel (4 Nts)</strong>
+                  <span class="who">Paid directly to Hotel / Booking</span>
+                </div>
+                <span class="cost">~$220</span>
+              </div>
+              <div class="item-row">
+                <div>
+                  <strong>Concierge & Chauffeur Fee</strong>
+                  <span class="who">All transfers & translation covered</span>
+                </div>
+                <span class="cost">$1,200</span>
+              </div>
+              <div class="total-est-row">
+                <span class="label">Total Estimated Cost:</span>
+                <span class="total-val">~$2,820</span>
+              </div>
+              <div class="savings-pill">
+                <span>Your Real Savings:</span>
+                <strong>Save ~$5,000 (64% Off)</strong>
+              </div>
+            </div>
+
+            <ul class="specs-list">
+              <li>
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <span>Sedated painless gastroscopy and colonoscopy (with polyp biopsy)</span>
+              </li>
+              <li>
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <span>High-resolution 3.0T MRI (Brain/Spine) & 64-slice low-dose chest CT</span>
+              </li>
+              <li>
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <span>Expedited official English report & full DICOM image CD</span>
+              </li>
+            </ul>
+
+            <a href="#quote" class="btn btn-secondary" style="width: 100%;">Get Itemized Health Quote</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- OPTIONAL LEISURE ADD-ON -->
+  <section id="tour" class="optional-tour">
+    <div class="wrap">
+      
+      <div class="tour-card">
+        <div class="tour-img">
+          <img src="images/qingdao_badaguan_coast.jpg" alt="Scenic Qingdao Seaside and European Villas">
+        </div>
+
+        <div class="tour-content">
+          <div>
+            <span class="tour-tag">Optional Add-On • 100% Flexible</span>
+            <h3>Prefer Care Only? Or Add a Seaside Mini-Holiday?</h3>
+            <p>
+              Your journey is fundamentally about medical excellence. If you wish to simply complete your clinical treatment and rest quietly in your hotel, that is completely fine. However, if you'd like to discover Qingdao during your recovery, you can easily add our gentle guided excursion package.
+            </p>
+
+            <ul class="tour-points">
+              <li>🌲 Stroll along the historical Badaguan red-tiled German heritage district</li>
+              <li>🌊 Gentle afternoon walks along Shilaoren Beach and Olympic Sailing Marina</li>
+              <li>🍺 VIP private tour & fresh tasting at the century-old Tsingtao Brewery Museum</li>
+              <li>⛰️ Scenic oceanfront mountain vistas at Mount Laoshan</li>
+            </ul>
+          </div>
+
+          <div class="tour-footer">
+            <strong>Simply tick "Optional Sightseeing Tour"</strong> on your inquiry form if interested.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ACCREDITED HOSPITALS SHOWCASE -->
+  <section id="hospitals" class="hospitals">
+    <div class="wrap">
+      
+      <div class="section-head">
+        <span class="section-eyebrow">Accredited Clinical Excellence</span>
+        <h2 class="serif-display section-title">Public University Teaching Hospitals</h2>
+        <p class="section-desc">
+          We operate strictly in partnership with licensed State Tertiary Grade-A teaching hospitals (the highest medical tier in China). No unverified private clinics or hidden brokers.
+        </p>
+      </div>
+
+      <div class="hospital-grid">
+        
+        <!-- HOSPITAL 1 -->
+        <div class="hospital-card">
+          <div class="hospital-header-img">
+            <img src="images/qduh_hospital_exterior.jpg" alt="QDUH Laoshan International Medical Center Exterior">
+            <span class="hospital-tag">Flagship University Center</span>
+          </div>
+
+          <div class="hospital-body">
+            <div>
+              <div class="hospital-meta">
+                <span class="rank">Ranked #1 in Shandong Province</span>
+                <span class="founded">Founded 1898</span>
+              </div>
+              <h3 class="hospital-name">Affiliated Hospital of Qingdao University (QDUH)</h3>
+              <p class="hospital-desc">
+                The premier provincial teaching hospital complex. Its dedicated International Medical Wing is located at the new <strong>Laoshan Medical Complex (No. 59 Haier Road)</strong>, minutes from the Shilaoren National Beach Resort.
               </p>
 
-              <div class="space-y-2.5 bg-slate-50 p-4 rounded-2xl text-xs sm:text-sm text-slate-700">
-                <div class="flex items-center gap-2">
-                  <span class="font-bold text-slate-900">📍 Location:</span>
-                  <span>Laoshan Bay, Stone Old Man Beachfront</span>
+              <div class="hospital-bullets">
+                <div class="hospital-bullet-row">
+                  <strong>📍 Location:</strong>
+                  <span>Laoshan Bay District, Stone Old Man Beachfront</span>
                 </div>
-                <div class="flex items-center gap-2">
-                  <span class="font-bold text-slate-900">🏆 Key Depts:</span>
-                  <span>Refractive Laser Wing, Executive Screening, 3.0T MRI</span>
+                <div class="hospital-bullet-row">
+                  <strong>🏆 Strengths:</strong>
+                  <span>Refractive Laser Center, Executive Diagnostics, 3.0T MRI</span>
+                </div>
+                <div class="hospital-bullet-row">
+                  <strong>💳 Billing:</strong>
+                  <span>Hospital Cashier Card Payments, Official State Invoices</span>
                 </div>
               </div>
             </div>
 
-            <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500 font-mono">
-              <span>VIP Hotline: 0532-82912071</span>
-              <span class="text-brand-600 font-bold">Grade-A Tertiary &check;</span>
+            <div class="hospital-footer">
+              <span>Direct VIP Line: 0532-82912071</span>
+              <span style="color: var(--teal); font-weight: 600;">Grade-A Tertiary Verified &check;</span>
             </div>
           </div>
         </div>
 
         <!-- HOSPITAL 2 -->
-        <div class="bg-white rounded-3xl overflow-hidden border border-slate-200/80 shadow-md flex flex-col justify-between hover:shadow-xl transition">
-          <div class="h-56 relative overflow-hidden bg-slate-900">
-            <img src="images/qduh_vip_suite.jpg" alt="Presidential Inpatient & Recovery Suite" class="w-full h-full object-cover opacity-95 hover:scale-105 transition duration-500">
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent"></div>
-            <div class="absolute bottom-4 left-6 right-6 flex justify-between items-end text-white">
-              <span class="text-xs bg-cyan-600 px-3 py-1 rounded-full font-bold uppercase tracking-wider">VIP Care Suite</span>
-              <span class="text-xs font-mono bg-white/20 px-2 py-0.5 rounded">Est. 1916</span>
-            </div>
+        <div class="hospital-card">
+          <div class="hospital-header-img">
+            <img src="images/dental_implant_suite.jpg" alt="Qingdao Municipal Hospital International Clinic Dental Suite">
+            <span class="hospital-tag">Pioneer in Expat Healthcare</span>
           </div>
-          <div class="p-8 sm:p-10 flex flex-col justify-between flex-1">
-            <div>
-              <span class="text-xs font-bold text-brand-600 uppercase tracking-wider">Shandong's First Expat Clinic</span>
-              <h3 class="font-display font-bold text-2xl text-slate-900 mt-1">Qingdao Municipal Hospital International Clinic (ICQD)</h3>
 
-              <p class="text-sm text-slate-600 my-4 leading-relaxed">
-                Founded in 2003, ICQD features US & South Korean trained dental surgeons and 20+ years of continuous international patient care and direct insurance billing networks.
+          <div class="hospital-body">
+            <div>
+              <div class="hospital-meta">
+                <span class="rank">First Dedicated International Clinic</span>
+                <span class="founded">Founded 1916</span>
+              </div>
+              <h3 class="hospital-name">Qingdao Municipal Hospital International Clinic (ICQD)</h3>
+              <p class="hospital-desc">
+                Founded in 2003 as Shandong Province's pioneer涉外clinic. Staffed by US and South Korean trained dental surgeons, boasting over 20 years of continuous international patient care and direct insurance billing.
               </p>
 
-              <div class="space-y-2.5 bg-slate-50 p-4 rounded-2xl text-xs sm:text-sm text-slate-700">
-                <div class="flex items-center gap-2">
-                  <span class="font-bold text-slate-900">📍 Location:</span>
-                  <span>Historic Old Town (Zhongshan Road / Zhanqiao Pier)</span>
+              <div class="hospital-bullets">
+                <div class="hospital-bullet-row">
+                  <strong>📍 Location:</strong>
+                  <span>Historic Old Town (Zhongshan Road / Zhanqiao Pier Boardwalk)</span>
                 </div>
-                <div class="flex items-center gap-2">
-                  <span class="font-bold text-slate-900">🏆 Key Depts:</span>
-                  <span>All-on-4 Implantology, Authentic TCM Pain Relief</span>
+                <div class="hospital-bullet-row">
+                  <strong>🏆 Strengths:</strong>
+                  <span>Implantology Center (US/Korean Dentists), TCM Pain Relief</span>
+                </div>
+                <div class="hospital-bullet-row">
+                  <strong>💳 Billing:</strong>
+                  <span>Direct Foreign Credit Card Settlement at Counter</span>
                 </div>
               </div>
             </div>
 
-            <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500 font-mono">
-              <span>Foreigners Desk</span>
-              <span class="text-brand-600 font-bold">20+ Yrs Expat Service &check;</span>
+            <div class="hospital-footer">
+              <span>Established Expat Wing</span>
+              <span style="color: var(--teal); font-weight: 600;">20+ Years Foreigner Care &check;</span>
             </div>
           </div>
         </div>
@@ -468,56 +1796,73 @@
     </div>
   </section>
 
-  <!-- 7-DAY ITINERARY: MEDICAL RETREAT -->
-  <section id="itinerary" class="py-24 bg-white">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+  <!-- 7-DAY ITINERARY -->
+  <section id="itinerary" class="itinerary">
+    <div class="wrap">
       
-      <div class="text-center max-w-2xl mx-auto mb-16">
-        <span class="text-brand-600 font-bold uppercase tracking-widest text-xs">Seamless Concierge Logistics</span>
-        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-slate-950 mt-2 mb-4">Your 7-Day Journey: How It Works</h2>
-        <p class="text-slate-600 text-sm sm:text-base">From the moment your flight touches down at Qingdao Jiaodong International (TAO) until your departure, every step is curated for relaxation and clinical precision.</p>
+      <div class="section-head">
+        <span class="section-eyebrow">Concierge Logistics</span>
+        <h2 class="serif-display section-title">Your 7-Day Care & Recovery Journey</h2>
+        <p class="section-desc">
+          Every transport, clinical appointment, translation, and hotel stay is orchestrated in advance so you can concentrate entirely on healing.
+        </p>
       </div>
 
-      <div class="relative border-l-2 border-brand-200 ml-4 sm:ml-8 pl-6 sm:pl-10 space-y-12">
+      <div class="timeline-wrap">
         
-        <div class="relative">
-          <div class="absolute -left-[35px] sm:-left-[51px] top-0 w-8 h-8 rounded-full bg-brand-600 text-white font-bold flex items-center justify-center text-xs shadow-md">1</div>
-          <h4 class="font-display font-bold text-xl text-slate-900">Day 1: VIP Arrival & Beachside Check-In</h4>
-          <p class="text-sm text-slate-600 mt-2 leading-relaxed">
-            Personal English-speaking concierge greets you at Qingdao International Airport (TAO). Private chauffeur directly to your seaside 4/5-star oceanfront hotel (e.g., Hyatt Regency Laoshan Bay). Evening orientation and welcome dinner.
-          </p>
+        <div class="timeline-step">
+          <div class="step-marker">
+            <span class="day-label">Day</span>
+            <span class="day-num">01</span>
+          </div>
+          <div class="step-box">
+            <h4>VIP Arrival & Oceanfront Hotel Check-In</h4>
+            <p>Your private bilingual coordinator welcomes you at Qingdao Jiaodong Airport (TAO). Private chauffeur directly to your seaside hotel. SIM card setup and welcome dinner.</p>
+          </div>
         </div>
 
-        <div class="relative">
-          <div class="absolute -left-[35px] sm:-left-[51px] top-0 w-8 h-8 rounded-full bg-brand-600 text-white font-bold flex items-center justify-center text-xs shadow-md">2</div>
-          <h4 class="font-display font-bold text-xl text-slate-900">Day 2: 1-on-1 Specialist Diagnostics (Zero Wait)</h4>
-          <p class="text-sm text-slate-600 mt-2 leading-relaxed">
-            Morning transfer to the International Wing. Private consultation with Chief Oral Surgeon or Chief Ophthalmologist. 3D CBCT imaging, digital smile scan, or corneal tomography performed with immediate English results.
-          </p>
+        <div class="timeline-step">
+          <div class="step-marker">
+            <span class="day-label">Day</span>
+            <span class="day-num">02</span>
+          </div>
+          <div class="step-box">
+            <h4>1-on-1 Specialist Consultation & 3D Diagnostics</h4>
+            <p>Morning transfer to the International Wing. Dedicated 1-on-1 consultation with the Chief Surgeon. High-resolution 3D CBCT oral imaging, corneal topography, or MRI scans completed with zero public waiting.</p>
+          </div>
         </div>
 
-        <div class="relative">
-          <div class="absolute -left-[35px] sm:-left-[51px] top-0 w-8 h-8 rounded-full bg-brand-600 text-white font-bold flex items-center justify-center text-xs shadow-md">3</div>
-          <h4 class="font-display font-bold text-xl text-slate-900">Day 3: Procedure Day (Painless & Safe)</h4>
-          <p class="text-sm text-slate-600 mt-2 leading-relaxed">
-            Minimally invasive implant fixture placement or Carl Zeiss SMILE laser surgery conducted in state-of-the-art sterile surgical suites under gentle local anesthesia. Relax in the VIP recovery lounge before chauffeured hotel return.
-          </p>
+        <div class="timeline-step">
+          <div class="step-marker">
+            <span class="day-label">Day</span>
+            <span class="day-num">03</span>
+          </div>
+          <div class="step-box">
+            <h4>Treatment Day: Sterile Precision & Comfort</h4>
+            <p>Minimally invasive implant fixture placement or Carl Zeiss SMILE laser surgery performed in certified surgical suites under gentle anesthesia. Rest comfortably in the VIP recovery lounge before chauffeured hotel return.</p>
+          </div>
         </div>
 
-        <div class="relative">
-          <div class="absolute -left-[35px] sm:-left-[51px] top-0 w-8 h-8 rounded-full bg-brand-600 text-white font-bold flex items-center justify-center text-xs shadow-md">4</div>
-          <h4 class="font-display font-bold text-xl text-slate-900">Day 4–6: Rest, Gentle Tours & Seafood Dining</h4>
-          <p class="text-sm text-slate-600 mt-2 leading-relaxed">
-            Gentle recovery time. Guided scenic stroll along the Badaguan historic mansions, Tsingtao Beer Museum VIP tasting, Mount Laoshan ocean views, and soothing acupuncture wellness sessions.
-          </p>
+        <div class="timeline-step">
+          <div class="step-marker">
+            <span class="day-label">Day</span>
+            <span class="day-num">04–06</span>
+          </div>
+          <div class="step-box">
+            <h4>Gentle Recovery (Rest or Optional Guided Excursions)</h4>
+            <p>Gentle healing days. Rest quietly at your beachside resort, or enjoy optional guided walks along Badaguan, Tsingtao Brewery museum tastings, or soothing acupuncture wellness sessions.</p>
+          </div>
         </div>
 
-        <div class="relative">
-          <div class="absolute -left-[35px] sm:-left-[51px] top-0 w-8 h-8 rounded-full bg-brand-600 text-white font-bold flex items-center justify-center text-xs shadow-md">5</div>
-          <h4 class="font-display font-bold text-xl text-slate-900">Day 7: Final Clinical Review & Homeward Journey</h4>
-          <p class="text-sm text-slate-600 mt-2 leading-relaxed">
-            Final post-op inspection and suture check. Receive your full English diagnostic report, imaging DICOM CD, and Straumann International Authenticity Card. Private transfer back to the airport for your flight home.
-          </p>
+        <div class="timeline-step">
+          <div class="step-marker">
+            <span class="day-label">Day</span>
+            <span class="day-num">07</span>
+          </div>
+          <div class="step-box">
+            <h4>Final Post-Op Review & Homeward Journey</h4>
+            <p>Final clinical inspection. Receive your complete official English medical dossier, imaging DICOM CD, and Straumann International Authenticity Card. Private transfer back to Qingdao Airport for your flight home.</p>
+          </div>
         </div>
 
       </div>
@@ -525,138 +1870,203 @@
     </div>
   </section>
 
-  <!-- FORM SECTION -->
-  <section id="quote" class="py-24 bg-gradient-to-b from-slate-100 to-brand-50/40 border-t border-slate-200">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+  <!-- INQUIRY FORM -->
+  <section id="quote" class="quote-section">
+    <div class="wrap">
       
-      <div class="bg-white rounded-3xl p-8 sm:p-12 shadow-2xl border border-slate-200">
+      <div class="quote-grid">
         
-        <div class="text-center max-w-lg mx-auto mb-10">
-          <span class="text-brand-600 font-bold uppercase tracking-widest text-xs">Zero Commitment & Confidential</span>
-          <h2 class="font-display text-3xl font-extrabold text-slate-950 mt-1 mb-3">Request Your Free Medical Estimate</h2>
-          <p class="text-xs sm:text-sm text-slate-500">
-            Share your current condition or paste a past dental/medical quote. Our bilingual medical director will review your case and provide an itemized quote within 12 hours.
+        <div class="quote-info">
+          <span class="section-eyebrow" style="color: #2dd4bf;">Zero Obligation • 100% Confidential</span>
+          <h2 class="serif-display">Request Your Free Itemized Case Evaluation</h2>
+          <p>
+            Share your dental or medical concerns. Within 12 hours, our bilingual medical director will review your case with chief hospital physicians and provide a transparent, itemized cost estimate.
           </p>
+
+          <div class="guarantee-list">
+            <div class="guarantee-item">
+              <div class="guarantee-icon">✓</div>
+              <div class="guarantee-text">
+                <strong>Pay Hospital Directly</strong>
+                <span>All medical fees paid directly to hospital cashier at official rates. Zero middleman markup.</span>
+              </div>
+            </div>
+
+            <div class="guarantee-item">
+              <div class="guarantee-icon">✓</div>
+              <div class="guarantee-text">
+                <strong>All Incidental Logistics Included</strong>
+                <span>Airport pickup, clinic chauffeur, 5G SIM card, and bilingual translation all covered by our flat $1,200 fee.</span>
+              </div>
+            </div>
+
+            <div class="guarantee-item">
+              <div class="guarantee-icon">✓</div>
+              <div class="guarantee-text">
+                <strong>Official Manufacturer QR Warranty</strong>
+                <span>Every implant box opened in your presence with verifiable Straumann manufacturer certificates.</span>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <form action="https://formsubmit.co/ybs2211871@gmail.com" method="POST" class="space-y-5">
-          <!-- FormSubmit Configuration -->
-          <input type="hidden" name="_subject" value="New Medical Travel Inquiry (Qingdao Care)">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_next" value="https://s25s4s4.github.io/qingdao-care-concierge/#quote">
-          <input type="hidden" name="_autoresponse" value="Dear patient, thank you for contacting Qingdao Care Concierge. We have received your medical travel inquiry. Our bilingual coordinator will review your details with the hospital team and get back to you within 12 hours.">
+        <div class="form-card">
+          <h3>Begin Your Case Review</h3>
+          <p class="form-sub">Direct link to our confidential patient intake desk.</p>
 
-          <div class="grid sm:grid-cols-2 gap-5">
-            <div>
-              <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Your Full Name *</label>
-              <input type="text" name="name" required placeholder="e.g. David Miller" class="w-full px-4 py-3.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm bg-slate-50/50">
+          <form action="https://formsubmit.co/ybs2211871@gmail.com" method="POST">
+            <!-- FormSubmit Configurations -->
+            <input type="hidden" name="_subject" value="New Transparent Medical Inquiry (Qingdao Care)">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" value="https://s25s4s4.github.io/qingdao-care-concierge/#quote">
+            <input type="hidden" name="_autoresponse" value="Dear Patient, thank you for contacting Qingdao Care. We have received your case details. Our bilingual coordinator will evaluate your inquiry with our chief hospital specialists and respond with an itemized estimate within 12 hours.">
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>Full Legal Name *</label>
+                <input type="text" name="name" required class="form-control" placeholder="e.g. Arthur Pendelton">
+              </div>
+              <div class="form-group">
+                <label>Email Address *</label>
+                <input type="email" name="email" required class="form-control" placeholder="arthur@example.com">
+              </div>
             </div>
-            <div>
-              <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Email Address *</label>
-              <input type="email" name="email" required placeholder="david@example.com" class="w-full px-4 py-3.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm bg-slate-50/50">
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>WhatsApp / Phone *</label>
+                <input type="text" name="phone" required class="form-control" placeholder="+44 7911 123456">
+              </div>
+              <div class="form-group">
+                <label>Country of Residence *</label>
+                <input type="text" name="country" required class="form-control" placeholder="United Kingdom / USA / Germany">
+              </div>
             </div>
-          </div>
 
-          <div class="grid sm:grid-cols-2 gap-5">
-            <div>
-              <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">WhatsApp / Phone Number *</label>
-              <input type="text" name="phone" required placeholder="+44 7911 123456" class="w-full px-4 py-3.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm bg-slate-50/50">
+            <div class="form-group">
+              <label>Primary Treatment Sought *</label>
+              <select name="procedure" class="form-control">
+                <option value="Swiss Straumann Dental Implants">Swiss Straumann Dental Implants (3+ Units or Full Arch)</option>
+                <option value="Carl Zeiss SMILE Laser Eye Surgery">Carl Zeiss SMILE Laser Eye Surgery (Both Eyes)</option>
+                <option value="Executive Cancer & 3.0T MRI Screening">Executive Cancer & 3.0T MRI Full-Body Screening</option>
+                <option value="TCM Chronic Pain & Wellness Retreat">TCM Acupuncture & Chronic Pain Relief Retreat</option>
+                <option value="Other Medical Inquiry">Other Specialized Medical Inquiry</option>
+              </select>
             </div>
-            <div>
-              <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Country of Residence *</label>
-              <input type="text" name="country" required placeholder="United Kingdom / United States / Germany" class="w-full px-4 py-3.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm bg-slate-50/50">
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>Hotel Preference</label>
+                <select name="hotel_preference" class="form-control">
+                  <option value="Comfort Beachfront (~$50-60/night)">Comfort Beachfront (~$50–60/night)</option>
+                  <option value="5-Star Oceanfront Luxury Hyatt (~$110-130/night)">5-Star Luxury Hyatt (~$110–130/night)</option>
+                  <option value="I Will Book My Own Hotel">I Will Book My Own Hotel Directly</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Add Optional Leisure Tour?</label>
+                <select name="optional_tour" class="form-control">
+                  <option value="Medical Care Only (No Sightseeing)">Medical Care Only (Rest in Hotel)</option>
+                  <option value="Yes, Add Guided Seaside & Culture Tour">Yes, Add Guided Seaside & Cultural Tour</option>
+                </select>
+              </div>
             </div>
-          </div>
 
-          <div>
-            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Primary Treatment of Interest *</label>
-            <select name="procedure" class="w-full px-4 py-3.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm bg-slate-50/50">
-              <option value="Dental Implants (Multiple or Full Arch)">Swiss Dental Implants (3+ Implants or Full Arch Restoration)</option>
-              <option value="Carl Zeiss SMILE Laser Eye Surgery">Carl Zeiss SMILE Laser Eye Surgery (Both Eyes)</option>
-              <option value="Executive Cancer & Full Body MRI Screening">Executive Cancer & 3.0T MRI Screening (Painless Endoscopy)</option>
-              <option value="TCM Acupuncture & Chronic Pain Rehabilitation">Traditional Chinese Medicine & Chronic Pain Relief Retreat</option>
-              <option value="Other Medical Travel Inquiry">Other Specific Procedure</option>
-            </select>
-          </div>
+            <div class="form-group">
+              <label>Case Notes / Prior Estimates</label>
+              <textarea name="message" class="form-control" placeholder="Briefly describe your situation, e.g. 'Quoted £9,000 for 3 molars in London, looking for genuine Straumann implants in Qingdao in November...'"></textarea>
+            </div>
 
-          <div>
-            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Describe Your Case / Past Quote Details</label>
-            <textarea name="message" rows="4" placeholder="e.g. Missing 2 molars on lower left, quoted £8,500 by local private dentist. Looking for Straumann implants and hotel package in Qingdao..." class="w-full px-4 py-3.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm bg-slate-50/50"></textarea>
-          </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px; font-size: 15px;">
+              Submit for Medical Director Review &rarr;
+            </button>
 
-          <button type="submit" class="w-full py-4 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-base shadow-lg shadow-brand-600/25 transition">
-            Send Inquiry for Free Doctor Evaluation &rarr;
-          </button>
-          
-          <p class="text-[11px] text-slate-400 text-center">
-            🔒 100% Privacy Protected. Your information is strictly shared only with chief hospital physicians for medical review.
-          </p>
-        </form>
+            <div style="font-size: 11px; color: var(--ink-faint); text-align: center; margin-top: 12px;">
+              🔒 Direct to Hospital Cashier • 100% Patient Confidentiality Guaranteed.
+            </div>
+          </form>
+        </div>
 
       </div>
 
     </div>
   </section>
 
-  <!-- FAQ SECTION -->
-  <section id="qa" class="py-20 bg-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6">
-      <div class="text-center mb-12">
-        <h2 class="font-display text-3xl font-extrabold text-slate-950">Frequently Asked Questions</h2>
+  <!-- FAQ -->
+  <section id="faq" class="faq">
+    <div class="wrap">
+      
+      <div class="section-head" style="margin-bottom: 40px;">
+        <span class="section-eyebrow">Patient Reassurance</span>
+        <h2 class="serif-display section-title">Frequently Asked Questions</h2>
       </div>
 
-      <div class="space-y-6 text-sm">
-        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
-          <h4 class="font-bold text-slate-900 text-base mb-2">Do I need a visa to visit Qingdao for treatment?</h4>
-          <p class="text-slate-600 leading-relaxed">
-            Citizens of most European countries (including Germany, France, Italy, Switzerland, the Netherlands, Spain), Singapore, Malaysia, and others currently enjoy a <strong>15-day visa-free entry</strong> to China. For travelers requiring a visa, our partner hospitals issue official medical appointment invitation letters to make tourist/business visa processing seamless.
-          </p>
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h4>Why do I pay the hospital directly instead of paying an all-inclusive fee?</h4>
+          <p>We believe in total financial transparency. By paying the public university hospital cashier directly, you ensure there are zero hidden commissions, inflated surgery markups, or third-party fees. You receive official state medical invoices and inspect your unsealed genuine hardware yourself.</p>
         </div>
 
-        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
-          <h4 class="font-bold text-slate-900 text-base mb-2">How do I verify the authenticity of dental implants?</h4>
-          <p class="text-slate-600 leading-relaxed">
-            Every patient receives the original sealed implant packaging box, serial number, and the official <strong>Straumann / Nobel Biocare Global Warranty Card</strong> with a verifiable QR code. Any dentist worldwide can service and inspect the genuine component.
-          </p>
+        <div class="faq-item">
+          <h4>What exactly does the $1,200 concierge fee cover?</h4>
+          <p>Our flat fee covers your dedicated 1-on-1 English medical coordinator throughout your trip, priority VIP appointment fast-tracking with chief surgeons, private chauffeured airport transfers (both ways), all door-to-door transport for clinic visits, a high-speed China 5G SIM card, and expedited English clinical dossiers.</p>
         </div>
 
-        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
-          <h4 class="font-bold text-slate-900 text-base mb-2">Will the doctors and nurses speak English?</h4>
-          <p class="text-slate-600 leading-relaxed">
-            Yes. The International Wings at QDUH and Municipal Hospital feature doctors who trained in the US, Europe, or South Korea. In addition, Qingdao Care assigns you a dedicated bilingual care coordinator who stays with you throughout diagnostics, surgery, and city tours.
-          </p>
+        <div class="faq-item">
+          <h4>Can I choose my own hotel?</h4>
+          <p>Absolutely. You are welcome to book any hotel you prefer via Booking.com or Expedia, or choose from our partner beachfront hotels (ranging from $50/night comfortable 4-star oceanfront hotels to 5-star international luxury such as Hyatt Regency). Our private chauffeur will pick you up from your doorstep regardless of where you stay.</p>
+        </div>
+
+        <div class="faq-item">
+          <h4>Do I have to do the sightseeing tour?</h4>
+          <p>Not at all. The tour is 100% optional. Many patients prefer to simply complete their medical procedure and rest peacefully by the seaside. If you do wish to explore Qingdao's famous German heritage and coastal scenery during your recovery days, we arrange a gentle, guided itinerary tailored to your pace.</p>
         </div>
       </div>
+
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer class="bg-marine-950 text-slate-400 py-16 border-t border-slate-800 text-xs">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row justify-between gap-8">
-      <div class="space-y-3 max-w-sm">
-        <div class="font-display font-extrabold text-xl text-white">Qingdao Care Concierge</div>
-        <p class="text-slate-400 leading-relaxed">
-          The premier English-speaking patient travel gateway connecting international patients with China's leading Tertiary Grade-A teaching hospitals.
-        </p>
-        <p class="text-[11px] text-slate-500">
-          &copy; 2026 Qingdao Care International. All rights reserved.
-        </p>
+  <footer class="site-footer">
+    <div class="wrap">
+      
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h5>Qingdao Care International</h5>
+          <p style="line-height: 1.6; margin-bottom: 16px;">
+            The transparent English-speaking concierge gateway connecting international patients with accredited State Tertiary Grade-A teaching hospitals in coastal Qingdao.
+          </p>
+          <div style="font-family: var(--font-mono); font-size: 11px; color: rgba(255, 255, 255, 0.4);">
+            Bilingual Desk: +86 (0532) 8291-2071 / 8291-2072
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>Partner Institutions</h5>
+          <ul>
+            <li>Affiliated Hospital of Qingdao University (QDUH)</li>
+            <li>Qingdao Municipal Hospital International Clinic (ICQD)</li>
+            <li>Carl Zeiss Certified Ophthalmic Suite</li>
+            <li>Institut Straumann Authorized Clinical Center</li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Clinical Disclaimer</h5>
+          <p style="line-height: 1.5; font-size: 11.5px; color: rgba(255, 255, 255, 0.45);">
+            Qingdao Care acts strictly as an independent cross-border patient concierge and logistics facilitator. All clinical assessments, surgeries, and prescriptions are exclusively performed by board-certified chief physicians at accredited Chinese public tertiary medical centers.
+          </p>
+        </div>
       </div>
 
-      <div class="space-y-2">
-        <span class="text-white font-bold block mb-2">Clinical Partners</span>
-        <div>• Affiliated Hospital of Qingdao University (QDUH Laoshan Wing)</div>
-        <div>• Qingdao Municipal Hospital International Clinic (ICQD)</div>
-        <div>• Carl Zeiss Certified Refractive Center</div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 Qingdao Care International Concierge. All rights reserved.</div>
+        <div style="font-family: var(--font-mono); font-size: 11px;">
+          Qingdao, Shandong Province, China • Pacific Coastal Health Hub
+        </div>
       </div>
 
-      <div class="max-w-xs space-y-2">
-        <span class="text-white font-bold block mb-2">Legal Medical Disclaimer</span>
-        <p class="text-slate-500 leading-relaxed text-[11px]">
-          Qingdao Care acts strictly as an independent cross-border patient concierge and logistics facilitator. All diagnostic assessments, prescriptions, and medical procedures are conducted solely by licensed physicians within accredited Chinese public tertiary medical centers.
-        </p>
-      </div>
     </div>
   </footer>
 
