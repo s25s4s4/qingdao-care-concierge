@@ -1173,8 +1173,123 @@
       .quote-grid { grid-template-columns: 1fr; gap: 40px; }
       .footer-grid { grid-template-columns: 1fr; gap: 32px; }
     }
+
+    /* Multi-language selector styling */
+    .lang-switcher-wrap {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+    }
+    .lang-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 7px 12px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--navy);
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: var(--shadow-sm);
+    }
+    .lang-btn:hover {
+      border-color: var(--teal);
+      color: var(--teal);
+      background: var(--surface-subtle);
+    }
+    .lang-btn svg {
+      transition: transform 0.2s ease;
+    }
+    .lang-switcher-wrap.open .lang-btn svg {
+      transform: rotate(180deg);
+    }
+    .lang-dropdown {
+      display: none;
+      position: absolute;
+      top: calc(100% + 8px);
+      right: 0;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      box-shadow: var(--shadow-xl);
+      padding: 6px;
+      min-width: 175px;
+      z-index: 1000;
+      max-height: 380px;
+      overflow-y: auto;
+    }
+    .lang-switcher-wrap.open .lang-dropdown {
+      display: block;
+      animation: langFadeIn 0.15s ease-out;
+    }
+    @keyframes langFadeIn {
+      from { opacity: 0; transform: translateY(-6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .lang-opt {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 12px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--ink);
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s;
+      text-decoration: none;
+    }
+    .lang-opt:hover {
+      background: var(--teal-light);
+      color: var(--teal-dark);
+      font-weight: 600;
+    }
+    .lang-opt.active {
+      background: var(--teal-light);
+      color: var(--teal);
+      font-weight: 700;
+    }
+    .lang-opt .flag {
+      font-size: 16px;
+      line-height: 1;
+    }
+    /* Hide Google default top banner and branding cleanly */
+    .goog-te-banner-frame.skiptranslate,
+    .goog-te-banner-frame,
+    #goog-gt-tt,
+    .goog-te-balloon-frame {
+      display: none !important;
+    }
+    body {
+      top: 0px !important;
+      position: static !important;
+    }
+    .goog-tooltip,
+    .goog-tooltip:hover {
+      display: none !important;
+    }
+    .goog-text-highlight {
+      background-color: transparent !important;
+      box-shadow: none !important;
+    }
+    #google_translate_element {
+      display: none !important;
+    }
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
     @media (max-width: 768px) {
       .nav-links { display: none; }
+      .nav-actions { gap: 8px; }
+      .lang-btn { padding: 6px 9px; font-size: 12px; }
+      .lang-btn #current-lang-name { display: none; }
+      .btn-primary { padding: 8px 14px; font-size: 12px; }
       .pillars-grid { grid-template-columns: 1fr; }
       .trust-strip { grid-template-columns: 1fr; gap: 18px; }
       .timeline-wrap::before { left: 24px; }
@@ -1222,7 +1337,34 @@
         <li><a href="#faq">FAQ</a></li>
       </ul>
 
-      <a href="#quote" class="btn btn-primary">Free Itemized Estimate</a>
+            <div class="nav-actions">
+        <!-- Multi-language switcher -->
+        <div class="lang-switcher-wrap" id="langSwitcher">
+          <button type="button" class="lang-btn" aria-label="Select Language">
+            <span class="flag" id="current-lang-flag">🇬🇧</span>
+            <span id="current-lang-name">English</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="lang-dropdown">
+            <div class="lang-opt" data-lang="en"><span class="flag">🇬🇧</span> English</div>
+            <div class="lang-opt" data-lang="es"><span class="flag">🇪🇸</span> Español</div>
+            <div class="lang-opt" data-lang="de"><span class="flag">🇩🇪</span> Deutsch</div>
+            <div class="lang-opt" data-lang="fr"><span class="flag">🇫🇷</span> Français</div>
+            <div class="lang-opt" data-lang="ru"><span class="flag">🇷🇺</span> Русский</div>
+            <div class="lang-opt" data-lang="ar"><span class="flag">🇸🇦</span> العربية</div>
+            <div class="lang-opt" data-lang="ja"><span class="flag">🇯🇵</span> 日本語</div>
+            <div class="lang-opt" data-lang="ko"><span class="flag">🇰🇷</span> 한국어</div>
+            <div class="lang-opt" data-lang="it"><span class="flag">🇮🇹</span> Italiano</div>
+            <div class="lang-opt" data-lang="pt"><span class="flag">🇵🇹</span> Português</div>
+            <div class="lang-opt" data-lang="zh-CN"><span class="flag">🇨🇳</span> 简体中文</div>
+            <div class="lang-opt" data-lang="zh-TW"><span class="flag">🇭🇰</span> 繁體中文</div>
+          </div>
+        </div>
+
+        <a href="#quote" class="btn btn-primary">Free Itemized Estimate</a>
+      </div>
     </div>
   </nav>
 
@@ -2081,6 +2223,212 @@
     <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.043.072.043.419-.101.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.112.551 4.095 1.517 5.821l-1.611 5.888 6.037-1.583c1.667.914 3.578 1.436 5.617 1.436 6.627 0 12-5.373 12-12s-5.373-12-12-12z"/></svg>
     <span>Chat on WhatsApp</span>
   </a>
+
+
+  <!-- GOOGLE TRANSLATE ELEMENT & ENGINE -->
+  <div id="google_translate_element"></div>
+
+  <script type="text/javascript">
+    const SUPPORTED_LANGS = [
+      { code: 'en', name: 'English', flag: '🇬🇧' },
+      { code: 'es', name: 'Español', flag: '🇪🇸' },
+      { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
+      { code: 'fr', name: 'Français', flag: '🇫🇷' },
+      { code: 'ru', name: 'Русский', flag: '🇷🇺' },
+      { code: 'ar', name: 'العربية', flag: '🇸🇦' },
+      { code: 'ja', name: '日本語', flag: '🇯🇵' },
+      { code: 'ko', name: '한국어', flag: '🇰🇷' },
+      { code: 'it', name: 'Italiano', flag: '🇮🇹' },
+      { code: 'pt', name: 'Português', flag: '🇵🇹' },
+      { code: 'zh-CN', name: '简体中文', flag: '🇨🇳' },
+      { code: 'zh-TW', name: '繁體中文', flag: '🇭🇰' }
+    ];
+
+    function setCookie(name, value, days) {
+      let expires = "";
+      if (days) {
+        const date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+      }
+      const domain = location.hostname.includes('.') ? "; domain=." + location.hostname.replace(/^www\./, '') : "";
+      document.cookie = name + "=" + (value || "") + expires + "; path=/" + domain;
+      document.cookie = name + "=" + (value || "") + expires + "; path=/";
+    }
+
+    function getCookie(name) {
+      const nameEQ = name + "=";
+      const ca = document.cookie.split(';');
+      for(let i=0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+      }
+      return null;
+    }
+
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,es,de,fr,ru,ar,ja,ko,it,pt,zh-CN,zh-TW',
+        autoDisplay: false
+      }, 'google_translate_element');
+
+      // Initialize UI after google element is ready
+      checkAndApplyAutoLanguage();
+    }
+
+    function updateLanguageUI(langCode) {
+      const langObj = SUPPORTED_LANGS.find(l => l.code.toLowerCase() === langCode.toLowerCase()) || SUPPORTED_LANGS[0];
+      const curFlag = document.getElementById('current-lang-flag');
+      const curName = document.getElementById('current-lang-name');
+      if (curFlag) curFlag.textContent = langObj.flag;
+      if (curName) curName.textContent = langObj.name;
+
+      document.querySelectorAll('.lang-opt').forEach(el => {
+        if (el.getAttribute('data-lang') === langObj.code) {
+          el.classList.add('active');
+        } else {
+          el.classList.remove('active');
+        }
+      });
+    }
+
+    function changeLanguage(langCode, isAuto = false) {
+      const target = SUPPORTED_LANGS.find(l => l.code.toLowerCase() === langCode.toLowerCase()) || SUPPORTED_LANGS[0];
+      const targetCode = target.code;
+
+      localStorage.setItem('qingdao_lang', targetCode);
+      setCookie('googtrans', '/en/' + targetCode, 30);
+      updateLanguageUI(targetCode);
+
+      const combo = document.querySelector('.goog-te-combo');
+      if (combo) {
+        if (combo.value !== targetCode) {
+          combo.value = targetCode;
+          combo.dispatchEvent(new Event('change'));
+        }
+      } else {
+        if (!isAuto) {
+          location.reload();
+        }
+      }
+    }
+
+    function detectUserPreferredLanguage() {
+      // 1. Check user manual saved preference
+      const saved = localStorage.getItem('qingdao_lang');
+      if (saved) return saved;
+
+      // 2. Check existing google cookie
+      const cookie = getCookie('googtrans');
+      if (cookie) {
+        const parts = cookie.split('/');
+        if (parts.length >= 3 && parts[2]) {
+          return parts[2];
+        }
+      }
+
+      // 3. Check browser language (navigator.languages or navigator.language)
+      const browserLangs = navigator.languages || [navigator.language || navigator.userLanguage || 'en'];
+      for (let bLang of browserLangs) {
+        if (!bLang) continue;
+        const norm = bLang.toLowerCase();
+        if (norm.startsWith('es')) return 'es';
+        if (norm.startsWith('de')) return 'de';
+        if (norm.startsWith('fr')) return 'fr';
+        if (norm.startsWith('ru')) return 'ru';
+        if (norm.startsWith('ar')) return 'ar';
+        if (norm.startsWith('ja')) return 'ja';
+        if (norm.startsWith('ko')) return 'ko';
+        if (norm.startsWith('it')) return 'it';
+        if (norm.startsWith('pt')) return 'pt';
+        if (norm === 'zh-tw' || norm === 'zh-hk' || norm === 'zh-mo') return 'zh-TW';
+        if (norm.startsWith('zh')) return 'zh-CN';
+        if (norm.startsWith('en')) return 'en';
+      }
+
+      return 'en';
+    }
+
+    function checkAndApplyAutoLanguage() {
+      const preferred = detectUserPreferredLanguage();
+      updateLanguageUI(preferred);
+
+      if (preferred !== 'en') {
+        const curCookie = getCookie('googtrans');
+        if (!curCookie || !curCookie.includes('/' + preferred)) {
+          // Trigger translate
+          setTimeout(() => {
+            changeLanguage(preferred, true);
+          }, 300);
+        }
+      }
+    }
+
+    // Toggle dropdown
+    document.addEventListener('DOMContentLoaded', function() {
+      const switcherWrap = document.querySelector('.lang-switcher-wrap');
+      const langBtn = document.querySelector('.lang-btn');
+      const dropdown = document.querySelector('.lang-dropdown');
+
+      if (langBtn && switcherWrap) {
+        langBtn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          switcherWrap.classList.toggle('open');
+        });
+
+        document.addEventListener('click', function(e) {
+          if (!switcherWrap.contains(e.target)) {
+            switcherWrap.classList.remove('open');
+          }
+        });
+      }
+
+      document.querySelectorAll('.lang-opt').forEach(opt => {
+        opt.addEventListener('click', function(e) {
+          e.preventDefault();
+          const code = this.getAttribute('data-lang');
+          if (switcherWrap) switcherWrap.classList.remove('open');
+          changeLanguage(code);
+        });
+      });
+
+      // Quick sync UI before Google Translate fully downloads
+      const initialLang = detectUserPreferredLanguage();
+      updateLanguageUI(initialLang);
+
+      // Try geo-ip detection in background if first visit and browser is generic English
+      if (!localStorage.getItem('qingdao_lang') && !getCookie('googtrans')) {
+        try {
+          const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || "";
+          let geoLang = null;
+          if (tz.includes("Madrid") || tz.includes("Buenos_Aires") || tz.includes("Mexico") || tz.includes("Bogota") || tz.includes("Santiago")) {
+            geoLang = 'es';
+          } else if (tz.includes("Berlin") || tz.includes("Vienna") || tz.includes("Zurich")) {
+            geoLang = 'de';
+          } else if (tz.includes("Paris") || tz.includes("Brussels")) {
+            geoLang = 'fr';
+          } else if (tz.includes("Moscow") || tz.includes("Yekaterinburg") || tz.includes("Novosibirsk")) {
+            geoLang = 'ru';
+          } else if (tz.includes("Seoul")) {
+            geoLang = 'ko';
+          } else if (tz.includes("Tokyo")) {
+            geoLang = 'ja';
+          } else if (tz.includes("Rome")) {
+            geoLang = 'it';
+          } else if (tz.includes("Riyadh") || tz.includes("Dubai") || tz.includes("Cairo")) {
+            geoLang = 'ar';
+          }
+
+          if (geoLang && geoLang !== initialLang) {
+            changeLanguage(geoLang, true);
+          }
+        } catch(e) {}
+      }
+    });
+  </script>
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 </html>
