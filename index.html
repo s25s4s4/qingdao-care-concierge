@@ -1885,15 +1885,24 @@
           <!-- CONTROLS -->
           <div style="background: #f8fafc; padding: 24px; border-radius: 12px; border: 1px solid #e2e8f0;">
             <div style="margin-bottom: 20px;">
-              <label style="display: block; font-size: 13px; font-weight: 700; color: var(--ink); margin-bottom: 8px;">1. Select Clinical Procedure</label>
+              <label style="display: block; font-size: 13px; font-weight: 700; color: var(--ink); margin-bottom: 8px;">1. Select Clinical Procedure & Hospital Track</label>
               <select id="calc-procedure" class="form-control" style="background: #fff; font-size: 14px;" onchange="updateLiveEstimate()">
-                <option value="implant-1">1x Swiss Straumann Implant + Zirconia Crown</option>
-                <option value="implant-2">2x Swiss Straumann Implants + Zirconia Crowns</option>
-                <option value="implant-3" selected>3x Swiss Straumann Implants + Zirconia Crowns</option>
-                <option value="implant-4">4x Swiss Straumann Implants (Bridge / Arch)</option>
-                <option value="smile">Carl Zeiss SMILE Laser Eye Surgery (Both Eyes)</option>
-                <option value="mri">Executive Cancer & 3.0T MRI Screening Suite</option>
-                <option value="tcm">TCM Chronic Pain & Acupuncture 7-Day Protocol</option>
+                <optgroup label="🦷 Dental Implants (Standard Specialist Track w/ Escort)">
+                  <option value="implant-1">1x Swiss Straumann SLA Implant (Standard Track: ~$1,020)</option>
+                  <option value="implant-2">2x Swiss Straumann SLA Implants (Standard Track: ~$2,040)</option>
+                  <option value="implant-3" selected>3x Swiss Straumann SLA Implants (Standard Track: ~$3,060)</option>
+                  <option value="implant-4">4x Swiss Straumann SLA Implants (Standard Track: ~$4,080)</option>
+                  <option value="all-on-4">Full-Arch All-on-4 Restoration (Standard Track: ~$6,800)</option>
+                </optgroup>
+                <optgroup label="🌟 Dental Implants (VIP International Wing Track)">
+                  <option value="vip-implant-1">1x Swiss Straumann (VIP Private Suite: ~$1,450)</option>
+                  <option value="vip-implant-3">3x Swiss Straumann (VIP Private Suite: ~$4,350)</option>
+                </optgroup>
+                <optgroup label="👁️ Vision & Full-Body Diagnostics">
+                  <option value="smile">Carl Zeiss SMILE Laser Eye Surgery (Both Eyes: ~$2,900)</option>
+                  <option value="mri">Executive Cancer & 3.0T MRI Full Suite (~$1,120)</option>
+                  <option value="tcm">TCM Chronic Pain & Acupuncture 7-Day Protocol (~$800)</option>
+                </optgroup>
               </select>
             </div>
 
@@ -2225,10 +2234,18 @@
 
           <div class="guarantee-list">
             <div class="guarantee-item">
+              <div class="guarantee-icon">🛡️</div>
+              <div class="guarantee-text">
+                <strong>$0 Upfront Risk • Pay On-Site Only</strong>
+                <span>No advance deposits required to book. You meet the surgeon and inspect the hospital first. Medical fees paid directly to hospital cashier at official rates, concierge fee paid in person on Day 1.</span>
+              </div>
+            </div>
+
+            <div class="guarantee-item">
               <div class="guarantee-icon">✓</div>
               <div class="guarantee-text">
                 <strong>Pay Hospital Directly</strong>
-                <span>All medical fees paid directly to hospital cashier at official rates. Zero middleman markup.</span>
+                <span>All medical fees paid directly to hospital cashier at official rates via Visa/Mastercard. Zero middleman markup.</span>
               </div>
             </div>
 
@@ -2603,12 +2620,15 @@
     }
 
     const CALC_DATA = {
-      'implant-1': { name: '1x Swiss Straumann Dental Implant', procVal: 'Swiss Straumann Dental Implants', hosp: 1200, western: 4800 },
-      'implant-2': { name: '2x Swiss Straumann Dental Implants', procVal: 'Swiss Straumann Dental Implants', hosp: 2400, western: 9600 },
-      'implant-3': { name: '3x Swiss Straumann Dental Implants', procVal: 'Swiss Straumann Dental Implants', hosp: 3600, western: 14500 },
-      'implant-4': { name: '4x Swiss Straumann Dental Implants (Bridge)', procVal: 'Swiss Straumann Dental Implants', hosp: 4800, western: 19000 },
-      'smile': { name: 'Carl Zeiss SMILE Laser Eye Surgery (Both Eyes)', procVal: 'Carl Zeiss SMILE Laser Eye Surgery', hosp: 2200, western: 6200 },
-      'mri': { name: 'Executive Cancer & 3.0T MRI Screening Suite', procVal: 'Executive Cancer & 3.0T MRI Screening', hosp: 1100, western: 4500 },
+      'implant-1': { name: '1x Swiss Straumann SLA Implant (Standard Track)', procVal: 'Swiss Straumann Dental Implants', hosp: 1020, western: 4500 },
+      'implant-2': { name: '2x Swiss Straumann SLA Implants (Standard Track)', procVal: 'Swiss Straumann Dental Implants', hosp: 2040, western: 9000 },
+      'implant-3': { name: '3x Swiss Straumann SLA Implants (Standard Track)', procVal: 'Swiss Straumann Dental Implants', hosp: 3060, western: 14500 },
+      'implant-4': { name: '4x Swiss Straumann SLA Implants (Standard Track)', procVal: 'Swiss Straumann Dental Implants', hosp: 4080, western: 18500 },
+      'all-on-4': { name: 'Full-Arch All-on-4 Immediate Restoration (Standard Track)', procVal: 'Swiss Straumann Dental Implants', hosp: 6800, western: 32000 },
+      'vip-implant-1': { name: '1x Swiss Straumann SLA (VIP International Wing)', procVal: 'Swiss Straumann Dental Implants', hosp: 1450, western: 4500 },
+      'vip-implant-3': { name: '3x Swiss Straumann SLA (VIP International Wing)', procVal: 'Swiss Straumann Dental Implants', hosp: 4350, western: 14500 },
+      'smile': { name: 'Carl Zeiss SMILE Laser Eye Surgery (Both Eyes)', procVal: 'Carl Zeiss SMILE Laser Eye Surgery', hosp: 2900, western: 6500 },
+      'mri': { name: 'Executive Cancer & 3.0T MRI Full Diagnostic Suite', procVal: 'Executive Cancer & 3.0T MRI Screening', hosp: 1120, western: 4800 },
       'tcm': { name: 'TCM Chronic Pain & Acupuncture 7-Day Protocol', procVal: 'TCM Chronic Pain & Wellness Retreat', hosp: 800, western: 3200 }
     };
 
