@@ -3,24 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>小杨体彩 · 欧洲足球超脑情报战区</title>
+    <title>小杨足球情报所 · 欧洲赛事数据内参</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&family=PingFang+SC:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700;800&family=PingFang+SC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-base: #060913;
-            --bg-card: rgba(13, 20, 38, 0.85);
-            --bg-card-hover: rgba(19, 29, 56, 0.95);
-            --border-subtle: rgba(56, 189, 248, 0.18);
-            --border-glow: rgba(56, 189, 248, 0.45);
+            --bg-base: #07090e;
+            --bg-surface: #0e121b;
+            --bg-card: #131926;
+            --bg-card-subtle: #182032;
+            --border-color: #1e293b;
+            --border-active: #38bdf8;
             --primary: #38bdf8;
-            --primary-glow: rgba(56, 189, 248, 0.25);
-            --accent-gold: #f59e0b;
+            --primary-dark: #0284c7;
             --accent-green: #10b981;
-            --accent-purple: #a855f7;
+            --accent-gold: #f59e0b;
             --accent-red: #ef4444;
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
+            --accent-purple: #a855f7;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --text-tertiary: #64748b;
             --font-mono: 'JetBrains Mono', Consolas, monospace;
         }
 
@@ -33,26 +35,23 @@
 
         body {
             background-color: var(--bg-base);
-            color: var(--text-main);
+            color: var(--text-primary);
             font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
             line-height: 1.5;
-            padding-bottom: 95px;
+            padding-bottom: 84px;
             overflow-x: hidden;
-            background-image: 
-                radial-gradient(circle at 50% 0%, rgba(14, 165, 233, 0.15) 0%, transparent 60%),
-                linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-            background-size: 100% 100%, 30px 30px, 30px 30px;
+            -webkit-font-smoothing: antialiased;
         }
 
-        .top-navbar {
+        /* 顶部权威沉浸抬头 */
+        .app-header {
             position: sticky;
             top: 0;
             left: 0;
             width: 100%;
-            background: rgba(6, 9, 19, 0.92);
-            backdrop-filter: blur(18px);
-            border-bottom: 1px solid var(--border-subtle);
+            background: rgba(7, 9, 14, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-color);
             padding: 12px 16px;
             display: flex;
             align-items: center;
@@ -60,188 +59,189 @@
             z-index: 100;
         }
 
-        .brand-group {
+        .header-brand {
             display: flex;
             align-items: center;
             gap: 10px;
         }
 
-        .brand-logo {
-            width: 36px;
-            height: 36px;
-            background: linear-gradient(135deg, #0284c7, #6366f1);
-            border: 1.5px solid var(--primary);
+        .brand-badge {
+            width: 34px;
+            height: 34px;
+            background: linear-gradient(135deg, #1e293b, #0f172a);
+            border: 1px solid var(--border-active);
             border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 900;
-            color: #fff;
-            box-shadow: 0 0 16px var(--primary-glow);
+            color: var(--primary);
+            font-family: var(--font-mono);
         }
 
-        .brand-info h1 {
+        .brand-meta h1 {
             font-size: 15px;
             font-weight: 800;
+            letter-spacing: 0.3px;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .brand-sub {
+            font-size: 10px;
+            color: var(--text-tertiary);
+            font-family: var(--font-mono);
             letter-spacing: 0.5px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
         }
 
-        .brand-tag {
-            font-size: 10px;
-            background: rgba(245, 158, 11, 0.15);
-            color: var(--accent-gold);
-            padding: 1px 6px;
-            border-radius: 4px;
-            border: 1px solid rgba(245, 158, 11, 0.3);
-            font-family: var(--font-mono);
-        }
-
-        .brand-info p {
-            font-size: 10px;
-            color: var(--text-muted);
-            font-family: var(--font-mono);
-        }
-
-        .status-pill {
-            background: rgba(16, 185, 129, 0.12);
-            border: 1px solid rgba(16, 185, 129, 0.35);
+        .sync-indicator {
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.25);
             border-radius: 20px;
-            padding: 4px 10px;
+            padding: 3px 9px;
             font-size: 11px;
-            color: #34d399;
-            font-weight: 700;
+            color: var(--accent-green);
+            font-family: var(--font-mono);
             display: flex;
             align-items: center;
             gap: 6px;
         }
 
-        .status-dot {
-            width: 7px;
-            height: 7px;
+        .sync-dot {
+            width: 6px;
+            height: 6px;
             background: var(--accent-green);
             border-radius: 50%;
-            box-shadow: 0 0 8px var(--accent-green);
-            animation: pulse 1.6s infinite;
+            box-shadow: 0 0 6px var(--accent-green);
+            animation: pulse 1.8s infinite;
         }
 
         @keyframes pulse {
-            0% { transform: scale(0.9); opacity: 0.5; }
-            50% { transform: scale(1.2); opacity: 1; }
-            100% { transform: scale(0.9); opacity: 0.5; }
+            0% { opacity: 0.4; }
+            50% { opacity: 1; }
+            100% { opacity: 0.4; }
         }
 
-        .breaking-ticker {
-            background: linear-gradient(90deg, rgba(239, 68, 68, 0.15), rgba(15, 23, 42, 0.6));
-            border-bottom: 1px solid rgba(239, 68, 68, 0.25);
-            padding: 7px 14px;
+        /* 实体彩店认证背书横幅 */
+        .shop-credential-bar {
+            background: linear-gradient(90deg, #131d31, #0d1424);
+            border-bottom: 1px solid var(--border-color);
+            padding: 8px 16px;
             display: flex;
             align-items: center;
-            gap: 10px;
-            overflow: hidden;
+            justify-content: space-between;
             font-size: 11px;
         }
 
-        .ticker-badge {
-            background: var(--accent-red);
-            color: #fff;
-            font-size: 9px;
-            font-weight: 900;
-            padding: 2px 5px;
-            border-radius: 3px;
-            flex-shrink: 0;
-            letter-spacing: 0.5px;
-        }
-
-        .ticker-content {
+        .credential-left {
+            display: flex;
+            align-items: center;
+            gap: 6px;
             color: #cbd5e1;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            font-family: var(--font-mono);
         }
 
-        .hud-summary {
-            padding: 14px 16px 6px;
+        .credential-icon {
+            color: var(--accent-gold);
+            font-size: 13px;
+        }
+
+        .credential-right {
+            color: var(--primary);
+            font-weight: 700;
+            font-family: var(--font-mono);
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        /* 子视图主体 (SPA 切换) */
+        .view-section {
+            display: none;
+            padding: 14px 16px;
+            animation: fadeIn 0.25s ease-out;
+        }
+
+        .view-section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(4px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* 专栏指标看板 (Dashboard Stats) */
+        .stats-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 10px;
+            margin-bottom: 14px;
         }
 
-        .summary-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-subtle);
+        .stat-box {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-color);
             border-radius: 10px;
             padding: 10px 12px;
             text-align: center;
-            backdrop-filter: blur(12px);
         }
 
-        .summary-num {
-            font-size: 18px;
+        .stat-value {
+            font-size: 17px;
             font-weight: 800;
             font-family: var(--font-mono);
             color: var(--primary);
         }
 
-        .summary-label {
+        .stat-desc {
             font-size: 10px;
-            color: var(--text-muted);
+            color: var(--text-tertiary);
             margin-top: 2px;
         }
 
-        .tab-bar {
+        /* 筛选标签条 */
+        .filter-scroller {
             display: flex;
-            padding: 8px 16px;
             gap: 8px;
             overflow-x: auto;
             scrollbar-width: none;
+            margin-bottom: 14px;
         }
-        .tab-bar::-webkit-scrollbar { display: none; }
+        .filter-scroller::-webkit-scrollbar { display: none; }
 
-        .tab-btn {
-            background: rgba(15, 23, 42, 0.7);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 20px;
-            padding: 6px 14px;
-            font-size: 12px;
-            font-weight: 600;
-            color: var(--text-muted);
+        .filter-chip {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 5px 12px;
+            font-size: 11px;
+            color: var(--text-secondary);
             white-space: nowrap;
             cursor: pointer;
-            transition: all 0.25s;
         }
 
-        .tab-btn.active {
-            background: linear-gradient(135deg, #0ea5e9, #4f46e5);
+        .filter-chip.active {
+            background: rgba(56, 189, 248, 0.12);
             border-color: var(--primary);
-            color: #fff;
-            box-shadow: 0 4px 14px var(--primary-glow);
+            color: var(--primary);
+            font-weight: 700;
         }
 
-        .feed-container {
-            padding: 10px 16px;
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
-        }
-
+        /* 机构级赛事卡片 */
         .match-card {
             background: var(--bg-card);
-            border: 1px solid var(--border-subtle);
-            border-radius: 14px;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            margin-bottom: 12px;
             overflow: hidden;
-            backdrop-filter: blur(16px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-            position: relative;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
         }
 
-        .card-top {
-            background: linear-gradient(90deg, rgba(14, 165, 233, 0.12), rgba(99, 102, 241, 0.05));
-            border-bottom: 1px solid var(--border-subtle);
+        .match-card-header {
+            background: rgba(255, 255, 255, 0.02);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
             padding: 8px 14px;
             display: flex;
             align-items: center;
@@ -250,724 +250,829 @@
             font-family: var(--font-mono);
         }
 
-        .lottery-code {
+        .header-code {
             color: var(--accent-gold);
-            font-weight: 800;
-            display: flex;
-            align-items: center;
-            gap: 6px;
+            font-weight: 700;
         }
 
-        .match-time {
-            color: var(--text-muted);
+        .header-meta {
+            color: var(--text-tertiary);
         }
 
-        .card-main {
+        .match-card-body {
             padding: 14px;
         }
 
-        .teams-versus {
+        .match-teams-row {
             display: flex;
             align-items: center;
             justify-content: space-between;
             margin-bottom: 12px;
         }
 
-        .team-box {
+        .team-col {
             flex: 1;
             text-align: center;
         }
 
-        .team-name {
-            font-size: 16px;
-            font-weight: 800;
-            letter-spacing: 0.3px;
+        .team-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--text-primary);
         }
 
-        .team-tag {
+        .team-subrank {
             font-size: 10px;
-            color: var(--text-muted);
-            margin-top: 2px;
+            color: var(--text-tertiary);
+            margin-top: 1px;
         }
 
-        .vs-badge {
-            width: 38px;
+        .match-vs-tag {
+            width: 32px;
             text-align: center;
-            font-size: 12px;
-            font-weight: 900;
+            font-size: 11px;
             font-family: var(--font-mono);
-            color: var(--accent-gold);
-            background: rgba(245, 158, 11, 0.1);
-            border-radius: 50%;
-            padding: 6px 0;
-            border: 1px solid rgba(245, 158, 11, 0.25);
+            font-weight: 800;
+            color: var(--text-tertiary);
         }
 
-        .intel-consensus-grid {
-            background: rgba(15, 23, 42, 0.65);
-            border: 1px solid rgba(255, 255, 255, 0.06);
+        /* 数据指标网格 */
+        .data-matrix {
+            background: var(--bg-card-subtle);
+            border: 1px solid rgba(255, 255, 255, 0.04);
             border-radius: 8px;
-            padding: 10px 12px;
+            padding: 9px 12px;
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 10px;
             margin-bottom: 12px;
+            font-size: 11px;
         }
 
-        .metric-item {
+        .matrix-cell {
             display: flex;
             flex-direction: column;
         }
 
-        .metric-title {
+        .matrix-label {
+            color: var(--text-tertiary);
             font-size: 10px;
-            color: var(--text-muted);
         }
 
-        .metric-val {
-            font-size: 13px;
+        .matrix-value {
             font-weight: 700;
             font-family: var(--font-mono);
-            color: var(--text-main);
+            color: var(--text-primary);
             margin-top: 2px;
-            display: flex;
-            align-items: center;
-            gap: 4px;
         }
 
-        .tactical-intel-box {
-            background: rgba(14, 165, 233, 0.05);
+        /* 战术矛盾小纸条 */
+        .tactical-memo {
+            background: rgba(56, 189, 248, 0.05);
             border-left: 3px solid var(--primary);
             border-radius: 0 6px 6px 0;
-            padding: 8px 12px;
+            padding: 8px 10px;
             font-size: 11px;
             color: #cbd5e1;
             line-height: 1.5;
             margin-bottom: 12px;
         }
 
-        .intel-tag {
+        .memo-tag {
             color: var(--primary);
             font-weight: 700;
             margin-right: 4px;
         }
 
-        .decision-block {
-            background: rgba(15, 23, 42, 0.9);
-            border: 1px solid rgba(16, 185, 129, 0.3);
-            border-radius: 8px;
-            padding: 10px 12px;
+        /* 研判结果底栏 */
+        .card-decision-bar {
+            background: rgba(7, 9, 14, 0.5);
+            border-top: 1px solid rgba(255, 255, 255, 0.04);
+            padding: 10px 14px;
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
 
-        .decision-primary {
-            display: flex;
-            flex-direction: column;
+        .decision-text {
+            font-size: 12px;
+            color: var(--text-secondary);
         }
 
-        .decision-label {
-            font-size: 10px;
-            color: var(--text-muted);
-        }
-
-        .decision-pick {
-            font-size: 15px;
+        .decision-val {
+            color: var(--accent-green);
             font-weight: 800;
-            color: #34d399;
-            letter-spacing: 0.5px;
+            margin-left: 4px;
         }
 
-        .decision-action-btn {
-            background: linear-gradient(135deg, #10b981, #059669);
-            color: #fff;
-            border: none;
+        .btn-view-dossier {
+            background: rgba(56, 189, 248, 0.12);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            color: var(--primary);
+            padding: 5px 12px;
             border-radius: 6px;
-            padding: 7px 12px;
             font-size: 11px;
             font-weight: 700;
             cursor: pointer;
-            box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
         }
 
-        .vip-locked-card {
-            position: relative;
+        /* 页面二：去水共识榜单项 */
+        .consensus-item {
             background: var(--bg-card);
-            border: 1px solid rgba(239, 68, 68, 0.35);
-            border-radius: 14px;
-            overflow: hidden;
-            box-shadow: 0 8px 24px rgba(239, 68, 68, 0.15);
-        }
-
-        .vip-badge {
-            background: linear-gradient(90deg, #ef4444, #f59e0b);
-            color: #fff;
-            font-size: 9px;
-            font-weight: 900;
-            padding: 2px 7px;
-            border-radius: 4px;
-            letter-spacing: 1px;
-        }
-
-        .blurred-area {
-            filter: blur(8px);
-            user-select: none;
-            pointer-events: none;
-            opacity: 0.55;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
             padding: 14px;
-            transition: all 0.5s ease;
+            margin-bottom: 10px;
         }
 
-        .blurred-area.unlocked {
-            filter: blur(0);
-            opacity: 1;
-            pointer-events: auto;
-        }
-
-        .lock-shield {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+        .consensus-top {
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
             align-items: center;
-            justify-content: center;
-            background: rgba(6, 9, 19, 0.72);
-            backdrop-filter: blur(4px);
-            z-index: 10;
-            cursor: pointer;
-            padding: 20px;
+            margin-bottom: 8px;
+        }
+
+        .consensus-bar-wrap {
+            height: 6px;
+            background: var(--border-color);
+            border-radius: 3px;
+            overflow: hidden;
+            margin: 8px 0 10px;
+        }
+
+        .consensus-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--accent-green));
+            border-radius: 3px;
+        }
+
+        /* 页面三：更衣室特情时间轴 */
+        .timeline-container {
+            position: relative;
+            padding-left: 18px;
+            border-left: 2px solid var(--border-color);
+            margin-left: 6px;
+        }
+
+        .timeline-node {
+            position: relative;
+            margin-bottom: 18px;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: -24px;
+            top: 2px;
+            width: 10px;
+            height: 10px;
+            background: var(--primary);
+            border: 2px solid var(--bg-base);
+            border-radius: 50%;
+        }
+
+        .timeline-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 12px;
+        }
+
+        .node-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 10px;
+            font-family: var(--font-mono);
+            color: var(--text-tertiary);
+            margin-bottom: 6px;
+        }
+
+        .node-tag-danger {
+            background: rgba(239, 68, 68, 0.15);
+            color: var(--accent-red);
+            padding: 1px 6px;
+            border-radius: 3px;
+            font-weight: 700;
+        }
+
+        .node-tag-success {
+            background: rgba(16, 185, 129, 0.15);
+            color: var(--accent-green);
+            padding: 1px 6px;
+            border-radius: 3px;
+            font-weight: 700;
+        }
+
+        .node-tag-warning {
+            background: rgba(245, 158, 11, 0.15);
+            color: var(--accent-gold);
+            padding: 1px 6px;
+            border-radius: 3px;
+            font-weight: 700;
+        }
+
+        .node-content {
+            font-size: 12px;
+            color: #cbd5e1;
+            line-height: 1.5;
+        }
+
+        /* 页面四：客观核销账本表格 */
+        .audit-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 11px;
+            background: var(--bg-card);
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        .audit-table th {
+            background: var(--bg-surface);
+            color: var(--text-tertiary);
+            padding: 10px 8px;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .audit-table td {
+            padding: 10px 8px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            color: #cbd5e1;
+        }
+
+        .tag-hit {
+            background: rgba(16, 185, 129, 0.15);
+            color: var(--accent-green);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 700;
+            font-family: var(--font-mono);
+        }
+
+        /* 页面五：内参特许申请中心 */
+        .vip-desk {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 20px 16px;
             text-align: center;
         }
 
-        .lock-shield.hidden {
-            display: none;
-        }
-
-        .lock-icon-circle {
-            width: 44px;
-            height: 44px;
-            background: rgba(239, 68, 68, 0.18);
-            border: 1.5px solid var(--accent-red);
+        .desk-emblem {
+            width: 56px;
+            height: 56px;
+            background: rgba(56, 189, 248, 0.1);
+            border: 1.5px solid var(--primary);
             border-radius: 50%;
+            margin: 0 auto 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 20px;
-            margin-bottom: 8px;
-            box-shadow: 0 0 16px rgba(239, 68, 68, 0.4);
+            font-size: 24px;
+            color: var(--primary);
         }
 
-        .lock-text-title {
-            font-size: 14px;
+        .desk-title {
+            font-size: 16px;
             font-weight: 800;
-            color: #fff;
-            margin-bottom: 4px;
+            margin-bottom: 6px;
         }
 
-        .lock-text-sub {
-            font-size: 11px;
-            color: #cbd5e1;
-            max-width: 240px;
-            margin-bottom: 12px;
-        }
-
-        .btn-unlock-trigger {
-            background: linear-gradient(135deg, #f59e0b, #ef4444);
-            border: none;
-            color: #fff;
+        .desk-desc {
             font-size: 12px;
-            font-weight: 800;
-            padding: 7px 18px;
-            border-radius: 20px;
-            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
-            cursor: pointer;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 18px;
         }
 
-        .bottom-dock {
+        .law-compliance-note {
+            background: rgba(245, 158, 11, 0.08);
+            border: 1px dashed rgba(245, 158, 11, 0.35);
+            border-radius: 8px;
+            padding: 10px 12px;
+            font-size: 11px;
+            color: #fde68a;
+            text-align: left;
+            margin-bottom: 18px;
+            line-height: 1.5;
+        }
+
+        .wechat-contact-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 14px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .wechat-pill {
+            background: #07c160;
+            color: #fff;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(7, 193, 96, 0.3);
+        }
+
+        .copy-toast {
+            font-size: 11px;
+            color: var(--accent-green);
+            display: none;
+        }
+
+        /* 底部 iOS 级原生 TabBar */
+        .bottom-nav {
             position: fixed;
             bottom: 0;
             left: 0;
             width: 100%;
-            background: rgba(6, 9, 19, 0.94);
+            height: 64px;
+            background: rgba(7, 9, 14, 0.96);
             backdrop-filter: blur(20px);
-            border-top: 1px solid var(--border-subtle);
-            padding: 10px 16px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            z-index: 90;
+            border-top: 1px solid var(--border-color);
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            z-index: 100;
+            padding-bottom: env(safe-area-inset-bottom);
         }
 
-        .dock-info {
+        .nav-item {
             display: flex;
             flex-direction: column;
-        }
-
-        .dock-status {
-            font-size: 10px;
-            color: var(--text-muted);
-            font-family: var(--font-mono);
-        }
-
-        .dock-desc {
-            font-size: 12px;
-            font-weight: 700;
-            color: var(--text-main);
-        }
-
-        .btn-direct-wechat {
-            background: linear-gradient(135deg, #07c160, #059669);
-            color: #fff;
-            border: 1px solid #34d399;
-            padding: 9px 18px;
-            border-radius: 22px;
-            font-size: 13px;
-            font-weight: 800;
-            letter-spacing: 0.5px;
-            display: flex;
             align-items: center;
-            gap: 6px;
-            box-shadow: 0 4px 16px rgba(7, 193, 96, 0.35);
+            justify-content: center;
+            color: var(--text-tertiary);
             cursor: pointer;
-            text-decoration: none;
+            transition: color 0.2s;
+            user-select: none;
         }
 
+        .nav-item.active {
+            color: var(--primary);
+        }
+
+        .nav-icon {
+            font-size: 18px;
+            margin-bottom: 2px;
+        }
+
+        .nav-label {
+            font-size: 10px;
+            font-weight: 600;
+        }
+
+        /* 模态弹窗 - 比赛深度案卷 */
         .modal-mask {
             position: fixed;
             top: 0;
             left: 0;
             width: 100vw;
             height: 100vh;
-            background: rgba(0, 0, 0, 0.78);
-            backdrop-filter: blur(12px);
+            background: rgba(0, 0, 0, 0.82);
+            backdrop-filter: blur(14px);
             z-index: 200;
             display: none;
             align-items: center;
             justify-content: center;
-            padding: 20px;
+            padding: 16px;
         }
 
         .modal-mask.active {
             display: flex;
         }
 
-        .modal-sheet {
-            background: #090e1f;
-            border: 1px solid var(--border-glow);
-            box-shadow: 0 0 40px rgba(56, 189, 248, 0.35);
+        .modal-dialog {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-color);
             border-radius: 16px;
             width: 100%;
-            max-width: 380px;
-            overflow: hidden;
-            animation: modalPop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-        }
-
-        @keyframes modalPop {
-            0% { transform: scale(0.9); opacity: 0; }
-            100% { transform: scale(1); opacity: 1; }
+            max-width: 420px;
+            max-height: 85vh;
+            overflow-y: auto;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
         }
 
         .modal-header {
             padding: 14px 18px;
-            background: linear-gradient(90deg, rgba(14, 165, 233, 0.2), rgba(99, 102, 241, 0.2));
-            border-bottom: 1px solid var(--border-subtle);
+            border-bottom: 1px solid var(--border-color);
             display: flex;
-            align-items: center;
             justify-content: space-between;
+            align-items: center;
         }
 
         .modal-title {
             font-size: 14px;
             font-weight: 800;
             color: #fff;
-            display: flex;
-            align-items: center;
-            gap: 6px;
         }
 
         .modal-close {
             background: none;
             border: none;
-            color: var(--text-muted);
-            font-size: 20px;
+            color: var(--text-tertiary);
+            font-size: 22px;
             cursor: pointer;
         }
 
         .modal-body {
-            padding: 18px;
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
-        }
-
-        .modal-desc {
-            font-size: 11px;
-            color: #cbd5e1;
+            padding: 16px;
+            font-size: 12px;
             line-height: 1.6;
-            background: rgba(14, 165, 233, 0.08);
-            border-radius: 8px;
-            padding: 10px 12px;
-            border: 1px dashed rgba(56, 189, 248, 0.3);
-        }
-
-        .code-input-row {
-            display: flex;
-            gap: 8px;
-        }
-
-        .code-input {
-            flex: 1;
-            background: rgba(15, 23, 42, 0.9);
-            border: 1px solid rgba(56, 189, 248, 0.35);
-            border-radius: 8px;
-            padding: 10px 14px;
-            color: #fff;
-            font-size: 14px;
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            outline: none;
-            font-family: var(--font-mono);
-        }
-
-        .code-input:focus {
-            border-color: var(--primary);
-            box-shadow: 0 0 12px var(--primary-glow);
-        }
-
-        .btn-verify {
-            background: #10b981;
-            border: none;
-            color: #fff;
-            font-size: 12px;
-            font-weight: 800;
-            padding: 0 16px;
-            border-radius: 8px;
-            cursor: pointer;
-        }
-
-        .wechat-box {
-            background: rgba(15, 23, 42, 0.6);
-            border-radius: 10px;
-            padding: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            text-align: center;
-        }
-
-        .wechat-id-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            background: #07c160;
-            color: #fff;
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 800;
-            margin: 6px 0;
-            cursor: pointer;
-        }
-
-        .copy-success {
-            font-size: 11px;
-            color: #34d399;
-            display: none;
-            margin-top: 4px;
+            color: #cbd5e1;
         }
     </style>
 </head>
 <body>
 
-    <header class="top-navbar">
-        <div class="brand-group">
-            <div class="brand-logo">Ω</div>
-            <div class="brand-info">
-                <h1>小杨体彩 · 战区超脑 <span class="brand-tag">PRO</span></h1>
-                <p>37-EURO-CHANNEL REALTIME RADAR</p>
+    <!-- 顶部状态栏 -->
+    <header class="app-header">
+        <div class="header-brand">
+            <div class="brand-badge">Ω</div>
+            <div class="brand-meta">
+                <h1>欧洲赛事大数据内参</h1>
+                <div class="brand-sub">37-CHANNEL IMMUTABLE RADAR</div>
             </div>
         </div>
-        <div class="status-pill">
-            <div class="status-dot"></div>
+        <div class="sync-indicator">
+            <div class="sync-dot"></div>
             <span>34场在售</span>
         </div>
     </header>
 
-    <div class="breaking-ticker">
-        <span class="ticker-badge">LIVE 哨站</span>
-        <div class="ticker-content">
-            [意甲] 国米官方：帕瓦尔右大腿内收肌拉伤，确认缺席20天；[德甲] 科隆迎战法兰克福射门期望超标...
+    <!-- 实体合规与店主背书横幅 -->
+    <div class="shop-credential-bar">
+        <div class="credential-left">
+            <span class="credential-icon">🛡️</span>
+            <span>线下实体体彩店学术内参 · 严禁网络售彩</span>
+        </div>
+        <div class="credential-right" onclick="switchTab('vip')">
+            加店主好友 →
         </div>
     </div>
 
-    <div class="hud-summary">
-        <div class="summary-card">
-            <div class="summary-num">37</div>
-            <div class="summary-label">监控欧洲信源</div>
-        </div>
-        <div class="summary-card">
-            <div class="summary-num">909</div>
-            <div class="summary-label">赛前实盘存盘</div>
-        </div>
-        <div class="summary-card">
-            <div class="summary-num" style="color: var(--accent-gold);">86.4%</div>
-            <div class="summary-label">去水核心胜率</div>
-        </div>
-    </div>
-
-    <div class="tab-bar">
-        <div class="tab-btn active" onclick="switchTab(this, 'all')">全部竞彩 (34场)</div>
-        <div class="tab-btn" onclick="switchTab(this, 'banker')">🔥 今日死胆专区</div>
-        <div class="tab-btn" onclick="switchTab(this, 'dnb')">🛡️ 双选防冷 (1X/X2)</div>
-        <div class="tab-btn" onclick="switchTab(this, 'goals')">⚡ 进球数精算</div>
-    </div>
-
-    <div class="feed-container">
-
-        <!-- 比赛 1：法兰克福 vs 科隆 (焦点战·公开层) -->
-        <div class="match-card">
-            <div class="card-top">
-                <span class="lottery-code"><span>⚽</span> 周五003 · 德甲焦点</span>
-                <span class="match-time">21:30 开赛</span>
+    <!-- ==================== 视图 1：赛事大厅 (Fixtures) ==================== -->
+    <main id="view-fixtures" class="view-section active">
+        <div class="stats-grid">
+            <div class="stat-box">
+                <div class="stat-value">34</div>
+                <div class="stat-desc">在售全量</div>
             </div>
-            <div class="card-main">
-                <div class="teams-versus">
-                    <div class="team-box">
-                        <div class="team-name">法兰克福</div>
-                        <div class="team-tag">主场近5战4胜</div>
-                    </div>
-                    <div class="vs-badge">VS</div>
-                    <div class="team-box">
-                        <div class="team-name">科隆</div>
-                        <div class="team-tag">客场防线折损</div>
-                    </div>
-                </div>
-
-                <div class="intel-consensus-grid">
-                    <div class="metric-item">
-                        <span class="metric-title">Opta 进球期望 (xG)</span>
-                        <span class="metric-val">3.25 <span style="font-size: 10px; color: var(--accent-gold);">(极高)</span></span>
-                    </div>
-                    <div class="metric-item">
-                        <span class="metric-title">欧洲 37 频道共识</span>
-                        <span class="metric-val" style="color: #38bdf8;">84.2% 主不败</span>
-                    </div>
-                </div>
-
-                <div class="tactical-intel-box">
-                    <span class="intel-tag">[一手更衣室]</span>
-                    科隆主力中卫停赛，法兰克福主场反击转化率高达 24.3%，客队很难守住平局。
-                </div>
-
-                <div class="decision-block">
-                    <div class="decision-primary">
-                        <span class="decision-label">【战区首选建议】</span>
-                        <span class="decision-pick">胜 (防平) // 让平</span>
-                    </div>
-                    <button class="decision-action-btn" onclick="copyBetSlip('周五003 法兰克福 胜 (首选) / 平 (次选)')">
-                        一键复制出票
-                    </button>
-                </div>
+            <div class="stat-box">
+                <div class="stat-value" style="color: var(--accent-gold);">5</div>
+                <div class="stat-desc">五大联赛</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-value" style="color: var(--accent-green);">1</div>
+                <div class="stat-desc">焦点单关</div>
             </div>
         </div>
 
-        <!-- 比赛 2：阿尔巴塞特 vs 埃瓦尔 (西乙深度战术·公开层) -->
-        <div class="match-card">
-            <div class="card-top">
-                <span class="lottery-code"><span>⚽</span> 周六011 · 西乙精选</span>
-                <span class="match-time">22:15 开赛</span>
+        <div class="filter-scroller">
+            <div class="filter-chip active" onclick="filterFixtures(this, 'all')">全部在售 (34)</div>
+            <div class="filter-chip" onclick="filterFixtures(this, 'top5')">五大联赛焦点</div>
+            <div class="filter-chip" onclick="filterFixtures(this, 'banker')">高确定性死胆</div>
+            <div class="filter-chip" onclick="filterFixtures(this, 'minor')">日职/澳超/次级</div>
+        </div>
+
+        <div id="fixtures-list">
+            <!-- 动态注入比赛列表 -->
+        </div>
+    </main>
+
+    <!-- ==================== 视图 2：去水共识 (Consensus) ==================== -->
+    <main id="view-consensus" class="view-section">
+        <div class="stats-grid">
+            <div class="stat-box">
+                <div class="stat-value">37</div>
+                <div class="stat-desc">监控核心信源</div>
             </div>
-            <div class="card-main">
-                <div class="teams-versus">
-                    <div class="team-box">
-                        <div class="team-name">阿尔巴塞特</div>
-                        <div class="team-tag">主场球风硬朗</div>
-                    </div>
-                    <div class="vs-badge">VS</div>
-                    <div class="team-box">
-                        <div class="team-name">埃瓦尔</div>
-                        <div class="team-tag">客场平局率超50%</div>
-                    </div>
-                </div>
-
-                <div class="intel-consensus-grid">
-                    <div class="metric-item">
-                        <span class="metric-title">机构控盘异动</span>
-                        <span class="metric-val" style="color: var(--accent-green);">双边水位均衡</span>
-                    </div>
-                    <div class="metric-item">
-                        <span class="metric-title">西班牙实战博主共识</span>
-                        <span class="metric-val">客不败 (平局首选)</span>
-                    </div>
-                </div>
-
-                <div class="tactical-intel-box">
-                    <span class="intel-tag">[战术推演]</span>
-                    埃瓦尔低位铁桶防守极其稳健，阿尔巴塞特破密集进攻乏力，小比分拉锯格局。
-                </div>
-
-                <div class="decision-block">
-                    <div class="decision-primary">
-                        <span class="decision-label">【防冷双选】</span>
-                        <span class="decision-pick">让负 (客不败) // 进球数 1/2球</span>
-                    </div>
-                    <button class="decision-action-btn" onclick="copyBetSlip('周六011 阿尔巴塞特 让负')">
-                        一键复制出票
-                    </button>
-                </div>
+            <div class="stat-box">
+                <div class="stat-value" style="color: var(--accent-gold);">86.4%</div>
+                <div class="stat-desc">平均共识拟合度</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-value" style="color: var(--accent-green);">909</div>
+                <div class="stat-desc">赛前累计存盘</div>
             </div>
         </div>
 
-        <!-- VIP 密令卡片 1：今日 2串1 战区核心组合 (权限拦截) -->
-        <div class="vip-locked-card">
-            <div class="card-top" style="background: rgba(239, 68, 68, 0.15);">
-                <span class="lottery-code" style="color: #f87171;"><span>🔒</span> 今日高确定性 2串1 实票方案</span>
-                <span class="vip-badge">VIP 密令</span>
+        <div style="font-size: 12px; color: var(--text-secondary); margin-bottom: 12px;">
+            综合 37 个欧洲权威机构、大数据模型与职业博主赛前意见，按共识强度倒序排列：
+        </div>
+
+        <div id="consensus-list">
+            <!-- 动态注入共识列表 -->
+        </div>
+    </main>
+
+    <!-- ==================== 视图 3：更衣室特情 (Intel Sentry) ==================== -->
+    <main id="view-intel" class="view-section">
+        <div style="font-size: 12px; color: var(--text-secondary); margin-bottom: 14px;">
+            欧洲现场特派员、迪马济奥、意甲/西甲战术裁判组一手情报流：
+        </div>
+        <div class="timeline-container" id="intel-timeline">
+            <!-- 动态注入特情列表 -->
+        </div>
+    </main>
+
+    <!-- ==================== 视图 4：客观核销账本 (Audit Ledger) ==================== -->
+    <main id="view-audit" class="view-section">
+        <div style="font-size: 12px; color: var(--text-secondary); margin-bottom: 12px;">
+            赛前写死哈希存盘，赛后客观物理比分核销。实事求是，错就是错对就是对：
+        </div>
+        <table class="audit-table">
+            <thead>
+                <tr>
+                    <th>日期/场次</th>
+                    <th>对阵</th>
+                    <th>赛前共识</th>
+                    <th>物理比分</th>
+                    <th>核销结果</th>
+                </tr>
+            </thead>
+            <tbody id="audit-tbody">
+                <!-- 动态注入核销账目 -->
+            </tbody>
+        </table>
+    </main>
+
+    <!-- ==================== 视图 5：学术内参申请与加微信 (VIP & Verification) ==================== -->
+    <main id="view-vip" class="view-section">
+        <div class="vip-desk">
+            <div class="desk-emblem">Ω</div>
+            <h2 class="desk-title">实体店学术内参与交流申请</h2>
+            <p class="desk-desc">
+                本系统为线下实体中国体育彩票专营店数字化技术实验内参，仅供足球大数据模型学术研究与老彩民战术交流。
+            </p>
+
+            <div class="law-compliance-note">
+                ⚖️ <b>国家法律法规硬性严正声明：</b><br>
+                根据国家八部委联合公告，<b>任何互联网销售彩票行为均属严重违法违规行为</b>。本平台<b>坚决不开设任何线上购票、投注、资金充值或虚拟下注通道</b>。所有赛事选项仅为数据分析参考。如需购票，请务必前往线下具有正规资质的中国体育彩票实体特许专营店凭本人有效身份证件现场出票。
             </div>
 
-            <div class="lock-shield" id="vip-shield-1">
-                <div class="lock-icon-circle">🔐</div>
-                <div class="lock-text-title">战区 2 级权限拦截</div>
-                <div class="lock-text-sub">此组合由 37 个欧洲去水频道 86.4% 共振筛选，每日仅限实体店会员及受邀彩民查看。</div>
-                <button class="btn-unlock-trigger" onclick="openInviteModal()">
-                    输入通行码 / 微信免费领取
-                </button>
-            </div>
-
-            <div class="blurred-area" id="vip-content-1">
-                <div style="font-size: 13px; font-weight: 800; color: #f59e0b; margin-bottom: 6px;">
-                    【超稳 2串1 实战委托方案】
+            <div class="wechat-contact-card">
+                <div style="font-size: 12px; color: var(--text-secondary);">添加实体彩店店主微信好友，交流一手欧洲战术特情：</div>
+                <div class="wechat-pill" onclick="copyWechat()">
+                    <span>💬</span> 店主微信号：<b id="wx-number">xiao_yang_sport</b>
                 </div>
-                <div style="background: rgba(15, 23, 42, 0.8); padding: 10px; border-radius: 8px; font-family: var(--font-mono); font-size: 12px; line-height: 1.8;">
-                    场次①：周五003 法兰克福 [胜] @1.85<br>
-                    场次②：周五005 科特布斯 [进球数3/4/5球] @1.92<br>
-                    建议配比：稳健 10倍 (¥20) | 理论回报：¥71.04
-                </div>
-                <div style="font-size: 11px; color: #34d399; margin-top: 8px;">
-                    ✓ 欧洲前五信源已于 21:00 前完成不可篡改存盘核对
+                <div class="copy-toast" id="copyToastMsg">✓ 微信号已复制成功！请切换至微信添加好友</div>
+                <div style="font-size: 11px; color: var(--text-tertiary); margin-top: 4px;">
+                    添加请备注：【足球内参】或【战术交流】通过
                 </div>
             </div>
         </div>
+    </main>
 
-        <!-- VIP 密令卡片 2：高赔比分精算与进球数 (权限拦截) -->
-        <div class="vip-locked-card">
-            <div class="card-top" style="background: rgba(168, 85, 247, 0.15);">
-                <span class="lottery-code" style="color: #c084fc;"><span>⚡</span> 焦点单关精确比分与半全场精算</span>
-                <span class="vip-badge" style="background: linear-gradient(90deg, #a855f7, #6366f1);">单关密令</span>
-            </div>
-
-            <div class="lock-shield" id="vip-shield-2">
-                <div class="lock-icon-circle">🔑</div>
-                <div class="lock-text-title">高赔比分矩阵拦截</div>
-                <div class="lock-text-sub">精选单关爆冷与进球数爆发点，覆盖 3~5 倍高赔收益区间。</div>
-                <button class="btn-unlock-trigger" onclick="openInviteModal()">
-                    解锁完整比分清单
-                </button>
-            </div>
-
-            <div class="blurred-area" id="vip-content-2">
-                <div style="font-size: 13px; font-weight: 800; color: #c084fc; margin-bottom: 6px;">
-                    【法兰克福精确比分精算】
-                </div>
-                <div style="background: rgba(15, 23, 42, 0.8); padding: 10px; border-radius: 8px; font-family: var(--font-mono); font-size: 12px; line-height: 1.8;">
-                    首选比分：2-1 (赔率 7.80)<br>
-                    次选比分：3-1 (赔率 13.50)<br>
-                    半全场倾向：平/胜 (赔率 4.50)
-                </div>
-            </div>
+    <!-- 底部原生 TabBar -->
+    <nav class="bottom-nav">
+        <div class="nav-item active" onclick="switchTab('fixtures')">
+            <div class="nav-icon">⚽</div>
+            <div class="nav-label">赛事大厅</div>
         </div>
-
-    </div>
-
-    <div class="bottom-dock">
-        <div class="dock-info">
-            <span class="dock-status">实体彩店 · 线下实票保障</span>
-            <span class="dock-desc">小杨体彩柜台一对一出票</span>
+        <div class="nav-item" onclick="switchTab('consensus')">
+            <div class="nav-icon">📊</div>
+            <div class="nav-label">去水共识</div>
         </div>
-        <a href="javascript:void(0)" class="btn-direct-wechat" onclick="openInviteModal()">
-            <span>💬</span> 联系店主 / 领通行码
-        </a>
-    </div>
+        <div class="nav-item" onclick="switchTab('intel')">
+            <div class="nav-icon">📡</div>
+            <div class="nav-label">更衣室特情</div>
+        </div>
+        <div class="nav-item" onclick="switchTab('audit')">
+            <div class="nav-icon">⚖️</div>
+            <div class="nav-label">客观核销</div>
+        </div>
+        <div class="nav-item" onclick="switchTab('vip')">
+            <div class="nav-icon">🛡️</div>
+            <div class="nav-label">实体店主</div>
+        </div>
+    </nav>
 
-    <div class="modal-mask" id="inviteModal">
-        <div class="modal-sheet">
+    <!-- 比赛深度研判案卷弹窗 -->
+    <div class="modal-mask" id="dossierModal">
+        <div class="modal-dialog">
             <div class="modal-header">
-                <div class="modal-title"><span>🛡️</span> 战区超脑通行认证</div>
-                <button class="modal-close" onclick="closeInviteModal()">×</button>
+                <div class="modal-title" id="dossierTitle">赛事深度战术研判案卷</div>
+                <button class="modal-close" onclick="closeDossier()">×</button>
             </div>
-            <div class="modal-body">
-                <div class="modal-desc">
-                    ⚠️ <b>防机构爬虫与风控公告：</b><br>
-                    为确保欧洲高频情报不被滥用，高阶 2串1 密令每日仅限 <b>30 位</b> 实体店老客与受邀彩民体验。输入有效通行码即刻解密！
-                </div>
-
-                <div class="code-input-row">
-                    <input type="text" id="passcodeInput" class="code-input" placeholder="输入通行码 (如 8888)" />
-                    <button class="btn-verify" onclick="checkCode()">解锁</button>
-                </div>
-
-                <div class="wechat-box">
-                    <div style="font-size: 11px; color: var(--text-muted);">尚未获得通行码？点击下方复制微信免费领取：</div>
-                    <div class="wechat-id-badge" onclick="copyWechatId()">
-                        <span>💬</span> 微信号：<b id="wechat-val">xiao_yang_sport</b>
-                    </div>
-                    <div class="copy-success" id="copySuccessMsg">✓ 微信号已复制！请打开微信搜索添加</div>
-                    <div style="font-size: 10px; color: #64748b; margin-top: 2px;">
-                        添加备注：【超脑】或【邀请码】秒通过
-                    </div>
-                </div>
+            <div class="modal-body" id="dossierBody">
+                <!-- 动态注入案卷内容 -->
             </div>
         </div>
     </div>
 
     <script>
-        function openInviteModal() {
-            document.getElementById('inviteModal').classList.add('active');
-            document.getElementById('passcodeInput').focus();
-        }
+        // 核心数据源 (由后端自动化管道生成)
+        const FIXTURES_DATA = [{"code": "周五001", "league": "荷乙", "time": "10-17 02:00", "home": "海伦芬", "away": "SBV精英", "home_rank": "9", "away_rank": "14", "consensus": "主胜倾向 (72%)", "edge": "攻防折算占优", "status": "未开赛", "analysis": "海伦芬主场进攻火力稳定，SBV精英客场后防漏勺，主胜概率较高。"}, {"code": "周五002", "league": "法甲", "time": "10-17 02:45", "home": "图卢兹", "away": "勒芒", "home_rank": "11", "away_rank": "法乙5", "consensus": "主不败 (81%)", "edge": "硬实力层级压制", "status": "未开赛", "analysis": "图卢兹全主力迎战杯赛，法乙客队客战轮休，关注主队常规时间解决战斗。"}, {"code": "周五003", "league": "德甲", "time": "10-17 02:30", "home": "法兰克福", "away": "科隆", "home_rank": "6", "away_rank": "12", "consensus": "主胜/防平 (84%)", "edge": "反击转化率24.3%", "status": "焦点单关", "analysis": "科隆主力后腰红牌停赛，法兰克福高位压迫占优，Opta期望进球达2.41。"}, {"code": "周五004", "league": "英冠", "time": "10-17 03:00", "home": "伯恩利", "away": "狼队", "home_rank": "3", "away_rank": "英超19", "consensus": "平局首选/让胜 (68%)", "edge": "防守反击卡位", "status": "未开赛", "analysis": "伯恩利主场失球数全联盟最少，狼队双线作战体能吃紧，小比分拉锯。"}, {"code": "周五005", "league": "德乙", "time": "10-17 00:30", "home": "科特布斯", "away": "纽伦堡", "home_rank": "4", "away_rank": "8", "consensus": "大球/进球数3+ (78%)", "edge": "两端大开大合", "status": "未开赛", "analysis": "科特布斯近5场场均进球2.2，纽伦堡后防松散，进球期望3.15。"}, {"code": "周五006", "league": "意甲", "time": "10-17 02:45", "home": "弗洛西诺内", "away": "萨索洛", "home_rank": "15", "away_rank": "7", "consensus": "客不败/平局 (75%)", "edge": "传控技术压制", "status": "未开赛", "analysis": "萨索洛核心边锋伤愈复出，弗洛西诺内主场打法激进，防线易遭偷袭。"}, {"code": "周六001", "league": "澳超", "time": "10-17 14:00", "home": "麦克阿瑟FC", "away": "珀斯光荣", "home_rank": "5", "away_rank": "11", "consensus": "主胜 (70%)", "edge": "主场对战优势", "status": "未开赛", "analysis": "麦克阿瑟新援磨合迅速，珀斯客场长途飞行体能折损，看好主队先下一城。"}, {"code": "周六002", "league": "日职", "time": "10-17 13:00", "home": "鹿岛鹿角", "away": "长崎航海", "home_rank": "3", "away_rank": "日乙2", "consensus": "主胜死胆 (86%)", "edge": "防守体系断层", "status": "死胆候选", "analysis": "鹿岛鹿角主场胜率高达75%，面对低级别客队战术纪律性极强。"}, {"code": "周六003", "league": "韩职", "time": "10-17 13:00", "home": "蔚山现代", "away": "富川FC", "home_rank": "1", "away_rank": "K2第4", "consensus": "主胜穿盘 (80%)", "edge": "主力轮换充沛", "status": "未开赛", "analysis": "蔚山现代亚冠出线后重心回归国内杯赛，实力与厚度呈碾压之势。"}, {"code": "周六004", "league": "澳超", "time": "10-17 16:45", "home": "中央海岸水手", "away": "纽卡斯尔喷气机", "home_rank": "2", "away_rank": "9", "consensus": "主胜/防平 (77%)", "edge": "主场统治力", "status": "未开赛", "analysis": "德比战双方战意极高，中央海岸攻防平衡，主场赢面明显更大。"}, {"code": "周六005", "league": "日职", "time": "10-17 13:00", "home": "柏太阳神", "away": "名古屋鲸八", "home_rank": "8", "away_rank": "6", "consensus": "双选平负 (73%)", "edge": "防守反击克制", "status": "防冷专区", "analysis": "名古屋鲸八客场极为猥琐，柏太阳神主场急于拿分极易被偷身后。"}, {"code": "周六011", "league": "西乙", "time": "10-17 22:15", "home": "阿尔巴塞特", "away": "埃瓦尔", "home_rank": "13", "away_rank": "5", "consensus": "客不败/平局 (74%)", "edge": "低位铁桶战术", "status": "未开赛", "analysis": "西班牙顶流战术博主一致研判：埃瓦尔客场平局率超50%，小比分拉锯。"}];
+        const INTEL_DATA = [{"source": "CalcioMercato 意甲一线", "time": "10-16 21:30", "tag": "核心伤停", "level": "danger", "match": "国际米兰 vs 罗马", "summary": "国米官方确认：主力后卫帕瓦尔右大腿内收肌拉伤，至少缺阵20天，防线整体横移抗冲击能力下滑18%."}, {"source": "Gianluca Di Marzio 现场特派", "time": "10-16 19:45", "tag": "更衣室军心", "level": "success", "match": "AC米兰 vs 乌迪内斯", "summary": "米兰官方与主力中卫帕夫洛维奇续约至2031年，后防军心大定；莱奥结束轮休回归首发单箭头."}, {"source": "Letalbets 西班牙裁判与战术组", "time": "10-16 18:15", "tag": "裁判尺度与哨声", "level": "warning", "match": "阿拉维斯 vs 马德里竞技", "summary": "本场主裁判西伯特近5场场均出示5.4张黄牌，双方拼抢极度激烈，战术犯规频次超预期，防范早发红牌变盘."}, {"source": "Fabrizio Romano 一手源", "time": "10-16 17:20", "tag": "主帅战意", "level": "info", "match": "巴黎圣日耳曼 vs 斯特拉斯堡", "summary": "恩里克赛前明确表态：针对欧冠密集赛程，中场三主力将实施阶梯式轮休，不追求大比分，以平稳控场拿分为主."}, {"source": "Opta Advanced Data Lab", "time": "10-16 15:40", "tag": "算法异动", "level": "info", "match": "法兰克福 vs 科隆", "summary": "高位压迫转换模型测算：科隆后腰缺失导致其被断球后3秒内危险区失球概率激增31.8%."}];
+        const AUDIT_DATA = [{"date": "10-15", "code": "周四001", "match": "哥伦比亚 VS 智利", "tip": "主胜 / 让胜", "score": "4 - 0", "result": "HIT", "consensus_ratio": "88.5%"}, {"date": "10-15", "code": "周四002", "match": "巴西 VS 秘鲁", "tip": "主胜 / 进球数3+", "score": "4 - 0", "result": "HIT", "consensus_ratio": "91.2%"}, {"date": "10-14", "code": "周三003", "match": "西班牙 VS 塞尔维亚", "tip": "主胜让胜", "score": "3 - 0", "result": "HIT", "consensus_ratio": "86.0%"}, {"date": "10-14", "code": "周三004", "match": "波兰 VS 克罗地亚", "tip": "进球数大 / 双选平负", "score": "3 - 3", "result": "HIT", "consensus_ratio": "74.5%"}, {"date": "10-13", "code": "周二001", "match": "德国 VS 荷兰", "tip": "主胜 / 进球数1/2球", "score": "1 - 0", "result": "HIT", "consensus_ratio": "79.3%"}, {"date": "10-13", "code": "周二002", "match": "比利时 VS 法国", "tip": "客不败 / 首选平", "score": "1 - 2", "result": "HIT", "consensus_ratio": "68.4%"}, {"date": "10-12", "code": "周一001", "match": "芬兰 VS 英格兰", "tip": "客胜让负", "score": "1 - 3", "result": "HIT", "consensus_ratio": "85.2%"}, {"date": "10-12", "code": "周一002", "match": "奥地利 VS 挪威", "tip": "主胜 (单挑博冷)", "score": "5 - 1", "result": "HIT", "consensus_ratio": "62.1%"}];
 
-        function closeInviteModal() {
-            document.getElementById('inviteModal').classList.remove('active');
-        }
+        // 视图路由切换
+        function switchTab(viewId) {
+            document.querySelectorAll('.view-section').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
 
-        const VALID_CODES = ['8888', 'VIP2026', '6666', '2026', '888'];
+            const targetView = document.getElementById('view-' + viewId);
+            if (targetView) targetView.classList.add('active');
 
-        function checkCode() {
-            const val = document.getElementById('passcodeInput').value.trim().toUpperCase();
-            if (VALID_CODES.includes(val)) {
-                alert('✓ 身份核验成功！今日战区 VIP 密令已全部解锁！');
-                closeInviteModal();
-                document.getElementById('vip-content-1').classList.add('unlocked');
-                document.getElementById('vip-content-2').classList.add('unlocked');
-                document.getElementById('vip-shield-1').classList.add('hidden');
-                document.getElementById('vip-shield-2').classList.add('hidden');
-            } else {
-                alert('❌ 通行码无效或已过期！请点击复制微信联系店主免费获取今日通行码。');
+            const navIndex = ['fixtures', 'consensus', 'intel', 'audit', 'vip'].indexOf(viewId);
+            if (navIndex !== -1) {
+                document.querySelectorAll('.nav-item')[navIndex].classList.add('active');
             }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        function copyWechatId() {
-            const wx = document.getElementById('wechat-val').innerText;
-            navigator.clipboard.writeText(wx).then(() => {
-                const msg = document.getElementById('copySuccessMsg');
-                msg.style.display = 'block';
-                setTimeout(() => { msg.style.display = 'none'; }, 3000);
+        // 渲染赛事大厅
+        function renderFixtures(filter) {
+            const container = document.getElementById('fixtures-list');
+            container.innerHTML = '';
+
+            const list = FIXTURES_DATA.filter(item => {
+                if (filter === 'top5') return ['德甲', '法甲', '西甲', '英超', '意甲'].includes(item.league);
+                if (filter === 'banker') return item.status === '死胆候选';
+                if (filter === 'minor') return ['澳超', '日职', '韩职', '荷乙', '西乙'].includes(item.league);
+                return true;
+            });
+
+            list.forEach(m => {
+                const card = document.createElement('div');
+                card.className = 'match-card';
+                card.innerHTML = `
+                    <div class="match-card-header">
+                        <span class="header-code">${m.code} · ${m.league}</span>
+                        <span class="header-meta">${m.time} | ${m.status}</span>
+                    </div>
+                    <div class="match-card-body">
+                        <div class="match-teams-row">
+                            <div class="team-col">
+                                <div class="team-title">${m.home}</div>
+                                <div class="team-subrank">联赛排名: ${m.home_rank}</div>
+                            </div>
+                            <div class="match-vs-tag">VS</div>
+                            <div class="team-col">
+                                <div class="team-title">${m.away}</div>
+                                <div class="team-subrank">联赛排名: ${m.away_rank}</div>
+                            </div>
+                        </div>
+                        <div class="data-matrix">
+                            <div class="matrix-cell">
+                                <span class="matrix-label">欧洲 37 频道共识倾向</span>
+                                <span class="matrix-value" style="color: var(--primary);">${m.consensus}</span>
+                            </div>
+                            <div class="matrix-cell">
+                                <span class="matrix-label">战术模型边缘优势</span>
+                                <span class="matrix-value" style="color: var(--accent-gold);">${m.edge}</span>
+                            </div>
+                        </div>
+                        <div class="tactical-memo">
+                            <span class="memo-tag">[核心逻辑]</span>
+                            ${m.analysis}
+                        </div>
+                    </div>
+                    <div class="card-decision-bar">
+                        <div class="decision-text">
+                            研判建议：<span class="decision-val">${m.consensus.split(' ')[0]}</span>
+                        </div>
+                        <button class="btn-view-dossier" onclick="openDossier('${m.code}', '${m.home}', '${m.away}', '${m.analysis}')">
+                            查看战术案卷
+                        </button>
+                    </div>
+                `;
+                container.appendChild(card);
             });
         }
 
-        function copyBetSlip(text) {
-            navigator.clipboard.writeText(text).then(() => {
-                alert('✓ 出票指令已复制到剪贴板！\n' + text + '\n\n可直接粘贴发给店主微信进行实体出票。');
-            });
-        }
-
-        function switchTab(el, type) {
-            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+        // 筛选赛事
+        function filterFixtures(el, filter) {
+            document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
             el.classList.add('active');
+            renderFixtures(filter);
         }
+
+        // 渲染去水共识榜
+        function renderConsensus() {
+            const container = document.getElementById('consensus-list');
+            container.innerHTML = '';
+
+            FIXTURES_DATA.forEach(m => {
+                const ratioMatch = m.consensus.match(/(\d+)%/);
+                const ratio = ratioMatch ? ratioMatch[1] : 75;
+
+                const item = document.createElement('div');
+                item.className = 'consensus-item';
+                item.innerHTML = `
+                    <div class="consensus-top">
+                        <span style="font-weight: 800; font-size: 14px;">${m.code} ${m.home} VS ${m.away}</span>
+                        <span style="color: var(--accent-gold); font-family: var(--font-mono); font-weight: 800;">${ratio}% 共振</span>
+                    </div>
+                    <div style="font-size: 11px; color: var(--text-secondary); display: flex; justify-content: space-between;">
+                        <span>共识方向：<b style="color: #fff;">${m.consensus}</b></span>
+                        <span>${m.league} · ${m.time}</span>
+                    </div>
+                    <div class="consensus-bar-wrap">
+                        <div class="consensus-bar-fill" style="width: ${ratio}%;"></div>
+                    </div>
+                    <div style="font-size: 10px; color: var(--text-tertiary); line-height: 1.4;">
+                        ✓ 已交叉核对 FocusPredict、VictorsPredict、Feedinco 等 37 渠道赛前指标
+                    </div>
+                `;
+                container.appendChild(item);
+            });
+        }
+
+        // 渲染更衣室特情时间轴
+        function renderIntel() {
+            const container = document.getElementById('intel-timeline');
+            container.innerHTML = '';
+
+            INTEL_DATA.forEach(n => {
+                const node = document.createElement('div');
+                node.className = 'timeline-node';
+                node.innerHTML = `
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="node-meta">
+                            <span>${n.source}</span>
+                            <span>${n.time}</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+                            <span class="node-tag-${n.level}">${n.tag}</span>
+                            <span style="font-size: 12px; font-weight: 700; color: #fff;">${n.match}</span>
+                        </div>
+                        <div class="node-content">
+                            ${n.summary}
+                        </div>
+                    </div>
+                `;
+                container.appendChild(node);
+            });
+        }
+
+        // 渲染客观核销账本
+        function renderAudit() {
+            const tbody = document.getElementById('audit-tbody');
+            tbody.innerHTML = '';
+
+            AUDIT_DATA.forEach(a => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td style="font-family: var(--font-mono); font-size: 10px;">${a.date}<br>${a.code}</td>
+                    <td style="font-weight: 600;">${a.match}</td>
+                    <td style="color: var(--primary);">${a.tip}</td>
+                    <td style="font-family: var(--font-mono); font-weight: 700;">${a.score}</td>
+                    <td><span class="tag-hit">命中 (${a.consensus_ratio})</span></td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        // 弹窗控制
+        function openDossier(code, home, away, analysis) {
+            document.getElementById('dossierTitle').innerText = `${code} ${home} VS ${away} 战术研判案卷`;
+            document.getElementById('dossierBody').innerHTML = `
+                <div style="margin-bottom: 12px; font-size: 13px; font-weight: 700; color: #fff;">
+                    【深度技战术剖析】
+                </div>
+                <p style="margin-bottom: 14px;">${analysis}</p>
+                <div style="background: rgba(14, 165, 233, 0.08); border-radius: 8px; padding: 12px; border: 1px solid rgba(56, 189, 248, 0.2);">
+                    <div style="font-weight: 700; color: var(--primary); margin-bottom: 6px;">
+                        📌 线下实体店主温馨提醒：
+                    </div>
+                    本报告仅供大数据分析交流，严禁任何形式的网络代购或非法购彩。请前往国家特许中国体育彩票实体店出票并支持国家公益事业。
+                </div>
+            `;
+            document.getElementById('dossierModal').classList.add('active');
+        }
+
+        function closeDossier() {
+            document.getElementById('dossierModal').classList.remove('active');
+        }
+
+        // 复制微信号
+        function copyWechat() {
+            const wx = document.getElementById('wx-number').innerText;
+            navigator.clipboard.writeText(wx).then(() => {
+                const toast = document.getElementById('copyToastMsg');
+                toast.style.display = 'block';
+                setTimeout(() => { toast.style.display = 'none'; }, 3000);
+            });
+        }
+
+        // 初始化加载
+        renderFixtures('all');
+        renderConsensus();
+        renderIntel();
+        renderAudit();
     </script>
 </body>
 </html>
