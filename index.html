@@ -802,7 +802,7 @@
             </div>
         </div>
 
-        <!-- 34场多维分类筛选器 -->
+        <!-- 官方赛事多维分类筛选器 -->
         <div class="category-scroller">
             <div class="pill-btn active" id="pill-all-tab" onclick="filterMatches(this, 'all')">首页在售/进行中</div>
             <div class="pill-btn" onclick="filterMatches(this, 'top5')">五大联赛焦点</div>
@@ -810,9 +810,9 @@
             <div class="pill-btn" onclick="switchNav('audit')">已完赛转验证列表 →</div>
         </div>
 
-        <!-- 34场比赛完整动态卡片流 -->
+        <!-- 全量官方赛事完整动态卡片流 -->
         <div id="match-feed">
-            <!-- 由 loadMatchesData() 自动注入完整的 34 场官方竞彩赛事 -->
+            <!-- 由 loadMatchesData() 自动注入完整的官方在售与进行中赛事 -->
         </div>
     </div>
 
@@ -977,7 +977,7 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // 加载全部 34 场比赛数据
+        // 加载全量官方比赛数据
         function loadMatchesData(filterMode = 'all') {
             fetch('./data/official_matches.json?t=' + Date.now())
                 .then(res => res.json())
@@ -1161,7 +1161,7 @@
             const tbody = document.getElementById('audit-tbody');
             tbody.innerHTML = '';
 
-            // 严格只筛选首页 34 场比赛中已打完、有真实赛果的比赛！
+            // 严格只筛选全量官方比赛中已打完、有真实物理赛果的比赛！
             const settledList = ALL_OFFICIAL_MATCHES.filter(m => m.result !== 'PENDING');
             
             const hitCount = settledList.filter(m => m.result === 'HIT').length;
