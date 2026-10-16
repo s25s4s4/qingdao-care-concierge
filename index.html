@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>绿茵智研 · 欧洲赛事数据内参</title>
+    <title>小杨说体彩 · 豪门数据内参</title>
+    <link rel="icon" type="image/jpeg" href="./favicon.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&family=PingFang+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -65,16 +66,20 @@
         }
 
         .brand-icon {
-            width: 32px;
-            height: 32px;
-            background: #238636;
-            border-radius: 8px;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 1.5px solid var(--border-light);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 16px;
-            color: #fff;
-            font-weight: 900;
+            flex-shrink: 0;
+        }
+        .brand-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .brand-text h1 {
@@ -536,16 +541,18 @@
         }
 
         .owner-avatar {
-            width: 60px;
-            height: 60px;
+            width: 72px;
+            height: 72px;
             border-radius: 50%;
-            background: #21262d;
-            border: 2px solid var(--brand-green);
-            margin: 0 auto 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 26px;
+            overflow: hidden;
+            border: 2px solid var(--border-light);
+            margin: 0 auto 12px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+        }
+        .owner-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .owner-name {
@@ -698,10 +705,10 @@
     <!-- 顶部状态栏 -->
     <header class="navbar">
         <div class="navbar-brand">
-            <div class="brand-icon">⚽</div>
+            <div class="brand-icon"><img src="./images/logo.jpg" alt="小杨说体彩"></div>
             <div class="brand-text">
-                <h1>绿茵智研 · 赛事内参</h1>
-                <p id="radar-status">37-CHANNEL LIVE RADAR</p>
+                <h1>小杨说体彩 · 豪门数据</h1>
+                <p id="radar-status">EURO-DATA INTELLIGENCE LAB</p>
             </div>
         </div>
         <div class="sync-badge" onclick="fetchLiveIntel()">
@@ -1169,9 +1176,9 @@
     <!-- ==================== TAB 5: 联系店主 (Owner) ==================== -->
     <div id="tab-owner" class="tab-view">
         <div class="owner-profile-card">
-            <div class="owner-avatar">店</div>
-            <div class="owner-name">小杨 · 实体彩店店主</div>
-            <div class="owner-sub">专注欧洲一手技战术拆解 · 十年实战研究</div>
+            <div class="owner-avatar"><img src="./images/logo.jpg" alt="小杨说体彩"></div>
+            <div class="owner-name">小杨说体彩 · 豪门数据内参</div>
+            <div class="owner-sub">实体彩店店主 · 专注欧洲一手技战术拆解</div>
 
             <div class="wechat-card">
                 <div style="font-size: 12px; color: var(--text-secondary);">添加店主微信好友，交流赛前真实战术：</div>
