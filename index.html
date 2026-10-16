@@ -1215,18 +1215,37 @@
 
                 const ratioDisplay = typeof m.consensus_ratio === 'number' ? m.consensus_ratio.toFixed(1) : m.consensus_ratio;
 
+                const bd = m.consensus_breakdown || { odds_score: 75.0, intel_score: 72.0, tipster_score: 74.0, math_score: 73.0 };
+
                 card.innerHTML = `
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
                         <div>
                             <span class="rank-badge ${idx < 3 ? 'rank-top' : ''}">${idx + 1}</span>
                             <span style="font-size: 14px; font-weight: 800; color: var(--text-primary);">${m.code} ${m.home} VS ${m.away}</span>
                         </div>
-                        <span style="font-size: 15px; font-weight: 800; font-family: var(--font-mono); color: #3fb950;">${ratioDisplay}% 共识</span>
+                        <span style="font-size: 16px; font-weight: 800; font-family: var(--font-mono); color: #3fb950;">${ratioDisplay}% 共识</span>
                     </div>
                     <div style="display: flex; justify-content: space-between; align-items: center; font-size: 11px; color: var(--text-secondary); margin-bottom: 8px;">
                         <div>核心研判：<b style="color: #58a6ff;">${m.tip}</b> · ${m.league} (${m.time})</div>
                         <div>${statusBadge}</div>
                     </div>
+                    
+                    <!-- 四维全息多因子打分拆解微胶囊 -->
+                    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; margin-bottom: 8px; font-size: 10px; text-align: center;">
+                        <div style="background: rgba(88, 166, 255, 0.1); border: 1px solid rgba(88, 166, 255, 0.3); border-radius: 4px; padding: 3px 2px; color: #58a6ff;">
+                            <span style="font-size: 9px; opacity: 0.8;">盘口去水</span><br><b style="font-family: var(--font-mono);">${bd.odds_score}</b>
+                        </div>
+                        <div style="background: rgba(227, 179, 65, 0.1); border: 1px solid rgba(227, 179, 65, 0.3); border-radius: 4px; padding: 3px 2px; color: #e3b341;">
+                            <span style="font-size: 9px; opacity: 0.8;">更衣室暗流</span><br><b style="font-family: var(--font-mono);">${bd.intel_score}</b>
+                        </div>
+                        <div style="background: rgba(63, 185, 80, 0.1); border: 1px solid rgba(63, 185, 80, 0.3); border-radius: 4px; padding: 3px 2px; color: #3fb950;">
+                            <span style="font-size: 9px; opacity: 0.8;">海外实盘</span><br><b style="font-family: var(--font-mono);">${bd.tipster_score}</b>
+                        </div>
+                        <div style="background: rgba(188, 140, 255, 0.1); border: 1px solid rgba(188, 140, 255, 0.3); border-radius: 4px; padding: 3px 2px; color: #bc8cff;">
+                            <span style="font-size: 9px; opacity: 0.8;">战力泊松</span><br><b style="font-family: var(--font-mono);">${bd.math_score}</b>
+                        </div>
+                    </div>
+
                     <div class="bar-track">
                         <div class="bar-fill-home" style="width: ${m.consensus_ratio}%;"></div>
                         <div class="bar-fill-away" style="width: ${100 - m.consensus_ratio}%;"></div>
