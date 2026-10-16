@@ -3,7 +3,7 @@ import re
 import json
 import os
 import subprocess
-from datetime import datetime
+from datetime import datetime, time, timedelta
 
 # Windows 底层彻底静默调用标志 (100% 杜绝黑框闪烁弹窗)
 CREATE_NO_WINDOW = 0x08000000
@@ -21,6 +21,32 @@ def silent_subprocess_run(cmd, cwd=None):
     except Exception as e:
         pass
 
+def is_lottery_sale_closed(match_time_str):
+    """
+    判断该场比赛是否已经跨过中国体育彩票官方全国统一关机停售时间线：
+    周一至周五（Weekday 0~4）：22:00 准时关机停售！
+    周六、周日（Weekday 5~6）：23:00 准时关机停售！
+    一旦停售，赛前研判、战术案卷、推荐比分必须绝对物理上锁，任何人任何情报不可篡改！
+    """
+    now = datetime.now()
+    try:
+        m_dt = datetime.strptime(f"{now.year}-{match_time_str}", "%Y-%m-%d %H:%M")
+    except:
+        return True
+
+    if m_dt.hour < 11:
+        prev_day = m_dt.date() - timedelta(days=1)
+        if prev_day.weekday() in [0, 1, 2, 3, 4]:
+            close_time = datetime.combine(prev_day, time(22, 0))
+        else:
+            close_time = datetime.combine(prev_day, time(23, 0))
+    else:
+        if m_dt.weekday() in [0, 1, 2, 3, 4]:
+            close_time = datetime.combine(m_dt.date(), time(22, 0))
+        else:
+            close_time = datetime.combine(m_dt.date(), time(23, 0))
+
+    return now >= close_time or now >= m_dt
 
 MATCHES_FILE = r"E:\euro_intel_web\data\official_matches.json"
 MATCHES_34_FALLBACK = r"E:\euro_intel_web\data\matches_34.json"
@@ -261,6 +287,12 @@ def full_pipeline_sync(auto_push=True):
     for m in existing_matches:
         code = m['code']
         m_time = m.get('time', '') # 如 "10-17 02:30"
+        
+        # 官方停售绝对防篡改门控
+        sale_closed = is_lottery_sale_closed(m_time)
+        m['sale_closed'] = sale_closed
+        if sale_closed:
+            m['locked'] = True # 绝对物理锁死：严禁修改赛前研判、战术案卷和比分
         
         # 守门人 A：外部比分网已有明确状态更新
         if code in live_map:
