@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17 03:07:06",
+  "updated_at": "2026-10-17 03:08:06",
   "total": 45,
   "matches": [
     {
@@ -94,7 +94,7 @@
       "away": "佐加顿斯",
       "home_rank": "11",
       "away_rank": "2",
-      "status": "进行中 · 下半场",
+      "status": "已完赛",
       "form_home": [
         "L",
         "D",
@@ -118,7 +118,7 @@
       "consensus_ratio": 75,
       "tip": "客胜",
       "score": "0-2",
-      "result": "PENDING",
+      "result": "HIT",
       "analysis": "佐加顿斯力争联赛争冠三分不容有失，全主力首发高位压迫；布鲁马波卡纳技术糙且体能处于劣势，后卫线面对佐加顿斯边中结合传中难以应对，客队牢牢掌控场上主动。",
       "dossier": {
         "summary": "佐加顿斯位列联赛次席整体实力碾压，客战争冠抢分战意拉满；布鲁马波卡纳主场防线漏洞较多，面对客队高强度逼抢出球困难，客胜呼声高。",
@@ -136,7 +136,7 @@
       "away": "SBV精英",
       "home_rank": "6",
       "away_rank": "15",
-      "status": "进行中 · 中场",
+      "status": "进行中 · 下半场",
       "form_home": [
         "W",
         "L",
@@ -178,7 +178,7 @@
       "away": "奥斯",
       "home_rank": "5",
       "away_rank": "18",
-      "status": "进行中 · 中场",
+      "status": "进行中 · 下半场",
       "form_home": [
         "W",
         "W",
@@ -285,7 +285,7 @@
       "consensus": "主优势 (71%)",
       "consensus_ratio": 71,
       "tip": "双方进球/客不败",
-      "score": "1-0",
+      "score": "1-1",
       "result": "PENDING",
       "analysis": "萨索洛前场由贝拉尔迪领衔，小范围撞墙配合默契极高；弗洛西诺内主场逼抢强硬但防线转身慢是致命死穴，萨索洛反击刀刀见血，双方进球几率极高。",
       "dossier": {
@@ -346,7 +346,7 @@
       "away": "伍尔弗汉普顿",
       "home_rank": "英冠4",
       "away_rank": "16",
-      "status": "进行中 · 上半场 7'",
+      "status": "进行中 · 上半场",
       "form_home": [
         "W",
         "W",
@@ -388,7 +388,7 @@
       "away": "莱万特",
       "home_rank": "10",
       "away_rank": "11",
-      "status": "进行中 · 上半场 7'",
+      "status": "进行中 · 上半场",
       "form_home": [
         "D",
         "W",
