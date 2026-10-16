@@ -1,7 +1,322 @@
 {
-  "updated_at": "2026-10-17 01:05:00",
-  "total": 34,
+  "updated_at": "2026-10-17 01:25:00",
+  "total": 43,
   "matches": [
+    {
+      "code": "周五003",
+      "league": "瑞超",
+      "time": "10-17 01:00",
+      "home": "布鲁马波",
+      "away": "佐加顿斯",
+      "home_rank": "-",
+      "away_rank": "-",
+      "status": "瑞超焦点战",
+      "form_home": [
+        "W",
+        "D",
+        "W",
+        "L",
+        "D"
+      ],
+      "form_away": [
+        "D",
+        "W",
+        "L",
+        "W",
+        "W"
+      ],
+      "odds": [
+        "6.16",
+        "4.90",
+        "1.31"
+      ],
+      "consensus": "客优势 (75%)",
+      "consensus_ratio": 75,
+      "tip": "客胜",
+      "score": "--",
+      "result": "PENDING",
+      "analysis": "佐加顿斯位列联赛次席整体实力碾压，客战争冠抢分战意拉满；布鲁马波卡纳主场防线漏洞较多，面对客队高强度逼抢出球困难，客胜呼声高。"
+    },
+    {
+      "code": "周五004",
+      "league": "荷甲",
+      "time": "10-17 02:00",
+      "home": "海伦芬",
+      "away": "SBV精英",
+      "home_rank": "-",
+      "away_rank": "-",
+      "status": "荷甲正路稳胆",
+      "form_home": [
+        "W",
+        "D",
+        "W",
+        "L",
+        "D"
+      ],
+      "form_away": [
+        "D",
+        "W",
+        "L",
+        "W",
+        "W"
+      ],
+      "odds": [
+        "1.38",
+        "4.70",
+        "5.20"
+      ],
+      "consensus": "主优势 (75%)",
+      "consensus_ratio": 75,
+      "tip": "主胜",
+      "score": "--",
+      "result": "PENDING",
+      "analysis": "海伦芬主场进攻火力有保障，前场传切配合熟练；升班马SBV精英客战失球率居高不下，难以抵挡海伦芬主场两翼齐飞攻势，主胜正路打出。"
+    },
+    {
+      "code": "周五005",
+      "league": "荷乙",
+      "time": "10-17 02:00",
+      "home": "登博思",
+      "away": "奥斯",
+      "home_rank": "-",
+      "away_rank": "-",
+      "status": "荷乙强弱对决",
+      "form_home": [
+        "W",
+        "D",
+        "W",
+        "L",
+        "D"
+      ],
+      "form_away": [
+        "D",
+        "W",
+        "L",
+        "W",
+        "W"
+      ],
+      "odds": [
+        "1.44",
+        "4.50",
+        "4.70"
+      ],
+      "consensus": "主优势 (74%)",
+      "consensus_ratio": 74,
+      "tip": "主胜/让胜",
+      "score": "--",
+      "result": "PENDING",
+      "analysis": "登博思近几个主场进攻端多点开花效率极高；奥斯客战战绩疲软且中场防守脱节严重，登博思主场有望全取3分。"
+    },
+    {
+      "code": "周五006",
+      "league": "德甲",
+      "time": "10-17 02:30",
+      "home": "法兰克福",
+      "away": "科隆",
+      "home_rank": "-",
+      "away_rank": "-",
+      "status": "德甲揭幕焦点",
+      "form_home": [
+        "W",
+        "D",
+        "W",
+        "L",
+        "D"
+      ],
+      "form_away": [
+        "D",
+        "W",
+        "L",
+        "W",
+        "W"
+      ],
+      "odds": [
+        "1.65",
+        "3.92",
+        "3.73"
+      ],
+      "consensus": "主优势 (73%)",
+      "consensus_ratio": 73,
+      "tip": "主胜/防平",
+      "score": "--",
+      "result": "PENDING",
+      "analysis": "法兰克福主场森林球场氛围狂热且攻防转换极其迅猛；科隆客场作风虽顽强但客战失误偏多，法兰克福主场地利优势明显，首选主胜防平。"
+    },
+    {
+      "code": "周五007",
+      "league": "意甲",
+      "time": "10-17 02:45",
+      "home": "弗洛西诺",
+      "away": "萨索洛",
+      "home_rank": "-",
+      "away_rank": "-",
+      "status": "意甲胶着战",
+      "form_home": [
+        "W",
+        "D",
+        "W",
+        "L",
+        "D"
+      ],
+      "form_away": [
+        "D",
+        "W",
+        "L",
+        "W",
+        "W"
+      ],
+      "odds": [
+        "2.19",
+        "3.38",
+        "2.65"
+      ],
+      "consensus": "主优势 (71%)",
+      "consensus_ratio": 71,
+      "tip": "双方进球/客不败",
+      "score": "--",
+      "result": "PENDING",
+      "analysis": "萨索洛前场反击速度快且小范围配合默契；弗洛西诺内主场逼抢凶猛但防守高空球存隐患，两队对攻格局鲜明，客队不败机会较大。"
+    },
+    {
+      "code": "周五008",
+      "league": "法甲",
+      "time": "10-17 02:45",
+      "home": "勒芒",
+      "away": "图卢兹",
+      "home_rank": "-",
+      "away_rank": "-",
+      "status": "法国杯强弱战",
+      "form_home": [
+        "W",
+        "D",
+        "W",
+        "L",
+        "D"
+      ],
+      "form_away": [
+        "D",
+        "W",
+        "L",
+        "W",
+        "W"
+      ],
+      "odds": [
+        "3.03",
+        "3.40",
+        "1.98"
+      ],
+      "consensus": "客优势 (72%)",
+      "consensus_ratio": 72,
+      "tip": "客胜",
+      "score": "--",
+      "result": "PENDING",
+      "analysis": "图卢兹法甲班底攻防节奏和个人能力明显高出一档；勒芒低级别联赛面对高强度压迫体能消耗巨大，客队图卢兹正路拿下比赛。"
+    },
+    {
+      "code": "周五009",
+      "league": "英冠",
+      "time": "10-17 03:00",
+      "home": "伯恩利",
+      "away": "伍尔弗汉普顿",
+      "home_rank": "-",
+      "away_rank": "-",
+      "status": "英系硬碰硬",
+      "form_home": [
+        "W",
+        "D",
+        "W",
+        "L",
+        "D"
+      ],
+      "form_away": [
+        "D",
+        "W",
+        "L",
+        "W",
+        "W"
+      ],
+      "odds": [
+        "3.24",
+        "3.00",
+        "2.05"
+      ],
+      "consensus": "客优势 (71%)",
+      "consensus_ratio": 71,
+      "tip": "双方进球/客不败",
+      "score": "--",
+      "result": "PENDING",
+      "analysis": "狼队防守反击纵深穿透力极强；伯恩利主场球风硬朗善于定位球轰炸，双方各有战术特长，看好客队保平争胜。"
+    },
+    {
+      "code": "周五010",
+      "league": "西甲",
+      "time": "10-17 03:00",
+      "home": "拉科",
+      "away": "莱万特",
+      "home_rank": "-",
+      "away_rank": "-",
+      "status": "西甲争夺战",
+      "form_home": [
+        "W",
+        "D",
+        "W",
+        "L",
+        "D"
+      ],
+      "form_away": [
+        "D",
+        "W",
+        "L",
+        "W",
+        "W"
+      ],
+      "odds": [
+        "2.01",
+        "3.10",
+        "3.23"
+      ],
+      "consensus": "主优势 (71%)",
+      "consensus_ratio": 71,
+      "tip": "主不败/首选平",
+      "score": "--",
+      "result": "PENDING",
+      "analysis": "拉科鲁尼亚主场控球节奏稳健防守韧性足；莱万特客战反击偶有冷门亮点但终结效率欠缺稳定，双方实力相当，防范平局双选过关。"
+    },
+    {
+      "code": "周五011",
+      "league": "巴甲",
+      "time": "10-17 07:00",
+      "home": "米拉索尔",
+      "away": "巴西国际",
+      "home_rank": "-",
+      "away_rank": "-",
+      "status": "巴甲激战晨场",
+      "form_home": [
+        "W",
+        "D",
+        "W",
+        "L",
+        "D"
+      ],
+      "form_away": [
+        "D",
+        "W",
+        "L",
+        "W",
+        "W"
+      ],
+      "odds": [
+        "2.02",
+        "2.95",
+        "3.38"
+      ],
+      "consensus": "主优势 (71%)",
+      "consensus_ratio": 71,
+      "tip": "平局/主不败",
+      "score": "--",
+      "result": "PENDING",
+      "analysis": "米拉索尔坐镇主场高湿度地利优势巨大且防守严密；巴西国际长途飞行客战体能受限，本场极易陷入沉闷防守拉锯战，主不败首选。"
+    },
     {
       "code": "周六001",
       "league": "澳超",
