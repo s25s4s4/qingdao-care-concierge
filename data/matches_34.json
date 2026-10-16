@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17 03:28:06",
+  "updated_at": "2026-10-17 03:34:12",
   "total": 45,
   "matches": [
     {
@@ -160,7 +160,7 @@
       "away": "SBV精英",
       "home_rank": "6",
       "away_rank": "15",
-      "status": "进行中 · 下半场",
+      "status": "进行中 · 上半场 94'",
       "form_home": [
         "W",
         "L",
@@ -210,7 +210,7 @@
       "away": "奥斯",
       "home_rank": "5",
       "away_rank": "18",
-      "status": "进行中 · 下半场",
+      "status": "进行中 · 上半场 94'",
       "form_home": [
         "W",
         "W",
@@ -260,7 +260,7 @@
       "away": "科隆",
       "home_rank": "7",
       "away_rank": "12",
-      "status": "进行中 · 中场",
+      "status": "进行中 · 上半场 64'",
       "form_home": [
         "W",
         "D",
@@ -310,7 +310,7 @@
       "away": "萨索洛",
       "home_rank": "14",
       "away_rank": "9",
-      "status": "进行中 · 上半场",
+      "status": "进行中 · 上半场 49'",
       "form_home": [
         "D",
         "L",
@@ -360,7 +360,7 @@
       "away": "图卢兹",
       "home_rank": "法丙3",
       "away_rank": "8",
-      "status": "进行中 · 上半场",
+      "status": "进行中 · 上半场 49'",
       "form_home": [
         "W",
         "D",
@@ -410,7 +410,7 @@
       "away": "伍尔弗汉普顿",
       "home_rank": "英冠4",
       "away_rank": "16",
-      "status": "进行中 · 上半场",
+      "status": "进行中 · 上半场 34'",
       "form_home": [
         "W",
         "W",
@@ -460,7 +460,7 @@
       "away": "莱万特",
       "home_rank": "10",
       "away_rank": "11",
-      "status": "进行中 · 上半场",
+      "status": "进行中 · 上半场 34'",
       "form_home": [
         "D",
         "W",
