@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17 03:48:07",
+  "updated_at": "2026-10-17 03:58:06",
   "total": 45,
   "matches": [
     {
@@ -160,7 +160,7 @@
       "away": "SBV精英",
       "home_rank": "6",
       "away_rank": "15",
-      "status": "进行中 · 下半场",
+      "status": "已完赛",
       "form_home": [
         "W",
         "L",
@@ -183,8 +183,8 @@
       "consensus": "主胜 (72.1%)",
       "consensus_ratio": 72.1,
       "tip": "主胜",
-      "score": "3-0",
-      "result": "PENDING",
+      "score": "4-0",
+      "result": "HIT",
       "analysis": "海伦芬主场进攻节奏极快，两翼边锋内切射门威胁大；SBV精英客场防守整体退缩严重，禁区弧顶保护不足，海伦芬远射与二次进攻机会充裕，主胜正路打出。",
       "dossier": {
         "summary": "海伦芬主场进攻火力有保障，前场传切配合熟练；升班马SBV精英客战失球率居高不下，难以抵挡海伦芬主场两翼齐飞攻势，主胜正路打出。",
@@ -210,7 +210,7 @@
       "away": "奥斯",
       "home_rank": "5",
       "away_rank": "18",
-      "status": "进行中 · 下半场",
+      "status": "已完赛",
       "form_home": [
         "W",
         "W",
@@ -233,8 +233,8 @@
       "consensus": "主胜/让胜 (71.7%)",
       "consensus_ratio": 71.7,
       "tip": "主胜/让胜",
-      "score": "2-0",
-      "result": "PENDING",
+      "score": "2-1",
+      "result": "HIT",
       "analysis": "登博思状态极佳，中前场串联行云流水；奥斯遭遇客场连败士气低迷，后防注意力不集中，登博思开场猛攻抢开局战术效果显著，常规时间分差大概率拉开。",
       "dossier": {
         "summary": "登博思近几个主场进攻端多点开花效率极高；奥斯客战战绩疲软且中场防守脱节严重，登博思主场有望全取3分。",
@@ -310,7 +310,7 @@
       "away": "萨索洛",
       "home_rank": "14",
       "away_rank": "9",
-      "status": "进行中 · 中场",
+      "status": "进行中 · 下半场",
       "form_home": [
         "D",
         "L",
@@ -360,7 +360,7 @@
       "away": "图卢兹",
       "home_rank": "法丙3",
       "away_rank": "8",
-      "status": "进行中 · 中场",
+      "status": "进行中 · 下半场",
       "form_home": [
         "W",
         "D",
@@ -383,7 +383,7 @@
       "consensus": "客胜 (66.6%)",
       "consensus_ratio": 66.6,
       "tip": "客胜",
-      "score": "0-0",
+      "score": "0-1",
       "result": "PENDING",
       "analysis": "图卢兹法甲正规军身体与脚下技术全方位碾压；勒芒低级别球队主场虽斗志昂扬，但后场传球失误率高，图卢兹高位逼抢容易就地断球反击破门。",
       "dossier": {
@@ -410,7 +410,7 @@
       "away": "伍尔弗汉普顿",
       "home_rank": "英冠4",
       "away_rank": "16",
-      "status": "进行中 · 上半场",
+      "status": "进行中 · 中场",
       "form_home": [
         "W",
         "W",
@@ -460,7 +460,7 @@
       "away": "莱万特",
       "home_rank": "10",
       "away_rank": "11",
-      "status": "进行中 · 上半场",
+      "status": "进行中 · 中场",
       "form_home": [
         "D",
         "W",
