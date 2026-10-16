@@ -897,19 +897,81 @@
         <div class="owner-profile-card">
             <div class="owner-avatar"><img src="./images/logo.jpg" alt="小杨说体彩"></div>
             <div class="owner-name">小杨说体彩 · 豪门数据内参</div>
-            <div class="owner-sub">实体彩店店主 · 专注欧洲一手技战术拆解</div>
+            <div class="owner-sub">实体彩店店主 · 12年一线柜台实战研判</div>
 
-            <div class="wechat-card">
-                <div style="font-size: 12px; color: var(--text-secondary);">添加店主微信好友，交流赛前真实战术：</div>
-                <div class="wechat-btn" onclick="copyWechat()">
-                    <span>💬</span> 复制微信号：<b id="wx-id">haomenjingcai-123</b>
+            <!-- 核心行动召唤卡片 -->
+            <div class="wechat-card" style="background: linear-gradient(145deg, rgba(35, 134, 54, 0.15), rgba(88, 166, 255, 0.08)); border: 1.5px solid rgba(46, 160, 67, 0.5); box-shadow: 0 8px 24px rgba(0,0,0,0.4);">
+                <div style="font-size: 13px; font-weight: 700; color: #3fb950; margin-bottom: 4px;">🤝 添加店主小杨个人微信好友</div>
+                <div style="font-size: 11px; color: var(--text-secondary); margin-bottom: 12px;">每日开售第一时间分享【柜台实战案卷 · 内部稳胆组合 · 进球数精算】</div>
+                <div class="wechat-btn" onclick="copyWechat()" style="background: #238636; color: #fff; font-size: 15px; font-weight: 800; padding: 12px 18px; border-radius: 10px; box-shadow: 0 4px 16px rgba(35, 134, 54, 0.4); display: flex; align-items: center; justify-content: center; gap: 8px;">
+                    <span style="font-size: 18px;">💬</span> 一键复制微信号：<b id="wx-id" style="color: #fff; font-family: var(--font-mono); letter-spacing: 0.5px;">haomenjingcai-123</b>
                 </div>
-                <div id="copy-msg" style="font-size: 11px; color: #3fb950; margin-top: 6px; display: none;">
-                    ✓ 微信号已复制！请前往微信搜索添加
+                <div id="copy-msg" style="font-size: 12px; color: #3fb950; margin-top: 8px; font-weight: 700; display: none;">
+                    ✓ 微信号已复制成功！打开微信搜索即可直接添加好友
                 </div>
             </div>
 
-            <div class="legal-box">
+            <!-- 为什么关注我们：四大顶级硬核底座 -->
+            <div style="margin-top: 24px; text-align: left;">
+                <div style="font-size: 13px; font-weight: 800; color: var(--accent-gold); margin-bottom: 12px; display: flex; align-items: center; gap: 6px;">
+                    <span>🛡️</span> 为什么老彩民都把我们设为常驻内参？
+                </div>
+                
+                <div style="display: grid; grid-template-columns: 1fr; gap: 10px;">
+                    <!-- 特权 1 -->
+                    <div style="background: var(--bg-card-elevated); border: 1px solid var(--border-color); border-radius: 10px; padding: 12px; display: flex; gap: 10px;">
+                        <div style="font-size: 20px; color: #58a6ff; flex-shrink: 0; margin-top: 2px;">⚡</div>
+                        <div>
+                            <div style="font-size: 13px; font-weight: 700; color: var(--text-primary); margin-bottom: 2px;">欧洲 37 机构赔率高频去水引擎</div>
+                            <div style="font-size: 11px; color: var(--text-secondary); line-height: 1.5;">拒绝听风就是雨和盲目看胜率！基于凯利指数与泊松分布模型，深度过滤虚假诱盘，穿透欧洲主流机构的真实资金意图。</div>
+                        </div>
+                    </div>
+
+                    <!-- 特权 2 -->
+                    <div style="background: var(--bg-card-elevated); border: 1px solid var(--border-color); border-radius: 10px; padding: 12px; display: flex; gap: 10px;">
+                        <div style="font-size: 20px; color: #e3b341; flex-shrink: 0; margin-top: 2px;">📡</div>
+                        <div>
+                            <div style="font-size: 13px; font-weight: 700; color: var(--text-primary); margin-bottom: 2px;">海外前线更衣室 24H 实时暗流</div>
+                            <div style="font-size: 11px; color: var(--text-secondary); line-height: 1.5;">直连欧洲 32+ 随队跟队记者与前线信源，赛前 1 小时首发名单突变、核心伤停、内部矛盾毫秒级转译，快人一步掌控变数。</div>
+                        </div>
+                    </div>
+
+                    <!-- 特权 3 -->
+                    <div style="background: var(--bg-card-elevated); border: 1px solid var(--border-color); border-radius: 10px; padding: 12px; display: flex; gap: 10px;">
+                        <div style="font-size: 20px; color: #3fb950; flex-shrink: 0; margin-top: 2px;">🎯</div>
+                        <div>
+                            <div style="font-size: 13px; font-weight: 700; color: var(--text-primary); margin-bottom: 2px;">实体彩店掌柜专属做单组合</div>
+                            <div style="font-size: 11px; color: var(--text-secondary); line-height: 1.5;">非网络荐彩！纯粹实体店主交流。每日精选【单关死胆】、【2串1稳健过关】与【高赔博单组合】，微信朋友圈每日开售同步更新。</div>
+                        </div>
+                    </div>
+
+                    <!-- 特权 4 -->
+                    <div style="background: var(--bg-card-elevated); border: 1px solid var(--border-color); border-radius: 10px; padding: 12px; display: flex; gap: 10px;">
+                        <div style="font-size: 20px; color: #f85149; flex-shrink: 0; margin-top: 2px;">⚖️</div>
+                        <div>
+                            <div style="font-size: 13px; font-weight: 700; color: var(--text-primary); margin-bottom: 2px;">公开透明、绝不删单造假的铁面账本</div>
+                            <div style="font-size: 11px; color: var(--text-secondary); line-height: 1.5;">赛前建议永久上锁，完赛一场核销一场。对就是对、错就是错，坚决摒弃行业虚构胜率劣习，用真实硬核数据立足！</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 店主心语 -->
+            <div style="margin-top: 20px; background: rgba(88, 166, 255, 0.05); border: 1px dashed rgba(88, 166, 255, 0.3); border-radius: 10px; padding: 14px; text-align: left;">
+                <div style="font-size: 12px; font-weight: 700; color: #58a6ff; margin-bottom: 4px;">💬 小杨店主实战心语：</div>
+                <div style="font-size: 11px; color: var(--text-secondary); line-height: 1.6;">
+                    “在彩店一线柜台这么多年，见过太多彩民被各种网络所谓'内部料'割韭菜。真正的足球博弈只有两点：<b>极致客观的真实数据</b> + <b>严谨理性的资金规划</b>。本终端永久免费向实体店老彩民开放，欢迎加我微信，咱们赛前聊技战术、聊球经，交个真性情懂球的朋友！”
+                </div>
+            </div>
+
+            <!-- 底部强力吸睛微信再次确认 -->
+            <div style="margin-top: 18px; text-align: center;">
+                <button onclick="copyWechat()" style="width: 100%; background: transparent; border: 1px solid #3fb950; color: #3fb950; padding: 10px; border-radius: 8px; font-size: 13px; font-weight: 700; cursor: pointer;">
+                    点此再次复制店主微信号 (haomenjingcai-123)
+                </button>
+            </div>
+
+            <div class="legal-box" style="margin-top: 20px;">
                 <b>⚖️ 严正合规法律声明：</b><br>
                 根据国家相关规定，<b>任何形式的互联网销售彩票均属违法行为</b>。本系统为个人足球数据研判看板，<b>不提供任何在线购票、委托投注或充值功能</b>。如需购彩，请务必前往中国体育彩票正规线下专营实体店凭身份证件现场出票。理性购彩，量力而行。
             </div>
