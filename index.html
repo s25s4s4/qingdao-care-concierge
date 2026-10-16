@@ -772,11 +772,11 @@
         <div class="hero-banner">
             <div class="hero-col">
                 <div class="hero-num" id="total-matches-num">--</div>
-                <div class="hero-label">官方在售全量</div>
+                <div class="hero-label">首页进行中/在售</div>
             </div>
             <div class="hero-col">
                 <div class="hero-num" style="color: #3fb950;" id="settled-hit-num">8</div>
-                <div class="hero-label">完赛核销命中</div>
+                <div class="hero-label">已移入核销</div>
             </div>
             <div class="hero-col">
                 <div class="hero-num" style="color: var(--accent-gold);" id="pending-matches-num">26</div>
@@ -786,11 +786,10 @@
 
         <!-- 34场多维分类筛选器 -->
         <div class="category-scroller">
-            <div class="pill-btn active" id="pill-all-tab" onclick="filterMatches(this, 'all')">全部在售赛事</div>
-            <div class="pill-btn" onclick="filterMatches(this, 'settled')">已完赛对错核销</div>
-            <div class="pill-btn" onclick="filterMatches(this, 'pending')">未开赛在售单</div>
+            <div class="pill-btn active" id="pill-all-tab" onclick="filterMatches(this, 'all')">首页在售/进行中</div>
             <div class="pill-btn" onclick="filterMatches(this, 'top5')">五大联赛焦点</div>
             <div class="pill-btn" onclick="filterMatches(this, 'banker')">核心稳胆专区</div>
+            <div class="pill-btn" onclick="switchNav('audit')">已完赛转核销列表 →</div>
         </div>
 
         <!-- 34场比赛完整动态卡片流 -->
@@ -980,24 +979,29 @@
             const container = document.getElementById('match-feed');
             container.innerHTML = '';
 
-            let list = ALL_OFFICIAL_MATCHES.filter(m => {
-                if (filterMode === 'settled') return m.result !== 'PENDING';
-                if (filterMode === 'pending') return m.result === 'PENDING';
+            // 严格业务铁律：首页赛事中心只显示【未完赛】的在售与进行中比赛！
+            // 只要比赛比完，自动从首页剥离，只在【真实核销】大账本中展示！
+            let activeList = ALL_OFFICIAL_MATCHES.filter(m => m.result === 'PENDING');
+
+            let list = activeList.filter(m => {
                 if (filterMode === 'top5') return ['英超', '德甲', '西甲', '意甲', '法甲'].includes(m.league);
-                if (filterMode === 'banker') return m.status === '死胆候选' || m.status === '榜首大战';
+                if (filterMode === 'banker') return m.status.includes('稳胆') || m.status.includes('天王山') || m.status.includes('死胆');
                 return true;
             });
 
-            // 统计计数
-            const totalCount = ALL_OFFICIAL_MATCHES.length;
-            const hitCount = ALL_OFFICIAL_MATCHES.filter(m => m.result === 'HIT').length;
-            const pendingCount = ALL_OFFICIAL_MATCHES.filter(m => m.result === 'PENDING').length;
+            // 统计计数：首页在售 vs 已移入核销
+            const pendingList = ALL_OFFICIAL_MATCHES.filter(m => m.result === 'PENDING');
+            const settledList = ALL_OFFICIAL_MATCHES.filter(m => m.result !== 'PENDING');
             
-            document.getElementById('total-matches-num').innerText = totalCount;
-            document.getElementById('settled-hit-num').innerText = hitCount;
-            document.getElementById('pending-matches-num').innerText = pendingCount;
+            const pendingCount = pendingList.length;
+            const settledCount = settledList.length;
+            
+            document.getElementById('total-matches-num').innerText = pendingCount;
+            document.getElementById('settled-hit-num').innerText = settledCount;
+            document.getElementById('pending-matches-num').innerText = ALL_OFFICIAL_MATCHES.length;
+            
             const allPill = document.getElementById('pill-all-tab');
-            if (allPill) allPill.innerText = `全部在售赛事 (${totalCount})`;
+            if (allPill) allPill.innerText = `首页在售/进行中 (${pendingCount})`;
 
             list.forEach(m => {
                 const card = document.createElement('div');
