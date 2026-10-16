@@ -1,8 +1,15 @@
 {
-  "updated_at": "2026-10-17 00:29:53",
+  "updated_at": "2026-10-17 00:44:53",
   "total_tips": 60,
-  "db_total_count": 915,
+  "db_total_count": 916,
   "live_feed": [
+    {
+      "id": 916,
+      "channel": "bad_man_betting_tips",
+      "time": "2026-10-16T16:43:27+00:00",
+      "type": "text_and_photo",
+      "text": "🌟 Tonight’s Best Bet - Over 2.5 Goals in Deportivo vs Levante. 📌 Load it: https://bit.ly/BestBet-1610 Going for back-to-back winners. Here’s why I’m on. 👇 Deportivo will give as good as they get here. They’ve scored 12, and conceded 11 this season, with over 2.5 goals landing in their most recent outing, a 3-2 defeat to Sociedad. Their games averag"
+    },
     {
       "id": 915,
       "channel": "footballbettingtips10",
@@ -415,13 +422,6 @@
       "time": "2026-09-20T07:53:02+00:00",
       "type": "text_and_photo",
       "text": "Segunda División Cádiz - Girona Más de 5.5 tarjetas Cuota: 2.10 Stake: 1.5 Casa: Kirolbet Cuota mínima: 1.92 Alternativas: @2.10 888sport, Sportium, Codere, Luckia y Bet365, @2.07 Retabet, @2.05 Winamax y @1.97 Pinnacle"
-    },
-    {
-      "id": 855,
-      "channel": "letalbets",
-      "time": "2026-09-19T15:09:34+00:00",
-      "type": "text_and_photo",
-      "text": "La Liga Osasuna - Rayo Vallecano Más de 5.5 tarjetas Cuota: 2.05 Stake: 1.5 Casa: Winamax Cuota mínima: 1.95 Alternativas: Disponible en la mayoria de casas de apuestas"
     }
   ]
 }
