@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17 00:20:00",
+  "updated_at": "2026-10-17 00:45:00",
   "total": 34,
   "matches": [
     {
@@ -7,210 +7,210 @@
       "league": "澳超",
       "time": "10-17 14:00",
       "home": "麦克阿瑟FC",
-      "away": "珀斯光荣",
-      "home_rank": "5",
-      "away_rank": "11",
-      "status": "已完赛",
+      "away": "珀斯",
+      "home_rank": "-",
+      "away_rank": "-",
+      "status": "焦点对决",
       "form_home": [
         "W",
-        "W",
         "D",
+        "W",
         "L",
-        "W"
+        "D"
       ],
       "form_away": [
-        "L",
-        "L",
         "D",
         "W",
-        "L"
+        "L",
+        "W",
+        "W"
       ],
       "odds": [
-        "1.85",
+        "1.70",
         "3.60",
-        "3.35"
+        "3.80"
       ],
-      "consensus": "主不败 (76.5%)",
-      "consensus_ratio": 76,
-      "tip": "主胜/防平",
-      "score": "2-0",
-      "result": "HIT",
-      "analysis": "麦克阿瑟新赛季阵容磨合迅速，珀斯光荣客战长途奔波防线较为松散，首选主胜。"
+      "consensus": "主不败 (69%)",
+      "consensus_ratio": 69,
+      "tip": "主不败/首选主胜",
+      "score": "--",
+      "result": "PENDING",
+      "analysis": "麦克阿瑟FC占据地利，交锋基本面处于上风，防范平局双选过关。"
     },
     {
       "code": "周六002",
       "league": "日职",
-      "time": "10-17 13:00",
+      "time": "10-17 14:00",
       "home": "鹿岛鹿角",
       "away": "长崎航海",
-      "home_rank": "3",
-      "away_rank": "日乙2",
-      "status": "已完赛",
+      "home_rank": "-",
+      "away_rank": "-",
+      "status": "稳胆候选",
       "form_home": [
         "W",
-        "W",
-        "W",
         "D",
-        "W"
-      ],
-      "form_away": [
-        "D",
-        "L",
         "W",
         "L",
         "D"
       ],
-      "odds": [
-        "1.38",
-        "4.20",
-        "6.50"
+      "form_away": [
+        "D",
+        "W",
+        "L",
+        "W",
+        "W"
       ],
-      "consensus": "主胜死胆 (86.0%)",
-      "consensus_ratio": 86,
+      "odds": [
+        "1.41",
+        "4.10",
+        "5.70"
+      ],
+      "consensus": "主胜死胆 (77%)",
+      "consensus_ratio": 77,
       "tip": "主胜",
-      "score": "3-1",
-      "result": "HIT",
-      "analysis": "杯赛交锋鹿岛鹿角主力全数在列，长崎航海重心在联赛保级，双方硬实力断层明显。"
+      "score": "--",
+      "result": "PENDING",
+      "analysis": "鹿岛鹿角主场硬实力压制明显，机构初指强力防范，正路首选。"
     },
     {
       "code": "周六003",
       "league": "韩职",
-      "time": "10-17 13:00",
+      "time": "10-17 15:30",
       "home": "蔚山现代",
       "away": "富川FC",
-      "home_rank": "1",
-      "away_rank": "K2第4",
-      "status": "已完赛",
+      "home_rank": "-",
+      "away_rank": "-",
+      "status": "稳胆候选",
       "form_home": [
         "W",
         "D",
         "W",
-        "W",
-        "W"
+        "L",
+        "D"
       ],
       "form_away": [
-        "L",
         "D",
         "W",
         "L",
-        "L"
+        "W",
+        "W"
       ],
       "odds": [
-        "1.30",
-        "4.60",
-        "7.80"
+        "1.52",
+        "3.83",
+        "4.75"
       ],
-      "consensus": "主胜 (82.0%)",
-      "consensus_ratio": 82,
-      "tip": "让胜/让平",
-      "score": "2-0",
-      "result": "HIT",
-      "analysis": "蔚山现代亚冠出线后重心回归国内杯赛，面对低级别球队主场压制力极强。"
+      "consensus": "主胜死胆 (77%)",
+      "consensus_ratio": 77,
+      "tip": "主胜",
+      "score": "--",
+      "result": "PENDING",
+      "analysis": "蔚山现代主场硬实力压制明显，机构初指强力防范，正路首选。"
     },
     {
       "code": "周六004",
       "league": "澳超",
-      "time": "10-17 16:45",
+      "time": "10-17 16:40",
       "home": "中央海岸",
       "away": "纽喷气机",
-      "home_rank": "2",
-      "away_rank": "9",
-      "status": "未开赛",
+      "home_rank": "-",
+      "away_rank": "-",
+      "status": "焦点对决",
       "form_home": [
         "W",
+        "D",
         "W",
         "L",
-        "W",
         "D"
       ],
       "form_away": [
-        "L",
         "D",
+        "W",
         "L",
         "W",
-        "L"
+        "W"
       ],
       "odds": [
-        "1.65",
-        "3.75",
-        "4.10"
+        "3.39",
+        "3.90",
+        "1.73"
       ],
-      "consensus": "主胜/防平 (78.0%)",
-      "consensus_ratio": 78,
-      "tip": "主胜",
+      "consensus": "客不败 (68%)",
+      "consensus_ratio": 68,
+      "tip": "客不败/双选平负",
       "score": "--",
       "result": "PENDING",
-      "analysis": "澳超德比战，中央海岸交锋战绩4连胜完全占据心理上风，主场打法极为克制客队。"
+      "analysis": "纽喷气机防线纪律性更强，中央海岸近期进攻效率不稳定，客队拿分几率高。"
     },
     {
       "code": "周六005",
       "league": "日职",
-      "time": "10-17 13:00",
+      "time": "10-17 18:00",
       "home": "柏太阳神",
       "away": "名古屋鲸",
-      "home_rank": "8",
-      "away_rank": "6",
-      "status": "已完赛",
+      "home_rank": "-",
+      "away_rank": "-",
+      "status": "稳胆候选",
       "form_home": [
-        "L",
+        "W",
         "D",
         "W",
         "L",
         "D"
       ],
       "form_away": [
-        "W",
         "D",
         "W",
         "L",
+        "W",
         "W"
       ],
       "odds": [
-        "2.30",
-        "3.10",
-        "2.80"
+        "1.49",
+        "4.20",
+        "4.55"
       ],
-      "consensus": "双选平负 (73.5%)",
-      "consensus_ratio": 74,
-      "tip": "平局/客胜",
-      "score": "0-1",
-      "result": "HIT",
-      "analysis": "名古屋鲸八客场防守极其坚韧且擅长防守反击，柏太阳神主场急于拿分极易被打身后。"
+      "consensus": "主胜死胆 (77%)",
+      "consensus_ratio": 77,
+      "tip": "主胜",
+      "score": "--",
+      "result": "PENDING",
+      "analysis": "柏太阳神主场硬实力压制明显，机构初指强力防范，正路首选。"
     },
     {
       "code": "周六006",
       "league": "日乙",
-      "time": "10-17 13:00",
-      "home": "宫崎牛鸟",
+      "time": "10-17 18:00",
+      "home": "宫崎惊奇牛鸟",
       "away": "磐田喜悦",
-      "home_rank": "16",
-      "away_rank": "4",
-      "status": "已完赛",
+      "home_rank": "-",
+      "away_rank": "-",
+      "status": "焦点对决",
       "form_home": [
-        "L",
-        "L",
+        "W",
         "D",
+        "W",
         "L",
-        "W"
+        "D"
       ],
       "form_away": [
-        "W",
-        "W",
         "D",
         "W",
-        "L"
+        "L",
+        "W",
+        "W"
       ],
       "odds": [
-        "3.80",
-        "3.45",
-        "1.75"
+        "2.34",
+        "3.14",
+        "2.61"
       ],
-      "consensus": "客胜 (75.0%)",
-      "consensus_ratio": 75,
-      "tip": "客胜",
-      "score": "1-1",
-      "result": "MISS",
-      "analysis": "磐田喜悦力争重返顶级联赛战意极为坚决，宫崎整体板凳深度不足，客胜呼声高。"
+      "consensus": "主不败 (67%)",
+      "consensus_ratio": 67,
+      "tip": "主不败/首选主胜",
+      "score": "--",
+      "result": "PENDING",
+      "analysis": "宫崎惊奇牛鸟占据地利，交锋基本面处于上风，防范平局双选过关。"
     },
     {
       "code": "周六007",
@@ -218,34 +218,34 @@
       "time": "10-17 19:30",
       "home": "埃弗顿",
       "away": "切尔西",
-      "home_rank": "14",
-      "away_rank": "4",
-      "status": "焦点战",
+      "home_rank": "-",
+      "away_rank": "-",
+      "status": "焦点对决",
       "form_home": [
+        "W",
         "D",
-        "L",
         "W",
         "L",
         "D"
       ],
       "form_away": [
-        "W",
-        "W",
         "D",
         "W",
-        "L"
+        "L",
+        "W",
+        "W"
       ],
       "odds": [
-        "3.90",
-        "3.65",
-        "1.72"
+        "3.05",
+        "3.43",
+        "1.96"
       ],
-      "consensus": "双方进球/客不败 (79.0%)",
-      "consensus_ratio": 79,
-      "tip": "客不败/防平",
+      "consensus": "客不败 (68%)",
+      "consensus_ratio": 68,
+      "tip": "客不败/双选平负",
       "score": "--",
       "result": "PENDING",
-      "analysis": "切尔西客场防线偶有松懈，埃弗顿古迪逊公园高空轰炸威胁巨大，重点防范冷平。"
+      "analysis": "切尔西防线纪律性更强，埃弗顿近期进攻效率不稳定，客队拿分几率高。"
     },
     {
       "code": "周六009",
@@ -253,34 +253,34 @@
       "time": "10-17 20:00",
       "home": "西班牙人",
       "away": "马竞",
-      "home_rank": "15",
-      "away_rank": "3",
-      "status": "未开赛",
+      "home_rank": "-",
+      "away_rank": "-",
+      "status": "正路巡视",
       "form_home": [
-        "L",
-        "W",
-        "L",
-        "D",
-        "L"
-      ],
-      "form_away": [
         "W",
         "D",
         "W",
-        "W",
+        "L",
         "D"
       ],
-      "odds": [
-        "4.60",
-        "3.50",
-        "1.65"
+      "form_away": [
+        "D",
+        "W",
+        "L",
+        "W",
+        "W"
       ],
-      "consensus": "客胜正路 (82.5%)",
-      "consensus_ratio": 83,
+      "odds": [
+        "4.70",
+        "3.80",
+        "1.53"
+      ],
+      "consensus": "客胜首选 (76%)",
+      "consensus_ratio": 76,
       "tip": "客胜",
       "score": "--",
       "result": "PENDING",
-      "analysis": "西蒙尼麾下马竞攻守兼备，西班牙人近期后防失球数激增，马竞客场稳稳拿分。"
+      "analysis": "马竞客战战意坚决，攻防转换速率优势显著，客胜值得信任。"
     },
     {
       "code": "周六011",
@@ -288,34 +288,34 @@
       "time": "10-17 21:00",
       "home": "威尼斯",
       "away": "那不勒斯",
-      "home_rank": "18",
-      "away_rank": "2",
-      "status": "未开赛",
+      "home_rank": "-",
+      "away_rank": "-",
+      "status": "正路巡视",
       "form_home": [
-        "L",
-        "L",
+        "W",
         "D",
+        "W",
         "L",
-        "L"
+        "D"
       ],
       "form_away": [
-        "W",
-        "W",
-        "W",
         "D",
+        "W",
+        "L",
+        "W",
         "W"
       ],
       "odds": [
-        "6.20",
-        "4.30",
-        "1.40"
+        "4.40",
+        "3.83",
+        "1.56"
       ],
-      "consensus": "客胜死胆 (85.0%)",
-      "consensus_ratio": 85,
-      "tip": "客胜/让负",
+      "consensus": "客胜首选 (76%)",
+      "consensus_ratio": 76,
+      "tip": "客胜",
       "score": "--",
       "result": "PENDING",
-      "analysis": "孔蒂治下那不勒斯纪律严明且单线作战，威尼斯攻守失衡很难对客队构成实质威胁。"
+      "analysis": "那不勒斯客战战意坚决，攻防转换速率优势显著，客胜值得信任。"
     },
     {
       "code": "周六013",
@@ -323,34 +323,34 @@
       "time": "10-17 21:30",
       "home": "埃沃斯堡",
       "away": "奥格斯堡",
-      "home_rank": "德乙8",
-      "away_rank": "13",
-      "status": "未开赛",
+      "home_rank": "-",
+      "away_rank": "-",
+      "status": "焦点对决",
       "form_home": [
         "W",
         "D",
-        "L",
         "W",
+        "L",
         "D"
       ],
       "form_away": [
-        "L",
+        "D",
         "W",
         "L",
-        "L",
+        "W",
         "W"
       ],
       "odds": [
-        "2.95",
-        "3.40",
-        "2.10"
+        "2.26",
+        "3.60",
+        "2.45"
       ],
-      "consensus": "客不败/进球数大 (71.0%)",
-      "consensus_ratio": 71,
-      "tip": "平局/客胜",
+      "consensus": "主不败 (68%)",
+      "consensus_ratio": 68,
+      "tip": "主不败/首选主胜",
       "score": "--",
       "result": "PENDING",
-      "analysis": "德甲客队进攻节奏更快，埃沃斯堡主场敢打敢拼，双方对攻格局大球可期。"
+      "analysis": "埃沃斯堡占据地利，交锋基本面处于上风，防范平局双选过关。"
     },
     {
       "code": "周六014",
@@ -358,34 +358,34 @@
       "time": "10-17 21:30",
       "home": "不来梅",
       "away": "帕德博恩",
-      "home_rank": "10",
-      "away_rank": "德乙5",
-      "status": "已完赛",
+      "home_rank": "-",
+      "away_rank": "-",
+      "status": "焦点对决",
       "form_home": [
         "W",
         "D",
         "W",
         "L",
-        "W"
+        "D"
       ],
       "form_away": [
+        "D",
         "W",
         "L",
         "W",
-        "D",
-        "L"
+        "W"
       ],
       "odds": [
-        "1.60",
-        "3.90",
-        "4.30"
+        "1.57",
+        "4.02",
+        "4.10"
       ],
-      "consensus": "主胜 (78.0%)",
-      "consensus_ratio": 78,
-      "tip": "主胜",
-      "score": "2-1",
-      "result": "HIT",
-      "analysis": "不来梅主场对位优势显著，帕德博恩防线单薄且客战乏力，看好不来梅正路跑出。"
+      "consensus": "主不败 (70%)",
+      "consensus_ratio": 70,
+      "tip": "主不败/首选主胜",
+      "score": "--",
+      "result": "PENDING",
+      "analysis": "不来梅占据地利，交锋基本面处于上风，防范平局双选过关。"
     },
     {
       "code": "周六015",
@@ -393,34 +393,34 @@
       "time": "10-17 21:30",
       "home": "沙尔克04",
       "away": "美因茨",
-      "home_rank": "德乙12",
-      "away_rank": "9",
-      "status": "未开赛",
+      "home_rank": "-",
+      "away_rank": "-",
+      "status": "焦点对决",
       "form_home": [
-        "L",
-        "D",
-        "L",
         "W",
-        "L"
+        "D",
+        "W",
+        "L",
+        "D"
       ],
       "form_away": [
-        "W",
+        "D",
         "W",
         "L",
-        "D",
+        "W",
         "W"
       ],
       "odds": [
-        "3.40",
-        "3.50",
-        "1.90"
+        "2.85",
+        "3.45",
+        "2.05"
       ],
-      "consensus": "客不败 (76.0%)",
-      "consensus_ratio": 76,
-      "tip": "客胜",
+      "consensus": "客不败 (67%)",
+      "consensus_ratio": 67,
+      "tip": "客不败/双选平负",
       "score": "--",
       "result": "PENDING",
-      "analysis": "沙尔克近年滑坡严重后防漏洞百出，美因茨战术执行力极强，客队赢面较大。"
+      "analysis": "美因茨防线纪律性更强，沙尔克04近期进攻效率不稳定，客队拿分几率高。"
     },
     {
       "code": "周六016",
@@ -428,34 +428,34 @@
       "time": "10-17 21:30",
       "home": "汉堡",
       "away": "斯图加特",
-      "home_rank": "德乙3",
-      "away_rank": "5",
-      "status": "未开赛",
+      "home_rank": "-",
+      "away_rank": "-",
+      "status": "正路巡视",
       "form_home": [
-        "W",
-        "W",
-        "D",
-        "W",
-        "L"
-      ],
-      "form_away": [
         "W",
         "D",
         "W",
         "L",
+        "D"
+      ],
+      "form_away": [
+        "D",
+        "W",
+        "L",
+        "W",
         "W"
       ],
       "odds": [
-        "3.60",
-        "3.80",
-        "1.75"
+        "3.78",
+        "4.10",
+        "1.61"
       ],
-      "consensus": "进球数大/客胜 (80.0%)",
-      "consensus_ratio": 80,
-      "tip": "客胜/进球数3+",
+      "consensus": "客胜首选 (75%)",
+      "consensus_ratio": 75,
+      "tip": "客胜",
       "score": "--",
       "result": "PENDING",
-      "analysis": "斯图加特攻击火力全欧瞩目，汉堡主场攻强守弱，进球数爆发几率极高。"
+      "analysis": "斯图加特客战战意坚决，攻防转换速率优势显著，客胜值得信任。"
     },
     {
       "code": "周六017",
@@ -463,34 +463,34 @@
       "time": "10-17 21:30",
       "home": "柏林联合",
       "away": "多特蒙德",
-      "home_rank": "6",
-      "away_rank": "4",
-      "status": "焦点战",
+      "home_rank": "-",
+      "away_rank": "-",
+      "status": "正路巡视",
       "form_home": [
         "W",
         "D",
         "W",
-        "W",
-        "L"
+        "L",
+        "D"
       ],
       "form_away": [
+        "D",
         "W",
         "L",
         "W",
-        "W",
-        "D"
+        "W"
       ],
       "odds": [
-        "3.30",
-        "3.50",
-        "1.95"
+        "4.95",
+        "4.30",
+        "1.44"
       ],
-      "consensus": "双选平负 (74.0%)",
-      "consensus_ratio": 74,
-      "tip": "双方进球/平局",
+      "consensus": "客胜首选 (76%)",
+      "consensus_ratio": 76,
+      "tip": "客胜",
       "score": "--",
       "result": "PENDING",
-      "analysis": "柏林联合主场是著名的强队杀手球风极其硬朗，多特多线作战防冷选平局防范。"
+      "analysis": "多特蒙德客战战意坚决，攻防转换速率优势显著，客胜值得信任。"
     },
     {
       "code": "周六018",
@@ -498,34 +498,34 @@
       "time": "10-17 22:00",
       "home": "布伦特",
       "away": "利物浦",
-      "home_rank": "11",
-      "away_rank": "1",
-      "status": "焦点战",
+      "home_rank": "-",
+      "away_rank": "-",
+      "status": "焦点对决",
       "form_home": [
         "W",
-        "L",
         "D",
         "W",
-        "L"
+        "L",
+        "D"
       ],
       "form_away": [
+        "D",
         "W",
-        "W",
-        "W",
+        "L",
         "W",
         "W"
       ],
       "odds": [
-        "4.80",
-        "4.20",
-        "1.50"
+        "2.19",
+        "3.45",
+        "2.62"
       ],
-      "consensus": "客胜 (84.0%)",
-      "consensus_ratio": 84,
-      "tip": "客胜",
+      "consensus": "主不败 (68%)",
+      "consensus_ratio": 68,
+      "tip": "主不败/首选主胜",
       "score": "--",
       "result": "PENDING",
-      "analysis": "斯洛特执教的利物浦状态如日中天攻守平衡，布伦特福德后场边路空挡容易被萨拉赫打穿。"
+      "analysis": "布伦特占据地利，交锋基本面处于上风，防范平局双选过关。"
     },
     {
       "code": "周六019",
@@ -533,34 +533,34 @@
       "time": "10-17 22:00",
       "home": "曼城",
       "away": "伊普斯",
-      "home_rank": "2",
-      "away_rank": "17",
-      "status": "死胆候选",
+      "home_rank": "-",
+      "away_rank": "-",
+      "status": "稳胆候选",
       "form_home": [
         "W",
-        "W",
-        "W",
         "D",
-        "W"
+        "W",
+        "L",
+        "D"
       ],
       "form_away": [
         "D",
+        "W",
         "L",
-        "D",
-        "L",
-        "L"
+        "W",
+        "W"
       ],
       "odds": [
-        "1.10",
-        "7.50",
-        "15.0"
+        "1.12",
+        "6.90",
+        "11.00"
       ],
-      "consensus": "主胜死胆 (92.0%)",
-      "consensus_ratio": 92,
-      "tip": "让胜/让平",
+      "consensus": "主胜死胆 (79%)",
+      "consensus_ratio": 79,
+      "tip": "主胜",
       "score": "--",
       "result": "PENDING",
-      "analysis": "曼城伊蒂哈德球场绝对压制，哈兰德状态火热，升班马很难抵抗半场便可能失守。"
+      "analysis": "曼城主场硬实力压制明显，机构初指强力防范，正路首选。"
     },
     {
       "code": "周六020",
@@ -568,34 +568,34 @@
       "time": "10-17 22:00",
       "home": "富勒姆",
       "away": "赫尔城",
-      "home_rank": "8",
-      "away_rank": "英冠10",
-      "status": "未开赛",
+      "home_rank": "-",
+      "away_rank": "-",
+      "status": "稳胆候选",
       "form_home": [
         "W",
         "D",
         "W",
         "L",
-        "W"
+        "D"
       ],
       "form_away": [
+        "D",
         "W",
         "L",
-        "D",
-        "L",
+        "W",
         "W"
       ],
       "odds": [
-        "1.48",
-        "4.00",
-        "5.40"
+        "1.46",
+        "3.80",
+        "5.50"
       ],
-      "consensus": "主胜 (79.0%)",
-      "consensus_ratio": 79,
+      "consensus": "主胜死胆 (77%)",
+      "consensus_ratio": 77,
       "tip": "主胜",
       "score": "--",
       "result": "PENDING",
-      "analysis": "富勒姆主场攻坚战术成熟，赫尔城客战重心在联赛轮休关键主力，主队赢面极大。"
+      "analysis": "富勒姆主场硬实力压制明显，机构初指强力防范，正路首选。"
     },
     {
       "code": "周六021",
@@ -603,69 +603,69 @@
       "time": "10-17 22:15",
       "home": "比利亚雷",
       "away": "埃尔切",
-      "home_rank": "4",
-      "away_rank": "西乙3",
-      "status": "未开赛",
-      "form_home": [
-        "W",
-        "L",
-        "W",
-        "W",
-        "W"
-      ],
-      "form_away": [
-        "D",
-        "W",
-        "D",
-        "L",
-        "W"
-      ],
-      "odds": [
-        "1.42",
-        "4.30",
-        "5.80"
-      ],
-      "consensus": "主胜 (82.0%)",
-      "consensus_ratio": 82,
-      "tip": "主胜",
-      "score": "--",
-      "result": "PENDING",
-      "analysis": "比利亚雷亚尔进攻火力全欧前列，主场传控调度游刃有余，常规时间拿下比赛。"
-    },
-    {
-      "code": "周六022",
-      "league": "法甲",
-      "time": "10-17 23:00",
-      "home": "斯特拉斯",
-      "away": "巴黎圣曼",
-      "home_rank": "7",
-      "away_rank": "1",
-      "status": "焦点战",
+      "home_rank": "-",
+      "away_rank": "-",
+      "status": "稳胆候选",
       "form_home": [
         "W",
         "D",
-        "L",
         "W",
+        "L",
         "D"
       ],
       "form_away": [
         "D",
         "W",
-        "W",
+        "L",
         "W",
         "W"
       ],
       "odds": [
-        "5.20",
-        "4.40",
-        "1.45"
+        "1.31",
+        "4.80",
+        "6.35"
       ],
-      "consensus": "客胜/防冷平 (78.0%)",
+      "consensus": "主胜死胆 (78%)",
       "consensus_ratio": 78,
-      "tip": "客胜 (防平)",
+      "tip": "主胜",
       "score": "--",
       "result": "PENDING",
-      "analysis": "巴黎圣日耳曼实力明显超出一档，但恩里克面临欧冠分心可能控场小胜，慎追大比分。"
+      "analysis": "比利亚雷主场硬实力压制明显，机构初指强力防范，正路首选。"
+    },
+    {
+      "code": "周六022",
+      "league": "法甲",
+      "time": "10-17 23:15",
+      "home": "斯特拉斯",
+      "away": "巴黎圣曼",
+      "home_rank": "-",
+      "away_rank": "-",
+      "status": "正路巡视",
+      "form_home": [
+        "W",
+        "D",
+        "W",
+        "L",
+        "D"
+      ],
+      "form_away": [
+        "D",
+        "W",
+        "L",
+        "W",
+        "W"
+      ],
+      "odds": [
+        "5.80",
+        "5.15",
+        "1.31"
+      ],
+      "consensus": "客胜首选 (77%)",
+      "consensus_ratio": 77,
+      "tip": "客胜",
+      "score": "--",
+      "result": "PENDING",
+      "analysis": "巴黎圣曼客战战意坚决，攻防转换速率优势显著，客胜值得信任。"
     },
     {
       "code": "周六023",
@@ -673,34 +673,34 @@
       "time": "10-18 00:00",
       "home": "博洛尼亚",
       "away": "国际米兰",
-      "home_rank": "12",
-      "away_rank": "3",
-      "status": "焦点战",
+      "home_rank": "-",
+      "away_rank": "-",
+      "status": "正路巡视",
       "form_home": [
-        "D",
-        "D",
-        "L",
         "W",
+        "D",
+        "W",
+        "L",
         "D"
       ],
       "form_away": [
-        "W",
-        "W",
+        "D",
         "W",
         "L",
+        "W",
         "W"
       ],
       "odds": [
-        "4.40",
-        "3.60",
-        "1.68"
+        "5.20",
+        "4.05",
+        "1.45"
       ],
-      "consensus": "客不败/首选平 (77.0%)",
-      "consensus_ratio": 77,
-      "tip": "客不败/防平",
+      "consensus": "客胜首选 (76%)",
+      "consensus_ratio": 76,
+      "tip": "客胜",
       "score": "--",
       "result": "PENDING",
-      "analysis": "国米主力中卫帕瓦尔伤停20天后防微调，博洛尼亚达米安战旧主，需提防平局冷门。"
+      "analysis": "国际米兰客战战意坚决，攻防转换速率优势显著，客胜值得信任。"
     },
     {
       "code": "周六024",
@@ -708,34 +708,34 @@
       "time": "10-18 00:30",
       "home": "纽卡斯尔",
       "away": "维拉",
-      "home_rank": "7",
-      "away_rank": "5",
-      "status": "焦点战",
+      "home_rank": "-",
+      "away_rank": "-",
+      "status": "焦点对决",
       "form_home": [
+        "W",
         "D",
+        "W",
         "L",
-        "W",
-        "W",
         "D"
       ],
       "form_away": [
         "D",
         "W",
+        "L",
         "W",
-        "D",
         "W"
       ],
       "odds": [
-        "2.20",
-        "3.50",
-        "2.80"
+        "1.97",
+        "3.60",
+        "2.92"
       ],
-      "consensus": "主不败 (74.0%)",
-      "consensus_ratio": 74,
-      "tip": "主胜/平局",
+      "consensus": "主不败 (69%)",
+      "consensus_ratio": 69,
+      "tip": "主不败/首选主胜",
       "score": "--",
       "result": "PENDING",
-      "analysis": "纽卡圣詹姆斯公园球场抢开局凶狠，维拉双线作战体能吃紧，机构略倾向主队不败。"
+      "analysis": "纽卡斯尔占据地利，交锋基本面处于上风，防范平局双选过关。"
     },
     {
       "code": "周六025",
@@ -743,69 +743,69 @@
       "time": "10-18 00:30",
       "home": "拜仁",
       "away": "莱红牛",
-      "home_rank": "1",
-      "away_rank": "2",
-      "status": "榜首大战",
+      "home_rank": "-",
+      "away_rank": "-",
+      "status": "焦点对决",
       "form_home": [
+        "W",
         "D",
         "W",
-        "W",
-        "W",
-        "W"
+        "L",
+        "D"
       ],
       "form_away": [
-        "W",
-        "W",
-        "W",
         "D",
+        "W",
+        "L",
+        "W",
         "W"
       ],
       "odds": [
-        "1.65",
-        "4.20",
-        "3.90"
+        "1.98",
+        "4.65",
+        "2.44"
       ],
-      "consensus": "全场大球 (85.0%)",
-      "consensus_ratio": 85,
-      "tip": "主胜/进球数3+",
+      "consensus": "主不败 (69%)",
+      "consensus_ratio": 69,
+      "tip": "主不败/首选主胜",
       "score": "--",
       "result": "PENDING",
-      "analysis": "德甲天王山对决，双方锋线状态爆发力极强，近6次交手场均近4球，大球首选。"
+      "analysis": "拜仁占据地利，交锋基本面处于上风，防范平局双选过关。"
     },
     {
       "code": "周六026",
       "league": "西甲",
-      "time": "10-18 03:00",
+      "time": "10-18 00:30",
       "home": "贝蒂斯",
       "away": "巴萨",
-      "home_rank": "10",
-      "away_rank": "1",
-      "status": "焦点战",
+      "home_rank": "-",
+      "away_rank": "-",
+      "status": "正路巡视",
       "form_home": [
-        "L",
+        "W",
+        "D",
         "W",
         "L",
-        "D",
-        "W"
+        "D"
       ],
       "form_away": [
+        "D",
         "W",
-        "W",
-        "W",
+        "L",
         "W",
         "W"
       ],
       "odds": [
-        "4.50",
-        "4.00",
-        "1.58"
+        "6.00",
+        "5.50",
+        "1.28"
       ],
-      "consensus": "客胜正路 (83.0%)",
-      "consensus_ratio": 83,
+      "consensus": "客胜首选 (77%)",
+      "consensus_ratio": 77,
       "tip": "客胜",
       "score": "--",
       "result": "PENDING",
-      "analysis": "巴萨攻击群脚感火烫，贝蒂斯防线遭遇停赛打击，弗里克率队全力争胜保领跑优势。"
+      "analysis": "巴萨客战战意坚决，攻防转换速率优势显著，客胜值得信任。"
     },
     {
       "code": "周六027",
@@ -813,34 +813,34 @@
       "time": "10-18 02:00",
       "home": "特尔斯达",
       "away": "费耶诺德",
-      "home_rank": "荷乙11",
-      "away_rank": "3",
-      "status": "未开赛",
+      "home_rank": "-",
+      "away_rank": "-",
+      "status": "正路巡视",
       "form_home": [
+        "W",
         "D",
+        "W",
         "L",
-        "W",
-        "D",
-        "L"
-      ],
-      "form_away": [
-        "W",
-        "D",
-        "W",
-        "W",
         "D"
       ],
-      "odds": [
-        "7.50",
-        "4.80",
-        "1.30"
+      "form_away": [
+        "D",
+        "W",
+        "L",
+        "W",
+        "W"
       ],
-      "consensus": "客胜穿盘 (86.0%)",
-      "consensus_ratio": 86,
-      "tip": "客胜/让负",
+      "odds": [
+        "7.95",
+        "5.25",
+        "1.23"
+      ],
+      "consensus": "客胜首选 (77%)",
+      "consensus_ratio": 77,
+      "tip": "客胜",
       "score": "--",
       "result": "PENDING",
-      "analysis": "费耶诺德进攻节奏快且整体实力碾压，特尔斯达后防孱弱，客队大胜概率极高。"
+      "analysis": "费耶诺德客战战意坚决，攻防转换速率优势显著，客胜值得信任。"
     },
     {
       "code": "周六028",
@@ -848,34 +848,34 @@
       "time": "10-18 02:45",
       "home": "罗马",
       "away": "热那亚",
-      "home_rank": "9",
-      "away_rank": "16",
-      "status": "未开赛",
+      "home_rank": "-",
+      "away_rank": "-",
+      "status": "稳胆候选",
       "form_home": [
         "W",
-        "L",
-        "W",
         "D",
-        "W"
+        "W",
+        "L",
+        "D"
       ],
       "form_away": [
-        "L",
-        "L",
         "D",
+        "W",
         "L",
-        "L"
+        "W",
+        "W"
       ],
       "odds": [
-        "1.50",
-        "3.90",
-        "5.80"
+        "1.30",
+        "4.50",
+        "7.25"
       ],
-      "consensus": "主胜 (81.0%)",
-      "consensus_ratio": 81,
+      "consensus": "主胜死胆 (78%)",
+      "consensus_ratio": 78,
       "tip": "主胜",
       "score": "--",
       "result": "PENDING",
-      "analysis": "迪巴拉伤势无大碍领衔出战，热那亚遭遇连败士气低落，罗马主场赢球反弹。"
+      "analysis": "罗马主场硬实力压制明显，机构初指强力防范，正路首选。"
     },
     {
       "code": "周六029",
@@ -883,69 +883,69 @@
       "time": "10-18 03:00",
       "home": "巴伦西亚",
       "away": "毕尔巴鄂",
-      "home_rank": "18",
-      "away_rank": "5",
-      "status": "未开赛",
+      "home_rank": "-",
+      "away_rank": "-",
+      "status": "焦点对决",
       "form_home": [
-        "L",
-        "D",
-        "L",
         "W",
-        "L"
+        "D",
+        "W",
+        "L",
+        "D"
       ],
       "form_away": [
         "D",
         "W",
-        "W",
         "L",
+        "W",
         "W"
       ],
       "odds": [
-        "3.10",
         "3.20",
-        "2.15"
+        "3.10",
+        "2.03"
       ],
-      "consensus": "客不败/平局 (74.0%)",
-      "consensus_ratio": 74,
-      "tip": "平局/客胜",
+      "consensus": "客不败 (67%)",
+      "consensus_ratio": 67,
+      "tip": "客不败/双选平负",
       "score": "--",
       "result": "PENDING",
-      "analysis": "巴伦西亚深陷降级区攻坚极度乏力，毕尔巴鄂竞技反击稳扎稳打，保平争胜。"
+      "analysis": "毕尔巴鄂防线纪律性更强，巴伦西亚近期进攻效率不稳定，客队拿分几率高。"
     },
     {
       "code": "周日003",
       "league": "韩职",
-      "time": "10-18 13:00",
+      "time": "10-18 15:30",
       "home": "首尔FC",
       "away": "金泉尚武",
-      "home_rank": "5",
-      "away_rank": "3",
-      "status": "未开赛",
+      "home_rank": "-",
+      "away_rank": "-",
+      "status": "稳胆候选",
       "form_home": [
         "W",
         "D",
-        "L",
         "W",
+        "L",
         "D"
       ],
       "form_away": [
+        "D",
         "W",
         "L",
         "W",
-        "D",
         "W"
       ],
       "odds": [
-        "2.25",
-        "3.15",
-        "2.85"
+        "1.33",
+        "4.35",
+        "6.75"
       ],
-      "consensus": "平局首选 (69.0%)",
-      "consensus_ratio": 69,
-      "tip": "双方进球/平局",
+      "consensus": "主胜死胆 (78%)",
+      "consensus_ratio": 78,
+      "tip": "主胜",
       "score": "--",
       "result": "PENDING",
-      "analysis": "双方近期交锋势均力敌，首尔主场防守稳固，金泉尚武体能优势，打平概率极高。"
+      "analysis": "首尔FC主场硬实力压制明显，机构初指强力防范，正路首选。"
     },
     {
       "code": "周日004",
@@ -953,34 +953,34 @@
       "time": "10-18 18:15",
       "home": "兹沃勒",
       "away": "前进之鹰",
-      "home_rank": "13",
-      "away_rank": "8",
-      "status": "未开赛",
+      "home_rank": "-",
+      "away_rank": "-",
+      "status": "焦点对决",
       "form_home": [
-        "L",
+        "W",
+        "D",
         "W",
         "L",
-        "D",
-        "L"
+        "D"
       ],
       "form_away": [
-        "W",
-        "W",
         "D",
+        "W",
         "L",
+        "W",
         "W"
       ],
       "odds": [
-        "2.65",
-        "3.40",
-        "2.30"
+        "3.20",
+        "3.70",
+        "1.83"
       ],
-      "consensus": "进球数大 (75.0%)",
-      "consensus_ratio": 75,
-      "tip": "进球数3+ / 双方进球",
+      "consensus": "客不败 (68%)",
+      "consensus_ratio": 68,
+      "tip": "客不败/双选平负",
       "score": "--",
       "result": "PENDING",
-      "analysis": "荷甲两支大开大合中游球队碰面，防守端漏洞明显，对攻大战极易打出大比分。"
+      "analysis": "前进之鹰防线纪律性更强，兹沃勒近期进攻效率不稳定，客队拿分几率高。"
     },
     {
       "code": "周日005",
@@ -988,34 +988,34 @@
       "time": "10-18 18:30",
       "home": "乌迪内斯",
       "away": "莱切",
-      "home_rank": "6",
-      "away_rank": "17",
-      "status": "未开赛",
+      "home_rank": "-",
+      "away_rank": "-",
+      "status": "焦点对决",
       "form_home": [
-        "L",
-        "L",
         "W",
-        "W",
-        "W"
-      ],
-      "form_away": [
-        "L",
-        "L",
         "D",
+        "W",
         "L",
         "D"
       ],
-      "odds": [
-        "1.88",
-        "3.25",
-        "3.80"
+      "form_away": [
+        "D",
+        "W",
+        "L",
+        "W",
+        "W"
       ],
-      "consensus": "主胜 (77.0%)",
-      "consensus_ratio": 77,
-      "tip": "主胜",
+      "odds": [
+        "1.69",
+        "3.40",
+        "4.10"
+      ],
+      "consensus": "主不败 (69%)",
+      "consensus_ratio": 69,
+      "tip": "主不败/首选主胜",
       "score": "--",
       "result": "PENDING",
-      "analysis": "乌迪内斯主场战力极为强悍且前场冲击力十足，莱切锋无力客战连遭零封，主胜可期。"
+      "analysis": "乌迪内斯占据地利，交锋基本面处于上风，防范平局双选过关。"
     },
     {
       "code": "周日006",
@@ -1023,34 +1023,34 @@
       "time": "10-18 20:00",
       "home": "奥萨苏纳",
       "away": "桑坦德",
-      "home_rank": "7",
-      "away_rank": "西乙1",
-      "status": "未开赛",
+      "home_rank": "-",
+      "away_rank": "-",
+      "status": "焦点对决",
       "form_home": [
         "W",
         "D",
         "W",
         "L",
-        "W"
+        "D"
       ],
       "form_away": [
-        "W",
-        "W",
-        "W",
         "D",
+        "W",
+        "L",
+        "W",
         "W"
       ],
       "odds": [
-        "1.68",
-        "3.55",
-        "4.40"
+        "1.92",
+        "3.50",
+        "3.10"
       ],
-      "consensus": "主不败 (79.0%)",
-      "consensus_ratio": 79,
-      "tip": "主胜/防平",
+      "consensus": "主不败 (69%)",
+      "consensus_ratio": 69,
+      "tip": "主不败/首选主胜",
       "score": "--",
       "result": "PENDING",
-      "analysis": "奥萨苏纳主场萨达尔球场素有地狱主场之称逼抢凶狠，桑坦德联赛虽顺但面对甲级防线吃紧。"
+      "analysis": "奥萨苏纳占据地利，交锋基本面处于上风，防范平局双选过关。"
     },
     {
       "code": "周日010",
@@ -1058,34 +1058,34 @@
       "time": "10-18 21:00",
       "home": "利兹联",
       "away": "曼联",
-      "home_rank": "英冠2",
-      "away_rank": "10",
-      "status": "宿敌大战",
+      "home_rank": "-",
+      "away_rank": "-",
+      "status": "焦点对决",
       "form_home": [
-        "W",
         "W",
         "D",
         "W",
+        "L",
         "D"
       ],
       "form_away": [
         "D",
-        "D",
+        "W",
         "L",
         "W",
-        "L"
+        "W"
       ],
       "odds": [
-        "3.80",
-        "3.65",
-        "1.78"
+        "2.22",
+        "3.40",
+        "2.60"
       ],
-      "consensus": "客不败/双方进球 (75.0%)",
-      "consensus_ratio": 75,
-      "tip": "双方进球/客不败",
+      "consensus": "主不败 (68%)",
+      "consensus_ratio": 68,
+      "tip": "主不败/首选主胜",
       "score": "--",
       "result": "PENDING",
-      "analysis": "玫瑰德比战意拉满，曼联后场马丁内斯复出稳固防守，利兹联主场必定猛扑，防冷双选。"
+      "analysis": "利兹联占据地利，交锋基本面处于上风，防范平局双选过关。"
     },
     {
       "code": "周日012",
@@ -1093,9 +1093,9 @@
       "time": "10-18 21:00",
       "home": "佛罗伦萨",
       "away": "科莫",
-      "home_rank": "8",
-      "away_rank": "14",
-      "status": "未开赛",
+      "home_rank": "-",
+      "away_rank": "-",
+      "status": "焦点对决",
       "form_home": [
         "W",
         "D",
@@ -1105,22 +1105,22 @@
       ],
       "form_away": [
         "D",
+        "W",
         "L",
         "W",
-        "W",
-        "D"
+        "W"
       ],
       "odds": [
-        "1.72",
-        "3.60",
-        "4.10"
+        "3.17",
+        "3.45",
+        "1.91"
       ],
-      "consensus": "主胜/防平 (76.0%)",
-      "consensus_ratio": 76,
-      "tip": "主不败",
+      "consensus": "客不败 (68%)",
+      "consensus_ratio": 68,
+      "tip": "客不败/双选平负",
       "score": "--",
       "result": "PENDING",
-      "analysis": "紫百合主场调度掌控力强，科莫刚续约核心攻击手杜维卡斯士气回升，慎防小胜或闷平。"
+      "analysis": "科莫防线纪律性更强，佛罗伦萨近期进攻效率不稳定，客队拿分几率高。"
     },
     {
       "code": "周日016",
@@ -1128,34 +1128,34 @@
       "time": "10-18 22:45",
       "home": "格罗宁根",
       "away": "阿贾克斯",
-      "home_rank": "9",
-      "away_rank": "2",
-      "status": "未开赛",
+      "home_rank": "-",
+      "away_rank": "-",
+      "status": "正路巡视",
       "form_home": [
+        "W",
         "D",
+        "W",
         "L",
-        "L",
-        "D",
-        "W"
+        "D"
       ],
       "form_away": [
-        "W",
-        "W",
-        "W",
         "D",
+        "W",
+        "L",
+        "W",
         "W"
       ],
       "odds": [
-        "4.30",
         "3.90",
-        "1.62"
+        "4.10",
+        "1.59"
       ],
-      "consensus": "客胜正路 (82.0%)",
-      "consensus_ratio": 82,
+      "consensus": "客胜首选 (76%)",
+      "consensus_ratio": 76,
       "tip": "客胜",
       "score": "--",
       "result": "PENDING",
-      "analysis": "阿贾克斯青年军磨合成型客场反击极其犀利，格罗宁根防线失球率居高不下，客胜跑出。"
+      "analysis": "阿贾克斯客战战意坚决，攻防转换速率优势显著，客胜值得信任。"
     },
     {
       "code": "周日018",
@@ -1163,34 +1163,34 @@
       "time": "10-18 23:30",
       "home": "诺丁汉",
       "away": "阿森纳",
-      "home_rank": "12",
-      "away_rank": "3",
-      "status": "焦点大战",
+      "home_rank": "-",
+      "away_rank": "-",
+      "status": "正路巡视",
       "form_home": [
-        "D",
-        "L",
         "W",
         "D",
-        "L"
+        "W",
+        "L",
+        "D"
       ],
       "form_away": [
-        "W",
-        "W",
         "D",
+        "W",
+        "L",
         "W",
         "W"
       ],
       "odds": [
-        "5.50",
-        "4.00",
-        "1.50"
+        "5.70",
+        "3.80",
+        "1.45"
       ],
-      "consensus": "客胜正路 (83.5%)",
-      "consensus_ratio": 83,
+      "consensus": "客胜首选 (76%)",
+      "consensus_ratio": 76,
       "tip": "客胜",
       "score": "--",
       "result": "PENDING",
-      "analysis": "阿尔特塔率领阿森纳攻防体系严丝合缝，诺丁汉森林主场摆大巴但定位球防守容易被枪手攻破。"
+      "analysis": "阿森纳客战战意坚决，攻防转换速率优势显著，客胜值得信任。"
     }
   ]
 }
