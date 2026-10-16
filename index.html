@@ -1287,7 +1287,7 @@
                 });
         }
 
-        // 渲染实时情报流卡片
+        // 渲染实时情报流卡片 (100% 专业中文转译与结构化展示)
         function renderLiveFeed(items) {
             const container = document.getElementById('wire-feed-container');
             if (!items || items.length === 0) {
@@ -1303,13 +1303,21 @@
                 // 格式化时间
                 let displayTime = item.time ? item.time.replace('T', ' ').split('+')[0] : '刚刚';
                 
+                // 提取分类与对阵
+                let categoryTag = item.category ? `<span style="background: rgba(35, 134, 54, 0.2); color: #3fb950; padding: 2px 6px; border-radius: 4px; font-size: 10px; font-weight: 700; margin-right: 6px;">${item.category}</span>` : '';
+                let matchTitle = item.match ? `<span style="font-weight: 700; color: #f0f6fc; font-size: 13px;">${item.match}</span>` : '';
+
                 card.innerHTML = `
                     <div class="wire-top">
                         <span class="wire-channel">📡 @${item.channel}</span>
                         <span class="wire-time">${displayTime}</span>
                     </div>
-                    <div class="wire-content">
-                        ${escapeHtml(item.text)}
+                    <div style="margin-bottom: 6px; display: flex; align-items: center;">
+                        ${categoryTag}
+                        ${matchTitle}
+                    </div>
+                    <div class="wire-content" style="color: #c9d1d9; font-size: 13px; line-height: 1.6;">
+                        ${escapeHtml(item.chinese || item.text)}
                     </div>
                 `;
                 container.appendChild(card);

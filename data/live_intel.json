@@ -1,427 +1,295 @@
 {
-  "updated_at": "2026-10-17 00:14:56",
-  "total_tips": 60,
+  "updated_at": "2026-10-17 00:17:08",
+  "total_tips": 32,
   "db_total_count": 913,
   "live_feed": [
-    {
-      "id": 913,
-      "channel": "footballbettingtips10",
-      "time": "2026-10-16T15:59:19+00:00",
-      "type": "text_and_photo",
-      "text": "BOOOOOOOOOMMM! One step closer to the £1,000 by Sunday !"
-    },
     {
       "id": 912,
       "channel": "footballbettingtips10",
       "time": "2026-10-16T15:53:48+00:00",
-      "type": "text_and_photo",
-      "text": "🚨 BET 1 🚨 🎁 £30.00 IN FREE BETS FROM MIDNITE ! ✅ £25 to £1,000 by Sunday!! 👉 SIGN UP NOW : https://bit.ly/MidniteNewOffer ✅ Baniyas vs Al Wasl ✅ Selection : Over 0.5 1h goals ✅ Stake : £25 Make sure you are on MIDNITE ➡️ https://bit.ly/MidniteNewOffer"
-    },
-    {
-      "id": 911,
-      "channel": "freakbets",
-      "time": "2026-10-16T15:27:38+00:00",
-      "type": "text_and_photo",
-      "text": "💰 💰 💰 💰 EVENING FRIDAY TICKETS LOADED 🔥 🚨 🚨 🚨 🚨 🚨 🏀 2.18 EuroLeague Parlay 🔥 ⚽️ 2.00 Odds 🚨 🚨 🚨 🚨 🚨 ⚽️ 1.67 Odds ⚽️ 1.53 Odds Top League games from Football to Europiean Basketball, everything INSIDE 📲 GET ELITE VIP @freakbets_bot"
-    },
-    {
-      "id": 910,
-      "channel": "calciomercato",
-      "time": "2026-10-16T15:09:32+00:00",
-      "type": "text_and_photo",
-      "text": "🏆 Il palinsesto della 7ª Giornata di Serie A. 🤔 Secondo voi come finiranno questi match? Fate la vostra prediction nei commenti! ⚽️ @CalcioMercato"
+      "category": "核心推介",
+      "match": "阿联酋超 巴尼亚斯 vs 迪拜祈祷",
+      "chinese": "阿联酋超焦点对决，本场机构与各路资金重点推介关注上半场有球 (大于0.5球)。",
+      "raw_preview": "🚨 BET 1 🚨 🎁 £30.00 IN FREE BETS FROM MIDNITE ! ✅ £25 to £1,000 by Sunday!! 👉 SIG"
     },
     {
       "id": 909,
       "channel": "dimarzio",
       "time": "2026-10-15T07:03:35+00:00",
-      "type": "text_and_photo",
-      "text": "AC Milan, Pavlovic extends his contract until 2031 with an option to extend. @Dimarzio"
-    },
-    {
-      "id": 908,
-      "channel": "dimarzio",
-      "time": "2026-10-15T06:45:41+00:00",
-      "type": "text_and_photo",
-      "text": "UCL , MatchDay2 @Dimarzio"
-    },
-    {
-      "id": 907,
-      "channel": "dimarzio",
-      "time": "2026-10-13T03:32:28+00:00",
-      "type": "text_and_photo",
-      "text": "Ligue1 , MatchDay6 @Dimarzio"
-    },
-    {
-      "id": 906,
-      "channel": "dimarzio",
-      "time": "2026-10-13T03:15:01+00:00",
-      "type": "text_and_photo",
-      "text": "Bundesliga , MatchDay5 @Dimarzio"
-    },
-    {
-      "id": 905,
-      "channel": "dimarzio",
-      "time": "2026-10-13T03:04:19+00:00",
-      "type": "text_and_photo",
-      "text": "Laliga , MatchDay8 @Dimarzio"
-    },
-    {
-      "id": 904,
-      "channel": "dimarzio",
-      "time": "2026-10-13T02:45:01+00:00",
-      "type": "text_and_photo",
-      "text": "PremierLeague , MatchDay 6 @Dimarzio"
-    },
-    {
-      "id": 903,
-      "channel": "dimarzio",
-      "time": "2026-10-13T02:31:42+00:00",
-      "type": "text_and_photo",
-      "text": "SerieA , MatchDay6 @Dimarzio"
+      "category": "更衣室动向",
+      "match": "意甲 AC米兰",
+      "chinese": "官方消息，AC米兰后防铁闸帕夫洛维奇已与俱乐部正式续约至2031年，并附带续约优先权。",
+      "raw_preview": "AC Milan, Pavlovic extends his contract until 2031 with an option to extend. @Di"
     },
     {
       "id": 902,
       "channel": "dimarzio",
       "time": "2026-10-11T16:45:16+00:00",
-      "type": "text_and_photo",
-      "text": "Clarence Seedorf is the new coach of Corinthias . He returns to the bench after his stint as Cameroon coach in 2019. @Dimarzio"
+      "category": "更衣室动向",
+      "match": "巴甲 科林蒂安",
+      "chinese": "名宿西多夫正式出任巴西科林蒂安主教练，这是他自2019年执教喀麦隆国家队后首次重掌教鞭。",
+      "raw_preview": "Clarence Seedorf is the new coach of Corinthias . He returns to the bench after "
     },
     {
       "id": 901,
       "channel": "dimarzio",
       "time": "2026-10-09T14:31:10+00:00",
-      "type": "text_and_photo",
-      "text": "New adventure for Joselu : he is a new player for Al Sailiya . @Dimarzio"
+      "category": "转会动态",
+      "match": "卡超 塞利亚",
+      "chinese": "前皇马锋霸何塞卢开启生涯新篇章，官方确认正式加盟卡塔尔球会塞利亚俱乐部。",
+      "raw_preview": "New adventure for Joselu : he is a new player for Al Sailiya . @Dimarzio"
     },
     {
       "id": 900,
       "channel": "dimarzio",
       "time": "2026-10-09T14:15:04+00:00",
-      "type": "text_and_photo",
-      "text": "Douvikas 'contract renewal with Como is complete: new contract through 2030 @Dimarzio"
+      "category": "更衣室动向",
+      "match": "意甲 科莫",
+      "chinese": "意甲科莫官方敲定锋线大将杜维卡斯的续约合同，双方正式签下一份长约至2030年。",
+      "raw_preview": "Douvikas 'contract renewal with Como is complete: new contract through 2030 @Dim"
     },
     {
       "id": 899,
       "channel": "dimarzio",
       "time": "2026-10-08T16:45:10+00:00",
-      "type": "text_and_photo",
-      "text": "Granit Xhaka has been sentenced. The Swiss midfielder has been suspended for two years and fined £136,265 for falsifying Covid-19 certificates. @Dimarzio"
+      "category": "更衣室动向",
+      "match": "德甲 勒沃库森",
+      "chinese": "瑞士中场核心扎卡因伪造新冠证书遭判罚，被处以停赛长达两年并处以超13万英镑巨额罚款。",
+      "raw_preview": "Granit Xhaka has been sentenced. The Swiss midfielder has been suspended for two"
     },
     {
       "id": 898,
       "channel": "dimarzio",
       "time": "2026-10-08T15:55:00+00:00",
-      "type": "text_and_photo",
-      "text": "It's now official: Matteo Darmian is a new Bologna player. The former Nerazzurri defender joins Palladino's team after reaching an agreement with the management until June 2027. @Dimarzio"
+      "category": "转会动态",
+      "match": "意甲 博洛尼亚",
+      "chinese": "官方确认：前国际米兰功勋后卫达米安加盟博洛尼亚联手帕拉迪诺，双方签约至2027年6月。",
+      "raw_preview": "It's now official: Matteo Darmian is a new Bologna player. The former Nerazzurri"
     },
     {
       "id": 897,
       "channel": "dimarzio",
       "time": "2026-10-06T16:30:24+00:00",
-      "type": "text_and_photo",
-      "text": "Dani Carvajal will be a new Getafe player. The Spanish club's president, Ángel Torres , confirmed this to DAZN Spain , stating that the former Real Madrid player \" has passed his medical. He will arrive this afternoon .\" @Dimarzio"
-    },
-    {
-      "id": 896,
-      "channel": "dimarzio",
-      "time": "2026-10-06T14:15:05+00:00",
-      "type": "text",
-      "text": "GOLDEN BOY 2026, THE FINALISTS - 25 footballers will compete for the award for best young player of the year , 20 selected based on the Golden Boy Index and 5 wild cards. The 20 youngsters are: 1. Diomande (Real Madrid) 2. Cubarsì (Barcelona) 3. Bouaddi (Manchester City) 4. Estevao (Chelsea) 5. Zaire-Emery (PSG) 6. Kroupi (Bournemouth) 7. Karl (Bay"
+      "category": "转会动态",
+      "match": "西甲 赫塔费",
+      "chinese": "赫塔费主席安赫尔·托雷斯确认：前皇家马德里边卫卡瓦哈尔已通过体检，今日下午正式加盟。",
+      "raw_preview": "Dani Carvajal will be a new Getafe player. The Spanish club's president, Ángel T"
     },
     {
       "id": 895,
       "channel": "dimarzio",
       "time": "2026-10-03T17:01:03+00:00",
-      "type": "text_and_photo",
-      "text": "Bologna and Matteo Darmian are working on the final formal details of the contract that will bind the former Inter defender to the Rossoblu. @Dimarzio"
+      "category": "转会动态",
+      "match": "意甲 博洛尼亚",
+      "chinese": "博洛尼亚与前国际米兰后卫达米安就合同最后细节达成一致，官方签约官宣在即。",
+      "raw_preview": "Bologna and Matteo Darmian are working on the final formal details of the contra"
     },
     {
       "id": 894,
       "channel": "dimarzio",
       "time": "2026-09-27T16:33:56+00:00",
-      "type": "text_and_photo",
-      "text": "Giorgio Scalvini renews his contract with Atalanta until 2031: The defender has extended his contract with the Nerazzurri, as stated in the club's official statement. Born in 2003, Scalvini developed in the Bergamo youth academy from the age of 12, and has already made over 100 appearances for the first team. @Dimarzio"
+      "category": "更衣室动向",
+      "match": "意甲 亚特兰大",
+      "chinese": "亚特兰大官方宣布：青训核心中卫斯卡尔维尼正式完成续约，新合同绑定至2031年。",
+      "raw_preview": "Giorgio Scalvini renews his contract with Atalanta until 2031: The defender has "
     },
     {
       "id": 893,
       "channel": "calciomercato",
       "time": "2026-10-16T13:30:28+00:00",
-      "type": "text_and_photo",
-      "text": "🚑 ⚫ Altro Infortunio in casa Inter : Benjamin Pavard ha riportato un risentimento agli adduttori della coscia destra. ❌ Il centrale francese rimarrà fuori per almeno 20 giorni. ⚽️ @CalcioMercato"
+      "category": "伤停特情",
+      "match": "意甲 国际米兰",
+      "chinese": "国米后防遭遇重创！法国主力中卫帕瓦尔右大腿内收肌拉伤，确认将伤缺至少20天。",
+      "raw_preview": "🚑 ⚫ Altro Infortunio in casa Inter : Benjamin Pavard ha riportato un risentiment"
     },
     {
       "id": 892,
       "channel": "calciomercato",
       "time": "2026-10-16T13:03:04+00:00",
-      "type": "text_and_photo",
-      "text": "🚑 ⚫ Franck Kessié ha riportato una distrazione di basso grado al polpaccio. ❌ Salterà sicuramente la sfida contro il Milan . ⚽️ @CalcioMercato"
+      "category": "伤停特情",
+      "match": "意甲 AC米兰",
+      "chinese": "凯西小腿遭遇轻微肌肉拉伤，经医疗团队确认，铁定缺席接下来对阵老东家AC米兰的关键战役。",
+      "raw_preview": "🚑 ⚫ Franck Kessié ha riportato una distrazione di basso grado al polpaccio. ❌ Sa"
     },
     {
       "id": 891,
       "channel": "calciomercato",
       "time": "2026-10-16T12:01:16+00:00",
-      "type": "text_and_photo",
-      "text": "🚑 🟡 INFORTUNI ROMA: ‼️ Manu Koné ha riportato una lesione muscolare di primo grado, l’obiettivo è recuperarlo prima dell’arrivo della sosta di Novembre . ✔️ Per Paulo Dybala invece non c’è alcuna lesione, si spera di recuperare l’argentino già per la prossima settimana. ⚽️ @CalcioMercato"
-    },
-    {
-      "id": 890,
-      "channel": "calciomercato",
-      "time": "2026-10-16T11:35:58+00:00",
-      "type": "text_and_photo",
-      "text": "📺 Netflix entra nel mondo dei Mondiali: acquisiti i diritti esclusivi per trasmettere tutte le 104 partite dell'edizione 2030 in Spagna e Andorra . ⚽️ @CalcioMercato"
-    },
-    {
-      "id": 889,
-      "channel": "calciomercato",
-      "time": "2026-10-16T10:17:33+00:00",
-      "type": "text_and_photo",
-      "text": "📊 Il Ranking attuale per lo slot extra per la Uefa Champions League . ⚽️ @CalcioMercato"
+      "category": "伤停特情",
+      "match": "意甲 罗马",
+      "chinese": "罗马伤情更新：科内遭遇一级肌肉拉伤将休战至11月间歇期；迪巴拉并无肌肉损伤，有望下周火线复出。",
+      "raw_preview": "🚑 🟡 INFORTUNI ROMA: ‼️ Manu Koné ha riportato una lesione muscolare di primo gra"
     },
     {
       "id": 888,
       "channel": "calciomercato",
       "time": "2026-10-16T08:00:09+00:00",
-      "type": "text_and_photo",
-      "text": "🚨 La ricostruzione del caso Conceição - Spalletti : ‼️ ⚪ Conceição ha lasciato il campo molto arrabbiato, ha avuto una discussione con uno dei membri dello staff di Spalletti e ha sferrato un pugno alla sedia della panchina. Alla fine si è diretto dritto negli spogliatoi. Luciano Spalletti ha commentato cosi l’accaduto: \"A Conceição gli conviene es"
+      "category": "更衣室动向",
+      "match": "意甲",
+      "chinese": "孔塞桑退场时情绪极度失控，与斯帕莱蒂教练组成员发生口角怒砸替补席座椅，随后径直返回更衣室，主帅已介入回应。",
+      "raw_preview": "🚨 La ricostruzione del caso Conceição - Spalletti : ‼️ ⚪ Conceição ha lasciato i"
     },
     {
       "id": 887,
       "channel": "calciomercato",
       "time": "2026-10-15T20:55:15+00:00",
-      "type": "text_and_photo",
-      "text": "🇪🇺 UEFA CONFERENCE LEAGUE 🇪🇺 1ª Giornata FINE GARA ⚫ Atalanta 3-1 Pafos 👤 1’ E. Elmas (G. Raspadori ) (1-0) 18’ G. Raspadori ( Rigore ) (2-0) 44’ G. Scamacca (C. De Ketelaere ) (3-0) 88’ Biel (A. Silva ) (3-1) ⚽️ @CalcioMercato"
+      "category": "战术内幕",
+      "match": "欧协联 亚特兰大VS帕福斯",
+      "chinese": "亚特兰大主场3-1完胜帕福斯。埃尔马斯闪击、拉斯帕多里点射及斯卡马卡破门确立胜局，客队尾段扳回一城，打出双方进球及大球。",
+      "raw_preview": "🇪🇺 UEFA CONFERENCE LEAGUE 🇪🇺 1ª Giornata FINE GARA ⚫ Atalanta 3-1 Pafos 👤 1’ E. "
     },
     {
       "id": 886,
       "channel": "calciomercato",
       "time": "2026-10-15T20:54:14+00:00",
-      "type": "text_and_photo",
-      "text": "🇪🇺 UEFA EUROPA LEAGUE 🇪🇺 2ª Giornata FINE GARA 🔴 Celta Vigo 1-2 Juventus ⚪ 18' H. Alvarez (W. Swedberg ) (1-0) 58' N. Woltemade (-) (1-1) 92' R. Kolo Muani (A. Cambiaso ) (1-2) ⚽️ @CalcioMercato"
+      "category": "战术内幕",
+      "match": "欧联杯 塞尔塔VS尤文图斯",
+      "chinese": "尤文图斯客场2-1逆转塞尔塔。阿尔瓦雷斯先拔头筹，沃尔特马德扳平，穆阿尼补时第92分钟绝杀，客胜打出并产生全场大球。",
+      "raw_preview": "🇪🇺 UEFA EUROPA LEAGUE 🇪🇺 2ª Giornata FINE GARA 🔴 Celta Vigo 1-2 Juventus ⚪ 18' H"
     },
     {
       "id": 885,
       "channel": "calciomercato",
       "time": "2026-10-15T20:52:12+00:00",
-      "type": "text_and_photo",
-      "text": "🇪🇺 UEFA EUROPA LEAGUE 🇪🇺 2ª Giornata GOAL 🔴 Celta Vigo 1-2 Juventus ⚪ ⚽️ R. Kolo Muani 👟 A. Cambiaso ⏱️ 92' ⚽️ @CalcioMercato"
+      "category": "战术内幕",
+      "match": "欧联杯 塞尔塔VS尤文图斯",
+      "chinese": "第92分钟，坎比亚索送出关键助攻，穆阿尼完成绝杀，尤文图斯客场2-1反超塞尔塔锁定胜局。",
+      "raw_preview": "🇪🇺 UEFA EUROPA LEAGUE 🇪🇺 2ª Giornata GOAL 🔴 Celta Vigo 1-2 Juventus ⚪ ⚽️ R. Kolo"
     },
     {
       "id": 884,
       "channel": "calciomercato",
       "time": "2026-10-15T20:49:09+00:00",
-      "type": "text_and_photo",
-      "text": "🇪🇺 UEFA CONFERENCE LEAGUE 🇪🇺 1ª Giornata GOAL ⚫ Atalanta 3-1 Pafos 👤 ⚽️ Biel 👟 A. Silva ⏱️ 88’ ⚽️ @CalcioMercato"
+      "category": "战术内幕",
+      "match": "欧协联 亚特兰大VS帕福斯",
+      "chinese": "第88分钟，席尔瓦助攻比尔破门，帕福斯客场扳回一球，比亚特兰大比分变为3-1，达成双方均有进球。",
+      "raw_preview": "🇪🇺 UEFA CONFERENCE LEAGUE 🇪🇺 1ª Giornata GOAL ⚫ Atalanta 3-1 Pafos 👤 ⚽️ Biel 👟 A"
     },
     {
       "id": 883,
       "channel": "calciomercato",
       "time": "2026-10-15T20:17:43+00:00",
-      "type": "text_and_photo",
-      "text": "🇪🇺 UEFA EUROPA LEAGUE 🇪🇺 2ª Giornata GOAL 🔴 Celta Vigo 1-1 Juventus ⚪ ⚽️ N. Woltemade 👟 - ⏱️ 58' ⚽️ @CalcioMercato"
+      "category": "战术内幕",
+      "match": "欧联杯 塞尔塔VS尤文图斯",
+      "chinese": "第58分钟，沃尔特马德抓住机会破门建功，尤文图斯客场1-1顽强扳平塞尔塔。",
+      "raw_preview": "🇪🇺 UEFA EUROPA LEAGUE 🇪🇺 2ª Giornata GOAL 🔴 Celta Vigo 1-1 Juventus ⚪ ⚽️ N. Wolt"
     },
     {
       "id": 882,
       "channel": "calciomercato",
       "time": "2026-10-15T20:05:32+00:00",
-      "type": "text_and_photo",
-      "text": "🇪🇺 UEFA CONFERENCE LEAGUE 🇪🇺 1ª Giornata INIZIO SECONDO TEMPO ⚫ Atalanta 3-0 Pafos 👤 1’ E. Elmas (G. Raspadori ) (1-0) 18’ G. Raspadori ( Rigore ) (2-0) 44’ G. Scamacca (C. De Ketelaere ) (3-0) ⚽️ @CalcioMercato"
+      "category": "战术内幕",
+      "match": "欧协联 亚特兰大VS帕福斯",
+      "chinese": "亚特兰大主场半场3-0遥遥领先帕福斯进入下半场，埃尔马斯、拉斯帕多里和斯卡马卡多点开花，进攻端优势极大。",
+      "raw_preview": "🇪🇺 UEFA CONFERENCE LEAGUE 🇪🇺 1ª Giornata INIZIO SECONDO TEMPO ⚫ Atalanta 3-0 Paf"
     },
     {
       "id": 881,
       "channel": "calciomercato",
       "time": "2026-10-15T20:04:31+00:00",
-      "type": "text_and_photo",
-      "text": "🇪🇺 UEFA EUROPA LEAGUE 🇪🇺 2ª Giornata INIZIO SECONDO TEMPO 🔴 Celta Vigo 1-0 Juventus ⚪ 18' H. Alvarez (W. Swedberg ) (1-0) ⚽️ @CalcioMercato"
+      "category": "战术内幕",
+      "match": "欧联杯 塞尔塔VS尤文图斯",
+      "chinese": "塞尔塔与尤文图斯下半场开始，主队塞尔塔凭借上半场阿尔瓦雷斯的进球暂时1-0领先尤文图斯。",
+      "raw_preview": "🇪🇺 UEFA EUROPA LEAGUE 🇪🇺 2ª Giornata INIZIO SECONDO TEMPO 🔴 Celta Vigo 1-0 Juven"
     },
     {
       "id": 880,
       "channel": "calciomercato",
       "time": "2026-10-15T19:49:19+00:00",
-      "type": "text_and_photo",
-      "text": "🇪🇺 UEFA CONFERENCE LEAGUE 🇪🇺 1ª Giornata FINE PRIMO TEMPO ⚫ Atalanta 3-0 Pafos 👤 1’ E. Elmas (G. Raspadori ) (1-0) 18’ G. Raspadori ( Rigore ) (2-0) 44’ G. Scamacca (C. De Ketelaere ) (3-0) ⚽️ @CalcioMercato"
+      "category": "战术内幕",
+      "match": "欧协联 亚特兰大VS帕福斯",
+      "chinese": "欧协联亚特兰大半场3-0打爆帕福斯，半场轻松打出上半场有球（大于2.5球），主场压制力明显。",
+      "raw_preview": "🇪🇺 UEFA CONFERENCE LEAGUE 🇪🇺 1ª Giornata FINE PRIMO TEMPO ⚫ Atalanta 3-0 Pafos 👤"
     },
     {
       "id": 879,
       "channel": "calciomercato",
       "time": "2026-10-15T19:49:18+00:00",
-      "type": "text_and_photo",
-      "text": "🇪🇺 UEFA EUROPA LEAGUE 🇪🇺 2ª Giornata FINE PRIMO TEMPO 🔴 Celta Vigo 1-0 Juventus ⚪ 18' H. Alvarez (W. Swedberg ) (1-0) ⚽️ @CalcioMercato"
+      "category": "战术内幕",
+      "match": "欧联杯 塞尔塔VS尤文图斯",
+      "chinese": "半场战罢，塞尔塔主场1-0暂时领先尤文图斯，斯韦德贝里助攻阿尔瓦雷斯破门打出上半场有球。",
+      "raw_preview": "🇪🇺 UEFA EUROPA LEAGUE 🇪🇺 2ª Giornata FINE PRIMO TEMPO 🔴 Celta Vigo 1-0 Juventus "
     },
     {
       "id": 878,
       "channel": "calciomercato",
       "time": "2026-10-15T19:46:15+00:00",
-      "type": "text_and_photo",
-      "text": "🇪🇺 UEFA CONFERENCE LEAGUE 🇪🇺 1ª Giornata GOAL ⚫ Atalanta 3-0 Pafos 👤 ⚽️ G. Scamacca 👟 C. De Ketelaere ⏱️ 44’ ⚽️ @CalcioMercato"
+      "category": "战术内幕",
+      "match": "欧协联 亚特兰大VS帕福斯",
+      "chinese": "第44分钟，德凯特拉雷精准传球，斯卡马卡斩获进球，亚特兰大将主场领先优势扩大至3-0。",
+      "raw_preview": "🇪🇺 UEFA CONFERENCE LEAGUE 🇪🇺 1ª Giornata GOAL ⚫ Atalanta 3-0 Pafos 👤 ⚽️ G. Scama"
     },
     {
       "id": 877,
       "channel": "calciomercato",
       "time": "2026-10-15T19:20:53+00:00",
-      "type": "text_and_photo",
-      "text": "🇪🇺 UEFA EUROPA LEAGUE 🇪🇺 2ª Giornata GOAL 🔴 Celta Vigo 1-0 Juventus ⚪ ⚽️ H. Alvarez 👟 W. Swedberg ⏱️ 18' ⚽️ @CalcioMercato"
+      "category": "战术内幕",
+      "match": "欧联杯 塞尔塔VS尤文图斯",
+      "chinese": "第18分钟，斯韦德贝里送出助攻，阿尔瓦雷斯推射破门，塞尔塔主场1-0首开纪录领先尤文图斯。",
+      "raw_preview": "🇪🇺 UEFA EUROPA LEAGUE 🇪🇺 2ª Giornata GOAL 🔴 Celta Vigo 1-0 Juventus ⚪ ⚽️ H. Alva"
     },
     {
       "id": 876,
       "channel": "calciomercato",
       "time": "2026-10-15T19:20:52+00:00",
-      "type": "text_and_photo",
-      "text": "🇪🇺 UEFA CONFERENCE LEAGUE 🇪🇺 1ª Giornata GOAL ⚫ Atalanta 2-0 Pafos 👤 ⚽️ G. Raspadori ( Rigore ) 👟 - ⏱️ 18’ ⚽️ @CalcioMercato"
+      "category": "战术内幕",
+      "match": "欧协联 亚特兰大VS帕福斯",
+      "chinese": "第18分钟，亚特兰大获得点球良机，拉斯帕多里操刀主罚命中，主场比分改写为2-0。",
+      "raw_preview": "🇪🇺 UEFA CONFERENCE LEAGUE 🇪🇺 1ª Giornata GOAL ⚫ Atalanta 2-0 Pafos 👤 ⚽️ G. Raspa"
     },
     {
       "id": 875,
       "channel": "calciomercato",
       "time": "2026-10-15T19:03:38+00:00",
-      "type": "text_and_photo",
-      "text": "🇪🇺 UEFA CONFERENCE LEAGUE 🇪🇺 1ª Giornata GOAL ⚫ Atalanta 1-0 Pafos 👤 ⚽️ E. Elmas 👟 G. Raspadori ⏱️ 1’ ⚽️ @CalcioMercato"
+      "category": "战术内幕",
+      "match": "欧协联 亚特兰大VS帕福斯",
+      "chinese": "开场仅1分钟，拉斯帕多里助攻埃尔马斯闪电破门，亚特兰大主场1-0取得梦幻开局，上半场秒有球。",
+      "raw_preview": "🇪🇺 UEFA CONFERENCE LEAGUE 🇪🇺 1ª Giornata GOAL ⚫ Atalanta 1-0 Pafos 👤 ⚽️ E. Elmas"
     },
     {
       "id": 874,
       "channel": "calciomercato",
       "time": "2026-10-15T19:02:38+00:00",
-      "type": "text_and_photo",
-      "text": "🇪🇺 UEFA EUROPA LEAGUE 🇪🇺 2ª Giornata INIZIO GARA 🔴 Celta Vigo - Juventus ⚪ ⚽️ @CalcioMercato"
-    },
-    {
-      "id": 873,
-      "channel": "letalbets",
-      "time": "2026-10-14T08:20:38+00:00",
-      "type": "text_and_photo",
-      "text": "‌ 💡 ¡Nueva Apuesta! 💡 Champions League: Villarreal – Nápoles https://www.pensadordeapuestas.com/champions-league-villarreal-napoles/ Tipster: Letalbets"
-    },
-    {
-      "id": 872,
-      "channel": "letalbets",
-      "time": "2026-10-13T10:29:12+00:00",
-      "type": "text_and_photo",
-      "text": "‌ 💡 ¡Nueva Apuesta! 💡 Champions League: Villarreal – Nápoles https://www.pensadordeapuestas.com/champions-league-villarreal-napoles/ Tipster: Letalbets"
-    },
-    {
-      "id": 871,
-      "channel": "letalbets",
-      "time": "2026-10-13T10:25:09+00:00",
-      "type": "text_and_photo",
-      "text": "‌ 💡 ¡Nueva Apuesta! 💡 Champions League: Villarreal – Nápoles https://www.pensadordeapuestas.com/champions-league-villarreal-napoles/ Tipster: Letalbets"
-    },
-    {
-      "id": 870,
-      "channel": "letalbets",
-      "time": "2026-10-13T10:22:28+00:00",
-      "type": "text_and_photo",
-      "text": "Nueva apuesta en 2 minutos"
+      "category": "战术内幕",
+      "match": "欧联杯 塞尔塔VS尤文图斯",
+      "chinese": "欧联杯第2轮焦点战塞尔塔主场迎战尤文图斯比赛正式打响，双方展开正面对决。",
+      "raw_preview": "🇪🇺 UEFA EUROPA LEAGUE 🇪🇺 2ª Giornata INIZIO GARA 🔴 Celta Vigo - Juventus ⚪ ⚽️ @C"
     },
     {
       "id": 869,
       "channel": "letalbets",
       "time": "2026-10-10T18:14:57+00:00",
-      "type": "text_and_photo",
-      "text": "La Liga Alavés - Atlético de Madrid Más de 4.5 tarjetas Cuota: 1.84 Stake: 1.5 Casa: Retabet Cuota mínima: 1.70 Alternativas: @1.95 Bet365, @1.90 888sport, @1.88 Pinnacle, @1.85 Sportium, Kirolbet y Luckia, @1.82 Codere y @1.80 Winamax"
+      "category": "核心推介",
+      "match": "西甲 阿拉维斯VS马德里竞技",
+      "chinese": "西甲焦点对决：阿拉维斯主场迎战马德里竞技。两队拼抢凶悍战术犯规偏多，机构重点看好全场罚牌数偏多（全场大于4.5张黄牌）。",
+      "raw_preview": "La Liga Alavés - Atlético de Madrid Más de 4.5 tarjetas Cuota: 1.84 Stake: 1.5 C"
     },
     {
       "id": 868,
       "channel": "letalbets",
       "time": "2026-10-09T16:12:37+00:00",
-      "type": "text_and_photo",
-      "text": "La Liga Alavés - Atlético de Madrid Más de 4.5 tarjetas Cuota: 1.84 Stake: 1.5 Casa: Retabet Cuota mínima: 1.70 Alternativas: @1.95 Bet365, @1.90 888sport, @1.88 Pinnacle, @1.85 Sportium, Kirolbet y Luckia, @1.82 Codere y @1.80 Winamax"
-    },
-    {
-      "id": 867,
-      "channel": "letalbets",
-      "time": "2026-10-09T16:09:57+00:00",
-      "type": "text_and_photo",
-      "text": "Nueva apuesta en 2 minutos"
+      "category": "核心推介",
+      "match": "西甲 阿拉维斯VS马德里竞技",
+      "chinese": "西甲焦点对决：阿拉维斯主场迎战马德里竞技。两队拼抢凶悍战术犯规偏多，机构重点看好全场罚牌数偏多（全场大于4.5张黄牌）。",
+      "raw_preview": "La Liga Alavés - Atlético de Madrid Más de 4.5 tarjetas Cuota: 1.84 Stake: 1.5 C"
     },
     {
       "id": 866,
       "channel": "letalbets",
       "time": "2026-10-03T15:13:04+00:00",
-      "type": "text_and_photo",
-      "text": "Segunda División Albacete - Eibar Más de 5.5 tarjetas Cuota: 2.07 Stake: 1 Casa: Retabet Cuota mínima: 1.92 Alternativas: @2.25 888sport, @2.10 Codere, Luckia y Bet365, @2.05 Winamax, Sportium y Kirolbet y @2.04 Pinnacle"
+      "category": "核心推介",
+      "match": "西乙 阿尔巴塞特VS埃瓦尔",
+      "chinese": "西乙联赛较量：阿尔巴塞特对阵埃瓦尔。两队防守动作偏大执法尺度偏紧，看好双方激烈对抗导致吃牌数超标（全场大于5.5张黄牌）。",
+      "raw_preview": "Segunda División Albacete - Eibar Más de 5.5 tarjetas Cuota: 2.07 Stake: 1 Casa:"
     },
     {
       "id": 865,
       "channel": "letalbets",
       "time": "2026-10-03T09:32:56+00:00",
-      "type": "text_and_photo",
-      "text": "Segunda División Albacete - Eibar Más de 5.5 tarjetas Cuota: 2.07 Stake: 1 Casa: Retabet Cuota mínima: 1.92 Alternativas: @2.25 888sport, @2.10 Codere, Luckia y Bet365, @2.05 Winamax, Sportium y Kirolbet y @2.04 Pinnacle"
-    },
-    {
-      "id": 864,
-      "channel": "letalbets",
-      "time": "2026-10-03T09:29:20+00:00",
-      "type": "text_and_photo",
-      "text": "Nueva apuesta en 2 minutos"
-    },
-    {
-      "id": 863,
-      "channel": "letalbets",
-      "time": "2026-10-01T10:37:50+00:00",
-      "type": "text_and_photo",
-      "text": "Cerramos Septiembre sumando 1.1 unidades con un 8.31% de yield ✅ bet2earn.com/tipsters/letalbets"
-    },
-    {
-      "id": 862,
-      "channel": "letalbets",
-      "time": "2026-09-26T07:26:04+00:00",
-      "type": "text_and_photo",
-      "text": "UEFA Nations League - A Turquía - Francia Más de 3.5 tarjetas Cuota: 2 Stake: 1 Casa: Kirolbet Cuota mínima: 1.85 Alternativas: @2.05 Bet365, @2.03 Pinnacle, @2 Luckia y Codere @1.96 Retabet y Winamax, @1.95 Sportium y 888sport"
-    },
-    {
-      "id": 861,
-      "channel": "letalbets",
-      "time": "2026-09-26T07:25:08+00:00",
-      "type": "text_and_photo",
-      "text": "UEFA Nations League - A Italia - Bélgica Más de 3.5 tarjetas Cuota: 2 Stake: 1.5 Casa: Kirolbet Cuota mínima: 1.80 Alternativas: @2.14 Pinnacle, @2.05 Bet365, @2 Luckia, @1.99 Retabet, @1.95 Sportium, @1.92 Winamax y @1.85 888sport"
-    },
-    {
-      "id": 860,
-      "channel": "letalbets",
-      "time": "2026-09-25T15:45:29+00:00",
-      "type": "text_and_photo",
-      "text": "UEFA Nations League - A Turquía - Francia Más de 3.5 tarjetas Cuota: 2 Stake: 1 Casa: Kirolbet Cuota mínima: 1.85 Alternativas: @2.05 Bet365, @2.03 Pinnacle, @2 Luckia y Codere @1.96 Retabet y Winamax, @1.95 Sportium y 888sport"
-    },
-    {
-      "id": 859,
-      "channel": "letalbets",
-      "time": "2026-09-25T15:43:33+00:00",
-      "type": "text_and_photo",
-      "text": "Nueva apuesta en 2 minutos"
-    },
-    {
-      "id": 858,
-      "channel": "letalbets",
-      "time": "2026-09-24T10:39:31+00:00",
-      "type": "text_and_photo",
-      "text": "UEFA Nations League - A Italia - Bélgica Más de 3.5 tarjetas Cuota: 2 Stake: 1.5 Casa: Kirolbet Cuota mínima: 1.80 Alternativas: @2.14 Pinnacle, @2.05 Bet365, @2 Luckia, @1.99 Retabet, @1.95 Sportium, @1.92 Winamax y @1.85 888sport"
-    },
-    {
-      "id": 857,
-      "channel": "letalbets",
-      "time": "2026-09-24T10:36:51+00:00",
-      "type": "text_and_photo",
-      "text": "Nueva apuesta en 2 minutos"
-    },
-    {
-      "id": 856,
-      "channel": "letalbets",
-      "time": "2026-09-20T07:53:02+00:00",
-      "type": "text_and_photo",
-      "text": "Segunda División Cádiz - Girona Más de 5.5 tarjetas Cuota: 2.10 Stake: 1.5 Casa: Kirolbet Cuota mínima: 1.92 Alternativas: @2.10 888sport, Sportium, Codere, Luckia y Bet365, @2.07 Retabet, @2.05 Winamax y @1.97 Pinnacle"
-    },
-    {
-      "id": 855,
-      "channel": "letalbets",
-      "time": "2026-09-19T15:09:34+00:00",
-      "type": "text_and_photo",
-      "text": "La Liga Osasuna - Rayo Vallecano Más de 5.5 tarjetas Cuota: 2.05 Stake: 1.5 Casa: Winamax Cuota mínima: 1.95 Alternativas: Disponible en la mayoria de casas de apuestas"
-    },
-    {
-      "id": 854,
-      "channel": "letalbets",
-      "time": "2026-09-19T12:08:37+00:00",
-      "type": "text_and_photo",
-      "text": "La Liga Osasuna - Rayo Vallecano Más de 5.5 tarjetas Cuota: 2.05 Stake: 1.5 Casa: Winamax Cuota mínima: 1.95 Alternativas: Disponible en la mayoria de casas de apuestas"
+      "category": "核心推介",
+      "match": "西乙 阿尔巴塞特VS埃瓦尔",
+      "chinese": "西乙联赛较量：阿尔巴塞特对阵埃瓦尔。两队防守动作偏大执法尺度偏紧，看好双方激烈对抗导致吃牌数超标（全场大于5.5张黄牌）。",
+      "raw_preview": "Segunda División Albacete - Eibar Más de 5.5 tarjetas Cuota: 2.07 Stake: 1 Casa:"
     }
   ]
 }
