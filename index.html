@@ -878,7 +878,7 @@
                 <b>ROI 即“实战净投资回报率”</b>。光看“命中率高”没用，如果全选蚊子肉低赔，爆一场就全亏！<br>
                 我们严格按照<b>中国体彩官方真实中奖 SP 赔率</b>真金白银折算：<br>
                 • <b>大白话公式</b>：假设每场均注 100 元，<code>(收回的全部奖金 - 投入的总本金) ÷ 总本金</code>。<br>
-                • <b>当前 <span style="color: var(--accent-gold); font-weight: 800;">+178.7%</span> 代表</b>：投入 300 元本金，除拿回 300 元本金外，<b>纯口袋净赚 536 元</b>！拒绝弄虚作假，每一分钱都有据可查。
+                • <b>当前 <span id="tip-roi-val" style="color: var(--accent-gold); font-weight: 800;">+178.7%</span> 代表</b>：投入 <span id="tip-roi-cost" style="font-weight: 700;">300</span> 元本金，除拿回本金外，<b>纯口袋<span id="tip-roi-status">净赚</span> <span id="tip-roi-profit" style="font-weight: 800;">536</span> 元</b>！随时随比赛完赛实时动态同步。
             </div>
         </div>
 
@@ -1337,13 +1337,38 @@
                 
                 const realRoi = ((totalReturn - totalSettled) / totalSettled) * 100;
                 const sign = realRoi >= 0 ? '+' : '';
-                roiElem.innerText = `${sign}${realRoi.toFixed(1)}%`;
+                const roiStr = `${sign}${realRoi.toFixed(1)}%`;
+                roiElem.innerText = roiStr;
                 roiElem.style.color = realRoi >= 0 ? 'var(--accent-gold)' : '#f85149';
+
+                // 核心：让说明卡片里的数字与当前真实账目 100% 动态实时同频！
+                const tipRoiVal = document.getElementById('tip-roi-val');
+                const tipRoiCost = document.getElementById('tip-roi-cost');
+                const tipRoiStatus = document.getElementById('tip-roi-status');
+                const tipRoiProfit = document.getElementById('tip-roi-profit');
+                if (tipRoiVal) {
+                    tipRoiVal.innerText = roiStr;
+                    tipRoiVal.style.color = realRoi >= 0 ? 'var(--accent-gold)' : '#f85149';
+                }
+                if (tipRoiCost) tipRoiCost.innerText = (totalSettled * 100).toString();
+                if (tipRoiStatus) tipRoiStatus.innerText = realRoi >= 0 ? '净赚' : '回撤';
+                if (tipRoiProfit) {
+                    const profitNum = Math.abs(Math.round((totalReturn - totalSettled) * 100));
+                    tipRoiProfit.innerText = profitNum.toString();
+                    tipRoiProfit.style.color = realRoi >= 0 ? '#3fb950' : '#f85149';
+                }
             } else {
                 hitRateElem.innerText = '--';
                 statTotalElem.innerText = `0 / ${ALL_OFFICIAL_MATCHES.length}`;
                 roiElem.innerText = '待完赛';
                 roiElem.style.color = 'var(--text-secondary)';
+                
+                const tipRoiVal = document.getElementById('tip-roi-val');
+                const tipRoiCost = document.getElementById('tip-roi-cost');
+                const tipRoiProfit = document.getElementById('tip-roi-profit');
+                if (tipRoiVal) tipRoiVal.innerText = '待完赛';
+                if (tipRoiCost) tipRoiCost.innerText = '0';
+                if (tipRoiProfit) tipRoiProfit.innerText = '0';
             }
 
             if (settledList.length === 0) {
