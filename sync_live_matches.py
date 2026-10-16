@@ -165,7 +165,7 @@ def fetch_live_scores_and_status():
                 if not code_m: continue
                 code = code_m.group(1)
                 
-                # 实时PK比分 (如 "0-0", "1-0")
+                # 真实全场物理比分 (提取自 pk 区域，绝对不要误取半场比分 td_red)
                 pk_m = re.findall(r'<a[^>]*class="clt[13]"[^>]*>([^<]*)</a>', tr)
                 live_score = f"{pk_m[0].strip()}-{pk_m[1].strip()}" if len(pk_m) >= 2 and pk_m[0].strip() != '' else "--"
                 
@@ -180,10 +180,7 @@ def fetch_live_scores_and_status():
                 elif status_code == '4': status_text = "已完赛"
                 elif status_code == '-1': status_text = "比赛延期"
                 
-                if is_fin:
-                    final_m = re.search(r'<td[^>]*class="[^"]*red[^"]*"[^>]*>\s*([0-9]+\s*-\s*[0-9]+)\s*</td>', tr)
-                    if final_m:
-                        live_score = final_m.group(1).replace(' ', '')
+                # 关键修复：live_score 始终保持从 pk_m 提取的全场比分，杜绝被半场红字覆盖！
                         
                 live_map[code] = {
                     'status_code': status_code,
