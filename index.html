@@ -274,6 +274,24 @@
         .tag-hit { background: rgba(46, 160, 67, 0.2); color: #3fb950; border: 1px solid rgba(46, 160, 67, 0.5); }
         .tag-miss { background: rgba(248, 81, 73, 0.2); color: #f85149; border: 1px solid rgba(248, 81, 73, 0.5); }
         .tag-pending { background: rgba(210, 153, 34, 0.15); color: var(--accent-gold); }
+        .tag-live {
+            background: rgba(239, 68, 68, 0.18);
+            color: #f87171;
+            border: 1px solid rgba(239, 68, 68, 0.4);
+            animation: pulse-live 1.5s infinite;
+        }
+        @keyframes pulse-live {
+            0% { opacity: 0.6; }
+            50% { opacity: 1; }
+            100% { opacity: 0.6; }
+        }
+        .live-score-now {
+            font-size: 19px;
+            font-weight: 900;
+            font-family: var(--font-mono);
+            color: #ef4444;
+            letter-spacing: 1px;
+        }
 
         /* 队伍对阵排版 */
         .match-score-grid {
@@ -1008,13 +1026,16 @@
                 let settledClass = '';
                 let auditTagHtml = '';
 
-                // 赛果验证状态判定
+                // 比赛状态精确三态判定：完赛 / 进行中实时实况 / 赛前未开赛
+                const isLiveNow = m.status.includes('进行中') || m.status.includes('半场');
                 if (m.result === 'HIT') {
                     settledClass = ' settled-hit';
                     auditTagHtml = `<span class="match-audit-tag tag-hit">✔ 研判命中 (${m.score})</span>`;
                 } else if (m.result === 'MISS') {
                     settledClass = ' settled-miss';
                     auditTagHtml = `<span class="match-audit-tag tag-miss">✖ 研判失误 (${m.score})</span>`;
+                } else if (isLiveNow) {
+                    auditTagHtml = `<span class="match-audit-tag tag-live">🔴 ${m.status}</span>`;
                 } else {
                     auditTagHtml = `<span class="match-audit-tag tag-pending">${m.time} | ${m.status}</span>`;
                 }
@@ -1023,10 +1044,13 @@
                 const homeDots = m.form_home.map(f => `<span class="form-pill form-${f.toLowerCase()}">${f==='W'?'胜':(f==='D'?'平':'负')}</span>`).join('');
                 const awayDots = m.form_away.map(f => `<span class="form-pill form-${f.toLowerCase()}">${f==='W'?'胜':(f==='D'?'平':'负')}</span>`).join('');
 
-                // 中间比分或 VS
-                const midDisplay = m.result !== 'PENDING' 
-                    ? `<div class="settled-score">${m.score}</div><div style="font-size: 10px; color: var(--text-tertiary);">完赛</div>`
-                    : `<div class="vs-divider">VS</div>`;
+                // 中间比分或 VS：进行中时展示实时动态实况比分与红点
+                let midDisplay = `<div class="vs-divider">VS</div>`;
+                if (m.result !== 'PENDING') {
+                    midDisplay = `<div class="settled-score">${m.score}</div><div style="font-size: 10px; color: var(--text-tertiary);">完赛</div>`;
+                } else if (isLiveNow && m.score && m.score !== '--') {
+                    midDisplay = `<div class="live-score-now">${m.score}</div><div style="font-size: 9px; color: #ef4444; font-weight: 800;">LIVE</div>`;
+                }
 
                 card.className = 'match-row-card' + settledClass;
                 card.onclick = () => openDetail(m.code, m.home, m.away, m.league, m.analysis);
