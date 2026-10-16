@@ -242,13 +242,18 @@ def full_pipeline_sync(auto_push=True):
             newly_added += 1
             log_messages.append(f"Auto-Added newly opened match: {code} {of['home']} vs {of['away']}")
 
-    # 2. 扫描实时比分与状态（三态同步）
+    # 2. 扫描实时比分与状态（三态同步 + 物理开赛时间双重守门人）
     live_map = fetch_live_scores_and_status()
+    now_dt = datetime.now()
+    now_month_day_time = now_dt.strftime('%m-%d %H:%M')
+
     for m in existing_matches:
         code = m['code']
+        m_time = m.get('time', '') # 如 "10-17 02:30"
+        
+        # 守门人 A：外部比分网已有明确状态更新
         if code in live_map:
             info = live_map[code]
-            # 如果完赛 (status_code == '4')
             if info['is_fin'] and info['score'] != '--':
                 if m['result'] == 'PENDING':
                     score = info['score']
@@ -258,15 +263,53 @@ def full_pipeline_sync(auto_push=True):
                     m['result'] = res
                     changes_made = True
                     log_messages.append(f"Finished & Audited {code} -> {score} [{res}]")
-            # 如果正在进行中 (status_code in ['1', '2', '3'])
             elif info['is_live']:
-                # 检查状态或比分是否有变化
                 if m['status'] != info['status_text'] or (info['score'] != '--' and m['score'] != info['score']):
                     m['status'] = info['status_text']
                     if info['score'] != '--':
                         m['score'] = info['score']
                     changes_made = True
                     log_messages.append(f"Live updated {code} -> {info['status_text']} | 比分: {m['score']}")
+            elif info['status_code'] == '0':
+                # 比分网还标为 0 (未开赛)，但物理开赛时间已经到了！触发时间哨响自动升格
+                if m['result'] == 'PENDING' and m_time and m_time <= now_month_day_time:
+                    # 计算已开赛分钟数
+                    try:
+                        m_dt = datetime.strptime(f"{now_dt.year}-{m_time}", "%Y-%m-%d %H:%M")
+                        elapsed = int((now_dt - m_dt).total_seconds() / 60)
+                    except:
+                        elapsed = 5
+                    
+                    if elapsed < 48:
+                        new_status = f"进行中 · 上半场 {elapsed}'"
+                    elif elapsed < 65:
+                        new_status = "进行中 · 中场休息"
+                    elif elapsed < 115:
+                        new_status = f"进行中 · 下半场 {elapsed-15}'"
+                    else:
+                        new_status = "进行中 · 临近完赛"
+                        
+                    if m['status'] != new_status:
+                        m['status'] = new_status
+                        if m['score'] == '--':
+                            m['score'] = '0-0'
+                        changes_made = True
+                        log_messages.append(f"Kick-off clock trigger: {code} ({m['home']} vs {m['away']}) -> {new_status}")
+        else:
+            # 不在 live_map 中但物理时间已到达开赛时刻
+            if m['result'] == 'PENDING' and m_time and m_time <= now_month_day_time:
+                try:
+                    m_dt = datetime.strptime(f"{now_dt.year}-{m_time}", "%Y-%m-%d %H:%M")
+                    elapsed = int((now_dt - m_dt).total_seconds() / 60)
+                except:
+                    elapsed = 5
+                new_status = f"进行中 · 上半场 {elapsed}'"
+                if m['status'] != new_status:
+                    m['status'] = new_status
+                    if m['score'] == '--':
+                        m['score'] = '0-0'
+                    changes_made = True
+                    log_messages.append(f"Kick-off clock trigger: {code} -> {new_status}")
 
     if changes_made:
         data['updated_at'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
