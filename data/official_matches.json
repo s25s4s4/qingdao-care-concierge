@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17 03:18:05",
+  "updated_at": "2026-10-17 03:28:06",
   "total": 45,
   "matches": [
     {
@@ -48,7 +48,9 @@
         "intel_score": 70.0,
         "tipster_score": 76.8,
         "math_score": 72.4
-      }
+      },
+      "sale_closed": true,
+      "locked": true
     },
     {
       "code": "周五002",
@@ -96,7 +98,9 @@
         "intel_score": 70.0,
         "tipster_score": 76.8,
         "math_score": 65.8
-      }
+      },
+      "sale_closed": true,
+      "locked": true
     },
     {
       "code": "周五003",
@@ -144,7 +148,9 @@
         "intel_score": 70.0,
         "tipster_score": 71.5,
         "math_score": 74.6
-      }
+      },
+      "sale_closed": true,
+      "locked": true
     },
     {
       "code": "周五004",
@@ -192,7 +198,9 @@
         "intel_score": 70.0,
         "tipster_score": 71.5,
         "math_score": 72.4
-      }
+      },
+      "sale_closed": true,
+      "locked": true
     },
     {
       "code": "周五005",
@@ -240,7 +248,9 @@
         "intel_score": 71.5,
         "tipster_score": 71.5,
         "math_score": 74.6
-      }
+      },
+      "sale_closed": true,
+      "locked": true
     },
     {
       "code": "周五006",
@@ -250,7 +260,7 @@
       "away": "科隆",
       "home_rank": "7",
       "away_rank": "12",
-      "status": "进行中 · 上半场",
+      "status": "进行中 · 中场",
       "form_home": [
         "W",
         "D",
@@ -288,7 +298,9 @@
         "intel_score": 71.5,
         "tipster_score": 71.5,
         "math_score": 72.4
-      }
+      },
+      "sale_closed": true,
+      "locked": true
     },
     {
       "code": "周五007",
@@ -321,7 +333,7 @@
       "consensus": "双方进球/客不败 (71.2%)",
       "consensus_ratio": 71.2,
       "tip": "双方进球/客不败",
-      "score": "3-1",
+      "score": "3-2",
       "result": "PENDING",
       "analysis": "萨索洛前场由贝拉尔迪领衔，小范围撞墙配合默契极高；弗洛西诺内主场逼抢强硬但防线转身慢是致命死穴，萨索洛反击刀刀见血，双方进球几率极高。",
       "dossier": {
@@ -336,7 +348,9 @@
         "intel_score": 80.4,
         "tipster_score": 76.8,
         "math_score": 72.4
-      }
+      },
+      "sale_closed": true,
+      "locked": true
     },
     {
       "code": "周五008",
@@ -384,7 +398,9 @@
         "intel_score": 70.0,
         "tipster_score": 71.5,
         "math_score": 68.0
-      }
+      },
+      "sale_closed": true,
+      "locked": true
     },
     {
       "code": "周五009",
@@ -417,7 +433,7 @@
       "consensus": "双方进球/客不败 (67.2%)",
       "consensus_ratio": 67.2,
       "tip": "双方进球/客不败",
-      "score": "0-0",
+      "score": "1-0",
       "result": "PENDING",
       "analysis": "狼队英超主力前锋库尼亚与黄喜灿反击冲击力顶级；伯恩利主场球风硬朗高空球威胁大，双方攻防势均力敌，狼队反击效率稍占优势，客不败格局明朗。",
       "dossier": {
@@ -432,7 +448,9 @@
         "intel_score": 70.0,
         "tipster_score": 76.8,
         "math_score": 63.6
-      }
+      },
+      "sale_closed": true,
+      "locked": true
     },
     {
       "code": "周五010",
@@ -480,7 +498,9 @@
         "intel_score": 71.5,
         "tipster_score": 76.8,
         "math_score": 70.2
-      }
+      },
+      "sale_closed": true,
+      "locked": true
     },
     {
       "code": "周五011",
@@ -528,7 +548,9 @@
         "intel_score": 70.0,
         "tipster_score": 76.8,
         "math_score": 68.0
-      }
+      },
+      "sale_closed": true,
+      "locked": true
     },
     {
       "code": "周六001",
@@ -576,7 +598,8 @@
         "intel_score": 71.5,
         "tipster_score": 71.5,
         "math_score": 72.4
-      }
+      },
+      "sale_closed": false
     },
     {
       "code": "周六002",
@@ -624,7 +647,8 @@
         "intel_score": 70.0,
         "tipster_score": 82.5,
         "math_score": 74.6
-      }
+      },
+      "sale_closed": false
     },
     {
       "code": "周六003",
@@ -672,7 +696,8 @@
         "intel_score": 70.0,
         "tipster_score": 71.5,
         "math_score": 74.6
-      }
+      },
+      "sale_closed": false
     },
     {
       "code": "周六004",
@@ -720,7 +745,8 @@
         "intel_score": 70.0,
         "tipster_score": 76.8,
         "math_score": 63.6
-      }
+      },
+      "sale_closed": false
     },
     {
       "code": "周六005",
@@ -768,7 +794,8 @@
         "intel_score": 70.0,
         "tipster_score": 71.5,
         "math_score": 63.6
-      }
+      },
+      "sale_closed": false
     },
     {
       "code": "周六006",
@@ -816,7 +843,8 @@
         "intel_score": 70.0,
         "tipster_score": 76.8,
         "math_score": 63.6
-      }
+      },
+      "sale_closed": false
     },
     {
       "code": "周六007",
@@ -864,7 +892,8 @@
         "intel_score": 74.2,
         "tipster_score": 71.5,
         "math_score": 72.4
-      }
+      },
+      "sale_closed": false
     },
     {
       "code": "周六009",
@@ -912,7 +941,8 @@
         "intel_score": 70.0,
         "tipster_score": 71.5,
         "math_score": 72.4
-      }
+      },
+      "sale_closed": false
     },
     {
       "code": "周六011",
@@ -960,7 +990,8 @@
         "intel_score": 71.5,
         "tipster_score": 82.5,
         "math_score": 76.8
-      }
+      },
+      "sale_closed": false
     },
     {
       "code": "周六013",
@@ -1008,7 +1039,8 @@
         "intel_score": 70.0,
         "tipster_score": 76.8,
         "math_score": 68.0
-      }
+      },
+      "sale_closed": false
     },
     {
       "code": "周六014",
@@ -1056,7 +1088,8 @@
         "intel_score": 70.0,
         "tipster_score": 71.5,
         "math_score": 70.2
-      }
+      },
+      "sale_closed": false
     },
     {
       "code": "周六015",
@@ -1104,7 +1137,8 @@
         "intel_score": 70.0,
         "tipster_score": 76.8,
         "math_score": 72.4
-      }
+      },
+      "sale_closed": false
     },
     {
       "code": "周六016",
@@ -1152,7 +1186,8 @@
         "intel_score": 70.0,
         "tipster_score": 71.5,
         "math_score": 68.0
-      }
+      },
+      "sale_closed": false
     },
     {
       "code": "周六017",
@@ -1200,7 +1235,8 @@
         "intel_score": 70.0,
         "tipster_score": 71.5,
         "math_score": 68.0
-      }
+      },
+      "sale_closed": false
     },
     {
       "code": "周六018",
@@ -1248,7 +1284,8 @@
         "intel_score": 70.0,
         "tipster_score": 76.8,
         "math_score": 63.0
-      }
+      },
+      "sale_closed": false
     },
     {
       "code": "周六019",
@@ -1296,7 +1333,8 @@
         "intel_score": 72.7,
         "tipster_score": 82.5,
         "math_score": 76.8
-      }
+      },
+      "sale_closed": false
     },
     {
       "code": "周六020",
@@ -1344,7 +1382,8 @@
         "intel_score": 70.0,
         "tipster_score": 71.5,
         "math_score": 70.2
-      }
+      },
+      "sale_closed": false
     },
     {
       "code": "周六021",
@@ -1392,7 +1431,8 @@
         "intel_score": 70.0,
         "tipster_score": 71.5,
         "math_score": 72.4
-      }
+      },
+      "sale_closed": false
     },
     {
       "code": "周六022",
@@ -1440,7 +1480,8 @@
         "intel_score": 70.0,
         "tipster_score": 71.5,
         "math_score": 72.4
-      }
+      },
+      "sale_closed": false
     },
     {
       "code": "周六023",
@@ -1488,7 +1529,8 @@
         "intel_score": 74.2,
         "tipster_score": 76.8,
         "math_score": 74.6
-      }
+      },
+      "sale_closed": false
     },
     {
       "code": "周六024",
@@ -1536,7 +1578,8 @@
         "intel_score": 71.5,
         "tipster_score": 76.8,
         "math_score": 65.8
-      }
+      },
+      "sale_closed": false
     },
     {
       "code": "周六025",
@@ -1584,7 +1627,8 @@
         "intel_score": 71.5,
         "tipster_score": 76.8,
         "math_score": 68.0
-      }
+      },
+      "sale_closed": false
     },
     {
       "code": "周六026",
@@ -1632,7 +1676,8 @@
         "intel_score": 72.7,
         "tipster_score": 71.5,
         "math_score": 74.6
-      }
+      },
+      "sale_closed": false
     },
     {
       "code": "周六027",
@@ -1680,7 +1725,8 @@
         "intel_score": 70.0,
         "tipster_score": 71.5,
         "math_score": 72.4
-      }
+      },
+      "sale_closed": false
     },
     {
       "code": "周六028",
@@ -1728,7 +1774,8 @@
         "intel_score": 73.0,
         "tipster_score": 71.5,
         "math_score": 74.6
-      }
+      },
+      "sale_closed": false
     },
     {
       "code": "周六029",
@@ -1776,7 +1823,8 @@
         "intel_score": 70.0,
         "tipster_score": 71.5,
         "math_score": 72.4
-      }
+      },
+      "sale_closed": false
     },
     {
       "code": "周日003",
@@ -1824,7 +1872,8 @@
         "intel_score": 70.0,
         "tipster_score": 71.5,
         "math_score": 65.8
-      }
+      },
+      "sale_closed": false
     },
     {
       "code": "周日004",
@@ -1872,7 +1921,8 @@
         "intel_score": 70.0,
         "tipster_score": 74.2,
         "math_score": 72.4
-      }
+      },
+      "sale_closed": false
     },
     {
       "code": "周日005",
@@ -1920,7 +1970,8 @@
         "intel_score": 71.5,
         "tipster_score": 71.5,
         "math_score": 74.6
-      }
+      },
+      "sale_closed": false
     },
     {
       "code": "周日006",
@@ -1968,7 +2019,8 @@
         "intel_score": 70.0,
         "tipster_score": 71.5,
         "math_score": 65.8
-      }
+      },
+      "sale_closed": false
     },
     {
       "code": "周日010",
@@ -2016,7 +2068,8 @@
         "intel_score": 75.4,
         "tipster_score": 76.8,
         "math_score": 63.6
-      }
+      },
+      "sale_closed": false
     },
     {
       "code": "周日012",
@@ -2064,7 +2117,8 @@
         "intel_score": 71.5,
         "tipster_score": 76.8,
         "math_score": 68.0
-      }
+      },
+      "sale_closed": false
     },
     {
       "code": "周日016",
@@ -2112,7 +2166,8 @@
         "intel_score": 70.0,
         "tipster_score": 71.5,
         "math_score": 74.6
-      }
+      },
+      "sale_closed": false
     },
     {
       "code": "周日018",
@@ -2160,7 +2215,8 @@
         "intel_score": 73.0,
         "tipster_score": 71.5,
         "math_score": 74.6
-      }
+      },
+      "sale_closed": false
     }
   ]
 }
