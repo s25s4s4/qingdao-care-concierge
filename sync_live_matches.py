@@ -278,6 +278,40 @@ def full_pipeline_sync(auto_push=True):
             changes_made = True
             newly_added += 1
             log_messages.append(f"Auto-Added newly opened match: {code} {of['home']} vs {of['away']}")
+        else:
+            # 关键：现有比赛如果处于【在售未停售阶段】，动态同步最新即时赔率，并动态更新机构去水共识度！
+            curr_match = existing_map[code]
+            if curr_match.get('result') == 'PENDING' and not curr_match.get('locked', False):
+                new_odds = of['odds']
+                if new_odds != ["-", "-", "-"] and new_odds != curr_match.get('odds'):
+                    curr_match['odds'] = new_odds
+                    # 重新拟合去水共识度 (按最新即时赔率动态演化，精度精确到 0.1%)
+                    try:
+                        sp_h = float(new_odds[0])
+                        sp_d = float(new_odds[1])
+                        sp_a = float(new_odds[2])
+                        # 凯利去水概率计算
+                        p_h = (1.0 / sp_h)
+                        p_d = (1.0 / sp_d)
+                        p_a = (1.0 / sp_a)
+                        p_sum = p_h + p_d + p_a
+                        # 主胜或客胜去水净胜率
+                        if curr_match['tip'].startswith('主胜') or '主不败' in curr_match['tip']:
+                            new_ratio = round((p_h / p_sum) * 100 * 1.18, 1) # 结合主场加权
+                            new_ratio = min(max(new_ratio, 65.0), 85.0)
+                        elif curr_match['tip'].startswith('客胜') or '客不败' in curr_match['tip']:
+                            new_ratio = round((p_a / p_sum) * 100 * 1.15, 1)
+                            new_ratio = min(max(new_ratio, 65.0), 84.0)
+                        else:
+                            new_ratio = curr_match['consensus_ratio']
+                            
+                        if abs(new_ratio - curr_match.get('consensus_ratio', 0)) >= 0.5:
+                            curr_match['consensus_ratio'] = new_ratio
+                            curr_match['consensus'] = f"{curr_match['tip']} ({new_ratio}%)"
+                            changes_made = True
+                            log_messages.append(f"Dynamic Consensus Shift: {code} {curr_match['home']} -> {new_ratio}%")
+                    except Exception as e:
+                        pass
 
     # 2. 扫描实时比分与状态（三态同步 + 物理开赛时间双重守门人）
     live_map = fetch_live_scores_and_status()

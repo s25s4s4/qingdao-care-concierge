@@ -1193,20 +1193,39 @@
             const container = document.getElementById('consensus-container');
             container.innerHTML = '';
 
-            const sorted = [...ALL_OFFICIAL_MATCHES].sort((a, b) => b.consensus_ratio - a.consensus_ratio);
-            sorted.slice(0, 10).forEach((m, idx) => {
+            // 过滤：优先展示未完赛或进行中的焦点比赛（已完赛的降权）
+            const sorted = [...ALL_OFFICIAL_MATCHES].sort((a, b) => {
+                // 如果未完赛优先排前
+                if (a.result === 'PENDING' && b.result !== 'PENDING') return -1;
+                if (a.result !== 'PENDING' && b.result === 'PENDING') return 1;
+                return b.consensus_ratio - a.consensus_ratio;
+            });
+
+            sorted.slice(0, 12).forEach((m, idx) => {
                 const card = document.createElement('div');
                 card.className = 'consensus-rank-card';
+                card.onclick = () => openDetail(m.code, m.home, m.away, m.league, m.analysis);
+                
+                // 状态指示标
+                let statusBadge = '';
+                if (m.result === 'HIT') statusBadge = '<span style="color:#3fb950; font-size:11px; font-weight:700;">✔ 已打出验证</span>';
+                else if (m.result === 'MISS') statusBadge = '<span style="color:#f85149; font-size:11px; font-weight:700;">✖ 爆冷未中</span>';
+                else if (m.status.includes('进行中')) statusBadge = '<span style="color:#ef4444; font-size:11px; font-weight:800; animation: pulse 1.2s infinite;">🔴 正在实况中</span>';
+                else statusBadge = '<span style="color:#d29922; font-size:11px; font-weight:700;">⚡ 机构聚资中</span>';
+
+                const ratioDisplay = typeof m.consensus_ratio === 'number' ? m.consensus_ratio.toFixed(1) : m.consensus_ratio;
+
                 card.innerHTML = `
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
                         <div>
                             <span class="rank-badge ${idx < 3 ? 'rank-top' : ''}">${idx + 1}</span>
-                            <span style="font-size: 14px; font-weight: 700;">${m.code} ${m.home} VS ${m.away}</span>
+                            <span style="font-size: 14px; font-weight: 800; color: var(--text-primary);">${m.code} ${m.home} VS ${m.away}</span>
                         </div>
-                        <span style="font-size: 14px; font-weight: 800; font-family: var(--font-mono); color: #3fb950;">${m.consensus_ratio}.0% 共识</span>
+                        <span style="font-size: 15px; font-weight: 800; font-family: var(--font-mono); color: #3fb950;">${ratioDisplay}% 共识</span>
                     </div>
-                    <div style="font-size: 12px; color: var(--text-secondary); margin-bottom: 8px;">
-                        核心研判：<b>${m.tip}</b> · ${m.league} (${m.time})
+                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 11px; color: var(--text-secondary); margin-bottom: 8px;">
+                        <div>核心研判：<b style="color: #58a6ff;">${m.tip}</b> · ${m.league} (${m.time})</div>
+                        <div>${statusBadge}</div>
                     </div>
                     <div class="bar-track">
                         <div class="bar-fill-home" style="width: ${m.consensus_ratio}%;"></div>
