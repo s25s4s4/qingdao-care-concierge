@@ -1,158 +1,22 @@
 {
-  "updated_at": "2026-10-16 23:44:04",
+  "updated_at": "2026-10-16 23:59:53",
   "total_tips": 60,
-  "db_total_count": 911,
-  "channel_stats": [
-    {
-      "channel": "feedinco",
-      "count": 101
-    },
-    {
-      "channel": "eaglepredict",
-      "count": 99
-    },
-    {
-      "channel": "victorspredict",
-      "count": 78
-    },
-    {
-      "channel": "focuspredict",
-      "count": 40
-    },
-    {
-      "channel": "FabrizioRomano",
-      "count": 33
-    },
-    {
-      "channel": "footballbettingtips10",
-      "count": 23
-    },
-    {
-      "channel": "iskocyalitahminpaylasimi",
-      "count": 22
-    },
-    {
-      "channel": "freakbets",
-      "count": 21
-    },
-    {
-      "channel": "calciomercato",
-      "count": 21
-    },
-    {
-      "channel": "simyacitips",
-      "count": 20
-    },
-    {
-      "channel": "predictobets",
-      "count": 20
-    },
-    {
-      "channel": "matchplug",
-      "count": 20
-    },
-    {
-      "channel": "letalbets",
-      "count": 20
-    },
-    {
-      "channel": "ibettingxx",
-      "count": 20
-    },
-    {
-      "channel": "golazzoofficial",
-      "count": 20
-    },
-    {
-      "channel": "goalmastersai",
-      "count": 20
-    },
-    {
-      "channel": "gb_sure_tips",
-      "count": 20
-    },
-    {
-      "channel": "betopickglobal",
-      "count": 20
-    },
-    {
-      "channel": "betiper_official",
-      "count": 20
-    },
-    {
-      "channel": "apuestasdeportivas",
-      "count": 20
-    },
-    {
-      "channel": "TipstrrTips",
-      "count": 20
-    },
-    {
-      "channel": "Free365Tips",
-      "count": 20
-    },
-    {
-      "channel": "BetAlertsKE",
-      "count": 20
-    },
-    {
-      "channel": "pensadordeapuestas",
-      "count": 19
-    },
-    {
-      "channel": "betminesfootballpredictions",
-      "count": 19
-    },
-    {
-      "channel": "OptaStats",
-      "count": 18
-    },
-    {
-      "channel": "brunooknows",
-      "count": 17
-    },
-    {
-      "channel": "komboanalysisandprediction",
-      "count": 16
-    },
-    {
-      "channel": "dimarzio",
-      "count": 16
-    },
-    {
-      "channel": "OptaAnalyst",
-      "count": 16
-    },
-    {
-      "channel": "bad_man_betting_tips",
-      "count": 15
-    },
-    {
-      "channel": "wins_100s",
-      "count": 14
-    },
-    {
-      "channel": "Upper90TipsFree",
-      "count": 14
-    },
-    {
-      "channel": "Opresiibet",
-      "count": 14
-    },
-    {
-      "channel": "surewins",
-      "count": 7
-    },
-    {
-      "channel": "bulletbetpredictions",
-      "count": 7
-    },
-    {
-      "channel": "matchpick",
-      "count": 1
-    }
-  ],
+  "db_total_count": 913,
   "live_feed": [
+    {
+      "id": 913,
+      "channel": "footballbettingtips10",
+      "time": "2026-10-16T15:59:19+00:00",
+      "type": "text_and_photo",
+      "text": "BOOOOOOOOOMMM! One step closer to the £1,000 by Sunday !"
+    },
+    {
+      "id": 912,
+      "channel": "footballbettingtips10",
+      "time": "2026-10-16T15:53:48+00:00",
+      "type": "text_and_photo",
+      "text": "🚨 BET 1 🚨 🎁 £30.00 IN FREE BETS FROM MIDNITE ! ✅ £25 to £1,000 by Sunday!! 👉 SIGN UP NOW : https://bit.ly/MidniteNewOffer ✅ Baniyas vs Al Wasl ✅ Selection : Over 0.5 1h goals ✅ Stake : £25 Make sure you are on MIDNITE ➡️ https://bit.ly/MidniteNewOffer"
+    },
     {
       "id": 911,
       "channel": "freakbets",
@@ -558,20 +422,6 @@
       "time": "2026-09-19T12:08:37+00:00",
       "type": "text_and_photo",
       "text": "La Liga Osasuna - Rayo Vallecano Más de 5.5 tarjetas Cuota: 2.05 Stake: 1.5 Casa: Winamax Cuota mínima: 1.95 Alternativas: Disponible en la mayoria de casas de apuestas"
-    },
-    {
-      "id": 853,
-      "channel": "surewins",
-      "time": "2026-10-16T10:14:11+00:00",
-      "type": "text_and_photo",
-      "text": "🔥 REAL TESTIMONIALS. REAL RESULTS. REAL MONEY 🔥 I’m honestly blown away by what VIP members are achieving right now. People who started with small steps are now living big — securing apartments, driving their dream cars, owning beautiful homes, and traveling without thinking twice. This is not luck, this is what happens when you plug into something"
-    },
-    {
-      "id": 852,
-      "channel": "surewins",
-      "time": "2026-10-16T06:15:14+00:00",
-      "type": "text_and_photo",
-      "text": "🚨 VIP GAME READY! 🚨 Only ONE mega ticket today — the kind of single-game magic that VIPs live for! 💎 🔥 💰 Stake high, watch your winnings skyrocket! Every VIP already knows: we drop one ticket per day , pure precision, pure profit. 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 ⏳ Seats are limited — want in today? DM us for VIP payment details NOW or risk missing today’s golden"
     }
   ]
 }
