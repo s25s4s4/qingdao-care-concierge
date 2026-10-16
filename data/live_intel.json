@@ -1,7 +1,17 @@
 {
-  "updated_at": "2026-10-17 03:31:16",
-  "total_tips": 15,
+  "updated_at": "2026-10-17 05:06:57",
+  "total_tips": 16,
   "live_feed": [
+    {
+      "id": 973,
+      "channel": "betopickglobal",
+      "time": "2026-10-17 04:59",
+      "code": "周六007",
+      "league": "英超",
+      "category": "赛前军情",
+      "match": "埃弗顿 VS 切尔西",
+      "chinese": "英超埃弗顿主场迎战切尔西。机构开出客胜二点二二低位，明显高看蓝军一线。太妃糖主场防守强硬，核心矛盾在切尔西客场破密集防守的效率，客胜稍热需防平局。"
+    },
     {
       "id": 932,
       "channel": "footballbettingtips10",
