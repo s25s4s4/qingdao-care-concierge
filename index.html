@@ -1193,13 +1193,30 @@
             const container = document.getElementById('consensus-container');
             container.innerHTML = '';
 
-            // 过滤：优先展示未完赛或进行中的焦点比赛（已完赛的降权）
-            const sorted = [...ALL_OFFICIAL_MATCHES].sort((a, b) => {
-                // 如果未完赛优先排前
-                if (a.result === 'PENDING' && b.result !== 'PENDING') return -1;
-                if (a.result !== 'PENDING' && b.result === 'PENDING') return 1;
-                return b.consensus_ratio - a.consensus_ratio;
+            const now = new Date();
+            const nowMonth = (now.getMonth() + 1).toString().padStart(2, '0');
+            const nowDate = now.getDate().toString().padStart(2, '0');
+            const nowHours = now.getHours().toString().padStart(2, '0');
+            const nowMinutes = now.getMinutes().toString().padStart(2, '0');
+            const nowTimeStr = `${nowMonth}-${nowDate} ${nowHours}:${nowMinutes}`;
+
+            // 严格业务铁律：共识榜单是【打票决策榜】，开赛后与停售后的比赛一律不得进入榜单！
+            const activePreGameMatches = ALL_OFFICIAL_MATCHES.filter(m => {
+                // 1. 排除已完赛与进行中的比赛
+                if (m.result !== 'PENDING') return false;
+                if (m.status.includes('进行中') || m.status.includes('已完赛') || m.status.includes('半场')) return false;
+                
+                // 2. 排除已经到达或超过开赛时间的比赛
+                if (m.time && m.time <= nowTimeStr) return false;
+                
+                // 3. 排除已经被标记为停售锁定的比赛
+                if (m.sale_closed || m.locked) return false;
+                
+                return true;
             });
+
+            // 按四维全息综合共识度降序排列
+            const sorted = activePreGameMatches.sort((a, b) => b.consensus_ratio - a.consensus_ratio);
 
             sorted.slice(0, 12).forEach((m, idx) => {
                 const card = document.createElement('div');
