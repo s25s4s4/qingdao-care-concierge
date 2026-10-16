@@ -119,7 +119,7 @@ def fetch_official_lottery_pool():
     return pool_fixtures
 
 def fetch_live_scores():
-    """从比分网获取真实完场赛果"""
+    """从官方比分网获取真实完场赛果（严格采用状态'完'+最终比分双重检验）"""
     url = "https://live.500.com/"
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"})
     live_map = {}
@@ -131,12 +131,20 @@ def fetch_live_scores():
                 code_m = re.search(r'(周[一二三四五六日]\d{3})', tr)
                 if code_m:
                     code = code_m.group(1)
-                    score_m = re.search(r'class="red">([0-9\s\-]+)</td>', tr)
-                    score = score_m.group(1).replace(' ', '') if score_m else '--'
-                    is_fin = ('完' in tr) or (score != '--' and score != '-' and score != '')
+                    tds = re.findall(r'<td[^>]*>(.*?)</td>', tr, re.DOTALL)
+                    status_text = tds[4] if len(tds) > 4 else ''
+                    clean_status = re.sub(r'<[^>]+>', '', status_text).strip()
+                    
+                    # 匹配物理完场最终全场比分
+                    final_score_m = re.search(r'<td[^>]*class="[^"]*red[^"]*"[^>]*>\s*([0-9]+\s*-\s*[0-9]+)\s*</td>', tr)
+                    score = final_score_m.group(1).replace(' ', '') if final_score_m else '--'
+                    
+                    # 双重硬门控：状态必须明确包含'完'，且比分必须是有效数字比分！进行中的半场比分绝不误判为完场
+                    is_truly_finished = ('完' in clean_status) and (score != '--') and ('-' in score)
+                    
                     live_map[code] = {
-                        'score': score if score != '-' else '--',
-                        'is_finished': is_fin
+                        'score': score,
+                        'is_finished': is_truly_finished
                     }
     except Exception as e:
         print(f"[{datetime.now()}] Error fetching live scores: {e}")
