@@ -1,7 +1,77 @@
 {
-  "updated_at": "2026-10-17 01:25:00",
-  "total": 43,
+  "updated_at": "2026-10-17 01:40:00",
+  "total": 45,
   "matches": [
+    {
+      "code": "周五001",
+      "league": "澳超",
+      "time": "10-16 17:00",
+      "home": "悉尼FC",
+      "away": "西悉尼",
+      "home_rank": "-",
+      "away_rank": "-",
+      "status": "已完赛",
+      "form_home": [
+        "W",
+        "D",
+        "W",
+        "L",
+        "D"
+      ],
+      "form_away": [
+        "D",
+        "W",
+        "L",
+        "W",
+        "W"
+      ],
+      "odds": [
+        "1.85",
+        "3.60",
+        "3.45"
+      ],
+      "consensus": "主不败 (72%)",
+      "consensus_ratio": 72,
+      "tip": "主不败/防平",
+      "score": "0-0",
+      "result": "HIT",
+      "analysis": "悉尼同城德比揭幕战，悉尼FC休赛期引援磨合稍占优势，西悉尼打法强硬立足稳守反击，首选主队不败防闷平。"
+    },
+    {
+      "code": "周五002",
+      "league": "德乙",
+      "time": "10-17 00:30",
+      "home": "科特布斯",
+      "away": "纽伦堡",
+      "home_rank": "[08]",
+      "away_rank": "[02]",
+      "status": "进行中",
+      "form_home": [
+        "W",
+        "D",
+        "L",
+        "W",
+        "W"
+      ],
+      "form_away": [
+        "W",
+        "W",
+        "D",
+        "L",
+        "W"
+      ],
+      "odds": [
+        "2.20",
+        "3.45",
+        "2.75"
+      ],
+      "consensus": "双方进球/主不败 (68%)",
+      "consensus_ratio": 68,
+      "tip": "双方进球/主不败",
+      "score": "--",
+      "result": "PENDING",
+      "analysis": "科特布斯主场进攻火力极具侵略性，纽伦堡反击速率全德乙名列前茅，双方对攻节奏快，首选双方进球与主队不败。"
+    },
     {
       "code": "周五003",
       "league": "瑞超",
