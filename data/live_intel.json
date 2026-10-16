@@ -1,0 +1,577 @@
+{
+  "updated_at": "2026-10-16 23:44:04",
+  "total_tips": 60,
+  "db_total_count": 911,
+  "channel_stats": [
+    {
+      "channel": "feedinco",
+      "count": 101
+    },
+    {
+      "channel": "eaglepredict",
+      "count": 99
+    },
+    {
+      "channel": "victorspredict",
+      "count": 78
+    },
+    {
+      "channel": "focuspredict",
+      "count": 40
+    },
+    {
+      "channel": "FabrizioRomano",
+      "count": 33
+    },
+    {
+      "channel": "footballbettingtips10",
+      "count": 23
+    },
+    {
+      "channel": "iskocyalitahminpaylasimi",
+      "count": 22
+    },
+    {
+      "channel": "freakbets",
+      "count": 21
+    },
+    {
+      "channel": "calciomercato",
+      "count": 21
+    },
+    {
+      "channel": "simyacitips",
+      "count": 20
+    },
+    {
+      "channel": "predictobets",
+      "count": 20
+    },
+    {
+      "channel": "matchplug",
+      "count": 20
+    },
+    {
+      "channel": "letalbets",
+      "count": 20
+    },
+    {
+      "channel": "ibettingxx",
+      "count": 20
+    },
+    {
+      "channel": "golazzoofficial",
+      "count": 20
+    },
+    {
+      "channel": "goalmastersai",
+      "count": 20
+    },
+    {
+      "channel": "gb_sure_tips",
+      "count": 20
+    },
+    {
+      "channel": "betopickglobal",
+      "count": 20
+    },
+    {
+      "channel": "betiper_official",
+      "count": 20
+    },
+    {
+      "channel": "apuestasdeportivas",
+      "count": 20
+    },
+    {
+      "channel": "TipstrrTips",
+      "count": 20
+    },
+    {
+      "channel": "Free365Tips",
+      "count": 20
+    },
+    {
+      "channel": "BetAlertsKE",
+      "count": 20
+    },
+    {
+      "channel": "pensadordeapuestas",
+      "count": 19
+    },
+    {
+      "channel": "betminesfootballpredictions",
+      "count": 19
+    },
+    {
+      "channel": "OptaStats",
+      "count": 18
+    },
+    {
+      "channel": "brunooknows",
+      "count": 17
+    },
+    {
+      "channel": "komboanalysisandprediction",
+      "count": 16
+    },
+    {
+      "channel": "dimarzio",
+      "count": 16
+    },
+    {
+      "channel": "OptaAnalyst",
+      "count": 16
+    },
+    {
+      "channel": "bad_man_betting_tips",
+      "count": 15
+    },
+    {
+      "channel": "wins_100s",
+      "count": 14
+    },
+    {
+      "channel": "Upper90TipsFree",
+      "count": 14
+    },
+    {
+      "channel": "Opresiibet",
+      "count": 14
+    },
+    {
+      "channel": "surewins",
+      "count": 7
+    },
+    {
+      "channel": "bulletbetpredictions",
+      "count": 7
+    },
+    {
+      "channel": "matchpick",
+      "count": 1
+    }
+  ],
+  "live_feed": [
+    {
+      "id": 911,
+      "channel": "freakbets",
+      "time": "2026-10-16T15:27:38+00:00",
+      "type": "text_and_photo",
+      "text": "💰 💰 💰 💰 EVENING FRIDAY TICKETS LOADED 🔥 🚨 🚨 🚨 🚨 🚨 🏀 2.18 EuroLeague Parlay 🔥 ⚽️ 2.00 Odds 🚨 🚨 🚨 🚨 🚨 ⚽️ 1.67 Odds ⚽️ 1.53 Odds Top League games from Football to Europiean Basketball, everything INSIDE 📲 GET ELITE VIP @freakbets_bot"
+    },
+    {
+      "id": 910,
+      "channel": "calciomercato",
+      "time": "2026-10-16T15:09:32+00:00",
+      "type": "text_and_photo",
+      "text": "🏆 Il palinsesto della 7ª Giornata di Serie A. 🤔 Secondo voi come finiranno questi match? Fate la vostra prediction nei commenti! ⚽️ @CalcioMercato"
+    },
+    {
+      "id": 909,
+      "channel": "dimarzio",
+      "time": "2026-10-15T07:03:35+00:00",
+      "type": "text_and_photo",
+      "text": "AC Milan, Pavlovic extends his contract until 2031 with an option to extend. @Dimarzio"
+    },
+    {
+      "id": 908,
+      "channel": "dimarzio",
+      "time": "2026-10-15T06:45:41+00:00",
+      "type": "text_and_photo",
+      "text": "UCL , MatchDay2 @Dimarzio"
+    },
+    {
+      "id": 907,
+      "channel": "dimarzio",
+      "time": "2026-10-13T03:32:28+00:00",
+      "type": "text_and_photo",
+      "text": "Ligue1 , MatchDay6 @Dimarzio"
+    },
+    {
+      "id": 906,
+      "channel": "dimarzio",
+      "time": "2026-10-13T03:15:01+00:00",
+      "type": "text_and_photo",
+      "text": "Bundesliga , MatchDay5 @Dimarzio"
+    },
+    {
+      "id": 905,
+      "channel": "dimarzio",
+      "time": "2026-10-13T03:04:19+00:00",
+      "type": "text_and_photo",
+      "text": "Laliga , MatchDay8 @Dimarzio"
+    },
+    {
+      "id": 904,
+      "channel": "dimarzio",
+      "time": "2026-10-13T02:45:01+00:00",
+      "type": "text_and_photo",
+      "text": "PremierLeague , MatchDay 6 @Dimarzio"
+    },
+    {
+      "id": 903,
+      "channel": "dimarzio",
+      "time": "2026-10-13T02:31:42+00:00",
+      "type": "text_and_photo",
+      "text": "SerieA , MatchDay6 @Dimarzio"
+    },
+    {
+      "id": 902,
+      "channel": "dimarzio",
+      "time": "2026-10-11T16:45:16+00:00",
+      "type": "text_and_photo",
+      "text": "Clarence Seedorf is the new coach of Corinthias . He returns to the bench after his stint as Cameroon coach in 2019. @Dimarzio"
+    },
+    {
+      "id": 901,
+      "channel": "dimarzio",
+      "time": "2026-10-09T14:31:10+00:00",
+      "type": "text_and_photo",
+      "text": "New adventure for Joselu : he is a new player for Al Sailiya . @Dimarzio"
+    },
+    {
+      "id": 900,
+      "channel": "dimarzio",
+      "time": "2026-10-09T14:15:04+00:00",
+      "type": "text_and_photo",
+      "text": "Douvikas 'contract renewal with Como is complete: new contract through 2030 @Dimarzio"
+    },
+    {
+      "id": 899,
+      "channel": "dimarzio",
+      "time": "2026-10-08T16:45:10+00:00",
+      "type": "text_and_photo",
+      "text": "Granit Xhaka has been sentenced. The Swiss midfielder has been suspended for two years and fined £136,265 for falsifying Covid-19 certificates. @Dimarzio"
+    },
+    {
+      "id": 898,
+      "channel": "dimarzio",
+      "time": "2026-10-08T15:55:00+00:00",
+      "type": "text_and_photo",
+      "text": "It's now official: Matteo Darmian is a new Bologna player. The former Nerazzurri defender joins Palladino's team after reaching an agreement with the management until June 2027. @Dimarzio"
+    },
+    {
+      "id": 897,
+      "channel": "dimarzio",
+      "time": "2026-10-06T16:30:24+00:00",
+      "type": "text_and_photo",
+      "text": "Dani Carvajal will be a new Getafe player. The Spanish club's president, Ángel Torres , confirmed this to DAZN Spain , stating that the former Real Madrid player \" has passed his medical. He will arrive this afternoon .\" @Dimarzio"
+    },
+    {
+      "id": 896,
+      "channel": "dimarzio",
+      "time": "2026-10-06T14:15:05+00:00",
+      "type": "text",
+      "text": "GOLDEN BOY 2026, THE FINALISTS - 25 footballers will compete for the award for best young player of the year , 20 selected based on the Golden Boy Index and 5 wild cards. The 20 youngsters are: 1. Diomande (Real Madrid) 2. Cubarsì (Barcelona) 3. Bouaddi (Manchester City) 4. Estevao (Chelsea) 5. Zaire-Emery (PSG) 6. Kroupi (Bournemouth) 7. Karl (Bay"
+    },
+    {
+      "id": 895,
+      "channel": "dimarzio",
+      "time": "2026-10-03T17:01:03+00:00",
+      "type": "text_and_photo",
+      "text": "Bologna and Matteo Darmian are working on the final formal details of the contract that will bind the former Inter defender to the Rossoblu. @Dimarzio"
+    },
+    {
+      "id": 894,
+      "channel": "dimarzio",
+      "time": "2026-09-27T16:33:56+00:00",
+      "type": "text_and_photo",
+      "text": "Giorgio Scalvini renews his contract with Atalanta until 2031: The defender has extended his contract with the Nerazzurri, as stated in the club's official statement. Born in 2003, Scalvini developed in the Bergamo youth academy from the age of 12, and has already made over 100 appearances for the first team. @Dimarzio"
+    },
+    {
+      "id": 893,
+      "channel": "calciomercato",
+      "time": "2026-10-16T13:30:28+00:00",
+      "type": "text_and_photo",
+      "text": "🚑 ⚫ Altro Infortunio in casa Inter : Benjamin Pavard ha riportato un risentimento agli adduttori della coscia destra. ❌ Il centrale francese rimarrà fuori per almeno 20 giorni. ⚽️ @CalcioMercato"
+    },
+    {
+      "id": 892,
+      "channel": "calciomercato",
+      "time": "2026-10-16T13:03:04+00:00",
+      "type": "text_and_photo",
+      "text": "🚑 ⚫ Franck Kessié ha riportato una distrazione di basso grado al polpaccio. ❌ Salterà sicuramente la sfida contro il Milan . ⚽️ @CalcioMercato"
+    },
+    {
+      "id": 891,
+      "channel": "calciomercato",
+      "time": "2026-10-16T12:01:16+00:00",
+      "type": "text_and_photo",
+      "text": "🚑 🟡 INFORTUNI ROMA: ‼️ Manu Koné ha riportato una lesione muscolare di primo grado, l’obiettivo è recuperarlo prima dell’arrivo della sosta di Novembre . ✔️ Per Paulo Dybala invece non c’è alcuna lesione, si spera di recuperare l’argentino già per la prossima settimana. ⚽️ @CalcioMercato"
+    },
+    {
+      "id": 890,
+      "channel": "calciomercato",
+      "time": "2026-10-16T11:35:58+00:00",
+      "type": "text_and_photo",
+      "text": "📺 Netflix entra nel mondo dei Mondiali: acquisiti i diritti esclusivi per trasmettere tutte le 104 partite dell'edizione 2030 in Spagna e Andorra . ⚽️ @CalcioMercato"
+    },
+    {
+      "id": 889,
+      "channel": "calciomercato",
+      "time": "2026-10-16T10:17:33+00:00",
+      "type": "text_and_photo",
+      "text": "📊 Il Ranking attuale per lo slot extra per la Uefa Champions League . ⚽️ @CalcioMercato"
+    },
+    {
+      "id": 888,
+      "channel": "calciomercato",
+      "time": "2026-10-16T08:00:09+00:00",
+      "type": "text_and_photo",
+      "text": "🚨 La ricostruzione del caso Conceição - Spalletti : ‼️ ⚪ Conceição ha lasciato il campo molto arrabbiato, ha avuto una discussione con uno dei membri dello staff di Spalletti e ha sferrato un pugno alla sedia della panchina. Alla fine si è diretto dritto negli spogliatoi. Luciano Spalletti ha commentato cosi l’accaduto: \"A Conceição gli conviene es"
+    },
+    {
+      "id": 887,
+      "channel": "calciomercato",
+      "time": "2026-10-15T20:55:15+00:00",
+      "type": "text_and_photo",
+      "text": "🇪🇺 UEFA CONFERENCE LEAGUE 🇪🇺 1ª Giornata FINE GARA ⚫ Atalanta 3-1 Pafos 👤 1’ E. Elmas (G. Raspadori ) (1-0) 18’ G. Raspadori ( Rigore ) (2-0) 44’ G. Scamacca (C. De Ketelaere ) (3-0) 88’ Biel (A. Silva ) (3-1) ⚽️ @CalcioMercato"
+    },
+    {
+      "id": 886,
+      "channel": "calciomercato",
+      "time": "2026-10-15T20:54:14+00:00",
+      "type": "text_and_photo",
+      "text": "🇪🇺 UEFA EUROPA LEAGUE 🇪🇺 2ª Giornata FINE GARA 🔴 Celta Vigo 1-2 Juventus ⚪ 18' H. Alvarez (W. Swedberg ) (1-0) 58' N. Woltemade (-) (1-1) 92' R. Kolo Muani (A. Cambiaso ) (1-2) ⚽️ @CalcioMercato"
+    },
+    {
+      "id": 885,
+      "channel": "calciomercato",
+      "time": "2026-10-15T20:52:12+00:00",
+      "type": "text_and_photo",
+      "text": "🇪🇺 UEFA EUROPA LEAGUE 🇪🇺 2ª Giornata GOAL 🔴 Celta Vigo 1-2 Juventus ⚪ ⚽️ R. Kolo Muani 👟 A. Cambiaso ⏱️ 92' ⚽️ @CalcioMercato"
+    },
+    {
+      "id": 884,
+      "channel": "calciomercato",
+      "time": "2026-10-15T20:49:09+00:00",
+      "type": "text_and_photo",
+      "text": "🇪🇺 UEFA CONFERENCE LEAGUE 🇪🇺 1ª Giornata GOAL ⚫ Atalanta 3-1 Pafos 👤 ⚽️ Biel 👟 A. Silva ⏱️ 88’ ⚽️ @CalcioMercato"
+    },
+    {
+      "id": 883,
+      "channel": "calciomercato",
+      "time": "2026-10-15T20:17:43+00:00",
+      "type": "text_and_photo",
+      "text": "🇪🇺 UEFA EUROPA LEAGUE 🇪🇺 2ª Giornata GOAL 🔴 Celta Vigo 1-1 Juventus ⚪ ⚽️ N. Woltemade 👟 - ⏱️ 58' ⚽️ @CalcioMercato"
+    },
+    {
+      "id": 882,
+      "channel": "calciomercato",
+      "time": "2026-10-15T20:05:32+00:00",
+      "type": "text_and_photo",
+      "text": "🇪🇺 UEFA CONFERENCE LEAGUE 🇪🇺 1ª Giornata INIZIO SECONDO TEMPO ⚫ Atalanta 3-0 Pafos 👤 1’ E. Elmas (G. Raspadori ) (1-0) 18’ G. Raspadori ( Rigore ) (2-0) 44’ G. Scamacca (C. De Ketelaere ) (3-0) ⚽️ @CalcioMercato"
+    },
+    {
+      "id": 881,
+      "channel": "calciomercato",
+      "time": "2026-10-15T20:04:31+00:00",
+      "type": "text_and_photo",
+      "text": "🇪🇺 UEFA EUROPA LEAGUE 🇪🇺 2ª Giornata INIZIO SECONDO TEMPO 🔴 Celta Vigo 1-0 Juventus ⚪ 18' H. Alvarez (W. Swedberg ) (1-0) ⚽️ @CalcioMercato"
+    },
+    {
+      "id": 880,
+      "channel": "calciomercato",
+      "time": "2026-10-15T19:49:19+00:00",
+      "type": "text_and_photo",
+      "text": "🇪🇺 UEFA CONFERENCE LEAGUE 🇪🇺 1ª Giornata FINE PRIMO TEMPO ⚫ Atalanta 3-0 Pafos 👤 1’ E. Elmas (G. Raspadori ) (1-0) 18’ G. Raspadori ( Rigore ) (2-0) 44’ G. Scamacca (C. De Ketelaere ) (3-0) ⚽️ @CalcioMercato"
+    },
+    {
+      "id": 879,
+      "channel": "calciomercato",
+      "time": "2026-10-15T19:49:18+00:00",
+      "type": "text_and_photo",
+      "text": "🇪🇺 UEFA EUROPA LEAGUE 🇪🇺 2ª Giornata FINE PRIMO TEMPO 🔴 Celta Vigo 1-0 Juventus ⚪ 18' H. Alvarez (W. Swedberg ) (1-0) ⚽️ @CalcioMercato"
+    },
+    {
+      "id": 878,
+      "channel": "calciomercato",
+      "time": "2026-10-15T19:46:15+00:00",
+      "type": "text_and_photo",
+      "text": "🇪🇺 UEFA CONFERENCE LEAGUE 🇪🇺 1ª Giornata GOAL ⚫ Atalanta 3-0 Pafos 👤 ⚽️ G. Scamacca 👟 C. De Ketelaere ⏱️ 44’ ⚽️ @CalcioMercato"
+    },
+    {
+      "id": 877,
+      "channel": "calciomercato",
+      "time": "2026-10-15T19:20:53+00:00",
+      "type": "text_and_photo",
+      "text": "🇪🇺 UEFA EUROPA LEAGUE 🇪🇺 2ª Giornata GOAL 🔴 Celta Vigo 1-0 Juventus ⚪ ⚽️ H. Alvarez 👟 W. Swedberg ⏱️ 18' ⚽️ @CalcioMercato"
+    },
+    {
+      "id": 876,
+      "channel": "calciomercato",
+      "time": "2026-10-15T19:20:52+00:00",
+      "type": "text_and_photo",
+      "text": "🇪🇺 UEFA CONFERENCE LEAGUE 🇪🇺 1ª Giornata GOAL ⚫ Atalanta 2-0 Pafos 👤 ⚽️ G. Raspadori ( Rigore ) 👟 - ⏱️ 18’ ⚽️ @CalcioMercato"
+    },
+    {
+      "id": 875,
+      "channel": "calciomercato",
+      "time": "2026-10-15T19:03:38+00:00",
+      "type": "text_and_photo",
+      "text": "🇪🇺 UEFA CONFERENCE LEAGUE 🇪🇺 1ª Giornata GOAL ⚫ Atalanta 1-0 Pafos 👤 ⚽️ E. Elmas 👟 G. Raspadori ⏱️ 1’ ⚽️ @CalcioMercato"
+    },
+    {
+      "id": 874,
+      "channel": "calciomercato",
+      "time": "2026-10-15T19:02:38+00:00",
+      "type": "text_and_photo",
+      "text": "🇪🇺 UEFA EUROPA LEAGUE 🇪🇺 2ª Giornata INIZIO GARA 🔴 Celta Vigo - Juventus ⚪ ⚽️ @CalcioMercato"
+    },
+    {
+      "id": 873,
+      "channel": "letalbets",
+      "time": "2026-10-14T08:20:38+00:00",
+      "type": "text_and_photo",
+      "text": "‌ 💡 ¡Nueva Apuesta! 💡 Champions League: Villarreal – Nápoles https://www.pensadordeapuestas.com/champions-league-villarreal-napoles/ Tipster: Letalbets"
+    },
+    {
+      "id": 872,
+      "channel": "letalbets",
+      "time": "2026-10-13T10:29:12+00:00",
+      "type": "text_and_photo",
+      "text": "‌ 💡 ¡Nueva Apuesta! 💡 Champions League: Villarreal – Nápoles https://www.pensadordeapuestas.com/champions-league-villarreal-napoles/ Tipster: Letalbets"
+    },
+    {
+      "id": 871,
+      "channel": "letalbets",
+      "time": "2026-10-13T10:25:09+00:00",
+      "type": "text_and_photo",
+      "text": "‌ 💡 ¡Nueva Apuesta! 💡 Champions League: Villarreal – Nápoles https://www.pensadordeapuestas.com/champions-league-villarreal-napoles/ Tipster: Letalbets"
+    },
+    {
+      "id": 870,
+      "channel": "letalbets",
+      "time": "2026-10-13T10:22:28+00:00",
+      "type": "text_and_photo",
+      "text": "Nueva apuesta en 2 minutos"
+    },
+    {
+      "id": 869,
+      "channel": "letalbets",
+      "time": "2026-10-10T18:14:57+00:00",
+      "type": "text_and_photo",
+      "text": "La Liga Alavés - Atlético de Madrid Más de 4.5 tarjetas Cuota: 1.84 Stake: 1.5 Casa: Retabet Cuota mínima: 1.70 Alternativas: @1.95 Bet365, @1.90 888sport, @1.88 Pinnacle, @1.85 Sportium, Kirolbet y Luckia, @1.82 Codere y @1.80 Winamax"
+    },
+    {
+      "id": 868,
+      "channel": "letalbets",
+      "time": "2026-10-09T16:12:37+00:00",
+      "type": "text_and_photo",
+      "text": "La Liga Alavés - Atlético de Madrid Más de 4.5 tarjetas Cuota: 1.84 Stake: 1.5 Casa: Retabet Cuota mínima: 1.70 Alternativas: @1.95 Bet365, @1.90 888sport, @1.88 Pinnacle, @1.85 Sportium, Kirolbet y Luckia, @1.82 Codere y @1.80 Winamax"
+    },
+    {
+      "id": 867,
+      "channel": "letalbets",
+      "time": "2026-10-09T16:09:57+00:00",
+      "type": "text_and_photo",
+      "text": "Nueva apuesta en 2 minutos"
+    },
+    {
+      "id": 866,
+      "channel": "letalbets",
+      "time": "2026-10-03T15:13:04+00:00",
+      "type": "text_and_photo",
+      "text": "Segunda División Albacete - Eibar Más de 5.5 tarjetas Cuota: 2.07 Stake: 1 Casa: Retabet Cuota mínima: 1.92 Alternativas: @2.25 888sport, @2.10 Codere, Luckia y Bet365, @2.05 Winamax, Sportium y Kirolbet y @2.04 Pinnacle"
+    },
+    {
+      "id": 865,
+      "channel": "letalbets",
+      "time": "2026-10-03T09:32:56+00:00",
+      "type": "text_and_photo",
+      "text": "Segunda División Albacete - Eibar Más de 5.5 tarjetas Cuota: 2.07 Stake: 1 Casa: Retabet Cuota mínima: 1.92 Alternativas: @2.25 888sport, @2.10 Codere, Luckia y Bet365, @2.05 Winamax, Sportium y Kirolbet y @2.04 Pinnacle"
+    },
+    {
+      "id": 864,
+      "channel": "letalbets",
+      "time": "2026-10-03T09:29:20+00:00",
+      "type": "text_and_photo",
+      "text": "Nueva apuesta en 2 minutos"
+    },
+    {
+      "id": 863,
+      "channel": "letalbets",
+      "time": "2026-10-01T10:37:50+00:00",
+      "type": "text_and_photo",
+      "text": "Cerramos Septiembre sumando 1.1 unidades con un 8.31% de yield ✅ bet2earn.com/tipsters/letalbets"
+    },
+    {
+      "id": 862,
+      "channel": "letalbets",
+      "time": "2026-09-26T07:26:04+00:00",
+      "type": "text_and_photo",
+      "text": "UEFA Nations League - A Turquía - Francia Más de 3.5 tarjetas Cuota: 2 Stake: 1 Casa: Kirolbet Cuota mínima: 1.85 Alternativas: @2.05 Bet365, @2.03 Pinnacle, @2 Luckia y Codere @1.96 Retabet y Winamax, @1.95 Sportium y 888sport"
+    },
+    {
+      "id": 861,
+      "channel": "letalbets",
+      "time": "2026-09-26T07:25:08+00:00",
+      "type": "text_and_photo",
+      "text": "UEFA Nations League - A Italia - Bélgica Más de 3.5 tarjetas Cuota: 2 Stake: 1.5 Casa: Kirolbet Cuota mínima: 1.80 Alternativas: @2.14 Pinnacle, @2.05 Bet365, @2 Luckia, @1.99 Retabet, @1.95 Sportium, @1.92 Winamax y @1.85 888sport"
+    },
+    {
+      "id": 860,
+      "channel": "letalbets",
+      "time": "2026-09-25T15:45:29+00:00",
+      "type": "text_and_photo",
+      "text": "UEFA Nations League - A Turquía - Francia Más de 3.5 tarjetas Cuota: 2 Stake: 1 Casa: Kirolbet Cuota mínima: 1.85 Alternativas: @2.05 Bet365, @2.03 Pinnacle, @2 Luckia y Codere @1.96 Retabet y Winamax, @1.95 Sportium y 888sport"
+    },
+    {
+      "id": 859,
+      "channel": "letalbets",
+      "time": "2026-09-25T15:43:33+00:00",
+      "type": "text_and_photo",
+      "text": "Nueva apuesta en 2 minutos"
+    },
+    {
+      "id": 858,
+      "channel": "letalbets",
+      "time": "2026-09-24T10:39:31+00:00",
+      "type": "text_and_photo",
+      "text": "UEFA Nations League - A Italia - Bélgica Más de 3.5 tarjetas Cuota: 2 Stake: 1.5 Casa: Kirolbet Cuota mínima: 1.80 Alternativas: @2.14 Pinnacle, @2.05 Bet365, @2 Luckia, @1.99 Retabet, @1.95 Sportium, @1.92 Winamax y @1.85 888sport"
+    },
+    {
+      "id": 857,
+      "channel": "letalbets",
+      "time": "2026-09-24T10:36:51+00:00",
+      "type": "text_and_photo",
+      "text": "Nueva apuesta en 2 minutos"
+    },
+    {
+      "id": 856,
+      "channel": "letalbets",
+      "time": "2026-09-20T07:53:02+00:00",
+      "type": "text_and_photo",
+      "text": "Segunda División Cádiz - Girona Más de 5.5 tarjetas Cuota: 2.10 Stake: 1.5 Casa: Kirolbet Cuota mínima: 1.92 Alternativas: @2.10 888sport, Sportium, Codere, Luckia y Bet365, @2.07 Retabet, @2.05 Winamax y @1.97 Pinnacle"
+    },
+    {
+      "id": 855,
+      "channel": "letalbets",
+      "time": "2026-09-19T15:09:34+00:00",
+      "type": "text_and_photo",
+      "text": "La Liga Osasuna - Rayo Vallecano Más de 5.5 tarjetas Cuota: 2.05 Stake: 1.5 Casa: Winamax Cuota mínima: 1.95 Alternativas: Disponible en la mayoria de casas de apuestas"
+    },
+    {
+      "id": 854,
+      "channel": "letalbets",
+      "time": "2026-09-19T12:08:37+00:00",
+      "type": "text_and_photo",
+      "text": "La Liga Osasuna - Rayo Vallecano Más de 5.5 tarjetas Cuota: 2.05 Stake: 1.5 Casa: Winamax Cuota mínima: 1.95 Alternativas: Disponible en la mayoria de casas de apuestas"
+    },
+    {
+      "id": 853,
+      "channel": "surewins",
+      "time": "2026-10-16T10:14:11+00:00",
+      "type": "text_and_photo",
+      "text": "🔥 REAL TESTIMONIALS. REAL RESULTS. REAL MONEY 🔥 I’m honestly blown away by what VIP members are achieving right now. People who started with small steps are now living big — securing apartments, driving their dream cars, owning beautiful homes, and traveling without thinking twice. This is not luck, this is what happens when you plug into something"
+    },
+    {
+      "id": 852,
+      "channel": "surewins",
+      "time": "2026-10-16T06:15:14+00:00",
+      "type": "text_and_photo",
+      "text": "🚨 VIP GAME READY! 🚨 Only ONE mega ticket today — the kind of single-game magic that VIPs live for! 💎 🔥 💰 Stake high, watch your winnings skyrocket! Every VIP already knows: we drop one ticket per day , pure precision, pure profit. 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 ⏳ Seats are limited — want in today? DM us for VIP payment details NOW or risk missing today’s golden"
+    }
+  ]
+}

@@ -11,7 +11,6 @@
             --bg-body: #0d1117;
             --bg-card: #161b22;
             --bg-card-elevated: #21262d;
-            --bg-tag: #21262d;
             --border-color: #30363d;
             --border-light: #484f58;
             --text-primary: #f0f6fc;
@@ -43,7 +42,7 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* 顶部导航栏 - 专业体育媒体风 */
+        /* 顶部导航栏 */
         .navbar {
             position: sticky;
             top: 0;
@@ -90,7 +89,7 @@
             font-family: var(--font-mono);
         }
 
-        .live-tag {
+        .sync-badge {
             background: rgba(46, 160, 67, 0.15);
             border: 1px solid rgba(46, 160, 67, 0.4);
             border-radius: 6px;
@@ -101,16 +100,24 @@
             display: flex;
             align-items: center;
             gap: 5px;
+            cursor: pointer;
         }
 
-        .live-dot {
+        .sync-dot {
             width: 6px;
             height: 6px;
             background: #3fb950;
             border-radius: 50%;
+            animation: pulse 1.8s infinite;
         }
 
-        /* 实体合规与公告条 */
+        @keyframes pulse {
+            0% { opacity: 0.4; transform: scale(0.9); }
+            50% { opacity: 1; transform: scale(1.2); }
+            100% { opacity: 0.4; transform: scale(0.9); }
+        }
+
+        /* 实体合规声明条 */
         .compliance-bar {
             background: #161b22;
             border-bottom: 1px solid var(--border-color);
@@ -223,7 +230,7 @@
             color: var(--text-primary);
         }
 
-        /* 比赛卡片 (Sofascore / 雷速质感) */
+        /* 比赛卡片 (Sofascore 质感) */
         .match-row-card {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
@@ -316,7 +323,7 @@
             border-radius: 6px;
         }
 
-        /* 竞彩赔率方块 (SP) */
+        /* 竞彩赔率方块 */
         .odds-strip {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -429,56 +436,54 @@
         }
         .rank-top { background: var(--accent-gold); color: #000; }
 
-        /* 页面三：伤停情报表 */
-        .injury-card {
+        /* 页面三：实时电报情报动态流 (Live Wire) */
+        .live-wire-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .live-wire-card {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
             border-radius: 12px;
             padding: 12px 14px;
             margin-bottom: 10px;
+            transition: all 0.2s;
         }
 
-        .injury-match-head {
-            font-size: 13px;
-            font-weight: 700;
-            color: var(--text-primary);
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 8px;
-            padding-bottom: 6px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        .live-wire-card.fresh {
+            border-color: rgba(56, 189, 248, 0.4);
+            background: rgba(22, 27, 34, 0.95);
         }
 
-        .injury-item {
+        .wire-top {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin-bottom: 6px;
+            font-size: 11px;
+            font-family: var(--font-mono);
+        }
+
+        .wire-channel {
+            color: var(--accent-blue);
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .wire-time {
+            color: var(--text-tertiary);
+        }
+
+        .wire-content {
             font-size: 12px;
-            padding: 4px 0;
-        }
-
-        .player-info {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .impact-high {
-            background: rgba(248, 81, 73, 0.15);
-            color: var(--accent-red);
-            font-size: 10px;
-            font-weight: 700;
-            padding: 2px 6px;
-            border-radius: 4px;
-        }
-
-        .impact-mid {
-            background: rgba(210, 153, 34, 0.15);
-            color: var(--accent-gold);
-            font-size: 10px;
-            font-weight: 700;
-            padding: 2px 6px;
-            border-radius: 4px;
+            color: #cbd5e1;
+            line-height: 1.55;
+            word-break: break-word;
         }
 
         /* 页面四：客观核销账本表格 */
@@ -696,12 +701,12 @@
             <div class="brand-icon">⚽</div>
             <div class="brand-text">
                 <h1>绿茵智研 · 赛事内参</h1>
-                <p>EUROPEAN FOOTBALL DATA LAB</p>
+                <p id="radar-status">37-CHANNEL LIVE RADAR</p>
             </div>
         </div>
-        <div class="live-tag">
-            <div class="live-dot"></div>
-            <span>34 场在售</span>
+        <div class="sync-badge" onclick="fetchLiveIntel()">
+            <div class="sync-dot"></div>
+            <span id="sync-text">实时连通</span>
         </div>
     </header>
 
@@ -724,8 +729,8 @@
                 <div class="hero-label">五大联赛焦点</div>
             </div>
             <div class="hero-col">
-                <div class="hero-num" style="color: #3fb950;">1</div>
-                <div class="hero-label">官方单关</div>
+                <div class="hero-num" style="color: #3fb950;" id="total-tips-stat">911</div>
+                <div class="hero-label">赛前实盘存盘</div>
             </div>
         </div>
 
@@ -1069,80 +1074,26 @@
         </div>
     </div>
 
-    <!-- ==================== TAB 3: 伤停情报 (Injuries) ==================== -->
-    <div id="tab-injuries" class="tab-view">
-        <div style="font-size: 13px; font-weight: 700; color: var(--text-primary); margin-bottom: 6px;">
-            欧洲一手更衣室与关键伤停雷达
-        </div>
-        <p style="font-size: 11px; color: var(--text-secondary); margin-bottom: 14px;">
-            由米兰现场特派员、迪马济奥团队及裁判组实时核验确认：
-        </p>
-
-        <div class="injury-card">
-            <div class="injury-match-head">
-                <span>德甲 · 法兰克福 VS 科隆</span>
-                <span style="color: var(--text-tertiary); font-family: var(--font-mono);">10-17 02:30</span>
-            </div>
-            <div class="injury-item">
-                <div class="player-info">
-                    <span style="font-weight: 600;">马特尔 (科隆)</span>
-                    <span style="color: var(--text-secondary);">主力后腰</span>
+    <!-- ==================== TAB 3: 实时电报流 (Live Wire) ==================== -->
+    <div id="tab-livewire" class="tab-view">
+        <div class="live-wire-header">
+            <div>
+                <div style="font-size: 14px; font-weight: 700; color: var(--text-primary);">
+                    欧洲实时情报流 (Live Wire)
                 </div>
-                <span class="impact-high">红牌停赛 (影响极高)</span>
+                <div style="font-size: 10px; color: var(--text-tertiary);" id="wire-meta-time">
+                    自动轮询 37 个欧洲前沿情报频道
+                </div>
             </div>
-            <div style="font-size: 11px; color: var(--text-secondary); margin-top: 6px; line-height: 1.4;">
-                📌 影响研判：主力单后腰缺席导致中路拦截效率下降24%，法兰克福反击传准率将显著提高。
+            <div style="font-size: 11px; color: var(--accent-blue); cursor: pointer;" onclick="fetchLiveIntel()">
+                🔄 立即刷新
             </div>
         </div>
 
-        <div class="injury-card">
-            <div class="injury-match-head">
-                <span>意甲 · 国际米兰 VS 罗马</span>
-                <span style="color: var(--text-tertiary); font-family: var(--font-mono);">CalcioMercato 确认</span>
-            </div>
-            <div class="injury-item">
-                <div class="player-info">
-                    <span style="font-weight: 600;">帕瓦尔 (国米)</span>
-                    <span style="color: var(--text-secondary);">主力中卫</span>
-                </div>
-                <span class="impact-high">内收肌拉伤 (缺席20天)</span>
-            </div>
-            <div style="font-size: 11px; color: var(--text-secondary); margin-top: 6px; line-height: 1.4;">
-                📌 影响研判：后防轮换深度受损，需防范罗马针对性打身后反击。
-            </div>
-        </div>
-
-        <div class="injury-card">
-            <div class="injury-match-head">
-                <span>意甲 · AC米兰 VS 乌迪内斯</span>
-                <span style="color: var(--text-tertiary); font-family: var(--font-mono);">Di Marzio 现场</span>
-            </div>
-            <div class="injury-item">
-                <div class="player-info">
-                    <span style="font-weight: 600;">帕夫洛维奇 (米兰)</span>
-                    <span style="color: var(--text-secondary);">核心后卫</span>
-                </div>
-                <span class="impact-mid" style="background: rgba(46, 160, 67, 0.15); color: #3fb950;">军心稳定 (续约至2031)</span>
-            </div>
-            <div style="font-size: 11px; color: var(--text-secondary); margin-top: 6px; line-height: 1.4;">
-                📌 影响研判：后防核心确立，莱奥回归首发，主场赢面进一步夯实。
-            </div>
-        </div>
-
-        <div class="injury-card">
-            <div class="injury-match-head">
-                <span>西甲 · 阿拉维斯 VS 马德里竞技</span>
-                <span style="color: var(--text-tertiary); font-family: var(--font-mono);">Letalbets 裁判组</span>
-            </div>
-            <div class="injury-item">
-                <div class="player-info">
-                    <span style="font-weight: 600;">西伯特 (主裁判)</span>
-                    <span style="color: var(--text-secondary);">严苛判罚尺度</span>
-                </div>
-                <span class="impact-mid">场均 5.4 黄牌</span>
-            </div>
-            <div style="font-size: 11px; color: var(--text-secondary); margin-top: 6px; line-height: 1.4;">
-                📌 影响研判：双方对抗激烈，严哨极易引发早发红牌变盘，慎追大胜。
+        <div id="wire-feed-container">
+            <!-- 动态注入从 data/live_intel.json 加载的最新情报 -->
+            <div style="text-align: center; padding: 20px; color: var(--text-tertiary); font-size: 12px;">
+                正在加载最新实时情报流...
             </div>
         </div>
     </div>
@@ -1249,9 +1200,9 @@
             <div class="nav-icon">📊</div>
             <div class="nav-title">共识榜单</div>
         </div>
-        <div class="nav-link" onclick="switchNav('injuries')">
-            <div class="nav-icon">🏥</div>
-            <div class="nav-title">伤停内幕</div>
+        <div class="nav-link" onclick="switchNav('livewire')">
+            <div class="nav-icon">⚡</div>
+            <div class="nav-title">实时情报流</div>
         </div>
         <div class="nav-link" onclick="switchNav('audit')">
             <div class="nav-icon">⚖️</div>
@@ -1285,19 +1236,83 @@
             const targetView = document.getElementById('tab-' + tabId);
             if (targetView) targetView.classList.add('active');
 
-            const navIndex = ['matches', 'consensus', 'injuries', 'audit', 'owner'].indexOf(tabId);
+            const navIndex = ['matches', 'consensus', 'livewire', 'audit', 'owner'].indexOf(tabId);
             if (navIndex !== -1) {
                 document.querySelectorAll('.nav-link')[navIndex].classList.add('active');
             }
 
+            if (tabId === 'livewire') {
+                fetchLiveIntel();
+            }
+
             window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // 异步从 data/live_intel.json 获取最新实时情报
+        let lastUpdated = '';
+        function fetchLiveIntel() {
+            document.getElementById('sync-text').innerText = '正在同步...';
+            // 添加时间戳防止 CDN 强缓存
+            fetch('./data/live_intel.json?t=' + Date.now())
+                .then(res => {
+                    if (!res.ok) throw new Error('网络响应异常');
+                    return res.json();
+                })
+                .then(data => {
+                    document.getElementById('sync-text').innerText = '已实时同步';
+                    if (data.updated_at) {
+                        document.getElementById('wire-meta-time').innerText = '最后同步：' + data.updated_at + ' (共 ' + data.db_total_count + ' 条存盘)';
+                        if (document.getElementById('total-tips-stat')) {
+                            document.getElementById('total-tips-stat').innerText = data.db_total_count;
+                        }
+                    }
+                    renderLiveFeed(data.live_feed);
+                })
+                .catch(err => {
+                    console.error('Fetch error:', err);
+                    document.getElementById('sync-text').innerText = '离线模式';
+                });
+        }
+
+        // 渲染实时情报流卡片
+        function renderLiveFeed(items) {
+            const container = document.getElementById('wire-feed-container');
+            if (!items || items.length === 0) {
+                container.innerHTML = '<div style="text-align: center; padding: 20px; color: var(--text-tertiary);">暂无最新入库情报</div>';
+                return;
+            }
+
+            container.innerHTML = '';
+            items.forEach((item, index) => {
+                const card = document.createElement('div');
+                card.className = 'live-wire-card' + (index < 3 ? ' fresh' : '');
+                
+                // 格式化时间
+                let displayTime = item.time ? item.time.replace('T', ' ').split('+')[0] : '刚刚';
+                
+                card.innerHTML = `
+                    <div class="wire-top">
+                        <span class="wire-channel">📡 @${item.channel}</span>
+                        <span class="wire-time">${displayTime}</span>
+                    </div>
+                    <div class="wire-content">
+                        ${escapeHtml(item.text)}
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.innerText = text;
+            return div.innerHTML;
         }
 
         // 比赛筛选
         function filterMatches(el, type) {
             document.querySelectorAll('.pill-btn').forEach(b => b.classList.remove('active'));
             el.classList.add('active');
-            // 可以根据需求做过滤展示
         }
 
         // 详情弹窗
@@ -1326,6 +1341,11 @@
                 setTimeout(() => { msg.style.display = 'none'; }, 3000);
             });
         }
+
+        // 页面打开自动加载一次
+        fetchLiveIntel();
+        // 每 60 秒静默轮询一次最新数据
+        setInterval(fetchLiveIntel, 60000);
     </script>
 </body>
 </html>
