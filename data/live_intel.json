@@ -1,7 +1,17 @@
 {
-  "updated_at": "2026-10-17 05:06:57",
-  "total_tips": 16,
+  "updated_at": "2026-10-17 07:36:36",
+  "total_tips": 17,
   "live_feed": [
+    {
+      "id": 988,
+      "channel": "ibettingxx",
+      "time": "2026-10-17 07:28",
+      "code": "周六019",
+      "league": "英超",
+      "category": "赛前军情",
+      "match": "曼城 VS 伊普斯",
+      "chinese": "曼城主战升班马优势碾压，稳做胆材；拜仁近期防线漏勺，战莱比锡防平有隐患；罗马让步虽占优，但攻坚容错率极低，最易爆冷出冷门，建议防平。"
+    },
     {
       "id": 973,
       "channel": "betopickglobal",
