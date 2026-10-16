@@ -853,12 +853,34 @@
 
     <!-- ==================== TAB 4: 战绩大账本 (Audit Ledger) ==================== -->
     <div id="tab-audit" class="tab-view">
-        <div style="font-size: 13px; font-weight: 700; color: var(--text-primary); margin-bottom: 6px;">
-            真实赛果客观验证 (错就是错 对就是对)
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+            <div>
+                <div style="font-size: 14px; font-weight: 800; color: var(--text-primary);">
+                    真实赛果客观验证 <span style="font-size: 11px; color: var(--text-secondary); font-weight: 400;">(错就是错 对就是对)</span>
+                </div>
+                <div style="font-size: 11px; color: var(--text-secondary); margin-top: 2px;">
+                    赛前建议锁定存盘，拒绝删单造假，以终场物理比分为准。
+                </div>
+            </div>
+            <!-- 通俗大白话 ROI 弹窗/说明胶囊 -->
+            <button onclick="toggleRoiTip()" style="background: rgba(210, 153, 34, 0.15); border: 1px solid rgba(210, 153, 34, 0.4); color: var(--accent-gold); font-size: 11px; font-weight: 700; padding: 4px 8px; border-radius: 6px; cursor: pointer; flex-shrink: 0;">
+                ❓ 什么是实战ROI
+            </button>
         </div>
-        <p style="font-size: 11px; color: var(--text-secondary); margin-bottom: 14px;">
-            赛前建议锁定存盘，拒绝任何删单造假。赛果验证客观透明：
-        </p>
+
+        <!-- 通俗大白话 ROI 释义卡片（默认轻量展开，支持折叠） -->
+        <div id="roi-tip-card" style="background: rgba(22, 27, 34, 0.85); border: 1px dashed rgba(210, 153, 34, 0.4); border-radius: 8px; padding: 10px 12px; margin-bottom: 12px; font-size: 11px; line-height: 1.6; color: #c9d1d9;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                <b style="color: var(--accent-gold); font-size: 12px;">💡 店主白话：什么是【综合实战ROI】？</b>
+                <span onclick="toggleRoiTip()" style="color: var(--text-secondary); cursor: pointer; font-size: 13px;">✕</span>
+            </div>
+            <div>
+                <b>ROI 即“实战净投资回报率”</b>。光看“命中率高”没用，如果全选蚊子肉低赔，爆一场就全亏！<br>
+                我们严格按照<b>中国体彩官方真实中奖 SP 赔率</b>真金白银折算：<br>
+                • <b>大白话公式</b>：假设每场均注 100 元，<code>(收回的全部奖金 - 投入的总本金) ÷ 总本金</code>。<br>
+                • <b>当前 <span style="color: var(--accent-gold); font-weight: 800;">+178.7%</span> 代表</b>：投入 300 元本金，除拿回 300 元本金外，<b>纯口袋净赚 536 元</b>！拒绝弄虚作假，每一分钱都有据可查。
+            </div>
+        </div>
 
         <div class="audit-stat-box">
             <div>
@@ -1481,7 +1503,14 @@
         }
 
         // 复制微信号
-        function copyWechat() {
+        function toggleRoiTip() {
+    const card = document.getElementById('roi-tip-card');
+    if (card) {
+        card.style.display = card.style.display === 'none' ? 'block' : 'none';
+    }
+}
+
+function copyWechat() {
             const wx = document.getElementById('wx-id').innerText;
             navigator.clipboard.writeText(wx).then(() => {
                 const msg = document.getElementById('copy-msg');
