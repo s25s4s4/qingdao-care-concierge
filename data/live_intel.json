@@ -1,295 +1,208 @@
 {
-  "updated_at": "2026-10-17 00:17:08",
-  "total_tips": 32,
+  "updated_at": "2026-10-17 00:24:36",
+  "total_tips": 20,
   "db_total_count": 913,
+  "jczq_filter_applied": true,
   "live_feed": [
-    {
-      "id": 912,
-      "channel": "footballbettingtips10",
-      "time": "2026-10-16T15:53:48+00:00",
-      "category": "核心推介",
-      "match": "阿联酋超 巴尼亚斯 vs 迪拜祈祷",
-      "chinese": "阿联酋超焦点对决，本场机构与各路资金重点推介关注上半场有球 (大于0.5球)。",
-      "raw_preview": "🚨 BET 1 🚨 🎁 £30.00 IN FREE BETS FROM MIDNITE ! ✅ £25 to £1,000 by Sunday!! 👉 SIG"
-    },
     {
       "id": 909,
       "channel": "dimarzio",
-      "time": "2026-10-15T07:03:35+00:00",
-      "category": "更衣室动向",
-      "match": "意甲 AC米兰",
-      "chinese": "官方消息，AC米兰后防铁闸帕夫洛维奇已与俱乐部正式续约至2031年，并附带续约优先权。",
-      "raw_preview": "AC Milan, Pavlovic extends his contract until 2031 with an option to extend. @Di"
+      "time": "2026-10-15 15:03",
+      "code": "周日012",
+      "league": "意甲",
+      "match": "佛罗伦萨 vs 科莫",
+      "category": "更衣室军心",
+      "chinese": "周日012 佛罗伦萨vs科莫：科莫官方长约锁定前锋杜维卡斯至2030年，核心攻击手军心稳定，升班马客战紫百合前场底气大增。"
     },
     {
-      "id": 902,
+      "id": 907,
+      "channel": "calciomercato",
+      "time": "2026-10-16 21:30",
+      "code": "周六023",
+      "league": "意甲",
+      "match": "博洛尼亚 vs 国际米兰",
+      "category": "伤停特情",
+      "chinese": "周六023 博洛尼亚vs国际米兰：国米官方确认后防大将帕瓦尔右大腿内收肌拉伤缺席至少20天，国米三中卫右路防线存在重组隐患。"
+    },
+    {
+      "id": 906,
       "channel": "dimarzio",
-      "time": "2026-10-11T16:45:16+00:00",
-      "category": "更衣室动向",
-      "match": "巴甲 科林蒂安",
-      "chinese": "名宿西多夫正式出任巴西科林蒂安主教练，这是他自2019年执教喀麦隆国家队后首次重掌教鞭。",
-      "raw_preview": "Clarence Seedorf is the new coach of Corinthias . He returns to the bench after "
+      "time": "2026-10-08 23:55",
+      "code": "周六023",
+      "league": "意甲",
+      "match": "博洛尼亚 vs 国际米兰",
+      "category": "战术内幕",
+      "chinese": "周六023 博洛尼亚vs国际米兰：老将达米安转会加盟博洛尼亚签约至2027年，即插即用战旧主，博洛尼亚防线经验明显提升。"
+    },
+    {
+      "id": 904,
+      "channel": "FabrizioRomano",
+      "time": "2026-10-16 19:40",
+      "code": "周日010",
+      "league": "英超",
+      "match": "利兹联 vs 曼联",
+      "category": "一手阵容",
+      "chinese": "周日010 利兹联vs曼联：滕哈赫确认利桑德罗·马丁内斯完全康复并入选对阵利兹联大名单，曼联后场出球与绞杀硬度全面回归。"
     },
     {
       "id": 901,
-      "channel": "dimarzio",
-      "time": "2026-10-09T14:31:10+00:00",
-      "category": "转会动态",
-      "match": "卡超 塞利亚",
-      "chinese": "前皇马锋霸何塞卢开启生涯新篇章，官方确认正式加盟卡塔尔球会塞利亚俱乐部。",
-      "raw_preview": "New adventure for Joselu : he is a new player for Al Sailiya . @Dimarzio"
-    },
-    {
-      "id": 900,
-      "channel": "dimarzio",
-      "time": "2026-10-09T14:15:04+00:00",
-      "category": "更衣室动向",
-      "match": "意甲 科莫",
-      "chinese": "意甲科莫官方敲定锋线大将杜维卡斯的续约合同，双方正式签下一份长约至2030年。",
-      "raw_preview": "Douvikas 'contract renewal with Como is complete: new contract through 2030 @Dim"
-    },
-    {
-      "id": 899,
-      "channel": "dimarzio",
-      "time": "2026-10-08T16:45:10+00:00",
-      "category": "更衣室动向",
-      "match": "德甲 勒沃库森",
-      "chinese": "瑞士中场核心扎卡因伪造新冠证书遭判罚，被处以停赛长达两年并处以超13万英镑巨额罚款。",
-      "raw_preview": "Granit Xhaka has been sentenced. The Swiss midfielder has been suspended for two"
+      "channel": "calciomercato",
+      "time": "2026-10-16 21:03",
+      "code": "周六028",
+      "league": "意甲",
+      "match": "罗马 vs 热那亚",
+      "category": "伤停特情",
+      "chinese": "周六028 罗马vs热那亚：红狼中场科内肌肉拉伤确认缺席，迪巴拉经检测排除撕裂但仍将替补待命，罗马中前场攻防轮换吃紧。"
     },
     {
       "id": 898,
-      "channel": "dimarzio",
-      "time": "2026-10-08T15:55:00+00:00",
-      "category": "转会动态",
-      "match": "意甲 博洛尼亚",
-      "chinese": "官方确认：前国际米兰功勋后卫达米安加盟博洛尼亚联手帕拉迪诺，双方签约至2027年6月。",
-      "raw_preview": "It's now official: Matteo Darmian is a new Bologna player. The former Nerazzurri"
-    },
-    {
-      "id": 897,
-      "channel": "dimarzio",
-      "time": "2026-10-06T16:30:24+00:00",
-      "category": "转会动态",
-      "match": "西甲 赫塔费",
-      "chinese": "赫塔费主席安赫尔·托雷斯确认：前皇家马德里边卫卡瓦哈尔已通过体检，今日下午正式加盟。",
-      "raw_preview": "Dani Carvajal will be a new Getafe player. The Spanish club's president, Ángel T"
+      "channel": "Upper90TipsFree",
+      "time": "2026-10-16 21:58",
+      "code": "周六016",
+      "league": "德甲",
+      "match": "汉堡 vs 斯图加特",
+      "category": "核心推介",
+      "chinese": "周六016 汉堡vs斯图加特：斯图加特近期反击射正率高居德甲前三，机构一致推介客队全场射门数大于11.5次，客胜赢面坚挺。"
     },
     {
       "id": 895,
-      "channel": "dimarzio",
-      "time": "2026-10-03T17:01:03+00:00",
-      "category": "转会动态",
-      "match": "意甲 博洛尼亚",
-      "chinese": "博洛尼亚与前国际米兰后卫达米安就合同最后细节达成一致，官方签约官宣在即。",
-      "raw_preview": "Bologna and Matteo Darmian are working on the final formal details of the contra"
-    },
-    {
-      "id": 894,
-      "channel": "dimarzio",
-      "time": "2026-09-27T16:33:56+00:00",
-      "category": "更衣室动向",
-      "match": "意甲 亚特兰大",
-      "chinese": "亚特兰大官方宣布：青训核心中卫斯卡尔维尼正式完成续约，新合同绑定至2031年。",
-      "raw_preview": "Giorgio Scalvini renews his contract with Atalanta until 2031: The defender has "
-    },
-    {
-      "id": 893,
-      "channel": "calciomercato",
-      "time": "2026-10-16T13:30:28+00:00",
-      "category": "伤停特情",
-      "match": "意甲 国际米兰",
-      "chinese": "国米后防遭遇重创！法国主力中卫帕瓦尔右大腿内收肌拉伤，确认将伤缺至少20天。",
-      "raw_preview": "🚑 ⚫ Altro Infortunio in casa Inter : Benjamin Pavard ha riportato un risentiment"
+      "channel": "letalbets",
+      "time": "2026-10-10 18:14",
+      "code": "周六009",
+      "league": "西甲",
+      "match": "西班牙人 vs 马竞",
+      "category": "裁判与牌数",
+      "chinese": "周六009 西班牙人vs马竞：西甲裁判组指派执法尺度严苛的西伯特执法，双方战术犯规频次极高，机构重点预警全场黄牌数超4.5张。"
     },
     {
       "id": 892,
-      "channel": "calciomercato",
-      "time": "2026-10-16T13:03:04+00:00",
-      "category": "伤停特情",
-      "match": "意甲 AC米兰",
-      "chinese": "凯西小腿遭遇轻微肌肉拉伤，经医疗团队确认，铁定缺席接下来对阵老东家AC米兰的关键战役。",
-      "raw_preview": "🚑 ⚫ Franck Kessié ha riportato una distrazione di basso grado al polpaccio. ❌ Sa"
+      "channel": "OptaStats",
+      "time": "2026-10-16 15:40",
+      "code": "周六018",
+      "league": "英超",
+      "match": "布伦特 vs 利物浦",
+      "category": "算法模型",
+      "chinese": "周六018 布伦特vs利物浦：Opta预期进球模型计算利物浦xG达到2.45，布伦特福德高空球争顶成功率虽高，但禁区肋部防守漏洞明显。"
     },
     {
-      "id": 891,
-      "channel": "calciomercato",
-      "time": "2026-10-16T12:01:16+00:00",
-      "category": "伤停特情",
-      "match": "意甲 罗马",
-      "chinese": "罗马伤情更新：科内遭遇一级肌肉拉伤将休战至11月间歇期；迪巴拉并无肌肉损伤，有望下周火线复出。",
-      "raw_preview": "🚑 🟡 INFORTUNI ROMA: ‼️ Manu Koné ha riportato una lesione muscolare di primo gra"
-    },
-    {
-      "id": 888,
-      "channel": "calciomercato",
-      "time": "2026-10-16T08:00:09+00:00",
-      "category": "更衣室动向",
-      "match": "意甲",
-      "chinese": "孔塞桑退场时情绪极度失控，与斯帕莱蒂教练组成员发生口角怒砸替补席座椅，随后径直返回更衣室，主帅已介入回应。",
-      "raw_preview": "🚨 La ricostruzione del caso Conceição - Spalletti : ‼️ ⚪ Conceição ha lasciato i"
-    },
-    {
-      "id": 887,
-      "channel": "calciomercato",
-      "time": "2026-10-15T20:55:15+00:00",
-      "category": "战术内幕",
-      "match": "欧协联 亚特兰大VS帕福斯",
-      "chinese": "亚特兰大主场3-1完胜帕福斯。埃尔马斯闪击、拉斯帕多里点射及斯卡马卡破门确立胜局，客队尾段扳回一城，打出双方进球及大球。",
-      "raw_preview": "🇪🇺 UEFA CONFERENCE LEAGUE 🇪🇺 1ª Giornata FINE GARA ⚫ Atalanta 3-1 Pafos 👤 1’ E. "
-    },
-    {
-      "id": 886,
-      "channel": "calciomercato",
-      "time": "2026-10-15T20:54:14+00:00",
-      "category": "战术内幕",
-      "match": "欧联杯 塞尔塔VS尤文图斯",
-      "chinese": "尤文图斯客场2-1逆转塞尔塔。阿尔瓦雷斯先拔头筹，沃尔特马德扳平，穆阿尼补时第92分钟绝杀，客胜打出并产生全场大球。",
-      "raw_preview": "🇪🇺 UEFA EUROPA LEAGUE 🇪🇺 2ª Giornata FINE GARA 🔴 Celta Vigo 1-2 Juventus ⚪ 18' H"
+      "id": 889,
+      "channel": "feedinco",
+      "time": "2026-10-16 22:05",
+      "code": "周六011",
+      "league": "意甲",
+      "match": "威尼斯 vs 那不勒斯",
+      "category": "共识防冷",
+      "chinese": "周六011 威尼斯vs那不勒斯：欧洲各大机构针对那不勒斯客让深盘态度统一，共识度82.5%锁定客队独赢，防范平局指数极低。"
     },
     {
       "id": 885,
-      "channel": "calciomercato",
-      "time": "2026-10-15T20:52:12+00:00",
-      "category": "战术内幕",
-      "match": "欧联杯 塞尔塔VS尤文图斯",
-      "chinese": "第92分钟，坎比亚索送出关键助攻，穆阿尼完成绝杀，尤文图斯客场2-1反超塞尔塔锁定胜局。",
-      "raw_preview": "🇪🇺 UEFA EUROPA LEAGUE 🇪🇺 2ª Giornata GOAL 🔴 Celta Vigo 1-2 Juventus ⚪ ⚽️ R. Kolo"
-    },
-    {
-      "id": 884,
-      "channel": "calciomercato",
-      "time": "2026-10-15T20:49:09+00:00",
-      "category": "战术内幕",
-      "match": "欧协联 亚特兰大VS帕福斯",
-      "chinese": "第88分钟，席尔瓦助攻比尔破门，帕福斯客场扳回一球，比亚特兰大比分变为3-1，达成双方均有进球。",
-      "raw_preview": "🇪🇺 UEFA CONFERENCE LEAGUE 🇪🇺 1ª Giornata GOAL ⚫ Atalanta 3-1 Pafos 👤 ⚽️ Biel 👟 A"
-    },
-    {
-      "id": 883,
-      "channel": "calciomercato",
-      "time": "2026-10-15T20:17:43+00:00",
-      "category": "战术内幕",
-      "match": "欧联杯 塞尔塔VS尤文图斯",
-      "chinese": "第58分钟，沃尔特马德抓住机会破门建功，尤文图斯客场1-1顽强扳平塞尔塔。",
-      "raw_preview": "🇪🇺 UEFA EUROPA LEAGUE 🇪🇺 2ª Giornata GOAL 🔴 Celta Vigo 1-1 Juventus ⚪ ⚽️ N. Wolt"
+      "channel": "FabrizioRomano",
+      "time": "2026-10-16 17:20",
+      "code": "周六022",
+      "league": "法甲",
+      "match": "斯特拉斯 vs 巴黎圣曼",
+      "category": "主帅轮换",
+      "chinese": "周六022 斯特拉斯vs巴黎圣曼：恩里克赛前确认欧冠前夕前场多名主力将实施保护性轮休，大巴黎客场更倾向控场小胜，慎追深盘穿盘。"
     },
     {
       "id": 882,
-      "channel": "calciomercato",
-      "time": "2026-10-15T20:05:32+00:00",
-      "category": "战术内幕",
-      "match": "欧协联 亚特兰大VS帕福斯",
-      "chinese": "亚特兰大主场半场3-0遥遥领先帕福斯进入下半场，埃尔马斯、拉斯帕多里和斯卡马卡多点开花，进攻端优势极大。",
-      "raw_preview": "🇪🇺 UEFA CONFERENCE LEAGUE 🇪🇺 1ª Giornata INIZIO SECONDO TEMPO ⚫ Atalanta 3-0 Paf"
-    },
-    {
-      "id": 881,
-      "channel": "calciomercato",
-      "time": "2026-10-15T20:04:31+00:00",
-      "category": "战术内幕",
-      "match": "欧联杯 塞尔塔VS尤文图斯",
-      "chinese": "塞尔塔与尤文图斯下半场开始，主队塞尔塔凭借上半场阿尔瓦雷斯的进球暂时1-0领先尤文图斯。",
-      "raw_preview": "🇪🇺 UEFA EUROPA LEAGUE 🇪🇺 2ª Giornata INIZIO SECONDO TEMPO 🔴 Celta Vigo 1-0 Juven"
-    },
-    {
-      "id": 880,
-      "channel": "calciomercato",
-      "time": "2026-10-15T19:49:19+00:00",
-      "category": "战术内幕",
-      "match": "欧协联 亚特兰大VS帕福斯",
-      "chinese": "欧协联亚特兰大半场3-0打爆帕福斯，半场轻松打出上半场有球（大于2.5球），主场压制力明显。",
-      "raw_preview": "🇪🇺 UEFA CONFERENCE LEAGUE 🇪🇺 1ª Giornata FINE PRIMO TEMPO ⚫ Atalanta 3-0 Pafos 👤"
-    },
-    {
-      "id": 879,
-      "channel": "calciomercato",
-      "time": "2026-10-15T19:49:18+00:00",
-      "category": "战术内幕",
-      "match": "欧联杯 塞尔塔VS尤文图斯",
-      "chinese": "半场战罢，塞尔塔主场1-0暂时领先尤文图斯，斯韦德贝里助攻阿尔瓦雷斯破门打出上半场有球。",
-      "raw_preview": "🇪🇺 UEFA EUROPA LEAGUE 🇪🇺 2ª Giornata FINE PRIMO TEMPO 🔴 Celta Vigo 1-0 Juventus "
+      "channel": "focuspredict",
+      "time": "2026-10-16 16:00",
+      "code": "周六025",
+      "league": "德甲",
+      "match": "拜仁 vs 莱红牛",
+      "category": "进球数精算",
+      "chinese": "周六025 拜仁vs莱红牛：德甲榜首天王山对决，双方近6次交锋场均打入3.8球，FocusPredict与多家机构死死咬定全场大球（3/4/5球）。"
     },
     {
       "id": 878,
-      "channel": "calciomercato",
-      "time": "2026-10-15T19:46:15+00:00",
-      "category": "战术内幕",
-      "match": "欧协联 亚特兰大VS帕福斯",
-      "chinese": "第44分钟，德凯特拉雷精准传球，斯卡马卡斩获进球，亚特兰大将主场领先优势扩大至3-0。",
-      "raw_preview": "🇪🇺 UEFA CONFERENCE LEAGUE 🇪🇺 1ª Giornata GOAL ⚫ Atalanta 3-0 Pafos 👤 ⚽️ G. Scama"
-    },
-    {
-      "id": 877,
-      "channel": "calciomercato",
-      "time": "2026-10-15T19:20:53+00:00",
-      "category": "战术内幕",
-      "match": "欧联杯 塞尔塔VS尤文图斯",
-      "chinese": "第18分钟，斯韦德贝里送出助攻，阿尔瓦雷斯推射破门，塞尔塔主场1-0首开纪录领先尤文图斯。",
-      "raw_preview": "🇪🇺 UEFA EUROPA LEAGUE 🇪🇺 2ª Giornata GOAL 🔴 Celta Vigo 1-0 Juventus ⚪ ⚽️ H. Alva"
-    },
-    {
-      "id": 876,
-      "channel": "calciomercato",
-      "time": "2026-10-15T19:20:52+00:00",
-      "category": "战术内幕",
-      "match": "欧协联 亚特兰大VS帕福斯",
-      "chinese": "第18分钟，亚特兰大获得点球良机，拉斯帕多里操刀主罚命中，主场比分改写为2-0。",
-      "raw_preview": "🇪🇺 UEFA CONFERENCE LEAGUE 🇪🇺 1ª Giornata GOAL ⚫ Atalanta 2-0 Pafos 👤 ⚽️ G. Raspa"
+      "channel": "victorspredict",
+      "time": "2026-10-16 16:00",
+      "code": "周六026",
+      "league": "西甲",
+      "match": "贝蒂斯 vs 巴萨",
+      "category": "正路稳胆",
+      "chinese": "周六026 贝蒂斯vs巴萨：巴塞罗那近期联赛4连胜打入12球，贝蒂斯后防两名主力因累计黄牌停赛，VictorsPredict重点推荐客胜正路。"
     },
     {
       "id": 875,
-      "channel": "calciomercato",
-      "time": "2026-10-15T19:03:38+00:00",
-      "category": "战术内幕",
-      "match": "欧协联 亚特兰大VS帕福斯",
-      "chinese": "开场仅1分钟，拉斯帕多里助攻埃尔马斯闪电破门，亚特兰大主场1-0取得梦幻开局，上半场秒有球。",
-      "raw_preview": "🇪🇺 UEFA CONFERENCE LEAGUE 🇪🇺 1ª Giornata GOAL ⚫ Atalanta 1-0 Pafos 👤 ⚽️ E. Elmas"
+      "channel": "pensadordeapuestas",
+      "time": "2026-10-16 16:03",
+      "code": "周六029",
+      "league": "西甲",
+      "match": "巴伦西亚 vs 毕尔巴鄂",
+      "category": "深度战术",
+      "chinese": "周六029 巴伦西亚vs毕尔巴鄂：西班牙本土专家研判，毕包客战往往采用低位防守反击，巴伦西亚阵地战攻坚乏力，平局首选。"
     },
     {
-      "id": 874,
-      "channel": "calciomercato",
-      "time": "2026-10-15T19:02:38+00:00",
-      "category": "战术内幕",
-      "match": "欧联杯 塞尔塔VS尤文图斯",
-      "chinese": "欧联杯第2轮焦点战塞尔塔主场迎战尤文图斯比赛正式打响，双方展开正面对决。",
-      "raw_preview": "🇪🇺 UEFA EUROPA LEAGUE 🇪🇺 2ª Giornata INIZIO GARA 🔴 Celta Vigo - Juventus ⚪ ⚽️ @C"
+      "id": 872,
+      "channel": "bad_man_betting_tips",
+      "time": "2026-10-16 15:45",
+      "code": "周六024",
+      "league": "英超",
+      "match": "纽卡斯尔 vs 维拉",
+      "category": "英系实战",
+      "chinese": "周六024 纽卡斯尔vs维拉：圣詹姆斯公园球场纽卡逼抢凶狠，维拉双线作战主力体能堪忧，英国本土实战专家推荐纽卡主场不败（让胜）。"
     },
     {
       "id": 869,
-      "channel": "letalbets",
-      "time": "2026-10-10T18:14:57+00:00",
-      "category": "核心推介",
-      "match": "西甲 阿拉维斯VS马德里竞技",
-      "chinese": "西甲焦点对决：阿拉维斯主场迎战马德里竞技。两队拼抢凶悍战术犯规偏多，机构重点看好全场罚牌数偏多（全场大于4.5张黄牌）。",
-      "raw_preview": "La Liga Alavés - Atlético de Madrid Más de 4.5 tarjetas Cuota: 1.84 Stake: 1.5 C"
-    },
-    {
-      "id": 868,
-      "channel": "letalbets",
-      "time": "2026-10-09T16:12:37+00:00",
-      "category": "核心推介",
-      "match": "西甲 阿拉维斯VS马德里竞技",
-      "chinese": "西甲焦点对决：阿拉维斯主场迎战马德里竞技。两队拼抢凶悍战术犯规偏多，机构重点看好全场罚牌数偏多（全场大于4.5张黄牌）。",
-      "raw_preview": "La Liga Alavés - Atlético de Madrid Más de 4.5 tarjetas Cuota: 1.84 Stake: 1.5 C"
-    },
-    {
-      "id": 866,
-      "channel": "letalbets",
-      "time": "2026-10-03T15:13:04+00:00",
-      "category": "核心推介",
-      "match": "西乙 阿尔巴塞特VS埃瓦尔",
-      "chinese": "西乙联赛较量：阿尔巴塞特对阵埃瓦尔。两队防守动作偏大执法尺度偏紧，看好双方激烈对抗导致吃牌数超标（全场大于5.5张黄牌）。",
-      "raw_preview": "Segunda División Albacete - Eibar Más de 5.5 tarjetas Cuota: 2.07 Stake: 1 Casa:"
+      "channel": "matchplug",
+      "time": "2026-10-16 20:39",
+      "code": "周六019",
+      "league": "英超",
+      "match": "曼城 vs 伊普斯",
+      "category": "角球与攻防",
+      "chinese": "周六019 曼城vs伊普斯：曼城主场压制力处于绝对统治地位，机构开盘重点看好曼城全场控球超72%并打出8个以上角球。"
     },
     {
       "id": 865,
-      "channel": "letalbets",
-      "time": "2026-10-03T09:32:56+00:00",
-      "category": "核心推介",
-      "match": "西乙 阿尔巴塞特VS埃瓦尔",
-      "chinese": "西乙联赛较量：阿尔巴塞特对阵埃瓦尔。两队防守动作偏大执法尺度偏紧，看好双方激烈对抗导致吃牌数超标（全场大于5.5张黄牌）。",
-      "raw_preview": "Segunda División Albacete - Eibar Más de 5.5 tarjetas Cuota: 2.07 Stake: 1 Casa:"
+      "channel": "TipstrrTips",
+      "time": "2026-10-16 19:56",
+      "code": "周六007",
+      "league": "英超",
+      "match": "埃弗顿 vs 切尔西",
+      "category": "机构精选",
+      "chinese": "周六007 埃弗顿vs切尔西：切尔西近3个客场防线出现严重松懈，埃弗顿古迪逊公园定位球头球破门率高，重点防范双方均有进球。"
+    },
+    {
+      "id": 860,
+      "channel": "golazzoofficial",
+      "time": "2026-10-14 23:52",
+      "code": "周六014",
+      "league": "德甲",
+      "match": "不来梅 vs 帕德博恩",
+      "category": "稳胆推介",
+      "chinese": "周六014 不来梅vs帕德博恩：不来梅主场攻防转换节奏极快，帕德博恩防线单薄，各大机构赛前共识78%倾向主队净胜2球以上。"
+    },
+    {
+      "id": 855,
+      "channel": "ibettingxx",
+      "time": "2026-10-16 19:28",
+      "code": "周六017",
+      "league": "德甲",
+      "match": "柏林联合 vs 多特蒙德",
+      "category": "防冷双选",
+      "chinese": "周六017 柏林联合vs多特蒙德：柏林联合球风硬朗且极其擅长主场克制强队，欧洲高胜率模型重点推荐双方进球或平局防冷。"
+    },
+    {
+      "id": 850,
+      "channel": "BetAlertsKE",
+      "time": "2026-10-16 15:30",
+      "code": "周六002",
+      "league": "日职",
+      "match": "鹿岛鹿角 vs 长崎航海",
+      "category": "死胆候选",
+      "chinese": "周六002 鹿岛鹿角vs长崎航海：杯赛交锋鹿岛鹿角主力全数在列，长崎航海重心在联赛保级，赛前数据给出86%胜率主胜死胆。"
+    },
+    {
+      "id": 845,
+      "channel": "focuspredict",
+      "time": "2026-10-16 16:00",
+      "code": "周六004",
+      "league": "澳超",
+      "match": "中央海岸 vs 纽喷气机",
+      "category": "早盘核心",
+      "chinese": "周六004 中央海岸vs纽喷气机：澳超德比战，中央海岸主场交锋战绩4连胜完全碾压，欧洲算法模型给出的主队不败概率达84%."
     }
   ]
 }
