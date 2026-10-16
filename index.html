@@ -1120,6 +1120,7 @@
 
         // 筛选赛事
         function filterMatches(el, filter) {
+            window.currentFilterMode = filter;
             document.querySelectorAll('.pill-btn').forEach(b => b.classList.remove('active'));
             el.classList.add('active');
             renderMatchesList(filter);
@@ -1353,9 +1354,22 @@
             fetchLiveIntel();
         }
 
-        // 页面打开自动初始化
+                // 页面打开自动初始化
         loadMatchesData();
         fetchLiveIntel();
+
+        // 前端全自动智能轮询机制：每 30 秒静默拉取最新实时比分与实况，客户无需手动刷新
+        setInterval(() => {
+            loadMatchesData(window.currentFilterMode || 'all');
+        }, 30000);
+
+        // 窗口恢复可见时（如微信切回浏览器），立即无感刷新一次
+        document.addEventListener('visibilitychange', () => {
+            if (document.visibilityState === 'visible') {
+                loadMatchesData(window.currentFilterMode || 'all');
+                fetchLiveIntel();
+            }
+        });
     </script>
 </body>
 </html>
