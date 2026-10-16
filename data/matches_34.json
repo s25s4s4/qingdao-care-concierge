@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17 01:26:49",
+  "updated_at": "2026-10-17 01:30:08",
   "total": 45,
   "matches": [
     {
@@ -52,7 +52,7 @@
       "away": "纽伦堡",
       "home_rank": "[08]",
       "away_rank": "[02]",
-      "status": "进行中 · 上半场",
+      "status": "进行中 · 中场",
       "form_home": [
         "W",
         "D",
@@ -117,7 +117,7 @@
       "consensus": "客优势 (75%)",
       "consensus_ratio": 75,
       "tip": "客胜",
-      "score": "0-0",
+      "score": "0-1",
       "result": "PENDING",
       "analysis": "佐加顿斯位列联赛次席整体实力碾压，客战争冠抢分战意拉满；布鲁马波卡纳主场防线漏洞较多，面对客队高强度逼抢出球困难，客胜呼声高。",
       "dossier": {
