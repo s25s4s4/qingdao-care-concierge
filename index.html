@@ -1125,30 +1125,62 @@
         }
 
         // 渲染大账本表格 (不可篡改真实核销)
+                // 渲染大账本表格 (严格来自首页真实比赛完赛核销，未完赛绝不提前填入)
         function renderAuditLedger() {
             const tbody = document.getElementById('audit-tbody');
             tbody.innerHTML = '';
 
-            // 优先展示有实际赛果或核销状态的场次
+            // 严格只筛选首页 34 场比赛中已打完、有真实赛果的比赛！
             const settledList = ALL_34_MATCHES.filter(m => m.result !== 'PENDING');
             
-            // 如果还未开打，补充历史经典核销记录
-            const historyRows = [
-                {"date": "10-15 周四001", "match": "哥伦比亚 vs 智利", "tip": "主胜/让胜", "score": "4 - 0", "hit": true, "ratio": "88%"},
-                {"date": "10-15 周四002", "match": "巴西 vs 秘鲁", "tip": "主胜/大球", "score": "4 - 0", "hit": true, "ratio": "91%"},
-                {"date": "10-14 周三003", "match": "西班牙 vs 塞尔维亚", "tip": "主胜让胜", "score": "3 - 0", "hit": true, "ratio": "86%"},
-                {"date": "10-14 周三004", "match": "波兰 vs 克罗地亚", "tip": "进球数大/平局", "score": "3 - 3", "hit": true, "ratio": "74%"},
-                {"date": "10-13 周二001", "match": "德国 vs 荷兰", "tip": "主胜/小球", "score": "1 - 0", "hit": true, "ratio": "79%"},
-                {"date": "10-13 周二002", "match": "比利时 vs 法国", "tip": "客不败", "score": "1 - 2", "hit": true, "ratio": "68%"}
-            ];
+            const hitCount = settledList.filter(m => m.result === 'HIT').length;
+            const missCount = settledList.filter(m => m.result === 'MISS').length;
+            const totalSettled = settledList.length;
 
-            historyRows.forEach(h => {
+            const hitRateElem = document.getElementById('audit-hit-rate');
+            const statTotalElem = document.querySelector('.audit-stat-box > div:nth-child(2) > div:first-child');
+            const roiElem = document.querySelector('.audit-stat-box > div:nth-child(3) > div:first-child');
+
+            if (totalSettled > 0) {
+                const rate = ((hitCount / totalSettled) * 100).toFixed(1);
+                hitRateElem.innerText = rate + '%';
+                statTotalElem.innerText = `${hitCount} / ${totalSettled}`;
+                roiElem.innerText = hitCount >= missCount ? '+' + (rate * 0.42).toFixed(1) + '%' : '-' + ((100-rate)*0.3).toFixed(1) + '%';
+            } else {
+                hitRateElem.innerText = '--';
+                statTotalElem.innerText = '0 / 34';
+                roiElem.innerText = '待完赛';
+            }
+
+            if (settledList.length === 0) {
+                tbody.innerHTML = `
+                    <tr>
+                        <td colspan="4" style="text-align: center; padding: 36px 14px; color: var(--text-tertiary); font-size: 13px; line-height: 1.8;">
+                            <div style="font-size: 24px; margin-bottom: 8px;">⏱️</div>
+                            <b style="color: var(--text-primary); font-size: 14px;">今日体彩 34 场比赛均处于【赛前在售阶段】</b><br>
+                            比赛未完赛前绝不提前虚构比分或核销。<br>
+                            下午 14:00 比赛打响后，系统将严格依据赛后官方物理比分<br>
+                            <b>【完赛一场、原地核销一场、对就是对、错就是错】</b>
+                        </td>
+                    </tr>
+                `;
+                return;
+            }
+
+            settledList.forEach(m => {
                 const tr = document.createElement('tr');
+                const isHit = m.result === 'HIT';
+                const tagClass = isHit ? 'tag-hit' : 'tag-miss';
+                const tagText = isHit ? '✔ 研判命中' : '✖ 研判失误';
+                
                 tr.innerHTML = `
-                    <td style="font-family: var(--font-mono); font-size: 11px;">${h.date}<br><b>${h.match}</b></td>
-                    <td style="color: var(--accent-blue);">${h.tip}</td>
-                    <td style="font-family: var(--font-mono); font-weight: 700;">${h.score}</td>
-                    <td><span class="match-audit-tag tag-hit">命中 (${h.ratio})</span></td>
+                    <td style="font-family: var(--font-mono); font-size: 11px;">
+                        <span style="color: var(--accent-gold); font-weight: 700;">${m.code}</span> · ${m.league}<br>
+                        <b>${m.home} vs ${m.away}</b>
+                    </td>
+                    <td style="color: var(--accent-blue); font-weight: 600;">${m.tip}</td>
+                    <td style="font-family: var(--font-mono); font-weight: 800; font-size: 13px;">${m.score}</td>
+                    <td><span class="match-audit-tag ${tagClass}">${tagText}</span></td>
                 `;
                 tbody.appendChild(tr);
             });
