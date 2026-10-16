@@ -5,6 +5,23 @@ import os
 import subprocess
 from datetime import datetime
 
+# Windows 底层彻底静默调用标志 (100% 杜绝黑框闪烁弹窗)
+CREATE_NO_WINDOW = 0x08000000
+
+def silent_subprocess_run(cmd, cwd=None):
+    try:
+        return subprocess.run(
+            cmd,
+            cwd=cwd,
+            creationflags=CREATE_NO_WINDOW,
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+            check=False
+        )
+    except Exception as e:
+        pass
+
+
 MATCHES_FILE = r"E:\euro_intel_web\data\official_matches.json"
 MATCHES_34_FALLBACK = r"E:\euro_intel_web\data\matches_34.json"
 WEB_DIR = r"E:\euro_intel_web"
@@ -268,10 +285,10 @@ def full_pipeline_sync(auto_push=True):
 
         if auto_push:
             os.chdir(WEB_DIR)
-            subprocess.run(["git", "add", "data/official_matches.json", "data/matches_34.json", "index.html"], check=False)
+            silent_subprocess_run(["git", "add", "data/official_matches.json", "data/matches_34.json", "index.html"], cwd=WEB_DIR)
             commit_title = f"Live-Pulse: {len(log_messages)} match status/score updates ({datetime.now().strftime('%H:%M:%S')})"
-            subprocess.run(["git", "commit", "-m", commit_title], check=False)
-            res = subprocess.run(["git", "push", "origin", "main"], capture_output=True, text=True)
+            silent_subprocess_run(["git", "commit", "-m", commit_title], cwd=WEB_DIR)
+            res = silent_subprocess_run(["git", "push", "origin", "main"], cwd=WEB_DIR)
             print("Git push result:", res.stdout or res.stderr)
     else:
         print(f"[{datetime.now()}] Pipeline scan: Everything up-to-date.")
