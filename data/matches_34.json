@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17 02:48:06",
+  "updated_at": "2026-10-17 02:58:06",
   "total": 45,
   "matches": [
     {
@@ -136,7 +136,7 @@
       "away": "SBV精英",
       "home_rank": "6",
       "away_rank": "15",
-      "status": "进行中 · 上半场",
+      "status": "进行中 · 中场",
       "form_home": [
         "W",
         "L",
@@ -178,7 +178,7 @@
       "away": "奥斯",
       "home_rank": "5",
       "away_rank": "18",
-      "status": "进行中 · 上半场",
+      "status": "进行中 · 中场",
       "form_home": [
         "W",
         "W",
@@ -285,7 +285,7 @@
       "consensus": "主优势 (71%)",
       "consensus_ratio": 71,
       "tip": "双方进球/客不败",
-      "score": "0-0",
+      "score": "1-0",
       "result": "PENDING",
       "analysis": "萨索洛前场由贝拉尔迪领衔，小范围撞墙配合默契极高；弗洛西诺内主场逼抢强硬但防线转身慢是致命死穴，萨索洛反击刀刀见血，双方进球几率极高。",
       "dossier": {
