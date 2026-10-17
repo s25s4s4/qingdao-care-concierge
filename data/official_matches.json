@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17 22:10:08",
+  "updated_at": "2026-10-17 22:15:09",
   "total": 74,
   "matches": [
     {
@@ -1682,7 +1682,7 @@
       "away": "埃尔切",
       "home_rank": "4",
       "away_rank": "西乙3",
-      "status": "西甲攻防压制",
+      "status": "进行中 · 上半场 0'",
       "form_home": [
         "W",
         "L",
@@ -1705,7 +1705,7 @@
       "consensus": "主胜 (81.6%)",
       "consensus_ratio": 81.6,
       "tip": "主胜",
-      "score": "--",
+      "score": "0-0",
       "result": "PENDING",
       "analysis": "比利亚雷亚尔本赛季进攻端水银泻地，定位球配合细腻；埃尔切客场以守代攻但防线难以支撑90分钟连续高压，黄色潜水艇主场拿下比赛。",
       "dossier": {
@@ -1721,12 +1721,13 @@
         "tipster_score": 71.5,
         "math_score": 72.4
       },
-      "sale_closed": false,
+      "sale_closed": true,
       "predicted_scores": [
         "2-0",
         "3-0",
         "3-1"
-      ]
+      ],
+      "locked": true
     },
     {
       "code": "周六022",
