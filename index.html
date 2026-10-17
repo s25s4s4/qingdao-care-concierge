@@ -1111,8 +1111,15 @@
                 delete window[callbackName];
                 script.remove();
             };
-            script.src = 'http://66.187.6.130:8899/api/live_scores?callback=' + callbackName + '&_t=' + Date.now();
-            script.onerror = function() { script.remove(); };
+            script.src = 'https://qingdaocare.top:8899/api/live_scores?callback=' + callbackName + '&_t=' + Date.now();
+            script.onerror = function() {
+                // 如果 https 8899 失败，降级直连 http
+                const fallbackScript = document.createElement('script');
+                fallbackScript.src = 'http://66.187.6.130:8899/api/live_scores?callback=' + callbackName + '&_t=' + Date.now();
+                fallbackScript.onerror = function() { fallbackScript.remove(); };
+                document.body.appendChild(fallbackScript);
+                script.remove();
+            };
             document.body.appendChild(script);
         }
 
