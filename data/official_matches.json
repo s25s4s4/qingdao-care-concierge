@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18 03:51:05",
+  "updated_at": "2026-10-18 04:01:11",
   "total": 74,
   "matches": [
     {
@@ -2241,7 +2241,7 @@
       "away": "费耶诺德",
       "home_rank": "荷乙11",
       "away_rank": "3",
-      "status": "进行中 · 下半场",
+      "status": "已完赛",
       "form_home": [
         "D",
         "L",
@@ -2265,7 +2265,7 @@
       "consensus_ratio": 78,
       "tip": "客胜",
       "score": "3-4",
-      "result": "PENDING",
+      "result": "HIT",
       "analysis": "特尔斯达对阵费耶诺德，攻防节奏对抗激烈，战术建议【客胜】。",
       "dossier": {
         "summary": "特尔斯达对阵费耶诺德，攻防节奏对抗激烈，战术建议【客胜】。",
@@ -2324,7 +2324,7 @@
       "consensus": "主胜 (74.8%)",
       "consensus_ratio": 74.8,
       "tip": "主胜",
-      "score": "0-0",
+      "score": "1-0",
       "result": "PENDING",
       "analysis": "罗马对阵热那亚，三模型满血对抗研判首选【主胜】。",
       "dossier": {
