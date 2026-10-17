@@ -567,6 +567,11 @@ def full_pipeline_sync(auto_push=True):
                             m['score'] = '0-0'
                         changes_made = True
                         log_messages.append(f"Kick-off clock trigger: {code} ({m['home']} vs {m['away']}) -> {new_status}")
+                    
+                    # 关键守护：如果外部比分网还没有更新比分，但本地已经更新了有效进球（如 0-1），绝不能倒退回 0-0！
+                    if info['score'] != '--' and info['score'] != m['score']:
+                        m['score'] = info['score']
+                        changes_made = True
         else:
             # 不在 live_map 中但物理时间已到达开赛时刻
             if m['result'] == 'PENDING' and m_time and m_time <= now_month_day_time:
