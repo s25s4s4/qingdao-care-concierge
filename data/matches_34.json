@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18 05:01:05",
+  "updated_at": "2026-10-18 07:30:05",
   "total": 74,
   "matches": [
     {
@@ -2421,7 +2421,7 @@
       "away": "芝加哥",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "焦点对决",
+      "status": "进行中 · 上半场 0'",
       "form_home": [
         "W",
         "D",
@@ -2444,7 +2444,7 @@
       "consensus": "主不败 (68%)",
       "consensus_ratio": 68,
       "tip": "主不败/首选主胜",
-      "score": "--",
+      "score": "0-0",
       "result": "PENDING",
       "analysis": "新英格兰对阵芝加哥，攻防节奏对抗激烈，战术建议【主不败/首选主胜】。",
       "dossier": {
