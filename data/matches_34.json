@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18 04:41:05",
+  "updated_at": "2026-10-18 05:01:05",
   "total": 74,
   "matches": [
     {
@@ -2361,7 +2361,7 @@
       "away": "毕尔巴鄂",
       "home_rank": "18",
       "away_rank": "5",
-      "status": "进行中 · 下半场",
+      "status": "已完赛",
       "form_home": [
         "L",
         "D",
@@ -2385,7 +2385,7 @@
       "consensus_ratio": 67,
       "tip": "客不败/双选平负",
       "score": "0-0",
-      "result": "PENDING",
+      "result": "HIT",
       "analysis": "巴伦西亚对阵毕尔巴鄂，攻防节奏对抗激烈，战术建议【客不败/双选平负】。",
       "dossier": {
         "summary": "巴伦西亚对阵毕尔巴鄂，攻防节奏对抗激烈，战术建议【客不败/双选平负】。",
