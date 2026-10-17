@@ -2042,7 +2042,7 @@
       "away": "维拉",
       "home_rank": "7",
       "away_rank": "5",
-      "status": "进行中 · 下半场",
+      "status": "已完赛",
       "form_home": [
         "D",
         "L",
@@ -2065,8 +2065,8 @@
       "consensus": "主不败 (68%)",
       "consensus_ratio": 68,
       "tip": "主不败/首选主胜",
-      "score": "0-1",
-      "result": "PENDING",
+      "score": "0-2",
+      "result": "MISS",
       "analysis": "纽卡斯尔对阵维拉，攻防节奏对抗激烈，战术建议【主不败/首选主胜】。",
       "dossier": {
         "summary": "纽卡斯尔对阵维拉，攻防节奏对抗激烈，战术建议【主不败/首选主胜】。",
@@ -2102,7 +2102,7 @@
       "away": "莱红牛",
       "home_rank": "1",
       "away_rank": "2",
-      "status": "进行中 · 下半场",
+      "status": "已完赛",
       "form_home": [
         "D",
         "W",
@@ -2126,7 +2126,7 @@
       "consensus_ratio": 78.5,
       "tip": "让负/首选客不败",
       "score": "6-0",
-      "result": "PENDING",
+      "result": "MISS",
       "analysis": "拜仁主让-2球深盘极难穿盘，莱红牛高效反击极度克制拜仁压上，红蓝对抗审查首选【让负/首选客不败】。",
       "dossier": {
         "summary": "拜仁主让-2球深盘极难穿盘，莱红牛高效反击极度克制拜仁压上，红蓝对抗审查首选【让负/首选客不败】。",
@@ -2169,7 +2169,7 @@
       "away": "巴萨",
       "home_rank": "10",
       "away_rank": "1",
-      "status": "进行中 · 下半场",
+      "status": "已完赛",
       "form_home": [
         "L",
         "W",
@@ -2193,7 +2193,7 @@
       "consensus_ratio": 77,
       "tip": "客胜",
       "score": "2-5",
-      "result": "PENDING",
+      "result": "HIT",
       "analysis": "贝蒂斯对阵巴萨，攻防节奏对抗激烈，战术建议【客胜】。",
       "dossier": {
         "summary": "贝蒂斯对阵巴萨，攻防节奏对抗激烈，战术建议【客胜】。",
