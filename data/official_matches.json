@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17 17:52:06",
+  "updated_at": "2026-10-17 18:00:06",
   "total": 74,
   "matches": [
     {
@@ -835,7 +835,7 @@
       "away": "名古屋鲸",
       "home_rank": "8",
       "away_rank": "6",
-      "status": "日职战术矛盾",
+      "status": "进行中 · 上半场 0'",
       "form_home": [
         "L",
         "D",
@@ -858,7 +858,7 @@
       "consensus": "平局/主胜 (68.9%)",
       "consensus_ratio": 68.9,
       "tip": "平局/主胜",
-      "score": "--",
+      "score": "0-0",
       "result": "PENDING",
       "analysis": "柏太阳神近4个主场保持不败，中场拦截硬度极高；名古屋鲸八客场攻坚过于依赖单一支点容易被针对限制，柏太阳神主场立足防守保平争胜。",
       "dossier": {
@@ -874,12 +874,13 @@
         "tipster_score": 71.5,
         "math_score": 63.6
       },
-      "sale_closed": false,
+      "sale_closed": true,
       "predicted_scores": [
         "1-0",
         "1-1",
         "2-1"
-      ]
+      ],
+      "locked": true
     },
     {
       "code": "周六006",
@@ -889,7 +890,7 @@
       "away": "磐田喜悦",
       "home_rank": "16",
       "away_rank": "4",
-      "status": "日乙冲甲硬仗",
+      "status": "进行中 · 上半场 0'",
       "form_home": [
         "L",
         "L",
@@ -905,14 +906,14 @@
         "L"
       ],
       "odds": [
-        "2.20",
+        "2.15",
         "2.80",
-        "3.15"
+        "3.26"
       ],
       "consensus": "主不败 (65.0%)",
       "consensus_ratio": 65.0,
       "tip": "主不败",
-      "score": "--",
+      "score": "0-0",
       "result": "PENDING",
       "analysis": "宫崎惊奇牛鸟主场战绩位居联赛前列，高空球与定位球冲击力极大；磐田喜悦近期客战防线注意力涣散失误频频，平手盘面下主队爆冷抢分概率极高。",
       "dossier": {
@@ -928,12 +929,13 @@
         "tipster_score": 76.8,
         "math_score": 63.6
       },
-      "sale_closed": false,
+      "sale_closed": true,
       "predicted_scores": [
         "1-0",
         "1-1",
         "2-1"
-      ]
+      ],
+      "locked": true
     },
     {
       "code": "周六007",
@@ -960,8 +962,8 @@
       ],
       "odds": [
         "2.94",
-        "3.40",
-        "2.02"
+        "3.35",
+        "2.04"
       ],
       "consensus": "客胜/防平 (65.0%)",
       "consensus_ratio": 65.0,
