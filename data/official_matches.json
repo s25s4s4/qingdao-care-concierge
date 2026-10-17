@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17 22:19:06",
+  "updated_at": "2026-10-17 22:20:07",
   "total": 74,
   "matches": [
     {
@@ -1221,7 +1221,7 @@
       "consensus": "主不败/首选主胜 (81.7%)",
       "consensus_ratio": 81.7,
       "tip": "主不败/首选主胜",
-      "score": "1-0",
+      "score": "2-0",
       "result": "PENDING",
       "analysis": "赫尔辛基对阵赫尔辛基火花，攻防节奏对抗激烈，战术建议【主不败/首选主胜】。",
       "dossier": {
@@ -1352,7 +1352,7 @@
       "away": "美因茨",
       "home_rank": "德乙12",
       "away_rank": "9",
-      "status": "进行中 · 上半场",
+      "status": "进行中 · 中场",
       "form_home": [
         "L",
         "D",
@@ -1407,7 +1407,7 @@
       "away": "斯图加特",
       "home_rank": "德乙3",
       "away_rank": "5",
-      "status": "进行中 · 上半场",
+      "status": "进行中 · 中场",
       "form_home": [
         "W",
         "W",
@@ -1682,7 +1682,7 @@
       "away": "埃尔切",
       "home_rank": "4",
       "away_rank": "西乙3",
-      "status": "进行中 · 上半场 4'",
+      "status": "进行中 · 上半场",
       "form_home": [
         "W",
         "L",
