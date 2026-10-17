@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17 20:08:06",
+  "updated_at": "2026-10-17 20:09:08",
   "total": 74,
   "matches": [
     {
@@ -1044,7 +1044,7 @@
       "away": "马竞",
       "home_rank": "15",
       "away_rank": "3",
-      "status": "进行中 · 上半场 8'",
+      "status": "进行中 · 上半场 9'",
       "form_home": [
         "L",
         "W",
@@ -1099,7 +1099,7 @@
       "away": "博德闪耀",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "进行中 · 上半场 8'",
+      "status": "进行中 · 上半场 9'",
       "form_home": [
         "W",
         "D",
@@ -1688,12 +1688,12 @@
         "W"
       ],
       "odds": [
-        "1.27",
-        "5.10",
-        "6.85"
+        "1.25",
+        "5.25",
+        "7.20"
       ],
-      "consensus": "主胜 (82.3%)",
-      "consensus_ratio": 82.3,
+      "consensus": "主胜 (83.6%)",
+      "consensus_ratio": 83.6,
       "tip": "主胜",
       "score": "--",
       "result": "PENDING",
