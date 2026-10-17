@@ -74,7 +74,7 @@ def query_telegram_tips_for_match(home, away):
     return matched[:5]
 
 def compute_poisson_and_kelly(odds):
-    """模型一 (Low 极端数学): 泊松期望值与凯利去水计算"""
+    """模型一 (Low 极端数学): 双变量泊松分布 (Bivariate Poisson) 与凯利去水比分精算"""
     try:
         sp_h = float(odds[0]) if odds[0] != '-' else 2.5
         sp_d = float(odds[1]) if odds[1] != '-' else 3.2
@@ -95,13 +95,33 @@ def compute_poisson_and_kelly(odds):
     # 凯利去水打分 (0-100)
     odds_score = round(min(max(pure_h * 1.1 if pure_h >= pure_a else pure_a * 1.1, 60.0), 86.0), 1)
 
+    # 基于胜平负概率反推攻防期望值 (Lambda: 主队 xG, Mu: 客队 xG)
+    ratio_ha = pure_h / (pure_h + pure_a + 1e-5)
+    lambda_h = max(0.6, min(3.2, 1.35 * (ratio_ha / 0.5)))
+    mu_a = max(0.4, min(3.0, 1.25 * ((1.0 - ratio_ha) / 0.5)))
+
+    # 二维双变量泊松分布计算 0-0 到 4-3 共 20 个比分的理论概率
+    score_probs = {}
+    for x in range(5):
+        for y in range(4):
+            prob_x = (lambda_h ** x) * math.exp(-lambda_h) / math.factorial(x)
+            prob_y = (mu_a ** y) * math.exp(-mu_a) / math.factorial(y)
+            score_probs[f"{x}-{y}"] = prob_x * prob_y
+
+    # 取数学概率最高的 Top 5 纯理论比分
+    sorted_scores = sorted(score_probs.items(), key=lambda kv: kv[1], reverse=True)
+    top_math_scores = [s[0] for s in sorted_scores[:5]]
+
     return {
         "sp_h": sp_h, "sp_d": sp_d, "sp_a": sp_a,
         "pure_h": round(pure_h, 1),
         "pure_d": round(pure_d, 1),
         "pure_a": round(pure_a, 1),
         "margin": round(margin, 1),
-        "odds_score": odds_score
+        "odds_score": odds_score,
+        "lambda_h": round(lambda_h, 2),
+        "mu_a": round(mu_a, 2),
+        "top_math_scores": top_math_scores
     }
 
 def run_tri_model_deep_reasoning(match_info):
@@ -136,23 +156,27 @@ def run_tri_model_deep_reasoning(match_info):
 - 官方SP赔率：主胜 {stats['sp_h']} | 平局 {stats['sp_d']} | 客胜 {stats['sp_a']}
 - 是否单开让球胜平负：{'是 (主让' + rang + '球)' if is_only_rq else '否 (标准胜平负)'}
 - 数学去水指标：主胜真实概率 {stats['pure_h']}% | 平局 {stats['pure_d']}% | 客胜 {stats['pure_a']}% (机构抽水 {stats['margin']}%)
+- 【模型一：二维双变量泊松分布精算】：主队xG进球期望 {stats['lambda_h']} | 客队xG进球期望 {stats['mu_a']} | 纯数学理论Top5高频比分: {stats['top_math_scores']}
 - 海外22个推单频道前线情报/推单捕捉：
 {tg_context}
 
 【强制推演三阶要求】
-第一阶段：【High满血战术矛盾推演】
+第一阶段：【High满血战术矛盾与进球格局推演】
 1. 深入分析两队战术阵眼：主队破大巴效率 vs 客队防守反击纵深速度。
-2. 赛程体能与轮换：是否存在密集体能拐点或战意松懈？
+2. 比赛节奏与总进球数格局：是防守绞杀的肉搏战（0-2球小球带），还是互攻穿透的大球格局（3-5球大球带）？豪门是否存在垃圾时间补时刷球溢出能力？
 3. 识别机构意图：官方 SP 水位是否存在阻上或诱下？平局是否被机构刻意低赔防范？
 
 第二阶段：【High满血红蓝对抗挑刺 (破坏者视角)】
 以破坏者视角反思：如果强队打不出来或正路爆冷，最致命的客观原因会是什么？绝不能给出没有防范的盲目死胆！
 
-第三阶段：【终极仲裁决策与实体彩店出票选项】
+第三阶段：【终极仲裁决策与【黄金三角】比分输出】
 1. 赛前研判建议选项（必须为中国体彩合法出票选项）：
    - 若单开让球：必须为【让胜/博穿盘】、【让负/首选客不败】或【让平/防让胜】；
    - 若标准双开：必须为【主胜】、【客胜】、【主不败/首选主胜】、【客不败/双选平负】或【平局/防冷】；
-2. 给出 3 个最精准的实战防范比分（如 '2-1', '2-0', '1-1'）；
+2. 【核心重点：比分实战黄金三角组合（严密防范）】：
+   - 必须给出 3 个高确定性比分，且严禁全部扎堆在同一个总进球数里！
+   - 必须涵盖【① 核心正路高频比分】+【② 零封/闷杀保守比分】+【③ 穿盘/互攻防爆比分】构成的黄金三角矩阵！
+   - 严格参考模型一泊松高频比分 {stats['top_math_scores']} 与战术格局，杜绝方向看对但比分差一个球的遗憾！
 3. 给出四维因子打分（0-100）：
    - odds_score (盘口去水)
    - intel_score (更衣室暗流)
