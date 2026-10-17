@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17 15:29:06",
+  "updated_at": "2026-10-17 15:30:05",
   "total": 74,
   "matches": [
     {
@@ -725,7 +725,7 @@
       "away": "富川FC",
       "home_rank": "1",
       "away_rank": "K2第4",
-      "status": "韩国杯关键战",
+      "status": "进行中 · 上半场 0'",
       "form_home": [
         "W",
         "D",
@@ -748,7 +748,7 @@
       "consensus": "主胜 (81.6%)",
       "consensus_ratio": 81.6,
       "tip": "主胜",
-      "score": "--",
+      "score": "0-0",
       "result": "PENDING",
       "analysis": "蔚山现代坐镇主场高位压制力在韩职首屈一指，前场渗透细腻；富川FC作为二级联赛球队很难抵挡蔚山现代的高速短传推进，主队正路大胜稳健。",
       "dossier": {
@@ -764,12 +764,13 @@
         "tipster_score": 71.5,
         "math_score": 74.6
       },
-      "sale_closed": false,
+      "sale_closed": true,
       "predicted_scores": [
         "2-0",
         "3-0",
         "2-1"
-      ]
+      ],
+      "locked": true
     },
     {
       "code": "周六004",
