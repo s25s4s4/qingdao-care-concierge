@@ -1140,12 +1140,12 @@
                 }))
                 .catch(() => fetch(cdnUrl, { cache: 'no-store' }).then(r => r.json()))
                 .then(data => {
-                    ALL_OFFICIAL_MATCHES = data.matches || [];
-                    renderMatchesList(filterMode);
-                    renderConsensusList();
-                    renderAuditLedger();
-                    // 页面刚渲染完立即执行一次 VPS 秒级比分校准
-                    fetchLiveScoresPulse();
+                    if (data && data.matches) {
+                        ALL_OFFICIAL_MATCHES = data.matches;
+                        renderMatchesList(filterMode);
+                        renderConsensusList();
+                        renderAuditLedger();
+                    }
                 })
                 .catch(err => {
                     console.error('Matches data load error:', err);
@@ -1689,15 +1689,15 @@ function copyWechat() {
         fetchLiveIntel();
 
         // 前端全自动智能轮询机制：
-        // 1. 每 8 秒通过 VPS 直连极速刷新比分 (0延迟即时刷新，进球秒级变动)
+        // 1. 每 8 秒拉取一次比分直连流
         setInterval(() => {
             fetchLiveScoresPulse();
         }, 8000);
 
-        // 2. 每 60 秒做一次全量赛程/战绩同步
+        // 2. 每 15 秒做一次全量赛程/战绩同步 (保证多源毫秒级更新，无论客户端浏览器环境如何均可极速呈现)
         setInterval(() => {
             loadMatchesData(window.currentFilterMode || 'all');
-        }, 60000);
+        }, 15000);
 
         // 静默无感流量统计 (后台静默记录真实 IP/城市)
         (function() {
