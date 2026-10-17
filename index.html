@@ -813,7 +813,8 @@
 
         <!-- 官方赛事多维分类筛选器 -->
         <div class="category-scroller">
-            <div class="pill-btn active" id="pill-all-tab" onclick="filterMatches(this, 'all')">首页在售/进行中</div>
+            <div class="pill-btn active" id="pill-all-tab" onclick="filterMatches(this, 'all')">全部在售/进行中</div>
+            <div class="pill-btn" id="pill-pending-tab" onclick="filterMatches(this, 'pending_only')">待鸣哨开赛</div>
             <div class="pill-btn" onclick="filterMatches(this, 'top5')">五大联赛焦点</div>
             <div class="pill-btn" onclick="filterMatches(this, 'banker')">核心稳胆专区</div>
             <div class="pill-btn" onclick="switchNav('audit')">已完赛移入验证大账本 →</div>
@@ -1105,29 +1106,36 @@
             let activeList = ALL_OFFICIAL_MATCHES.filter(m => m.result === 'PENDING');
 
             let list = activeList.filter(m => {
+                if (filterMode === 'pending_only') return !m.status.includes('进行中') && !m.status.includes('半场') && !m.status.includes('中断');
                 if (filterMode === 'top5') return ['英超', '德甲', '西甲', '意甲', '法甲'].includes(m.league);
                 if (filterMode === 'banker') return m.status.includes('稳胆') || m.status.includes('天王山') || m.status.includes('死胆');
                 return true;
             });
 
             // 统计计数：全量 vs 已完赛 vs 待鸣哨开赛
-            const pendingList = ALL_OFFICIAL_MATCHES.filter(m => m.result === 'PENDING');
+            // 严格业务铁律：开赛的（进行中/半场/中断）绝不能算入“待鸣哨开赛”！
             const settledList = ALL_OFFICIAL_MATCHES.filter(m => m.result !== 'PENDING');
+            const liveList = ALL_OFFICIAL_MATCHES.filter(m => m.result === 'PENDING' && (m.status.includes('进行中') || m.status.includes('半场') || m.status.includes('中断')));
+            // 真正尚未鸣哨开赛的纯赛前场次：
+            const truePendingList = ALL_OFFICIAL_MATCHES.filter(m => m.result === 'PENDING' && !m.status.includes('进行中') && !m.status.includes('半场') && !m.status.includes('中断'));
             
-            const pendingCount = pendingList.length;
-            const settledCount = settledList.length;
             const totalCount = ALL_OFFICIAL_MATCHES.length;
+            const settledCount = settledList.length;
+            const pendingCount = truePendingList.length;
             
             // 严格对齐数据看板语义：
-            // 1. 全量收录赛事 = 74
-            // 2. 已完赛大账本 = 11 (已出赛果)
-            // 3. 待鸣哨开赛 = 63 (仍在售未开赛/进行中)
+            // 1. 全量收录赛事 = totalCount
+            // 2. 已完赛大账本 = settledCount
+            // 3. 待鸣哨开赛 = pendingCount (纯赛前未鸣哨场次，开赛的不算在内！)
             document.getElementById('total-matches-num').innerText = totalCount;
             document.getElementById('settled-hit-num').innerText = settledCount;
             document.getElementById('pending-matches-num').innerText = pendingCount;
             
             const allPill = document.getElementById('pill-all-tab');
-            if (allPill) allPill.innerText = `首页在售/进行中 (${pendingCount})`;
+            if (allPill) allPill.innerText = `全部在售/进行中 (${activeList.length})`;
+            
+            const pendingPill = document.getElementById('pill-pending-tab');
+            if (pendingPill) pendingPill.innerText = `待鸣哨开赛 (${pendingCount})`;
 
             list.forEach(m => {
                 const card = document.createElement('div');
