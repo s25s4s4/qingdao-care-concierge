@@ -1351,7 +1351,17 @@
                         <span class="intel-tag">[核心逻辑]</span>
                         <span>${m.analysis}</span>
                     </div>
-                    <!-- 底部研判建议 -->
+                    <!-- 底部研判建议 & 进球数黄金带 -->
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 10px; margin-bottom: 6px; font-size: 11.5px; background: rgba(255,255,255,0.02); padding: 5px 8px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.05);">
+                        <div style="color: var(--text-secondary); display: flex; align-items: center; gap: 4px;">
+                            <span>⚽ 进球数精算:</span>
+                            <span style="color: var(--accent-gold); font-weight: 800; font-family: var(--font-mono);">${(m.predicted_goals || ['2', '3']).map(g => g + '球').join('、')}</span>
+                        </div>
+                        <div style="color: var(--text-secondary); display: flex; align-items: center; gap: 4px;">
+                            <span>🎯 防范比分:</span>
+                            <span style="color: #38bdf8; font-weight: 800; font-family: var(--font-mono);">${(m.predicted_scores || ['1-1']).join(' ')}</span>
+                        </div>
+                    </div>
                     <div class="card-decision-bar">
                         <div class="decision-text">
                             ${m.is_only_rq ? '<span style="background: rgba(210, 153, 34, 0.2); color: var(--accent-gold); padding: 1px 5px; border-radius: 4px; font-size: 10px; font-weight: 800; margin-right: 4px;">让球专项</span>' : ''}赛前建议：<span class="decision-val">${m.tip}</span>
@@ -1676,9 +1686,17 @@
                             tagText = '🟡 官方延期 (退本金)';
                         }
                 
-                        // 比分胶囊列表渲染
+                        // 比分与进球数胶囊列表渲染
                         const predScores = m.predicted_scores || ['1-0', '2-1', '1-1'];
+                        const predGoals = m.predicted_goals || ['2', '3'];
                         const actualScore = m.score ? m.score.replace(' ', '') : '';
+                        
+                        // 计算实际总进球数
+                        let actualTotalGoals = null;
+                        if (actualScore && actualScore.includes('-')) {
+                            const pts = actualScore.split('-');
+                            actualTotalGoals = (parseInt(pts[0]) + parseInt(pts[1])).toString();
+                        }
                 
                         const scoreBadges = predScores.map(ps => {
                             const isExactHit = (actualScore === ps);
@@ -1686,6 +1704,15 @@
                                 return `<span style="background: rgba(35, 134, 54, 0.25); border: 1px solid #3fb950; color: #3fb950; padding: 1px 5px; border-radius: 4px; font-weight: 800; font-size: 10px; margin-right: 3px; display: inline-block;">✔ ${ps}</span>`;
                             } else {
                                 return `<span style="background: rgba(110, 118, 129, 0.1); border: 1px solid rgba(110, 118, 129, 0.25); color: #8b949e; padding: 1px 4px; border-radius: 4px; font-size: 10px; margin-right: 3px; display: inline-block;">${ps}</span>`;
+                            }
+                        }).join('');
+
+                        const goalBadges = predGoals.map(pg => {
+                            const isGoalHit = (actualTotalGoals === pg);
+                            if (isGoalHit) {
+                                return `<span style="background: rgba(210, 153, 34, 0.25); border: 1px solid var(--accent-gold); color: var(--accent-gold); padding: 0px 4px; border-radius: 3px; font-weight: 800; font-size: 9.5px; margin-right: 2px;">✔ ${pg}球</span>`;
+                            } else {
+                                return `<span style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.1); color: var(--text-tertiary); padding: 0px 4px; border-radius: 3px; font-size: 9.5px; margin-right: 2px;">${pg}球</span>`;
                             }
                         }).join('');
 
@@ -1708,7 +1735,11 @@
                             </td>
                             <td>
                                 <div style="color: var(--accent-blue); font-weight: 700; font-size: 12px; margin-bottom: 4px;">${m.tip}</div>
-                                <div style="font-family: var(--font-mono);">${scoreBadges}</div>
+                                <div style="font-family: var(--font-mono); margin-bottom: 3px;">${scoreBadges}</div>
+                                <div style="display: flex; align-items: center; gap: 3px;">
+                                    <span style="font-size: 9px; color: var(--text-tertiary);">进球:</span>
+                                    ${goalBadges}
+                                </div>
                             </td>
                             <td style="font-family: var(--font-mono); font-weight: 800; font-size: 13px; color: ${scoreColor};">${scoreText}</td>
                             <td><span class="match-audit-tag ${tagClass}">${tagText}</span></td>

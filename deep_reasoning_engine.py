@@ -195,11 +195,12 @@ def run_tri_model_deep_reasoning(match_info):
     "tipster_score": 76.0,
     "math_score": 74.0
   }},
+  "predicted_goals": ["2", "3"],
   "predicted_scores": ["比分1", "比分2", "比分3"],
   "fundamental": "一、联赛积分与基本面战意格局详细解析（100字左右，结合真实近况与地利）",
   "tactical_conflict": "二、核心战术矛盾与人员阵眼详细解析（100字左右，突出攻坚与反击关键点）",
   "market_attitude": "三、欧洲37家机构盘口与去水态度详细解析（100字左右，必须准确引用真实赔率数值）",
-  "decision_guide": "四、小杨店主研判与选择指引详细解析（100字左右，明确告诉彩民怎么出票、比分怎么防）"
+  "decision_guide": "四、小杨店主研判与选择指引详细解析（100字左右，明确告诉彩民怎么出票、进球数怎么选、比分怎么防）"
 }}
 """
 
