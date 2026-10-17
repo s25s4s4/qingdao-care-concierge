@@ -226,7 +226,14 @@ def generate_tactical_dossier(home, away, league, odds, is_only_rq=False, rang='
         score_preds = "0-2、1-2、1-3" if sp_a > 1.4 else "0-3、0-4、1-3"
         tactics = f"{away}客战争胜战意坚决，前锋线单兵撕裂能力极强；{home}虽坐镇主场但防线回撤过深且缺乏防反支点，客队牢牢掌控场面主动，客胜正路打出。"
     elif "不败" in tip or "平" in tip:
-        score_preds = "1-1、2-2、1-2" if sp_h < sp_a else "1-1、1-0、0-0"
+        if "主" in tip:
+            # 严格业务铁律：主不败只能推荐主胜或平局，绝对禁止出现客胜比分(如1-2)！
+            score_preds = "2-1、1-1、2-0"
+        elif "客" in tip:
+            # 严格业务铁律：客不败只能推荐客胜或平局，绝对禁止出现主胜比分(如1-0)！
+            score_preds = "1-2、1-1、0-1"
+        else:
+            score_preds = "1-1、0-0、2-2"
         tactics = f"双方技战术风格相生相克，攻防转换频繁在中场形成僵持拉锯。{home}防守硬度足够但攻坚手段单一，{away}客战打法偏于求稳，胜负手在于定位球乱战与替补轮换，谨防握手言和。"
     else:
         score_preds = "2-1、1-1、1-2"
