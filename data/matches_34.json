@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18 00:20:06",
+  "updated_at": "2026-10-18 00:30:06",
   "total": 74,
   "matches": [
     {
@@ -1847,7 +1847,7 @@
       "away": "维拉",
       "home_rank": "7",
       "away_rank": "5",
-      "status": "英超激战圣詹姆斯",
+      "status": "进行中 · 上半场 0'",
       "form_home": [
         "D",
         "L",
@@ -1870,7 +1870,7 @@
       "consensus": "主不败/防平 (65.0%)",
       "consensus_ratio": 65.0,
       "tip": "主不败/防平",
-      "score": "--",
+      "score": "0-0",
       "result": "PENDING",
       "analysis": "纽卡斯尔联圣詹姆斯公园主场压迫感极强，反击速度全英超前列；阿斯顿维拉在埃梅里调教下进攻转换极其犀利，双方对攻大战进球如麻，看好主不败。",
       "dossier": {
@@ -1902,7 +1902,7 @@
       "away": "莱红牛",
       "home_rank": "1",
       "away_rank": "2",
-      "status": "穿盘稳胆",
+      "status": "进行中 · 上半场 0'",
       "form_home": [
         "D",
         "W",
@@ -1925,7 +1925,7 @@
       "consensus": "让胜优势 (74%)",
       "consensus_ratio": 74,
       "tip": "让胜/博穿盘",
-      "score": "--",
+      "score": "0-0",
       "result": "PENDING",
       "analysis": "拜仁对阵莱红牛，官方单开让球胜平负(-2)，战术首选【让胜/博穿盘】。",
       "dossier": {
@@ -1964,7 +1964,7 @@
       "away": "巴萨",
       "home_rank": "10",
       "away_rank": "1",
-      "status": "西甲焦点对决",
+      "status": "进行中 · 上半场 0'",
       "form_home": [
         "L",
         "W",
@@ -1987,7 +1987,7 @@
       "consensus": "客胜 (78.9%)",
       "consensus_ratio": 78.9,
       "tip": "客胜",
-      "score": "--",
+      "score": "0-0",
       "result": "PENDING",
       "analysis": "弗里克治下的巴塞罗那高位逼抢与纵深反击极其致命，莱万多夫斯基进球势头凶猛；贝蒂斯防线遭遇关键减员，难以招架巴萨前场全攻全守风暴。",
       "dossier": {
