@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17 21:01:13",
+  "updated_at": "2026-10-17 21:02:13",
   "total": 74,
   "matches": [
     {
@@ -945,7 +945,7 @@
       "away": "切尔西",
       "home_rank": "14",
       "away_rank": "4",
-      "status": "进行中 · 下半场",
+      "status": "进行中 · 上半场 92'",
       "form_home": [
         "D",
         "L",
@@ -1000,7 +1000,7 @@
       "away": "林肯城",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "进行中 · 下半场",
+      "status": "进行中 · 上半场 92'",
       "form_home": [
         "W",
         "D",
@@ -1044,7 +1044,7 @@
       "away": "马竞",
       "home_rank": "15",
       "away_rank": "3",
-      "status": "进行中 · 中场",
+      "status": "进行中 · 上半场 62'",
       "form_home": [
         "L",
         "W",
@@ -1099,7 +1099,7 @@
       "away": "博德闪耀",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "进行中 · 中场",
+      "status": "进行中 · 上半场 62'",
       "form_home": [
         "W",
         "D",
@@ -1143,7 +1143,7 @@
       "away": "那不勒斯",
       "home_rank": "18",
       "away_rank": "2",
-      "status": "进行中 · 上半场 1'",
+      "status": "进行中 · 上半场 2'",
       "form_home": [
         "L",
         "L",
@@ -1198,7 +1198,7 @@
       "away": "赫尔辛基火花",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "进行中 · 上半场 1'",
+      "status": "进行中 · 上半场 2'",
       "form_home": [
         "W",
         "D",
@@ -1312,12 +1312,12 @@
         "L"
       ],
       "odds": [
-        "1.45",
-        "4.35",
-        "4.80"
+        "1.42",
+        "4.50",
+        "4.95"
       ],
-      "consensus": "主胜 (72.2%)",
-      "consensus_ratio": 72.2,
+      "consensus": "主胜 (73.6%)",
+      "consensus_ratio": 73.6,
       "tip": "主胜",
       "score": "--",
       "result": "PENDING",
