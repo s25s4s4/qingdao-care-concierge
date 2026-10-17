@@ -349,6 +349,11 @@ def full_pipeline_sync(auto_push=True):
                 of['home'], of['away'], of['league'], of['odds'],
                 is_only_rq=of.get('is_only_rq', False), rang=of.get('rang', '-1')
             )
+            # 从 decision_guide 中提取比分预测区间列表
+            import re
+            match_s = re.search(r'【([0-9\-、\s]+)】', dossier.get('decision_guide', ''))
+            score_list = [s.strip() for s in match_s.group(1).split('、') if '-' in s] if match_s else ['1-1', '2-1', '1-2']
+            
             # 动态生成四维全息因子拆解
             try:
                 sp0 = float(of['odds'][0]) if of['odds'][0] != '-' else 2.5
@@ -380,6 +385,7 @@ def full_pipeline_sync(auto_push=True):
                 "consensus_ratio": ratio,
                 "consensus_breakdown": bd,
                 "tip": tip,
+                "predicted_scores": score_list,
                 "score": "--",
                 "result": "PENDING",
                 "analysis": dossier["summary"],
