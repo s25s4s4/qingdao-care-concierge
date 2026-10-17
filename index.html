@@ -1880,9 +1880,29 @@
 
                 <!-- 模块四：实战研判与决策指引 -->
                 <div style="background: rgba(35, 134, 54, 0.12); border: 1px solid rgba(46, 160, 67, 0.4); border-radius: 8px; padding: 12px; margin-bottom: 12px;">
-                    <div style="font-weight: 800; color: #3fb950; font-size: 13px; margin-bottom: 6px; display: flex; align-items: center; gap: 5px;">
-                        <span>🎯</span> 四、小杨店主研判与选择指引
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+                        <div style="font-weight: 800; color: #3fb950; font-size: 13.5px; display: flex; align-items: center; gap: 5px;">
+                            <span>🎯</span> 四、小杨店主研判与选择指引
+                        </div>
+                        <span style="font-size: 10px; background: rgba(63, 185, 80, 0.2); color: #3fb950; border: 1px solid rgba(63, 185, 80, 0.4); padding: 1px 6px; border-radius: 4px; font-weight: 700;">实战对阵案卷</span>
                     </div>
+                    
+                    <!-- 动态核心提炼框 -->
+                    <div style="display: flex; flex-direction: column; gap: 6px; margin-bottom: 10px; background: rgba(0,0,0,0.25); padding: 8px 10px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.06);">
+                        <div style="display: flex; align-items: center; justify-content: space-between;">
+                            <span style="color: var(--text-secondary); font-size: 11px;">🏆 核心首选:</span>
+                            <span style="color: var(--accent-gold); font-weight: 800; font-size: 12.5px;">【${match.tip}】</span>
+                        </div>
+                        <div style="display: flex; align-items: center; justify-content: space-between;">
+                            <span style="color: var(--text-secondary); font-size: 11px;">⚽ 进球数精算:</span>
+                            <span style="color: #fff; font-weight: 700; font-size: 11.5px; font-family: var(--font-mono);">${predGoals.map(g => g + '球').join('、')}</span>
+                        </div>
+                        <div style="display: flex; align-items: center; justify-content: space-between;">
+                            <span style="color: var(--text-secondary); font-size: 11px;">🎯 黄金三角比分:</span>
+                            <span style="color: #38bdf8; font-weight: 800; font-size: 11.5px; font-family: var(--font-mono);">${predScores.join(' ')}</span>
+                        </div>
+                    </div>
+
                     <p style="font-size: 12.5px; color: #e2e8f0; line-height: 1.65; margin: 0; font-weight: 500;">${dossier.decision_guide}</p>
                 </div>
 
