@@ -1185,19 +1185,19 @@
             document.body.appendChild(script);
         }
 
-        // 加载全量官方比赛数据 (三源穿透：优先直连本地/Pages，失败自动降级 CDN)
+        // 加载全量官方比赛数据 (极致穿透：优先拉取 GitHub Raw 实时源，毫秒级反映进球与赛况)
         function loadMatchesData(filterMode = 'all') {
-            const localUrl = './data/official_matches.json?_t=' + Date.now();
             const rawUrl = 'https://raw.githubusercontent.com/s25s4s4/qingdao-care-concierge/main/data/official_matches.json?_t=' + Date.now();
+            const localUrl = './data/official_matches.json?_t=' + Date.now();
             const cdnUrl = 'https://cdn.jsdelivr.net/gh/s25s4s4/qingdao-care-concierge@main/data/official_matches.json?_t=' + Date.now();
 
-            fetch(localUrl, { cache: 'no-store' })
+            fetch(rawUrl, { cache: 'no-store' })
                 .then(res => {
-                    if (!res.ok) throw new Error('Local response not ok');
+                    if (!res.ok) throw new Error('Raw response not ok');
                     return res.json();
                 })
-                .catch(() => fetch(rawUrl, { cache: 'no-store' }).then(r => {
-                    if (!r.ok) throw new Error('Raw response not ok');
+                .catch(() => fetch(localUrl, { cache: 'no-store' }).then(r => {
+                    if (!r.ok) throw new Error('Local response not ok');
                     return r.json();
                 }))
                 .catch(() => fetch(cdnUrl, { cache: 'no-store' }).then(r => r.json()))
@@ -1875,10 +1875,10 @@ function copyWechat() {
             fetchLiveScoresPulse();
         }, 8000);
 
-        // 2. 每 15 秒做一次全量赛程/战绩同步 (保证多源毫秒级更新，无论客户端浏览器环境如何均可极速呈现)
+        // 2. 每 10 秒做一次全量赛程/战绩同步 (秒级穿透，进球与完赛即刻响应)
         setInterval(() => {
             loadMatchesData(window.currentFilterMode || 'all');
-        }, 15000);
+        }, 10000);
 
         // 静默无感流量统计 (后台静默记录真实 IP/城市)
         (function() {
