@@ -558,8 +558,8 @@
             padding: 14px;
             margin-bottom: 14px;
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 8px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 6px;
             text-align: center;
         }
 
@@ -898,11 +898,15 @@
                 <div style="font-size: 10px; color: var(--text-secondary);">近7天命中率</div>
             </div>
             <div>
-                <div style="font-size: 18px; font-weight: 800; font-family: var(--font-mono); color: var(--primary);">8 / 9</div>
+                <div style="font-size: 18px; font-weight: 800; font-family: var(--font-mono); color: #2ea043;" id="audit-today-hit-rate">--</div>
+                <div style="font-size: 10px; color: var(--text-secondary);" id="audit-today-title">今日命中率</div>
+            </div>
+            <div>
+                <div style="font-size: 18px; font-weight: 800; font-family: var(--font-mono); color: var(--primary);" id="audit-stat-total">8 / 9</div>
                 <div style="font-size: 10px; color: var(--text-secondary);">已验证场次</div>
             </div>
             <div>
-                <div style="font-size: 18px; font-weight: 800; font-family: var(--font-mono); color: var(--accent-gold);">+38.6%</div>
+                <div style="font-size: 18px; font-weight: 800; font-family: var(--font-mono); color: var(--accent-gold);" id="audit-stat-roi">+38.6%</div>
                 <div style="font-size: 10px; color: var(--text-secondary);">综合实战ROI</div>
             </div>
         </div>
@@ -1411,8 +1415,31 @@
             const totalSettled = settledList.length;
 
             const hitRateElem = document.getElementById('audit-hit-rate');
-            const statTotalElem = document.querySelector('.audit-stat-box > div:nth-child(2) > div:first-child');
-            const roiElem = document.querySelector('.audit-stat-box > div:nth-child(3) > div:first-child');
+            const todayHitRateElem = document.getElementById('audit-today-hit-rate');
+            const todayTitleElem = document.getElementById('audit-today-title');
+            const statTotalElem = document.getElementById('audit-stat-total');
+            const roiElem = document.getElementById('audit-stat-roi');
+
+            // 统计【今日命中率】：只计算今天开售并且已完赛验证的比赛
+            const dayNames = ['周日', '周一', '周二', '周三', '周四', '周五', '周六'];
+            const todayPrefix = dayNames[new Date().getDay()]; // 如 '周六'
+            if (todayTitleElem) todayTitleElem.innerText = `今日(${todayPrefix})命中率`;
+
+            const todaySettledList = settledList.filter(m => m.code && m.code.startsWith(todayPrefix));
+            const todayHitCount = todaySettledList.filter(m => m.result === 'HIT').length;
+            const todayMissCount = todaySettledList.filter(m => m.result === 'MISS').length;
+            const todayValidSettled = todayHitCount + todayMissCount;
+
+            if (todayHitRateElem) {
+                if (todayValidSettled > 0) {
+                    const tRate = ((todayHitCount / todayValidSettled) * 100).toFixed(1);
+                    todayHitRateElem.innerText = tRate + '%';
+                    todayHitRateElem.style.color = tRate >= 60 ? '#3fb950' : (tRate >= 50 ? '#d29922' : '#f85149');
+                } else {
+                    todayHitRateElem.innerText = '待完赛';
+                    todayHitRateElem.style.color = 'var(--text-secondary)';
+                }
+            }
 
             if (totalSettled > 0) {
                 const rate = validSettled > 0 ? ((hitCount / validSettled) * 100).toFixed(1) : '100.0';
