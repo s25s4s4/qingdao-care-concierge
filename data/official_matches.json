@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17 23:11:06",
+  "updated_at": "2026-10-17 23:15:06",
   "total": 74,
   "matches": [
     {
@@ -1737,7 +1737,7 @@
       "away": "巴黎圣曼",
       "home_rank": "7",
       "away_rank": "1",
-      "status": "法甲豪门远征",
+      "status": "进行中 · 上半场 0'",
       "form_home": [
         "W",
         "D",
@@ -1760,7 +1760,7 @@
       "consensus": "客胜 (81.4%)",
       "consensus_ratio": 81.4,
       "tip": "客胜",
-      "score": "--",
+      "score": "0-0",
       "result": "PENDING",
       "analysis": "巴黎圣日耳曼阵容纸面实力冠绝法甲，传控压迫打法成熟；斯特拉斯堡主场防线单薄很难限制巴黎巨星前场的单兵爆破，客胜打出。",
       "dossier": {
