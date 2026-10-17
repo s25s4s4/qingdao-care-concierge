@@ -1,7 +1,17 @@
 {
-  "updated_at": "2026-10-17 15:23:22",
-  "total_tips": 21,
+  "updated_at": "2026-10-17 15:38:22",
+  "total_tips": 22,
   "live_feed": [
+    {
+      "id": 1008,
+      "channel": "BetAlertsKE",
+      "time": "2026-10-17 15:30",
+      "code": "周六025",
+      "league": "德甲",
+      "category": "赛前军情",
+      "match": "拜仁 VS 莱红牛",
+      "chinese": "今日强队做胆关注布鲁日与拜仁慕尼黑，两队硬实力占优直奔胜局；拜仁交手莱比锡为强强对话，核心矛盾在防线稳定性，警惕穿盘难度，常规走主胜正路。"
+    },
     {
       "id": 1006,
       "channel": "FabrizioRomano",
