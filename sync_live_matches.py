@@ -334,6 +334,18 @@ def full_pipeline_sync(auto_push=True):
                     except Exception as e:
                         pass
 
+    # 比赛列表全局自然排序（严格按 周五001..周五011 -> 周六001..周六030 -> 周日001..周日025 -> 周一001.. 序号自然递增排序）
+    week_map = {'周一': 1, '周二': 2, '周三': 3, '周四': 4, '周五': 5, '周六': 6, '周日': 7}
+    def match_sort_key(m):
+        c = m.get('code', '')
+        w = week_map.get(c[:2], 9)
+        try:
+            n = int(c[2:])
+        except:
+            n = 999
+        return (w, n)
+    existing_matches.sort(key=match_sort_key)
+
     # 2. 扫描实时比分与状态（三态同步 + 物理开赛时间双重守门人）
     live_map = fetch_live_scores_and_status()
     now_dt = datetime.now()
