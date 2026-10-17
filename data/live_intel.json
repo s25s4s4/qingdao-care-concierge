@@ -1,7 +1,27 @@
 {
-  "updated_at": "2026-10-17 16:08:18",
-  "total_tips": 25,
+  "updated_at": "2026-10-17 16:23:04",
+  "total_tips": 27,
   "live_feed": [
+    {
+      "id": 1032,
+      "channel": "letalbets",
+      "time": "2026-10-17 16:18",
+      "code": "周六029",
+      "league": "西甲",
+      "category": "赛前军情",
+      "match": "巴伦西亚 VS 毕尔巴鄂",
+      "chinese": "西甲瓦伦西亚对阵毕尔巴鄂竞技。两队球风硬朗且对抗激烈，核心焦点在场上犯规与火药味。本场重点看好拼抢激烈导致裁判频繁出牌，全场至少出四张黄牌。"
+    },
+    {
+      "id": 1030,
+      "channel": "pensadordeapuestas",
+      "time": "2026-10-17 16:09",
+      "code": "周六024",
+      "league": "英超",
+      "category": "赛前军情",
+      "match": "纽卡斯尔 VS 维拉",
+      "chinese": "西班牙低级别联赛早盘情报：布尔戈斯战萨瓦德尔，比利亚雷亚尔二队打特鲁埃尔。目前仅为对阵对标，核心看两场主队的主场防守硬度与客队攻坚乏力之间的矛盾。"
+    },
     {
       "id": 1027,
       "channel": "bulletbetpredictions",
