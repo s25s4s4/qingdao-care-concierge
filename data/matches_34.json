@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17 14:00:08",
+  "updated_at": "2026-10-17 14:01:06",
   "total": 74,
   "matches": [
     {
@@ -615,7 +615,7 @@
       "away": "珀斯",
       "home_rank": "5",
       "away_rank": "11",
-      "status": "进行中 · 上半场 0'",
+      "status": "进行中 · 上半场 1'",
       "form_home": [
         "W",
         "W",
@@ -670,7 +670,7 @@
       "away": "长崎航海",
       "home_rank": "3",
       "away_rank": "日乙2",
-      "status": "进行中 · 上半场 0'",
+      "status": "进行中 · 上半场 1'",
       "form_home": [
         "W",
         "W",
@@ -1227,12 +1227,12 @@
         "W"
       ],
       "odds": [
-        "2.85",
+        "2.95",
         "3.45",
-        "2.05"
+        "2.00"
       ],
-      "consensus": "客不败/首选平 (68.6%)",
-      "consensus_ratio": 68.6,
+      "consensus": "客不败/首选平 (65.0%)",
+      "consensus_ratio": 65.0,
       "tip": "客不败/首选平",
       "score": "--",
       "result": "PENDING",
