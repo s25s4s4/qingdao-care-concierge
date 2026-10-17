@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17 19:33:06",
+  "updated_at": "2026-10-17 19:34:12",
   "total": 74,
   "matches": [
     {
@@ -945,7 +945,7 @@
       "away": "切尔西",
       "home_rank": "14",
       "away_rank": "4",
-      "status": "进行中 · 上半场 3'",
+      "status": "进行中 · 上半场 4'",
       "form_home": [
         "D",
         "L",
@@ -1016,12 +1016,12 @@
         "D"
       ],
       "odds": [
-        "5.05",
+        "5.15",
         "4.00",
-        "1.47"
+        "1.46"
       ],
-      "consensus": "客胜 (69.3%)",
-      "consensus_ratio": 69.3,
+      "consensus": "客胜 (69.8%)",
+      "consensus_ratio": 69.8,
       "tip": "客胜",
       "score": "--",
       "result": "PENDING",
@@ -2465,7 +2465,7 @@
       "away": "林肯城",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "进行中 · 上半场 3'",
+      "status": "进行中 · 上半场 4'",
       "form_home": [
         "W",
         "D",
