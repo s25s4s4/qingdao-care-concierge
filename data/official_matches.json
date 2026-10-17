@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17 20:49:15",
+  "updated_at": "2026-10-17 20:50:06",
   "total": 74,
   "matches": [
     {
@@ -945,7 +945,7 @@
       "away": "切尔西",
       "home_rank": "14",
       "away_rank": "4",
-      "status": "进行中 · 上半场 79'",
+      "status": "进行中 · 下半场",
       "form_home": [
         "D",
         "L",
@@ -1000,7 +1000,7 @@
       "away": "林肯城",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "进行中 · 上半场 79'",
+      "status": "进行中 · 下半场",
       "form_home": [
         "W",
         "D",
@@ -1044,7 +1044,7 @@
       "away": "马竞",
       "home_rank": "15",
       "away_rank": "3",
-      "status": "进行中 · 上半场 49'",
+      "status": "进行中 · 中场",
       "form_home": [
         "L",
         "W",
@@ -1099,7 +1099,7 @@
       "away": "博德闪耀",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "进行中 · 上半场 49'",
+      "status": "进行中 · 上半场",
       "form_home": [
         "W",
         "D",
@@ -1122,7 +1122,7 @@
       "consensus": "主不败/首选主胜 (65.0%)",
       "consensus_ratio": 65.0,
       "tip": "主不败/首选主胜",
-      "score": "0-1",
+      "score": "0-2",
       "result": "PENDING",
       "analysis": "汉坎对阵博德闪耀，攻防节奏对抗激烈，战术建议【主不败/首选主胜】。",
       "dossier": {
@@ -1526,9 +1526,9 @@
         "W"
       ],
       "odds": [
-        "2.35",
+        "2.42",
         "3.25",
-        "2.53"
+        "2.45"
       ],
       "consensus": "主不败/首选平 (65.0%)",
       "consensus_ratio": 65.0,
