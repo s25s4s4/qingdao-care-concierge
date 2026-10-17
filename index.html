@@ -563,6 +563,59 @@
             text-align: center;
         }
 
+        .audit-pagination-bar {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 8px;
+            margin-bottom: 12px;
+            overflow-x: auto;
+            padding-bottom: 4px;
+            scrollbar-width: thin;
+        }
+
+        .audit-page-pill {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            font-size: 12px;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: 20px;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .audit-page-pill:hover {
+            border-color: var(--primary);
+            color: var(--text-primary);
+        }
+
+        .audit-page-pill.active {
+            background: rgba(88, 166, 255, 0.15);
+            border-color: var(--primary);
+            color: #58a6ff;
+            font-weight: 800;
+            box-shadow: 0 0 10px rgba(88, 166, 255, 0.2);
+        }
+
+        .audit-page-pill .pill-badge {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1px 6px;
+            border-radius: 10px;
+            font-size: 10px;
+            font-family: var(--font-mono);
+        }
+
+        .audit-page-pill.active .pill-badge {
+            background: rgba(88, 166, 255, 0.3);
+            color: #fff;
+        }
+
         .audit-container {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
@@ -909,6 +962,11 @@
                 <div style="font-size: 18px; font-weight: 800; font-family: var(--font-mono); color: var(--accent-gold);" id="audit-stat-roi">+38.6%</div>
                 <div style="font-size: 10px; color: var(--text-secondary);">综合实战ROI</div>
             </div>
+        </div>
+
+        <!-- 按天分页选择栏 (一天一页，自适应展示) -->
+        <div id="audit-pagination" class="audit-pagination-bar">
+            <!-- 动态注入每天分页胶囊按钮 -->
         </div>
 
         <div class="audit-container">
@@ -1400,172 +1458,236 @@
         }
 
         // 渲染大账本表格 (不可篡改真实核销)
+                // 赛果大账本当前选中的分页日期 (默认 'ALL' 或最新的一天)
+                let CURRENT_AUDIT_DAY = 'ALL';
+
+                function setAuditDay(day) {
+                    CURRENT_AUDIT_DAY = day;
+                    renderAuditLedger();
+                }
+
                 // 渲染大账本表格 (严格来自首页真实比赛完赛核销，未完赛绝不提前填入)
-        function renderAuditLedger() {
-            const tbody = document.getElementById('audit-tbody');
-            tbody.innerHTML = '';
+                function renderAuditLedger() {
+                    const tbody = document.getElementById('audit-tbody');
+                    const paginationBar = document.getElementById('audit-pagination');
+                    tbody.innerHTML = '';
 
-            // 严格只筛选全量官方比赛中已打完、有真实物理赛果的比赛！
-            const settledList = ALL_OFFICIAL_MATCHES.filter(m => m.result !== 'PENDING');
+                    // 严格只筛选全量官方比赛中已打完、有真实物理赛果的比赛！
+                    const settledList = ALL_OFFICIAL_MATCHES.filter(m => m.result !== 'PENDING');
             
-            const hitCount = settledList.filter(m => m.result === 'HIT').length;
-            const missCount = settledList.filter(m => m.result === 'MISS').length;
-            const postponedCount = settledList.filter(m => m.result === 'POSTPONED').length;
-            const validSettled = hitCount + missCount; // 严格依据体彩标准：延期场次不计入命中与失误分母
-            const totalSettled = settledList.length;
+                    const hitCount = settledList.filter(m => m.result === 'HIT').length;
+                    const missCount = settledList.filter(m => m.result === 'MISS').length;
+                    const postponedCount = settledList.filter(m => m.result === 'POSTPONED').length;
+                    const validSettled = hitCount + missCount; // 严格依据体彩标准：延期场次不计入命中与失误分母
+                    const totalSettled = settledList.length;
 
-            const hitRateElem = document.getElementById('audit-hit-rate');
-            const todayHitRateElem = document.getElementById('audit-today-hit-rate');
-            const todayTitleElem = document.getElementById('audit-today-title');
-            const statTotalElem = document.getElementById('audit-stat-total');
-            const roiElem = document.getElementById('audit-stat-roi');
+                    const hitRateElem = document.getElementById('audit-hit-rate');
+                    const todayHitRateElem = document.getElementById('audit-today-hit-rate');
+                    const todayTitleElem = document.getElementById('audit-today-title');
+                    const statTotalElem = document.getElementById('audit-stat-total');
+                    const roiElem = document.getElementById('audit-stat-roi');
 
-            // 统计【今日命中率】：只计算今天开售并且已完赛验证的比赛
-            const dayNames = ['周日', '周一', '周二', '周三', '周四', '周五', '周六'];
-            const todayPrefix = dayNames[new Date().getDay()]; // 如 '周六'
-            if (todayTitleElem) todayTitleElem.innerText = `今日(${todayPrefix})命中率`;
+                    // 统计【今日命中率】：只计算今天开售并且已完赛验证的比赛
+                    const dayNames = ['周日', '周一', '周二', '周三', '周四', '周五', '周六'];
+                    const todayPrefix = dayNames[new Date().getDay()]; // 如 '周六'
+                    if (todayTitleElem) todayTitleElem.innerText = `今日(${todayPrefix})命中率`;
 
-            const todaySettledList = settledList.filter(m => m.code && m.code.startsWith(todayPrefix));
-            const todayHitCount = todaySettledList.filter(m => m.result === 'HIT').length;
-            const todayMissCount = todaySettledList.filter(m => m.result === 'MISS').length;
-            const todayValidSettled = todayHitCount + todayMissCount;
+                    const todaySettledList = settledList.filter(m => m.code && m.code.startsWith(todayPrefix));
+                    const todayHitCount = todaySettledList.filter(m => m.result === 'HIT').length;
+                    const todayMissCount = todaySettledList.filter(m => m.result === 'MISS').length;
+                    const todayValidSettled = todayHitCount + todayMissCount;
 
-            if (todayHitRateElem) {
-                if (todayValidSettled > 0) {
-                    const tRate = ((todayHitCount / todayValidSettled) * 100).toFixed(1);
-                    todayHitRateElem.innerText = tRate + '%';
-                    todayHitRateElem.style.color = tRate >= 60 ? '#3fb950' : (tRate >= 50 ? '#d29922' : '#f85149');
-                } else {
-                    todayHitRateElem.innerText = '待完赛';
-                    todayHitRateElem.style.color = 'var(--text-secondary)';
-                }
-            }
-
-            if (totalSettled > 0) {
-                const rate = validSettled > 0 ? ((hitCount / validSettled) * 100).toFixed(1) : '100.0';
-                hitRateElem.innerText = rate + '%';
-                statTotalElem.innerText = `${hitCount} / ${totalSettled}`;
-                
-                // 真实体彩实战 ROI 计算（基于官方 SP 赔率精确净收益率）：
-                // 每场比赛按 1 个标准单位均注，命中按真实打出项官方 SP 收回，未命中损失 1 单位
-                let totalReturn = 0.0;
-                settledList.forEach(m => {
-                    if (m.result === 'HIT') {
-                        // 依据比分判定打出的是 胜(0) / 平(1) / 负(2)
-                        let sp = 1.85; // 默认基准
-                        if (m.score && m.score.includes('-')) {
-                            const [h, a] = m.score.split('-').map(x => parseInt(x.trim()));
-                            if (m.odds && m.odds.length >= 3 && m.odds[0] !== '-') {
-                                if (h > a) sp = parseFloat(m.odds[0]) || 1.85;
-                                else if (h === a) sp = parseFloat(m.odds[1]) || 3.20;
-                                else sp = parseFloat(m.odds[2]) || 2.80;
-                            }
+                    if (todayHitRateElem) {
+                        if (todayValidSettled > 0) {
+                            const tRate = ((todayHitCount / todayValidSettled) * 100).toFixed(1);
+                            todayHitRateElem.innerText = tRate + '%';
+                            todayHitRateElem.style.color = tRate >= 60 ? '#3fb950' : (tRate >= 50 ? '#d29922' : '#f85149');
+                        } else {
+                            todayHitRateElem.innerText = '待完赛';
+                            todayHitRateElem.style.color = 'var(--text-secondary)';
                         }
-                        totalReturn += sp;
                     }
-                });
-                
-                const realRoi = ((totalReturn - totalSettled) / totalSettled) * 100;
-                const sign = realRoi >= 0 ? '+' : '';
-                const roiStr = `${sign}${realRoi.toFixed(1)}%`;
-                roiElem.innerText = roiStr;
-                roiElem.style.color = realRoi >= 0 ? 'var(--accent-gold)' : '#f85149';
 
-                // 核心：让说明卡片里的数字与当前真实账目 100% 动态实时同频！
-                const tipRoiVal = document.getElementById('tip-roi-val');
-                const tipRoiCost = document.getElementById('tip-roi-cost');
-                const tipRoiStatus = document.getElementById('tip-roi-status');
-                const tipRoiProfit = document.getElementById('tip-roi-profit');
-                if (tipRoiVal) {
-                    tipRoiVal.innerText = roiStr;
-                    tipRoiVal.style.color = realRoi >= 0 ? 'var(--accent-gold)' : '#f85149';
-                }
-                if (tipRoiCost) tipRoiCost.innerText = (totalSettled * 100).toString();
-                if (tipRoiStatus) tipRoiStatus.innerText = realRoi >= 0 ? '净赚' : '回撤';
-                if (tipRoiProfit) {
-                    const profitNum = Math.abs(Math.round((totalReturn - totalSettled) * 100));
-                    tipRoiProfit.innerText = profitNum.toString();
-                    tipRoiProfit.style.color = realRoi >= 0 ? '#3fb950' : '#f85149';
-                }
-            } else {
-                hitRateElem.innerText = '--';
-                statTotalElem.innerText = `0 / ${ALL_OFFICIAL_MATCHES.length}`;
-                roiElem.innerText = '待完赛';
-                roiElem.style.color = 'var(--text-secondary)';
+                    if (totalSettled > 0) {
+                        const rate = validSettled > 0 ? ((hitCount / validSettled) * 100).toFixed(1) : '100.0';
+                        hitRateElem.innerText = rate + '%';
+                        statTotalElem.innerText = `${hitCount} / ${totalSettled}`;
                 
-                const tipRoiVal = document.getElementById('tip-roi-val');
-                const tipRoiCost = document.getElementById('tip-roi-cost');
-                const tipRoiProfit = document.getElementById('tip-roi-profit');
-                if (tipRoiVal) tipRoiVal.innerText = '待完赛';
-                if (tipRoiCost) tipRoiCost.innerText = '0';
-                if (tipRoiProfit) tipRoiProfit.innerText = '0';
-            }
+                        // 真实体彩实战 ROI 计算（基于官方 SP 赔率精确净收益率）：
+                        let totalReturn = 0.0;
+                        settledList.forEach(m => {
+                            if (m.result === 'HIT') {
+                                let sp = 1.85;
+                                if (m.score && m.score.includes('-')) {
+                                    const [h, a] = m.score.split('-').map(x => parseInt(x.trim()));
+                                    if (m.odds && m.odds.length >= 3 && m.odds[0] !== '-') {
+                                        if (h > a) sp = parseFloat(m.odds[0]) || 1.85;
+                                        else if (h === a) sp = parseFloat(m.odds[1]) || 3.20;
+                                        else sp = parseFloat(m.odds[2]) || 2.80;
+                                    }
+                                }
+                                totalReturn += sp;
+                            }
+                        });
+                
+                        const realRoi = ((totalReturn - totalSettled) / totalSettled) * 100;
+                        const sign = realRoi >= 0 ? '+' : '';
+                        const roiStr = `${sign}${realRoi.toFixed(1)}%`;
+                        roiElem.innerText = roiStr;
+                        roiElem.style.color = realRoi >= 0 ? 'var(--accent-gold)' : '#f85149';
 
-            if (settledList.length === 0) {
-                tbody.innerHTML = `
-                    <tr>
-                        <td colspan="4" style="text-align: center; padding: 36px 14px; color: var(--text-tertiary); font-size: 13px; line-height: 1.8;">
-                            <div style="font-size: 24px; margin-bottom: 8px;">⏱️</div>
-                            <b style="color: var(--text-primary); font-size: 14px;">今日体彩在售比赛均处于【赛前在售阶段】</b><br>
-                            比赛未完赛前绝不提前虚构比分或核销。<br>
-                            下午 14:00 比赛打响后，系统将严格依据赛后官方完赛比分<br>
-                            <b>【完赛一场、赛果验证一场、对就是对、错就是错】</b>
-                        </td>
-                    </tr>
-                `;
-                return;
-            }
-
-            settledList.forEach(m => {
-                const tr = document.createElement('tr');
-                const isHit = m.result === 'HIT';
-                const isPostponed = m.result === 'POSTPONED';
-                let tagClass = isHit ? 'tag-hit' : 'tag-miss';
-                let tagText = isHit ? '✔ 研判命中' : '✖ 研判失误';
-                if (isPostponed) {
-                    tagClass = 'tag-postponed';
-                    tagText = '🟡 官方延期 (退本金)';
-                }
-                
-                // 比分胶囊列表渲染
-                const predScores = m.predicted_scores || ['1-0', '2-1', '1-1'];
-                const actualScore = m.score ? m.score.replace(' ', '') : '';
-                
-                const scoreBadges = predScores.map(ps => {
-                    const isExactHit = (actualScore === ps);
-                    if (isExactHit) {
-                        return `<span style="background: rgba(35, 134, 54, 0.25); border: 1px solid #3fb950; color: #3fb950; padding: 1px 5px; border-radius: 4px; font-weight: 800; font-size: 10px; margin-right: 3px; display: inline-block;">✔ ${ps}</span>`;
+                        const tipRoiVal = document.getElementById('tip-roi-val');
+                        const tipRoiCost = document.getElementById('tip-roi-cost');
+                        const tipRoiStatus = document.getElementById('tip-roi-status');
+                        const tipRoiProfit = document.getElementById('tip-roi-profit');
+                        if (tipRoiVal) {
+                            tipRoiVal.innerText = roiStr;
+                            tipRoiVal.style.color = realRoi >= 0 ? 'var(--accent-gold)' : '#f85149';
+                        }
+                        if (tipRoiCost) tipRoiCost.innerText = (totalSettled * 100).toString();
+                        if (tipRoiStatus) tipRoiStatus.innerText = realRoi >= 0 ? '净赚' : '回撤';
+                        if (tipRoiProfit) {
+                            const profitNum = Math.abs(Math.round((totalReturn - totalSettled) * 100));
+                            tipRoiProfit.innerText = profitNum.toString();
+                            tipRoiProfit.style.color = realRoi >= 0 ? '#3fb950' : '#f85149';
+                        }
                     } else {
-                        return `<span style="background: rgba(110, 118, 129, 0.1); border: 1px solid rgba(110, 118, 129, 0.25); color: #8b949e; padding: 1px 4px; border-radius: 4px; font-size: 10px; margin-right: 3px; display: inline-block;">${ps}</span>`;
+                        hitRateElem.innerText = '--';
+                        statTotalElem.innerText = `0 / ${ALL_OFFICIAL_MATCHES.length}`;
+                        roiElem.innerText = '待完赛';
+                        roiElem.style.color = 'var(--text-secondary)';
+                
+                        const tipRoiVal = document.getElementById('tip-roi-val');
+                        const tipRoiCost = document.getElementById('tip-roi-cost');
+                        const tipRoiProfit = document.getElementById('tip-roi-profit');
+                        if (tipRoiVal) tipRoiVal.innerText = '待完赛';
+                        if (tipRoiCost) tipRoiCost.innerText = '0';
+                        if (tipRoiProfit) tipRoiProfit.innerText = '0';
                     }
-                }).join('');
 
-                let scoreColor = '#8b949e';
-                let scoreText = m.score;
-                if (isHit) {
-                    scoreColor = '#3fb950';
-                } else if (isPostponed) {
-                    scoreColor = 'var(--accent-gold)';
-                    scoreText = `${m.score} (按1.0算)`;
-                } else {
-                    scoreColor = '#f85149';
+                    if (settledList.length === 0) {
+                        if (paginationBar) paginationBar.innerHTML = '';
+                        tbody.innerHTML = `
+                            <tr>
+                                <td colspan="4" style="text-align: center; padding: 36px 14px; color: var(--text-tertiary); font-size: 13px; line-height: 1.8;">
+                                    <div style="font-size: 24px; margin-bottom: 8px;">⏱️</div>
+                                    <b style="color: var(--text-primary); font-size: 14px;">今日体彩在售比赛均处于【赛前在售阶段】</b><br>
+                                    比赛未完赛前绝不提前虚构比分或核销。<br>
+                                    下午 14:00 比赛打响后，系统将严格依据赛后官方完赛比分<br>
+                                    <b>【完赛一场、赛果验证一场、对就是对、错就是错】</b>
+                                </td>
+                            </tr>
+                        `;
+                        return;
+                    }
+
+                    // 1. 严格排序：最新完赛的排在最前排（全局倒序，自然日期降序 + 场次编号倒序）
+                    const weekWeight = {'周一': 1, '周二': 2, '周三': 3, '周四': 4, '周五': 5, '周六': 6, '周日': 7};
+                    const sortedSettled = [...settledList].sort((a, b) => {
+                        const wA = weekWeight[a.code.substring(0, 2)] || 0;
+                        const wB = weekWeight[b.code.substring(0, 2)] || 0;
+                        if (wA !== wB) return wB - wA; // 周六在周五前面（最新一天排前）
+                        const numA = parseInt(a.code.substring(2)) || 0;
+                        const numB = parseInt(b.code.substring(2)) || 0;
+                        return numB - numA; // 010在009前面（最新赛果在前排倒序）
+                    });
+
+                    // 2. 统计有哪些天（按每天一页建立分页）
+                    const dayGroups = {};
+                    sortedSettled.forEach(m => {
+                        const dayKey = m.code.substring(0, 2);
+                        if (!dayGroups[dayKey]) dayGroups[dayKey] = [];
+                        dayGroups[dayKey].push(m);
+                    });
+                    const distinctDays = Object.keys(dayGroups); // 如 ['周六', '周五']
+
+                    // 检查当前选中日期是否合法，默认设为最新的一天（如 '周六'）
+                    if (CURRENT_AUDIT_DAY === 'ALL' || !distinctDays.includes(CURRENT_AUDIT_DAY)) {
+                        CURRENT_AUDIT_DAY = distinctDays[0] || 'ALL';
+                    }
+
+                    // 3. 渲染按天分页胶囊按钮栏（一天一页）
+                    if (paginationBar) {
+                        let pillsHtml = '';
+                        distinctDays.forEach(day => {
+                            const count = dayGroups[day].length;
+                            const hits = dayGroups[day].filter(m => m.result === 'HIT').length;
+                            const isActive = (CURRENT_AUDIT_DAY === day);
+                            pillsHtml += `
+                                <button class="audit-page-pill ${isActive ? 'active' : ''}" onclick="setAuditDay('${day}')">
+                                    <span>📅 ${day}专页</span>
+                                    <span class="pill-badge">${hits}/${count}中</span>
+                                </button>
+                            `;
+                        });
+
+                        // 额外提供一个【全部历史页】胶囊
+                        const isAllActive = (CURRENT_AUDIT_DAY === 'ALL_PAGES');
+                        pillsHtml += `
+                            <button class="audit-page-pill ${isAllActive ? 'active' : ''}" onclick="setAuditDay('ALL_PAGES')">
+                                <span>📚 全部门账本</span>
+                                <span class="pill-badge">${hitCount}/${totalSettled}</span>
+                            </button>
+                        `;
+                        paginationBar.innerHTML = pillsHtml;
+                    }
+
+                    // 4. 根据当前选中的日期页进行数据过滤展示
+                    let displayList = sortedSettled;
+                    if (CURRENT_AUDIT_DAY !== 'ALL_PAGES' && dayGroups[CURRENT_AUDIT_DAY]) {
+                        displayList = dayGroups[CURRENT_AUDIT_DAY];
+                    }
+
+                    displayList.forEach(m => {
+                        const tr = document.createElement('tr');
+                        const isHit = m.result === 'HIT';
+                        const isPostponed = m.result === 'POSTPONED';
+                        let tagClass = isHit ? 'tag-hit' : 'tag-miss';
+                        let tagText = isHit ? '✔ 研判命中' : '✖ 研判失误';
+                        if (isPostponed) {
+                            tagClass = 'tag-postponed';
+                            tagText = '🟡 官方延期 (退本金)';
+                        }
+                
+                        // 比分胶囊列表渲染
+                        const predScores = m.predicted_scores || ['1-0', '2-1', '1-1'];
+                        const actualScore = m.score ? m.score.replace(' ', '') : '';
+                
+                        const scoreBadges = predScores.map(ps => {
+                            const isExactHit = (actualScore === ps);
+                            if (isExactHit) {
+                                return `<span style="background: rgba(35, 134, 54, 0.25); border: 1px solid #3fb950; color: #3fb950; padding: 1px 5px; border-radius: 4px; font-weight: 800; font-size: 10px; margin-right: 3px; display: inline-block;">✔ ${ps}</span>`;
+                            } else {
+                                return `<span style="background: rgba(110, 118, 129, 0.1); border: 1px solid rgba(110, 118, 129, 0.25); color: #8b949e; padding: 1px 4px; border-radius: 4px; font-size: 10px; margin-right: 3px; display: inline-block;">${ps}</span>`;
+                            }
+                        }).join('');
+
+                        let scoreColor = '#8b949e';
+                        let scoreText = m.score;
+                        if (isHit) {
+                            scoreColor = '#3fb950';
+                        } else if (isPostponed) {
+                            scoreColor = 'var(--accent-gold)';
+                            scoreText = `${m.score} (按1.0算)`;
+                        } else {
+                            scoreColor = '#f85149';
+                        }
+
+                        tr.innerHTML = `
+                            <td style="font-family: var(--font-mono); font-size: 11px;">
+                                <span style="color: var(--accent-gold); font-weight: 700;">${m.code}</span> · ${m.league}<br>
+                                <b>${m.home} vs ${m.away}</b>
+                            </td>
+                            <td>
+                                <div style="color: var(--accent-blue); font-weight: 700; font-size: 12px; margin-bottom: 4px;">${m.tip}</div>
+                                <div style="font-family: var(--font-mono);">${scoreBadges}</div>
+                            </td>
+                            <td style="font-family: var(--font-mono); font-weight: 800; font-size: 13px; color: ${scoreColor};">${scoreText}</td>
+                            <td><span class="match-audit-tag ${tagClass}">${tagText}</span></td>
+                        `;
+                        tbody.appendChild(tr);
+                    });
                 }
-
-                tr.innerHTML = `
-                    <td style="font-family: var(--font-mono); font-size: 11px;">
-                        <span style="color: var(--accent-gold); font-weight: 700;">${m.code}</span> · ${m.league}<br>
-                        <b>${m.home} vs ${m.away}</b>
-                    </td>
-                    <td>
-                        <div style="color: var(--accent-blue); font-weight: 700; font-size: 12px; margin-bottom: 4px;">${m.tip}</div>
-                        <div style="font-family: var(--font-mono);">${scoreBadges}</div>
-                    </td>
-                    <td style="font-family: var(--font-mono); font-weight: 800; font-size: 13px; color: ${scoreColor};">${scoreText}</td>
-                    <td><span class="match-audit-tag ${tagClass}">${tagText}</span></td>
-                `;
-                tbody.appendChild(tr);
-            });
-        }
 
         // 异步从 data/live_intel.json 获取纯体彩情报流
         function fetchLiveIntel() {
