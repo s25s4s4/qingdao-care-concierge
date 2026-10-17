@@ -931,38 +931,38 @@
             </button>
         </div>
 
-        <!-- 通俗大白话 ROI 释义卡片（默认轻量展开，支持折叠） -->
-        <div id="roi-tip-card" style="background: rgba(22, 27, 34, 0.85); border: 1px dashed rgba(210, 153, 34, 0.4); border-radius: 8px; padding: 10px 12px; margin-bottom: 12px; font-size: 11px; line-height: 1.6; color: #c9d1d9;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
-                <b style="color: var(--accent-gold); font-size: 12px;">💡 店主白话：什么是【综合实战ROI】？</b>
-                <span onclick="toggleRoiTip()" style="color: var(--text-secondary); cursor: pointer; font-size: 13px;">✕</span>
+            <!-- 通俗大白话 ROI 释义卡片（默认轻量展开，支持折叠） -->
+            <div id="roi-tip-card" style="background: rgba(22, 27, 34, 0.85); border: 1px dashed rgba(210, 153, 34, 0.4); border-radius: 8px; padding: 10px 12px; margin-bottom: 12px; font-size: 11px; line-height: 1.6; color: #c9d1d9;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                    <b style="color: var(--accent-gold); font-size: 12px;">💡 店主白话：什么是【综合实战ROI】？</b>
+                    <span onclick="toggleRoiTip()" style="color: var(--text-secondary); cursor: pointer; font-size: 13px;">✕</span>
+                </div>
+                <div>
+                    <b>ROI 即“实战净投资回报率”</b>。光看“命中率高”没用，如果全选蚊子肉低赔，爆一场就全亏！<br>
+                    我们严格按照<b>中国体彩官方真实中奖 SP 赔率</b>真金白银折算：<br>
+                    • <b>大白话公式</b>：假设每场均注 100 元，<code>(收回的全部奖金 - 投入的总本金) ÷ 总本金</code>。<br>
+                    • <b>当前 <span id="tip-roi-val" style="color: var(--accent-gold); font-weight: 800;">--</span> 代表</b>：投入 <span id="tip-roi-cost" style="font-weight: 700;">--</span> 元本金，除拿回本金外，<b>纯口袋<span id="tip-roi-status">净赚</span> <span id="tip-roi-profit" style="font-weight: 800;">--</span> 元</b>！随时随比赛完赛实时动态同步。
+                </div>
             </div>
-            <div>
-                <b>ROI 即“实战净投资回报率”</b>。光看“命中率高”没用，如果全选蚊子肉低赔，爆一场就全亏！<br>
-                我们严格按照<b>中国体彩官方真实中奖 SP 赔率</b>真金白银折算：<br>
-                • <b>大白话公式</b>：假设每场均注 100 元，<code>(收回的全部奖金 - 投入的总本金) ÷ 总本金</code>。<br>
-                • <b>当前 <span id="tip-roi-val" style="color: var(--accent-gold); font-weight: 800;">+178.7%</span> 代表</b>：投入 <span id="tip-roi-cost" style="font-weight: 700;">300</span> 元本金，除拿回本金外，<b>纯口袋<span id="tip-roi-status">净赚</span> <span id="tip-roi-profit" style="font-weight: 800;">536</span> 元</b>！随时随比赛完赛实时动态同步。
-            </div>
-        </div>
 
-        <div class="audit-stat-box">
-            <div>
-                <div style="font-size: 18px; font-weight: 800; font-family: var(--font-mono); color: #3fb950;" id="audit-hit-rate">87.5%</div>
-                <div style="font-size: 10px; color: var(--text-secondary);">近7天命中率</div>
+            <div class="audit-stat-box">
+                <div>
+                    <div style="font-size: 18px; font-weight: 800; font-family: var(--font-mono); color: #3fb950;" id="audit-hit-rate">--</div>
+                    <div style="font-size: 10px; color: var(--text-secondary);">近7天命中率</div>
+                </div>
+                <div>
+                    <div style="font-size: 18px; font-weight: 800; font-family: var(--font-mono); color: #2ea043;" id="audit-today-hit-rate">--</div>
+                    <div style="font-size: 10px; color: var(--text-secondary);" id="audit-today-title">今日命中率</div>
+                </div>
+                <div>
+                    <div style="font-size: 18px; font-weight: 800; font-family: var(--font-mono); color: var(--primary);" id="audit-stat-total">--</div>
+                    <div style="font-size: 10px; color: var(--text-secondary);">已验证场次</div>
+                </div>
+                <div>
+                    <div style="font-size: 18px; font-weight: 800; font-family: var(--font-mono); color: var(--accent-gold);" id="audit-stat-roi">--</div>
+                    <div style="font-size: 10px; color: var(--text-secondary);">综合实战ROI</div>
+                </div>
             </div>
-            <div>
-                <div style="font-size: 18px; font-weight: 800; font-family: var(--font-mono); color: #2ea043;" id="audit-today-hit-rate">--</div>
-                <div style="font-size: 10px; color: var(--text-secondary);" id="audit-today-title">今日命中率</div>
-            </div>
-            <div>
-                <div style="font-size: 18px; font-weight: 800; font-family: var(--font-mono); color: var(--primary);" id="audit-stat-total">8 / 9</div>
-                <div style="font-size: 10px; color: var(--text-secondary);">已验证场次</div>
-            </div>
-            <div>
-                <div style="font-size: 18px; font-weight: 800; font-family: var(--font-mono); color: var(--accent-gold);" id="audit-stat-roi">+38.6%</div>
-                <div style="font-size: 10px; color: var(--text-secondary);">综合实战ROI</div>
-            </div>
-        </div>
 
         <!-- 按天分页选择栏 (一天一页，自适应展示) -->
         <div id="audit-pagination" class="audit-pagination-bar">
@@ -995,15 +995,15 @@
 
             <!-- 核心行动召唤卡片 (带限时公测与终身免费引流机制) -->
             <div class="wechat-card" style="background: linear-gradient(145deg, rgba(210, 153, 34, 0.15), rgba(35, 134, 54, 0.15)); border: 1.5px solid rgba(210, 153, 34, 0.5); box-shadow: 0 8px 24px rgba(0,0,0,0.5);">
-                <!-- 限时免费专属醒目标签 -->
-                <div style="background: rgba(210, 153, 34, 0.2); border: 1px dashed rgba(210, 153, 34, 0.6); border-radius: 6px; padding: 6px 10px; margin-bottom: 10px; text-align: left;">
-                    <div style="color: var(--accent-gold); font-size: 12px; font-weight: 800; display: flex; align-items: center; gap: 4px;">
-                        <span>🔥</span> 终端刚上线福利：当前全网免费体验 1 个月！
-                    </div>
-                    <div style="color: #cbd5e1; font-size: 10.5px; line-height: 1.5; margin-top: 2px;">
-                        体验期满后将转为实体店私域专享。<b>现在添加店主微信好友并邀请进内部球友群，直接永久锁定【终身免费内参特权】！</b>
-                    </div>
+            <!-- 限时免费专属醒目标签 -->
+            <div style="background: rgba(210, 153, 34, 0.2); border: 1px dashed rgba(210, 153, 34, 0.6); border-radius: 6px; padding: 6px 10px; margin-bottom: 10px; text-align: left;">
+                <div style="color: var(--accent-gold); font-size: 12px; font-weight: 800; display: flex; align-items: center; gap: 4px;">
+                    <span>🔥</span> 实体彩店店主专属通道 · 内部会员永久免费！
                 </div>
+                <div style="color: #cbd5e1; font-size: 10.5px; line-height: 1.5; margin-top: 2px;">
+                    本终端为线下实体专营彩店服务支撑系统。<b>现在添加店主微信好友并邀请进内部球友群，直接永久锁定【终身免费内参特权】！</b>
+                </div>
+            </div>
 
                 <div style="font-size: 13px; font-weight: 700; color: #3fb950; margin-bottom: 4px;">🤝 添加店主小杨个人微信 · 免费进VIP交流群</div>
                 <div style="font-size: 11px; color: var(--text-secondary); margin-bottom: 12px;">每日开售第一时间同步【四维深度案卷 · 内部稳胆组合 · 进球数精算】</div>
