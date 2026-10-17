@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17 23:08:16",
+  "updated_at": "2026-10-17 23:09:09",
   "total": 74,
   "matches": [
     {
@@ -1242,7 +1242,7 @@
       "away": "奥格斯堡",
       "home_rank": "德乙8",
       "away_rank": "13",
-      "status": "进行中 · 上半场 98'",
+      "status": "进行中 · 下半场",
       "form_home": [
         "W",
         "D",
@@ -1297,7 +1297,7 @@
       "away": "帕德博恩",
       "home_rank": "10",
       "away_rank": "德乙5",
-      "status": "进行中 · 上半场 98'",
+      "status": "进行中 · 下半场",
       "form_home": [
         "W",
         "D",
@@ -1352,7 +1352,7 @@
       "away": "美因茨",
       "home_rank": "德乙12",
       "away_rank": "9",
-      "status": "进行中 · 上半场 98'",
+      "status": "进行中 · 下半场",
       "form_home": [
         "L",
         "D",
@@ -1407,7 +1407,7 @@
       "away": "斯图加特",
       "home_rank": "德乙3",
       "away_rank": "5",
-      "status": "进行中 · 上半场 98'",
+      "status": "进行中 · 下半场",
       "form_home": [
         "W",
         "W",
@@ -1462,7 +1462,7 @@
       "away": "多特蒙德",
       "home_rank": "6",
       "away_rank": "4",
-      "status": "进行中 · 上半场 98'",
+      "status": "进行中 · 下半场",
       "form_home": [
         "W",
         "D",
@@ -1517,7 +1517,7 @@
       "away": "利物浦",
       "home_rank": "11",
       "away_rank": "1",
-      "status": "进行中 · 上半场 68'",
+      "status": "进行中 · 中场",
       "form_home": [
         "W",
         "L",
@@ -1572,7 +1572,7 @@
       "away": "伊普斯",
       "home_rank": "2",
       "away_rank": "17",
-      "status": "进行中 · 上半场 68'",
+      "status": "进行中 · 中场",
       "form_home": [
         "W",
         "W",
@@ -1627,7 +1627,7 @@
       "away": "赫尔城",
       "home_rank": "8",
       "away_rank": "英冠10",
-      "status": "进行中 · 上半场 68'",
+      "status": "进行中 · 中场",
       "form_home": [
         "W",
         "D",
@@ -1682,7 +1682,7 @@
       "away": "埃尔切",
       "home_rank": "4",
       "away_rank": "西乙3",
-      "status": "进行中 · 上半场 53'",
+      "status": "进行中 · 上半场",
       "form_home": [
         "W",
         "L",
