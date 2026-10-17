@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17 22:40:07",
+  "updated_at": "2026-10-17 22:50:06",
   "total": 74,
   "matches": [
     {
@@ -1242,7 +1242,7 @@
       "away": "奥格斯堡",
       "home_rank": "德乙8",
       "away_rank": "13",
-      "status": "进行中 · 中场",
+      "status": "进行中 · 下半场",
       "form_home": [
         "W",
         "D",
@@ -1320,7 +1320,7 @@
       "consensus": "主胜 (73.6%)",
       "consensus_ratio": 73.6,
       "tip": "主胜",
-      "score": "0-2",
+      "score": "1-2",
       "result": "PENDING",
       "analysis": "云达不来梅坐拥威悉球场地利，阵地战配合细腻且前场就地反抢凶悍；帕德博恩防线单薄客场抗压不足，不来梅凭借球星个人终结能力足以两球致胜。",
       "dossier": {
@@ -1540,7 +1540,7 @@
       "consensus": "主不败/首选平 (65.0%)",
       "consensus_ratio": 65.0,
       "tip": "主不败/首选平",
-      "score": "0-0",
+      "score": "1-0",
       "result": "PENDING",
       "analysis": "布伦特福德主场高位反抢专治强队，长传冲吊与手抛球战术威胁大；利物浦客战面临国际比赛日体能透支，防守端偶有漏人，小蜜蜂主场完全有爆冷拿分可能。",
       "dossier": {
@@ -1572,7 +1572,7 @@
       "away": "伊普斯",
       "home_rank": "2",
       "away_rank": "17",
-      "status": "进行中 · 上半场",
+      "status": "进行中 · 中场",
       "form_home": [
         "W",
         "W",
@@ -1627,7 +1627,7 @@
       "away": "赫尔城",
       "home_rank": "8",
       "away_rank": "英冠10",
-      "status": "进行中 · 上半场",
+      "status": "进行中 · 中场",
       "form_home": [
         "W",
         "D",
