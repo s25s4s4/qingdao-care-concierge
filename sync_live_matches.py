@@ -56,7 +56,6 @@ def calculate_result(tip, score):
     """
     实体彩店最高严苛度客观判定引擎：
     1. 胜平负方向是【第一核心主项】，主项未打出绝对直接判定【MISS 研判失误】！
-    2. 坚决杜绝“客不败黑了却拿进球数双方进球强行洗白算中”的造假劣习！
     3. 错就是错，对就是对，绝不搞模糊擦边球。
     """
     if not score or "-" not in score:
@@ -90,9 +89,6 @@ def calculate_result(tip, score):
         
     if "平" in tip:
         return "HIT" if (h == a) else "MISS"
-        
-    if "双方进球" in tip:
-        return "HIT" if (h > 0 and a > 0) else "MISS"
         
     if "进球数3+" in tip or "大球" in tip:
         return "HIT" if total >= 3 else "MISS"
