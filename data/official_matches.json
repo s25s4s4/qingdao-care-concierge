@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17 18:09:06",
+  "updated_at": "2026-10-17 18:10:06",
   "total": 74,
   "matches": [
     {
@@ -803,7 +803,7 @@
       "consensus": "平局/客不败 (65.0%)",
       "consensus_ratio": 65.0,
       "tip": "平局/客不败",
-      "score": "1-1",
+      "score": "2-1",
       "result": "PENDING",
       "analysis": "中央海岸水手多名夺冠功勋离队导致防线重组阵痛明显；纽卡斯尔喷气机季前赛展现出极佳的防守反击硬度，水手阵地战久攻不下极易被客队偷袭得手。",
       "dossier": {
@@ -835,7 +835,7 @@
       "away": "名古屋鲸",
       "home_rank": "8",
       "away_rank": "6",
-      "status": "进行中 · 上半场 9'",
+      "status": "进行中 · 上半场",
       "form_home": [
         "L",
         "D",
@@ -858,7 +858,7 @@
       "consensus": "平局/主胜 (68.9%)",
       "consensus_ratio": 68.9,
       "tip": "平局/主胜",
-      "score": "0-0",
+      "score": "0-1",
       "result": "PENDING",
       "analysis": "柏太阳神近4个主场保持不败，中场拦截硬度极高；名古屋鲸八客场攻坚过于依赖单一支点容易被针对限制，柏太阳神主场立足防守保平争胜。",
       "dossier": {
@@ -890,7 +890,7 @@
       "away": "磐田喜悦",
       "home_rank": "16",
       "away_rank": "4",
-      "status": "进行中 · 上半场 9'",
+      "status": "进行中 · 上半场",
       "form_home": [
         "L",
         "L",
