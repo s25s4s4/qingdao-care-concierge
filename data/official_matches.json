@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17 21:07:08",
+  "updated_at": "2026-10-17 21:08:08",
   "total": 74,
   "matches": [
     {
@@ -1143,7 +1143,7 @@
       "away": "那不勒斯",
       "home_rank": "18",
       "away_rank": "2",
-      "status": "进行中 · 上半场 7'",
+      "status": "进行中 · 上半场 8'",
       "form_home": [
         "L",
         "L",
@@ -1198,7 +1198,7 @@
       "away": "赫尔辛基火花",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "进行中 · 上半场 7'",
+      "status": "进行中 · 上半场 8'",
       "form_home": [
         "W",
         "D",
@@ -1636,12 +1636,12 @@
         "W"
       ],
       "odds": [
-        "1.46",
-        "3.80",
-        "5.50"
+        "1.43",
+        "3.90",
+        "5.75"
       ],
-      "consensus": "主胜 (70.3%)",
-      "consensus_ratio": 70.3,
+      "consensus": "主胜 (73.0%)",
+      "consensus_ratio": 73.0,
       "tip": "主胜",
       "score": "--",
       "result": "PENDING",
@@ -1690,12 +1690,12 @@
         "W"
       ],
       "odds": [
-        "1.25",
-        "5.25",
-        "7.20"
+        "1.28",
+        "5.15",
+        "6.50"
       ],
-      "consensus": "主胜 (83.6%)",
-      "consensus_ratio": 83.6,
+      "consensus": "主胜 (81.6%)",
+      "consensus_ratio": 81.6,
       "tip": "主胜",
       "score": "--",
       "result": "PENDING",
