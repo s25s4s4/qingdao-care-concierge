@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17 16:30:07",
+  "updated_at": "2026-10-17 16:40:08",
   "total": 74,
   "matches": [
     {
@@ -780,7 +780,7 @@
       "away": "纽喷气机",
       "home_rank": "2",
       "away_rank": "9",
-      "status": "澳超德比硬仗",
+      "status": "进行中 · 上半场 0'",
       "form_home": [
         "W",
         "W",
@@ -796,14 +796,14 @@
         "L"
       ],
       "odds": [
-        "3.60",
-        "4.10",
-        "1.65"
+        "3.70",
+        "4.15",
+        "1.62"
       ],
       "consensus": "平局/客不败 (65.0%)",
       "consensus_ratio": 65.0,
       "tip": "平局/客不败",
-      "score": "--",
+      "score": "0-0",
       "result": "PENDING",
       "analysis": "中央海岸水手多名夺冠功勋离队导致防线重组阵痛明显；纽卡斯尔喷气机季前赛展现出极佳的防守反击硬度，水手阵地战久攻不下极易被客队偷袭得手。",
       "dossier": {
@@ -819,12 +819,13 @@
         "tipster_score": 76.8,
         "math_score": 63.6
       },
-      "sale_closed": false,
+      "sale_closed": true,
       "predicted_scores": [
         "1-1",
         "1-2",
         "0-1"
-      ]
+      ],
+      "locked": true
     },
     {
       "code": "周六005",
@@ -1714,9 +1715,9 @@
         "W"
       ],
       "odds": [
-        "2.06",
-        "3.45",
-        "2.82"
+        "2.11",
+        "3.40",
+        "2.77"
       ],
       "consensus": "主不败/防平 (65.0%)",
       "consensus_ratio": 65.0,
