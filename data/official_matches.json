@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17 21:38:12",
+  "updated_at": "2026-10-17 21:39:08",
   "total": 74,
   "matches": [
     {
@@ -1242,7 +1242,7 @@
       "away": "奥格斯堡",
       "home_rank": "德乙8",
       "away_rank": "13",
-      "status": "进行中 · 上半场 8'",
+      "status": "进行中 · 上半场 9'",
       "form_home": [
         "W",
         "D",
@@ -1297,7 +1297,7 @@
       "away": "帕德博恩",
       "home_rank": "10",
       "away_rank": "德乙5",
-      "status": "进行中 · 上半场 8'",
+      "status": "进行中 · 上半场 9'",
       "form_home": [
         "W",
         "D",
@@ -1352,7 +1352,7 @@
       "away": "美因茨",
       "home_rank": "德乙12",
       "away_rank": "9",
-      "status": "进行中 · 上半场 8'",
+      "status": "进行中 · 上半场 9'",
       "form_home": [
         "L",
         "D",
@@ -1407,7 +1407,7 @@
       "away": "斯图加特",
       "home_rank": "德乙3",
       "away_rank": "5",
-      "status": "进行中 · 上半场 8'",
+      "status": "进行中 · 上半场 9'",
       "form_home": [
         "W",
         "W",
@@ -1462,7 +1462,7 @@
       "away": "多特蒙德",
       "home_rank": "6",
       "away_rank": "4",
-      "status": "进行中 · 上半场 8'",
+      "status": "进行中 · 上半场 9'",
       "form_home": [
         "W",
         "D",
@@ -1533,9 +1533,9 @@
         "W"
       ],
       "odds": [
-        "2.54",
+        "2.62",
         "3.25",
-        "2.34"
+        "2.27"
       ],
       "consensus": "主不败/首选平 (65.0%)",
       "consensus_ratio": 65.0,
@@ -1641,12 +1641,12 @@
         "W"
       ],
       "odds": [
-        "1.43",
-        "3.90",
+        "1.42",
+        "3.98",
         "5.75"
       ],
-      "consensus": "主胜 (73.0%)",
-      "consensus_ratio": 73.0,
+      "consensus": "主胜 (73.6%)",
+      "consensus_ratio": 73.6,
       "tip": "主胜",
       "score": "--",
       "result": "PENDING",
