@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17 14:08:06",
+  "updated_at": "2026-10-17 14:09:06",
   "total": 74,
   "matches": [
     {
@@ -615,7 +615,7 @@
       "away": "珀斯",
       "home_rank": "5",
       "away_rank": "11",
-      "status": "进行中 · 上半场 8'",
+      "status": "进行中 · 上半场",
       "form_home": [
         "W",
         "W",
@@ -670,7 +670,7 @@
       "away": "长崎航海",
       "home_rank": "3",
       "away_rank": "日乙2",
-      "status": "进行中 · 上半场 8'",
+      "status": "进行中 · 上半场",
       "form_home": [
         "W",
         "W",
@@ -693,7 +693,7 @@
       "consensus": "主胜 (死胆) (78.6%)",
       "consensus_ratio": 78.6,
       "tip": "主胜 (死胆)",
-      "score": "0-0",
+      "score": "1-0",
       "result": "PENDING",
       "analysis": "鹿岛鹿角全主力出击杯赛志在必得，铃木优磨与知念庆锋线状态正值火热；长崎航海联赛保级压力缠身派遣大量替补练兵，鹿岛鹿角攻防碾压打穿对手。",
       "dossier": {
