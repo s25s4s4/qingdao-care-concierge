@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18 01:30:06",
+  "updated_at": "2026-10-18 01:41:05",
   "total": 74,
   "matches": [
     {
@@ -1880,7 +1880,7 @@
       "away": "维拉",
       "home_rank": "7",
       "away_rank": "5",
-      "status": "进行中 · 中场",
+      "status": "进行中 · 下半场",
       "form_home": [
         "D",
         "L",
@@ -1935,7 +1935,7 @@
       "away": "莱红牛",
       "home_rank": "1",
       "away_rank": "2",
-      "status": "进行中 · 中场",
+      "status": "进行中 · 下半场",
       "form_home": [
         "D",
         "W",
@@ -1958,7 +1958,7 @@
       "consensus": "让负/首选客不败 (78.5%)",
       "consensus_ratio": 78.5,
       "tip": "让负/首选客不败",
-      "score": "3-0",
+      "score": "4-0",
       "result": "PENDING",
       "analysis": "拜仁主让-2球深盘极难穿盘，莱红牛高效反击极度克制拜仁压上，红蓝对抗审查首选【让负/首选客不败】。",
       "dossier": {
