@@ -1,7 +1,27 @@
 {
-  "updated_at": "2026-10-17 16:23:04",
-  "total_tips": 27,
+  "updated_at": "2026-10-17 17:08:05",
+  "total_tips": 29,
   "live_feed": [
+    {
+      "id": 1041,
+      "channel": "bad_man_betting_tips",
+      "time": "2026-10-17 17:00",
+      "code": "周六007",
+      "league": "英超",
+      "category": "赛前军情",
+      "match": "埃弗顿 VS 切尔西",
+      "chinese": "核心情报：英超埃弗顿对阵切尔西。重点关注双方首发阵容出炉后的首选组合，周末主打英超转播场次及周一热刺对阵考文垂的连环追击策略，暂无伤停干货。"
+    },
+    {
+      "id": 1040,
+      "channel": "pensadordeapuestas",
+      "time": "2026-10-17 17:02",
+      "code": "周日006",
+      "league": "西甲",
+      "category": "赛前军情",
+      "match": "奥萨苏纳 VS 桑坦德",
+      "chinese": "西甲奥萨苏纳主场迎战桑坦德竞技。西甲老油条主场对阵西乙队，主队占据硬实力与主场双重优势，客队阵容单薄防守吃紧，重点防范主胜正路打出。"
+    },
     {
       "id": 1032,
       "channel": "letalbets",
