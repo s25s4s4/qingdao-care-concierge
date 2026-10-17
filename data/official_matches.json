@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17 22:30:07",
+  "updated_at": "2026-10-17 22:40:07",
   "total": 74,
   "matches": [
     {
@@ -1297,7 +1297,7 @@
       "away": "帕德博恩",
       "home_rank": "10",
       "away_rank": "德乙5",
-      "status": "进行中 · 中场",
+      "status": "进行中 · 下半场",
       "form_home": [
         "W",
         "D",
@@ -1352,7 +1352,7 @@
       "away": "美因茨",
       "home_rank": "德乙12",
       "away_rank": "9",
-      "status": "进行中 · 中场",
+      "status": "进行中 · 下半场",
       "form_home": [
         "L",
         "D",
@@ -1407,7 +1407,7 @@
       "away": "斯图加特",
       "home_rank": "德乙3",
       "away_rank": "5",
-      "status": "进行中 · 中场",
+      "status": "进行中 · 下半场",
       "form_home": [
         "W",
         "W",
@@ -1462,7 +1462,7 @@
       "away": "多特蒙德",
       "home_rank": "6",
       "away_rank": "4",
-      "status": "进行中 · 中场",
+      "status": "进行中 · 下半场",
       "form_home": [
         "W",
         "D",
@@ -1595,7 +1595,7 @@
       "consensus": "主胜让胜 (死胆) (85.0%)",
       "consensus_ratio": 85.0,
       "tip": "主胜让胜 (死胆)",
-      "score": "1-1",
+      "score": "2-1",
       "result": "PENDING",
       "analysis": "曼城在伊蒂哈德球场统治力绝对压制，哈兰德与德布劳内连线状态神勇；升班马伊普斯维奇后防难以招架曼城持续禁区围攻，正路大胜穿盘。",
       "dossier": {
@@ -1650,7 +1650,7 @@
       "consensus": "主胜 (73.6%)",
       "consensus_ratio": 73.6,
       "tip": "主胜",
-      "score": "0-0",
+      "score": "1-0",
       "result": "PENDING",
       "analysis": "富勒姆主场控球调度极为熟练，两翼突破传中质量高；赫尔城阵容深度不足面对英超高强度逼抢出球困难，富勒姆主场赢球正路。",
       "dossier": {
