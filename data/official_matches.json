@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17 21:50:06",
+  "updated_at": "2026-10-17 22:00:12",
   "total": 74,
   "matches": [
     {
@@ -1044,7 +1044,7 @@
       "away": "马竞",
       "home_rank": "15",
       "away_rank": "3",
-      "status": "进行中 · 下半场",
+      "status": "已完赛",
       "form_home": [
         "L",
         "W",
@@ -1068,7 +1068,7 @@
       "consensus_ratio": 69.8,
       "tip": "客胜",
       "score": "0-1",
-      "result": "PENDING",
+      "result": "HIT",
       "analysis": "马竞在西蒙尼麾下防守反击密不透风，阿尔瓦雷斯跑位穿透力强；西班牙人后卫线转身慢容易出现回传失误，马竞客战节奏掌控游刃有余，零封取胜希望大。",
       "dossier": {
         "summary": "马竞在西蒙尼治下防守反击体系极其成熟，阿尔瓦雷斯逐渐融入前场体系；西班牙人作为升班马面对高位逼抢出球失误率高，看好马竞客场稳稳拿走3分。",
@@ -1099,7 +1099,7 @@
       "away": "博德闪耀",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "进行中 · 下半场",
+      "status": "已完赛",
       "form_home": [
         "W",
         "D",
@@ -1123,7 +1123,7 @@
       "consensus_ratio": 65.0,
       "tip": "主不败/首选主胜",
       "score": "0-2",
-      "result": "PENDING",
+      "result": "MISS",
       "analysis": "汉坎对阵博德闪耀，攻防节奏对抗激烈，战术建议【主不败/首选主胜】。",
       "dossier": {
         "summary": "汉坎对阵博德闪耀，攻防节奏对抗激烈，战术建议【主不败/首选主胜】。",
@@ -1265,7 +1265,7 @@
       "consensus": "客不败/防平 (65.0%)",
       "consensus_ratio": 65.0,
       "tip": "客不败/防平",
-      "score": "2-0",
+      "score": "3-0",
       "result": "PENDING",
       "analysis": "埃沃斯堡主场风格大开大合敢于对攻；奥格斯堡德甲反击速率远超低级别队伍，双方防线均有较大空档，本场比赛必定演变成大比分对轰大战。",
       "dossier": {
@@ -1375,7 +1375,7 @@
       "consensus": "客不败/首选平 (65.0%)",
       "consensus_ratio": 65.0,
       "tip": "客不败/首选平",
-      "score": "0-0",
+      "score": "0-1",
       "result": "PENDING",
       "analysis": "沙尔克04后防失误连连重组困难；美因茨反击速度全欧瞩目，两翼边锋套边下底传中极具威胁，美因茨战术克制沙尔克，客队保平争胜。",
       "dossier": {
@@ -1517,7 +1517,7 @@
       "away": "利物浦",
       "home_rank": "11",
       "away_rank": "1",
-      "status": "英超连胜检验",
+      "status": "进行中 · 上半场 0'",
       "form_home": [
         "W",
         "L",
@@ -1540,7 +1540,7 @@
       "consensus": "主不败/首选平 (65.0%)",
       "consensus_ratio": 65.0,
       "tip": "主不败/首选平",
-      "score": "--",
+      "score": "0-0",
       "result": "PENDING",
       "analysis": "布伦特福德主场高位反抢专治强队，长传冲吊与手抛球战术威胁大；利物浦客战面临国际比赛日体能透支，防守端偶有漏人，小蜜蜂主场完全有爆冷拿分可能。",
       "dossier": {
@@ -1556,12 +1556,13 @@
         "tipster_score": 76.8,
         "math_score": 63.0
       },
-      "sale_closed": false,
+      "sale_closed": true,
       "predicted_scores": [
         "1-1",
         "2-2",
         "1-2"
-      ]
+      ],
+      "locked": true
     },
     {
       "code": "周六019",
@@ -1571,7 +1572,7 @@
       "away": "伊普斯",
       "home_rank": "2",
       "away_rank": "17",
-      "status": "英超绝对悬殊",
+      "status": "进行中 · 上半场 0'",
       "form_home": [
         "W",
         "W",
@@ -1594,7 +1595,7 @@
       "consensus": "主胜让胜 (死胆) (85.0%)",
       "consensus_ratio": 85.0,
       "tip": "主胜让胜 (死胆)",
-      "score": "--",
+      "score": "0-0",
       "result": "PENDING",
       "analysis": "曼城在伊蒂哈德球场统治力绝对压制，哈兰德与德布劳内连线状态神勇；升班马伊普斯维奇后防难以招架曼城持续禁区围攻，正路大胜穿盘。",
       "dossier": {
@@ -1610,12 +1611,13 @@
         "tipster_score": 82.5,
         "math_score": 76.8
       },
-      "sale_closed": false,
+      "sale_closed": true,
       "predicted_scores": [
         "3-0",
         "4-0",
         "3-1"
-      ]
+      ],
+      "locked": true
     },
     {
       "code": "周六020",
@@ -1625,7 +1627,7 @@
       "away": "赫尔城",
       "home_rank": "8",
       "away_rank": "英冠10",
-      "status": "伦敦主场优势",
+      "status": "进行中 · 上半场 0'",
       "form_home": [
         "W",
         "D",
@@ -1648,7 +1650,7 @@
       "consensus": "主胜 (73.6%)",
       "consensus_ratio": 73.6,
       "tip": "主胜",
-      "score": "--",
+      "score": "0-0",
       "result": "PENDING",
       "analysis": "富勒姆主场控球调度极为熟练，两翼突破传中质量高；赫尔城阵容深度不足面对英超高强度逼抢出球困难，富勒姆主场赢球正路。",
       "dossier": {
@@ -1664,12 +1666,13 @@
         "tipster_score": 71.5,
         "math_score": 70.2
       },
-      "sale_closed": false,
+      "sale_closed": true,
       "predicted_scores": [
         "2-0",
         "2-1",
         "3-0"
-      ]
+      ],
+      "locked": true
     },
     {
       "code": "周六021",
