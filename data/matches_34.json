@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17 11:26:06",
+  "updated_at": "2026-10-17 11:34:06",
   "total": 74,
   "matches": [
     {
@@ -631,12 +631,12 @@
         "L"
       ],
       "odds": [
-        "1.70",
-        "3.60",
-        "3.80"
+        "1.68",
+        "3.67",
+        "3.82"
       ],
-      "consensus": "主胜/防平 (67.6%)",
-      "consensus_ratio": 67.6,
+      "consensus": "主胜/防平 (65.0%)",
+      "consensus_ratio": 65.0,
       "tip": "主胜/防平",
       "score": "--",
       "result": "PENDING",
@@ -2517,12 +2517,12 @@
         "W"
       ],
       "odds": [
-        "1.60",
-        "3.48",
-        "4.60"
+        "2.25",
+        "4.00",
+        "2.30"
       ],
-      "consensus": "主不败 (70%)",
-      "consensus_ratio": 70,
+      "consensus": "主不败/首选主胜 (65.0%)",
+      "consensus_ratio": 65.0,
       "tip": "主不败/首选主胜",
       "score": "--",
       "result": "PENDING",
@@ -2560,12 +2560,12 @@
         "W"
       ],
       "odds": [
-        "1.60",
-        "3.48",
-        "4.60"
+        "1.35",
+        "4.80",
+        "5.60"
       ],
-      "consensus": "主不败 (70%)",
-      "consensus_ratio": 70,
+      "consensus": "主不败/首选主胜 (77.5%)",
+      "consensus_ratio": 77.5,
       "tip": "主不败/首选主胜",
       "score": "--",
       "result": "PENDING",
@@ -2603,12 +2603,12 @@
         "W"
       ],
       "odds": [
-        "1.60",
-        "3.48",
-        "4.60"
+        "2.10",
+        "3.65",
+        "2.64"
       ],
-      "consensus": "主不败 (70%)",
-      "consensus_ratio": 70,
+      "consensus": "主不败/首选主胜 (65.0%)",
+      "consensus_ratio": 65.0,
       "tip": "主不败/首选主胜",
       "score": "--",
       "result": "PENDING",
@@ -2646,12 +2646,12 @@
         "W"
       ],
       "odds": [
-        "1.60",
-        "3.48",
-        "4.60"
+        "1.67",
+        "3.38",
+        "4.30"
       ],
-      "consensus": "主不败 (70%)",
-      "consensus_ratio": 70,
+      "consensus": "主不败/首选主胜 (65.0%)",
+      "consensus_ratio": 65.0,
       "tip": "主不败/首选主胜",
       "score": "--",
       "result": "PENDING",
@@ -2689,12 +2689,12 @@
         "W"
       ],
       "odds": [
-        "1.60",
-        "3.48",
-        "4.60"
+        "2.12",
+        "2.78",
+        "3.35"
       ],
-      "consensus": "主不败 (70%)",
-      "consensus_ratio": 70,
+      "consensus": "主不败/首选主胜 (65.0%)",
+      "consensus_ratio": 65.0,
       "tip": "主不败/首选主胜",
       "score": "--",
       "result": "PENDING",
@@ -2732,12 +2732,12 @@
         "W"
       ],
       "odds": [
-        "1.60",
-        "3.48",
-        "4.60"
+        "1.83",
+        "3.50",
+        "3.36"
       ],
-      "consensus": "主不败 (70%)",
-      "consensus_ratio": 70,
+      "consensus": "主不败/首选主胜 (65.0%)",
+      "consensus_ratio": 65.0,
       "tip": "主不败/首选主胜",
       "score": "--",
       "result": "PENDING",
@@ -2775,12 +2775,12 @@
         "W"
       ],
       "odds": [
-        "1.60",
-        "3.48",
-        "4.60"
+        "1.44",
+        "3.95",
+        "5.50"
       ],
-      "consensus": "主不败 (70%)",
-      "consensus_ratio": 70,
+      "consensus": "主不败/首选主胜 (72.6%)",
+      "consensus_ratio": 72.6,
       "tip": "主不败/首选主胜",
       "score": "--",
       "result": "PENDING",
@@ -2818,12 +2818,12 @@
         "W"
       ],
       "odds": [
-        "1.60",
-        "3.48",
-        "4.60"
+        "2.61",
+        "3.70",
+        "2.10"
       ],
-      "consensus": "主不败 (70%)",
-      "consensus_ratio": 70,
+      "consensus": "主不败/首选主胜 (65.0%)",
+      "consensus_ratio": 65.0,
       "tip": "主不败/首选主胜",
       "score": "--",
       "result": "PENDING",
@@ -2861,12 +2861,12 @@
         "W"
       ],
       "odds": [
-        "1.60",
-        "3.48",
-        "4.60"
+        "1.82",
+        "3.35",
+        "3.55"
       ],
-      "consensus": "主不败 (70%)",
-      "consensus_ratio": 70,
+      "consensus": "主不败/首选主胜 (65.0%)",
+      "consensus_ratio": 65.0,
       "tip": "主不败/首选主胜",
       "score": "--",
       "result": "PENDING",
@@ -2904,12 +2904,12 @@
         "W"
       ],
       "odds": [
-        "1.60",
-        "3.48",
-        "4.60"
+        "2.91",
+        "3.45",
+        "2.02"
       ],
-      "consensus": "主不败 (70%)",
-      "consensus_ratio": 70,
+      "consensus": "主不败/首选主胜 (65.0%)",
+      "consensus_ratio": 65.0,
       "tip": "主不败/首选主胜",
       "score": "--",
       "result": "PENDING",
@@ -2947,9 +2947,9 @@
         "W"
       ],
       "odds": [
-        "1.60",
-        "3.48",
-        "4.60"
+        "1.50",
+        "4.15",
+        "4.50"
       ],
       "consensus": "主不败 (70%)",
       "consensus_ratio": 70,
@@ -2990,12 +2990,12 @@
         "W"
       ],
       "odds": [
-        "1.60",
-        "3.48",
-        "4.60"
+        "2.02",
+        "2.95",
+        "3.40"
       ],
-      "consensus": "主不败 (70%)",
-      "consensus_ratio": 70,
+      "consensus": "主不败/首选主胜 (65.0%)",
+      "consensus_ratio": 65.0,
       "tip": "主不败/首选主胜",
       "score": "--",
       "result": "PENDING",
@@ -3033,12 +3033,12 @@
         "W"
       ],
       "odds": [
-        "1.60",
-        "3.48",
-        "4.60"
+        "3.50",
+        "3.30",
+        "1.85"
       ],
-      "consensus": "主不败 (70%)",
-      "consensus_ratio": 70,
+      "consensus": "主不败/首选主胜 (65.0%)",
+      "consensus_ratio": 65.0,
       "tip": "主不败/首选主胜",
       "score": "--",
       "result": "PENDING",
@@ -3076,12 +3076,12 @@
         "W"
       ],
       "odds": [
-        "1.60",
-        "3.48",
-        "4.60"
+        "3.12",
+        "3.90",
+        "1.81"
       ],
-      "consensus": "主不败 (70%)",
-      "consensus_ratio": 70,
+      "consensus": "主不败/首选主胜 (65.0%)",
+      "consensus_ratio": 65.0,
       "tip": "主不败/首选主胜",
       "score": "--",
       "result": "PENDING",
@@ -3119,12 +3119,12 @@
         "W"
       ],
       "odds": [
-        "1.60",
-        "3.48",
-        "4.60"
+        "1.61",
+        "3.60",
+        "4.35"
       ],
-      "consensus": "主不败 (70%)",
-      "consensus_ratio": 70,
+      "consensus": "主不败/首选主胜 (65.0%)",
+      "consensus_ratio": 65.0,
       "tip": "主不败/首选主胜",
       "score": "--",
       "result": "PENDING",
@@ -3162,12 +3162,12 @@
         "W"
       ],
       "odds": [
-        "1.60",
-        "3.48",
-        "4.60"
+        "3.08",
+        "3.35",
+        "1.98"
       ],
-      "consensus": "主不败 (70%)",
-      "consensus_ratio": 70,
+      "consensus": "主不败/首选主胜 (65.0%)",
+      "consensus_ratio": 65.0,
       "tip": "主不败/首选主胜",
       "score": "--",
       "result": "PENDING",
@@ -3205,9 +3205,9 @@
         "W"
       ],
       "odds": [
-        "1.60",
-        "3.48",
-        "4.60"
+        "1.50",
+        "3.70",
+        "5.20"
       ],
       "consensus": "主不败 (70%)",
       "consensus_ratio": 70,
@@ -3248,12 +3248,12 @@
         "W"
       ],
       "odds": [
-        "1.60",
-        "3.48",
-        "4.60"
+        "1.64",
+        "3.75",
+        "3.95"
       ],
-      "consensus": "主不败 (70%)",
-      "consensus_ratio": 70,
+      "consensus": "主不败/首选主胜 (65.0%)",
+      "consensus_ratio": 65.0,
       "tip": "主不败/首选主胜",
       "score": "--",
       "result": "PENDING",
@@ -3291,12 +3291,12 @@
         "W"
       ],
       "odds": [
-        "1.60",
-        "3.48",
-        "4.60"
+        "2.36",
+        "4.05",
+        "2.18"
       ],
-      "consensus": "主不败 (70%)",
-      "consensus_ratio": 70,
+      "consensus": "主不败/首选主胜 (65.0%)",
+      "consensus_ratio": 65.0,
       "tip": "主不败/首选主胜",
       "score": "--",
       "result": "PENDING",
@@ -3334,12 +3334,12 @@
         "W"
       ],
       "odds": [
-        "1.60",
-        "3.48",
-        "4.60"
+        "2.14",
+        "3.15",
+        "2.90"
       ],
-      "consensus": "主不败 (70%)",
-      "consensus_ratio": 70,
+      "consensus": "主不败/首选主胜 (65.0%)",
+      "consensus_ratio": 65.0,
       "tip": "主不败/首选主胜",
       "score": "--",
       "result": "PENDING",
@@ -3377,12 +3377,12 @@
         "W"
       ],
       "odds": [
-        "1.60",
-        "3.48",
-        "4.60"
+        "2.32",
+        "3.00",
+        "2.75"
       ],
-      "consensus": "主不败 (70%)",
-      "consensus_ratio": 70,
+      "consensus": "主不败/首选主胜 (65.0%)",
+      "consensus_ratio": 65.0,
       "tip": "主不败/首选主胜",
       "score": "--",
       "result": "PENDING",
@@ -3420,12 +3420,12 @@
         "W"
       ],
       "odds": [
-        "1.60",
-        "3.48",
-        "4.60"
+        "2.77",
+        "3.15",
+        "2.22"
       ],
-      "consensus": "主不败 (70%)",
-      "consensus_ratio": 70,
+      "consensus": "主不败/首选主胜 (65.0%)",
+      "consensus_ratio": 65.0,
       "tip": "主不败/首选主胜",
       "score": "--",
       "result": "PENDING",
@@ -3463,12 +3463,12 @@
         "W"
       ],
       "odds": [
-        "1.60",
-        "3.48",
-        "4.60"
+        "3.00",
+        "2.85",
+        "2.25"
       ],
-      "consensus": "主不败 (70%)",
-      "consensus_ratio": 70,
+      "consensus": "主不败/首选主胜 (65.0%)",
+      "consensus_ratio": 65.0,
       "tip": "主不败/首选主胜",
       "score": "--",
       "result": "PENDING",
@@ -3506,12 +3506,12 @@
         "W"
       ],
       "odds": [
-        "1.60",
-        "3.48",
-        "4.60"
+        "2.70",
+        "3.30",
+        "2.20"
       ],
-      "consensus": "主不败 (70%)",
-      "consensus_ratio": 70,
+      "consensus": "主不败/首选主胜 (65.0%)",
+      "consensus_ratio": 65.0,
       "tip": "主不败/首选主胜",
       "score": "--",
       "result": "PENDING",
@@ -3549,12 +3549,12 @@
         "W"
       ],
       "odds": [
-        "1.60",
-        "3.48",
-        "4.60"
+        "1.36",
+        "4.45",
+        "5.90"
       ],
-      "consensus": "主不败 (70%)",
-      "consensus_ratio": 70,
+      "consensus": "主不败/首选主胜 (76.8%)",
+      "consensus_ratio": 76.8,
       "tip": "主不败/首选主胜",
       "score": "--",
       "result": "PENDING",
@@ -3592,12 +3592,12 @@
         "W"
       ],
       "odds": [
-        "1.60",
-        "3.48",
-        "4.60"
+        "2.62",
+        "2.73",
+        "2.62"
       ],
-      "consensus": "主不败 (70%)",
-      "consensus_ratio": 70,
+      "consensus": "主不败/首选主胜 (65.0%)",
+      "consensus_ratio": 65.0,
       "tip": "主不败/首选主胜",
       "score": "--",
       "result": "PENDING",
@@ -3635,12 +3635,12 @@
         "W"
       ],
       "odds": [
-        "1.60",
-        "3.48",
-        "4.60"
+        "1.42",
+        "3.80",
+        "6.20"
       ],
-      "consensus": "主不败 (70%)",
-      "consensus_ratio": 70,
+      "consensus": "主不败/首选主胜 (73.6%)",
+      "consensus_ratio": 73.6,
       "tip": "主不败/首选主胜",
       "score": "--",
       "result": "PENDING",
@@ -3678,12 +3678,12 @@
         "W"
       ],
       "odds": [
-        "1.60",
-        "3.48",
-        "4.60"
+        "1.53",
+        "3.57",
+        "5.10"
       ],
-      "consensus": "主不败 (70%)",
-      "consensus_ratio": 70,
+      "consensus": "主不败/首选主胜 (68.3%)",
+      "consensus_ratio": 68.3,
       "tip": "主不败/首选主胜",
       "score": "--",
       "result": "PENDING",
