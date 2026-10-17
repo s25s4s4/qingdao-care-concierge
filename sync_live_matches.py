@@ -5,6 +5,12 @@ import os
 import subprocess
 from datetime import datetime, time, timedelta
 
+# 引入最高难度三模型对抗深度推演引擎 (Low数学 + High战术攻防 + High前线22频道实盘共振)
+try:
+    from deep_reasoning_engine import run_tri_model_deep_reasoning
+except ImportError:
+    run_tri_model_deep_reasoning = None
+
 # Windows 底层彻底静默调用标志 (100% 杜绝黑框闪烁弹窗)
 CREATE_NO_WINDOW = 0x08000000
 
@@ -345,27 +351,49 @@ def full_pipeline_sync(auto_push=True):
     for of in official_pool:
         code = of['code']
         if code not in existing_map:
-            st, tip, cons, ratio, dossier = generate_tactical_dossier(
-                of['home'], of['away'], of['league'], of['odds'],
-                is_only_rq=of.get('is_only_rq', False), rang=of.get('rang', '-1')
-            )
-            # 从 decision_guide 中提取比分预测区间列表
-            import re
-            match_s = re.search(r'【([0-9\-、\s]+)】', dossier.get('decision_guide', ''))
-            score_list = [s.strip() for s in match_s.group(1).split('、') if '-' in s] if match_s else ['1-1', '2-1', '1-2']
-            
-            # 动态生成四维全息因子拆解
-            try:
-                sp0 = float(of['odds'][0]) if of['odds'][0] != '-' else 2.5
-                sp2 = float(of['odds'][2]) if of['odds'][2] != '-' else 2.5
-            except:
-                sp0, sp2 = 2.0, 2.5
-            bd = {
-                "odds_score": round(min(max(ratio * 0.95 + (2.5 - min(sp0, sp2)) * 4, 60.0), 85.0), 1),
-                "intel_score": round(min(max(ratio * 0.98 + (sum(ord(c) for c in code) % 7 - 3), 65.0), 84.0), 1),
-                "tipster_score": round(min(max(ratio * 1.02 - 1.5, 68.0), 86.0), 1),
-                "math_score": round(min(max(ratio * 0.96 + 2.0, 62.0), 85.0), 1)
-            }
+            # 优先尝试最高难度三模型交叉推演引擎
+            deep_res = None
+            if run_tri_model_deep_reasoning:
+                try:
+                    deep_res = run_tri_model_deep_reasoning(of)
+                except Exception as e:
+                    print(f"[{datetime.now()}] Deep reasoning fallback for {code}: {e}")
+
+            if deep_res:
+                st = "三模型深度裁决"
+                tip = deep_res["tip"]
+                cons = f"{tip} ({deep_res['consensus_ratio']}%)"
+                ratio = deep_res["consensus_ratio"]
+                score_list = deep_res.get("predicted_scores", ["1-1", "2-1", "1-2"])
+                bd = deep_res.get("consensus_breakdown", {
+                    "odds_score": 75.0, "intel_score": 75.0, "tipster_score": 75.0, "math_score": 75.0
+                })
+                dossier = {
+                    "summary": f"{of['home']}对阵{of['away']}，三模型对抗研判首选【{tip}】。",
+                    "fundamental": deep_res.get("fundamental", ""),
+                    "tactical_conflict": deep_res.get("tactical_conflict", ""),
+                    "market_attitude": deep_res.get("market_attitude", ""),
+                    "decision_guide": deep_res.get("decision_guide", "")
+                }
+            else:
+                st, tip, cons, ratio, dossier = generate_tactical_dossier(
+                    of['home'], of['away'], of['league'], of['odds'],
+                    is_only_rq=of.get('is_only_rq', False), rang=of.get('rang', '-1')
+                )
+                import re
+                match_s = re.search(r'【([0-9\-、\s]+)】', dossier.get('decision_guide', ''))
+                score_list = [s.strip() for s in match_s.group(1).split('、') if '-' in s] if match_s else ['1-1', '2-1', '1-2']
+                try:
+                    sp0 = float(of['odds'][0]) if of['odds'][0] != '-' else 2.5
+                    sp2 = float(of['odds'][2]) if of['odds'][2] != '-' else 2.5
+                except:
+                    sp0, sp2 = 2.0, 2.5
+                bd = {
+                    "odds_score": round(min(max(ratio * 0.95 + (2.5 - min(sp0, sp2)) * 4, 60.0), 85.0), 1),
+                    "intel_score": round(min(max(ratio * 0.98 + (sum(ord(c) for c in code) % 7 - 3), 65.0), 84.0), 1),
+                    "tipster_score": round(min(max(ratio * 1.02 - 1.5, 68.0), 86.0), 1),
+                    "math_score": round(min(max(ratio * 0.96 + 2.0, 62.0), 85.0), 1)
+                }
             new_item = {
                 "code": code,
                 "league": of['league'],
