@@ -1,7 +1,17 @@
 {
-  "updated_at": "2026-10-17 17:08:05",
-  "total_tips": 29,
+  "updated_at": "2026-10-17 17:55:00",
+  "total_tips": 30,
   "live_feed": [
+    {
+      "id": 1047,
+      "channel": "betminesfootballpredictions",
+      "time": "2026-10-17 17:52",
+      "code": "周六014",
+      "league": "德甲",
+      "category": "赛前军情",
+      "match": "不来梅 VS 帕德博恩",
+      "chinese": "意甲国米客战博洛尼亚防线吃紧，看好国米进一到三球、主队最多进一球，小图拉姆造杀机；罗马主战热那亚力保不败。串关稳胆：曼城、拜仁主胜，佛罗伦萨与贝蒂斯场次走大球。"
+    },
     {
       "id": 1041,
       "channel": "bad_man_betting_tips",
