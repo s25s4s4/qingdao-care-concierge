@@ -52,10 +52,15 @@ MATCHES_FILE = r"E:\euro_intel_web\data\official_matches.json"
 MATCHES_34_FALLBACK = r"E:\euro_intel_web\data\matches_34.json"
 WEB_DIR = r"E:\euro_intel_web"
 
-def calculate_result(tip, score):
+def calculate_result(tip, score, is_only_rq=False, rang='0'):
     """
     实体彩店最高严苛度客观判定引擎：
-    1. 胜平负方向是【第一核心主项】，主项未打出绝对直接判定【MISS 研判失误】！
+    1. 针对【单开让球胜平负】（is_only_rq=True）的比赛：
+       必须按真实净胜球加上让球数计算（例如 h + int(rang) vs a）：
+       - 让胜：h + int(rang) > a
+       - 让平：h + int(rang) == a
+       - 让负：h + int(rang) < a
+    2. 针对【标准胜平负】：按全场物理真实比分判定胜平负。
     3. 错就是错，对就是对，绝不搞模糊擦边球。
     """
     if not score or "-" not in score:
@@ -67,8 +72,29 @@ def calculate_result(tip, score):
         return "PENDING"
         
     total = h + a
-    
-    # 核心胜平负门控检验（第一主防线）
+
+    # A. 单开让球胜平负比赛：全链路按官方让球盘口计算！
+    if is_only_rq:
+        try:
+            r = int(rang)
+        except:
+            r = -1
+        diff = (h + r) - a # 加上让球后的虚拟净胜球
+
+        if "让胜" in tip:
+            return "HIT" if diff > 0 else "MISS"
+        if "让平" in tip:
+            return "HIT" if diff == 0 else "MISS"
+        if "让负" in tip:
+            return "HIT" if diff < 0 else "MISS"
+        # 兼容让胜/让平、让负/让平双选
+        if "让胜" in tip and "平" in tip:
+            return "HIT" if diff >= 0 else "MISS"
+        if "让负" in tip and "平" in tip:
+            return "HIT" if diff <= 0 else "MISS"
+        return "MISS"
+
+    # B. 标准胜平负门控检验（第一主防线）
     if "客不败" in tip:
         return "HIT" if (a >= h) else "MISS"
         
@@ -82,10 +108,18 @@ def calculate_result(tip, score):
         return "HIT" if (h > a) else "MISS"
         
     if "让胜" in tip:
-        return "HIT" if (h - a >= 2) else "MISS"
+        try:
+            r = int(rang) if rang and rang != '0' else -1
+        except:
+            r = -1
+        return "HIT" if (h + r > a) else "MISS"
         
     if "让负" in tip:
-        return "HIT" if (a - h >= 1 or a == h) else "MISS"
+        try:
+            r = int(rang) if rang and rang != '0' else 1
+        except:
+            r = 1
+        return "HIT" if (h + r < a) else "MISS"
         
     if "平" in tip:
         return "HIT" if (h == a) else "MISS"
@@ -95,13 +129,52 @@ def calculate_result(tip, score):
         
     return "MISS"
 
-def generate_tactical_dossier(home, away, league, odds):
+def generate_tactical_dossier(home, away, league, odds, is_only_rq=False, rang='-1'):
     try:
         sp_h = float(odds[0]) if odds[0] != '-' else 2.5
         sp_d = float(odds[1]) if odds[1] != '-' else 3.2
         sp_a = float(odds[2]) if odds[2] != '-' else 2.8
     except:
         sp_h, sp_d, sp_a = 2.0, 3.2, 3.0
+
+    # 如果官方不开普通胜平负，只开让球胜平负：所有推荐、数据、分析全部严格转向让球！
+    if is_only_rq:
+        rang_desc = f"主让{abs(int(rang))}球" if int(rang) < 0 else f"主受让{abs(int(rang))}球"
+        if sp_h < 2.0:
+            tip = "让胜/博穿盘"
+            consensus = f"让胜优势 ({int(82 - sp_h*4)}%)"
+            ratio = int(82 - sp_h*4)
+            status = "穿盘稳胆"
+            odds_logic = f"本场中国体彩官方不开普通胜平负，单开【让球胜平负 ({rang_desc})】。官方让胜SP仅给在{sp_h}防范区间，欧洲主流指数对主队至少净胜{abs(int(rang))+1}球以上的穿盘深度给予极高信心，下盘防线承受巨大压迫。"
+            score_preds = "3-0、4-1、3-1" if int(rang) <= -2 else "2-0、3-1、3-0"
+            tactics = f"{home}进攻火力凶猛，面对{away}后防深度大巴具备立体破密防手段；客队客战抗压能力欠缺，极易在开场前30分钟失球崩盘，看好主队跨越{rang_desc}门槛穿盘大胜。"
+        elif sp_a < 2.2:
+            tip = "让负/首选客不败"
+            consensus = f"让负防冷 ({int(80 - sp_a*4)}%)"
+            ratio = int(80 - sp_a*4)
+            status = "下盘防冷"
+            odds_logic = f"官方单开【让球胜平负 ({rang_desc})】。初盘让负SP处于{sp_a}敏感防御带，欧洲机构模型测算主队虽有名气溢价但净胜{abs(int(rang))}球以上门槛过高，机构对让负打出防范意图极其坚决。"
+            score_preds = "1-1、2-1、1-2"
+            tactics = f"{home}虽阵容牌面占优但赛程密集体能折损严重；{away}客战立足严密反击，中后场防守韧性极强，本场极难出现惨案，主队即便小胜也很难打穿{rang_desc}盘口，让负极具实战性价比。"
+        else:
+            tip = "让平/防让胜"
+            consensus = f"胶着防让平 (68.0%)"
+            ratio = 68.0
+            status = "深盘博弈"
+            odds_logic = f"官方单开【让球胜平负 ({rang_desc})】。让平SP高达{sp_d}，让胜与让负赔率处于均势胶着带。机构严密防范主队恰好净胜{abs(int(rang))}球的卡盘让平格局。"
+            score_preds = "2-0、3-1、2-1"
+            tactics = f"双方技战术博弈极具针对性，主队强攻但客队顽强抵挡，极易出现主队刚好净胜{abs(int(rang))}球的卡盘比分，首选【让平】求高回报。"
+
+        fund = f"本场为体彩官方焦点深盘赛事，官方未开普通胜平负，全部实盘交易均汇聚在【让球胜平负 ({rang_desc})】。两队战术阵眼在于主队攻坚撕裂效率与客队反击抓失误能力。"
+        decision = f"【赛前让球专项研判】：官方单开让球盘（{rang_desc}），综合欧洲去水模型，本场首选【{tip}】。实战比分区间重点防范：【{score_preds}】，柜台直打让球选项。"
+        dossier = {
+            "summary": f"{home}对阵{away}，官方单开让球胜平负({rang})，战术首选【{tip}】。",
+            "fundamental": fund,
+            "tactical_conflict": tactics,
+            "market_attitude": odds_logic,
+            "decision_guide": decision
+        }
+        return status, tip, consensus, ratio, dossier
 
     if sp_h < 1.6:
         fund = f"{home}本赛季在{league}主场展现出统治级控球与攻坚效率，场均主场净胜球达到1.6球以上；而{away}客场打法偏向保守，客战面对积分榜上半区队伍失球率高达75%。两队在战术执行力与攻防转换速率上存在档次梯度。"
@@ -133,7 +206,6 @@ def generate_tactical_dossier(home, away, league, odds):
         odds_logic = f"本场初赔给出{sp_h} / {sp_d} / {sp_a}的胶着组合，欧洲机构分歧度较大，多方模型去水后显示两队胜率极为接近，平局与冷门防范系数显著抬升。"
 
     tactics = f"本场核心矛盾聚焦于中场控制权争夺与反击速度差。{home}预计将延续高位逼抢战术，通过双后腰前压切断客队地面出球路线，依靠边锋单兵爆破制造禁区混乱；{away}则立足于深度大巴防线，重兵布防禁区肋部，依赖前锋的速度与个人纵深能力打身后反击。关键阵眼在于下半场60分钟后的体能拐点与板凳奇兵轮换。"
-        # 动态推导定制化比分防范区间与针对性技战术矛盾
     if tip == "主胜":
         score_preds = "2-0、2-1、3-1" if sp_h > 1.4 else "3-0、4-0、3-1"
         tactics = f"{home}在主场进攻端具备极强的局部纵深打击能力，前场就地反抢效率高；{away}客战中后场受压容易忙中出错，两队在攻防速率上存在实质档次梯度，看好主胜正路打出。"
@@ -273,7 +345,10 @@ def full_pipeline_sync(auto_push=True):
     for of in official_pool:
         code = of['code']
         if code not in existing_map:
-            st, tip, cons, ratio, dossier = generate_tactical_dossier(of['home'], of['away'], of['league'], of['odds'])
+            st, tip, cons, ratio, dossier = generate_tactical_dossier(
+                of['home'], of['away'], of['league'], of['odds'],
+                is_only_rq=of.get('is_only_rq', False), rang=of.get('rang', '-1')
+            )
             new_item = {
                 "code": code,
                 "league": of['league'],
@@ -286,6 +361,9 @@ def full_pipeline_sync(auto_push=True):
                 "form_home": ["W","D","W","L","D"],
                 "form_away": ["D","W","L","W","W"],
                 "odds": of['odds'],
+                "is_only_rq": of.get('is_only_rq', False),
+                "rang": of.get('rang', '0'),
+                "odds_rq": of.get('odds_rq'),
                 "consensus": cons,
                 "consensus_ratio": ratio,
                 "tip": tip,
@@ -302,37 +380,56 @@ def full_pipeline_sync(auto_push=True):
         else:
             # 关键：现有比赛如果处于【在售未停售阶段】，动态同步最新即时赔率，并动态更新机构去水共识度！
             curr_match = existing_map[code]
+            # 同步让球属性
+            if of.get('is_only_rq'):
+                curr_match['is_only_rq'] = True
+                curr_match['rang'] = of.get('rang', '-1')
+                curr_match['odds_rq'] = of.get('odds_rq')
             if curr_match.get('result') == 'PENDING' and not curr_match.get('locked', False):
                 new_odds = of['odds']
                 if new_odds != ["-", "-", "-"] and new_odds != curr_match.get('odds'):
                     curr_match['odds'] = new_odds
-                    # 重新拟合去水共识度 (按最新即时赔率动态演化，精度精确到 0.1%)
-                    try:
-                        sp_h = float(new_odds[0])
-                        sp_d = float(new_odds[1])
-                        sp_a = float(new_odds[2])
-                        # 凯利去水概率计算
-                        p_h = (1.0 / sp_h)
-                        p_d = (1.0 / sp_d)
-                        p_a = (1.0 / sp_a)
-                        p_sum = p_h + p_d + p_a
-                        # 主胜或客胜去水净胜率
-                        if curr_match['tip'].startswith('主胜') or '主不败' in curr_match['tip']:
-                            new_ratio = round((p_h / p_sum) * 100 * 1.18, 1) # 结合主场加权
-                            new_ratio = min(max(new_ratio, 65.0), 85.0)
-                        elif curr_match['tip'].startswith('客胜') or '客不败' in curr_match['tip']:
-                            new_ratio = round((p_a / p_sum) * 100 * 1.15, 1)
-                            new_ratio = min(max(new_ratio, 65.0), 84.0)
-                        else:
-                            new_ratio = curr_match['consensus_ratio']
-                            
-                        if abs(new_ratio - curr_match.get('consensus_ratio', 0)) >= 0.5:
-                            curr_match['consensus_ratio'] = new_ratio
-                            curr_match['consensus'] = f"{curr_match['tip']} ({new_ratio}%)"
-                            changes_made = True
-                            log_messages.append(f"Dynamic Consensus Shift: {code} {curr_match['home']} -> {new_ratio}%")
-                    except Exception as e:
-                        pass
+                    # 如果单开让球，重新生成专属于让球盘的研判、推荐与案卷
+                    if curr_match.get('is_only_rq'):
+                        st, tip, cons, ratio, dossier = generate_tactical_dossier(
+                            curr_match['home'], curr_match['away'], curr_match['league'], new_odds,
+                            is_only_rq=True, rang=curr_match.get('rang', '-1')
+                        )
+                        curr_match['tip'] = tip
+                        curr_match['consensus'] = cons
+                        curr_match['consensus_ratio'] = ratio
+                        curr_match['analysis'] = dossier['summary']
+                        curr_match['dossier'] = dossier
+                        changes_made = True
+                        log_messages.append(f"Updated Single-Handicap Match: {code} -> {tip} (让球 {curr_match.get('rang')})")
+                    else:
+                        # 重新拟合去水共识度 (按最新即时赔率动态演化，精度精确到 0.1%)
+                        try:
+                            sp_h = float(new_odds[0])
+                            sp_d = float(new_odds[1])
+                            sp_a = float(new_odds[2])
+                            # 凯利去水概率计算
+                            p_h = (1.0 / sp_h)
+                            p_d = (1.0 / sp_d)
+                            p_a = (1.0 / sp_a)
+                            p_sum = p_h + p_d + p_a
+                            # 主胜或客胜去水净胜率
+                            if curr_match['tip'].startswith('主胜') or '主不败' in curr_match['tip']:
+                                new_ratio = round((p_h / p_sum) * 100 * 1.18, 1) # 结合主场加权
+                                new_ratio = min(max(new_ratio, 65.0), 85.0)
+                            elif curr_match['tip'].startswith('客胜') or '客不败' in curr_match['tip']:
+                                new_ratio = round((p_a / p_sum) * 100 * 1.15, 1)
+                                new_ratio = min(max(new_ratio, 65.0), 84.0)
+                            else:
+                                new_ratio = curr_match['consensus_ratio']
+                                
+                            if abs(new_ratio - curr_match.get('consensus_ratio', 0)) >= 0.5:
+                                curr_match['consensus_ratio'] = new_ratio
+                                curr_match['consensus'] = f"{curr_match['tip']} ({new_ratio}%)"
+                                changes_made = True
+                                log_messages.append(f"Dynamic Consensus Shift: {code} {curr_match['home']} -> {new_ratio}%")
+                        except Exception as e:
+                            pass
 
     # 比赛列表全局自然排序：按体彩周期时间流逝排序（周五 -> 周六 -> 周日 -> 周一）
     week_map = {'周五': 1, '周六': 2, '周日': 3, '周一': 4, '周二': 5, '周三': 6, '周四': 7}
@@ -378,7 +475,7 @@ def full_pipeline_sync(auto_push=True):
             elif info['is_fin'] and info['score'] != '--':
                 if m['result'] == 'PENDING':
                     score = info['score']
-                    res = calculate_result(m['tip'], score)
+                    res = calculate_result(m['tip'], score, is_only_rq=m.get('is_only_rq', False), rang=m.get('rang', '0'))
                     m['score'] = score
                     m['status'] = '已完赛'
                     m['result'] = res

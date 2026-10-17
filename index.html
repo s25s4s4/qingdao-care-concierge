@@ -1354,7 +1354,7 @@
                     <!-- 底部研判建议 -->
                     <div class="card-decision-bar">
                         <div class="decision-text">
-                            赛前建议：<span class="decision-val">${m.tip}</span>
+                            ${m.is_only_rq ? '<span style="background: rgba(210, 153, 34, 0.2); color: var(--accent-gold); padding: 1px 5px; border-radius: 4px; font-size: 10px; font-weight: 800; margin-right: 4px;">让球专项</span>' : ''}赛前建议：<span class="decision-val">${m.tip}</span>
                         </div>
                         <button class="btn-view-dossier" onclick="event.stopPropagation(); openDetail('${m.code}', '${m.home}', '${m.away}', '${m.league}', '${m.analysis}')">
                             点击详情
@@ -1487,12 +1487,27 @@
                     const statTotalElem = document.getElementById('audit-stat-total');
                     const roiElem = document.getElementById('audit-stat-roi');
 
-                    // 统计【今日命中率】：只计算今天开售并且已完赛验证的比赛
-                    const dayNames = ['周日', '周一', '周二', '周三', '周四', '周五', '周六'];
-                    const todayPrefix = dayNames[new Date().getDay()]; // 如 '周六'
-                    if (todayTitleElem) todayTitleElem.innerText = `今日(${todayPrefix})命中率`;
+                    // 统计【当前轮次命中率】：
+                    // 体彩实战业务铁律：比赛日的界限绝不是半夜0点截断！周六的夜场比赛会一直持续到周日凌晨与早晨。
+                    // 1. 如果用户点击了某个日期分页（例如点击了'周六'），顶部命中率动态绑定显示该专页的命中率！
+                    // 2. 如果处于全部账本或初次进入，自动判定当前最新有完赛结算的体彩轮次（例如周日凌晨周日比赛未打，最新轮次依然是周六）！
+                    let activeDayKey = (CURRENT_AUDIT_DAY !== 'ALL' && CURRENT_AUDIT_DAY !== 'ALL_PAGES') ? CURRENT_AUDIT_DAY : null;
+                    if (!activeDayKey) {
+                        // 自动寻找最新有完赛比赛的日期前缀 (例如周日凌晨，周日没完赛但周六有完赛，则取周六)
+                        const distinctSettledDays = [];
+                        settledList.forEach(m => {
+                            const dk = m.code ? m.code.substring(0, 2) : '';
+                            if (dk && !distinctSettledDays.includes(dk)) distinctSettledDays.push(dk);
+                        });
+                        // 按最新排序权重
+                        const weekWeight = {'周一': 1, '周二': 2, '周三': 3, '周四': 4, '周五': 5, '周六': 6, '周日': 7};
+                        distinctSettledDays.sort((a, b) => (weekWeight[b] || 0) - (weekWeight[a] || 0));
+                        activeDayKey = distinctSettledDays[0] || '周六';
+                    }
 
-                    const todaySettledList = settledList.filter(m => m.code && m.code.startsWith(todayPrefix));
+                    if (todayTitleElem) todayTitleElem.innerText = `${activeDayKey}档期命中率`;
+
+                    const todaySettledList = settledList.filter(m => m.code && m.code.startsWith(activeDayKey));
                     const todayHitCount = todaySettledList.filter(m => m.result === 'HIT').length;
                     const todayMissCount = todaySettledList.filter(m => m.result === 'MISS').length;
                     const todayValidSettled = todayHitCount + todayMissCount;
@@ -1677,6 +1692,7 @@
                             <td style="font-family: var(--font-mono); font-size: 11px;">
                                 <span style="color: var(--accent-gold); font-weight: 700;">${m.code}</span> · ${m.league}<br>
                                 <b>${m.home} vs ${m.away}</b>
+                                ${m.is_only_rq ? '<span style="display:inline-block; margin-top:2px; font-size:9.5px; background:rgba(210,153,34,0.15); color:var(--accent-gold); border:1px solid rgba(210,153,34,0.3); padding:0px 4px; border-radius:3px;">让球 (' + m.rang + ')</span>' : ''}
                             </td>
                             <td>
                                 <div style="color: var(--accent-blue); font-weight: 700; font-size: 12px; margin-bottom: 4px;">${m.tip}</div>
