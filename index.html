@@ -1110,15 +1110,21 @@
                 let settledClass = '';
                 let auditTagHtml = '';
 
-                // 比赛状态精确三态判定：完赛 / 进行中实时实况 / 赛前未开赛
+                // 比赛状态精确判定：完赛 / 中断 / 进行中实时实况 / 赛前未开赛
                 const isLiveNow = m.status.includes('进行中') || m.status.includes('半场');
+                const isInterrupted = m.status.includes('中断') || m.status.includes('腰斩');
+                const isPostponed = m.result === 'POSTPONED' || m.status.includes('延期');
+
                 if (m.result === 'HIT') {
                     settledClass = ' settled-hit';
                     auditTagHtml = `<span class="match-audit-tag tag-hit">✔ 研判命中 (${m.score})</span>`;
                 } else if (m.result === 'MISS') {
                     settledClass = ' settled-miss';
                     auditTagHtml = `<span class="match-audit-tag tag-miss">✖ 研判失误 (${m.score})</span>`;
-                } else if (m.result === 'POSTPONED' || m.status.includes('延期') || m.status.includes('中断')) {
+                } else if (isInterrupted) {
+                    settledClass = ' settled-interrupted';
+                    auditTagHtml = `<span class="match-audit-tag" style="background: rgba(248, 81, 73, 0.2); color: #f85149; border: 1px solid rgba(248, 81, 73, 0.5); animation: pulse 1.5s infinite;">⏸ 突发比赛中断 · 待裁定</span>`;
+                } else if (isPostponed) {
                     settledClass = ' settled-postponed';
                     auditTagHtml = `<span class="match-audit-tag" style="background: rgba(227, 179, 65, 0.2); color: var(--accent-gold); border: 1px solid rgba(227, 179, 65, 0.4);">⚠️ 官方延期 · 按退本金算</span>`;
                 } else if (isLiveNow) {
@@ -1131,9 +1137,13 @@
                 const homeDots = m.form_home.map(f => `<span class="form-pill form-${f.toLowerCase()}">${f==='W'?'胜':(f==='D'?'平':'负')}</span>`).join('');
                 const awayDots = m.form_away.map(f => `<span class="form-pill form-${f.toLowerCase()}">${f==='W'?'胜':(f==='D'?'平':'负')}</span>`).join('');
 
-                // 中间比分或 VS：进行中时展示实时动态实况比分与红点
+                // 中间比分：针对开赛后突发中断的特殊视觉
                 let midDisplay = `<div class="vs-divider">VS</div>`;
-                if (m.result !== 'PENDING') {
+                if (isInterrupted) {
+                    midDisplay = `<div class="settled-score" style="color: #f85149;">${m.score || '--'}</div><div style="font-size: 9px; color: #f85149; font-weight: 700;">中断定格</div>`;
+                } else if (isPostponed) {
+                    midDisplay = `<div class="settled-score" style="color: var(--accent-gold); font-size: 15px;">延期</div><div style="font-size: 9px; color: var(--accent-gold);">退本金</div>`;
+                } else if (m.result !== 'PENDING') {
                     midDisplay = `<div class="settled-score">${m.score}</div><div style="font-size: 10px; color: var(--text-tertiary);">完赛</div>`;
                 } else if (isLiveNow && m.score && m.score !== '--') {
                     midDisplay = `<div class="live-score-now">${m.score}</div><div style="font-size: 9px; color: #ef4444; font-weight: 800;">LIVE</div>`;
@@ -1415,6 +1425,17 @@
                     }
                 }).join('');
 
+                let scoreColor = '#8b949e';
+                let scoreText = m.score;
+                if (isHit) {
+                    scoreColor = '#3fb950';
+                } else if (isPostponed) {
+                    scoreColor = 'var(--accent-gold)';
+                    scoreText = `${m.score} (按1.0算)`;
+                } else {
+                    scoreColor = '#f85149';
+                }
+
                 tr.innerHTML = `
                     <td style="font-family: var(--font-mono); font-size: 11px;">
                         <span style="color: var(--accent-gold); font-weight: 700;">${m.code}</span> · ${m.league}<br>
@@ -1424,7 +1445,7 @@
                         <div style="color: var(--accent-blue); font-weight: 700; font-size: 12px; margin-bottom: 4px;">${m.tip}</div>
                         <div style="font-family: var(--font-mono);">${scoreBadges}</div>
                     </td>
-                    <td style="font-family: var(--font-mono); font-weight: 800; font-size: 14px; color: ${isHit ? '#3fb950' : '#f85149'};">${m.score}</td>
+                    <td style="font-family: var(--font-mono); font-weight: 800; font-size: 13px; color: ${scoreColor};">${scoreText}</td>
                     <td><span class="match-audit-tag ${tagClass}">${tagText}</span></td>
                 `;
                 tbody.appendChild(tr);
