@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17 21:39:08",
+  "updated_at": "2026-10-17 21:40:06",
   "total": 74,
   "matches": [
     {
@@ -945,7 +945,7 @@
       "away": "切尔西",
       "home_rank": "14",
       "away_rank": "4",
-      "status": "进行中 · 下半场",
+      "status": "已完赛",
       "form_home": [
         "D",
         "L",
@@ -969,7 +969,7 @@
       "consensus_ratio": 65.0,
       "tip": "客胜/防平",
       "score": "0-2",
-      "result": "PENDING",
+      "result": "HIT",
       "analysis": "切尔西由帕尔默与恩佐掌控中场枢纽，边路冲击力凶悍；埃弗顿古迪逊公园主场对抗极其血腥擅长高空轰炸，切尔西控球虽优但极难防住埃弗顿的定位球乱战，防冷平。",
       "dossier": {
         "summary": "切尔西前场攻击群脚感火烫，帕尔默串联能力全欧顶尖；埃弗顿主场古迪逊公园球场拼抢极凶悍擅长定位球，切尔西控场占优但需防范冷平。",
@@ -1242,7 +1242,7 @@
       "away": "奥格斯堡",
       "home_rank": "德乙8",
       "away_rank": "13",
-      "status": "进行中 · 上半场 9'",
+      "status": "进行中 · 上半场",
       "form_home": [
         "W",
         "D",
@@ -1265,7 +1265,7 @@
       "consensus": "客不败/防平 (65.0%)",
       "consensus_ratio": 65.0,
       "tip": "客不败/防平",
-      "score": "0-0",
+      "score": "2-0",
       "result": "PENDING",
       "analysis": "埃沃斯堡主场风格大开大合敢于对攻；奥格斯堡德甲反击速率远超低级别队伍，双方防线均有较大空档，本场比赛必定演变成大比分对轰大战。",
       "dossier": {
@@ -1297,7 +1297,7 @@
       "away": "帕德博恩",
       "home_rank": "10",
       "away_rank": "德乙5",
-      "status": "进行中 · 上半场 9'",
+      "status": "进行中 · 上半场",
       "form_home": [
         "W",
         "D",
@@ -1352,7 +1352,7 @@
       "away": "美因茨",
       "home_rank": "德乙12",
       "away_rank": "9",
-      "status": "进行中 · 上半场 9'",
+      "status": "进行中 · 上半场",
       "form_home": [
         "L",
         "D",
@@ -1407,7 +1407,7 @@
       "away": "斯图加特",
       "home_rank": "德乙3",
       "away_rank": "5",
-      "status": "进行中 · 上半场 9'",
+      "status": "进行中 · 上半场",
       "form_home": [
         "W",
         "W",
@@ -1462,7 +1462,7 @@
       "away": "多特蒙德",
       "home_rank": "6",
       "away_rank": "4",
-      "status": "进行中 · 上半场 9'",
+      "status": "进行中 · 上半场",
       "form_home": [
         "W",
         "D",
