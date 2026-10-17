@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18 02:21:05",
+  "updated_at": "2026-10-18 02:25:05",
   "total": 74,
   "matches": [
     {
@@ -2042,7 +2042,7 @@
       "away": "维拉",
       "home_rank": "7",
       "away_rank": "5",
-      "status": "已完赛",
+      "status": "进行中 · 下半场",
       "form_home": [
         "D",
         "L",
@@ -2065,7 +2065,7 @@
       "consensus": "主不败 (68%)",
       "consensus_ratio": 68,
       "tip": "主不败/首选主胜",
-      "score": "0-2",
+      "score": "0-1",
       "result": "MISS",
       "analysis": "纽卡斯尔对阵维拉，攻防节奏对抗激烈，战术建议【主不败/首选主胜】。",
       "dossier": {
@@ -2102,7 +2102,7 @@
       "away": "莱红牛",
       "home_rank": "1",
       "away_rank": "2",
-      "status": "已完赛",
+      "status": "进行中 · 下半场",
       "form_home": [
         "D",
         "W",
@@ -2169,7 +2169,7 @@
       "away": "巴萨",
       "home_rank": "10",
       "away_rank": "1",
-      "status": "已完赛",
+      "status": "进行中 · 下半场",
       "form_home": [
         "L",
         "W",
