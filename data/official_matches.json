@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17 17:26:05",
+  "updated_at": "2026-10-17 17:40:06",
   "total": 74,
   "matches": [
     {
@@ -725,7 +725,7 @@
       "away": "富川FC",
       "home_rank": "1",
       "away_rank": "K2第4",
-      "status": "进行中 · 下半场",
+      "status": "已完赛",
       "form_home": [
         "W",
         "D",
@@ -749,7 +749,7 @@
       "consensus_ratio": 81.6,
       "tip": "主胜",
       "score": "2-1",
-      "result": "PENDING",
+      "result": "HIT",
       "analysis": "蔚山现代坐镇主场高位压制力在韩职首屈一指，前场渗透细腻；富川FC作为二级联赛球队很难抵挡蔚山现代的高速短传推进，主队正路大胜稳健。",
       "dossier": {
         "summary": "蔚山现代主场压迫感极强，中场外援调度兼备高位逼抢；富川FC作为K2球队客战面对顶级联赛豪门攻防节奏严重脱节，蔚山主场赢球正路。",
@@ -780,7 +780,7 @@
       "away": "纽喷气机",
       "home_rank": "2",
       "away_rank": "9",
-      "status": "进行中 · 上半场",
+      "status": "进行中 · 中场",
       "form_home": [
         "W",
         "W",
