@@ -799,14 +799,14 @@
         <div class="hero-banner">
             <div class="hero-col">
                 <div class="hero-num" id="total-matches-num">--</div>
-                <div class="hero-label">首页进行中/在售</div>
+                <div class="hero-label">全量收录赛事</div>
             </div>
             <div class="hero-col">
-                <div class="hero-num" style="color: #3fb950;" id="settled-hit-num">8</div>
-                <div class="hero-label">已赛果验证</div>
+                <div class="hero-num" style="color: #3fb950;" id="settled-hit-num">--</div>
+                <div class="hero-label">已完赛大账本</div>
             </div>
             <div class="hero-col">
-                <div class="hero-num" style="color: var(--accent-gold);" id="pending-matches-num">26</div>
+                <div class="hero-num" style="color: var(--accent-gold);" id="pending-matches-num">--</div>
                 <div class="hero-label">待鸣哨开赛</div>
             </div>
         </div>
@@ -1110,16 +1110,21 @@
                 return true;
             });
 
-            // 统计计数：首页在售 vs 已移入验证
+            // 统计计数：全量 vs 已完赛 vs 待鸣哨开赛
             const pendingList = ALL_OFFICIAL_MATCHES.filter(m => m.result === 'PENDING');
             const settledList = ALL_OFFICIAL_MATCHES.filter(m => m.result !== 'PENDING');
             
             const pendingCount = pendingList.length;
             const settledCount = settledList.length;
+            const totalCount = ALL_OFFICIAL_MATCHES.length;
             
-            document.getElementById('total-matches-num').innerText = pendingCount;
+            // 严格对齐数据看板语义：
+            // 1. 全量收录赛事 = 74
+            // 2. 已完赛大账本 = 11 (已出赛果)
+            // 3. 待鸣哨开赛 = 63 (仍在售未开赛/进行中)
+            document.getElementById('total-matches-num').innerText = totalCount;
             document.getElementById('settled-hit-num').innerText = settledCount;
-            document.getElementById('pending-matches-num').innerText = ALL_OFFICIAL_MATCHES.length;
+            document.getElementById('pending-matches-num').innerText = pendingCount;
             
             const allPill = document.getElementById('pill-all-tab');
             if (allPill) allPill.innerText = `首页在售/进行中 (${pendingCount})`;
