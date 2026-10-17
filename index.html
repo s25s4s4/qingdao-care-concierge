@@ -778,6 +778,15 @@
         </div>
     </header>
 
+    <!-- 全网公测限时福利横幅 (强力私域引流钩子) -->
+    <div style="background: linear-gradient(90deg, #d29922, #f0883e); color: #0d1117; padding: 7px 12px; font-size: 11px; font-weight: 800; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 8px rgba(0,0,0,0.3); cursor: pointer;" onclick="switchNav('owner')">
+        <div style="display: flex; align-items: center; gap: 6px;">
+            <span style="animation: pulse 1.2s infinite; font-size: 13px;">🎁</span>
+            <span>终端新上线公测：全网免费体验1个月！加好友进群享【永久免费】</span>
+        </div>
+        <span style="background: #0d1117; color: #f0883e; padding: 2px 8px; border-radius: 20px; font-size: 10px; font-weight: 800; flex-shrink: 0;">一键加群 →</span>
+    </div>
+
     <!-- 合规与实体背书声明 -->
     <div class="compliance-bar">
         <span>🏪 线下实体专营彩店专属数据内参 · <b>严禁网络售彩</b></span>
@@ -921,10 +930,20 @@
             <div class="owner-name">小杨说体彩 · 豪门数据内参</div>
             <div class="owner-sub">实体彩店店主 · 12年一线柜台实战研判</div>
 
-            <!-- 核心行动召唤卡片 -->
-            <div class="wechat-card" style="background: linear-gradient(145deg, rgba(35, 134, 54, 0.15), rgba(88, 166, 255, 0.08)); border: 1.5px solid rgba(46, 160, 67, 0.5); box-shadow: 0 8px 24px rgba(0,0,0,0.4);">
-                <div style="font-size: 13px; font-weight: 700; color: #3fb950; margin-bottom: 4px;">🤝 添加店主小杨个人微信好友</div>
-                <div style="font-size: 11px; color: var(--text-secondary); margin-bottom: 12px;">每日开售第一时间分享【柜台实战案卷 · 内部稳胆组合 · 进球数精算】</div>
+            <!-- 核心行动召唤卡片 (带限时公测与终身免费引流机制) -->
+            <div class="wechat-card" style="background: linear-gradient(145deg, rgba(210, 153, 34, 0.15), rgba(35, 134, 54, 0.15)); border: 1.5px solid rgba(210, 153, 34, 0.5); box-shadow: 0 8px 24px rgba(0,0,0,0.5);">
+                <!-- 限时免费专属醒目标签 -->
+                <div style="background: rgba(210, 153, 34, 0.2); border: 1px dashed rgba(210, 153, 34, 0.6); border-radius: 6px; padding: 6px 10px; margin-bottom: 10px; text-align: left;">
+                    <div style="color: var(--accent-gold); font-size: 12px; font-weight: 800; display: flex; align-items: center; gap: 4px;">
+                        <span>🔥</span> 终端刚上线福利：当前全网免费体验 1 个月！
+                    </div>
+                    <div style="color: #cbd5e1; font-size: 10.5px; line-height: 1.5; margin-top: 2px;">
+                        体验期满后将转为实体店私域专享。<b>现在添加店主微信好友并邀请进内部球友群，直接永久锁定【终身免费内参特权】！</b>
+                    </div>
+                </div>
+
+                <div style="font-size: 13px; font-weight: 700; color: #3fb950; margin-bottom: 4px;">🤝 添加店主小杨个人微信 · 免费进VIP交流群</div>
+                <div style="font-size: 11px; color: var(--text-secondary); margin-bottom: 12px;">每日开售第一时间同步【四维深度案卷 · 内部稳胆组合 · 进球数精算】</div>
                 <div class="wechat-btn" onclick="copyWechat()" style="background: #238636; color: #fff; font-size: 15px; font-weight: 800; padding: 12px 18px; border-radius: 10px; box-shadow: 0 4px 16px rgba(35, 134, 54, 0.4); display: flex; align-items: center; justify-content: center; gap: 8px;">
                     <span style="font-size: 18px;">💬</span> 一键复制微信号：<b id="wx-id" style="color: #fff; font-family: var(--font-mono); letter-spacing: 0.5px;">haomenjingcai-123</b>
                 </div>
