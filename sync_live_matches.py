@@ -341,7 +341,18 @@ def full_pipeline_sync(auto_push=True):
         # 守门人 A：外部比分网已有明确状态更新
         if code in live_map:
             info = live_map[code]
-            if info['is_fin'] and info['score'] != '--':
+            status_code = info.get('status_code', '')
+            status_text = info.get('status_text', '')
+
+            # 针对中断、腰斩、取消、延期的严格体彩处置标准
+            if status_code in ['-1', 'postpone'] or '延期' in status_text or '中断' in status_text or '腰斩' in status_text:
+                if m['result'] == 'PENDING':
+                    m['status'] = '官方延期/中断'
+                    m['score'] = '延期'
+                    m['result'] = 'POSTPONED' # 官方延期退本金
+                    changes_made = True
+                    log_messages.append(f"Postponed match handled: {code} -> 比赛延期/中断 (体彩官方按退本金/1.0计算)")
+            elif info['is_fin'] and info['score'] != '--':
                 if m['result'] == 'PENDING':
                     score = info['score']
                     res = calculate_result(m['tip'], score)

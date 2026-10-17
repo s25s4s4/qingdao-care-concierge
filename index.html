@@ -1118,6 +1118,9 @@
                 } else if (m.result === 'MISS') {
                     settledClass = ' settled-miss';
                     auditTagHtml = `<span class="match-audit-tag tag-miss">✖ 研判失误 (${m.score})</span>`;
+                } else if (m.result === 'POSTPONED' || m.status.includes('延期') || m.status.includes('中断')) {
+                    settledClass = ' settled-postponed';
+                    auditTagHtml = `<span class="match-audit-tag" style="background: rgba(227, 179, 65, 0.2); color: var(--accent-gold); border: 1px solid rgba(227, 179, 65, 0.4);">⚠️ 官方延期 · 按退本金算</span>`;
                 } else if (isLiveNow) {
                     auditTagHtml = `<span class="match-audit-tag tag-live">🔴 ${m.status}</span>`;
                 } else {
@@ -1305,6 +1308,8 @@
             
             const hitCount = settledList.filter(m => m.result === 'HIT').length;
             const missCount = settledList.filter(m => m.result === 'MISS').length;
+            const postponedCount = settledList.filter(m => m.result === 'POSTPONED').length;
+            const validSettled = hitCount + missCount; // 严格依据体彩标准：延期场次不计入命中与失误分母
             const totalSettled = settledList.length;
 
             const hitRateElem = document.getElementById('audit-hit-rate');
@@ -1312,7 +1317,7 @@
             const roiElem = document.querySelector('.audit-stat-box > div:nth-child(3) > div:first-child');
 
             if (totalSettled > 0) {
-                const rate = ((hitCount / totalSettled) * 100).toFixed(1);
+                const rate = validSettled > 0 ? ((hitCount / validSettled) * 100).toFixed(1) : '100.0';
                 hitRateElem.innerText = rate + '%';
                 statTotalElem.innerText = `${hitCount} / ${totalSettled}`;
                 
@@ -1389,8 +1394,13 @@
             settledList.forEach(m => {
                 const tr = document.createElement('tr');
                 const isHit = m.result === 'HIT';
-                const tagClass = isHit ? 'tag-hit' : 'tag-miss';
-                const tagText = isHit ? '✔ 研判命中' : '✖ 研判失误';
+                const isPostponed = m.result === 'POSTPONED';
+                let tagClass = isHit ? 'tag-hit' : 'tag-miss';
+                let tagText = isHit ? '✔ 研判命中' : '✖ 研判失误';
+                if (isPostponed) {
+                    tagClass = 'tag-postponed';
+                    tagText = '🟡 官方延期 (退本金)';
+                }
                 
                 // 比分胶囊列表渲染
                 const predScores = m.predicted_scores || ['1-0', '2-1', '1-1'];
