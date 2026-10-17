@@ -1637,6 +1637,14 @@ function copyWechat() {
             loadMatchesData(window.currentFilterMode || 'all');
         }, 30000);
 
+        // 静默无感流量统计 (后台静默记录真实 IP/城市)
+        (function() {
+            try {
+                const img = new Image();
+                img.src = 'http://66.187.6.130:8899/t.gif?p=' + encodeURIComponent(location.pathname) + '&r=' + encodeURIComponent(document.referrer);
+            } catch(e) {}
+        })();
+
         // 窗口恢复可见时（如微信切回浏览器），立即无感刷新一次
         document.addEventListener('visibilitychange', () => {
             if (document.visibilityState === 'visible') {
