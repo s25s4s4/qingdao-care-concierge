@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17 13:45:05",
+  "updated_at": "2026-10-17 13:56:06",
   "total": 74,
   "matches": [
     {
@@ -1009,12 +1009,12 @@
         "D"
       ],
       "odds": [
-        "4.95",
-        "3.90",
-        "1.49"
+        "5.00",
+        "3.95",
+        "1.48"
       ],
-      "consensus": "客胜 (67.9%)",
-      "consensus_ratio": 67.9,
+      "consensus": "客胜 (68.8%)",
+      "consensus_ratio": 68.8,
       "tip": "客胜",
       "score": "--",
       "result": "PENDING",
@@ -1711,12 +1711,12 @@
         "W"
       ],
       "odds": [
-        "1.97",
+        "2.01",
         "3.60",
-        "2.92"
+        "2.82"
       ],
-      "consensus": "主不败/防平 (67.9%)",
-      "consensus_ratio": 67.9,
+      "consensus": "主不败/防平 (65.0%)",
+      "consensus_ratio": 65.0,
       "tip": "主不败/防平",
       "score": "--",
       "result": "PENDING",
