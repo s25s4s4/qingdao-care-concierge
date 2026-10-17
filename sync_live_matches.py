@@ -2,13 +2,20 @@ import urllib.request
 import re
 import json
 import os
+import sys
 import subprocess
 from datetime import datetime, time, timedelta
+
+# 确保脚本所在目录加入 Python 搜索路径 (解决 Windows 计划任务未配置 WorkingDirectory 导致 ModuleNotFoundError)
+CURRENT_SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+if CURRENT_SCRIPT_DIR not in sys.path:
+    sys.path.insert(0, CURRENT_SCRIPT_DIR)
 
 # 引入最高难度三模型对抗深度推演引擎 (Low数学 + High战术攻防 + High前线22频道实盘共振)
 try:
     from deep_reasoning_engine import run_tri_model_deep_reasoning
-except ImportError:
+except ImportError as e:
+    print(f"Warning: deep_reasoning_engine import failed: {e}")
     run_tri_model_deep_reasoning = None
 
 # Windows 底层彻底静默调用标志 (100% 杜绝黑框闪烁弹窗)

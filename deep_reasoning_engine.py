@@ -194,12 +194,23 @@ def run_tri_model_deep_reasoning(match_info):
         result = json.loads(resp.read().decode('utf-8'))
         raw_output = result['choices'][0]['message']['content'].strip()
         
-        # 清理可能带有的 markdown ```json 包裹
-        raw_output = re.sub(r'^```json\s*', '', raw_output)
-        raw_output = re.sub(r'^```\s*', '', raw_output)
-        raw_output = re.sub(r'\s*```$', '', raw_output)
+        # 稳健提取 JSON 字符串（提取首个 '{' 到最后一个 '}' 之间的内容，抗思维链与冗余文本干扰）
+        match_json = re.search(r'(\{[\s\S]*\})', raw_output)
+        if match_json:
+            clean_json = match_json.group(1)
+        else:
+            clean_json = raw_output
+            
+        clean_json = re.sub(r'^```json\s*', '', clean_json)
+        clean_json = re.sub(r'^```\s*', '', clean_json)
+        clean_json = re.sub(r'\s*```$', '', clean_json)
         
-        return json.loads(raw_output)
+        parsed = json.loads(clean_json)
+        # 字段完整性契约兜底校验
+        for req_k in ["tip", "consensus_ratio", "predicted_scores", "fundamental", "tactical_conflict", "market_attitude", "decision_guide"]:
+            if req_k not in parsed:
+                raise ValueError(f"Missing required field in LLM response: {req_k}")
+        return parsed
 
 if __name__ == "__main__":
     # 测试单场比赛推演
