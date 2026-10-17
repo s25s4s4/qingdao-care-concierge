@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17 13:56:06",
+  "updated_at": "2026-10-17 14:00:08",
   "total": 74,
   "matches": [
     {
@@ -615,7 +615,7 @@
       "away": "珀斯",
       "home_rank": "5",
       "away_rank": "11",
-      "status": "澳超揭幕焦点",
+      "status": "进行中 · 上半场 0'",
       "form_home": [
         "W",
         "W",
@@ -638,7 +638,7 @@
       "consensus": "主胜/防平 (65.0%)",
       "consensus_ratio": 65.0,
       "tip": "主胜/防平",
-      "score": "--",
+      "score": "0-0",
       "result": "PENDING",
       "analysis": "麦克阿瑟FC新赛季引进的强力外援中锋身体优势巨大，季前赛高空轰炸战术炉火纯青；珀斯光荣跨越整个澳洲长途跋涉客战防线松散，麦克阿瑟主场拿分水到渠成。",
       "dossier": {
@@ -654,12 +654,13 @@
         "tipster_score": 71.5,
         "math_score": 72.4
       },
-      "sale_closed": false,
+      "sale_closed": true,
       "predicted_scores": [
         "2-1",
         "2-0",
         "1-1"
-      ]
+      ],
+      "locked": true
     },
     {
       "code": "周六002",
@@ -669,7 +670,7 @@
       "away": "长崎航海",
       "home_rank": "3",
       "away_rank": "日乙2",
-      "status": "天皇杯深度对决",
+      "status": "进行中 · 上半场 0'",
       "form_home": [
         "W",
         "W",
@@ -692,7 +693,7 @@
       "consensus": "主胜 (死胆) (78.6%)",
       "consensus_ratio": 78.6,
       "tip": "主胜 (死胆)",
-      "score": "--",
+      "score": "0-0",
       "result": "PENDING",
       "analysis": "鹿岛鹿角全主力出击杯赛志在必得，铃木优磨与知念庆锋线状态正值火热；长崎航海联赛保级压力缠身派遣大量替补练兵，鹿岛鹿角攻防碾压打穿对手。",
       "dossier": {
@@ -708,12 +709,13 @@
         "tipster_score": 82.5,
         "math_score": 74.6
       },
-      "sale_closed": false,
+      "sale_closed": true,
       "predicted_scores": [
         "2-0",
         "3-0",
         "3-1"
-      ]
+      ],
+      "locked": true
     },
     {
       "code": "周六003",
