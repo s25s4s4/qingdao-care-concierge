@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18 00:51:06",
+  "updated_at": "2026-10-18 01:01:06",
   "total": 74,
   "matches": [
     {
@@ -1778,7 +1778,7 @@
       "consensus": "客胜优势 (77%)",
       "consensus_ratio": 77,
       "tip": "客胜",
-      "score": "1-1",
+      "score": "1-2",
       "result": "PENDING",
       "analysis": "斯特拉斯对阵巴黎圣曼，攻防节奏对抗激烈，战术建议【客胜】。",
       "dossier": {
@@ -1943,7 +1943,7 @@
       "consensus": "让胜优势 (74%)",
       "consensus_ratio": 74,
       "tip": "让胜/博穿盘",
-      "score": "1-0",
+      "score": "2-0",
       "result": "PENDING",
       "analysis": "拜仁对阵莱红牛，官方单开让球胜平负(-2)，战术首选【让胜/博穿盘】。",
       "dossier": {
@@ -2005,7 +2005,7 @@
       "consensus": "客胜优势 (77%)",
       "consensus_ratio": 77,
       "tip": "客胜",
-      "score": "0-1",
+      "score": "1-1",
       "result": "PENDING",
       "analysis": "贝蒂斯对阵巴萨，攻防节奏对抗激烈，战术建议【客胜】。",
       "dossier": {
