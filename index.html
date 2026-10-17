@@ -1745,6 +1745,7 @@
                         const predScores = m.predicted_scores || ['1-0', '2-1', '1-1'];
                         const predGoals = m.predicted_goals || ['2', '3'];
                         const actualScore = m.score ? m.score.replace(' ', '') : '';
+                        const pathologyText = m.pathology ? `<div style="font-size: 10px; color: #f85149; margin-top: 4px; background: rgba(248, 81, 73, 0.08); padding: 3px 6px; border-radius: 4px; border-left: 2px solid #f85149; line-height: 1.4;"><b>[病理解析]</b>: ${m.pathology}</div>` : '';
                         
                         // 计算实际总进球数
                         let actualTotalGoals = null;
@@ -1795,6 +1796,7 @@
                                     <span style="font-size: 9px; color: var(--text-tertiary);">进球:</span>
                                     ${goalBadges}
                                 </div>
+                                ${!isHit && !isPostponed ? pathologyText : ''}
                             </td>
                             <td style="font-family: var(--font-mono); font-weight: 800; font-size: 13px; color: ${scoreColor};">${scoreText}</td>
                             <td><span class="match-audit-tag ${tagClass}">${tagText}</span></td>
