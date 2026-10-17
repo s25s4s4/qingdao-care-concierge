@@ -1116,10 +1116,17 @@
             document.body.appendChild(script);
         }
 
-        // 加载全量官方比赛数据
+        // 加载全量官方比赛数据 (双源闪电穿透：优先从全球秒级 CDN 拉取，失败自动降级本地)
         function loadMatchesData(filterMode = 'all') {
-            fetch('./data/official_matches.json?t=' + Date.now())
-                .then(res => res.json())
+            const cdnUrl = 'https://cdn.jsdelivr.net/gh/s25s4s4/qingdao-care-concierge@main/data/official_matches.json?_t=' + Date.now();
+            const localUrl = './data/official_matches.json?_t=' + Date.now();
+
+            fetch(cdnUrl, { cache: 'no-store' })
+                .then(res => {
+                    if (!res.ok) throw new Error('CDN response not ok');
+                    return res.json();
+                })
+                .catch(() => fetch(localUrl, { cache: 'no-store' }).then(r => r.json()))
                 .then(data => {
                     ALL_OFFICIAL_MATCHES = data.matches || [];
                     renderMatchesList(filterMode);
