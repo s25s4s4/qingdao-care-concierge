@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17 22:50:06",
+  "updated_at": "2026-10-17 23:00:08",
   "total": 74,
   "matches": [
     {
@@ -1143,7 +1143,7 @@
       "away": "那不勒斯",
       "home_rank": "18",
       "away_rank": "2",
-      "status": "进行中 · 下半场",
+      "status": "已完赛",
       "form_home": [
         "L",
         "L",
@@ -1167,7 +1167,7 @@
       "consensus_ratio": 66.1,
       "tip": "客胜 (死胆)",
       "score": "1-0",
-      "result": "PENDING",
+      "result": "MISS",
       "analysis": "孔蒂治下的那不勒斯战术纪律严苛，卢卡库在前场支点分球作用极其恐怖；威尼斯深陷保级泥潭后防场均丢球近2个，面对那不勒斯立体轰炸防线难免崩溃。",
       "dossier": {
         "summary": "孔蒂率领那不勒斯单线作战体能储备充沛，卢卡库中锋支点作用显著；威尼斯后防线高空与转身慢两大死穴明显，面对那不勒斯立体打击难以招架。",
@@ -1198,7 +1198,7 @@
       "away": "赫尔辛基火花",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "进行中 · 下半场",
+      "status": "已完赛",
       "form_home": [
         "W",
         "D",
@@ -1221,8 +1221,8 @@
       "consensus": "主不败/首选主胜 (81.7%)",
       "consensus_ratio": 81.7,
       "tip": "主不败/首选主胜",
-      "score": "3-0",
-      "result": "PENDING",
+      "score": "4-0",
+      "result": "HIT",
       "analysis": "赫尔辛基对阵赫尔辛基火花，攻防节奏对抗激烈，战术建议【主不败/首选主胜】。",
       "dossier": {
         "summary": "赫尔辛基对阵赫尔辛基火花，攻防节奏对抗激烈，战术建议【主不败/首选主胜】。",
@@ -1320,7 +1320,7 @@
       "consensus": "主胜 (73.6%)",
       "consensus_ratio": 73.6,
       "tip": "主胜",
-      "score": "1-2",
+      "score": "2-2",
       "result": "PENDING",
       "analysis": "云达不来梅坐拥威悉球场地利，阵地战配合细腻且前场就地反抢凶悍；帕德博恩防线单薄客场抗压不足，不来梅凭借球星个人终结能力足以两球致胜。",
       "dossier": {
@@ -1517,7 +1517,7 @@
       "away": "利物浦",
       "home_rank": "11",
       "away_rank": "1",
-      "status": "进行中 · 上半场",
+      "status": "进行中 · 中场",
       "form_home": [
         "W",
         "L",
@@ -1776,12 +1776,13 @@
         "tipster_score": 71.5,
         "math_score": 72.4
       },
-      "sale_closed": false,
+      "sale_closed": true,
       "predicted_scores": [
         "0-2",
         "1-2",
         "0-3"
-      ]
+      ],
+      "locked": true
     },
     {
       "code": "周六023",
@@ -1830,12 +1831,13 @@
         "tipster_score": 76.8,
         "math_score": 74.6
       },
-      "sale_closed": false,
+      "sale_closed": true,
       "predicted_scores": [
         "1-1",
         "0-1",
         "1-2"
-      ]
+      ],
+      "locked": true
     },
     {
       "code": "周六024",
@@ -1884,12 +1886,13 @@
         "tipster_score": 76.8,
         "math_score": 65.8
       },
-      "sale_closed": false,
+      "sale_closed": true,
       "predicted_scores": [
         "2-1",
         "2-2",
         "3-2"
-      ]
+      ],
+      "locked": true
     },
     {
       "code": "周六025",
@@ -1938,7 +1941,7 @@
         "tipster_score": 76.8,
         "math_score": 68.0
       },
-      "sale_closed": false,
+      "sale_closed": true,
       "predicted_scores": [
         "2-2",
         "3-2",
@@ -1950,7 +1953,8 @@
         "1.98",
         "4.65",
         "2.44"
-      ]
+      ],
+      "locked": true
     },
     {
       "code": "周六026",
@@ -1999,12 +2003,13 @@
         "tipster_score": 71.5,
         "math_score": 74.6
       },
-      "sale_closed": false,
+      "sale_closed": true,
       "predicted_scores": [
         "1-2",
         "1-3",
         "0-2"
-      ]
+      ],
+      "locked": true
     },
     {
       "code": "周六027",
@@ -2053,12 +2058,13 @@
         "tipster_score": 71.5,
         "math_score": 72.4
       },
-      "sale_closed": false,
+      "sale_closed": true,
       "predicted_scores": [
         "0-3",
         "0-4",
         "1-4"
-      ]
+      ],
+      "locked": true
     },
     {
       "code": "周六028",
@@ -2107,12 +2113,13 @@
         "tipster_score": 71.5,
         "math_score": 74.6
       },
-      "sale_closed": false,
+      "sale_closed": true,
       "predicted_scores": [
         "2-0",
         "1-0",
         "2-1"
-      ]
+      ],
+      "locked": true
     },
     {
       "code": "周六029",
@@ -2161,12 +2168,13 @@
         "tipster_score": 71.5,
         "math_score": 72.4
       },
-      "sale_closed": false,
+      "sale_closed": true,
       "predicted_scores": [
         "0-1",
         "1-1",
         "0-2"
-      ]
+      ],
+      "locked": true
     },
     {
       "code": "周六030",
@@ -2209,7 +2217,8 @@
         "market_attitude": "本场初赔给出1.6 / 3.48 / 4.6的胶着组合，平局SP处于3.10~3.45敏感安全带，欧洲机构分歧度较大。多方模型去水后显示两队胜率极为接近，机构通过微调水位平衡双边筹码，平局与冷门防范系数显著抬升。",
         "decision_guide": "【赛前综合研判】：结合基本面梯度、更衣室军情与机构防范态度，本场首选【主不败/首选主胜】。实战比分区间重点防范：【1-1、2-2、1-2】，建议结合让球防平双选求稳。"
       },
-      "sale_closed": false
+      "sale_closed": true,
+      "locked": true
     },
     {
       "code": "周日001",
