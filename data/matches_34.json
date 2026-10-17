@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18 01:51:09",
+  "updated_at": "2026-10-18 02:00:05",
   "total": 74,
   "matches": [
     {
@@ -2052,7 +2052,7 @@
       "away": "费耶诺德",
       "home_rank": "荷乙11",
       "away_rank": "3",
-      "status": "客战正路",
+      "status": "进行中 · 上半场 0'",
       "form_home": [
         "D",
         "L",
@@ -2075,7 +2075,7 @@
       "consensus": "客胜优势 (78%)",
       "consensus_ratio": 78,
       "tip": "客胜",
-      "score": "--",
+      "score": "0-0",
       "result": "PENDING",
       "analysis": "特尔斯达对阵费耶诺德，攻防节奏对抗激烈，战术建议【客胜】。",
       "dossier": {
