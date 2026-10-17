@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18 04:21:05",
+  "updated_at": "2026-10-18 04:41:05",
   "total": 74,
   "matches": [
     {
@@ -2301,7 +2301,7 @@
       "away": "热那亚",
       "home_rank": "9",
       "away_rank": "16",
-      "status": "进行中 · 下半场",
+      "status": "已完赛",
       "form_home": [
         "W",
         "L",
@@ -2325,7 +2325,7 @@
       "consensus_ratio": 74.8,
       "tip": "主胜",
       "score": "2-0",
-      "result": "PENDING",
+      "result": "HIT",
       "analysis": "罗马对阵热那亚，三模型满血对抗研判首选【主胜】。",
       "dossier": {
         "summary": "罗马对阵热那亚，三模型满血对抗研判首选【主胜】。",
