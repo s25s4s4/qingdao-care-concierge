@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18 01:11:07",
+  "updated_at": "2026-10-18 01:20:13",
   "total": 74,
   "matches": [
     {
@@ -1825,7 +1825,7 @@
       "away": "国际米兰",
       "home_rank": "12",
       "away_rank": "3",
-      "status": "进行中 · 下半场",
+      "status": "进行中 · 上半场 80'",
       "form_home": [
         "D",
         "D",
@@ -1880,7 +1880,7 @@
       "away": "维拉",
       "home_rank": "7",
       "away_rank": "5",
-      "status": "进行中 · 上半场",
+      "status": "进行中 · 上半场 50'",
       "form_home": [
         "D",
         "L",
@@ -1935,7 +1935,7 @@
       "away": "莱红牛",
       "home_rank": "1",
       "away_rank": "2",
-      "status": "进行中 · 上半场",
+      "status": "进行中 · 上半场 50'",
       "form_home": [
         "D",
         "W",
@@ -1997,7 +1997,7 @@
       "away": "巴萨",
       "home_rank": "10",
       "away_rank": "1",
-      "status": "进行中 · 上半场",
+      "status": "进行中 · 上半场 50'",
       "form_home": [
         "L",
         "W",
