@@ -902,9 +902,9 @@
                 <thead>
                     <tr>
                         <th>场次/对阵</th>
-                        <th>赛前建议</th>
+                        <th>赛前建议 · 防范比分</th>
                         <th>物理比分</th>
-                        <th>验证结果</th>
+                        <th>研判结果</th>
                     </tr>
                 </thead>
                 <tbody id="audit-tbody">
@@ -1392,13 +1392,29 @@
                 const tagClass = isHit ? 'tag-hit' : 'tag-miss';
                 const tagText = isHit ? '✔ 研判命中' : '✖ 研判失误';
                 
+                // 比分胶囊列表渲染
+                const predScores = m.predicted_scores || ['1-0', '2-1', '1-1'];
+                const actualScore = m.score ? m.score.replace(' ', '') : '';
+                
+                const scoreBadges = predScores.map(ps => {
+                    const isExactHit = (actualScore === ps);
+                    if (isExactHit) {
+                        return `<span style="background: rgba(35, 134, 54, 0.25); border: 1px solid #3fb950; color: #3fb950; padding: 1px 5px; border-radius: 4px; font-weight: 800; font-size: 10px; margin-right: 3px; display: inline-block;">✔ ${ps}</span>`;
+                    } else {
+                        return `<span style="background: rgba(110, 118, 129, 0.1); border: 1px solid rgba(110, 118, 129, 0.25); color: #8b949e; padding: 1px 4px; border-radius: 4px; font-size: 10px; margin-right: 3px; display: inline-block;">${ps}</span>`;
+                    }
+                }).join('');
+
                 tr.innerHTML = `
                     <td style="font-family: var(--font-mono); font-size: 11px;">
                         <span style="color: var(--accent-gold); font-weight: 700;">${m.code}</span> · ${m.league}<br>
                         <b>${m.home} vs ${m.away}</b>
                     </td>
-                    <td style="color: var(--accent-blue); font-weight: 600;">${m.tip}</td>
-                    <td style="font-family: var(--font-mono); font-weight: 800; font-size: 13px;">${m.score}</td>
+                    <td>
+                        <div style="color: var(--accent-blue); font-weight: 700; font-size: 12px; margin-bottom: 4px;">${m.tip}</div>
+                        <div style="font-family: var(--font-mono);">${scoreBadges}</div>
+                    </td>
+                    <td style="font-family: var(--font-mono); font-weight: 800; font-size: 14px; color: ${isHit ? '#3fb950' : '#f85149'};">${m.score}</td>
                     <td><span class="match-audit-tag ${tagClass}">${tagText}</span></td>
                 `;
                 tbody.appendChild(tr);
