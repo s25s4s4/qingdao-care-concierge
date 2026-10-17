@@ -1189,18 +1189,18 @@
                             <div class="form-dots">${awayDots}</div>
                         </div>
                     </div>
-                    <!-- 竞彩初赔 -->
+                    <!-- 竞彩官方即时盘面 (自动兼容单开让球与标准双开) -->
                     <div class="odds-strip">
                         <div class="odds-box">
-                            <div class="odds-name">胜</div>
+                            <div class="odds-name">${m.is_only_rq ? '让胜 ('+m.rang+')' : '胜'}</div>
                             <div class="odds-val">${m.odds[0]}</div>
                         </div>
                         <div class="odds-box">
-                            <div class="odds-name">平</div>
+                            <div class="odds-name">${m.is_only_rq ? '让平' : '平'}</div>
                             <div class="odds-val">${m.odds[1]}</div>
                         </div>
                         <div class="odds-box">
-                            <div class="odds-name">负</div>
+                            <div class="odds-name">${m.is_only_rq ? '让负' : '负'}</div>
                             <div class="odds-val">${m.odds[2]}</div>
                         </div>
                     </div>
@@ -1546,7 +1546,7 @@
             document.getElementById('modalContent').innerHTML = `
                 <div style="display: flex; gap: 6px; margin-bottom: 14px; flex-wrap: wrap;">
                     <span style="background: var(--bg-card-elevated); color: var(--accent-gold); padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: 800; font-family: var(--font-mono);">${code} · ${league}</span>
-                    <span style="background: rgba(56, 189, 248, 0.15); color: var(--accent-blue); padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: 700;">初赔: 胜 ${match.odds ? match.odds[0] : '-'} | 平 ${match.odds ? match.odds[1] : '-'} | 负 ${match.odds ? match.odds[2] : '-'}</span>
+                    <span style="background: rgba(56, 189, 248, 0.15); color: var(--accent-blue); padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: 700;">${match.is_only_rq ? '官方让球 ('+match.rang+'): 让胜 ' + match.odds[0] + ' | 让平 ' + match.odds[1] + ' | 让负 ' + match.odds[2] : '官方SP: 胜 ' + (match.odds ? match.odds[0] : '-') + ' | 平 ' + (match.odds ? match.odds[1] : '-') + ' | 负 ' + (match.odds ? match.odds[2] : '-')}</span>
                     <span style="background: rgba(46, 160, 67, 0.15); color: #3fb950; padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: 700;">共识: ${match.consensus || '75%'}</span>
                 </div>
 

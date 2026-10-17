@@ -172,15 +172,23 @@ def fetch_official_lottery_pool():
             for m in matches:
                 cls, fid, home, away, mdate, mtime, rang, league, code, isend = m
                 pos = html.find(f'data-fixtureid="{fid}"')
-                sps = ["-", "-", "-"]
+                sps_nspf = ["-", "-", "-"]
+                sps_rq = ["-", "-", "-"]
+                is_only_rq = False
+                
                 if pos != -1:
                     end_pos = html.find('</tr>', pos)
                     tr_chunk = html[pos:end_pos]
-                    found_sps = re.findall(r'data-type="nspf"[^>]*data-sp="([^"]*)"', tr_chunk)
-                    if not found_sps:
-                        found_sps = re.findall(r'data-type="spf"[^>]*data-sp="([^"]*)"', tr_chunk)
-                    if len(found_sps) >= 3:
-                        sps = found_sps[:3]
+                    found_nspf = re.findall(r'data-type="nspf"[^>]*data-sp="([^"]*)"', tr_chunk)
+                    found_spf = re.findall(r'data-type="spf"[^>]*data-sp="([^"]*)"', tr_chunk)
+                    
+                    if found_nspf and len(found_nspf) >= 3 and found_nspf[0] != '-':
+                        sps_nspf = found_nspf[:3]
+                    else:
+                        is_only_rq = True # 官方不开胜平负，只开让球胜平负！
+                        
+                    if found_spf and len(found_spf) >= 3 and found_spf[0] != '-':
+                        sps_rq = found_spf[:3]
 
                 pool_fixtures.append({
                     "code": code.strip(),
@@ -189,8 +197,11 @@ def fetch_official_lottery_pool():
                     "away": away.strip(),
                     "date": mdate.strip(),
                     "time": f"{mdate[5:]} {mtime.strip()}",
-                    "odds": sps,
+                    "odds": sps_nspf if not is_only_rq else sps_rq,
+                    "odds_nspf": sps_nspf,
+                    "odds_rq": sps_rq,
                     "rang": rang.strip(),
+                    "is_only_rq": is_only_rq,
                     "is_end": isend.strip()
                 })
     except Exception as e:
