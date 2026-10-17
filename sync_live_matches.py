@@ -617,6 +617,16 @@ def full_pipeline_sync(auto_push=True):
             silent_subprocess_run(["git", "commit", "-m", commit_title], cwd=WEB_DIR)
             res = silent_subprocess_run(["git", "push", "origin", "main"], cwd=WEB_DIR)
             print("Git push result:", res.stdout or res.stderr)
+            
+            # 【终极提速】：毫秒级异步直推国内阿里云高速节点 (彻底跳过境外 CDN 与移动运营商缓存死锁！)
+            try:
+                subprocess.Popen(
+                    ["scp", "-o", "StrictHostKeyChecking=no", MATCHES_FILE, "aliyun:/var/www/football_live/official_matches.json"],
+                    stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL
+                )
+            except Exception as e:
+                pass
+
             # 关键：一旦比分有变动并推送成功，立即秒级清除全球 CDN 缓存！
             try:
                 urllib.request.urlopen("https://purge.jsdelivr.net/gh/s25s4s4/qingdao-care-concierge@main/data/official_matches.json", timeout=4)

@@ -1240,22 +1240,22 @@
             document.body.appendChild(script);
         }
 
-        // 加载全量官方比赛数据 (极致穿透：优先拉取 GitHub Raw 实时源，毫秒级反映进球与赛况)
+        // 加载全量官方比赛数据 (极致穿透：优先拉取国内阿里云 0 延迟线路，彻底跳过境外 CDN 与移动运营商缓存死锁)
         function loadMatchesData(filterMode = 'all') {
+            const aliyunUrl = 'http://47.121.185.16/football/official_matches.json?_t=' + Date.now();
             const rawUrl = 'https://raw.githubusercontent.com/s25s4s4/qingdao-care-concierge/main/data/official_matches.json?_t=' + Date.now();
             const localUrl = './data/official_matches.json?_t=' + Date.now();
-            const cdnUrl = 'https://cdn.jsdelivr.net/gh/s25s4s4/qingdao-care-concierge@main/data/official_matches.json?_t=' + Date.now();
 
-            fetch(rawUrl, { cache: 'no-store' })
+            fetch(aliyunUrl, { cache: 'no-store' })
                 .then(res => {
-                    if (!res.ok) throw new Error('Raw response not ok');
+                    if (!res.ok) throw new Error('Aliyun response not ok');
                     return res.json();
                 })
-                .catch(() => fetch(localUrl, { cache: 'no-store' }).then(r => {
-                    if (!r.ok) throw new Error('Local response not ok');
+                .catch(() => fetch(rawUrl, { cache: 'no-store' }).then(r => {
+                    if (!r.ok) throw new Error('Raw response not ok');
                     return r.json();
                 }))
-                .catch(() => fetch(cdnUrl, { cache: 'no-store' }).then(r => r.json()))
+                .catch(() => fetch(localUrl, { cache: 'no-store' }).then(r => r.json()))
                 .then(data => {
                     if (data && data.matches) {
                         ALL_OFFICIAL_MATCHES = data.matches;
