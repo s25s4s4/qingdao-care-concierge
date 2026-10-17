@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17 19:20:07",
+  "updated_at": "2026-10-17 19:30:12",
   "total": 74,
   "matches": [
     {
@@ -945,7 +945,7 @@
       "away": "切尔西",
       "home_rank": "14",
       "away_rank": "4",
-      "status": "英超焦点硬仗",
+      "status": "进行中 · 上半场 0'",
       "form_home": [
         "D",
         "L",
@@ -968,7 +968,7 @@
       "consensus": "客胜/防平 (65.0%)",
       "consensus_ratio": 65.0,
       "tip": "客胜/防平",
-      "score": "--",
+      "score": "0-0",
       "result": "PENDING",
       "analysis": "切尔西由帕尔默与恩佐掌控中场枢纽，边路冲击力凶悍；埃弗顿古迪逊公园主场对抗极其血腥擅长高空轰炸，切尔西控球虽优但极难防住埃弗顿的定位球乱战，防冷平。",
       "dossier": {
@@ -984,12 +984,13 @@
         "tipster_score": 71.5,
         "math_score": 72.4
       },
-      "sale_closed": false,
+      "sale_closed": true,
       "predicted_scores": [
         "1-1",
         "1-2",
         "2-2"
-      ]
+      ],
+      "locked": true
     },
     {
       "code": "周六009",
@@ -2464,7 +2465,7 @@
       "away": "林肯城",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "焦点对决",
+      "status": "进行中 · 上半场 0'",
       "form_home": [
         "W",
         "D",
@@ -2487,7 +2488,7 @@
       "consensus": "主不败/首选主胜 (67.9%)",
       "consensus_ratio": 67.9,
       "tip": "主不败/首选主胜",
-      "score": "--",
+      "score": "0-0",
       "result": "PENDING",
       "analysis": "米尔沃尔对阵林肯城，攻防节奏对抗激烈，战术建议【主不败/首选主胜】。",
       "dossier": {
@@ -2497,7 +2498,8 @@
         "market_attitude": "本场初赔给出1.6 / 3.48 / 4.6的胶着组合，平局SP处于3.10~3.45敏感安全带，欧洲机构分歧度较大。多方模型去水后显示两队胜率极为接近，机构通过微调水位平衡双边筹码，平局与冷门防范系数显著抬升。",
         "decision_guide": "【赛前综合研判】：结合基本面梯度、更衣室军情与机构防范态度，本场首选【主不败/首选主胜】。实战比分区间重点防范：【1-1、2-2、1-2】，建议结合让球防平双选求稳。"
       },
-      "sale_closed": false
+      "sale_closed": true,
+      "locked": true
     },
     {
       "code": "周六010",
