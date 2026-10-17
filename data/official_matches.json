@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17 23:19:07",
+  "updated_at": "2026-10-17 23:20:05",
   "total": 74,
   "matches": [
     {
@@ -1265,7 +1265,7 @@
       "consensus": "客不败/防平 (65.0%)",
       "consensus_ratio": 65.0,
       "tip": "客不败/防平",
-      "score": "3-1",
+      "score": "3-2",
       "result": "PENDING",
       "analysis": "埃沃斯堡主场风格大开大合敢于对攻；奥格斯堡德甲反击速率远超低级别队伍，双方防线均有较大空档，本场比赛必定演变成大比分对轰大战。",
       "dossier": {
@@ -1430,7 +1430,7 @@
       "consensus": "客胜/进球数大 (67.9%)",
       "consensus_ratio": 67.9,
       "tip": "客胜/进球数大",
-      "score": "0-0",
+      "score": "1-0",
       "result": "PENDING",
       "analysis": "斯图加特攻击火力极其暴烈，前场连续短传推进渗透力极强；汉堡主场防守漏洞巨大后卫盯人不紧，斯图加特客场进球大概率2球以上，客胜大球格局。",
       "dossier": {
@@ -1517,7 +1517,7 @@
       "away": "利物浦",
       "home_rank": "11",
       "away_rank": "1",
-      "status": "进行中 · 中场",
+      "status": "进行中 · 下半场",
       "form_home": [
         "W",
         "L",
@@ -1682,7 +1682,7 @@
       "away": "埃尔切",
       "home_rank": "4",
       "away_rank": "西乙3",
-      "status": "进行中 · 中场",
+      "status": "进行中 · 下半场",
       "form_home": [
         "W",
         "L",
@@ -1737,7 +1737,7 @@
       "away": "巴黎圣曼",
       "home_rank": "7",
       "away_rank": "1",
-      "status": "进行中 · 上半场 4'",
+      "status": "进行中 · 上半场",
       "form_home": [
         "W",
         "D",
