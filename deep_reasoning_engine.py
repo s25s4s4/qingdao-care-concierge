@@ -209,7 +209,7 @@ def run_tri_model_deep_reasoning(match_info):
         "Authorization": f"Bearer {LLM_KEY}"
     }
     payload = {
-        "model": "gemini-3.8-flash-high",
+        "model": "gemini-3.8-flash-low",
         "messages": [{"role": "user", "content": prompt}],
         "temperature": 0.2
     }
