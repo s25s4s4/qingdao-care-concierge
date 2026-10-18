@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18 18:42:05",
+  "updated_at": "2026-10-18 18:52:06",
   "total": 74,
   "matches": [
     {
@@ -2787,7 +2787,7 @@
       "consensus": "主胜 (66.5%)",
       "consensus_ratio": 66.5,
       "tip": "主胜",
-      "score": "0-0",
+      "score": "0-1",
       "result": "PENDING",
       "analysis": "乌迪内斯对阵莱切，三模型满血对抗研判首选【主胜】。",
       "dossier": {
@@ -3616,9 +3616,9 @@
         "W"
       ],
       "odds": [
-        "2.93",
+        "2.82",
         "3.90",
-        "1.88"
+        "1.93"
       ],
       "consensus": "客胜 (65.0%)",
       "consensus_ratio": 65.0,
