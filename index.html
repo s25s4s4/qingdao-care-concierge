@@ -1413,6 +1413,11 @@
                 const card = document.createElement('div');
                 let settledClass = '';
                 let auditTagHtml = '';
+                // 预测可信度标识：只有赛前冻结+外部结算的记录才算已验证
+                const verified = m.prediction_verified === true && (m.provenance || {}).traceable === true;
+                const verifyBadge = verified
+                    ? '<span class="match-audit-tag" style="background:rgba(63,185,80,.15);color:#3fb950;border:1px solid rgba(63,185,80,.45);">✅ 已验证</span>'
+                    : '<span class="match-audit-tag" style="background:rgba(139,148,158,.12);color:#8b949e;border:1px solid rgba(139,148,158,.35);">⚠️ 未验证 · 不计准确率</span>';
 
                 // 比赛状态精确判定：完赛 / 中断 / 进行中实时实况 / 赛前未开赛
                 const isLiveNow = m.status.includes('进行中') || m.status.includes('半场');
@@ -1436,6 +1441,7 @@
                 } else {
                     auditTagHtml = `<span class="match-audit-tag tag-pending">${m.time} | ${m.status}</span>`;
                 }
+                auditTagHtml += verifyBadge;
 
                 // 双方近期战绩药丸
                 const homeDots = m.form_home.map(f => `<span class="form-pill form-${f.toLowerCase()}">${f==='W'?'胜':(f==='D'?'平':'负')}</span>`).join('');
