@@ -630,6 +630,17 @@ def full_pipeline_sync(auto_push=True):
             log_messages.append(f"Odds snapshots added: {n_odds}")
     except Exception as exc:
         log_messages.append(f"Odds track skipped: {type(exc).__name__}")
+    # 官方SP优先：sporttery 成功则覆盖并做冲突检测，失败自动保留 500.com
+    try:
+        import sporttery
+        official = sporttery.fetch()
+        if official:
+            upd, conf = sporttery.apply(existing_matches, official)
+            if upd or conf:
+                changes_made = True
+                log_messages.append(f"Official SP: updated={upd} conflicts={conf}")
+    except Exception as exc:
+        log_messages.append(f"Sporttery skipped: {type(exc).__name__}")
     if changes_made:
         data['updated_at'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         data['total'] = len(existing_matches)
