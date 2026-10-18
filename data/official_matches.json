@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18 23:39:05",
+  "updated_at": "2026-10-18 23:43:06",
   "total": 74,
   "matches": [
     {
@@ -3433,7 +3433,7 @@
       "away": "阿贾克斯",
       "home_rank": "9",
       "away_rank": "2",
-      "status": "进行中 · 上半场",
+      "status": "进行中 · 中场",
       "form_home": [
         "D",
         "L",
@@ -3637,7 +3637,7 @@
       "consensus": "客不败/双选平负 (65.0%)",
       "consensus_ratio": 65.0,
       "tip": "客不败/双选平负",
-      "score": "0-0",
+      "score": "0-1",
       "result": "PENDING",
       "analysis": "门兴对阵霍芬海姆，三模型满血对抗研判首选【客胜】。",
       "dossier": {
