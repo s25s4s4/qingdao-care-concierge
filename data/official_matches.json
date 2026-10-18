@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18 23:22:12",
+  "updated_at": "2026-10-18 23:23:06",
   "total": 74,
   "matches": [
     {
@@ -3372,7 +3372,7 @@
       "away": "阿拉维斯",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "进行中 · 中场",
+      "status": "进行中 · 下半场",
       "form_home": [
         "W",
         "D",
@@ -3456,7 +3456,7 @@
       "consensus": "客胜 (65.3%)",
       "consensus_ratio": 65.3,
       "tip": "客胜",
-      "score": "0-0",
+      "score": "0-1",
       "result": "PENDING",
       "analysis": "格罗宁根对阵阿贾克斯，三模型满血对抗研判首选【客胜】。",
       "dossier": {
@@ -3493,7 +3493,7 @@
       "away": "摩纳哥",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "进行中 · 上半场 7'",
+      "status": "进行中 · 上半场",
       "form_home": [
         "W",
         "D",
