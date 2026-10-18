@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-19 03:53:14",
+  "updated_at": "2026-10-19 03:54:11",
   "total": 74,
   "matches": [
     {
@@ -4856,7 +4856,14 @@
           "intel_ids": []
         },
         "sha256": "990c3f8bba60173b857492ad6a0eaefeff8f1baf5a38b9773a60982510910a0c"
-      }
+      },
+      "odds_official": [
+        "2.32",
+        "3.00",
+        "2.75"
+      ],
+      "official_market": "had",
+      "odds_source": "sporttery_official"
     },
     {
       "code": "周一002",
@@ -4953,7 +4960,14 @@
           "intel_ids": []
         },
         "sha256": "b45ece513fe181abe0ab8dfc34084a66a5cf67f839cfbd59e714a27603818704"
-      }
+      },
+      "odds_official": [
+        "2.77",
+        "3.15",
+        "2.22"
+      ],
+      "official_market": "had",
+      "odds_source": "sporttery_official"
     },
     {
       "code": "周一003",
@@ -5050,7 +5064,14 @@
           "intel_ids": []
         },
         "sha256": "bac8d2b31a747c7798eb4274d70891041de2fa9210da2316c1defe4a3a4f2a3a"
-      }
+      },
+      "odds_official": [
+        "3.00",
+        "2.85",
+        "2.25"
+      ],
+      "official_market": "had",
+      "odds_source": "sporttery_official"
     },
     {
       "code": "周一004",
@@ -5147,7 +5168,14 @@
           "intel_ids": []
         },
         "sha256": "cc7bb6d87c7d39c061f724002a3cf39b269637c91e11f8cca998f924666d11dc"
-      }
+      },
+      "odds_official": [
+        "2.70",
+        "3.30",
+        "2.20"
+      ],
+      "official_market": "had",
+      "odds_source": "sporttery_official"
     },
     {
       "code": "周一005",
@@ -5244,7 +5272,14 @@
           "intel_ids": []
         },
         "sha256": "7f88b0414cb6c01ea21f54fc2354e2f1a6ad5758f739d48513f5dc3b05781757"
-      }
+      },
+      "odds_official": [
+        "1.36",
+        "4.45",
+        "5.90"
+      ],
+      "official_market": "had",
+      "odds_source": "sporttery_official"
     },
     {
       "code": "周一006",
@@ -5341,7 +5376,14 @@
           "intel_ids": []
         },
         "sha256": "4540af9291b766982553477ed006b0235aeadd6585c43c38a55cf37c9292771e"
-      }
+      },
+      "odds_official": [
+        "2.62",
+        "2.73",
+        "2.62"
+      ],
+      "official_market": "had",
+      "odds_source": "sporttery_official"
     },
     {
       "code": "周一007",
@@ -5438,7 +5480,14 @@
           "intel_ids": []
         },
         "sha256": "b3b4f10735819bd94b71e2e77f9743c9097c8d1d215d192007b4d44af2f32c67"
-      }
+      },
+      "odds_official": [
+        "1.42",
+        "3.80",
+        "6.20"
+      ],
+      "official_market": "had",
+      "odds_source": "sporttery_official"
     },
     {
       "code": "周一008",
@@ -5535,7 +5584,14 @@
           "intel_ids": []
         },
         "sha256": "b32947d4371c08a2c59caed09f8b8645c10b552e041b7b14e7702d11fc474acd"
-      }
+      },
+      "odds_official": [
+        "1.53",
+        "3.57",
+        "5.10"
+      ],
+      "official_market": "had",
+      "odds_source": "sporttery_official"
     }
   ]
 }
