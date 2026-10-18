@@ -605,6 +605,24 @@ def full_pipeline_sync(auto_push=True):
             log_messages.append(f"Crosscheck conflicts: {len(cc['conflicts'])}")
     except Exception as exc:
         log_messages.append(f"Crosscheck skipped: {type(exc).__name__}")
+    # 赛前冻结：仅对未开赛且有方向/赔率的比赛建立不可变快照
+    try:
+        import verify as _verify
+        for m in existing_matches:
+            if _verify.freeze(m):
+                changes_made = True
+                log_messages.append(f"Frozen prediction: {m.get('code')}")
+    except Exception as exc:
+        log_messages.append(f"Freeze skipped: {type(exc).__name__}")
+    # 独立结算：只用外部源(FotMob)比分，不用自报比分
+    try:
+        import verify as _verify2
+        st = _verify2.settle_all(existing_matches)
+        if st['hit'] or st['miss']:
+            changes_made = True
+            log_messages.append(f"Settled via fotmob: HIT={st['hit']} MISS={st['miss']}")
+    except Exception as exc:
+        log_messages.append(f"Settle skipped: {type(exc).__name__}")
     if changes_made:
         data['updated_at'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         data['total'] = len(existing_matches)
