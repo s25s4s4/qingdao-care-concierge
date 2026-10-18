@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18 22:44:07",
+  "updated_at": "2026-10-18 22:45:06",
   "total": 74,
   "matches": [
     {
@@ -3433,7 +3433,7 @@
       "away": "阿贾克斯",
       "home_rank": "9",
       "away_rank": "2",
-      "status": "三模型极速裁决",
+      "status": "进行中 · 上半场 0'",
       "form_home": [
         "D",
         "L",
@@ -3456,7 +3456,7 @@
       "consensus": "客胜 (65.3%)",
       "consensus_ratio": 65.3,
       "tip": "客胜",
-      "score": "--",
+      "score": "0-0",
       "result": "PENDING",
       "analysis": "格罗宁根对阵阿贾克斯，三模型满血对抗研判首选【客胜】。",
       "dossier": {
@@ -3472,7 +3472,7 @@
         "tipster_score": 88.0,
         "math_score": 77.0
       },
-      "sale_closed": false,
+      "sale_closed": true,
       "predicted_scores": [
         "1-2",
         "0-2",
@@ -3482,7 +3482,8 @@
         "2",
         "3"
       ],
-      "is_single": false
+      "is_single": false,
+      "locked": true
     },
     {
       "code": "周日017",
