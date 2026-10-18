@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18 23:12:14",
+  "updated_at": "2026-10-18 23:13:07",
   "total": 74,
   "matches": [
     {
@@ -3189,7 +3189,7 @@
       "away": "科莫",
       "home_rank": "8",
       "away_rank": "14",
-      "status": "进行中 · 上半场 132'",
+      "status": "已完赛",
       "form_home": [
         "W",
         "D",
@@ -3213,7 +3213,7 @@
       "consensus_ratio": 65.0,
       "tip": "客胜",
       "score": "1-3",
-      "result": "PENDING",
+      "result": "HIT",
       "analysis": "佛罗伦萨对阵科莫，三模型满血对抗研判首选【客胜】。",
       "dossier": {
         "summary": "客胜，四维综合共识度 78.4%\\由此",
@@ -3311,7 +3311,7 @@
       "away": "弗赖堡",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "进行中 · 上半场 102'",
+      "status": "进行中 · 下半场",
       "form_home": [
         "W",
         "D",
@@ -3334,7 +3334,7 @@
       "consensus": "主胜 (83.1%)由此",
       "consensus_ratio": 83.1,
       "tip": "主胜",
-      "score": "1-1",
+      "score": "2-1",
       "result": "PENDING",
       "analysis": "勒沃库森对阵弗赖堡，三模型满血对抗研判首选【主胜】。",
       "dossier": {
@@ -3372,7 +3372,7 @@
       "away": "阿拉维斯",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "进行中 · 上半场 57'",
+      "status": "进行中 · 中场",
       "form_home": [
         "W",
         "D",
@@ -3433,7 +3433,7 @@
       "away": "阿贾克斯",
       "home_rank": "9",
       "away_rank": "2",
-      "status": "进行中 · 上半场 27'",
+      "status": "进行中 · 上半场",
       "form_home": [
         "D",
         "L",
