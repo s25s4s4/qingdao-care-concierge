@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18 21:01:05",
+  "updated_at": "2026-10-18 21:02:12",
   "total": 74,
   "matches": [
     {
@@ -3030,7 +3030,7 @@
       "consensus": "主不败/首选主胜 (65.0%)",
       "consensus_ratio": 65.0,
       "tip": "主不败/首选主胜",
-      "score": "0-0",
+      "score": "0-1",
       "result": "PENDING",
       "analysis": "萨普斯堡对阵罗森博格，三模型满血对抗研判首选【客不败/双选平负】。",
       "dossier": {
@@ -3067,7 +3067,7 @@
       "away": "曼联",
       "home_rank": "英冠2",
       "away_rank": "10",
-      "status": "进行中 · 上半场 1'",
+      "status": "进行中 · 上半场",
       "form_home": [
         "W",
         "W",
@@ -3127,7 +3127,7 @@
       "away": "桑德兰",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "进行中 · 上半场 1'",
+      "status": "进行中 · 上半场",
       "form_home": [
         "W",
         "D",
@@ -3187,7 +3187,7 @@
       "away": "科莫",
       "home_rank": "8",
       "away_rank": "14",
-      "status": "进行中 · 上半场 1'",
+      "status": "进行中 · 上半场 2'",
       "form_home": [
         "W",
         "D",
@@ -3248,7 +3248,7 @@
       "away": "马赛",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "进行中 · 上半场 1'",
+      "status": "进行中 · 上半场",
       "form_home": [
         "W",
         "D",
