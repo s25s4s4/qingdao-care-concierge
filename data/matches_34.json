@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18 23:53:05",
+  "updated_at": "2026-10-19 00:00:07",
   "total": 74,
   "matches": [
     {
@@ -3674,7 +3674,7 @@
       "away": "亚特兰大",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "三模型极速裁决",
+      "status": "进行中 · 上半场 0'",
       "form_home": [
         "W",
         "D",
@@ -3697,7 +3697,7 @@
       "consensus": "主胜 (71.5%)",
       "consensus_ratio": 71.5,
       "tip": "主胜",
-      "score": "--",
+      "score": "0-0",
       "result": "PENDING",
       "analysis": "AC米兰对阵亚特兰大，三模型满血对抗研判首选【主不败/首选主胜】。",
       "dossier": {
