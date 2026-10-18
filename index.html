@@ -1691,15 +1691,15 @@
 
             if (batchTitleElem) batchTitleElem.innerText = `${currentTargetDay}在售档期 (${activeDayMatches.length}场在售)`;
 
-            // 生成所有两两组合，严格按照【多结果中的最低赔率】精算最低理论回报
+            // 生成所有两两组合，严格按照【多选注数稀释后的实际最低赔率 (净回报倍数)】进行精算
             const parlayPairs = [];
             for (let i = 0; i < activeDayMatches.length; i++) {
                 for (let j = i + 1; j < activeDayMatches.length; j++) {
                     const m1 = activeDayMatches[i];
                     const m2 = activeDayMatches[j];
                     
-                    // 获取比赛所有覆盖结果中的【最低赔率 (最保守兑奖 SP)】
-                    const getMatchMinSp = (m) => {
+                    // 获取比赛所有覆盖结果中的【最低赔率 (最保守兑奖 SP)】及【覆盖选项数】
+                    const getMatchCoverage = (m) => {
                         const tip = m.tip || '';
                         const odds = (m.odds && m.odds[0] !== '-') ? m.odds : ['1.85', '3.20', '2.80'];
                         const sp_w = parseFloat(odds[0]) || 1.85;
@@ -1726,21 +1726,36 @@
                             }
                             if (covered.length === 0) covered.push(sp_w);
                         }
-                        return Math.min(...covered);
+                        return {
+                            minSp: Math.min(...covered),
+                            count: covered.length
+                        };
                     };
 
-                    const minSp1 = getMatchMinSp(m1);
-                    const minSp2 = getMatchMinSp(m2);
-                    const minCombinedSp = parseFloat((minSp1 * minSp2).toFixed(2));
+                    const cov1 = getMatchCoverage(m1);
+                    const cov2 = getMatchCoverage(m2);
+
+                    // 核心注数：单选x单选=1注，双选x单选=2注，双选x双选=4注
+                    const totalBets = cov1.count * cov2.count;
+                    // 低赔相乘得到的理论单注中奖倍数
+                    const minCombinedSp = parseFloat((cov1.minSp * cov2.minSp).toFixed(2));
+                    // 【核心实际赔率】：总返还 / 总投入成本 = (1000 * minCombinedSp) / (1000 * totalBets) = minCombinedSp / totalBets
+                    // 比如：低赔相乘 5.5倍，但总注数4注(投入4000元)，实际赔率是 5.5 / 4 = 1.375 倍！
+                    const actualRoiOdds = parseFloat((minCombinedSp / totalBets).toFixed(2));
 
                     parlayPairs.push({
-                        m1, m2, minSp1, minSp2, minCombinedSp
+                        m1, m2, 
+                        minSp1: cov1.minSp, count1: cov1.count,
+                        minSp2: cov2.minSp, count2: cov2.count,
+                        totalBets,
+                        minCombinedSp,
+                        actualRoiOdds
                     });
                 }
             }
 
-            // 【核心要求】：严格按照【最低赔率理论回报】从高到低倒序排序（低赔里的最高稳胆大单排前面）！
-            parlayPairs.sort((a, b) => b.minCombinedSp - a.minCombinedSp);
+            // 【核心要求】：严格按照【实际赔率 (折合总投入后的真实净倍数)】从高到低倒序排序！
+            parlayPairs.sort((a, b) => b.actualRoiOdds - a.actualRoiOdds);
 
             if (totalPairsElem) totalPairsElem.innerText = parlayPairs.length + ' 组';
 
@@ -1759,16 +1774,21 @@
                 card.className = 'match-card';
                 card.style.marginBottom = '10px';
 
+                // 判断是否保本/盈利
+                const isProfitable = pair.actualRoiOdds >= 1.0;
+                const roiColor = isProfitable ? 'var(--accent-gold)' : '#f85149';
+                const tagColor = isProfitable ? '#3fb950' : '#d29922';
+
                 card.innerHTML = `
                     <div class="card-header" style="margin-bottom: 6px;">
                         <div>
-                            <span class="league-tag" style="background: rgba(46, 160, 67, 0.2); color: #3fb950; font-weight: 800;">实战 2串1 · 组合 #${globalRank}</span>
-                            <span style="font-size: 11px; color: var(--text-secondary); margin-left: 6px;">双选保底精算</span>
+                            <span class="league-tag" style="background: rgba(46, 160, 67, 0.2); color: ${tagColor}; font-weight: 800;">实战 2串1 · 组合 #${globalRank}</span>
+                            <span style="font-size: 11px; color: var(--text-secondary); margin-left: 6px;">全复式 ${pair.totalBets} 注 (${pair.totalBets * 1000}元)</span>
                         </div>
                         <div style="text-align: right;">
-                            <span style="font-size: 10px; color: var(--text-secondary); margin-right: 4px;">最低保底回报:</span>
-                            <span style="font-size: 13px; font-weight: 800; color: var(--accent-gold); font-family: var(--font-mono);">
-                                ${pair.minCombinedSp.toFixed(2)} 倍
+                            <span style="font-size: 10px; color: var(--text-secondary); margin-right: 2px;">实际保底倍数:</span>
+                            <span style="font-size: 14px; font-weight: 800; color: ${roiColor}; font-family: var(--font-mono);">
+                                ${pair.actualRoiOdds.toFixed(2)} 倍
                             </span>
                         </div>
                     </div>
@@ -1781,10 +1801,10 @@
                             <span class="badge" style="background: rgba(210, 153, 34, 0.15); color: var(--accent-gold); font-size: 11px; font-weight: 700;">
                                 ${pair.m1.is_only_rq ? '让球: ' : ''}${pair.m1.tip}
                             </span>
-                            <span style="font-size: 10px; color: #8b949e; font-family: var(--font-mono); margin-left: 4px;">(最低SP ${pair.minSp1.toFixed(2)})</span>
+                            <span style="font-size: 10px; color: #8b949e; font-family: var(--font-mono); margin-left: 4px;">(${pair.count1}选 · 最低SP ${pair.minSp1.toFixed(2)})</span>
                         </div>
                     </div>
-                    <div style="background: rgba(13, 17, 23, 0.7); border-radius: 6px; padding: 8px 10px; display: flex; justify-content: space-between; align-items: center;">
+                    <div style="background: rgba(13, 17, 23, 0.7); border-radius: 6px; padding: 8px 10px; margin-bottom: 6px; display: flex; justify-content: space-between; align-items: center;">
                         <div style="font-size: 12px;">
                             <span style="color: var(--text-secondary); font-family: var(--font-mono); font-size: 11px;">[${pair.m2.code}]</span> 
                             <b>${pair.m2.home}</b> vs <b>${pair.m2.away}</b>
@@ -1793,8 +1813,12 @@
                             <span class="badge" style="background: rgba(210, 153, 34, 0.15); color: var(--accent-gold); font-size: 11px; font-weight: 700;">
                                 ${pair.m2.is_only_rq ? '让球: ' : ''}${pair.m2.tip}
                             </span>
-                            <span style="font-size: 10px; color: #8b949e; font-family: var(--font-mono); margin-left: 4px;">(最低SP ${pair.minSp2.toFixed(2)})</span>
+                            <span style="font-size: 10px; color: #8b949e; font-family: var(--font-mono); margin-left: 4px;">(${pair.count2}选 · 最低SP ${pair.minSp2.toFixed(2)})</span>
                         </div>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding: 4px 6px; font-size: 10.5px; color: var(--text-secondary); background: rgba(22, 27, 34, 0.4); border-radius: 4px;">
+                        <span>单注低赔乘积: <code>${pair.minCombinedSp.toFixed(2)}倍</code> (中奖返还 ${Math.round(1000 * pair.minCombinedSp)}元)</span>
+                        <span>折合实投净赔率: <b style="color: ${roiColor}; font-family: var(--font-mono);">${pair.actualRoiOdds.toFixed(2)}倍</b></span>
                     </div>
                 `;
                 pairsContainer.appendChild(card);
