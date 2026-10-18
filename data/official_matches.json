@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-19 03:30:29",
+  "updated_at": "2026-10-19 03:33:07",
   "total": 74,
   "matches": [
     {
@@ -4703,12 +4703,41 @@
       ],
       "is_single": true,
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "odds_implied_probability",
+        "evidence": "已留痕",
+        "traceable": true,
+        "note": "赛前冻结，含赔率与生成方式哈希"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "主不败/首选主胜",
+        "predicted_scores": [
+          "1-0",
+          "1-1",
+          "2-0"
+        ],
+        "predicted_goals": [
+          "1",
+          "2"
+        ],
+        "consensus_ratio": 76.6,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-19T03:33:02",
+        "kickoff": "2026-10-20T00:30:00",
+        "evidence": {
+          "odds": [
+            "2.32",
+            "3.00",
+            "2.75"
+          ],
+          "odds_source": "500.com",
+          "method": "odds_implied_probability",
+          "intel_used": false,
+          "intel_ids": []
+        },
+        "sha256": "d42cf1009936ee5088fb70c26c95f513d87cdb0a5cca43a5975c571fadc16c07"
+      }
     },
     {
       "code": "周一002",
@@ -4770,12 +4799,42 @@
       ],
       "is_single": false,
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "odds_implied_probability",
+        "evidence": "已留痕",
+        "traceable": true,
+        "note": "赛前冻结，含赔率与生成方式哈希"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "客不败/双选平负",
+        "predicted_scores": [
+          "1-1",
+          "0-1",
+          "1-2"
+        ],
+        "predicted_goals": [
+          "1",
+          "2",
+          "3"
+        ],
+        "consensus_ratio": 76.5,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-19T03:33:02",
+        "kickoff": "2026-10-20T01:00:00",
+        "evidence": {
+          "odds": [
+            "2.77",
+            "3.15",
+            "2.22"
+          ],
+          "odds_source": "500.com",
+          "method": "odds_implied_probability",
+          "intel_used": false,
+          "intel_ids": []
+        },
+        "sha256": "1e775114985e253e8234908caa6679451fa1b76abd562aee4419704484b3a62a"
+      }
     },
     {
       "code": "周一003",
@@ -4837,12 +4896,42 @@
       ],
       "is_single": false,
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "odds_implied_probability",
+        "evidence": "已留痕",
+        "traceable": true,
+        "note": "赛前冻结，含赔率与生成方式哈希"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "客不败/双选平负",
+        "predicted_scores": [
+          "0-1",
+          "1-1",
+          "0-0"
+        ],
+        "predicted_goals": [
+          "0",
+          "1",
+          "2"
+        ],
+        "consensus_ratio": 76.5,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-19T03:33:02",
+        "kickoff": "2026-10-20T02:45:00",
+        "evidence": {
+          "odds": [
+            "3.00",
+            "2.85",
+            "2.25"
+          ],
+          "odds_source": "500.com",
+          "method": "odds_implied_probability",
+          "intel_used": false,
+          "intel_ids": []
+        },
+        "sha256": "4096060a176eead47ad440d4bb91e1f38cdcb41989234b69adebab5201d0920c"
+      }
     },
     {
       "code": "周一004",
@@ -4904,12 +4993,42 @@
       ],
       "is_single": false,
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "odds_implied_probability",
+        "evidence": "已留痕",
+        "traceable": true,
+        "note": "赛前冻结，含赔率与生成方式哈希"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "客不败/双选平负",
+        "predicted_scores": [
+          "1-1",
+          "0-1",
+          "1-2"
+        ],
+        "predicted_goals": [
+          "1",
+          "2",
+          "3"
+        ],
+        "consensus_ratio": 76.5,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-19T03:33:02",
+        "kickoff": "2026-10-20T02:45:00",
+        "evidence": {
+          "odds": [
+            "2.70",
+            "3.30",
+            "2.20"
+          ],
+          "odds_source": "500.com",
+          "method": "odds_implied_probability",
+          "intel_used": false,
+          "intel_ids": []
+        },
+        "sha256": "4c92eb1a692f2860ff115e55328f6eb9a148894bdcc1c8348b40b762a7641b94"
+      }
     },
     {
       "code": "周一005",
@@ -4971,12 +5090,42 @@
       ],
       "is_single": false,
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "odds_implied_probability",
+        "evidence": "已留痕",
+        "traceable": true,
+        "note": "赛前冻结，含赔率与生成方式哈希"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "主胜",
+        "predicted_scores": [
+          "2-0",
+          "1-0",
+          "2-1"
+        ],
+        "predicted_goals": [
+          "1",
+          "2",
+          "3"
+        ],
+        "consensus_ratio": 78.4,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-19T03:33:02",
+        "kickoff": "2026-10-20T03:00:00",
+        "evidence": {
+          "odds": [
+            "1.36",
+            "4.45",
+            "5.90"
+          ],
+          "odds_source": "500.com",
+          "method": "odds_implied_probability",
+          "intel_used": false,
+          "intel_ids": []
+        },
+        "sha256": "a34c1d680e2b578c11d430db979d7e73deaf9ecc0c74b24d54475e030436a9f5"
+      }
     },
     {
       "code": "周一006",
@@ -5038,12 +5187,42 @@
       ],
       "is_single": false,
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "odds_implied_probability",
+        "evidence": "已留痕",
+        "traceable": true,
+        "note": "赛前冻结，含赔率与生成方式哈希"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "平局/防冷",
+        "predicted_scores": [
+          "1-1",
+          "0-0",
+          "1-0"
+        ],
+        "predicted_goals": [
+          "0",
+          "1",
+          "2"
+        ],
+        "consensus_ratio": 77.2,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-19T03:33:02",
+        "kickoff": "2026-10-20T03:00:00",
+        "evidence": {
+          "odds": [
+            "2.62",
+            "2.73",
+            "2.62"
+          ],
+          "odds_source": "500.com",
+          "method": "odds_implied_probability",
+          "intel_used": false,
+          "intel_ids": []
+        },
+        "sha256": "cb0388d0425ab7f876e2e88d86239045d67ebdd1553e28a4f5a56c9c1d80ee4e"
+      }
     },
     {
       "code": "周一007",
@@ -5105,12 +5284,42 @@
       ],
       "is_single": false,
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "odds_implied_probability",
+        "evidence": "已留痕",
+        "traceable": true,
+        "note": "赛前冻结，含赔率与生成方式哈希"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "主胜",
+        "predicted_scores": [
+          "2-0",
+          "2-1",
+          "1-0"
+        ],
+        "predicted_goals": [
+          "1",
+          "2",
+          "3"
+        ],
+        "consensus_ratio": 76.5,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-19T03:33:02",
+        "kickoff": "2026-10-20T03:15:00",
+        "evidence": {
+          "odds": [
+            "1.42",
+            "3.80",
+            "6.20"
+          ],
+          "odds_source": "500.com",
+          "method": "odds_implied_probability",
+          "intel_used": false,
+          "intel_ids": []
+        },
+        "sha256": "9e395c7550975beebab38014a7e7eaefe074f176d0da8d1831207af8319777b8"
+      }
     },
     {
       "code": "周一008",
@@ -5172,12 +5381,42 @@
       ],
       "is_single": false,
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "odds_implied_probability",
+        "evidence": "已留痕",
+        "traceable": true,
+        "note": "赛前冻结，含赔率与生成方式哈希"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "主胜",
+        "predicted_scores": [
+          "2-0",
+          "1-0",
+          "2-1"
+        ],
+        "predicted_goals": [
+          "1",
+          "2",
+          "3"
+        ],
+        "consensus_ratio": 78.4,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-19T03:33:02",
+        "kickoff": "2026-10-20T07:00:00",
+        "evidence": {
+          "odds": [
+            "1.53",
+            "3.57",
+            "5.10"
+          ],
+          "odds_source": "500.com",
+          "method": "odds_implied_probability",
+          "intel_used": false,
+          "intel_ids": []
+        },
+        "sha256": "1c351c2205a57c6823df4ebc696bc043cd2434f5ceed25afe37a2a2ab83ad231"
+      }
     }
   ]
 }
