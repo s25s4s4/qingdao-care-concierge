@@ -1634,21 +1634,21 @@
                 }
             }
 
-            // 2. 渲染官方单关稳胆
-            const singleMatches = pendingMatches.filter(m => m.is_only_rq || m.is_single || (m.league_tag && m.league_tag.includes('单关')));
+            // 2. 渲染官方单关稳胆 (精确展示官方竞彩支持单场出票的比赛)
+            const singleMatches = pendingMatches.filter(m => m.is_single);
             if (singleMatches.length > 0) {
                 singleMatches.forEach(m => {
                     const card = document.createElement('div');
                     card.className = 'match-card';
-                    card.style.borderLeft = '3px solid var(--accent-gold)';
+                    card.style.borderLeft = '3px solid #f85149';
                     card.onclick = () => openDetail(m.code);
                     card.innerHTML = `
                         <div class="card-header">
                             <div>
-                                <span class="league-tag" style="background: rgba(210, 153, 34, 0.2); color: var(--accent-gold); font-weight: 800;">${m.code} · ${m.league} (单关)</span>
-                                <span style="font-size: 11px; color: var(--text-secondary); margin-left: 6px;">${m.time}</span>
+                                <span class="league-tag" style="background: rgba(248, 81, 73, 0.2); color: #f85149; font-weight: 800;">🔥 官方单关 · ${m.code}</span>
+                                <span style="font-size: 11px; color: var(--text-secondary); margin-left: 6px;">${m.league} · ${m.time}</span>
                             </div>
-                            <span class="badge" style="background: rgba(210, 153, 34, 0.2); color: var(--accent-gold); font-weight: 700;">可单场直接打票</span>
+                            <span class="badge" style="background: rgba(248, 81, 73, 0.2); color: #f85149; font-weight: 700;">官方胜平负单关</span>
                         </div>
                         <div class="teams-box" style="margin: 8px 0;">
                             <div class="team-side home">
