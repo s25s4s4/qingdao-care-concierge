@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18 20:31:06",
+  "updated_at": "2026-10-18 20:32:06",
   "total": 74,
   "matches": [
     {
@@ -2764,7 +2764,7 @@
       "away": "莱切",
       "home_rank": "6",
       "away_rank": "17",
-      "status": "进行中 · 下半场",
+      "status": "已完赛",
       "form_home": [
         "L",
         "L",
@@ -2788,7 +2788,7 @@
       "consensus_ratio": 66.5,
       "tip": "主胜",
       "score": "0-3",
-      "result": "PENDING",
+      "result": "MISS",
       "analysis": "乌迪内斯对阵莱切，三模型满血对抗研判首选【主胜】。",
       "dossier": {
         "summary": "乌迪内斯对阵莱切，三模型满血对抗研判首选【主胜】。",
@@ -3007,7 +3007,7 @@
       "away": "罗森博格",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "进行中 · 上半场 1'",
+      "status": "进行中 · 上半场",
       "form_home": [
         "W",
         "D",
