@@ -2551,7 +2551,10 @@ function copyWechat() {
 
         // 前端全自动智能轮询机制：
         // 全量兜底：SSE 在线时 30 秒一次，断线时 10 秒一次（避免无效高频请求）
+        let pollTick = 0;
         setInterval(() => {
+            pollTick++;
+            if (SSE_ALIVE && pollTick % 4 !== 0) return; // 推送正常时只做低频兜底
             loadMatchesData(window.currentFilterMode || 'all');
         }, 8000);
 
@@ -2559,7 +2562,7 @@ function copyWechat() {
         function initLiveSSE() {
             if (!window.EventSource) return;
             const url = location.protocol === 'https:'
-                ? 'https://qingdaocare.top/football_stream'
+                ? 'https://api.qingdaocare.top/stream'
                 : 'http://47.121.185.16/football_stream';
             let lastRevision = '';
             let retry = 0;
@@ -2590,7 +2593,7 @@ function copyWechat() {
             }
             connect();
         }
-        // SSE 源站无 HTTPS 入口（域名已指向 Pages），改用 raw 快照高频轮询
+        initLiveSSE();
 
         // 静默无感流量统计 (安全协议自适应：避免在 HTTPS 网页中触发不安全警告)
         (function() {
