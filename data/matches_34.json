@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-19 03:13:08",
+  "updated_at": "2026-10-19 03:23:09",
   "total": 74,
   "matches": [
     {
@@ -2348,7 +2348,12 @@
         "3",
         "4"
       ],
-      "is_single": false
+      "is_single": false,
+      "crosscheck": {
+        "source": "fotmob",
+        "score": "3 - 4",
+        "finished": true
+      }
     },
     {
       "code": "周六028",
@@ -2409,7 +2414,12 @@
         "3",
         "4"
       ],
-      "is_single": false
+      "is_single": false,
+      "crosscheck": {
+        "source": "fotmob",
+        "score": "2 - 0",
+        "finished": true
+      }
     },
     {
       "code": "周六029",
@@ -2530,7 +2540,12 @@
         "2",
         "3"
       ],
-      "is_single": false
+      "is_single": false,
+      "crosscheck": {
+        "source": "fotmob",
+        "score": "1 - 0",
+        "finished": true
+      }
     },
     {
       "code": "周日001",
@@ -3923,7 +3938,7 @@
       "consensus": "主胜 (70.1%)",
       "consensus_ratio": 70.1,
       "tip": "主胜",
-      "score": "0-0",
+      "score": "0-1",
       "result": "PENDING",
       "analysis": "尤文图斯对阵拉齐奥，三模型满血对抗研判首选【主不败/首选主胜】。",
       "dossier": {
@@ -3954,7 +3969,7 @@
       "locked": true,
       "crosscheck": {
         "source": "fotmob",
-        "score": "0 - 0",
+        "score": "0 - 1",
         "finished": false
       }
     },
@@ -3989,7 +4004,7 @@
       "consensus": "主不败/首选主胜 (65.7%)",
       "consensus_ratio": 65.7,
       "tip": "主不败/首选主胜",
-      "score": "0-1",
+      "score": "2-1",
       "result": "PENDING",
       "analysis": "里昂对阵尼斯，三模型满血对抗研判首选【主胜】。",
       "dossier": {
@@ -4020,7 +4035,7 @@
       "locked": true,
       "crosscheck": {
         "source": "fotmob",
-        "score": "0 - 1",
+        "score": "2 - 1",
         "finished": false
       }
     },
