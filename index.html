@@ -1633,37 +1633,66 @@
 
             if (batchTitleElem) batchTitleElem.innerText = `${currentTargetDay}在售档期 (${activeDayMatches.length}场在售)`;
 
-            // 生成所有两两组合
+            // 生成所有两两组合，并精细化解析首选与次选 SP（计算理论综合 SP）
             const parlayPairs = [];
             for (let i = 0; i < activeDayMatches.length; i++) {
                 for (let j = i + 1; j < activeDayMatches.length; j++) {
                     const m1 = activeDayMatches[i];
                     const m2 = activeDayMatches[j];
-                    // 估算两场推荐选项的理论组合 SP
-                    const sp1 = parseFloat((m1.odds && m1.odds[0] !== '-') ? m1.odds[0] : 1.75) || 1.75;
-                    const sp2 = parseFloat((m2.odds && m2.odds[0] !== '-') ? m2.odds[0] : 1.75) || 1.75;
+                    
+                    // 获取两场比赛的真实估算 SP
+                    const getMatchEstSp = (m) => {
+                        const tip = m.tip || '';
+                        const odds = (m.odds && m.odds[0] !== '-') ? m.odds : ['1.85', '3.20', '2.80'];
+                        if (m.is_only_rq) {
+                            if (tip.includes('让平')) return parseFloat(odds[1]) || 3.50;
+                            if (tip.includes('让负')) return parseFloat(odds[2]) || 2.20;
+                            return parseFloat(odds[0]) || 2.10;
+                        } else {
+                            if (tip.includes('平') && !tip.includes('主') && !tip.includes('客')) return parseFloat(odds[1]) || 3.20;
+                            if (tip.includes('客胜')) return parseFloat(odds[2]) || 2.60;
+                            if (tip.includes('客不败')) return ((parseFloat(odds[1]) + parseFloat(odds[2])) / 2) || 2.80;
+                            if (tip.includes('主不败')) return ((parseFloat(odds[0]) + parseFloat(odds[1])) / 2) || 2.20;
+                            return parseFloat(odds[0]) || 1.85;
+                        }
+                    };
+
+                    const sp1 = getMatchEstSp(m1);
+                    const sp2 = getMatchEstSp(m2);
                     const combinedSp = (sp1 * sp2).toFixed(2);
                     parlayPairs.push({
-                        m1, m2, sp1, sp2, combinedSp
+                        m1, m2, sp1, sp2, combinedSp: parseFloat(combinedSp)
                     });
                 }
             }
 
+            // 【核心要求】：按照理论回报率/赔率从高到低倒序排序（高赔大单排前面）！
+            parlayPairs.sort((a, b) => b.combinedSp - a.combinedSp);
+
             if (totalPairsElem) totalPairsElem.innerText = parlayPairs.length + ' 组';
 
-            // 渲染前 20 组焦点 2串1 方案，并支持一键查阅
-            parlayPairs.slice(0, 25).forEach((pair, idx) => {
+            // 分页参数管理：每页 10 组全量显示
+            window.PARLAY_PAGE_SIZE = 10;
+            window.CURRENT_PARLAY_PAGE = window.CURRENT_PARLAY_PAGE || 1;
+            const totalPages = Math.ceil(parlayPairs.length / window.PARLAY_PAGE_SIZE);
+            if (window.CURRENT_PARLAY_PAGE > totalPages) window.CURRENT_PARLAY_PAGE = 1;
+
+            const startIdx = (window.CURRENT_PARLAY_PAGE - 1) * window.PARLAY_PAGE_SIZE;
+            const pagePairs = parlayPairs.slice(startIdx, startIdx + window.PARLAY_PAGE_SIZE);
+
+            pagePairs.forEach((pair, idx) => {
+                const globalRank = startIdx + idx + 1;
                 const card = document.createElement('div');
                 card.className = 'match-card';
                 card.style.marginBottom = '10px';
                 card.innerHTML = `
                     <div class="card-header" style="margin-bottom: 6px;">
                         <div>
-                            <span class="league-tag" style="background: rgba(46, 160, 67, 0.2); color: #3fb950; font-weight: 800;">实战 2串1 · 组合 #${idx + 1}</span>
-                            <span style="font-size: 11px; color: var(--text-secondary); margin-left: 6px;">两场互锁</span>
+                            <span class="league-tag" style="background: rgba(46, 160, 67, 0.2); color: #3fb950; font-weight: 800;">实战 2串1 · 组合 #${globalRank}</span>
+                            <span style="font-size: 11px; color: var(--text-secondary); margin-left: 6px;">全息配对</span>
                         </div>
-                        <div style="font-size: 12px; font-weight: 800; color: var(--accent-gold); font-family: var(--font-mono);">
-                            理论回报: ${pair.combinedSp} 倍
+                        <div style="font-size: 13px; font-weight: 800; color: var(--accent-gold); font-family: var(--font-mono);">
+                            理论回报: ${pair.combinedSp.toFixed(2)} 倍
                         </div>
                     </div>
                     <div style="background: rgba(13, 17, 23, 0.7); border-radius: 6px; padding: 8px 10px; margin-bottom: 6px; display: flex; justify-content: space-between; align-items: center;">
@@ -1671,28 +1700,58 @@
                             <span style="color: var(--text-secondary); font-family: var(--font-mono); font-size: 11px;">[${pair.m1.code}]</span> 
                             <b>${pair.m1.home}</b> vs <b>${pair.m1.away}</b>
                         </div>
-                        <span class="badge" style="background: rgba(210, 153, 34, 0.15); color: var(--accent-gold); font-size: 11px; font-weight: 700;">首选: ${pair.m1.tip}</span>
+                        <span class="badge" style="background: rgba(210, 153, 34, 0.15); color: var(--accent-gold); font-size: 11px; font-weight: 700;">建议: ${pair.m1.tip}</span>
                     </div>
                     <div style="background: rgba(13, 17, 23, 0.7); border-radius: 6px; padding: 8px 10px; display: flex; justify-content: space-between; align-items: center;">
                         <div style="font-size: 12px;">
                             <span style="color: var(--text-secondary); font-family: var(--font-mono); font-size: 11px;">[${pair.m2.code}]</span> 
                             <b>${pair.m2.home}</b> vs <b>${pair.m2.away}</b>
                         </div>
-                        <span class="badge" style="background: rgba(210, 153, 34, 0.15); color: var(--accent-gold); font-size: 11px; font-weight: 700;">首选: ${pair.m2.tip}</span>
+                        <span class="badge" style="background: rgba(210, 153, 34, 0.15); color: var(--accent-gold); font-size: 11px; font-weight: 700;">建议: ${pair.m2.tip}</span>
                     </div>
                 `;
                 pairsContainer.appendChild(card);
             });
 
-            if (parlayPairs.length > 25) {
-                const moreTip = document.createElement('div');
-                moreTip.style.textAlign = 'center';
-                moreTip.style.padding = '12px';
-                moreTip.style.fontSize = '11px';
-                moreTip.style.color = 'var(--text-secondary)';
-                moreTip.innerText = `已展示前 25 组黄金组合，全量 ${parlayPairs.length} 组拓扑网络已全部纳入赛果大账本实盘核算！`;
-                pairsContainer.appendChild(moreTip);
-            }
+            // 渲染全量分页条 (每页10组)
+            const paginationBox = document.createElement('div');
+            paginationBox.style.display = 'flex';
+            paginationBox.style.justifyContent = 'center';
+            paginationBox.style.alignItems = 'center';
+            paginationBox.style.gap = '8px';
+            paginationBox.style.margin = '16px 0 24px';
+
+            const prevBtn = document.createElement('button');
+            prevBtn.className = 'audit-page-pill';
+            prevBtn.innerText = '← 上一页';
+            prevBtn.disabled = window.CURRENT_PARLAY_PAGE === 1;
+            prevBtn.onclick = () => {
+                if (window.CURRENT_PARLAY_PAGE > 1) {
+                    window.CURRENT_PARLAY_PAGE--;
+                    renderParlayMatrix();
+                }
+            };
+
+            const pageInfo = document.createElement('span');
+            pageInfo.style.fontSize = '11px';
+            pageInfo.style.color = 'var(--text-secondary)';
+            pageInfo.innerText = `第 ${window.CURRENT_PARLAY_PAGE} / ${totalPages} 页 (共 ${parlayPairs.length} 组)`;
+
+            const nextBtn = document.createElement('button');
+            nextBtn.className = 'audit-page-pill';
+            nextBtn.innerText = '下一页 →';
+            nextBtn.disabled = window.CURRENT_PARLAY_PAGE === totalPages;
+            nextBtn.onclick = () => {
+                if (window.CURRENT_PARLAY_PAGE < totalPages) {
+                    window.CURRENT_PARLAY_PAGE++;
+                    renderParlayMatrix();
+                }
+            };
+
+            paginationBox.appendChild(prevBtn);
+            paginationBox.appendChild(pageInfo);
+            paginationBox.appendChild(nextBtn);
+            pairsContainer.appendChild(paginationBox);
         }
 
         // 渲染共识榜单 (按共识百分比排序)
