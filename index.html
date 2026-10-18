@@ -2448,6 +2448,12 @@
         function openDetail(code) {
             // 直接根据全局比赛唯一的 code 索引完整对象，杜绝传参截断或引号注入问题！
             const match = ALL_OFFICIAL_MATCHES.find(m => m.code === code) || {};
+            // 开赛/完赛后，赛前建议必须降级为"赛前记录"，避免被误读为赛前命中
+            const startedNotice = (match.status && match.status.indexOf('未开赛') === -1)
+                ? '<div style="background:rgba(248,81,73,.12);border:1px solid rgba(248,81,73,.45);border-radius:8px;padding:10px 12px;margin:0 0 10px;font-size:12px;color:#ff9b95;line-height:1.6;">'
+                  + '⚠️ 本场已开赛（' + (match.status || '状态未知') + (match.score && match.score !== '--' ? '，当前比分 ' + match.score : '') + '）。'
+                  + '以下内容为<b>赛前记录</b>，不是赛后结果，也不代表赛前预测命中。</div>'
+                : '';
             const home = match.home || '主队';
             const away = match.away || '客队';
             const league = match.league || '联赛';
@@ -2466,7 +2472,7 @@
             const scoresDisplay = predScores.map(s => `<span style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.35); padding: 2px 6px; border-radius: 4px; font-weight: 800; font-size: 11px; font-family: var(--font-mono); white-space: nowrap;">🎯 ${s}</span>`).join('');
 
             document.getElementById('modalTitle').innerText = `${code} ${league} · ${home} VS ${away}`;
-            document.getElementById('modalContent').innerHTML = `
+            document.getElementById('modalContent').innerHTML = startedNotice + `
                 <div style="display: flex; gap: 6px; margin-bottom: 10px; flex-wrap: wrap;">
                     <span style="background: var(--bg-card-elevated); color: var(--accent-gold); padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: 800; font-family: var(--font-mono);">${code} · ${league}</span>
                     <span style="background: rgba(56, 189, 248, 0.15); color: var(--accent-blue); padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: 700;">${match.is_only_rq ? '官方让球 ('+match.rang+'): 让胜 ' + match.odds[0] + ' | 让平 ' + match.odds[1] + ' | 让负 ' + match.odds[2] : '官方SP: 胜 ' + (match.odds ? match.odds[0] : '-') + ' | 平 ' + (match.odds ? match.odds[1] : '-') + ' | 负 ' + (match.odds ? match.odds[2] : '-')}</span>
