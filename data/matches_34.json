@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18 15:19:05",
+  "updated_at": "2026-10-18 15:30:06",
   "total": 74,
   "matches": [
     {
@@ -2582,7 +2582,7 @@
       "away": "仁川联",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "三模型极速裁决",
+      "status": "进行中 · 上半场 0'",
       "form_home": [
         "W",
         "D",
@@ -2605,7 +2605,7 @@
       "consensus": "主不败/首选主胜 (65.0%)",
       "consensus_ratio": 65.0,
       "tip": "主不败/首选主胜",
-      "score": "--",
+      "score": "0-0",
       "result": "PENDING",
       "analysis": "江原FC对阵仁川联，三模型满血对抗研判首选【主不败/首选主胜】。",
       "dossier": {
@@ -2615,7 +2615,7 @@
         "market_attitude": "体彩官方开出主胜2.08、平局2.78、客胜3.46。平赔低开至2.78显著吸收了保守资金注意，主胜给到2.08且去水真实胜率达42.6%，主胜阻力适中不乏保护意图；客胜3.46赔付压力偏大，机构对仁川联客场取胜防范明显不足。",
         "decision_guide": "实战投注建议优选【主胜】，求稳策略首推【主不败/首选主胜】防范绞杀成和。进球数聚焦2球与3球区间。黄金三角比分锁定：核心正路【2-1】、主场完胜【2-0】以及绞杀防平【1-1】，严防穿盘与攻坚被拖入平局的双重格局。"
       },
-      "sale_closed": false,
+      "sale_closed": true,
       "consensus_breakdown": {
         "odds_score": 77.0,
         "intel_score": 79.0,
@@ -2632,7 +2632,8 @@
         "3",
         "1"
       ],
-      "is_single": false
+      "is_single": false,
+      "locked": true
     },
     {
       "code": "周日003",
@@ -2642,7 +2643,7 @@
       "away": "金泉尚武",
       "home_rank": "5",
       "away_rank": "3",
-      "status": "三模型极速裁决",
+      "status": "进行中 · 上半场 0'",
       "form_home": [
         "W",
         "D",
@@ -2665,7 +2666,7 @@
       "consensus": "主胜 (84.9%)",
       "consensus_ratio": 84.9,
       "tip": "主胜",
-      "score": "--",
+      "score": "0-0",
       "result": "PENDING",
       "analysis": "首尔FC对阵金泉尚武，三模型满血对抗研判首选【主胜】。",
       "dossier": {
@@ -2681,7 +2682,7 @@
         "tipster_score": 74.0,
         "math_score": 83.0
       },
-      "sale_closed": false,
+      "sale_closed": true,
       "predicted_scores": [
         "2-0",
         "2-1",
@@ -2691,7 +2692,8 @@
         "2",
         "3"
       ],
-      "is_single": false
+      "is_single": false,
+      "locked": true
     },
     {
       "code": "周日004",
@@ -2778,8 +2780,8 @@
       ],
       "odds": [
         "1.59",
-        "3.55",
-        "4.57"
+        "3.45",
+        "4.75"
       ],
       "consensus": "主胜 (65.7%)",
       "consensus_ratio": 65.7,
@@ -3850,9 +3852,9 @@
         "W"
       ],
       "odds": [
-        "1.64",
-        "3.75",
-        "3.95"
+        "1.62",
+        "3.82",
+        "4.00"
       ],
       "consensus": "主胜 (65.0%)",
       "consensus_ratio": 65.0,
