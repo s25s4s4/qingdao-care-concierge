@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18 20:22:06",
+  "updated_at": "2026-10-18 20:30:05",
   "total": 74,
   "matches": [
     {
@@ -3007,7 +3007,7 @@
       "away": "罗森博格",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "三模型极速裁决",
+      "status": "进行中 · 上半场 0'",
       "form_home": [
         "W",
         "D",
@@ -3030,7 +3030,7 @@
       "consensus": "主不败/首选主胜 (65.0%)",
       "consensus_ratio": 65.0,
       "tip": "主不败/首选主胜",
-      "score": "--",
+      "score": "0-0",
       "result": "PENDING",
       "analysis": "萨普斯堡对阵罗森博格，三模型满血对抗研判首选【客不败/双选平负】。",
       "dossier": {
@@ -3040,7 +3040,7 @@
         "market_attitude": "体彩初盘给出主胜2.35、平局3.77、客胜2.28，两端旗鼓相当，但平赔3.77顶高至异常区间实施强分流。去水后主胜真实概率37.7%微逊客胜38.8%，但欧洲大盘后期主胜赔付呈现下调受压态势，机构对客队名气盘诱买痕迹明显。",
         "decision_guide": "本场首选主不败（双选胜平），单挑博主胜。总进球锁定2、3球黄金带。比分黄金三角矩阵：核心正路高频首选1-1（2球平局阻击），穿盘博胜次选2-1（3球高赔），防守零封保守备选1-0（小球锁胜）。"
       },
-      "sale_closed": false,
+      "sale_closed": true,
       "consensus_breakdown": {
         "odds_score": 77.0,
         "intel_score": 75.0,
@@ -3056,7 +3056,8 @@
         "2",
         "3"
       ],
-      "is_single": false
+      "is_single": false,
+      "locked": true
     },
     {
       "code": "周日010",
