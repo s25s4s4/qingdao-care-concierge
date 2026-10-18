@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18 20:01:07",
+  "updated_at": "2026-10-18 20:02:06",
   "total": 74,
   "matches": [
     {
@@ -2787,7 +2787,7 @@
       "consensus": "主胜 (66.5%)",
       "consensus_ratio": 66.5,
       "tip": "主胜",
-      "score": "1-2",
+      "score": "0-2",
       "result": "PENDING",
       "analysis": "乌迪内斯对阵莱切，三模型满血对抗研判首选【主胜】。",
       "dossier": {
@@ -2825,7 +2825,7 @@
       "away": "桑坦德",
       "home_rank": "7",
       "away_rank": "西乙1",
-      "status": "进行中 · 上半场 1'",
+      "status": "进行中 · 上半场",
       "form_home": [
         "W",
         "D",
@@ -2886,7 +2886,7 @@
       "away": "埃夫斯堡",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "进行中 · 上半场 1'",
+      "status": "进行中 · 上半场",
       "form_home": [
         "W",
         "D",
@@ -2947,7 +2947,7 @@
       "away": "瓦萨",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "进行中 · 上半场 1'",
+      "status": "进行中 · 上半场",
       "form_home": [
         "W",
         "D",
