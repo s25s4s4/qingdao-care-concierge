@@ -1771,54 +1771,71 @@
             pagePairs.forEach((pair, idx) => {
                 const globalRank = startIdx + idx + 1;
                 const card = document.createElement('div');
-                card.className = 'match-card';
-                card.style.marginBottom = '10px';
+                card.className = 'parlay-combo-card';
+                card.style.margin = '0 0 16px 0';
+                card.style.background = 'linear-gradient(180deg, rgba(22, 27, 34, 0.95) 0%, rgba(13, 17, 23, 0.98) 100%)';
+                card.style.border = '2px solid rgba(88, 166, 255, 0.35)';
+                card.style.borderRadius = '12px';
+                card.style.padding = '12px 14px';
+                card.style.boxShadow = '0 6px 20px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05)';
 
                 // 判断是否保本/盈利
                 const isProfitable = pair.actualRoiOdds >= 1.0;
                 const roiColor = isProfitable ? 'var(--accent-gold)' : '#f85149';
+                const tagBg = isProfitable ? 'rgba(46, 160, 67, 0.25)' : 'rgba(210, 153, 34, 0.2)';
                 const tagColor = isProfitable ? '#3fb950' : '#d29922';
 
                 card.innerHTML = `
-                    <div class="card-header" style="margin-bottom: 6px;">
-                        <div>
-                            <span class="league-tag" style="background: rgba(46, 160, 67, 0.2); color: ${tagColor}; font-weight: 800;">实战 2串1 · 组合 #${globalRank}</span>
-                            <span style="font-size: 11px; color: var(--text-secondary); margin-left: 6px;">全复式 ${pair.totalBets} 注 (${pair.totalBets * 1000}元)</span>
+                    <!-- 组合头部外框总标头 -->
+                    <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 8px; margin-bottom: 10px;">
+                        <div style="display: flex; align-items: center; gap: 6px;">
+                            <span style="background: ${tagBg}; color: ${tagColor}; border: 1px solid ${tagColor}; border-radius: 6px; padding: 2px 7px; font-weight: 800; font-size: 11px;">
+                                🎯 2串1 组合 #${globalRank}
+                            </span>
+                            <span style="font-size: 11px; color: #8b949e; background: rgba(255,255,255,0.06); padding: 2px 6px; border-radius: 4px;">
+                                共 ${pair.totalBets} 注 (${pair.totalBets * 1000}元)
+                            </span>
                         </div>
                         <div style="text-align: right;">
-                            <span style="font-size: 10px; color: var(--text-secondary); margin-right: 2px;">实际保底倍数:</span>
-                            <span style="font-size: 14px; font-weight: 800; color: ${roiColor}; font-family: var(--font-mono);">
+                            <span style="font-size: 10.5px; color: #8b949e;">折合实投倍数:</span>
+                            <span style="font-size: 16px; font-weight: 900; color: ${roiColor}; font-family: var(--font-mono); margin-left: 2px;">
                                 ${pair.actualRoiOdds.toFixed(2)} 倍
                             </span>
                         </div>
                     </div>
-                    <div style="background: rgba(13, 17, 23, 0.7); border-radius: 6px; padding: 8px 10px; margin-bottom: 6px; display: flex; justify-content: space-between; align-items: center;">
-                        <div style="font-size: 12px;">
-                            <span style="color: var(--text-secondary); font-family: var(--font-mono); font-size: 11px;">[${pair.m1.code}]</span> 
-                            <b>${pair.m1.home}</b> vs <b>${pair.m1.away}</b>
+
+                    <!-- 比赛 1 独立卡片 -->
+                    <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 8px; padding: 9px 12px; margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center;">
+                        <div style="font-size: 12.5px;">
+                            <span style="color: var(--accent-gold); font-family: var(--font-mono); font-weight: 800; font-size: 11.5px; margin-right: 4px;">[${pair.m1.code}]</span> 
+                            <b>${pair.m1.home}</b> <span style="color: var(--text-tertiary); font-size: 11px;">vs</span> <b>${pair.m1.away}</b>
                         </div>
                         <div style="text-align: right;">
-                            <span class="badge" style="background: rgba(210, 153, 34, 0.15); color: var(--accent-gold); font-size: 11px; font-weight: 700;">
+                            <span style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 4px; padding: 2px 6px; font-size: 11px; font-weight: 700;">
                                 ${pair.m1.is_only_rq ? '让球: ' : ''}${pair.m1.tip}
                             </span>
-                            <span style="font-size: 10px; color: #8b949e; font-family: var(--font-mono); margin-left: 4px;">(${pair.count1}选 · 最低SP ${pair.minSp1.toFixed(2)})</span>
+                            <div style="font-size: 9.5px; color: #8b949e; font-family: var(--font-mono); margin-top: 2px;">(${pair.count1}项覆盖 · 最低SP ${pair.minSp1.toFixed(2)})</div>
                         </div>
                     </div>
-                    <div style="background: rgba(13, 17, 23, 0.7); border-radius: 6px; padding: 8px 10px; margin-bottom: 6px; display: flex; justify-content: space-between; align-items: center;">
-                        <div style="font-size: 12px;">
-                            <span style="color: var(--text-secondary); font-family: var(--font-mono); font-size: 11px;">[${pair.m2.code}]</span> 
-                            <b>${pair.m2.home}</b> vs <b>${pair.m2.away}</b>
+
+                    <!-- 比赛 2 独立卡片 -->
+                    <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 8px; padding: 9px 12px; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center;">
+                        <div style="font-size: 12.5px;">
+                            <span style="color: var(--accent-gold); font-family: var(--font-mono); font-weight: 800; font-size: 11.5px; margin-right: 4px;">[${pair.m2.code}]</span> 
+                            <b>${pair.m2.home}</b> <span style="color: var(--text-tertiary); font-size: 11px;">vs</span> <b>${pair.m2.away}</b>
                         </div>
                         <div style="text-align: right;">
-                            <span class="badge" style="background: rgba(210, 153, 34, 0.15); color: var(--accent-gold); font-size: 11px; font-weight: 700;">
+                            <span style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 4px; padding: 2px 6px; font-size: 11px; font-weight: 700;">
                                 ${pair.m2.is_only_rq ? '让球: ' : ''}${pair.m2.tip}
                             </span>
-                            <span style="font-size: 10px; color: #8b949e; font-family: var(--font-mono); margin-left: 4px;">(${pair.count2}选 · 最低SP ${pair.minSp2.toFixed(2)})</span>
+                            <div style="font-size: 9.5px; color: #8b949e; font-family: var(--font-mono); margin-top: 2px;">(${pair.count2}项覆盖 · 最低SP ${pair.minSp2.toFixed(2)})</div>
                         </div>
                     </div>
-                    <div style="display: flex; justify-content: space-between; align-items: center; padding: 4px 6px; font-size: 10.5px; color: var(--text-secondary); background: rgba(22, 27, 34, 0.4); border-radius: 4px;">
-                        <span>单注低赔乘积: <code>${pair.minCombinedSp.toFixed(2)}倍</code> (中奖返还 ${Math.round(1000 * pair.minCombinedSp)}元)</span>
-                        <span>折合实投净赔率: <b style="color: ${roiColor}; font-family: var(--font-mono);">${pair.actualRoiOdds.toFixed(2)}倍</b></span>
+
+                    <!-- 底部核算结算胶囊栏 -->
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding: 6px 10px; font-size: 11px; color: #8b949e; background: rgba(0, 0, 0, 0.3); border-radius: 6px; border-top: 1px dashed rgba(255, 255, 255, 0.08);">
+                        <span>最低单注乘积: <code style="color: #c9d1d9;">${pair.minCombinedSp.toFixed(2)}倍</code> (奖金 ${Math.round(1000 * pair.minCombinedSp)}元)</span>
+                        <span>实投净收益率: <b style="color: ${roiColor}; font-family: var(--font-mono); font-size: 12px;">${((pair.actualRoiOdds - 1) * 100).toFixed(1)}%</b></span>
                     </div>
                 `;
                 pairsContainer.appendChild(card);
