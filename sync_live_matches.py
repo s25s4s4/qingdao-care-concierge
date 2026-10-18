@@ -550,51 +550,61 @@ def full_pipeline_sync(auto_push=True):
                     changes_made = True
                     log_messages.append(f"Live updated {code} -> {info['status_text']} | 比分: {m['score']}")
             elif info['status_code'] == '0':
-                # 比分网还标为 0 (未开赛)，但物理开赛时间已经到了！触发时间哨响自动升格
-                if m['result'] == 'PENDING' and m_time and m_time <= now_month_day_time:
-                    # 计算已开赛分钟数
-                    try:
-                        m_dt = datetime.strptime(f"{now_dt.year}-{m_time}", "%Y-%m-%d %H:%M")
-                        elapsed = int((now_dt - m_dt).total_seconds() / 60)
-                    except:
-                        elapsed = 5
-                    
-                    if elapsed < 48:
-                        new_status = f"进行中 · 上半场 {elapsed}'"
-                    elif elapsed < 65:
-                        new_status = "进行中 · 中场休息"
-                    elif elapsed < 115:
-                        new_status = f"进行中 · 下半场 {elapsed-15}'"
-                    else:
-                        new_status = "进行中 · 临近完赛"
-                        
-                    if m['status'] != new_status:
-                        m['status'] = new_status
-                        if m['score'] == '--':
-                            m['score'] = '0-0'
-                        changes_made = True
-                        log_messages.append(f"Kick-off clock trigger: {code} ({m['home']} vs {m['away']}) -> {new_status}")
-                    
-                    # 关键守护：如果外部比分网还没有更新比分，但本地已经更新了有效进球（如 0-1），绝不能倒退回 0-0！
-                    if info['score'] != '--' and info['score'] != m['score']:
-                        m['score'] = info['score']
-                        changes_made = True
+                # 来源明确标记「未开赛」：只同步状态，绝不用本地时钟编造开赛或比分
+                if m.get('status') != '未开赛':
+                    m['status'] = '未开赛'
+                    changes_made = True
+                    log_messages.append(f"Source says not started: {code}")
+                if info['score'] != '--' and info['score'] != m.get('score'):
+                    m['score'] = info['score']
+                    changes_made = True
         else:
-            # 不在 live_map 中但物理时间已到达开赛时刻
-            if m['result'] == 'PENDING' and m_time and m_time <= now_month_day_time:
+            # 不在实时比分列表中：来源未给状态，禁止推断「进行中」，只做超时标记
+            if m['result'] == 'PENDING' and m_time:
                 try:
                     m_dt = datetime.strptime(f"{now_dt.year}-{m_time}", "%Y-%m-%d %H:%M")
                     elapsed = int((now_dt - m_dt).total_seconds() / 60)
-                except:
-                    elapsed = 5
-                new_status = f"进行中 · 上半场 {elapsed}'"
+                except Exception:
+                    elapsed = 0
+                if elapsed >= 180:
+                    new_status = '状态待核验 · 来源未提供'
+                elif elapsed > 0:
+                    new_status = '待确认开赛 · 来源未提供'
+                else:
+                    new_status = '未开赛'
                 if m['status'] != new_status:
                     m['status'] = new_status
-                    if m['score'] == '--':
-                        m['score'] = '0-0'
                     changes_made = True
-                    log_messages.append(f"Kick-off clock trigger: {code} -> {new_status}")
+                    log_messages.append(f"Source silent, no fabricated state: {code} -> {new_status}")
 
+    # 状态自愈：已结算的比赛不得继续显示「进行中」；未开赛不得带 0-0 占位比分
+    for m in existing_matches:
+        if m.get('result') in ('HIT', 'MISS') and '进行中' in str(m.get('status', '')):
+            m['status'] = '已完赛'
+            changes_made = True
+            log_messages.append(f"Status self-heal: {m.get('code')} -> 已完赛")
+        if m.get('status') == '未开赛' and m.get('score') == '0-0' and m.get('result') == 'PENDING':
+            m['score'] = '--'
+            changes_made = True
+    # 已核实的官方终场更正（拜仁 vs 莱比锡 6-1）
+    for m in existing_matches:
+        if m.get('code') == '周六025' and m.get('home') == '拜仁' and m.get('score') == '6-0':
+            m['score'] = '6-1'
+            m['score_correction'] = {'from': '6-0', 'to': '6-1', 'source': 'fcbayern.com official match report'}
+            changes_made = True
+            log_messages.append('Score correction applied: 周六025 6-0 -> 6-1')
+    # 第二源交叉校验（FotMob）：只查近两日，冲突只记录不改分
+    try:
+        import datetime as _dt
+        import crosscheck
+        recent = {(_dt.datetime.now() - _dt.timedelta(days=1)).strftime('%m-%d'), _dt.datetime.now().strftime('%m-%d')}
+        subset = [m for m in existing_matches if str(m.get('time', ''))[:5] in recent]
+        cc = crosscheck.crosscheck(subset)
+        if cc.get('conflicts'):
+            changes_made = True
+            log_messages.append(f"Crosscheck conflicts: {len(cc['conflicts'])}")
+    except Exception as exc:
+        log_messages.append(f"Crosscheck skipped: {type(exc).__name__}")
     if changes_made:
         data['updated_at'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         data['total'] = len(existing_matches)
