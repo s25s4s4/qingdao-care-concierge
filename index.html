@@ -956,8 +956,8 @@
                 <b style="color: var(--accent-gold); font-size: 12px;">💡 店主白话：为什么必须看【实战串关】？</b>
             </div>
             • <b>柜台物理铁律</b>：竞彩绝大多数场次不设单场固定奖，<b>必须两场捆绑（2串1）才能出票</b>！<br>
-            • <b>矩阵组合逻辑</b>：我们将当天所有比赛进行全息两两组合（单关亦参与组合）。以每组均注为基准，中奖按 <code>SP₁ × SP₂</code> 复合相乘。<br>
-            • <b>复利暴击威力</b>：周六实战 435 组 2串1 稳稳命中 190 组，复利相乘后 <b>ROI 暴增至 +75.0%</b>！
+            • <b>矩阵组合逻辑</b>：我们将当天所有在售比赛进行全息两两组合（单关亦参与组合）。以每组均注为基准，中奖按 <code>SP₁ × SP₂</code> 复合相乘。<br>
+            • <b>复利暴击威力</b>：前一完赛日 2串1 组合全息互锁，精准打出高赔复利，<b>实战 ROI 达到 <span id="parlay-banner-roi" style="color: var(--accent-gold); font-weight: 800;">+75.0%</span></b>！
         </div>
 
         <!-- 单关稳胆专区 -->
@@ -1044,7 +1044,7 @@
                 <div>
                     <b>ROI 即“2串1全息实战净投资回报率”</b>。体彩绝大多数比赛不支持单场出票，必须 2 串 1 才能打票！<br>
                     • <b>计算规则</b>：我们将当天全部比赛两两全息组合（单关亦参与组合）。以每组均注为基准，中奖奖金按 <code>SP₁ × SP₂</code> 复合相乘严格计算，<b>单日独立核算，彻底告别假大空单场算法</b>！<br>
-                    • <b>当前 <span id="tip-roi-val" style="color: var(--accent-gold); font-weight: 800;">--</span> 代表</b>：假设每组打 10 元，投入 <span id="tip-roi-cost" style="font-weight: 700;">--</span> 元本金，除拿回本金外，<b>纯口袋<span id="tip-roi-status">净赚</span> <span id="tip-roi-profit" style="font-weight: 800;">--</span> 元</b>！随比赛完赛实时动态同步。
+                    • <b>当前 <span id="tip-roi-val" style="color: var(--accent-gold); font-weight: 800;">--</span> 代表</b>：假设每组打 1000 元，投入 <span id="tip-roi-cost" style="font-weight: 700;">--</span> 元本金，除拿回本金外，<b>纯口袋<span id="tip-roi-status">净赚</span> <span id="tip-roi-profit" style="font-weight: 800;">--</span> 元</b>！随比赛完赛实时动态同步。
                 </div>
             </div>
 
@@ -1507,26 +1507,41 @@
             singlesContainer.innerHTML = '';
             pairsContainer.innerHTML = '';
 
-            // 1. 自动寻找当前在售待开赛的批次
+            // 1. 自动寻找当前在售待开赛的批次与已完赛批次
             const pendingMatches = ALL_OFFICIAL_MATCHES.filter(m => m.result === 'PENDING');
             const settledMatches = ALL_OFFICIAL_MATCHES.filter(m => m.result !== 'PENDING');
 
-            // 统计昨日（周六）全息 2串1 战报指标
-            const satMatches = settledMatches.filter(m => m.code && m.code.startsWith('周六'));
-            if (satMatches.length > 0) {
-                let satHitPairs = 0;
-                let satTotalPairs = 0;
-                let satReturn = 0.0;
+            // 动态判定最新已完赛的日期前缀 (彻底消除写死'周六')
+            const distinctSettledDays = [];
+            settledMatches.forEach(m => {
+                const dk = m.code ? m.code.substring(0, 2) : '';
+                if (dk && !distinctSettledDays.includes(dk)) distinctSettledDays.push(dk);
+            });
+            const weekWeight = {'周五': 1, '周六': 2, '周日': 3, '周一': 4, '周二': 5, '周三': 6, '周四': 7};
+            distinctSettledDays.sort((a, b) => (weekWeight[b] || 0) - (weekWeight[a] || 0));
+            const latestSettledDay = distinctSettledDays[0] || '昨日';
 
-                for (let i = 0; i < satMatches.length; i++) {
-                    for (let j = i + 1; j < satMatches.length; j++) {
-                        satTotalPairs++;
-                        const m1 = satMatches[i];
-                        const m2 = satMatches[j];
+            // 动态标题绑定
+            const hitRateLabel = hitRateElem ? hitRateElem.nextElementSibling : null;
+            const roiLabel = roiElem ? roiElem.nextElementSibling : null;
+            if (hitRateLabel) hitRateLabel.innerText = `${latestSettledDay}串关命中率`;
+            if (roiLabel) roiLabel.innerText = `${latestSettledDay}实战ROI`;
+
+            // 统计最新完赛日期的全息 2串1 战报指标
+            const latestDayMatches = settledMatches.filter(m => m.code && m.code.startsWith(latestSettledDay));
+            if (latestDayMatches.length >= 2) {
+                let hitPairs = 0;
+                let totalPairs = 0;
+                let totalReturn = 0.0;
+
+                for (let i = 0; i < latestDayMatches.length; i++) {
+                    for (let j = i + 1; j < latestDayMatches.length; j++) {
+                        totalPairs++;
+                        const m1 = latestDayMatches[i];
+                        const m2 = latestDayMatches[j];
                         if (m1.result === 'HIT' && m2.result === 'HIT') {
-                            satHitPairs++;
+                            hitPairs++;
                             let sp1 = 1.85, sp2 = 1.85;
-                            // 计算真实打出 SP
                             [m1, m2].forEach((m, idx) => {
                                 let curSp = 1.85;
                                 if (m.is_only_rq && m.odds && m.odds.length >= 3) {
@@ -1547,15 +1562,17 @@
                                 }
                                 if (idx === 0) sp1 = curSp; else sp2 = curSp;
                             });
-                            satReturn += (sp1 * sp2);
+                            totalReturn += (sp1 * sp2);
                         }
                     }
                 }
-                if (satTotalPairs > 0) {
-                    const satRate = ((satHitPairs / satTotalPairs) * 100).toFixed(1);
-                    const satRoi = (((satReturn - satTotalPairs) / satTotalPairs) * 100).toFixed(1);
-                    if (hitRateElem) hitRateElem.innerText = satRate + '%';
-                    if (roiElem) roiElem.innerText = `+${satRoi}%`;
+                if (totalPairs > 0) {
+                    const rateStr = ((hitPairs / totalPairs) * 100).toFixed(1);
+                    const roiVal = (((totalReturn - totalPairs) / totalPairs) * 100).toFixed(1);
+                    if (hitRateElem) hitRateElem.innerText = rateStr + '%';
+                    if (roiElem) roiElem.innerText = `+${roiVal}%`;
+                    const bannerRoiElem = document.getElementById('parlay-banner-roi');
+                    if (bannerRoiElem) bannerRoiElem.innerText = `+${roiVal}%`;
                 }
             }
 
@@ -1600,15 +1617,21 @@
                 singlesContainer.innerHTML = `<div style="text-align: center; padding: 14px; font-size: 11px; color: var(--text-secondary); background: rgba(22, 27, 34, 0.5); border-radius: 6px;">今日官方暂未单开单独胜平负，全部场次通过下方【2串1实战矩阵】出票。</div>`;
             }
 
-            // 3. 构建全息拓扑 2串1 矩阵
-            // 按开赛日期归集（优先当前在售的周日）
-            let activeDayMatches = pendingMatches.filter(m => m.code && m.code.startsWith('周日'));
+            // 3. 构建全息拓扑 2串1 矩阵 (全动态识别当前在售档期，彻底消灭写死'周日')
+            const distinctPendingDays = [];
+            pendingMatches.forEach(m => {
+                const dk = m.code ? m.code.substring(0, 2) : '';
+                if (dk && !distinctPendingDays.includes(dk)) distinctPendingDays.push(dk);
+            });
+            distinctPendingDays.sort((a, b) => (weekWeight[a] || 0) - (weekWeight[b] || 0));
+            const currentTargetDay = distinctPendingDays[0] || '今日';
+
+            let activeDayMatches = pendingMatches.filter(m => m.code && m.code.startsWith(currentTargetDay));
             if (activeDayMatches.length < 2) {
                 activeDayMatches = pendingMatches;
             }
 
-            const currentDayPrefix = activeDayMatches[0] ? activeDayMatches[0].code.substring(0, 2) : '今日';
-            if (batchTitleElem) batchTitleElem.innerText = `${currentDayPrefix}档期 (${activeDayMatches.length}场在售)`;
+            if (batchTitleElem) batchTitleElem.innerText = `${currentTargetDay}在售档期 (${activeDayMatches.length}场在售)`;
 
             // 生成所有两两组合
             const parlayPairs = [];
@@ -1882,9 +1905,10 @@
                                 tipRoiVal.innerText = roiStr;
                                 tipRoiVal.style.color = todayRoi >= 0 ? 'var(--accent-gold)' : '#f85149';
                             }
-                            // 假设每注 10 元标准打票
-                            const totalStake = totalParlayPairs * 10;
-                            const totalWin = Math.round(totalParlayReturn * 10);
+                            // 假设每组 1000 元标准大额出票
+                            const STAKE_PER_BET = 1000;
+                            const totalStake = totalParlayPairs * STAKE_PER_BET;
+                            const totalWin = Math.round(totalParlayReturn * STAKE_PER_BET);
                             const netProfit = totalWin - totalStake;
 
                             if (tipRoiCost) tipRoiCost.innerText = totalStake.toString();
