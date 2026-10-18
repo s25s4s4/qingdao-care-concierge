@@ -1691,41 +1691,56 @@
 
             if (batchTitleElem) batchTitleElem.innerText = `${currentTargetDay}在售档期 (${activeDayMatches.length}场在售)`;
 
-            // 生成所有两两组合，并精细化解析首选与次选 SP（计算理论综合 SP）
+            // 生成所有两两组合，严格按照【多结果中的最低赔率】精算最低理论回报
             const parlayPairs = [];
             for (let i = 0; i < activeDayMatches.length; i++) {
                 for (let j = i + 1; j < activeDayMatches.length; j++) {
                     const m1 = activeDayMatches[i];
                     const m2 = activeDayMatches[j];
                     
-                    // 获取两场比赛的真实估算 SP
-                    const getMatchEstSp = (m) => {
+                    // 获取比赛所有覆盖结果中的【最低赔率 (最保守兑奖 SP)】
+                    const getMatchMinSp = (m) => {
                         const tip = m.tip || '';
                         const odds = (m.odds && m.odds[0] !== '-') ? m.odds : ['1.85', '3.20', '2.80'];
+                        const sp_w = parseFloat(odds[0]) || 1.85;
+                        const sp_d = parseFloat(odds[1]) || 3.20;
+                        const sp_l = parseFloat(odds[2]) || 2.80;
+                        const covered = [];
+
                         if (m.is_only_rq) {
-                            if (tip.includes('让平')) return parseFloat(odds[1]) || 3.50;
-                            if (tip.includes('让负')) return parseFloat(odds[2]) || 2.20;
-                            return parseFloat(odds[0]) || 2.10;
+                            if (tip.includes('让胜')) covered.push(sp_w);
+                            if (tip.includes('让平')) covered.push(sp_d);
+                            if (tip.includes('让负')) covered.push(sp_l);
+                            if (covered.length === 0) covered.push(Math.min(sp_w, sp_d, sp_l));
                         } else {
-                            if (tip.includes('平') && !tip.includes('主') && !tip.includes('客')) return parseFloat(odds[1]) || 3.20;
-                            if (tip.includes('客胜')) return parseFloat(odds[2]) || 2.60;
-                            if (tip.includes('客不败')) return ((parseFloat(odds[1]) + parseFloat(odds[2])) / 2) || 2.80;
-                            if (tip.includes('主不败')) return ((parseFloat(odds[0]) + parseFloat(odds[1])) / 2) || 2.20;
-                            return parseFloat(odds[0]) || 1.85;
+                            if (tip.includes('主胜') || tip.startsWith('主胜')) covered.push(sp_w);
+                            if (tip.includes('平') && !tip.includes('主') && !tip.includes('客')) covered.push(sp_d);
+                            if (tip.includes('客胜') || tip.startsWith('客胜')) covered.push(sp_l);
+                            if (tip.includes('主不败')) {
+                                if (!covered.includes(sp_w)) covered.push(sp_w);
+                                if (!covered.includes(sp_d)) covered.push(sp_d);
+                            }
+                            if (tip.includes('客不败')) {
+                                if (!covered.includes(sp_d)) covered.push(sp_d);
+                                if (!covered.includes(sp_l)) covered.push(sp_l);
+                            }
+                            if (covered.length === 0) covered.push(sp_w);
                         }
+                        return Math.min(...covered);
                     };
 
-                    const sp1 = getMatchEstSp(m1);
-                    const sp2 = getMatchEstSp(m2);
-                    const combinedSp = (sp1 * sp2).toFixed(2);
+                    const minSp1 = getMatchMinSp(m1);
+                    const minSp2 = getMatchMinSp(m2);
+                    const minCombinedSp = parseFloat((minSp1 * minSp2).toFixed(2));
+
                     parlayPairs.push({
-                        m1, m2, sp1, sp2, combinedSp: parseFloat(combinedSp)
+                        m1, m2, minSp1, minSp2, minCombinedSp
                     });
                 }
             }
 
-            // 【核心要求】：按照理论回报率/赔率从高到低倒序排序（高赔大单排前面）！
-            parlayPairs.sort((a, b) => b.combinedSp - a.combinedSp);
+            // 【核心要求】：严格按照【最低赔率理论回报】从高到低倒序排序（低赔里的最高稳胆大单排前面）！
+            parlayPairs.sort((a, b) => b.minCombinedSp - a.minCombinedSp);
 
             if (totalPairsElem) totalPairsElem.innerText = parlayPairs.length + ' 组';
 
@@ -1743,34 +1758,18 @@
                 const card = document.createElement('div');
                 card.className = 'match-card';
                 card.style.marginBottom = '10px';
-                        
-                // 提取纯单挑首选 (严谨区分普通胜平负与单开让球盘)
-                const getPickText = (m) => {
-                    const tip = m.tip || '';
-                    if (m.is_only_rq) {
-                        if (tip.includes('让平')) return '让平 (' + (m.rang || '-2') + ')';
-                        if (tip.includes('让负')) return '让负 (' + (m.rang || '-2') + ')';
-                        if (tip.includes('让胜')) return '让胜 (' + (m.rang || '-2') + ')';
-                        return '让球首选';
-                    }
-                    if (tip.includes('首选平') || tip.startsWith('平局')) return '平局';
-                    if (tip.includes('首选客胜') || tip.startsWith('客胜')) return '客胜';
-                    if (tip.includes('首选主胜') || tip.startsWith('主胜')) return '主胜';
-                    if (tip.includes('客不败')) return '客胜';
-                    if (tip.includes('主不败')) return '主胜';
-                    return '主胜';
-                };
-                const p1 = getPickText(pair.m1);
-                const p2 = getPickText(pair.m2);
 
                 card.innerHTML = `
                     <div class="card-header" style="margin-bottom: 6px;">
                         <div>
                             <span class="league-tag" style="background: rgba(46, 160, 67, 0.2); color: #3fb950; font-weight: 800;">实战 2串1 · 组合 #${globalRank}</span>
-                            <span style="font-size: 11px; color: var(--text-secondary); margin-left: 6px;">纯首选单挑</span>
+                            <span style="font-size: 11px; color: var(--text-secondary); margin-left: 6px;">双选保底精算</span>
                         </div>
-                        <div style="font-size: 13px; font-weight: 800; color: var(--accent-gold); font-family: var(--font-mono);">
-                            理论回报: ${pair.combinedSp.toFixed(2)} 倍
+                        <div style="text-align: right;">
+                            <span style="font-size: 10px; color: var(--text-secondary); margin-right: 4px;">最低保底回报:</span>
+                            <span style="font-size: 13px; font-weight: 800; color: var(--accent-gold); font-family: var(--font-mono);">
+                                ${pair.minCombinedSp.toFixed(2)} 倍
+                            </span>
                         </div>
                     </div>
                     <div style="background: rgba(13, 17, 23, 0.7); border-radius: 6px; padding: 8px 10px; margin-bottom: 6px; display: flex; justify-content: space-between; align-items: center;">
@@ -1778,9 +1777,11 @@
                             <span style="color: var(--text-secondary); font-family: var(--font-mono); font-size: 11px;">[${pair.m1.code}]</span> 
                             <b>${pair.m1.home}</b> vs <b>${pair.m1.away}</b>
                         </div>
-                        <div>
-                            <span class="badge" style="background: rgba(88, 166, 255, 0.2); color: #58a6ff; font-size: 11px; font-weight: 700; margin-right: 4px;">单挑: ${p1}</span>
-                            <span style="font-size: 10px; color: var(--text-tertiary);">(${pair.m1.tip})</span>
+                        <div style="text-align: right;">
+                            <span class="badge" style="background: rgba(210, 153, 34, 0.15); color: var(--accent-gold); font-size: 11px; font-weight: 700;">
+                                ${pair.m1.is_only_rq ? '让球: ' : ''}${pair.m1.tip}
+                            </span>
+                            <span style="font-size: 10px; color: #8b949e; font-family: var(--font-mono); margin-left: 4px;">(最低SP ${pair.minSp1.toFixed(2)})</span>
                         </div>
                     </div>
                     <div style="background: rgba(13, 17, 23, 0.7); border-radius: 6px; padding: 8px 10px; display: flex; justify-content: space-between; align-items: center;">
@@ -1788,9 +1789,11 @@
                             <span style="color: var(--text-secondary); font-family: var(--font-mono); font-size: 11px;">[${pair.m2.code}]</span> 
                             <b>${pair.m2.home}</b> vs <b>${pair.m2.away}</b>
                         </div>
-                        <div>
-                            <span class="badge" style="background: rgba(88, 166, 255, 0.2); color: #58a6ff; font-size: 11px; font-weight: 700; margin-right: 4px;">单挑: ${p2}</span>
-                            <span style="font-size: 10px; color: var(--text-tertiary);">(${pair.m2.tip})</span>
+                        <div style="text-align: right;">
+                            <span class="badge" style="background: rgba(210, 153, 34, 0.15); color: var(--accent-gold); font-size: 11px; font-weight: 700;">
+                                ${pair.m2.is_only_rq ? '让球: ' : ''}${pair.m2.tip}
+                            </span>
+                            <span style="font-size: 10px; color: #8b949e; font-family: var(--font-mono); margin-left: 4px;">(最低SP ${pair.minSp2.toFixed(2)})</span>
                         </div>
                     </div>
                 `;
