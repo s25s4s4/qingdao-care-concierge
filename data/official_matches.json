@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18 21:12:12",
+  "updated_at": "2026-10-18 21:13:13",
   "total": 74,
   "matches": [
     {
@@ -2825,7 +2825,7 @@
       "away": "桑坦德",
       "home_rank": "7",
       "away_rank": "西乙1",
-      "status": "进行中 · 中场",
+      "status": "进行中 · 下半场",
       "form_home": [
         "W",
         "D",
@@ -2886,7 +2886,7 @@
       "away": "埃夫斯堡",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "进行中 · 中场",
+      "status": "进行中 · 下半场",
       "form_home": [
         "W",
         "D",
@@ -2947,7 +2947,7 @@
       "away": "瓦萨",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "进行中 · 中场",
+      "status": "进行中 · 下半场",
       "form_home": [
         "W",
         "D",
@@ -3030,7 +3030,7 @@
       "consensus": "主不败/首选主胜 (65.0%)",
       "consensus_ratio": 65.0,
       "tip": "主不败/首选主胜",
-      "score": "0-1",
+      "score": "0-2",
       "result": "PENDING",
       "analysis": "萨普斯堡对阵罗森博格，三模型满血对抗研判首选【客不败/双选平负】。",
       "dossier": {
@@ -3150,7 +3150,7 @@
       "consensus": "主不败/首选主胜 (65.0%)",
       "consensus_ratio": 65.0,
       "tip": "主不败/首选主胜",
-      "score": "0-0",
+      "score": "1-0",
       "result": "PENDING",
       "analysis": "伯恩茅斯对阵桑德兰，三模型满血对抗研判首选【主不败/首选主胜】。",
       "dossier": {
@@ -3187,7 +3187,7 @@
       "away": "科莫",
       "home_rank": "8",
       "away_rank": "14",
-      "status": "进行中 · 上半场 12'",
+      "status": "进行中 · 上半场",
       "form_home": [
         "W",
         "D",
