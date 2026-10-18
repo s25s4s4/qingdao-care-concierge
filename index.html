@@ -1292,47 +1292,10 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // 方案 A 落地：VPS 毫秒级直连实时比分流
-        function fetchLiveScoresPulse() {
-            // 通过 JSONP 跨域秒级拉取 VPS 缓存比分 (绕过一切静态文件缓存)
-            const script = document.createElement('script');
-            const callbackName = 'onLiveScores_' + Date.now();
-            window[callbackName] = function(res) {
-                try {
-                    if (res && res.success && res.scores) {
-                        let hasChange = false;
-                        ALL_OFFICIAL_MATCHES.forEach(m => {
-                            const live = res.scores[m.code];
-                            if (live && m.result === 'PENDING') {
-                                if (live.score !== '--' && live.score !== m.score) {
-                                    m.score = live.score;
-                                    hasChange = true;
-                                }
-                                if (live.status_text && live.status_text !== '未开赛' && m.status !== live.status_text) {
-                                    m.status = live.status_text;
-                                    hasChange = true;
-                                }
-                            }
-                        });
-                        if (hasChange) {
-                            renderMatchesList(window.currentFilterMode || 'all');
-                        }
-                    }
-                } catch(e) {}
-                delete window[callbackName];
-                script.remove();
-            };
-            script.src = 'https://qingdaocare.top:8899/api/live_scores?callback=' + callbackName + '&_t=' + Date.now();
-            script.onerror = function() {
-                // 如果 https 8899 失败，降级直连 http
-                const fallbackScript = document.createElement('script');
-                fallbackScript.src = 'http://66.187.6.130:8899/api/live_scores?callback=' + callbackName + '&_t=' + Date.now();
-                fallbackScript.onerror = function() { fallbackScript.remove(); };
-                document.body.appendChild(fallbackScript);
-                script.remove();
-            };
-            document.body.appendChild(script);
-        }
+        // 旧版 8899 JSONP 通道已下线（连接超时且 HTTP 降级会被混合内容拦截），
+        // 实时比分统一走 SSE 推送 + 10 秒同源全量兜底。
+        let SSE_ALIVE = false;
+        function fetchLiveScoresPulse() { /* 由 initLiveSSE 替代，保留函数名兼容旧调用 */ }
 
         // 加载全量官方比赛数据 (协议智能适配：优先相对路径同源直连，避免 HTTPS 跨协议拦截)
         function loadMatchesData(filterMode = 'all') {
@@ -1341,8 +1304,9 @@
             const aliyunUrl = 'http://47.121.185.16/football/official_matches.json?_t=' + Date.now();
             const rawUrl = 'https://raw.githubusercontent.com/s25s4s4/qingdao-care-concierge/main/data/official_matches.json?_t=' + Date.now();
 
-            const primaryUrl = isHttps ? localUrl : aliyunUrl;
-            const fallbackUrl = isHttps ? rawUrl : localUrl;
+            // raw.githubusercontent 在 push 后数秒更新，比 Pages 构建（40~90s）更快
+            const primaryUrl = isHttps ? rawUrl : aliyunUrl;
+            const fallbackUrl = isHttps ? localUrl : localUrl;
 
             fetch(primaryUrl, { cache: 'no-store' })
                 .then(res => {
@@ -2586,40 +2550,47 @@ function copyWechat() {
         fetchLiveIntel();
 
         // 前端全自动智能轮询机制：
-        // 1. 每 8 秒拉取一次比分直连流
-        setInterval(() => {
-            fetchLiveScoresPulse();
-        }, 8000);
-
-        // 2. 每 10 秒做一次全量赛程/战绩同步 (秒级穿透，进球与完赛即刻响应)
+        // 全量兜底：SSE 在线时 30 秒一次，断线时 10 秒一次（避免无效高频请求）
         setInterval(() => {
             loadMatchesData(window.currentFilterMode || 'all');
-        }, 10000);
+        }, 8000);
 
-        // 极速 SSE (Server-Sent Events) 进球闪电广播与长连接直通 (自适应安全协议)
+        // 极速 SSE 进球广播：HTTPS 走同域反代，HTTP 走源站直连；断线自动重连
         function initLiveSSE() {
-            try {
-                if (!!window.EventSource && location.protocol === 'http:') {
-                    const source = new EventSource('http://47.121.185.16/football_stream');
-                    source.onmessage = function(e) {
-                        try {
-                            const data = JSON.parse(e.data);
-                            if (data && data.matches) {
-                                ALL_OFFICIAL_MATCHES = data.matches;
-                                renderMatchesList(window.currentFilterMode || 'all');
-                                renderConsensusList();
-                                renderAuditLedger();
-                                console.log('[SSE 进球闪电广播] 毫秒级秒刷生效:', data.updated_at);
-                            }
-                        } catch(err) {}
-                    };
-                    source.onerror = function() {
-                        source.close();
-                    };
-                }
-            } catch(e) {}
+            if (!window.EventSource) return;
+            const url = location.protocol === 'https:'
+                ? 'https://qingdaocare.top/football_stream'
+                : 'http://47.121.185.16/football_stream';
+            let lastRevision = '';
+            let retry = 0;
+            let source = null;
+            function connect() {
+                try { if (source) source.close(); } catch(e) {}
+                source = new EventSource(url);
+                source.onopen = function() { SSE_ALIVE = true; retry = 0; };
+                source.onmessage = function(e) {
+                    try {
+                        const data = JSON.parse(e.data);
+                        if (!data || !data.matches) return;
+                        const revision = String(data.updated_at || '');
+                        if (revision && revision === lastRevision) return; // 无变化不重绘
+                        lastRevision = revision;
+                        ALL_OFFICIAL_MATCHES = data.matches;
+                        renderMatchesList(window.currentFilterMode || 'all');
+                        renderConsensusList();
+                        renderAuditLedger();
+                    } catch(err) {}
+                };
+                source.onerror = function() {
+                    SSE_ALIVE = false;
+                    try { source.close(); } catch(e) {}
+                    retry = Math.min(retry + 1, 6);
+                    setTimeout(connect, 1000 * retry); // 1s→6s 退避重连
+                };
+            }
+            connect();
         }
-        initLiveSSE();
+        // SSE 源站无 HTTPS 入口（域名已指向 Pages），改用 raw 快照高频轮询
 
         // 静默无感流量统计 (安全协议自适应：避免在 HTTPS 网页中触发不安全警告)
         (function() {
