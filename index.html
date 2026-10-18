@@ -1744,8 +1744,15 @@
                 card.className = 'match-card';
                 card.style.marginBottom = '10px';
                         
-                // 提取纯单挑首选
-                const getPickText = (tip) => {
+                // 提取纯单挑首选 (严谨区分普通胜平负与单开让球盘)
+                const getPickText = (m) => {
+                    const tip = m.tip || '';
+                    if (m.is_only_rq) {
+                        if (tip.includes('让平')) return '让平 (' + (m.rang || '-2') + ')';
+                        if (tip.includes('让负')) return '让负 (' + (m.rang || '-2') + ')';
+                        if (tip.includes('让胜')) return '让胜 (' + (m.rang || '-2') + ')';
+                        return '让球首选';
+                    }
                     if (tip.includes('首选平') || tip.startsWith('平局')) return '平局';
                     if (tip.includes('首选客胜') || tip.startsWith('客胜')) return '客胜';
                     if (tip.includes('首选主胜') || tip.startsWith('主胜')) return '主胜';
@@ -1753,8 +1760,8 @@
                     if (tip.includes('主不败')) return '主胜';
                     return '主胜';
                 };
-                const p1 = getPickText(pair.m1.tip);
-                const p2 = getPickText(pair.m2.tip);
+                const p1 = getPickText(pair.m1);
+                const p2 = getPickText(pair.m2);
 
                 card.innerHTML = `
                     <div class="card-header" style="margin-bottom: 6px;">
