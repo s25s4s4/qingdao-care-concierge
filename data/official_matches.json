@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18 20:19:06",
+  "updated_at": "2026-10-18 20:22:06",
   "total": 74,
   "matches": [
     {
@@ -2787,7 +2787,7 @@
       "consensus": "主胜 (66.5%)",
       "consensus_ratio": 66.5,
       "tip": "主胜",
-      "score": "0-2",
+      "score": "0-3",
       "result": "PENDING",
       "analysis": "乌迪内斯对阵莱切，三模型满血对抗研判首选【主胜】。",
       "dossier": {
@@ -2909,7 +2909,7 @@
       "consensus": "主不败/首选主胜 (76.7%)由此",
       "consensus_ratio": 76.7,
       "tip": "主不败/首选主胜",
-      "score": "0-0",
+      "score": "0-1",
       "result": "PENDING",
       "analysis": "天狼星对阵埃夫斯堡，三模型满血对抗研判首选【主不败/首选主胜】。",
       "dossier": {
