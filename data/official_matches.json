@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18 22:23:06",
+  "updated_at": "2026-10-18 22:33:11",
   "total": 74,
   "matches": [
     {
@@ -3006,7 +3006,7 @@
       "away": "罗森博格",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "进行中 · 下半场",
+      "status": "已完赛",
       "form_home": [
         "W",
         "D",
@@ -3029,8 +3029,8 @@
       "consensus": "主不败/首选主胜 (65.0%)",
       "consensus_ratio": 65.0,
       "tip": "主不败/首选主胜",
-      "score": "0-2",
-      "result": "PENDING",
+      "score": "0-3",
+      "result": "MISS",
       "analysis": "萨普斯堡对阵罗森博格，三模型满血对抗研判首选【客不败/双选平负】。",
       "dossier": {
         "summary": "主不败/首选主胜，四维综合共识度 76.5%\\由此",
@@ -3212,7 +3212,7 @@
       "consensus": "客胜 (65.0%)",
       "consensus_ratio": 65.0,
       "tip": "客胜",
-      "score": "1-2",
+      "score": "1-3",
       "result": "PENDING",
       "analysis": "佛罗伦萨对阵科莫，三模型满血对抗研判首选【客胜】。",
       "dossier": {
@@ -3273,7 +3273,7 @@
       "consensus": "客胜 (65.0%)",
       "consensus_ratio": 65.0,
       "tip": "客胜",
-      "score": "1-3",
+      "score": "2-3",
       "result": "PENDING",
       "analysis": "昂热对阵马赛，三模型满血对抗研判首选【客不败/双选平负】。",
       "dossier": {
