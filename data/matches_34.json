@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18 18:02:06",
+  "updated_at": "2026-10-18 18:15:05",
   "total": 74,
   "matches": [
     {
@@ -2703,7 +2703,7 @@
       "away": "前进之鹰",
       "home_rank": "13",
       "away_rank": "8",
-      "status": "三模型极速裁决",
+      "status": "进行中 · 上半场 0'",
       "form_home": [
         "L",
         "W",
@@ -2726,7 +2726,7 @@
       "consensus": "客胜 (65.0%)",
       "consensus_ratio": 65.0,
       "tip": "客胜",
-      "score": "--",
+      "score": "0-0",
       "result": "PENDING",
       "analysis": "兹沃勒对阵前进之鹰，三模型满血对抗研判首选【客胜】。",
       "dossier": {
@@ -2742,7 +2742,7 @@
         "tipster_score": 73.5,
         "math_score": 80.0
       },
-      "sale_closed": false,
+      "sale_closed": true,
       "predicted_scores": [
         "1-2",
         "0-2",
@@ -2753,7 +2753,8 @@
         "3",
         "4"
       ],
-      "is_single": false
+      "is_single": false,
+      "locked": true
     },
     {
       "code": "周日005",
@@ -3256,9 +3257,9 @@
         "W"
       ],
       "odds": [
-        "3.62",
-        "3.72",
-        "1.71"
+        "3.74",
+        "3.75",
+        "1.68"
       ],
       "consensus": "客不败/双选平负 (65.0%)",
       "consensus_ratio": 65.0,
@@ -3978,8 +3979,8 @@
         "W"
       ],
       "odds": [
-        "2.15",
-        "2.95",
+        "2.19",
+        "2.88",
         "3.07"
       ],
       "consensus": "主不败/首选主胜 (65.0%)",
