@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-19 03:03:09",
+  "updated_at": "2026-10-19 03:13:08",
   "total": 74,
   "matches": [
     {
@@ -4032,7 +4032,7 @@
       "away": "塞维利亚",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "未开赛",
+      "status": "进行中 · 上半场",
       "form_home": [
         "W",
         "D",
@@ -4055,7 +4055,7 @@
       "consensus": "让胜/博穿盘 (86.8%)由此",
       "consensus_ratio": 86.8,
       "tip": "让胜/博穿盘",
-      "score": "--",
+      "score": "0-0",
       "result": "PENDING",
       "analysis": "皇马对阵塞维利亚，官方单开让球胜平负(-2)，战术首选【让平/防让胜】。",
       "dossier": {
@@ -4094,7 +4094,7 @@
       "locked": true,
       "crosscheck": {
         "source": "fotmob",
-        "score": "",
+        "score": "0 - 0",
         "finished": false
       }
     },
@@ -4106,7 +4106,7 @@
       "away": "桑托斯",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "未开赛",
+      "status": "进行中 · 上半场",
       "form_home": [
         "W",
         "D",
@@ -4129,7 +4129,7 @@
       "consensus": "主不败/首选主胜 (65.0%)",
       "consensus_ratio": 65.0,
       "tip": "主不败/首选主胜",
-      "score": "--",
+      "score": "1-0",
       "result": "PENDING",
       "analysis": "弗鲁米嫩对阵桑托斯，三模型满血对抗研判首选【主不败/首选主胜】。",
       "dossier": {
@@ -4167,7 +4167,7 @@
       ],
       "crosscheck": {
         "source": "fotmob",
-        "score": "",
+        "score": "1 - 0",
         "finished": false
       }
     },
