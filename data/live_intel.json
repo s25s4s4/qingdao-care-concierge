@@ -1,7 +1,17 @@
 {
-  "updated_at": "2026-10-18 22:40:23",
-  "total_tips": 14,
+  "updated_at": "2026-10-18 22:50:23",
+  "total_tips": 15,
   "live_feed": [
+    {
+      "id": 2493,
+      "channel": "matchpreviews",
+      "time": "2026-10-18 22:46",
+      "code": "周日018",
+      "league": "英超",
+      "category": "赛前军情",
+      "match": "诺丁汉 VS 阿森纳",
+      "chinese": "希腊19岁锋线妖刀科斯图拉斯近4场轰3球3助，脚风热得发烫。前场终结和做球能力极强，是球队绝对爆点与进攻阵眼。状态拉满，后市资金必走大球与进球选项，盯着单兵破门准没错！"
+    },
     {
       "id": 2491,
       "channel": "bad_man_betting_tips",
