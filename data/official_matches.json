@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18 21:13:13",
+  "updated_at": "2026-10-18 21:22:16",
   "total": 74,
   "matches": [
     {
@@ -3007,7 +3007,7 @@
       "away": "罗森博格",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "进行中 · 上半场",
+      "status": "进行中 · 中场",
       "form_home": [
         "W",
         "D",
@@ -3271,7 +3271,7 @@
       "consensus": "客胜 (65.0%)",
       "consensus_ratio": 65.0,
       "tip": "客胜",
-      "score": "0-0",
+      "score": "1-0",
       "result": "PENDING",
       "analysis": "昂热对阵马赛，三模型满血对抗研判首选【客不败/双选平负】。",
       "dossier": {
