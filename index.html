@@ -1334,11 +1334,22 @@
             const aliyunUrl = 'http://47.121.185.16/football/official_matches.json?_t=' + Date.now();
             const rawUrl = 'https://raw.githubusercontent.com/s25s4s4/qingdao-care-concierge/main/data/official_matches.json?_t=' + Date.now();
 
-            // raw.githubusercontent 在 push 后数秒更新，比 Pages 构建（40~90s）更快
-            const primaryUrl = isHttps ? rawUrl : aliyunUrl;
-            const fallbackUrl = isHttps ? localUrl : localUrl;
+            // 同源优先：GitHub raw 在移动网络经常长时间挂起，会让首屏白屏。
+            // 两个源并发请求，谁先成功用谁；同源优先，避免 raw 拖慢首屏。
+            const withTimeout = (url, ms) => new Promise((resolve, reject) => {
+                const done = (fn, v) => { clearTimeout(t); fn(v); };
+                const t = setTimeout(() => reject(new Error('timeout ' + url)), ms);
+                fetch(url, { cache: 'no-store' }).then(r => done(resolve, r), e => done(reject, e));
+            });
+            const sources = isHttps ? [localUrl, rawUrl] : [aliyunUrl, localUrl];
 
-            fetch(primaryUrl, { cache: 'no-store' })
+            (async () => {
+                try {
+                    return await withTimeout(sources[0], 4000);
+                } catch (e) {
+                    return await withTimeout(sources[1], 8000);
+                }
+            })()
                 .then(res => {
                     if (!res.ok) throw new Error('Primary response not ok');
                     return res.json();
