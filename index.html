@@ -2365,24 +2365,35 @@
                     });
                 }
 
-        // 异步获取纯体彩情报流 (优先直连国内阿里云极速镜像，0 卡顿秒开)
+        // 异步获取纯体彩情报流 (HTTPS混合内容防御：优先相对路径同源，彻底解决手机端HTTPS混合内容拦截)
         function fetchLiveIntel() {
-            document.getElementById('sync-text').innerText = '正在同步...';
-            const aliyunIntel = 'http://47.121.185.16/football/live_intel.json?t=' + Date.now();
+            const syncEl = document.getElementById('sync-text');
+            if (syncEl) syncEl.innerText = '正在同步...';
+            
+            // 依据当前页面协议智能选择协议，避免 HTTPS 下请求 HTTP 触发 Mixed Content 拦截！
+            const isHttps = location.protocol === 'https:';
             const localIntel = './data/live_intel.json?t=' + Date.now();
+            const aliyunIntel = 'http://47.121.185.16/football/live_intel.json?t=' + Date.now();
+            const primaryUrl = isHttps ? localIntel : aliyunIntel;
+            const fallbackUrl = isHttps ? localIntel : localIntel;
 
-            fetch(aliyunIntel)
-                .catch(() => fetch(localIntel))
-                .then(res => res.json())
+            fetch(primaryUrl)
+                .catch(() => fetch(fallbackUrl))
+                .then(res => {
+                    if (!res.ok) throw new Error('Network response not ok');
+                    return res.json();
+                })
                 .then(data => {
-                    document.getElementById('sync-text').innerText = '已实时同步';
-                    if (data.updated_at) {
-                        document.getElementById('wire-meta-time').innerText = '最后同步：' + data.updated_at + ' (共 ' + data.total_tips + ' 条体彩在售一手情报)';
+                    if (syncEl) syncEl.innerText = '已实时同步';
+                    const timeEl = document.getElementById('wire-meta-time');
+                    if (timeEl && data.updated_at) {
+                        timeEl.innerText = '最后同步：' + data.updated_at + ' (共 ' + data.total_tips + ' 条体彩在售一手情报)';
                     }
                     renderLiveFeed(data.live_feed);
                 })
                 .catch(err => {
-                    document.getElementById('sync-text').innerText = '离线模式';
+                    if (syncEl) syncEl.innerText = '离线模式';
+                    console.warn('[LiveIntel Fetch Fallback]', err);
                 });
         }
 
