@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18 16:32:06",
+  "updated_at": "2026-10-18 16:42:06",
   "total": 74,
   "matches": [
     {
@@ -2544,7 +2544,7 @@
       "consensus": "主胜 (65.0%)",
       "consensus_ratio": 65.0,
       "tip": "主胜",
-      "score": "1-0",
+      "score": "3-0",
       "result": "PENDING",
       "analysis": "町田泽维对阵福冈黄蜂，三模型满血对抗研判首选【主胜】。",
       "dossier": {
@@ -2582,7 +2582,7 @@
       "away": "仁川联",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "进行中 · 中场",
+      "status": "进行中 · 下半场",
       "form_home": [
         "W",
         "D",
@@ -2643,7 +2643,7 @@
       "away": "金泉尚武",
       "home_rank": "5",
       "away_rank": "3",
-      "status": "进行中 · 中场",
+      "status": "进行中 · 下半场",
       "form_home": [
         "W",
         "D",
