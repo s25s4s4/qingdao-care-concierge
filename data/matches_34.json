@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18 21:26:05",
+  "updated_at": "2026-10-18 21:30:06",
   "total": 74,
   "matches": [
     {
@@ -3308,7 +3308,7 @@
       "away": "弗赖堡",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "三模型极速裁决",
+      "status": "进行中 · 上半场 0'",
       "form_home": [
         "W",
         "D",
@@ -3331,7 +3331,7 @@
       "consensus": "主胜 (83.1%)由此",
       "consensus_ratio": 83.1,
       "tip": "主胜",
-      "score": "--",
+      "score": "0-0",
       "result": "PENDING",
       "analysis": "勒沃库森对阵弗赖堡，三模型满血对抗研判首选【主胜】。",
       "dossier": {
@@ -3341,7 +3341,7 @@
         "market_attitude": "官方初开SP主胜1.40处于低风险区间，平赔4.45与客胜5.25大幅顶高分流。去水后主胜真实概率达63.2%，海外主流机构普遍开出一球/球半深盘并维持中低水，有效阻上降赔，机构对药厂打出正路持完全防御姿态。",
         "decision_guide": "单场首选中国体彩标准【主胜】作为稳胆过关基石；进球数首选2、3球，次防4球互攻。比分实战【黄金三角】矩阵构建为：核心正路高频【2-0】、胶着破防【2-1】以及互攻穿盘防爆【3-1】，全面封堵药厂主场胜轨。"
       },
-      "sale_closed": false,
+      "sale_closed": true,
       "consensus_breakdown": {
         "odds_score": 82.0,
         "intel_score": 80.0,
@@ -3358,7 +3358,8 @@
         "3",
         "4"
       ],
-      "is_single": false
+      "is_single": false,
+      "locked": true
     },
     {
       "code": "周日015",
