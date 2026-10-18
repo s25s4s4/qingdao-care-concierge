@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-19 01:03:05",
+  "updated_at": "2026-10-19 01:13:06",
   "total": 74,
   "matches": [
     {
@@ -3493,7 +3493,7 @@
       "away": "摩纳哥",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "进行中 · 下半场",
+      "status": "已完赛",
       "form_home": [
         "W",
         "D",
@@ -3517,7 +3517,7 @@
       "consensus_ratio": 65.0,
       "tip": "客不败/首选客胜",
       "score": "1-0",
-      "result": "PENDING",
+      "result": "MISS",
       "analysis": "洛里昂对阵摩纳哥，三模型满血对抗研判首选【客胜】。",
       "dossier": {
         "summary": "客胜，四维综合共识度 81.3%\\由此",
@@ -3576,7 +3576,7 @@
       "consensus": "客胜 (76.6%)",
       "consensus_ratio": 76.6,
       "tip": "客胜",
-      "score": "0-0",
+      "score": "0-1",
       "result": "PENDING",
       "analysis": "诺丁汉对阵阿森纳，三模型满血对抗研判首选【客胜】。",
       "dossier": {
@@ -3674,7 +3674,7 @@
       "away": "亚特兰大",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "进行中 · 中场",
+      "status": "进行中 · 下半场",
       "form_home": [
         "W",
         "D",
