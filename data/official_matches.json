@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18 20:12:06",
+  "updated_at": "2026-10-18 20:13:06",
   "total": 74,
   "matches": [
     {
@@ -2703,7 +2703,7 @@
       "away": "前进之鹰",
       "home_rank": "13",
       "away_rank": "8",
-      "status": "进行中 · 下半场",
+      "status": "已完赛",
       "form_home": [
         "L",
         "W",
@@ -2726,8 +2726,8 @@
       "consensus": "客胜 (65.0%)",
       "consensus_ratio": 65.0,
       "tip": "客胜",
-      "score": "3-1",
-      "result": "PENDING",
+      "score": "4-1",
+      "result": "MISS",
       "analysis": "兹沃勒对阵前进之鹰，三模型满血对抗研判首选【客胜】。",
       "dossier": {
         "summary": "兹沃勒对阵前进之鹰，三模型满血对抗研判首选【客胜】。",
@@ -2848,7 +2848,7 @@
       "consensus": "主不败/首选主胜 (73.1%)由此",
       "consensus_ratio": 73.1,
       "tip": "主不败/首选主胜",
-      "score": "0-0",
+      "score": "1-0",
       "result": "PENDING",
       "analysis": "奥萨苏纳对阵桑坦德，三模型满血对抗研判首选【主不败/首选主胜】。",
       "dossier": {
@@ -2970,7 +2970,7 @@
       "consensus": "主胜 (76.9%)由此",
       "consensus_ratio": 76.9,
       "tip": "主胜",
-      "score": "0-0",
+      "score": "1-0",
       "result": "PENDING",
       "analysis": "库奥皮奥对阵瓦萨，三模型满血对抗研判首选【主胜】。",
       "dossier": {
