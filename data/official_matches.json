@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18 14:56:05",
+  "updated_at": "2026-10-18 15:00:05",
   "total": 74,
   "matches": [
     {
@@ -2521,7 +2521,7 @@
       "away": "福冈黄蜂",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "三模型极速裁决",
+      "status": "进行中 · 上半场 0'",
       "form_home": [
         "W",
         "D",
@@ -2544,7 +2544,7 @@
       "consensus": "主胜 (65.0%)",
       "consensus_ratio": 65.0,
       "tip": "主胜",
-      "score": "--",
+      "score": "0-0",
       "result": "PENDING",
       "analysis": "町田泽维对阵福冈黄蜂，三模型满血对抗研判首选【主胜】。",
       "dossier": {
@@ -2554,7 +2554,7 @@
         "market_attitude": "官方初开SP主胜1.64，平局3.42，客胜4.40，去水后主胜真实概率达54.0%，欧洲主流亚盘维持在主让半一中低水区间，对町田的主场攻坚能力给予了充分的防范与正向支撑，平赔拉高至3.40以上阻力明显。",
         "decision_guide": "实战出票首选【主胜】单固作为稳健胆材，防冷平局空间不大；进球数锁定在2球与3球区间；比分组合打造黄金三角：核心正路选择【2-0】，防范防守绞杀零封【1-0】，互攻防爆补选【2-1】以封死町田赢球路径。"
       },
-      "sale_closed": false,
+      "sale_closed": true,
       "consensus_breakdown": {
         "odds_score": 78.0,
         "intel_score": 75.0,
@@ -2571,7 +2571,8 @@
         "3",
         "1"
       ],
-      "is_single": true
+      "is_single": true,
+      "locked": true
     },
     {
       "code": "周日002",
@@ -3671,12 +3672,12 @@
         "W"
       ],
       "odds": [
-        "1.58",
-        "3.65",
-        "4.50"
+        "1.55",
+        "3.70",
+        "4.67"
       ],
-      "consensus": "主不败/首选主胜 (66.1%)",
-      "consensus_ratio": 66.1,
+      "consensus": "主不败/首选主胜 (67.4%)",
+      "consensus_ratio": 67.4,
       "tip": "主不败/首选主胜",
       "score": "--",
       "result": "PENDING",
