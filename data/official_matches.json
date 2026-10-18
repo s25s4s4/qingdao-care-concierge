@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18 23:43:06",
+  "updated_at": "2026-10-18 23:53:05",
   "total": 74,
   "matches": [
     {
@@ -3395,7 +3395,7 @@
       "consensus": "主不败/首选主胜 (65.0%)",
       "consensus_ratio": 65.0,
       "tip": "主不败/首选主胜",
-      "score": "1-0",
+      "score": "2-0",
       "result": "PENDING",
       "analysis": "塞尔塔对阵阿拉维斯，三模型满血对抗研判首选【主不败/首选主胜】。",
       "dossier": {
@@ -3433,7 +3433,7 @@
       "away": "阿贾克斯",
       "home_rank": "9",
       "away_rank": "2",
-      "status": "进行中 · 中场",
+      "status": "进行中 · 下半场",
       "form_home": [
         "D",
         "L",
