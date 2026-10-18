@@ -1,7 +1,17 @@
 {
-  "updated_at": "2026-10-18 11:01:46",
-  "total_tips": 8,
+  "updated_at": "2026-10-18 17:41:52",
+  "total_tips": 9,
   "live_feed": [
+    {
+      "id": 1265,
+      "channel": "betminesfootballpredictions",
+      "time": "2026-10-18 16:56",
+      "code": "周日005",
+      "league": "意甲",
+      "category": "赛前军情",
+      "match": "乌迪内斯 VS 莱切",
+      "chinese": "意甲四场杂单全扯淡，连库尼亚在曼联、奥蓬达在里昂这种野鸡数据都敢编。米兰打亚特兰大卡球防小，尤文主场压拉齐奥进球。没内幕没伤停，别跟。"
+    },
     {
       "id": "tg_pure_01",
       "channel": "FabrizioRomano",
