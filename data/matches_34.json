@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-19 03:33:07",
+  "updated_at": "2026-10-19 03:33:14",
   "total": 74,
   "matches": [
     {
@@ -4723,7 +4723,7 @@
         "consensus_ratio": 76.6,
         "is_only_rq": false,
         "rang": "0",
-        "frozen_at": "2026-10-19T03:33:02",
+        "frozen_at": "2026-10-19T03:33:09",
         "kickoff": "2026-10-20T00:30:00",
         "evidence": {
           "odds": [
@@ -4736,7 +4736,7 @@
           "intel_used": false,
           "intel_ids": []
         },
-        "sha256": "d42cf1009936ee5088fb70c26c95f513d87cdb0a5cca43a5975c571fadc16c07"
+        "sha256": "990c3f8bba60173b857492ad6a0eaefeff8f1baf5a38b9773a60982510910a0c"
       }
     },
     {
@@ -4820,7 +4820,7 @@
         "consensus_ratio": 76.5,
         "is_only_rq": false,
         "rang": "0",
-        "frozen_at": "2026-10-19T03:33:02",
+        "frozen_at": "2026-10-19T03:33:09",
         "kickoff": "2026-10-20T01:00:00",
         "evidence": {
           "odds": [
@@ -4833,7 +4833,7 @@
           "intel_used": false,
           "intel_ids": []
         },
-        "sha256": "1e775114985e253e8234908caa6679451fa1b76abd562aee4419704484b3a62a"
+        "sha256": "b45ece513fe181abe0ab8dfc34084a66a5cf67f839cfbd59e714a27603818704"
       }
     },
     {
@@ -4917,7 +4917,7 @@
         "consensus_ratio": 76.5,
         "is_only_rq": false,
         "rang": "0",
-        "frozen_at": "2026-10-19T03:33:02",
+        "frozen_at": "2026-10-19T03:33:09",
         "kickoff": "2026-10-20T02:45:00",
         "evidence": {
           "odds": [
@@ -4930,7 +4930,7 @@
           "intel_used": false,
           "intel_ids": []
         },
-        "sha256": "4096060a176eead47ad440d4bb91e1f38cdcb41989234b69adebab5201d0920c"
+        "sha256": "bac8d2b31a747c7798eb4274d70891041de2fa9210da2316c1defe4a3a4f2a3a"
       }
     },
     {
@@ -5014,7 +5014,7 @@
         "consensus_ratio": 76.5,
         "is_only_rq": false,
         "rang": "0",
-        "frozen_at": "2026-10-19T03:33:02",
+        "frozen_at": "2026-10-19T03:33:09",
         "kickoff": "2026-10-20T02:45:00",
         "evidence": {
           "odds": [
@@ -5027,7 +5027,7 @@
           "intel_used": false,
           "intel_ids": []
         },
-        "sha256": "4c92eb1a692f2860ff115e55328f6eb9a148894bdcc1c8348b40b762a7641b94"
+        "sha256": "cc7bb6d87c7d39c061f724002a3cf39b269637c91e11f8cca998f924666d11dc"
       }
     },
     {
@@ -5111,7 +5111,7 @@
         "consensus_ratio": 78.4,
         "is_only_rq": false,
         "rang": "0",
-        "frozen_at": "2026-10-19T03:33:02",
+        "frozen_at": "2026-10-19T03:33:09",
         "kickoff": "2026-10-20T03:00:00",
         "evidence": {
           "odds": [
@@ -5124,7 +5124,7 @@
           "intel_used": false,
           "intel_ids": []
         },
-        "sha256": "a34c1d680e2b578c11d430db979d7e73deaf9ecc0c74b24d54475e030436a9f5"
+        "sha256": "7f88b0414cb6c01ea21f54fc2354e2f1a6ad5758f739d48513f5dc3b05781757"
       }
     },
     {
@@ -5208,7 +5208,7 @@
         "consensus_ratio": 77.2,
         "is_only_rq": false,
         "rang": "0",
-        "frozen_at": "2026-10-19T03:33:02",
+        "frozen_at": "2026-10-19T03:33:09",
         "kickoff": "2026-10-20T03:00:00",
         "evidence": {
           "odds": [
@@ -5221,7 +5221,7 @@
           "intel_used": false,
           "intel_ids": []
         },
-        "sha256": "cb0388d0425ab7f876e2e88d86239045d67ebdd1553e28a4f5a56c9c1d80ee4e"
+        "sha256": "4540af9291b766982553477ed006b0235aeadd6585c43c38a55cf37c9292771e"
       }
     },
     {
@@ -5305,7 +5305,7 @@
         "consensus_ratio": 76.5,
         "is_only_rq": false,
         "rang": "0",
-        "frozen_at": "2026-10-19T03:33:02",
+        "frozen_at": "2026-10-19T03:33:09",
         "kickoff": "2026-10-20T03:15:00",
         "evidence": {
           "odds": [
@@ -5318,7 +5318,7 @@
           "intel_used": false,
           "intel_ids": []
         },
-        "sha256": "9e395c7550975beebab38014a7e7eaefe074f176d0da8d1831207af8319777b8"
+        "sha256": "b3b4f10735819bd94b71e2e77f9743c9097c8d1d215d192007b4d44af2f32c67"
       }
     },
     {
@@ -5402,7 +5402,7 @@
         "consensus_ratio": 78.4,
         "is_only_rq": false,
         "rang": "0",
-        "frozen_at": "2026-10-19T03:33:02",
+        "frozen_at": "2026-10-19T03:33:09",
         "kickoff": "2026-10-20T07:00:00",
         "evidence": {
           "odds": [
@@ -5415,7 +5415,7 @@
           "intel_used": false,
           "intel_ids": []
         },
-        "sha256": "1c351c2205a57c6823df4ebc696bc043cd2434f5ceed25afe37a2a2ab83ad231"
+        "sha256": "b32947d4371c08a2c59caed09f8b8645c10b552e041b7b14e7702d11fc474acd"
       }
     }
   ]
