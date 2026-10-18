@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-19 00:32:08",
+  "updated_at": "2026-10-19 00:33:06",
   "total": 74,
   "matches": [
     {
@@ -3456,7 +3456,7 @@
       "consensus": "客胜 (65.3%)",
       "consensus_ratio": 65.3,
       "tip": "客胜",
-      "score": "1-5",
+      "score": "2-5",
       "result": "PENDING",
       "analysis": "格罗宁根对阵阿贾克斯，三模型满血对抗研判首选【客胜】。",
       "dossier": {
@@ -3697,7 +3697,7 @@
       "consensus": "主胜 (71.5%)",
       "consensus_ratio": 71.5,
       "tip": "主胜",
-      "score": "0-0",
+      "score": "1-0",
       "result": "PENDING",
       "analysis": "AC米兰对阵亚特兰大，三模型满血对抗研判首选【主不败/首选主胜】。",
       "dossier": {
@@ -3735,7 +3735,7 @@
       "away": "皇家社会",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "进行中 · 上半场 2'",
+      "status": "进行中 · 上半场",
       "form_home": [
         "W",
         "D",
