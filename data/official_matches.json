@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-19 02:53:13",
+  "updated_at": "2026-10-19 02:53:41",
   "total": 74,
   "matches": [
     {
@@ -2085,7 +2085,7 @@
       "away": "维拉",
       "home_rank": "7",
       "away_rank": "5",
-      "status": "进行中 · 下半场",
+      "status": "已完赛",
       "form_home": [
         "D",
         "L",
@@ -2147,7 +2147,7 @@
       "away": "莱红牛",
       "home_rank": "1",
       "away_rank": "2",
-      "status": "进行中 · 下半场",
+      "status": "已完赛",
       "form_home": [
         "D",
         "W",
@@ -2170,7 +2170,7 @@
       "consensus": "让负/首选客不败 (78.5%)",
       "consensus_ratio": 78.5,
       "tip": "让负/首选客不败",
-      "score": "6-0",
+      "score": "6-1",
       "result": "MISS",
       "analysis": "拜仁主让-2球深盘极难穿盘，莱红牛高效反击极度克制拜仁压上，红蓝对抗审查首选【让负/首选客不败】。",
       "dossier": {
@@ -2206,7 +2206,12 @@
         "4"
       ],
       "pathology": "低估了拜仁安联复仇战意的绝对统治力，高位逼抢彻底打穿莱红牛防线酿成惨案。",
-      "is_single": false
+      "is_single": false,
+      "score_correction": {
+        "from": "6-0",
+        "to": "6-1",
+        "source": "fcbayern.com official match report"
+      }
     },
     {
       "code": "周六026",
@@ -2216,7 +2221,7 @@
       "away": "巴萨",
       "home_rank": "10",
       "away_rank": "1",
-      "status": "进行中 · 下半场",
+      "status": "已完赛",
       "form_home": [
         "L",
         "W",
@@ -3795,7 +3800,7 @@
       "away": "拉齐奥",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "未开赛",
+      "status": "进行中 · 上半场",
       "form_home": [
         "W",
         "D",
@@ -3856,7 +3861,7 @@
       "away": "尼斯",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "未开赛",
+      "status": "进行中 · 上半场",
       "form_home": [
         "W",
         "D",
