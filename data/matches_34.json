@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-19 04:22:04",
+  "updated_at": "2026-10-19 04:45:17",
   "total": 74,
   "matches": [
     {
@@ -4346,7 +4346,7 @@
       "away": "拉齐奥",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "待确认开赛 · 来源未提供",
+      "status": "已完赛",
       "form_home": [
         "W",
         "D",
@@ -4369,8 +4369,8 @@
       "consensus": "主胜 (70.1%)",
       "consensus_ratio": 70.1,
       "tip": "主胜",
-      "score": "0-2",
-      "result": "PENDING",
+      "score": "0-3",
+      "result": "MISS",
       "analysis": "尤文图斯对阵拉齐奥，基于赔率与可得情报的研判首选【主不败/首选主胜】。",
       "dossier": {
         "summary": "主胜，四维综合共识度 83.1%\\由此",
@@ -4400,8 +4400,8 @@
       "locked": true,
       "crosscheck": {
         "source": "fotmob",
-        "score": "0 - 2",
-        "finished": false
+        "score": "0 - 3",
+        "finished": true
       },
       "provenance": {
         "method": "frozen_after_kickoff",
@@ -4449,7 +4449,7 @@
       "away": "尼斯",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "待确认开赛 · 来源未提供",
+      "status": "已完赛",
       "form_home": [
         "W",
         "D",
@@ -4473,7 +4473,7 @@
       "consensus_ratio": 65.7,
       "tip": "主不败/首选主胜",
       "score": "2-1",
-      "result": "PENDING",
+      "result": "HIT",
       "analysis": "里昂对阵尼斯，基于赔率与可得情报的研判首选【主胜】。",
       "dossier": {
         "summary": "主不败/首选主胜，四维综合共识度 76.15%\\由此",
@@ -4503,7 +4503,7 @@
       "crosscheck": {
         "source": "fotmob",
         "score": "2 - 1",
-        "finished": false
+        "finished": true
       },
       "provenance": {
         "method": "frozen_after_kickoff",
@@ -4550,7 +4550,7 @@
       "away": "塞维利亚",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "待确认开赛 · 来源未提供",
+      "status": "进行中 · 下半场",
       "form_home": [
         "W",
         "D",
@@ -4573,7 +4573,7 @@
       "consensus": "让胜/博穿盘 (86.8%)由此",
       "consensus_ratio": 86.8,
       "tip": "让胜/博穿盘",
-      "score": "2-0",
+      "score": "3-0",
       "result": "PENDING",
       "analysis": "皇马对阵塞维利亚，官方单开让球胜平负(-2)，战术首选【让平/防让胜】。",
       "dossier": {
@@ -4612,7 +4612,7 @@
       "locked": true,
       "crosscheck": {
         "source": "fotmob",
-        "score": "2 - 0",
+        "score": "3 - 0",
         "finished": false
       },
       "provenance": {
@@ -4661,7 +4661,7 @@
       "away": "桑托斯",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "待确认开赛 · 来源未提供",
+      "status": "进行中 · 下半场",
       "form_home": [
         "W",
         "D",
@@ -4684,7 +4684,7 @@
       "consensus": "主不败/首选主胜 (65.0%)",
       "consensus_ratio": 65.0,
       "tip": "主不败/首选主胜",
-      "score": "1-0",
+      "score": "1-2",
       "result": "PENDING",
       "analysis": "弗鲁米嫩对阵桑托斯，基于赔率与可得情报的研判首选【主不败/首选主胜】。",
       "dossier": {
@@ -4722,7 +4722,7 @@
       ],
       "crosscheck": {
         "source": "fotmob",
-        "score": "1 - 1",
+        "score": "1 - 2",
         "finished": false
       },
       "provenance": {
