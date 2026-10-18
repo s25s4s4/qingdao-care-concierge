@@ -1,7 +1,17 @@
 {
   "updated_at": "2026-10-18 22:35:23",
-  "total_tips": 12,
+  "total_tips": 13,
   "live_feed": [
+    {
+      "id": "tg_pure_fiorentina_2035",
+      "channel": "calciomercato",
+      "time": "2026-10-18 20:35",
+      "code": "周日012",
+      "league": "意甲",
+      "category": "赛前军情",
+      "match": "佛罗伦萨 VS 科莫",
+      "chinese": "意甲佛罗伦萨打科莫，刚出首发报幕，具体11人名单还没填，哨子是迪贝洛。先别急着下重注，等终极站位出来看科莫是不是摆大巴，谨防紫百合主场难啃硬骨头。"
+    },
     {
       "id": 2248,
       "channel": "matchpreviews",
