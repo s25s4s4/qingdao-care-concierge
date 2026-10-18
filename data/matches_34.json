@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18 19:57:06",
+  "updated_at": "2026-10-18 20:00:06",
   "total": 74,
   "matches": [
     {
@@ -2825,7 +2825,7 @@
       "away": "桑坦德",
       "home_rank": "7",
       "away_rank": "西乙1",
-      "status": "三模型极速裁决",
+      "status": "进行中 · 上半场 0'",
       "form_home": [
         "W",
         "D",
@@ -2848,7 +2848,7 @@
       "consensus": "主不败/首选主胜 (73.1%)由此",
       "consensus_ratio": 73.1,
       "tip": "主不败/首选主胜",
-      "score": "--",
+      "score": "0-0",
       "result": "PENDING",
       "analysis": "奥萨苏纳对阵桑坦德，三模型满血对抗研判首选【主不败/首选主胜】。",
       "dossier": {
@@ -2864,7 +2864,7 @@
         "tipster_score": 72.0,
         "math_score": 77.0
       },
-      "sale_closed": false,
+      "sale_closed": true,
       "predicted_scores": [
         "1-0",
         "2-0",
@@ -2875,7 +2875,8 @@
         "2",
         "3"
       ],
-      "is_single": false
+      "is_single": false,
+      "locked": true
     },
     {
       "code": "周日007",
@@ -2885,7 +2886,7 @@
       "away": "埃夫斯堡",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "三模型极速裁决",
+      "status": "进行中 · 上半场 0'",
       "form_home": [
         "W",
         "D",
@@ -2908,7 +2909,7 @@
       "consensus": "主不败/首选主胜 (76.7%)由此",
       "consensus_ratio": 76.7,
       "tip": "主不败/首选主胜",
-      "score": "--",
+      "score": "0-0",
       "result": "PENDING",
       "analysis": "天狼星对阵埃夫斯堡，三模型满血对抗研判首选【主不败/首选主胜】。",
       "dossier": {
@@ -2918,7 +2919,7 @@
         "market_attitude": "体彩初盘开出主胜1.79、平局3.60、客胜3.41，数学去水后主胜真实概率达49.5%，客胜与平局被强力压制在低区间；欧洲主流亚盘维持主让半球中低水区间，对天狼星的主场攻坚能力给予充分防范，客胜赔付全盘承压严重。",
         "decision_guide": "实战稳健首选【胜】，单场双选【胜/平】封死冷门；进球数首选2球、次选3球，防范1球闷平；黄金三角比分锁定正路【2-1】、零封【2-0】以及客队偷猎守平的【1-1】，完美覆盖全盘胜平走势与核心收益。"
       },
-      "sale_closed": false,
+      "sale_closed": true,
       "consensus_breakdown": {
         "odds_score": 78.0,
         "intel_score": 75.0,
@@ -2935,7 +2936,8 @@
         "3",
         "1"
       ],
-      "is_single": false
+      "is_single": false,
+      "locked": true
     },
     {
       "code": "周日008",
@@ -2945,7 +2947,7 @@
       "away": "瓦萨",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "三模型极速裁决",
+      "status": "进行中 · 上半场 0'",
       "form_home": [
         "W",
         "D",
@@ -2968,7 +2970,7 @@
       "consensus": "主胜 (76.9%)由此",
       "consensus_ratio": 76.9,
       "tip": "主胜",
-      "score": "--",
+      "score": "0-0",
       "result": "PENDING",
       "analysis": "库奥皮奥对阵瓦萨，三模型满血对抗研判首选【主胜】。",
       "dossier": {
@@ -2978,7 +2980,7 @@
         "market_attitude": "三、机构盘口与去水态度：体彩官方给出主胜1.39、平局4.18、客胜5.85，折合去水后主胜真实概率高达63.7%，欧赔初始深开一球/球半低水区间，平赔与客胜位置明显高企，机构在胜平负通道对主队给予了深度的正向防范，上盘阻力设置充分。",
         "decision_guide": "四、实战研判与出票指引：竞彩投注首选标准【主胜】作为稳健胆材；进球数重点锁定【2球、3球】；实战比分矩阵以正路【2-0】为核心基石，搭配防进球互攻穿透的【2-1】与完胜穿盘的【3-0】构成严密防爆黄金三角组合。"
       },
-      "sale_closed": false,
+      "sale_closed": true,
       "consensus_breakdown": {
         "odds_score": 78.0,
         "intel_score": 75.0,
@@ -2994,7 +2996,8 @@
         "2",
         "3"
       ],
-      "is_single": false
+      "is_single": false,
+      "locked": true
     },
     {
       "code": "周日009",
