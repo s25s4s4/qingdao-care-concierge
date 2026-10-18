@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18 18:22:05",
+  "updated_at": "2026-10-18 18:30:05",
   "total": 74,
   "matches": [
     {
@@ -2764,7 +2764,7 @@
       "away": "莱切",
       "home_rank": "6",
       "away_rank": "17",
-      "status": "三模型极速裁决",
+      "status": "进行中 · 上半场 0'",
       "form_home": [
         "L",
         "L",
@@ -2787,7 +2787,7 @@
       "consensus": "主胜 (66.5%)",
       "consensus_ratio": 66.5,
       "tip": "主胜",
-      "score": "--",
+      "score": "0-0",
       "result": "PENDING",
       "analysis": "乌迪内斯对阵莱切，三模型满血对抗研判首选【主胜】。",
       "dossier": {
@@ -2803,7 +2803,7 @@
         "tipster_score": 75.0,
         "math_score": 80.0
       },
-      "sale_closed": false,
+      "sale_closed": true,
       "predicted_scores": [
         "2-0",
         "1-0",
@@ -2814,7 +2814,8 @@
         "2",
         "3"
       ],
-      "is_single": false
+      "is_single": false,
+      "locked": true
     },
     {
       "code": "周日006",
@@ -2900,9 +2901,9 @@
         "W"
       ],
       "odds": [
-        "1.87",
-        "3.45",
-        "3.30"
+        "1.83",
+        "3.55",
+        "3.32"
       ],
       "consensus": "主不败/首选主胜 (65.0%)",
       "consensus_ratio": 65.0,
