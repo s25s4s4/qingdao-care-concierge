@@ -993,9 +993,8 @@
                 </div>
                 <div>
                     <b>ROI 即“实战净投资回报率”</b>。光看“命中率高”没用，如果全选蚊子肉低赔，爆一场就全亏！<br>
-                    我们严格按照<b>中国体彩官方真实中奖 SP 赔率</b>真金白银折算：<br>
-                    • <b>大白话公式</b>：假设每场均注 100 元，<code>(收回的全部奖金 - 投入的总本金) ÷ 总本金</code>。<br>
-                    • <b>当前 <span id="tip-roi-val" style="color: var(--accent-gold); font-weight: 800;">--</span> 代表</b>：投入 <span id="tip-roi-cost" style="font-weight: 700;">--</span> 元本金，除拿回本金外，<b>纯口袋<span id="tip-roi-status">净赚</span> <span id="tip-roi-profit" style="font-weight: 800;">--</span> 元</b>！随时随比赛完赛实时动态同步。
+                    • <b>计算规则</b>：严格按中国体彩真实打出 SP 赔率真金白银折算，<b>单日独立核算，杜绝长期滚雪球稀释</b>！<br>
+                    • <b>当前 <span id="tip-roi-val" style="color: var(--accent-gold); font-weight: 800;">--</span> 代表</b>：投入 <span id="tip-roi-cost" style="font-weight: 700;">--</span> 元本金，除拿回本金外，<b>纯口袋<span id="tip-roi-status">净赚</span> <span id="tip-roi-profit" style="font-weight: 800;">--</span> 元</b>！随当天比赛完赛实时动态同步。
                 </div>
             </div>
 
@@ -1014,7 +1013,7 @@
                 </div>
                 <div>
                     <div style="font-size: 18px; font-weight: 800; font-family: var(--font-mono); color: var(--accent-gold);" id="audit-stat-roi">--</div>
-                    <div style="font-size: 10px; color: var(--text-secondary);">综合实战ROI</div>
+                    <div style="font-size: 10px; color: var(--text-secondary);" id="audit-roi-title">今日实战ROI</div>
                 </div>
             </div>
 
@@ -1551,26 +1550,26 @@
                     const todayTitleElem = document.getElementById('audit-today-title');
                     const statTotalElem = document.getElementById('audit-stat-total');
                     const roiElem = document.getElementById('audit-stat-roi');
+                    const roiTitleElem = document.getElementById('audit-roi-title');
 
-                    // 统计【当前轮次命中率】：
-                    // 体彩实战业务铁律：比赛日的界限绝不是半夜0点截断！周六的夜场比赛会一直持续到周日凌晨与早晨。
-                    // 1. 如果用户点击了某个日期分页（例如点击了'周六'），顶部命中率动态绑定显示该专页的命中率！
-                    // 2. 如果处于全部账本或初次进入，自动判定当前最新有完赛结算的体彩轮次（例如周日凌晨周日比赛未打，最新轮次依然是周六）！
+                    // 统计【当前轮次命中率 & ROI】：
+                    // 业务铁律：只计算单日档期的 ROI，拒绝长久跨周跨月滚雪球累计导致 ROI 持续衰减！
+                    // 1. 如果用户点击了具体日期分页（如周五、周六、周日），顶部指标即时动态计算该天专属的 ROI 与命中率！
+                    // 2. 如果处于全部或初次进入，自动绑定最新有完赛比赛的当天档期（如周日第一场打完出赛果后，立即自动切换计算周日当天的！）
                     let activeDayKey = (CURRENT_AUDIT_DAY !== 'ALL' && CURRENT_AUDIT_DAY !== 'ALL_PAGES') ? CURRENT_AUDIT_DAY : null;
                     if (!activeDayKey) {
-                        // 自动寻找最新有完赛比赛的日期前缀 (例如周日凌晨，周日没完赛但周六有完赛，则取周六)
                         const distinctSettledDays = [];
                         settledList.forEach(m => {
                             const dk = m.code ? m.code.substring(0, 2) : '';
                             if (dk && !distinctSettledDays.includes(dk)) distinctSettledDays.push(dk);
                         });
-                        // 按体彩真实跨周自然时序（周五开盘 -> 周六 -> 周日 -> 周一收盘）：
                         const weekWeight = {'周五': 1, '周六': 2, '周日': 3, '周一': 4, '周二': 5, '周三': 6, '周四': 7};
                         distinctSettledDays.sort((a, b) => (weekWeight[b] || 0) - (weekWeight[a] || 0));
                         activeDayKey = distinctSettledDays[0] || '周六';
                     }
 
-                    if (todayTitleElem) todayTitleElem.innerText = `${activeDayKey}档期命中率`;
+                    if (todayTitleElem) todayTitleElem.innerText = `${activeDayKey}命中率`;
+                    if (roiTitleElem) roiTitleElem.innerText = `${activeDayKey}实战ROI`;
 
                     const todaySettledList = settledList.filter(m => m.code && m.code.startsWith(activeDayKey));
                     const todayHitCount = todaySettledList.filter(m => m.result === 'HIT').length;
@@ -1591,24 +1590,23 @@
                     if (totalSettled > 0) {
                         const rate = validSettled > 0 ? ((hitCount / validSettled) * 100).toFixed(1) : '100.0';
                         hitRateElem.innerText = rate + '%';
-                        statTotalElem.innerText = `${hitCount} / ${totalSettled}`;
-                
-                        // 真实体彩实战 ROI 计算（基于官方 SP 赔率精确净收益率）：
-                        let totalReturn = 0.0;
-                        settledList.forEach(m => {
+                        statTotalElem.innerText = `${todayHitCount} / ${todayValidSettled || todaySettledList.length}`;
+
+                        // 核心重构：实战 ROI 严格仅统计当天的比赛！
+                        let todayTotalReturn = 0.0;
+                        todaySettledList.forEach(m => {
                             if (m.result === 'HIT') {
                                 let sp = 1.85;
                                 if (m.is_only_rq && m.odds && m.odds.length >= 3) {
-                                    // 让球专项比赛：按让球打出项对应的赔率结算！
                                     const parts = (m.score || '').replace(' ', '').split('-');
                                     if (parts.length === 2) {
                                         const h = parseInt(parts[0]) || 0;
                                         const a = parseInt(parts[1]) || 0;
                                         const r = parseInt(m.rang || '-1');
                                         const diff = (h + r) - a;
-                                        if (diff > 0) sp = parseFloat(m.odds[0]) || 1.85; // 让胜
-                                        else if (diff === 0) sp = parseFloat(m.odds[1]) || 3.50; // 让平
-                                        else sp = parseFloat(m.odds[2]) || 2.20; // 让负
+                                        if (diff > 0) sp = parseFloat(m.odds[0]) || 1.85;
+                                        else if (diff === 0) sp = parseFloat(m.odds[1]) || 3.50;
+                                        else sp = parseFloat(m.odds[2]) || 2.20;
                                     }
                                 } else if (m.score && m.score.includes('-')) {
                                     const [h, a] = m.score.split('-').map(x => parseInt(x.trim()));
@@ -1618,30 +1616,35 @@
                                         else sp = parseFloat(m.odds[2]) || 2.80;
                                     }
                                 }
-                                totalReturn += sp;
+                                todayTotalReturn += sp;
                             }
                         });
-                
-                        const realRoi = ((totalReturn - totalSettled) / totalSettled) * 100;
-                        const sign = realRoi >= 0 ? '+' : '';
-                        const roiStr = `${sign}${realRoi.toFixed(1)}%`;
-                        roiElem.innerText = roiStr;
-                        roiElem.style.color = realRoi >= 0 ? 'var(--accent-gold)' : '#f85149';
 
-                        const tipRoiVal = document.getElementById('tip-roi-val');
-                        const tipRoiCost = document.getElementById('tip-roi-cost');
-                        const tipRoiStatus = document.getElementById('tip-roi-status');
-                        const tipRoiProfit = document.getElementById('tip-roi-profit');
-                        if (tipRoiVal) {
-                            tipRoiVal.innerText = roiStr;
-                            tipRoiVal.style.color = realRoi >= 0 ? 'var(--accent-gold)' : '#f85149';
-                        }
-                        if (tipRoiCost) tipRoiCost.innerText = (totalSettled * 100).toString();
-                        if (tipRoiStatus) tipRoiStatus.innerText = realRoi >= 0 ? '净赚' : '回撤';
-                        if (tipRoiProfit) {
-                            const profitNum = Math.abs(Math.round((totalReturn - totalSettled) * 100));
-                            tipRoiProfit.innerText = profitNum.toString();
-                            tipRoiProfit.style.color = realRoi >= 0 ? '#3fb950' : '#f85149';
+                        if (todayValidSettled > 0) {
+                            const todayRoi = ((todayTotalReturn - todayValidSettled) / todayValidSettled) * 100;
+                            const sign = todayRoi >= 0 ? '+' : '';
+                            const roiStr = `${sign}${todayRoi.toFixed(1)}%`;
+                            roiElem.innerText = roiStr;
+                            roiElem.style.color = todayRoi >= 0 ? 'var(--accent-gold)' : '#f85149';
+
+                            const tipRoiVal = document.getElementById('tip-roi-val');
+                            const tipRoiCost = document.getElementById('tip-roi-cost');
+                            const tipRoiStatus = document.getElementById('tip-roi-status');
+                            const tipRoiProfit = document.getElementById('tip-roi-profit');
+                            if (tipRoiVal) {
+                                tipRoiVal.innerText = roiStr;
+                                tipRoiVal.style.color = todayRoi >= 0 ? 'var(--accent-gold)' : '#f85149';
+                            }
+                            if (tipRoiCost) tipRoiCost.innerText = (todayValidSettled * 100).toString();
+                            if (tipRoiStatus) tipRoiStatus.innerText = todayRoi >= 0 ? '净赚' : '回撤';
+                            if (tipRoiProfit) {
+                                const profitNum = Math.abs(Math.round((todayTotalReturn - todayValidSettled) * 100));
+                                tipRoiProfit.innerText = profitNum.toString();
+                                tipRoiProfit.style.color = todayRoi >= 0 ? '#3fb950' : '#f85149';
+                            }
+                        } else {
+                            roiElem.innerText = '待完赛';
+                            roiElem.style.color = 'var(--text-secondary)';
                         }
                     } else {
                         hitRateElem.innerText = '--';
