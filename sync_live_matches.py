@@ -623,6 +623,13 @@ def full_pipeline_sync(auto_push=True):
             log_messages.append(f"Settled via fotmob: HIT={st['hit']} MISS={st['miss']}")
     except Exception as exc:
         log_messages.append(f"Settle skipped: {type(exc).__name__}")
+    # 赔率轨迹：每次变化追加一条，作为后续模型/CLV 的基础
+    try:
+        n_odds = odds_track.record(existing_matches)
+        if n_odds:
+            log_messages.append(f"Odds snapshots added: {n_odds}")
+    except Exception as exc:
+        log_messages.append(f"Odds track skipped: {type(exc).__name__}")
     if changes_made:
         data['updated_at'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         data['total'] = len(existing_matches)
