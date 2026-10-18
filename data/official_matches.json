@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18 21:32:07",
+  "updated_at": "2026-10-18 21:43:07",
   "total": 74,
   "matches": [
     {
@@ -3007,7 +3007,7 @@
       "away": "罗森博格",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "进行中 · 中场",
+      "status": "进行中 · 下半场",
       "form_home": [
         "W",
         "D",
@@ -3090,7 +3090,7 @@
       "consensus": "主不败/首选主胜 (65.0%)",
       "consensus_ratio": 65.0,
       "tip": "主不败/首选主胜",
-      "score": "0-0",
+      "score": "0-1",
       "result": "PENDING",
       "analysis": "利兹联对阵曼联，三模型满血对抗研判首选【主不败/首选主胜】。",
       "dossier": {
@@ -3210,7 +3210,7 @@
       "consensus": "客胜 (65.0%)",
       "consensus_ratio": 65.0,
       "tip": "客胜",
-      "score": "0-0",
+      "score": "0-2",
       "result": "PENDING",
       "analysis": "佛罗伦萨对阵科莫，三模型满血对抗研判首选【客胜】。",
       "dossier": {
@@ -3271,7 +3271,7 @@
       "consensus": "客胜 (65.0%)",
       "consensus_ratio": 65.0,
       "tip": "客胜",
-      "score": "1-0",
+      "score": "1-1",
       "result": "PENDING",
       "analysis": "昂热对阵马赛，三模型满血对抗研判首选【客不败/双选平负】。",
       "dossier": {
