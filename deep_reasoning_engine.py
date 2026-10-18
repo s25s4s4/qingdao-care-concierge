@@ -73,7 +73,7 @@ def query_telegram_tips_for_match(home, away):
             })
     return matched[:5]
 
-def compute_poisson_and_kelly(odds):
+def compute_poisson_and_kelly(odds, league=""):
     """模型一 (Low 极端数学): 双变量泊松分布 (Bivariate Poisson) 与凯利去水比分精算"""
     try:
         sp_h = float(odds[0]) if odds[0] != '-' else 2.5
@@ -95,15 +95,22 @@ def compute_poisson_and_kelly(odds):
     # 凯利去水打分 (0-100)
     odds_score = round(min(max(pure_h * 1.1 if pure_h >= pure_a else pure_a * 1.1, 60.0), 86.0), 1)
 
+    # 动态联赛与强弱梯度修正基准进球权重 (破除死板的平均值禁锢)
+    base_goal_factor = 1.35
+    if league in ['荷甲', '德甲', '美职足', '瑞士超']:
+        base_goal_factor = 1.65 # 天然大球高开联赛
+    elif league in ['意甲', '西甲', '法乙', '西乙']:
+        base_goal_factor = 1.15 # 典型防守绞杀联赛
+
     # 基于胜平负概率反推攻防期望值 (Lambda: 主队 xG, Mu: 客队 xG)
     ratio_ha = pure_h / (pure_h + pure_a + 1e-5)
-    lambda_h = max(0.6, min(3.2, 1.35 * (ratio_ha / 0.5)))
-    mu_a = max(0.4, min(3.0, 1.25 * ((1.0 - ratio_ha) / 0.5)))
+    lambda_h = max(0.6, min(3.8, base_goal_factor * (ratio_ha / 0.5)))
+    mu_a = max(0.4, min(3.5, (base_goal_factor - 0.1) * ((1.0 - ratio_ha) / 0.5)))
 
-    # 二维双变量泊松分布计算 0-0 到 4-3 共 20 个比分的理论概率
+    # 二维双变量泊松分布计算 0-0 到 5-4 共 30 个比分的理论概率
     score_probs = {}
-    for x in range(5):
-        for y in range(4):
+    for x in range(6):
+        for y in range(5):
             prob_x = (lambda_h ** x) * math.exp(-lambda_h) / math.factorial(x)
             prob_y = (mu_a ** y) * math.exp(-mu_a) / math.factorial(y)
             score_probs[f"{x}-{y}"] = prob_x * prob_y
@@ -139,8 +146,8 @@ def run_tri_model_deep_reasoning(match_info):
     is_only_rq = match_info.get('is_only_rq', False)
     rang = match_info.get('rang', '0')
 
-    # 1. 运行 Low 模型计算物理数学指标
-    stats = compute_poisson_and_kelly(odds)
+    # 1. 运行 Low 模型计算物理数学指标 (按联赛大球属性与攻防因子动态修正)
+    stats = compute_poisson_and_kelly(odds, league=league)
 
     # 2. 调取真实海外电报频道推单
     tg_tips = query_telegram_tips_for_match(home, away)
