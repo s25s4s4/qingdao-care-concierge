@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-19 03:39:33",
+  "updated_at": "2026-10-19 03:43:14",
   "total": 74,
   "matches": [
     {
@@ -4346,7 +4346,7 @@
       "away": "拉齐奥",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "进行中 · 上半场",
+      "status": "进行中 · 中场",
       "form_home": [
         "W",
         "D",
@@ -4449,7 +4449,7 @@
       "away": "尼斯",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "进行中 · 上半场",
+      "status": "进行中 · 中场",
       "form_home": [
         "W",
         "D",
@@ -4573,7 +4573,7 @@
       "consensus": "让胜/博穿盘 (86.8%)由此",
       "consensus_ratio": 86.8,
       "tip": "让胜/博穿盘",
-      "score": "0-0",
+      "score": "2-0",
       "result": "PENDING",
       "analysis": "皇马对阵塞维利亚，官方单开让球胜平负(-2)，战术首选【让平/防让胜】。",
       "dossier": {
@@ -4612,7 +4612,7 @@
       "locked": true,
       "crosscheck": {
         "source": "fotmob",
-        "score": "0 - 0",
+        "score": "2 - 0",
         "finished": false
       },
       "provenance": {
