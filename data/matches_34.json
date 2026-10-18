@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18 13:34:06",
+  "updated_at": "2026-10-18 14:01:05",
   "total": 74,
   "matches": [
     {
@@ -2776,12 +2776,12 @@
         "D"
       ],
       "odds": [
-        "1.61",
+        "1.59",
         "3.55",
-        "4.42"
+        "4.57"
       ],
-      "consensus": "主胜 (65.0%)",
-      "consensus_ratio": 65.0,
+      "consensus": "主胜 (65.7%)",
+      "consensus_ratio": 65.7,
       "tip": "主胜",
       "score": "--",
       "result": "PENDING",
