@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18 20:53:05",
+  "updated_at": "2026-10-18 21:00:06",
   "total": 74,
   "matches": [
     {
@@ -3067,7 +3067,7 @@
       "away": "曼联",
       "home_rank": "英冠2",
       "away_rank": "10",
-      "status": "三模型极速裁决",
+      "status": "进行中 · 上半场 0'",
       "form_home": [
         "W",
         "W",
@@ -3090,7 +3090,7 @@
       "consensus": "主不败/首选主胜 (65.0%)",
       "consensus_ratio": 65.0,
       "tip": "主不败/首选主胜",
-      "score": "--",
+      "score": "0-0",
       "result": "PENDING",
       "analysis": "利兹联对阵曼联，三模型满血对抗研判首选【主不败/首选主胜】。",
       "dossier": {
@@ -3106,7 +3106,7 @@
         "tipster_score": 87.0,
         "math_score": 81.0
       },
-      "sale_closed": false,
+      "sale_closed": true,
       "predicted_scores": [
         "1-1",
         "2-1",
@@ -3116,7 +3116,8 @@
         "2",
         "3"
       ],
-      "is_single": true
+      "is_single": true,
+      "locked": true
     },
     {
       "code": "周日011",
@@ -3126,7 +3127,7 @@
       "away": "桑德兰",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "三模型极速裁决",
+      "status": "进行中 · 上半场 0'",
       "form_home": [
         "W",
         "D",
@@ -3143,13 +3144,13 @@
       ],
       "odds": [
         "1.86",
-        "3.25",
-        "3.52"
+        "3.10",
+        "3.72"
       ],
       "consensus": "主不败/首选主胜 (65.0%)",
       "consensus_ratio": 65.0,
       "tip": "主不败/首选主胜",
-      "score": "--",
+      "score": "0-0",
       "result": "PENDING",
       "analysis": "伯恩茅斯对阵桑德兰，三模型满血对抗研判首选【主不败/首选主胜】。",
       "dossier": {
@@ -3159,7 +3160,7 @@
         "market_attitude": "体彩官方开出主胜1.89、平局3.20、客胜3.47，去水后主胜真实概率达46.8%。欧洲亚盘普遍维稳在半球低水区间，平赔拉至3.20中位形成阻热缓冲，整体资金流向对伯恩茅斯主场拿分给予合理保护，并未过度造热主胜。",
         "decision_guide": "实战出票首选【主胜】，稳健求全建议双选【胜+平】过关。总进球数主看2、3球中低产格局。比分【黄金三角】矩阵组合：正路主推高频【2-1】，零封闷杀防范【1-0】，互攻防平锁死【1-1】，严防赢球输盘或平局丢单。"
       },
-      "sale_closed": false,
+      "sale_closed": true,
       "consensus_breakdown": {
         "odds_score": 75.0,
         "intel_score": 76.0,
@@ -3175,7 +3176,8 @@
         "2",
         "3"
       ],
-      "is_single": false
+      "is_single": false,
+      "locked": true
     },
     {
       "code": "周日012",
@@ -3185,7 +3187,7 @@
       "away": "科莫",
       "home_rank": "8",
       "away_rank": "14",
-      "status": "三模型极速裁决",
+      "status": "进行中 · 上半场 0'",
       "form_home": [
         "W",
         "D",
@@ -3208,7 +3210,7 @@
       "consensus": "客胜 (65.0%)",
       "consensus_ratio": 65.0,
       "tip": "客胜",
-      "score": "--",
+      "score": "0-0",
       "result": "PENDING",
       "analysis": "佛罗伦萨对阵科莫，三模型满血对抗研判首选【客胜】。",
       "dossier": {
@@ -3224,7 +3226,7 @@
         "tipster_score": 78.0,
         "math_score": 80.0
       },
-      "sale_closed": false,
+      "sale_closed": true,
       "predicted_scores": [
         "0-1",
         "0-2",
@@ -3235,7 +3237,8 @@
         "2",
         "3"
       ],
-      "is_single": false
+      "is_single": false,
+      "locked": true
     },
     {
       "code": "周日013",
@@ -3245,7 +3248,7 @@
       "away": "马赛",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "三模型极速裁决",
+      "status": "进行中 · 上半场 0'",
       "form_home": [
         "W",
         "D",
@@ -3268,7 +3271,7 @@
       "consensus": "客胜 (65.0%)",
       "consensus_ratio": 65.0,
       "tip": "客胜",
-      "score": "--",
+      "score": "0-0",
       "result": "PENDING",
       "analysis": "昂热对阵马赛，三模型满血对抗研判首选【客不败/双选平负】。",
       "dossier": {
@@ -3278,7 +3281,7 @@
         "market_attitude": "欧洲机构及官方SP给出主胜3.95、平局3.80、客胜1.63，客胜去水后真实概率高达54.3%，客队xG期望达1.77，对客胜形成实质性低赔阻控；平局高挂在3.80高位并未刻意防范，海外专业推单频道对马赛客场净胜展现出高度共振，客胜盘口阻上意图清晰。",
         "decision_guide": "实战投注首选【客胜】作为正路稳胆；进球数重点锁定【2球、3球】；比分【黄金三角】矩阵首选高频核心正路【0-2】，次选客队穿透互攻【1-2】，防范防守绞杀阶段的小比分零封【0-1】，形成兼顾穿盘与稳健控制的完整防御闭环。"
       },
-      "sale_closed": false,
+      "sale_closed": true,
       "consensus_breakdown": {
         "odds_score": 78.0,
         "intel_score": 75.0,
@@ -3294,7 +3297,8 @@
         "2",
         "3"
       ],
-      "is_single": false
+      "is_single": false,
+      "locked": true
     },
     {
       "code": "周日014",
