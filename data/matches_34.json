@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-19 01:23:05",
+  "updated_at": "2026-10-19 01:33:08",
   "total": 74,
   "matches": [
     {
@@ -3553,7 +3553,7 @@
       "away": "阿森纳",
       "home_rank": "12",
       "away_rank": "3",
-      "status": "进行中 · 下半场",
+      "status": "已完赛",
       "form_home": [
         "D",
         "L",
@@ -3577,7 +3577,7 @@
       "consensus_ratio": 76.6,
       "tip": "客胜",
       "score": "0-1",
-      "result": "PENDING",
+      "result": "HIT",
       "analysis": "诺丁汉对阵阿森纳，三模型满血对抗研判首选【客胜】。",
       "dossier": {
         "summary": "客胜，四维综合共识度 83.1%\\由此",
@@ -3614,7 +3614,7 @@
       "away": "霍芬海姆",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "进行中 · 下半场",
+      "status": "已完赛",
       "form_home": [
         "W",
         "D",
@@ -3638,7 +3638,7 @@
       "consensus_ratio": 65.0,
       "tip": "客不败/双选平负",
       "score": "1-2",
-      "result": "PENDING",
+      "result": "HIT",
       "analysis": "门兴对阵霍芬海姆，三模型满血对抗研判首选【客胜】。",
       "dossier": {
         "summary": "客不败/双选平负，四维综合共识度 77.2%\\由此",
@@ -3697,7 +3697,7 @@
       "consensus": "主胜 (71.5%)",
       "consensus_ratio": 71.5,
       "tip": "主胜",
-      "score": "3-0",
+      "score": "3-1",
       "result": "PENDING",
       "analysis": "AC米兰对阵亚特兰大，三模型满血对抗研判首选【主不败/首选主胜】。",
       "dossier": {
