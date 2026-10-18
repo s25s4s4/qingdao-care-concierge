@@ -1074,6 +1074,38 @@
                 </div>
             </div>
 
+            <!-- ROI 算法双轨对照卡片 (首选纯单式 vs 容错防冷) -->
+            <div style="background: rgba(13, 17, 23, 0.7); border: 1px solid var(--border-color); border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                    <span style="font-weight: 800; font-size: 12px; color: var(--accent-gold); display: flex; align-items: center; gap: 4px;">
+                        <span>⚖️</span> 2串1 实盘投注策略对比验证（周五 & 周六回测）
+                    </span>
+                    <span style="font-size: 10px; color: var(--text-secondary);">单注基准: 1000元</span>
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+                    <!-- 模式 1: 纯首选单式 -->
+                    <div style="background: rgba(22, 27, 34, 0.8); border: 1px solid rgba(88, 166, 255, 0.3); border-radius: 6px; padding: 8px;">
+                        <div style="font-size: 11px; font-weight: 700; color: #58a6ff; margin-bottom: 4px;">🎯 只选【首选单挑】2串1</div>
+                        <div style="font-size: 10px; color: var(--text-secondary); line-height: 1.4;">
+                            • 剔除双选防冷，每场仅取第一单挑方向。<br>
+                            • <b style="color: #cbd5e1;">周五 (55组)</b>: 命中 21 组，返 70,259 元，<b style="color: #3fb950;">净利 +15,259 元 (ROI +27.7%)</b><br>
+                            • <b style="color: #cbd5e1;">周六 (435组)</b>: 命中 120 组，返 389,006 元，<b style="color: #f85149;">净利 -45,994 元 (ROI -10.6%)</b><br>
+                            <span style="color: var(--accent-gold); font-size: 9.5px;">特点: 资金不分散，遇到高赔平局直接起飞，但容错率极低。</span>
+                        </div>
+                    </div>
+                    <!-- 模式 2: 双选容错合买 -->
+                    <div style="background: rgba(22, 27, 34, 0.8); border: 1px solid rgba(63, 185, 80, 0.3); border-radius: 6px; padding: 8px;">
+                        <div style="font-size: 11px; font-weight: 700; color: #3fb950; margin-bottom: 4px;">🛡️ 包含【双选防冷】2串1</div>
+                        <div style="font-size: 10px; color: var(--text-secondary); line-height: 1.4;">
+                            • 首选防冷双管齐下，按实际打出赛果兑奖。<br>
+                            • <b style="color: #cbd5e1;">周五 (55组)</b>: 命中 45 组，返 214,014 元，<b style="color: #3fb950;">净利 +159,014 元 (ROI +289.1%)</b><br>
+                            • <b style="color: #cbd5e1;">周六 (435组)</b>: 命中 190 组，返 761,438 元，<b style="color: #3fb950;">净利 +326,438 元 (ROI +75.0%)</b><br>
+                            <span style="color: #3fb950; font-size: 9.5px;">特点: 命中率高，防冷抓平局能力极强，两日稳定盈利。</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="audit-stat-box">
                 <div>
                     <div style="font-size: 18px; font-weight: 800; font-family: var(--font-mono); color: #3fb950;" id="audit-hit-rate">--</div>
@@ -1711,11 +1743,24 @@
                 const card = document.createElement('div');
                 card.className = 'match-card';
                 card.style.marginBottom = '10px';
+                        
+                // 提取纯单挑首选
+                const getPickText = (tip) => {
+                    if (tip.includes('首选平') || tip.startsWith('平局')) return '平局';
+                    if (tip.includes('首选客胜') || tip.startsWith('客胜')) return '客胜';
+                    if (tip.includes('首选主胜') || tip.startsWith('主胜')) return '主胜';
+                    if (tip.includes('客不败')) return '客胜';
+                    if (tip.includes('主不败')) return '主胜';
+                    return '主胜';
+                };
+                const p1 = getPickText(pair.m1.tip);
+                const p2 = getPickText(pair.m2.tip);
+
                 card.innerHTML = `
                     <div class="card-header" style="margin-bottom: 6px;">
                         <div>
                             <span class="league-tag" style="background: rgba(46, 160, 67, 0.2); color: #3fb950; font-weight: 800;">实战 2串1 · 组合 #${globalRank}</span>
-                            <span style="font-size: 11px; color: var(--text-secondary); margin-left: 6px;">全息配对</span>
+                            <span style="font-size: 11px; color: var(--text-secondary); margin-left: 6px;">纯首选单挑</span>
                         </div>
                         <div style="font-size: 13px; font-weight: 800; color: var(--accent-gold); font-family: var(--font-mono);">
                             理论回报: ${pair.combinedSp.toFixed(2)} 倍
@@ -1726,14 +1771,20 @@
                             <span style="color: var(--text-secondary); font-family: var(--font-mono); font-size: 11px;">[${pair.m1.code}]</span> 
                             <b>${pair.m1.home}</b> vs <b>${pair.m1.away}</b>
                         </div>
-                        <span class="badge" style="background: rgba(210, 153, 34, 0.15); color: var(--accent-gold); font-size: 11px; font-weight: 700;">建议: ${pair.m1.tip}</span>
+                        <div>
+                            <span class="badge" style="background: rgba(88, 166, 255, 0.2); color: #58a6ff; font-size: 11px; font-weight: 700; margin-right: 4px;">单挑: ${p1}</span>
+                            <span style="font-size: 10px; color: var(--text-tertiary);">(${pair.m1.tip})</span>
+                        </div>
                     </div>
                     <div style="background: rgba(13, 17, 23, 0.7); border-radius: 6px; padding: 8px 10px; display: flex; justify-content: space-between; align-items: center;">
                         <div style="font-size: 12px;">
                             <span style="color: var(--text-secondary); font-family: var(--font-mono); font-size: 11px;">[${pair.m2.code}]</span> 
                             <b>${pair.m2.home}</b> vs <b>${pair.m2.away}</b>
                         </div>
-                        <span class="badge" style="background: rgba(210, 153, 34, 0.15); color: var(--accent-gold); font-size: 11px; font-weight: 700;">建议: ${pair.m2.tip}</span>
+                        <div>
+                            <span class="badge" style="background: rgba(88, 166, 255, 0.2); color: #58a6ff; font-size: 11px; font-weight: 700; margin-right: 4px;">单挑: ${p2}</span>
+                            <span style="font-size: 10px; color: var(--text-tertiary);">(${pair.m2.tip})</span>
+                        </div>
                     </div>
                 `;
                 pairsContainer.appendChild(card);
