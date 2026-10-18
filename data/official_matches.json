@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18 20:43:05",
+  "updated_at": "2026-10-18 20:53:05",
   "total": 74,
   "matches": [
     {
@@ -2825,7 +2825,7 @@
       "away": "桑坦德",
       "home_rank": "7",
       "away_rank": "西乙1",
-      "status": "进行中 · 上半场",
+      "status": "进行中 · 中场",
       "form_home": [
         "W",
         "D",
@@ -2886,7 +2886,7 @@
       "away": "埃夫斯堡",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "进行中 · 上半场",
+      "status": "进行中 · 中场",
       "form_home": [
         "W",
         "D",
@@ -2947,7 +2947,7 @@
       "away": "瓦萨",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "进行中 · 上半场",
+      "status": "进行中 · 中场",
       "form_home": [
         "W",
         "D",
@@ -3083,9 +3083,9 @@
         "L"
       ],
       "odds": [
-        "2.35",
+        "2.42",
         "3.10",
-        "2.62"
+        "2.55"
       ],
       "consensus": "主不败/首选主胜 (65.0%)",
       "consensus_ratio": 65.0,
@@ -3201,9 +3201,9 @@
         "D"
       ],
       "odds": [
-        "3.35",
-        "3.55",
-        "1.82"
+        "3.27",
+        "3.50",
+        "1.86"
       ],
       "consensus": "客胜 (65.0%)",
       "consensus_ratio": 65.0,
@@ -3440,12 +3440,12 @@
         "W"
       ],
       "odds": [
-        "4.00",
+        "4.05",
         "4.15",
-        "1.57"
+        "1.56"
       ],
-      "consensus": "客胜 (84.7%)由此",
-      "consensus_ratio": 84.7,
+      "consensus": "客胜 (65.3%)",
+      "consensus_ratio": 65.3,
       "tip": "客胜",
       "score": "--",
       "result": "PENDING",
