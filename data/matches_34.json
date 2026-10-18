@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-19 01:59:06",
+  "updated_at": "2026-10-19 02:04:06",
   "total": 74,
   "matches": [
     {
@@ -3674,7 +3674,7 @@
       "away": "亚特兰大",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "进行中 · 下半场",
+      "status": "已完赛",
       "form_home": [
         "W",
         "D",
@@ -3698,7 +3698,7 @@
       "consensus_ratio": 71.5,
       "tip": "主胜",
       "score": "3-2",
-      "result": "PENDING",
+      "result": "HIT",
       "analysis": "AC米兰对阵亚特兰大，三模型满血对抗研判首选【主不败/首选主胜】。",
       "dossier": {
         "summary": "主胜，四维综合共识度 83.2%\\由此",
@@ -3758,7 +3758,7 @@
       "consensus": "客胜 (65.0%)",
       "consensus_ratio": 65.0,
       "tip": "客不败/首选客胜",
-      "score": "1-3",
+      "score": "2-5",
       "result": "PENDING",
       "analysis": "马拉加对阵皇家社会，三模型满血对抗研判首选【客不败/双选平负】。",
       "dossier": {
