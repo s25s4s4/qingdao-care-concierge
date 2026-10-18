@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-19 00:43:06",
+  "updated_at": "2026-10-19 00:53:05",
   "total": 74,
   "matches": [
     {
@@ -3637,7 +3637,7 @@
       "consensus": "客不败/双选平负 (65.0%)",
       "consensus_ratio": 65.0,
       "tip": "客不败/双选平负",
-      "score": "1-1",
+      "score": "1-2",
       "result": "PENDING",
       "analysis": "门兴对阵霍芬海姆，三模型满血对抗研判首选【客胜】。",
       "dossier": {
@@ -3674,7 +3674,7 @@
       "away": "亚特兰大",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "进行中 · 上半场",
+      "status": "进行中 · 中场",
       "form_home": [
         "W",
         "D",
@@ -3697,7 +3697,7 @@
       "consensus": "主胜 (71.5%)",
       "consensus_ratio": 71.5,
       "tip": "主胜",
-      "score": "1-0",
+      "score": "2-0",
       "result": "PENDING",
       "analysis": "AC米兰对阵亚特兰大，三模型满血对抗研判首选【主不败/首选主胜】。",
       "dossier": {
