@@ -625,6 +625,7 @@ def full_pipeline_sync(auto_push=True):
         log_messages.append(f"Settle skipped: {type(exc).__name__}")
     # 赔率轨迹：每次变化追加一条，作为后续模型/CLV 的基础
     try:
+        import odds_track
         n_odds = odds_track.record(existing_matches)
         if n_odds:
             log_messages.append(f"Odds snapshots added: {n_odds}")
