@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18 23:13:07",
+  "updated_at": "2026-10-18 23:15:06",
   "total": 74,
   "matches": [
     {
@@ -3493,7 +3493,7 @@
       "away": "摩纳哥",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "三模型极速裁决",
+      "status": "进行中 · 上半场 0'",
       "form_home": [
         "W",
         "D",
@@ -3516,7 +3516,7 @@
       "consensus": "客胜 (65.0%)",
       "consensus_ratio": 65.0,
       "tip": "客不败/首选客胜",
-      "score": "--",
+      "score": "0-0",
       "result": "PENDING",
       "analysis": "洛里昂对阵摩纳哥，三模型满血对抗研判首选【客胜】。",
       "dossier": {
