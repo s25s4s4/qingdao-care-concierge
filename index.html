@@ -944,6 +944,8 @@
             </div>
         </div>
 
+        <div id="match-updated-at" style="text-align: center; font-size: 10px; color: var(--text-secondary); margin: -6px 0 8px; font-family: 'JetBrains Mono', monospace;">比分更新：--</div>
+
         <!-- 官方赛事多维分类筛选器 -->
         <div class="category-scroller">
             <div class="pill-btn active" id="pill-all-tab" onclick="filterMatches(this, 'all')">全部在售/进行中</div>
@@ -983,7 +985,7 @@
             </div>
             • <b>柜台物理铁律</b>：竞彩绝大多数场次不设单场固定奖，<b>必须两场捆绑（2串1）才能出票</b>！<br>
             • <b>矩阵组合逻辑</b>：我们将当天所有在售比赛进行全息两两组合（单关亦参与组合）。以每组均注为基准，中奖按 <code>SP₁ × SP₂</code> 复合相乘。<br>
-            • <b>复利暴击威力</b>：前一完赛日 2串1 组合全息互锁，精准打出高赔复利，<b>实战 ROI 达到 <span id="parlay-banner-roi" style="color: var(--accent-gold); font-weight: 800;">+75.0%</span></b>！
+            • <b>复利暴击威力</b>：前一完赛日 2串1 组合全息互锁，精准打出高赔复利，<b>实战 ROI 达到 <span id="parlay-banner-roi" style="color: var(--accent-gold); font-weight: 800;">--</span></b>！
         </div>
 
         <!-- 单关稳胆专区 -->
@@ -1012,7 +1014,7 @@
     <!-- ==================== TAB 3: 去水共识榜 (Consensus) ==================== -->
     <div id="tab-consensus" class="tab-view">
         <div style="font-size: 13px; font-weight: 700; color: var(--text-primary); margin-bottom: 6px;">
-            今日欧洲 37 家机构高度一致榜单
+            今日机构赔率高度一致榜单
         </div>
         <p style="font-size: 11px; color: var(--text-secondary); margin-bottom: 14px;">
             综合 FocusPredict、VictorsPredict、Feedinco 等权威源，按多源交叉拟合度倒序排列：
@@ -1035,7 +1037,7 @@
                 </div>
             </div>
             <div style="font-size: 11px; color: #3fb950; display: flex; align-items: center; gap: 4px;">
-                <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #3fb950; animation: pulse 1.5s infinite;"></span> 云端毫秒同步
+                <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #3fb950; animation: pulse 1.5s infinite;"></span> <span id="cloud-sync-label">自动同步</span>
             </div>
         </div>
 
@@ -1080,7 +1082,7 @@
                     <span style="font-weight: 800; font-size: 12px; color: var(--accent-gold); display: flex; align-items: center; gap: 4px;">
                         <span>⚖️</span> 前一完赛日 2串1 实盘投注策略对比验证
                     </span>
-                    <span style="font-size: 10px; color: var(--text-secondary);" id="audit-compare-day-title">周六档期 (435组)</span>
+                    <span style="font-size: 10px; color: var(--text-secondary);" id="audit-compare-day-title">--</span>
                 </div>
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;" id="audit-compare-container">
                     <!-- 动态注入前一天的对比数据 -->
@@ -1168,7 +1170,7 @@
                     <div style="background: var(--bg-card-elevated); border: 1px solid var(--border-color); border-radius: 10px; padding: 12px; display: flex; gap: 10px;">
                         <div style="font-size: 20px; color: #58a6ff; flex-shrink: 0; margin-top: 2px;">⚡</div>
                         <div>
-                            <div style="font-size: 13px; font-weight: 700; color: var(--text-primary); margin-bottom: 2px;">欧洲 37 家机构赔率高频去水引擎</div>
+                            <div style="font-size: 13px; font-weight: 700; color: var(--text-primary); margin-bottom: 2px;">欧洲机构赔率高频去水引擎</div>
                             <div style="font-size: 11px; color: var(--text-secondary); line-height: 1.5;">拒绝听风就是雨和盲目看胜率！基于凯利指数与泊松分布模型，深度过滤虚假诱盘，穿透欧洲主流机构的真实资金意图。</div>
                         </div>
                     </div>
@@ -1295,6 +1297,33 @@
         // 旧版 8899 JSONP 通道已下线（连接超时且 HTTP 降级会被混合内容拦截），
         // 实时比分统一走 SSE 推送 + 10 秒同源全量兜底。
         let SSE_ALIVE = false;
+        let MATCH_REVISION = null;
+        function updateSyncStatus() {
+            const el = document.getElementById('sync-text');
+            const dot = document.querySelector('.sync-dot');
+            const cloud = document.getElementById('cloud-sync-label');
+            let age = NaN;
+            if (MATCH_REVISION) {
+                const t = Date.parse(String(MATCH_REVISION).replace(' ', 'T'));
+                if (!isNaN(t)) age = (Date.now() - t) / 1000;
+            }
+            let text, color;
+            if (!MATCH_REVISION) { text = '等待数据'; color = '#8b949e'; }
+            else if (SSE_ALIVE && age < 120) { text = '推送已连接'; color = '#3fb950'; }
+            else if (age < 60) { text = '轮询同步中'; color = '#3fb950'; }
+            else if (age < 300) { text = '数据 ' + Math.round(age) + ' 秒前'; color = '#d29922'; }
+            else { text = '数据已过期 ' + Math.round(age / 60) + ' 分钟'; color = '#f85149'; }
+            if (el) el.innerText = text;
+            if (dot) dot.style.background = color;
+            if (cloud) cloud.innerText = SSE_ALIVE ? '推送直连' : '轮询同步';
+        }
+        function updateMatchStamp(updatedAt) {
+            MATCH_REVISION = updatedAt || null;
+            const el = document.getElementById('match-updated-at');
+            if (el) el.innerText = '比分更新：' + (updatedAt || '未知');
+            updateSyncStatus();
+        }
+        setInterval(updateSyncStatus, 5000);
         function fetchLiveScoresPulse() { /* 由 initLiveSSE 替代，保留函数名兼容旧调用 */ }
 
         // 加载全量官方比赛数据 (协议智能适配：优先相对路径同源直连，避免 HTTPS 跨协议拦截)
@@ -1321,6 +1350,7 @@
                 .then(data => {
                     if (data && data.matches) {
                         ALL_OFFICIAL_MATCHES = data.matches;
+                        updateMatchStamp(data.updated_at);
                         renderMatchesList(filterMode);
                         renderConsensusList();
                         renderAuditLedger();
@@ -1455,7 +1485,7 @@
                     <!-- 欧洲机构去水共识度 -->
                     <div class="consensus-indicator">
                         <div class="consensus-head">
-                            <span class="consensus-title">欧洲 37 家机构综合共识</span>
+                            <span class="consensus-title">欧洲机构综合共识</span>
                             <span class="consensus-rate">${m.consensus}</span>
                         </div>
                         <div class="bar-track">
@@ -2336,7 +2366,7 @@
         // 异步获取纯体彩情报流 (HTTPS混合内容防御：优先相对路径同源，彻底解决手机端HTTPS混合内容拦截)
         function fetchLiveIntel() {
             const syncEl = document.getElementById('sync-text');
-            if (syncEl) syncEl.innerText = '正在同步...';
+
             
             // 依据当前页面协议智能选择协议，避免 HTTPS 下请求 HTTP 触发 Mixed Content 拦截！
             const isHttps = location.protocol === 'https:';
@@ -2352,7 +2382,7 @@
                     return res.json();
                 })
                 .then(data => {
-                    if (syncEl) syncEl.innerText = '已实时同步';
+
                     const timeEl = document.getElementById('wire-meta-time');
                     if (timeEl && data.updated_at) {
                         timeEl.innerText = '最后同步：' + data.updated_at + ' (共 ' + data.total_tips + ' 条体彩在售一手情报)';
@@ -2360,7 +2390,7 @@
                     renderLiveFeed(data.live_feed);
                 })
                 .catch(err => {
-                    if (syncEl) syncEl.innerText = '离线模式';
+                    updateSyncStatus();
                     console.warn('[LiveIntel Fetch Fallback]', err);
                 });
         }
@@ -2473,7 +2503,7 @@
                 <!-- 模块三：机构态度与欧赔盘口 -->
                 <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); border-radius: 8px; padding: 12px; margin-bottom: 10px;">
                     <div style="font-weight: 800; color: #fff; font-size: 13px; margin-bottom: 6px; display: flex; align-items: center; gap: 5px;">
-                        <span>📈</span> 三、欧洲 37 家机构盘口与去水态度
+                        <span>📈</span> 三、欧洲机构盘口与去水态度
                     </div>
                     <p style="font-size: 12.5px; color: #cbd5e1; line-height: 1.65; margin: 0;">${dossier.market_attitude}</p>
                 </div>
@@ -2579,6 +2609,7 @@ function copyWechat() {
                         if (revision && revision === lastRevision) return; // 无变化不重绘
                         lastRevision = revision;
                         ALL_OFFICIAL_MATCHES = data.matches;
+                        updateMatchStamp(data.updated_at);
                         renderMatchesList(window.currentFilterMode || 'all');
                         renderConsensusList();
                         renderAuditLedger();
