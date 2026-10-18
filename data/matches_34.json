@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18 23:38:13",
+  "updated_at": "2026-10-18 23:39:05",
   "total": 74,
   "matches": [
     {
@@ -3372,7 +3372,7 @@
       "away": "阿拉维斯",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "进行中 · 上半场 83'",
+      "status": "进行中 · 下半场",
       "form_home": [
         "W",
         "D",
@@ -3433,7 +3433,7 @@
       "away": "阿贾克斯",
       "home_rank": "9",
       "away_rank": "2",
-      "status": "进行中 · 上半场 53'",
+      "status": "进行中 · 上半场",
       "form_home": [
         "D",
         "L",
@@ -3493,7 +3493,7 @@
       "away": "摩纳哥",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "进行中 · 上半场 23'",
+      "status": "进行中 · 上半场",
       "form_home": [
         "W",
         "D",
@@ -3553,7 +3553,7 @@
       "away": "阿森纳",
       "home_rank": "12",
       "away_rank": "3",
-      "status": "进行中 · 上半场 8'",
+      "status": "进行中 · 上半场",
       "form_home": [
         "D",
         "L",
@@ -3614,7 +3614,7 @@
       "away": "霍芬海姆",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "进行中 · 上半场 8'",
+      "status": "进行中 · 上半场",
       "form_home": [
         "W",
         "D",
