@@ -1,17 +1,7 @@
 {
   "updated_at": "2026-10-18 22:31:47",
-  "total_tips": 12,
+  "total_tips": 11,
   "live_feed": [
-    {
-      "id": 2248,
-      "channel": "matchpreviews",
-      "time": "2026-10-18 21:09",
-      "code": "周日018",
-      "league": "英超",
-      "category": "赛前军情",
-      "match": "诺丁汉 VS 阿森纳",
-      "chinese": "这纯粹是条亨利破纪录的陈年情怀文案，夹带私彩野鸡网引流，无任何比赛干货与盘口资金情报。今日正赛别受杂讯干扰，老老实实看临场伤停和首发名单，散了！"
-    },
     {
       "id": 2191,
       "channel": "stavki",
