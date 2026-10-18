@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18 15:53:06",
+  "updated_at": "2026-10-18 16:02:06",
   "total": 74,
   "matches": [
     {
@@ -2605,7 +2605,7 @@
       "consensus": "主不败/首选主胜 (65.0%)",
       "consensus_ratio": 65.0,
       "tip": "主不败/首选主胜",
-      "score": "0-0",
+      "score": "0-1",
       "result": "PENDING",
       "analysis": "江原FC对阵仁川联，三模型满血对抗研判首选【主不败/首选主胜】。",
       "dossier": {
@@ -2666,7 +2666,7 @@
       "consensus": "主胜 (84.9%)",
       "consensus_ratio": 84.9,
       "tip": "主胜",
-      "score": "0-0",
+      "score": "1-0",
       "result": "PENDING",
       "analysis": "首尔FC对阵金泉尚武，三模型满血对抗研判首选【主胜】。",
       "dossier": {
