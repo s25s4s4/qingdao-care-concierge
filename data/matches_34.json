@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-19 04:45:17",
+  "updated_at": "2026-10-19 04:53:26",
   "total": 74,
   "matches": [
     {
@@ -4573,7 +4573,7 @@
       "consensus": "让胜/博穿盘 (86.8%)由此",
       "consensus_ratio": 86.8,
       "tip": "让胜/博穿盘",
-      "score": "3-0",
+      "score": "4-1",
       "result": "PENDING",
       "analysis": "皇马对阵塞维利亚，官方单开让球胜平负(-2)，战术首选【让平/防让胜】。",
       "dossier": {
@@ -4612,7 +4612,7 @@
       "locked": true,
       "crosscheck": {
         "source": "fotmob",
-        "score": "3 - 0",
+        "score": "4 - 1",
         "finished": false
       },
       "provenance": {
