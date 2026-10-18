@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18 16:12:05",
+  "updated_at": "2026-10-18 16:22:05",
   "total": 74,
   "matches": [
     {
@@ -2582,7 +2582,7 @@
       "away": "仁川联",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "进行中 · 上半场",
+      "status": "进行中 · 中场",
       "form_home": [
         "W",
         "D",
@@ -2666,7 +2666,7 @@
       "consensus": "主胜 (84.9%)",
       "consensus_ratio": 84.9,
       "tip": "主胜",
-      "score": "1-0",
+      "score": "1-1",
       "result": "PENDING",
       "analysis": "首尔FC对阵金泉尚武，三模型满血对抗研判首选【主胜】。",
       "dossier": {
@@ -3734,9 +3734,9 @@
         "W"
       ],
       "odds": [
-        "3.30",
-        "3.50",
-        "1.85"
+        "3.35",
+        "3.60",
+        "1.81"
       ],
       "consensus": "客不败/双选平负 (65.0%)",
       "consensus_ratio": 65.0,
