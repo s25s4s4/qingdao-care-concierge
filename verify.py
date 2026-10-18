@@ -128,3 +128,32 @@ def settle_all(matches):
         else:
             stats["skipped"] += 1
     return stats
+
+
+def freeze_mid(match, now=None):
+    """比赛已开赛但仍在进行：立即冻结当前建议，防止赛后改动；明确标记非赛前。"""
+    if match.get("prediction_snapshot"):
+        return False
+    if not match.get("tip"):
+        return False
+    now = now or datetime.now()
+    snapshot = {
+        "tip": match.get("tip"),
+        "predicted_scores": match.get("predicted_scores"),
+        "predicted_goals": match.get("predicted_goals"),
+        "consensus_ratio": match.get("consensus_ratio"),
+        "is_only_rq": bool(match.get("is_only_rq")),
+        "rang": match.get("rang", "0"),
+        "frozen_at": now.isoformat(timespec="seconds"),
+        "kickoff": str(match.get("time")),
+        "frozen_mid_match": True,
+        "verified_pre_match": False,
+        "evidence": {"odds": match.get("odds"), "odds_source": match.get("source_name", "500.com"),
+                     "method": "frozen_after_kickoff"},
+    }
+    snapshot["sha256"] = _hash(snapshot)
+    match["prediction_snapshot"] = snapshot
+    match["provenance"] = {"method": "frozen_after_kickoff", "evidence": "开赛中冻结", "traceable": True,
+                           "note": "开赛后冻结，仅防止赛后改动，不作为赛前能力证明"}
+    match["prediction_verified"] = False
+    return True
