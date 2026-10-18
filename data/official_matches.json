@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18 19:16:41",
+  "updated_at": "2026-10-18 19:22:06",
   "total": 74,
   "matches": [
     {
@@ -2764,7 +2764,7 @@
       "away": "莱切",
       "home_rank": "6",
       "away_rank": "17",
-      "status": "进行中 · 上半场",
+      "status": "进行中 · 中场",
       "form_home": [
         "L",
         "L",
@@ -3078,12 +3078,12 @@
         "L"
       ],
       "odds": [
-        "2.28",
+        "2.35",
         "3.30",
-        "2.58"
+        "2.50"
       ],
-      "consensus": "主不败/首选主胜 (79.4%)由此",
-      "consensus_ratio": 79.4,
+      "consensus": "主不败/首选主胜 (65.0%)",
+      "consensus_ratio": 65.0,
       "tip": "主不败/首选主胜",
       "score": "--",
       "result": "PENDING",
