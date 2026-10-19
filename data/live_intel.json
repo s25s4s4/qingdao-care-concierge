@@ -1,7 +1,18 @@
 {
-  "updated_at": "2026-10-19 17:25:35",
-  "total_tips": 6,
+  "updated_at": "2026-10-19 17:50:38",
+  "total_tips": 7,
   "live_feed": [
+    {
+      "id": 2642,
+      "channel": "FabrizioRomano",
+      "time": "2026-10-19 04:53",
+      "code": "周二005",
+      "league": "欧冠",
+      "category": "赛前军情(未翻译)",
+      "match": "罗马 VS 布拉迪斯",
+      "chinese": "[原文·未翻译] Yan Diomande scores and reaches 5 G/A in the last 4 starts for Real Madrid. 📈 🇨🇮 🅰️ vs Elche ⚽️ vs Villarreal 🅰️ vs AS Roma 🅰️ ⚽️ vs Sevilla",
+      "translated": false
+    },
     {
       "id": 2643,
       "channel": "pensadordeapuestas",
