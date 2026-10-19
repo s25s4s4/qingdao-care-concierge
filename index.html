@@ -2142,27 +2142,11 @@
                             roiElem.innerText = roiStr;
                             roiElem.style.color = todayRoi >= 0 ? 'var(--accent-gold)' : '#f85149';
 
-                            const tipRoiVal = document.getElementById('tip-roi-val');
-                            const tipRoiCost = document.getElementById('tip-roi-cost');
-                            const tipRoiStatus = document.getElementById('tip-roi-status');
-                            const tipRoiProfit = document.getElementById('tip-roi-profit');
-                            if (tipRoiVal) {
-                                tipRoiVal.innerText = roiStr;
-                                tipRoiVal.style.color = todayRoi >= 0 ? 'var(--accent-gold)' : '#f85149';
-                            }
-                            
                             // 假设每注 1000 元标准大额出票
                             const STAKE_PER_BET = 1000;
                             const totalStake = totalMultiBets * STAKE_PER_BET;
                             const totalWin = Math.round(totalMultiReturn * STAKE_PER_BET);
                             const netProfit = totalWin - totalStake;
-
-                            if (tipRoiCost) tipRoiCost.innerText = totalStake.toLocaleString();
-                            if (tipRoiStatus) tipRoiStatus.innerText = netProfit >= 0 ? '净赚' : '回撤';
-                            if (tipRoiProfit) {
-                                tipRoiProfit.innerText = Math.abs(netProfit).toLocaleString();
-                                tipRoiProfit.style.color = netProfit >= 0 ? '#3fb950' : '#f85149';
-                            }
 
                             // 动态渲染【前一完赛日 2串1 策略双轨对比卡片】
                             const compareContainer = document.getElementById('audit-compare-container');
@@ -2214,13 +2198,6 @@
                         statTotalElem.innerText = `0 / ${ALL_OFFICIAL_MATCHES.length}`;
                         roiElem.innerText = '待完赛';
                         roiElem.style.color = 'var(--text-secondary)';
-                
-                        const tipRoiVal = document.getElementById('tip-roi-val');
-                        const tipRoiCost = document.getElementById('tip-roi-cost');
-                        const tipRoiProfit = document.getElementById('tip-roi-profit');
-                        if (tipRoiVal) tipRoiVal.innerText = '待完赛';
-                        if (tipRoiCost) tipRoiCost.innerText = '0';
-                        if (tipRoiProfit) tipRoiProfit.innerText = '0';
                     }
 
                     if (settledList.length === 0) {
