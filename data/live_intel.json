@@ -1,7 +1,18 @@
 {
-  "updated_at": "2026-10-19 22:15:41",
-  "total_tips": 11,
+  "updated_at": "2026-10-19 22:25:43",
+  "total_tips": 12,
   "live_feed": [
+    {
+      "id": 2849,
+      "channel": "tribuna_football",
+      "time": "2026-10-19 22:18",
+      "code": "周二008",
+      "league": "欧冠",
+      "category": "赛前军情(未翻译)",
+      "match": "曼城 VS 雅典AEK",
+      "chinese": "[原文·未翻译] Man City's future could be turned upside down if the latest reports are accurate 😳 Insiders reportedly expect a huge points deduction that c",
+      "translated": false
+    },
     {
       "id": 2835,
       "channel": "FabrizioRomano",
