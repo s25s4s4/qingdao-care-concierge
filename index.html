@@ -2036,48 +2036,90 @@
                                 (untrusted ? `；另有 ${untrusted} 场无可复核依据，不计入准确率` : '');
                         })();
 
-                        // 核心重构：实战 ROI 严格按 2串1 全息组合独立核算（符合柜台实票规则）！
-                        let totalParlayPairs = 0;
-                        let hitParlayPairs = 0;
-                        let totalParlayReturn = 0.0;
+                        // 核心重构：实战 ROI 与策略对照严格按【真实单/双选复式注数】展开精算！
+                        let totalParlayPairs = 0;       // 纯场次两两配对数
+                        let totalMultiBets = 0;          // 双选防冷真实展开总注数
+                        let hitMultiBets = 0;            // 双选防冷真实命中注数
+                        let totalMultiReturn = 0.0;      // 双选防冷中奖金额(按SP复合相乘倍数)
+                        
+                        let totalSingleBets = 0;         // 纯首选单挑总注数 (等于对子数)
+                        let hitSingleBets = 0;           // 纯首选单挑命中注数
+                        let totalSingleReturn = 0.0;     // 纯首选单挑中奖金额(按SP复合相乘倍数)
 
                         if (todaySettledList.length >= 2) {
-                            for (let i = 0; i < todaySettledList.length; i++) {
-                                for (let j = i + 1; j < todaySettledList.length; j++) {
-                                    totalParlayPairs++;
-                                    const m1 = todaySettledList[i];
-                                    const m2 = todaySettledList[j];
-                                    if (m1.result === 'HIT' && m2.result === 'HIT') {
-                                        hitParlayPairs++;
-                                        let sp1 = 1.85, sp2 = 1.85;
-                                        [m1, m2].forEach((m, idx) => {
-                                            let curSp = 1.85;
-                                            if (m.is_only_rq && m.odds && m.odds.length >= 3) {
-                                                const parts = (m.score || '').split('-');
-                                                if (parts.length === 2) {
-                                                    const diff = (parseInt(parts[0]) || 0) + (parseInt(m.rang || '-1')) - (parseInt(parts[1]) || 0);
-                                                    if (diff > 0) curSp = parseFloat(m.odds[0]) || 1.85;
-                                                    else if (diff === 0) curSp = parseFloat(m.odds[1]) || 3.50;
-                                                    else curSp = parseFloat(m.odds[2]) || 2.20;
-                                                }
-                                            } else if (m.score && m.score.includes('-')) {
-                                                const [h, a] = m.score.split('-').map(x => parseInt(x.trim()));
-                                                if (m.odds && m.odds.length >= 3 && m.odds[0] !== '-') {
-                                                    if (h > a) curSp = parseFloat(m.odds[0]) || 1.85;
-                                                    else if (h === a) curSp = parseFloat(m.odds[1]) || 3.20;
-                                                    else curSp = parseFloat(m.odds[2]) || 2.80;
-                                                }
-                                            }
-                                            if (idx === 0) sp1 = curSp; else sp2 = curSp;
-                                        });
-                                        totalParlayReturn += (sp1 * sp2);
+                            // 先预解析当天每场比赛的单双选选项及真实打出项
+                            const parsedDayMatches = todaySettledList.map(m => {
+                                const parsedOpts = parseMatchTipOptions(m);
+                                const opts = parsedOpts.options; // 数组，如 ['胜', '平']
+                                const isRq = !!m.is_only_rq;
+                                
+                                // 解析真实打出项
+                                let actual = '';
+                                let actualSp = 1.85;
+                                const odds = m.odds || ['1.85', '3.20', '2.80'];
+                                const sp_w = parseFloat(odds[0]) || 1.85;
+                                const sp_d = parseFloat(odds[1]) || 3.20;
+                                const sp_l = parseFloat(odds[2]) || 2.80;
+                                
+                                if (m.score && m.score.includes('-')) {
+                                    const [h, a] = m.score.split('-').map(x => parseInt(x.trim()));
+                                    if (isRq) {
+                                        const rang = parseInt(m.rang || '-1');
+                                        const diff = h + rang - a;
+                                        if (diff > 0) { actual = '让胜'; actualSp = sp_w; }
+                                        else if (diff === 0) { actual = '让平'; actualSp = sp_d; }
+                                        else { actual = '让负'; actualSp = sp_l; }
+                                    } else {
+                                        if (h > a) { actual = '胜'; actualSp = sp_w; }
+                                        else if (h === a) { actual = '平'; actualSp = sp_d; }
+                                        else { actual = '负'; actualSp = sp_l; }
+                                    }
+                                }
+                                
+                                // 首选单挑选项
+                                const primaryOpt = opts[0] || (isRq ? '让胜' : '胜');
+                                
+                                return {
+                                    m: m,
+                                    options: opts,
+                                    count: opts.length,
+                                    primary: primaryOpt,
+                                    actual: actual,
+                                    actualSp: actualSp,
+                                    isHitMulti: opts.includes(actual),
+                                    isHitSingle: (primaryOpt === actual)
+                                };
+                            });
+
+                            totalSingleBets = (todaySettledList.length * (todaySettledList.length - 1)) / 2;
+                            totalParlayPairs = totalSingleBets;
+
+                            for (let i = 0; i < parsedDayMatches.length; i++) {
+                                for (let j = i + 1; j < parsedDayMatches.length; j++) {
+                                    const p1 = parsedDayMatches[i];
+                                    const p2 = parsedDayMatches[j];
+                                    
+                                    // 1. 双选防冷：两场比赛选项交叉相乘 (单x单=1注, 单x双=2注, 双x双=4注)
+                                    const pairMultiBets = p1.count * p2.count;
+                                    totalMultiBets += pairMultiBets;
+                                    
+                                    if (p1.isHitMulti && p2.isHitMulti) {
+                                        hitMultiBets += 1; // 一场比赛只有一个真实赛果，无论选了几项最多打出 1 注中奖
+                                        totalMultiReturn += (p1.actualSp * p2.actualSp);
+                                    }
+                                    
+                                    // 2. 纯首选单挑：永远只买 1 注
+                                    if (p1.isHitSingle && p2.isHitSingle) {
+                                        hitSingleBets += 1;
+                                        totalSingleReturn += (p1.actualSp * p2.actualSp);
                                     }
                                 }
                             }
                         }
 
-                        if (totalParlayPairs > 0) {
-                            const todayRoi = ((totalParlayReturn - totalParlayPairs) / totalParlayPairs) * 100;
+                        // 综合实战 ROI：以真实包含双选防冷的总注数为投入基准 (每注 1000 元或 2 元同比例)
+                        if (totalMultiBets > 0) {
+                            const todayRoi = ((totalMultiReturn - totalMultiBets) / totalMultiBets) * 100;
                             const sign = todayRoi >= 0 ? '+' : '';
                             const roiStr = `${sign}${todayRoi.toFixed(1)}%`;
                             roiElem.innerText = roiStr;
@@ -2091,77 +2133,30 @@
                                 tipRoiVal.innerText = roiStr;
                                 tipRoiVal.style.color = todayRoi >= 0 ? 'var(--accent-gold)' : '#f85149';
                             }
-                            // 假设每组 1000 元标准大额出票
+                            
+                            // 假设每注 1000 元标准大额出票
                             const STAKE_PER_BET = 1000;
-                            const totalStake = totalParlayPairs * STAKE_PER_BET;
-                            const totalWin = Math.round(totalParlayReturn * STAKE_PER_BET);
+                            const totalStake = totalMultiBets * STAKE_PER_BET;
+                            const totalWin = Math.round(totalMultiReturn * STAKE_PER_BET);
                             const netProfit = totalWin - totalStake;
 
-                            if (tipRoiCost) tipRoiCost.innerText = totalStake.toString();
+                            if (tipRoiCost) tipRoiCost.innerText = totalStake.toLocaleString();
                             if (tipRoiStatus) tipRoiStatus.innerText = netProfit >= 0 ? '净赚' : '回撤';
                             if (tipRoiProfit) {
-                                tipRoiProfit.innerText = Math.abs(netProfit).toString();
+                                tipRoiProfit.innerText = Math.abs(netProfit).toLocaleString();
                                 tipRoiProfit.style.color = netProfit >= 0 ? '#3fb950' : '#f85149';
                             }
 
-                            // 动态渲染【前一完赛日 2串1 对比验证卡片】(只展示前一天的对比，全动态核算)
+                            // 动态渲染【前一完赛日 2串1 策略双轨对比卡片】
                             const compareContainer = document.getElementById('audit-compare-container');
                             const compareTitle = document.getElementById('audit-compare-day-title');
                             if (compareContainer && todaySettledList.length >= 2) {
-                                if (compareTitle) compareTitle.innerText = `${activeDayKey}档期 (${totalParlayPairs}组 · 基准1000元/组)`;
+                                if (compareTitle) compareTitle.innerText = `${activeDayKey}档期 (${todaySettledList.length}场比赛 · 基准1000元/注)`;
 
-                                // 计算纯单挑首选的表现
-                                let singleHitPairs = 0;
-                                let singleTotalReturn = 0.0;
-                                for (let i = 0; i < todaySettledList.length; i++) {
-                                    for (let j = i + 1; j < todaySettledList.length; j++) {
-                                        const m1 = todaySettledList[i];
-                                        const m2 = todaySettledList[j];
-                                        
-                                        const checkSingleHit = (m) => {
-                                            const tip = m.tip || '';
-                                            const score = m.score ? m.score.replace(' ', '') : '';
-                                            if (!score.includes('-')) return { hit: false, sp: 0 };
-                                            const [h, a] = score.split('-').map(x => parseInt(x));
-                                            const odds = m.odds || ['1.85', '3.20', '2.80'];
-                                            const sp_w = parseFloat(odds[0]) || 1.85;
-                                            const sp_d = parseFloat(odds[1]) || 3.20;
-                                            const sp_l = parseFloat(odds[2]) || 2.80;
-
-                                            if (m.is_only_rq) {
-                                                const rang = parseInt(m.rang || '-1');
-                                                const diff = h + rang - a;
-                                                if (diff > 0 && tip.includes('让胜')) return { hit: true, sp: sp_w };
-                                                if (diff === 0 && tip.includes('让平')) return { hit: true, sp: sp_d };
-                                                if (diff < 0 && tip.includes('让负')) return { hit: true, sp: sp_l };
-                                                return { hit: false, sp: 0 };
-                                            }
-
-                                            let primary = '主胜';
-                                            if (tip.includes('首选平') || tip.startsWith('平局')) primary = '平局';
-                                            else if (tip.includes('首选客胜') || tip.startsWith('客胜')) primary = '客胜';
-                                            else if (tip.includes('首选主胜') || tip.startsWith('主胜')) primary = '主胜';
-                                            else if (tip.includes('客不败')) primary = '客胜';
-                                            else if (tip.includes('主不败')) primary = '主胜';
-
-                                            const actual = h > a ? '主胜' : (h === a ? '平局' : '客胜');
-                                            const hitSp = h > a ? sp_w : (h === a ? sp_d : sp_l);
-                                            return { hit: (actual === primary), sp: hitSp };
-                                        };
-
-                                        const res1 = checkSingleHit(m1);
-                                        const res2 = checkSingleHit(m2);
-                                        if (res1.hit && res2.hit) {
-                                            singleHitPairs++;
-                                            singleTotalReturn += (res1.sp * res2.sp);
-                                        }
-                                    }
-                                }
-
-                                const singleCost = totalParlayPairs * 1000;
-                                const singleWin = Math.round(singleTotalReturn * 1000);
+                                const singleCost = totalSingleBets * STAKE_PER_BET;
+                                const singleWin = Math.round(totalSingleReturn * STAKE_PER_BET);
                                 const singleProfit = singleWin - singleCost;
-                                const singleRoi = ((singleTotalReturn - totalParlayPairs) / totalParlayPairs) * 100;
+                                const singleRoi = ((totalSingleReturn - totalSingleBets) / totalSingleBets) * 100;
                                 const singleColor = singleProfit >= 0 ? '#3fb950' : '#f85149';
 
                                 const multiCost = totalStake;
@@ -2174,7 +2169,8 @@
                                     <div style="background: rgba(22, 27, 34, 0.8); border: 1px solid rgba(88, 166, 255, 0.3); border-radius: 6px; padding: 8px;">
                                         <div style="font-size: 11px; font-weight: 700; color: #58a6ff; margin-bottom: 4px;">🎯 只选【首选单挑】2串1</div>
                                         <div style="font-size: 10px; color: var(--text-secondary); line-height: 1.4;">
-                                            • <b>命中数</b>: 命中 <b style="color:#fff;">${singleHitPairs}</b> / ${totalParlayPairs} 组<br>
+                                            • <b>实际注数</b>: 共 <b>${totalSingleBets}</b> 注 (每场纯单选)<br>
+                                            • <b>命中情况</b>: 命中 <b style="color:#fff;">${hitSingleBets}</b> / ${totalSingleBets} 注<br>
                                             • <b>返还金额</b>: ${singleWin.toLocaleString()} 元<br>
                                             • <b>实际净盈亏</b>: <b style="color: ${singleColor};">${singleProfit >= 0 ? '+' : ''}${singleProfit.toLocaleString()} 元</b><br>
                                             • <b>真实 ROI</b>: <b style="color: ${singleColor};">${singleRoi >= 0 ? '+' : ''}${singleRoi.toFixed(1)}%</b>
@@ -2183,7 +2179,8 @@
                                     <div style="background: rgba(22, 27, 34, 0.8); border: 1px solid rgba(63, 185, 80, 0.3); border-radius: 6px; padding: 8px;">
                                         <div style="font-size: 11px; font-weight: 700; color: #3fb950; margin-bottom: 4px;">🛡️ 包含【双选防冷】2串1</div>
                                         <div style="font-size: 10px; color: var(--text-secondary); line-height: 1.4;">
-                                            • <b>命中数</b>: 命中 <b style="color:#fff;">${hitParlayPairs}</b> / ${totalParlayPairs} 组<br>
+                                            • <b>实际注数</b>: 共 <b style="color:#fbbf24;">${totalMultiBets}</b> 注 (展开复式组合)<br>
+                                            • <b>命中情况</b>: 命中 <b style="color:#fff;">${hitMultiBets}</b> / ${totalMultiBets} 注<br>
                                             • <b>返还金额</b>: ${multiWin.toLocaleString()} 元<br>
                                             • <b>实际净盈亏</b>: <b style="color: ${multiColor};">${multiProfit >= 0 ? '+' : ''}${multiProfit.toLocaleString()} 元</b><br>
                                             • <b>真实 ROI</b>: <b style="color: ${multiColor};">${multiRoi >= 0 ? '+' : ''}${multiRoi.toFixed(1)}%</b>
