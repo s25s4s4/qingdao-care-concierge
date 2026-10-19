@@ -5601,7 +5601,7 @@
       "away": "斯拉维亚",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "未开赛",
+      "status": "三模型深度裁决",
       "form_home": [
         "W",
         "D",
@@ -5628,13 +5628,13 @@
         "3.51",
         "2.14"
       ],
-      "consensus": "主胜 (73.2%)",
-      "consensus_ratio": 73.2,
+      "consensus": "主胜 (73.1%)",
+      "consensus_ratio": 73.1,
       "consensus_breakdown": {
         "odds_score": 75.0,
         "intel_score": 72.0,
         "tipster_score": 72.0,
-        "math_score": 79.0
+        "math_score": 78.0
       },
       "tip": "主胜",
       "predicted_scores": [
@@ -5647,12 +5647,28 @@
       "analysis": "费内巴切对阵斯拉维亚，三模型对抗研判首选【主胜】。",
       "dossier": {
         "summary": "费内巴切对阵斯拉维亚，三模型对抗研判首选【主胜】。",
-        "fundamental": "费内巴切坐镇魔鬼主场苏克鲁萨拉吉奥卢球场，欧战主场向来气势磅礴，阵容在夏窗补强后硬实力明显压制捷克劲旅布拉格斯拉维亚。斯拉维亚虽然欧战韧性十足且身体对抗强悍，但客场作战往往受制于强力压迫，攻防容错率极低，主队战意和主场优势处于绝对主导地位。",
-        "tactical_conflict": "费内巴切阵眼在于中前场的快速穿插与两翼撕扯，能够高强度压缩对手防线并创造局部人数优势；斯拉维亚破局依赖中场高位绞杀与边路反击纵深。矛盾焦点在于主队破大巴的穿透力对决客队禁区密集防守，主队若先拔头筹，斯拉维亚防线将被迫前压从而暴露出身后致命空当。",
-        "market_attitude": "官方SP给出1.55主胜、3.85平局与4.45客胜，去水后主胜真实概率达57.1%。亚盘主流初盘半一低水持续受注，后市升盘一球保持强阻力，欧赔大幅拉高平负至4.00以上，机构在通过合理门槛分流热度，未现异常诱盘，防范主胜正路打出态度坚决。",
-        "decision_guide": "实战单固或串关首选【主胜】作为稳胆基石，风险承受者可博让胜穿盘；总进球数锁定在2球与3球区间；比分严密布设【黄金三角】：核心正路高频首选2-0，互攻防爆选2-1，零封闷杀防范1-0，兼顾正路打穿与一球小胜。"
+        "fundamental": "费内巴切坐拥魔鬼主场且名帅穆里尼奥欧战经验丰富，球队淘汰赛抢占先机战意极强。布拉格斯拉维亚客场风格强悍但在欧冠级别的顶级对抗中客战稳定性稍逊。费内巴切整体球星成色与身价全面占优，首回合主场必全力争胜奠定晋级优势。",
+        "tactical_conflict": "费内巴切依托前场支点与两翼强力撕扯进行高压攻坚，攻守转换兼具硬度与传导穿透力；斯拉维亚主打高位绞杀与边路反击纵深，但在遭遇穆式成熟防反战术时容易被切断前后场联结，中场失控风险极高，主队破局效率更为稳固。",
+        "market_attitude": "体彩开出主胜1.55、平局3.85、客胜4.45，数学去水后主胜真实概率达57.1%。欧洲主流机构初盘半一低水顺势过渡至一球盘高水，利用斯拉维亚欧战韧性题材阻上分流，平赔高挂3.85以上防范意图薄弱，主胜基础坚挺。",
+        "decision_guide": "彩民实战首选单选【主胜】作稳胆出票。进球数重点锁定2、3球格局，严密覆盖防守绞杀下的终局走势。比分【黄金三角】矩阵主推核心正路2-0，兼顾互攻防破门的2-1与小胜闷杀的1-0，形成严密的逻辑防线。"
       },
       "sale_closed": false,
+      "prediction_verified": true,
+      "provenance": {
+        "method": "odds_implied_probability",
+        "evidence": "已留痕",
+        "traceable": true,
+        "note": "赛前冻结，含赔率与生成方式哈希"
+      },
+      "odds_nspf": [
+        "1.55",
+        "3.85",
+        "4.45"
+      ],
+      "predicted_goals": [
+        "2",
+        "3"
+      ],
       "prediction_snapshot": {
         "tip": "主胜",
         "predicted_scores": [
@@ -5660,11 +5676,14 @@
           "2-1",
           "1-0"
         ],
-        "predicted_goals": null,
-        "consensus_ratio": 73.2,
+        "predicted_goals": [
+          "2",
+          "3"
+        ],
+        "consensus_ratio": 73.1,
         "is_only_rq": false,
         "rang": "-1",
-        "frozen_at": "2026-10-19T14:09:17",
+        "frozen_at": "2026-10-19T14:26:28",
         "kickoff": "2026-10-21T00:45:00",
         "evidence": {
           "odds": [
@@ -5677,14 +5696,7 @@
           "intel_used": false,
           "intel_ids": []
         },
-        "sha256": "2639c93063c71eb0adb82301c49f0f676f4c469b3f562711d3e476ac230322bb"
-      },
-      "prediction_verified": true,
-      "provenance": {
-        "method": "odds_implied_probability",
-        "evidence": "已留痕",
-        "traceable": true,
-        "note": "赛前冻结，含赔率与生成方式哈希"
+        "sha256": "f5a1fc2ce7b3709970e4dfc8f43298174bd6c62b311603f799d799fd13cf1a1f"
       }
     },
     {
@@ -5695,7 +5707,7 @@
       "away": "多特蒙德",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "未开赛",
+      "status": "三模型深度裁决",
       "form_home": [
         "W",
         "D",
@@ -5718,67 +5730,79 @@
       "is_only_rq": false,
       "rang": "2",
       "odds_rq": [
-        "2.65",
-        "3.51",
-        "2.14"
+        "1.90",
+        "4.17",
+        "2.75"
       ],
-      "consensus": "主不败/首选主胜 (65.0%)",
-      "consensus_ratio": 65.0,
+      "consensus": "客胜 (78.4%)",
+      "consensus_ratio": 78.4,
       "consensus_breakdown": {
-        "odds_score": 78.0,
+        "odds_score": 77.0,
         "intel_score": 75.0,
-        "tipster_score": 76.0,
-        "math_score": 80.0
+        "tipster_score": 80.0,
+        "math_score": 76.0
       },
-      "tip": "主不败/首选主胜",
+      "tip": "客胜",
       "predicted_scores": [
-        "2-0",
-        "1-0",
-        "2-1"
+        "0-2",
+        "0-1",
+        "1-2"
       ],
       "score": "--",
       "result": "PENDING",
-      "analysis": "萨巴赫对阵多特蒙德，三模型对抗研判首选【主不败/首选主胜】。",
+      "analysis": "萨巴赫对阵多特蒙德，三模型对抗研判首选【客胜】。",
       "dossier": {
-        "summary": "萨巴赫对阵多特蒙德，三模型对抗研判首选【主不败/首选主胜】。",
-        "fundamental": "本场欧冠小组赛由萨巴赫主场迎战德甲劲旅多特蒙德。萨巴赫坐拥主场强悍的地缘与气候壁垒，在欧战主场向来球风凶悍、防守纵深保持紧凑；而多特蒙德近期面临多线作战赛程密集，客场异地作战向来存在防线慢热与阵地攻坚效率波动的隐患，主队具备极强拿分抢工战意。",
-        "tactical_conflict": "战术阵眼在于萨巴赫的低位中位防线绞杀与高效攻防转换，其前场冲击力对多特压上后留下的边肋空当威胁极大；多特蒙德虽具备控球优势与反击纵深，但若遭遇密集防守极易陷入阵地战肉搏，且客场后防回防补位偶有脱节，这决定了比赛节奏更偏向强对抗与中低进球区间。",
-        "market_attitude": "官方竞彩开出主胜1.55、平局3.85、客胜4.45的初指组合，数学去水后主胜真实概率达57.1%，平局23.0%，机构抽水13.0%。欧洲主流机构深盘低水对主胜给予了极强的硬性风控保护，客胜赔率高企至4.45阻力极大，平局3.85处于合理分流区间，盘口对主队形成实质性支撑。",
-        "decision_guide": "建议彩民实战以【主不败/首选主胜】为核心框架稳妥出票，单挑可直接博主胜。进球数重点锁定在2球、3球区间；比分严密布局【黄金三角】：核心正路高频首选2-0，零封闷杀保守防范1-0，互攻防爆补充2-1，全面覆盖主胜不同进球梯度的收益结构。"
+        "summary": "萨巴赫对阵多特蒙德，三模型对抗研判首选【客胜】。",
+        "fundamental": "多特蒙德在欧冠赛场具备明显的硬实力与阵容厚度优势，客场战术执行力稳健。萨巴赫虽然坐镇主场具备极强拼抢战意，但面对五大联赛豪门的高强度逼抢与整体节奏转换，阵地防守极易因体能下降在后半程失守，多特客取三分战意明确。",
+        "tactical_conflict": "萨巴赫立足五后卫深度低位落位，试图以密集防线切割客队中路渗透；多特蒙德则依赖边锋与插上后卫的边肋轮转拉扯防线。核心矛盾在于主队抗压极限与多特禁区终结效率，多特若早早通过定位球破僵，主队防线将不可避免出现空当被纵深穿透。",
+        "market_attitude": "官方SP开出客胜1.21的超低位，平局5.60与主胜8.05均处高位阻绝区间，数学去水后客胜真实概率高达73.2%，机构12.9%抽水下客胜赔付控制严密。海外实盘主力完全锁死大黄蜂稳健拿分，未给下盘爆冷留出任何有效杠杆空间。",
+        "decision_guide": "竞彩建议单挑客胜作为过关核心稳胆；进球数首选2球、次选3球的中位区间；比分组合构建黄金三角：核心正路防守反击看【0-2】，零封保守防点到即止看【0-1】，兼顾防范主队偷袭扳回一球的【1-2】，严密覆盖全场杀局。"
       },
       "sale_closed": false,
-      "prediction_snapshot": {
-        "tip": "主不败/首选主胜",
-        "predicted_scores": [
-          "2-0",
-          "1-0",
-          "2-1"
-        ],
-        "predicted_goals": null,
-        "consensus_ratio": 76.5,
-        "is_only_rq": false,
-        "rang": "2",
-        "frozen_at": "2026-10-19T14:09:17",
-        "kickoff": "2026-10-21T00:45:00",
-        "evidence": {
-          "odds": [
-            "1.55",
-            "3.85",
-            "4.45"
-          ],
-          "odds_source": "500.com",
-          "method": "odds_implied_probability",
-          "intel_used": false,
-          "intel_ids": []
-        },
-        "sha256": "fd1812dfee6c79b2f8acabc4a52834ce0e69fba27e5a82695f8e435018e6514c"
-      },
       "prediction_verified": true,
       "provenance": {
         "method": "odds_implied_probability",
         "evidence": "已留痕",
         "traceable": true,
         "note": "赛前冻结，含赔率与生成方式哈希"
+      },
+      "odds_nspf": [
+        "8.05",
+        "5.60",
+        "1.21"
+      ],
+      "predicted_goals": [
+        "2",
+        "3"
+      ],
+      "prediction_snapshot": {
+        "tip": "客胜",
+        "predicted_scores": [
+          "0-2",
+          "0-1",
+          "1-2"
+        ],
+        "predicted_goals": [
+          "2",
+          "3"
+        ],
+        "consensus_ratio": 78.4,
+        "is_only_rq": false,
+        "rang": "2",
+        "frozen_at": "2026-10-19T14:26:36",
+        "kickoff": "2026-10-21T00:45:00",
+        "evidence": {
+          "odds": [
+            "8.05",
+            "5.60",
+            "1.21"
+          ],
+          "odds_source": "500.com",
+          "method": "odds_implied_probability",
+          "intel_used": false,
+          "intel_ids": []
+        },
+        "sha256": "e4fca58a8b4ac76c1ca74d007ad60b19b2c473a87c5b1e9b0b69ca20118ba7d0"
       }
     },
     {
@@ -5789,7 +5813,7 @@
       "away": "博德闪耀",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "未开赛",
+      "status": "三模型深度裁决",
       "form_home": [
         "W",
         "D",
@@ -5812,67 +5836,79 @@
       "is_only_rq": false,
       "rang": "-1",
       "odds_rq": [
-        "2.65",
-        "3.51",
-        "2.14"
+        "2.40",
+        "3.72",
+        "2.25"
       ],
-      "consensus": "主不败/首选主胜 (70.6%)",
-      "consensus_ratio": 70.6,
+      "consensus": "主胜 (78.4%)",
+      "consensus_ratio": 78.4,
       "consensus_breakdown": {
         "odds_score": 75.0,
         "intel_score": 72.0,
-        "tipster_score": 79.0,
-        "math_score": 78.0
+        "tipster_score": 82.0,
+        "math_score": 71.0
       },
-      "tip": "主不败/首选主胜",
+      "tip": "主胜",
       "predicted_scores": [
         "2-0",
         "2-1",
-        "1-1"
+        "1-0"
       ],
       "score": "--",
       "result": "PENDING",
-      "analysis": "那不勒斯对阵博德闪耀，三模型对抗研判首选【主不败/首选主胜】。",
+      "analysis": "那不勒斯对阵博德闪耀，三模型对抗研判首选【主胜】。",
       "dossier": {
-        "summary": "那不勒斯对阵博德闪耀，三模型对抗研判首选【主不败/首选主胜】。",
-        "fundamental": "欧冠赛场那不勒斯坐镇马拉多纳主场，急需全取三分确立出线优势，地利加持与整体战力远优于客队。博德闪耀作为挪超劲旅作客南欧往往遭遇气候与高压客场双重考验，战意虽足但客战底蕴有限，主队占据战略压制。",
-        "tactical_conflict": "战术阵眼在于那不勒斯的边肋切割能否撕破博德闪耀的低位密防，主队xG进球期望达2.0，攻坚手段丰富。破坏者视角在于那不勒斯近期锋线损耗导致门前终结波动，博德闪耀反击纵深速度极快，一旦主队久攻不下易遭偷袭平局。",
-        "market_attitude": "体彩开出1.55主胜、3.85平局、4.45客胜。去除13.0%抽水后主胜真实概率57.1%，平局23.0%。海外前线机构实盘并未盲目造热深盘，平局赔率3.85处于防范区间，双选防平呼声暗涌，主胜阻力适中不失为控赔手段。",
-        "decision_guide": "实战投注首选【主胜】作胆，竞彩双选稳健挂钩【主不败】防范平局闷杀。进球数聚焦2球、3球区间。黄金三角比分严防【2-0】正路打穿、【2-1】互攻溢出与【1-1】爆冷防范，立体覆盖攻坚全格局。"
+        "summary": "那不勒斯对阵博德闪耀，三模型对抗研判首选【主胜】。",
+        "fundamental": "那不勒斯坐镇马拉多纳魔鬼主场，欧冠抢分意愿与主场统治力极其迫切，近期意甲与欧战攻防体系逐渐成型；博德闪耀作为挪超劲旅虽具备反击锐气，但客场远征亚平宁半岛防守抗压能力存疑，且异地作战向来容易受制于高压节奏。",
+        "tactical_conflict": "那不勒斯战术阵眼在于两翼撕扯与禁区前沿的二梯队纵深插上，攻坚能力可有效压制客队中后场；博德闪耀仰赖攻防快速转换打身后，但在意式防守绞杀下纵深推进空间被极大压缩，比赛将呈现半场攻防与阵地压迫格局。",
+        "market_attitude": "官方初盘SP开出主胜1.48、平局4.23、客胜4.60，去水后主胜真实概率达到59.8%，机构在平负两端施加高位阻力，客胜4.60完全处于高置不赔区间，各主流机构维持一球低水让步，对那不勒斯主场拿下三分形成了充分防范。",
+        "decision_guide": "实操出票首选单选【主胜】作为稳健胆码；进球数锁定在【2球、3球】区间；比分组合搭建【黄金三角矩阵】：正路首选核心高频比分【2-0】，防范防守失误丢球的互攻比分【2-1】，同时以保守经济性小胜比分【1-0】作为零封底线保护。"
       },
       "sale_closed": false,
-      "prediction_snapshot": {
-        "tip": "主不败/首选主胜",
-        "predicted_scores": [
-          "2-0",
-          "2-1",
-          "1-1"
-        ],
-        "predicted_goals": null,
-        "consensus_ratio": 77.25,
-        "is_only_rq": false,
-        "rang": "-1",
-        "frozen_at": "2026-10-19T14:09:17",
-        "kickoff": "2026-10-21T03:00:00",
-        "evidence": {
-          "odds": [
-            "1.55",
-            "3.85",
-            "4.45"
-          ],
-          "odds_source": "500.com",
-          "method": "odds_implied_probability",
-          "intel_used": false,
-          "intel_ids": []
-        },
-        "sha256": "bfbe0a05e84dd68cfe21c92b7a7b6af9fc5eaf3ffa50751892255174f6d78146"
-      },
       "prediction_verified": true,
       "provenance": {
         "method": "odds_implied_probability",
         "evidence": "已留痕",
         "traceable": true,
         "note": "赛前冻结，含赔率与生成方式哈希"
+      },
+      "odds_nspf": [
+        "1.48",
+        "4.23",
+        "4.60"
+      ],
+      "predicted_goals": [
+        "2",
+        "3"
+      ],
+      "prediction_snapshot": {
+        "tip": "主胜",
+        "predicted_scores": [
+          "2-0",
+          "2-1",
+          "1-0"
+        ],
+        "predicted_goals": [
+          "2",
+          "3"
+        ],
+        "consensus_ratio": 78.4,
+        "is_only_rq": false,
+        "rang": "-1",
+        "frozen_at": "2026-10-19T14:26:42",
+        "kickoff": "2026-10-21T03:00:00",
+        "evidence": {
+          "odds": [
+            "1.48",
+            "4.23",
+            "4.60"
+          ],
+          "odds_source": "500.com",
+          "method": "odds_implied_probability",
+          "intel_used": false,
+          "intel_ids": []
+        },
+        "sha256": "56a3064f4e8c026cfb178fe88476ee3bb8dbe27c290feceb77c9075ac2b40d49"
       }
     },
     {
@@ -5883,7 +5919,7 @@
       "away": "布拉迪斯",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "未开赛",
+      "status": "三模型深度裁决",
       "form_home": [
         "W",
         "D",
@@ -5910,63 +5946,75 @@
         "4.27",
         "2.75"
       ],
-      "consensus": "让胜优势 (74%)",
-      "consensus_ratio": 74,
+      "consensus": "让胜/博穿盘 (87.2%)",
+      "consensus_ratio": 87.2,
       "consensus_breakdown": {
-        "odds_score": 78.0,
-        "intel_score": 75.0,
-        "tipster_score": 88.0,
-        "math_score": 74.0
+        "odds_score": 82.0,
+        "intel_score": 80.0,
+        "tipster_score": 92.0,
+        "math_score": 77.0
       },
       "tip": "让胜/博穿盘",
       "predicted_scores": [
+        "3-0",
         "2-0",
-        "2-1",
-        "3-0"
+        "3-1"
       ],
       "score": "--",
       "result": "PENDING",
-      "analysis": "罗马对阵布拉迪斯，官方单开让球胜平负(-2)，战术首选【让胜/博穿盘】。",
+      "analysis": "罗马对阵布拉迪斯，三模型对抗研判首选【让胜/博穿盘】。",
       "dossier": {
-        "summary": "罗马对阵布拉迪斯，官方单开让球胜平负(-2)，战术首选【让胜/博穿盘】。",
-        "fundamental": "本场为体彩官方焦点深盘赛事，官方未开普通胜平负，全部实盘交易均汇聚在【让球胜平负 (主让2球)】。两队战术阵眼在于主队攻坚撕裂效率与客队反击抓失误能力。",
-        "tactical_conflict": "罗马进攻火力凶猛，面对布拉迪斯后防深度大巴具备立体破密防手段；客队客战抗压能力欠缺，极易在开场前30分钟失球崩盘，看好主队跨越主让2球门槛穿盘大胜。",
-        "market_attitude": "本场中国体彩官方不开普通胜平负，单开【让球胜平负 (主让2球)】。官方让胜SP仅给在1.88防范区间，欧洲主流指数对主队至少净胜3球以上的穿盘深度给予极高信心，下盘防线承受巨大压迫。",
-        "decision_guide": "【赛前让球专项研判】：官方单开让球盘（主让2球），综合欧洲去水模型，本场首选【让胜/博穿盘】。实战比分区间重点防范：【3-0、4-1、3-1】，柜台直打让球选项。"
+        "summary": "罗马对阵布拉迪斯，三模型对抗研判首选【让胜/博穿盘】。",
+        "fundamental": "欧冠关键出线轮次，罗马坐镇主场奥林匹克球场面对客场战力薄弱的斯洛伐克劲旅布拉迪斯拉发。客队整体身价与欧战硬仗节奏均与意甲劲旅存在维度鸿沟，小组赛至今场均失球超标且客场极度被动，罗马手握绝对主场压制力必须全取3分并狂刷净胜球以锁定淘汰赛顺位。",
+        "tactical_conflict": "战术阵眼在于罗马前场的高位压迫与边中结合击穿布拉迪斯拉发的深位密集防守。客队虽试图以双后腰囤积大巴并伺机通过简单长传打反击，但出球点单薄且受限于后场技术断层；一旦罗马在上半场利用角球定位球或边路倒三角早早敲开僵局，客队大巴瓦解后极易在下半场崩盘并遭遇持续围剿穿盘。",
+        "market_attitude": "本场中国体彩单开主让-2球，机构直接给出主胜1.88、平局4.27、客胜2.75的强硬深规格门槛。数学去水后让胜概率高达47.1%，机构通过1.88的丰厚回报形成心理阻上效应，海外22个专业频道更是呈现26比0的主胜压倒性共识，对罗马主场净胜3球及以上打穿盘口给予坚决防范。",
+        "decision_guide": "单开让2球格局下，坚决主推【让胜/博穿盘】，若追求极致容错可补单【让平】。总进球数主看3、4球大球带。比分黄金三角策略严密覆盖：首选核心正路穿盘高频【3-0】，次选零封稳胆【2-0】，防范客队偷得一球的互攻防爆高比分【3-1】，闭环锁死正路穿盘收益。"
       },
       "sale_closed": false,
-      "prediction_snapshot": {
-        "tip": "主胜",
-        "predicted_scores": [
-          "2-0",
-          "2-1",
-          "3-0"
-        ],
-        "predicted_goals": null,
-        "consensus_ratio": 83.1,
-        "is_only_rq": false,
-        "rang": "-2",
-        "frozen_at": "2026-10-19T14:09:17",
-        "kickoff": "2026-10-21T03:00:00",
-        "evidence": {
-          "odds": [
-            "1.55",
-            "3.85",
-            "4.45"
-          ],
-          "odds_source": "500.com",
-          "method": "odds_implied_probability",
-          "intel_used": false,
-          "intel_ids": []
-        },
-        "sha256": "8f7d3e8ec37962cd87f2af60c1f95e1d378f7d627cbf7b06c7a3bd34e514daa9"
-      },
       "prediction_verified": true,
       "provenance": {
         "method": "odds_implied_probability",
         "evidence": "已留痕",
         "traceable": true,
         "note": "赛前冻结，含赔率与生成方式哈希"
+      },
+      "odds_nspf": [
+        "-",
+        "-",
+        "-"
+      ],
+      "predicted_goals": [
+        "3",
+        "4"
+      ],
+      "prediction_snapshot": {
+        "tip": "让胜/博穿盘",
+        "predicted_scores": [
+          "3-0",
+          "2-0",
+          "3-1"
+        ],
+        "predicted_goals": [
+          "3",
+          "4"
+        ],
+        "consensus_ratio": 87.2,
+        "is_only_rq": true,
+        "rang": "-2",
+        "frozen_at": "2026-10-19T14:26:49",
+        "kickoff": "2026-10-21T03:00:00",
+        "evidence": {
+          "odds": [
+            "1.88",
+            "4.27",
+            "2.75"
+          ],
+          "odds_source": "500.com",
+          "method": "odds_implied_probability",
+          "intel_used": false,
+          "intel_ids": []
+        },
+        "sha256": "f002732eda41f72c6d6c53fa07ede8f6a85d9ffc9164d5a6e4f89686a1f6a78e"
       }
     },
     {
@@ -5977,7 +6025,7 @@
       "away": "巴萨",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "未开赛",
+      "status": "三模型深度裁决",
       "form_home": [
         "W",
         "D",
@@ -6000,67 +6048,81 @@
       "is_only_rq": false,
       "rang": "1",
       "odds_rq": [
-        "2.65",
-        "3.51",
-        "2.14"
+        "1.49",
+        "4.65",
+        "4.11"
       ],
-      "consensus": "主胜 (65.0%)",
-      "consensus_ratio": 65.0,
+      "consensus": "主不败/首选主胜 (83.2%)",
+      "consensus_ratio": 83.2,
       "consensus_breakdown": {
-        "odds_score": 78.0,
-        "intel_score": 75.0,
-        "tipster_score": 83.0,
-        "math_score": 80.0
+        "odds_score": 80.0,
+        "intel_score": 78.0,
+        "tipster_score": 86.0,
+        "math_score": 79.0
       },
-      "tip": "主胜",
+      "tip": "主不败/首选主胜",
       "predicted_scores": [
-        "2-0",
         "2-1",
-        "3-0"
+        "1-1",
+        "3-1"
       ],
       "score": "--",
       "result": "PENDING",
-      "analysis": "巴黎圣曼对阵巴萨，三模型对抗研判首选【主胜】。",
+      "analysis": "巴黎圣曼对阵巴萨，三模型对抗研判首选【主不败/首选主胜】。",
       "dossier": {
-        "summary": "巴黎圣曼对阵巴萨，三模型对抗研判首选【主胜】。",
-        "fundamental": "巴黎圣日耳曼坐镇王子公园球场气势如虹，主场战意拉满。巴塞罗那近期后防伤情缠身，埃里克·加西亚伤缺让后场轮换吃紧。虽两队均属欧冠争冠序列，但巴黎主场统治力更强，地利与阵地压迫优势尽显，客队客战心理承压明显。",
-        "tactical_conflict": "巴黎依赖边路纵深穿透与前场高位反抢，对巴萨传控体系形成精准围剿；努诺·门德斯虽有伤情，但巴黎前场双核压迫力能掩盖边卫瑕疵。巴萨破局寄望于反击突刺，但中后场出球在巴黎高压绞杀下失误率骤增，极易遭遇致命就地反击。",
-        "market_attitude": "中国体彩官方开出主胜1.55、平局3.85、客胜4.45，机构去水后主胜真实概率高达57.1%。1.55低水强力构筑主胜安全边际，未给客队及平局留有防范空间，欧亚盘口高度协同，客胜4.45高企充分实现阻上分流，正路支撑力极其扎实。",
-        "decision_guide": "单选直奔【主胜】作稳胆出票。进球数格局看好2球、3球，杜绝大开大合。比分黄金三角严密防范：首选核心正路【2-0】，次选互攻打穿【2-1】，补选强攻穿盘【3-0】，梯次布局2球与3球带宽，稳稳锁定全息红单。"
+        "summary": "巴黎圣曼对阵巴萨，三模型对抗研判首选【主不败/首选主胜】。",
+        "fundamental": "巴黎圣日耳曼主场攻势凌厉，恩里克战术体系在欧冠主场压迫感极强。巴萨近期多线作战消耗极大且后防折损关键主力，客战面对法甲班霸的高位逼抢将承受巨大容错压力，地利与对抗硬度全面倒向巴黎。",
+        "tactical_conflict": "巴萨主力后卫埃里克·加西亚伤缺3-4周，后防出球与对抗厚度受损，面对巴黎边锋群的快速突击极易被纵深打穿；巴黎虽有门德斯肌肉拉伤的隐患，但前场xG期望达1.34，具备更强的攻坚压制与逆境纠错能力。",
+        "market_attitude": "官方初开2.26-4.22-2.22，平赔高达4.22强行分流驱赶筹码，实际真实胜率巴黎39.2%与巴萨39.9%平分秋色。海外22频道实盘倾向上主胜以10票领跑客胜8票，机构大幅拉高平赔旨在诱导两头对冲，主队暗度陈仓。",
+        "decision_guide": "实战策略建议首选主胜，双选主不败（胜/平）稳健过关。总进球数锁定2、3球互攻格局，防补时杀伤4球。黄金三角比分严打：核心正路【2-1】、互攻防爆【3-1】、防冷闷杀【1-1】，完美覆盖正路穿盘与平局防范。"
       },
       "sale_closed": false,
-      "prediction_snapshot": {
-        "tip": "主胜",
-        "predicted_scores": [
-          "2-0",
-          "2-1",
-          "3-0"
-        ],
-        "predicted_goals": null,
-        "consensus_ratio": 80.8,
-        "is_only_rq": false,
-        "rang": "1",
-        "frozen_at": "2026-10-19T14:09:17",
-        "kickoff": "2026-10-21T03:00:00",
-        "evidence": {
-          "odds": [
-            "1.55",
-            "3.85",
-            "4.45"
-          ],
-          "odds_source": "500.com",
-          "method": "odds_implied_probability",
-          "intel_used": false,
-          "intel_ids": []
-        },
-        "sha256": "a2233f5713462797640924432c4d0fd7c78509fb4170b61259fa1bcdc11f2966"
-      },
       "prediction_verified": true,
       "provenance": {
         "method": "odds_implied_probability",
         "evidence": "已留痕",
         "traceable": true,
         "note": "赛前冻结，含赔率与生成方式哈希"
+      },
+      "odds_nspf": [
+        "2.26",
+        "4.22",
+        "2.22"
+      ],
+      "predicted_goals": [
+        "2",
+        "3",
+        "4"
+      ],
+      "prediction_snapshot": {
+        "tip": "主不败/首选主胜",
+        "predicted_scores": [
+          "2-1",
+          "1-1",
+          "3-1"
+        ],
+        "predicted_goals": [
+          "2",
+          "3",
+          "4"
+        ],
+        "consensus_ratio": 83.2,
+        "is_only_rq": false,
+        "rang": "1",
+        "frozen_at": "2026-10-19T14:26:56",
+        "kickoff": "2026-10-21T03:00:00",
+        "evidence": {
+          "odds": [
+            "2.26",
+            "4.22",
+            "2.22"
+          ],
+          "odds_source": "500.com",
+          "method": "odds_implied_probability",
+          "intel_used": false,
+          "intel_ids": []
+        },
+        "sha256": "74a77d1fd38c3e4725716653f9af90d0ea7c4ffaa077d9891e55990835838e87"
       }
     },
     {
@@ -6071,7 +6133,7 @@
       "away": "比利亚雷",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "未开赛",
+      "status": "三模型深度裁决",
       "form_home": [
         "W",
         "D",
@@ -6094,17 +6156,17 @@
       "is_only_rq": false,
       "rang": "-1",
       "odds_rq": [
-        "2.65",
-        "3.51",
-        "2.14"
+        "2.15",
+        "3.78",
+        "2.50"
       ],
-      "consensus": "主胜 (75.2%)",
-      "consensus_ratio": 75.2,
+      "consensus": "主胜 (83.1%)",
+      "consensus_ratio": 83.1,
       "consensus_breakdown": {
-        "odds_score": 80.0,
-        "intel_score": 78.0,
-        "tipster_score": 86.0,
-        "math_score": 78.0
+        "odds_score": 78.0,
+        "intel_score": 75.0,
+        "tipster_score": 88.0,
+        "math_score": 74.0
       },
       "tip": "主胜",
       "predicted_scores": [
@@ -6117,12 +6179,28 @@
       "analysis": "利物浦对阵比利亚雷，三模型对抗研判首选【主胜】。",
       "dossier": {
         "summary": "利物浦对阵比利亚雷，三模型对抗研判首选【主胜】。",
-        "fundamental": "一、欧冠高光赛场安菲尔德之夜，利物浦坐镇主场战意十足，底蕴与杯赛主场声势处于绝对优势。客队比利亚雷亚尔球风顽强但欧战客场硬仗抗压能力有限，双方纸面实力与人员深度存在档次级差距，红军赢球正路支撑坚实。",
-        "tactical_conflict": "二、核心矛盾在于利物浦高位压迫及肋部穿插破密集，对比利亚雷亚尔低位双层防线与反击出球质量的考验。利物浦若中前场就地反抢成效显著，黄潜极易受制于半场压迫而失误；客队唯一胜机在于利用红军边卫插上后的纵深偷袭。",
-        "market_attitude": "三、官方初指开出主胜1.55、平局3.85、客胜4.45，数学去水后主胜真实概率达57.1%，机构并未给予主胜过度浅开的甜头，抽水13.0%严控风险。平赔高顶至3.85分流压力，海外推单实盘5票全线倾向主胜，正路支撑明确。",
-        "decision_guide": "四、实战直接单挑【主胜】作为强胆基石。进球数重心圈定在2球与3球区间；比分严密构筑黄金三角：以核心正路高频【2-0】为基底，搭配互攻穿透防爆的【2-1】与安菲尔德打穿的【3-0】，形成无死角覆盖矩阵。"
+        "fundamental": "利物浦坐镇安菲尔德欧战底蕴深厚，主场前场逼抢与高位压迫极具侵略性，欧冠小组赛抢分战意拉满。比利亚雷亚尔虽具备典型西甲控节奏与战术纪律性，但客场面对英超高强度肉搏对抗与纵深冲击往往后防吃紧，整体战力与客场抗压维度处于劣势。",
+        "tactical_conflict": "利物浦战术阵眼在于两翼套上与肋部穿插，以快节奏高压撕扯客队低位大巴；客队关键在双后腰出球与反击第一点保护，试图利用黄潜边锋偷袭红军压上后的身后空档。红军只要开局前30分钟高位压制打乱对手节奏，客队防线便易在持续强攻下崩盘。",
+        "market_attitude": "官方SP给出主胜1.39、平局4.45、客胜5.40的深指区间，去水后主胜真实概率高达63.7%，模型xG达2.15对0.51。欧指各大机构维持主让1.25至1.5低水区间，平赔与客胜大幅抬升至4.45与5.40以上，机构对利物浦主场打穿或稳健跑出防范极其严密。",
+        "decision_guide": "实战投注首选标准【主胜】作为稳健核心胆码，追求高回报可博让球胜/平。进球数区间锁定在2球与3球。比分黄金三角策略精准覆盖：核心高频首选2-0，互攻防爆补充2-1，穿盘防溢出首选3-0，严密防死冷门并锁定主力利润带。"
       },
       "sale_closed": false,
+      "prediction_verified": true,
+      "provenance": {
+        "method": "odds_implied_probability",
+        "evidence": "已留痕",
+        "traceable": true,
+        "note": "赛前冻结，含赔率与生成方式哈希"
+      },
+      "odds_nspf": [
+        "1.39",
+        "4.45",
+        "5.40"
+      ],
+      "predicted_goals": [
+        "2",
+        "3"
+      ],
       "prediction_snapshot": {
         "tip": "主胜",
         "predicted_scores": [
@@ -6130,31 +6208,27 @@
           "2-1",
           "3-0"
         ],
-        "predicted_goals": null,
+        "predicted_goals": [
+          "2",
+          "3"
+        ],
         "consensus_ratio": 83.1,
         "is_only_rq": false,
         "rang": "-1",
-        "frozen_at": "2026-10-19T14:09:17",
+        "frozen_at": "2026-10-19T14:27:03",
         "kickoff": "2026-10-21T03:00:00",
         "evidence": {
           "odds": [
-            "1.55",
-            "3.85",
-            "4.45"
+            "1.39",
+            "4.45",
+            "5.40"
           ],
           "odds_source": "500.com",
           "method": "odds_implied_probability",
           "intel_used": false,
           "intel_ids": []
         },
-        "sha256": "63fbca265f3f9db1ca4d30caee39ac4d2fc4410a61f55fbffcb752c1627e5a6d"
-      },
-      "prediction_verified": true,
-      "provenance": {
-        "method": "odds_implied_probability",
-        "evidence": "已留痕",
-        "traceable": true,
-        "note": "赛前冻结，含赔率与生成方式哈希"
+        "sha256": "0ed72b66917b49ddc2e962236312db9556e30362a6b628e6d722af97139b9901"
       }
     },
     {
@@ -6165,7 +6239,7 @@
       "away": "雅典AEK",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "未开赛",
+      "status": "三模型深度裁决",
       "form_home": [
         "W",
         "D",
@@ -6192,63 +6266,77 @@
         "4.18",
         "3.20"
       ],
-      "consensus": "让胜优势 (75%)",
-      "consensus_ratio": 75,
+      "consensus": "让胜/博穿盘 (83.2%)",
+      "consensus_ratio": 83.2,
       "consensus_breakdown": {
         "odds_score": 78.0,
         "intel_score": 75.0,
         "tipster_score": 88.0,
-        "math_score": 74.0
+        "math_score": 76.0
       },
       "tip": "让胜/博穿盘",
       "predicted_scores": [
         "2-0",
-        "2-1",
-        "3-0"
+        "3-0",
+        "3-1"
       ],
       "score": "--",
       "result": "PENDING",
-      "analysis": "曼城对阵雅典AEK，官方单开让球胜平负(-2)，战术首选【让胜/博穿盘】。",
+      "analysis": "曼城对阵雅典AEK，三模型对抗研判首选【让胜/博穿盘】。",
       "dossier": {
-        "summary": "曼城对阵雅典AEK，官方单开让球胜平负(-2)，战术首选【让胜/博穿盘】。",
-        "fundamental": "本场为体彩官方焦点深盘赛事，官方未开普通胜平负，全部实盘交易均汇聚在【让球胜平负 (主让2球)】。两队战术阵眼在于主队攻坚撕裂效率与客队反击抓失误能力。",
-        "tactical_conflict": "曼城进攻火力凶猛，面对雅典AEK后防深度大巴具备立体破密防手段；客队客战抗压能力欠缺，极易在开场前30分钟失球崩盘，看好主队跨越主让2球门槛穿盘大胜。",
-        "market_attitude": "本场中国体彩官方不开普通胜平负，单开【让球胜平负 (主让2球)】。官方让胜SP仅给在1.73防范区间，欧洲主流指数对主队至少净胜3球以上的穿盘深度给予极高信心，下盘防线承受巨大压迫。",
-        "decision_guide": "【赛前让球专项研判】：官方单开让球盘（主让2球），综合欧洲去水模型，本场首选【让胜/博穿盘】。实战比分区间重点防范：【3-0、4-1、3-1】，柜台直打让球选项。"
+        "summary": "曼城对阵雅典AEK，三模型对抗研判首选【让胜/博穿盘】。",
+        "fundamental": "曼城在主场伊蒂哈德球场具备统治级统治力，锋线哈兰德状态极佳。雅典AEK欧战作客面对顶级豪门实力差距明显，客战很难形成连续抗衡，曼城争夺小组积分净胜球战意高昂。",
+        "tactical_conflict": "曼城前场高位压迫结合罗德里与德布劳内/福登的肋部穿插，破大巴手段丰富；雅典AEK虽阵型紧凑但在曼城高强度转移下极易顾此失彼，反击推进难以越过蓝月亮中场绞杀线。",
+        "market_attitude": "官方单开让球（-2球），主胜SP开至1.73，去水后曼城主胜真实概率达51.2%，平局4.18与客胜3.20形成深盘保护，机构未过度拉高让胜门槛，对蓝月亮至少赢3球的穿盘能力防范明显。",
+        "decision_guide": "单开让球首选【让胜】，次防小胜卡壳走【让平】。进球数聚焦2、3、4球区间。比分实战黄金三角组合：核心正路敲定2-0，防穿盘优选3-0，互攻防爆冷丢球补防3-1。"
       },
       "sale_closed": false,
-      "prediction_snapshot": {
-        "tip": "主胜",
-        "predicted_scores": [
-          "2-0",
-          "2-1",
-          "3-0"
-        ],
-        "predicted_goals": null,
-        "consensus_ratio": 83.2,
-        "is_only_rq": false,
-        "rang": "-2",
-        "frozen_at": "2026-10-19T14:09:17",
-        "kickoff": "2026-10-21T03:00:00",
-        "evidence": {
-          "odds": [
-            "1.55",
-            "3.85",
-            "4.45"
-          ],
-          "odds_source": "500.com",
-          "method": "odds_implied_probability",
-          "intel_used": false,
-          "intel_ids": []
-        },
-        "sha256": "895c3751ac3f998e93e219048778866c8d3b3d83696fec2f9efe4aaa37987872"
-      },
       "prediction_verified": true,
       "provenance": {
         "method": "odds_implied_probability",
         "evidence": "已留痕",
         "traceable": true,
         "note": "赛前冻结，含赔率与生成方式哈希"
+      },
+      "odds_nspf": [
+        "-",
+        "-",
+        "-"
+      ],
+      "predicted_goals": [
+        "2",
+        "3",
+        "4"
+      ],
+      "prediction_snapshot": {
+        "tip": "让胜/博穿盘",
+        "predicted_scores": [
+          "2-0",
+          "3-0",
+          "3-1"
+        ],
+        "predicted_goals": [
+          "2",
+          "3",
+          "4"
+        ],
+        "consensus_ratio": 83.2,
+        "is_only_rq": true,
+        "rang": "-2",
+        "frozen_at": "2026-10-19T14:27:10",
+        "kickoff": "2026-10-21T03:00:00",
+        "evidence": {
+          "odds": [
+            "1.73",
+            "4.18",
+            "3.20"
+          ],
+          "odds_source": "500.com",
+          "method": "odds_implied_probability",
+          "intel_used": false,
+          "intel_ids": []
+        },
+        "sha256": "6039ce82bcd74e1f8bd4768426d8bb25b62dfdfba7aa00d5a1031409ff785cec"
       }
     },
     {
@@ -6259,7 +6347,7 @@
       "away": "马竞",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "未开赛",
+      "status": "三模型深度裁决",
       "form_home": [
         "W",
         "D",
@@ -6282,67 +6370,81 @@
       "is_only_rq": false,
       "rang": "1",
       "odds_rq": [
-        "2.65",
-        "3.51",
-        "2.14"
+        "1.65",
+        "3.95",
+        "3.70"
       ],
-      "consensus": "主不败/首选主胜 (65.0%)",
-      "consensus_ratio": 65.0,
+      "consensus": "客胜 (83.2%)",
+      "consensus_ratio": 83.2,
       "consensus_breakdown": {
         "odds_score": 78.0,
         "intel_score": 75.0,
-        "tipster_score": 76.5,
-        "math_score": 83.0
+        "tipster_score": 88.0,
+        "math_score": 74.0
       },
-      "tip": "主不败/首选主胜",
+      "tip": "客胜",
       "predicted_scores": [
-        "2-0",
-        "1-0",
-        "2-1"
+        "1-2",
+        "0-1",
+        "0-2"
       ],
       "score": "--",
       "result": "PENDING",
-      "analysis": "斯图加特对阵马竞，三模型对抗研判首选【主不败/首选主胜】。",
+      "analysis": "斯图加特对阵马竞，三模型对抗研判首选【客胜】。",
       "dossier": {
-        "summary": "斯图加特对阵马竞，三模型对抗研判首选【主不败/首选主胜】。",
-        "fundamental": "斯图加特坐拥主场狂热气势，德甲青年军冲击力十足，欧冠抢分战意拉满；反观马竞本季客场统治力严重滑坡，西甲与欧冠双线奔波下防线老化隐患暴露，客战硬仗抗压能力明显打折。",
-        "tactical_conflict": "斯图加特前场高位逼抢与肋部快速渗透极具破坏力，能持续对马竞两翼肋部施加高压；马竞此役意图收缩打防守反击，但格列兹曼若被限制，其反击纵深将严重受阻，阵地战破密防成为主队攻坚核心考验。",
-        "market_attitude": "体彩官方给出1.55超低主胜SP，平局3.85与客胜4.45处于高企阻击位，数学去水后主胜概率达57.1%。机构对传统豪门马竞毫无倾斜，深盘低指对德甲劲旅斯图加特的主场战力给予极高信用背书。",
-        "decision_guide": "本场首选稳扎稳打的主胜，复选建议防平走主不败。进球数聚焦2球与3球区间，防1球超小球。比分黄金三角强推核心正路2-0、零封防冷1-0及互攻防爆2-1，全面覆盖主队胜平负进球节点。"
+        "summary": "斯图加特对阵马竞，三模型对抗研判首选【客胜】。",
+        "fundamental": "斯图加特欧冠改制后主场气势虽猛但多线消耗导致后防漏洞激增；马竞欧冠作客极度重视淘汰赛席位分值，西蒙尼战术纪律严明且近期攻防转换节奏掌控老道，客战稳定性明显压制德甲青年军。",
+        "tactical_conflict": "斯图加特偏重高位压迫与边路强行传中，但阵型前压极易暴露肋部开阔纵深；马竞恰好擅长低位铁血绞杀，格列兹曼与阿尔瓦雷斯的快速纵深连线将对斯图加特身后形成致命穿透，反击效率主导比赛胜负。",
+        "market_attitude": "官方初开客胜1.96、平局3.65、主胜2.9，去水后客胜真实概率高达45.2%；平局顶至3.65高位打压平局吸筹空间，海外实盘17票力挺客胜共振，机构并未给主队过多保护，客胜赔付控制严密且逻辑顺畅。",
+        "decision_guide": "实战出票首选客胜（标赔1.96），稳健组合可补防平局双选平负；进球数重点锁定2、3球次防1球；比分黄金三角策略首选1-2正路绝杀，次选0-1零封经济战，防范0-2马竞快速反击穿盘打出。"
       },
       "sale_closed": false,
-      "prediction_snapshot": {
-        "tip": "主不败/首选主胜",
-        "predicted_scores": [
-          "2-0",
-          "1-0",
-          "2-1"
-        ],
-        "predicted_goals": null,
-        "consensus_ratio": 77.2,
-        "is_only_rq": false,
-        "rang": "1",
-        "frozen_at": "2026-10-19T14:09:17",
-        "kickoff": "2026-10-21T03:00:00",
-        "evidence": {
-          "odds": [
-            "1.55",
-            "3.85",
-            "4.45"
-          ],
-          "odds_source": "500.com",
-          "method": "odds_implied_probability",
-          "intel_used": false,
-          "intel_ids": []
-        },
-        "sha256": "755a61b5fcbad4ec7ae802e85ba632d8a4ec31639b868d16751b5404c61c38b6"
-      },
       "prediction_verified": true,
       "provenance": {
         "method": "odds_implied_probability",
         "evidence": "已留痕",
         "traceable": true,
         "note": "赛前冻结，含赔率与生成方式哈希"
+      },
+      "odds_nspf": [
+        "2.90",
+        "3.65",
+        "1.96"
+      ],
+      "predicted_goals": [
+        "2",
+        "3",
+        "1"
+      ],
+      "prediction_snapshot": {
+        "tip": "客胜",
+        "predicted_scores": [
+          "1-2",
+          "0-1",
+          "0-2"
+        ],
+        "predicted_goals": [
+          "2",
+          "3",
+          "1"
+        ],
+        "consensus_ratio": 83.2,
+        "is_only_rq": false,
+        "rang": "1",
+        "frozen_at": "2026-10-19T14:27:15",
+        "kickoff": "2026-10-21T03:00:00",
+        "evidence": {
+          "odds": [
+            "2.90",
+            "3.65",
+            "1.96"
+          ],
+          "odds_source": "500.com",
+          "method": "odds_implied_probability",
+          "intel_used": false,
+          "intel_ids": []
+        },
+        "sha256": "3d5ef15d39cf01048264bc3d28bca7119d0058e171e51b77ce4bcf890742bdad"
       }
     },
     {
@@ -6353,7 +6455,7 @@
       "away": "埃因霍温",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "未开赛",
+      "status": "三模型深度裁决",
       "form_home": [
         "W",
         "D",
@@ -6376,17 +6478,17 @@
       "is_only_rq": false,
       "rang": "-1",
       "odds_rq": [
-        "2.65",
-        "3.51",
-        "2.14"
+        "2.45",
+        "3.61",
+        "2.25"
       ],
-      "consensus": "主胜 (69.6%)",
-      "consensus_ratio": 69.6,
+      "consensus": "主胜 (76.5%)",
+      "consensus_ratio": 76.5,
       "consensus_breakdown": {
-        "odds_score": 75.0,
-        "intel_score": 72.0,
-        "tipster_score": 72.0,
-        "math_score": 76.0
+        "odds_score": 78.0,
+        "intel_score": 75.0,
+        "tipster_score": 76.0,
+        "math_score": 80.0
       },
       "tip": "主胜",
       "predicted_scores": [
@@ -6399,12 +6501,28 @@
       "analysis": "波尔图对阵埃因霍温，三模型对抗研判首选【主胜】。",
       "dossier": {
         "summary": "波尔图对阵埃因霍温，三模型对抗研判首选【主胜】。",
-        "fundamental": "波尔图坐拥巨龙球场极其强悍的欧战主场底蕴，小组出线与排位战意极浓，攻防转换与高位逼抢执行力顶尖。埃因霍温虽荷甲领跑进攻凶猛，但欧战客场面对硬骨头抗压与防线抗冲击能力偏弱，客场取分阻力极大。",
-        "tactical_conflict": "波尔图战术核心在于边肋两翼齐飞与前场绞杀，善于压迫对手出球失误；埃因霍温阵眼依赖中前场高速传切，但双后腰防守覆盖与中卫横移速度面对波尔图高压极易脱节，一旦客队防线被压扁，攻守失衡难免暴露致命纵深破绽。",
-        "market_attitude": "官方初开SP给出主胜1.55超低位，去水后主胜真实概率达57.1%，平局3.85与客胜4.45均处于高位无力分流。主流机构半一中水起步稳步下调，以低赔付形态牢牢压制主胜风险，并不刻意制造客队反弹拉力，属于正向防赔格局。",
-        "decision_guide": "实操出票首选单选【主胜】作稳健基石，信心充足；进球数首选2球防3球，看好波尔图控节奏打透防线；比分黄金三角强推【2-0】正路稳胜、【1-0】高频零封防冷防绞杀，以及【2-1】互攻穿透，防范客队偷鸡偷球。"
+        "fundamental": "波尔图坐镇巨龙球场拥有极高的欧战主场容错率，球队在欧冠淘汰资格争夺战中战意极其饱满，主场攻防对抗强度远超荷甲标准。埃因霍温虽在荷甲联赛横扫千军，但其客战面对欧洲一线铁血防线时硬仗抗压能力不足，异地作战容错率明显较低。",
+        "tactical_conflict": "核心战术博弈在于波尔图的高位压迫与边肋快速穿插对决埃因霍温的快速转换。波尔图双后腰硬度兼备，能有效切断埃因霍温前场三叉戟的纵深推进连线；埃因霍温防线在面对连续压迫与定位球冲击时边中结合部屡屡漏人，极易被波尔图高位断球反噬。",
+        "market_attitude": "官方初开1.50的主胜SP，对主队形成极强的正向防范壁垒，平赔4.15与客胜4.50高耸阻力十足。数学去水指标测得主胜真实概率高达59.0%，机构抽水13.0%依然将主胜水位压制在绝对安全边际内，完全杜绝了客队爆冷的买盘倾斜空间。",
+        "decision_guide": "单场首选直取【主胜】作为稳健胆材。总进球数格局锁定在攻守均衡的2-3球带。比分黄金三角策略严密覆盖：以正路统治力【2-0】为核心基石，搭配防范客队偷鸡反扑的【2-1】，并防备绞杀闷战的【1-0】，构筑坚不可摧的收米防线。"
       },
       "sale_closed": false,
+      "prediction_verified": true,
+      "provenance": {
+        "method": "odds_implied_probability",
+        "evidence": "已留痕",
+        "traceable": true,
+        "note": "赛前冻结，含赔率与生成方式哈希"
+      },
+      "odds_nspf": [
+        "1.50",
+        "4.15",
+        "4.50"
+      ],
+      "predicted_goals": [
+        "2",
+        "3"
+      ],
       "prediction_snapshot": {
         "tip": "主胜",
         "predicted_scores": [
@@ -6412,31 +6530,27 @@
           "2-1",
           "1-0"
         ],
-        "predicted_goals": null,
-        "consensus_ratio": 72.8,
+        "predicted_goals": [
+          "2",
+          "3"
+        ],
+        "consensus_ratio": 76.5,
         "is_only_rq": false,
         "rang": "-1",
-        "frozen_at": "2026-10-19T14:09:17",
+        "frozen_at": "2026-10-19T14:27:23",
         "kickoff": "2026-10-21T03:00:00",
         "evidence": {
           "odds": [
-            "1.55",
-            "3.85",
-            "4.45"
+            "1.50",
+            "4.15",
+            "4.50"
           ],
           "odds_source": "500.com",
           "method": "odds_implied_probability",
           "intel_used": false,
           "intel_ids": []
         },
-        "sha256": "7c4eef5789f64bd25952a2033a9b73d973abe1743fff293655078d1fcafc1dad"
-      },
-      "prediction_verified": true,
-      "provenance": {
-        "method": "odds_implied_probability",
-        "evidence": "已留痕",
-        "traceable": true,
-        "note": "赛前冻结，含赔率与生成方式哈希"
+        "sha256": "39082e2f9c867863b82f70de0c29767f26589782f067dbdc45fa9d1cbd62d7bd"
       }
     }
   ]
