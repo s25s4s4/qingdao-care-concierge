@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-19 13:00:20",
-  "total": 74,
+  "updated_at": "2026-10-19 14:09:25",
+  "total": 83,
   "matches": [
     {
       "code": "周五001",
@@ -5592,6 +5592,852 @@
       ],
       "official_market": "had",
       "odds_source": "sporttery_official"
+    },
+    {
+      "code": "周二001",
+      "league": "欧冠",
+      "time": "10-21 00:45",
+      "home": "费内巴切",
+      "away": "斯拉维亚",
+      "home_rank": "-",
+      "away_rank": "-",
+      "status": "未开赛",
+      "form_home": [
+        "W",
+        "D",
+        "W",
+        "L",
+        "D"
+      ],
+      "form_away": [
+        "D",
+        "W",
+        "L",
+        "W",
+        "W"
+      ],
+      "odds": [
+        "1.55",
+        "3.85",
+        "4.45"
+      ],
+      "is_only_rq": false,
+      "rang": "-1",
+      "odds_rq": [
+        "2.65",
+        "3.51",
+        "2.14"
+      ],
+      "consensus": "主胜 (73.2%)",
+      "consensus_ratio": 73.2,
+      "consensus_breakdown": {
+        "odds_score": 75.0,
+        "intel_score": 72.0,
+        "tipster_score": 72.0,
+        "math_score": 79.0
+      },
+      "tip": "主胜",
+      "predicted_scores": [
+        "2-0",
+        "2-1",
+        "1-0"
+      ],
+      "score": "--",
+      "result": "PENDING",
+      "analysis": "费内巴切对阵斯拉维亚，三模型对抗研判首选【主胜】。",
+      "dossier": {
+        "summary": "费内巴切对阵斯拉维亚，三模型对抗研判首选【主胜】。",
+        "fundamental": "费内巴切坐镇魔鬼主场苏克鲁萨拉吉奥卢球场，欧战主场向来气势磅礴，阵容在夏窗补强后硬实力明显压制捷克劲旅布拉格斯拉维亚。斯拉维亚虽然欧战韧性十足且身体对抗强悍，但客场作战往往受制于强力压迫，攻防容错率极低，主队战意和主场优势处于绝对主导地位。",
+        "tactical_conflict": "费内巴切阵眼在于中前场的快速穿插与两翼撕扯，能够高强度压缩对手防线并创造局部人数优势；斯拉维亚破局依赖中场高位绞杀与边路反击纵深。矛盾焦点在于主队破大巴的穿透力对决客队禁区密集防守，主队若先拔头筹，斯拉维亚防线将被迫前压从而暴露出身后致命空当。",
+        "market_attitude": "官方SP给出1.55主胜、3.85平局与4.45客胜，去水后主胜真实概率达57.1%。亚盘主流初盘半一低水持续受注，后市升盘一球保持强阻力，欧赔大幅拉高平负至4.00以上，机构在通过合理门槛分流热度，未现异常诱盘，防范主胜正路打出态度坚决。",
+        "decision_guide": "实战单固或串关首选【主胜】作为稳胆基石，风险承受者可博让胜穿盘；总进球数锁定在2球与3球区间；比分严密布设【黄金三角】：核心正路高频首选2-0，互攻防爆选2-1，零封闷杀防范1-0，兼顾正路打穿与一球小胜。"
+      },
+      "sale_closed": false,
+      "prediction_snapshot": {
+        "tip": "主胜",
+        "predicted_scores": [
+          "2-0",
+          "2-1",
+          "1-0"
+        ],
+        "predicted_goals": null,
+        "consensus_ratio": 73.2,
+        "is_only_rq": false,
+        "rang": "-1",
+        "frozen_at": "2026-10-19T14:09:17",
+        "kickoff": "2026-10-21T00:45:00",
+        "evidence": {
+          "odds": [
+            "1.55",
+            "3.85",
+            "4.45"
+          ],
+          "odds_source": "500.com",
+          "method": "odds_implied_probability",
+          "intel_used": false,
+          "intel_ids": []
+        },
+        "sha256": "2639c93063c71eb0adb82301c49f0f676f4c469b3f562711d3e476ac230322bb"
+      },
+      "prediction_verified": true,
+      "provenance": {
+        "method": "odds_implied_probability",
+        "evidence": "已留痕",
+        "traceable": true,
+        "note": "赛前冻结，含赔率与生成方式哈希"
+      }
+    },
+    {
+      "code": "周二002",
+      "league": "欧冠",
+      "time": "10-21 00:45",
+      "home": "萨巴赫",
+      "away": "多特蒙德",
+      "home_rank": "-",
+      "away_rank": "-",
+      "status": "未开赛",
+      "form_home": [
+        "W",
+        "D",
+        "W",
+        "L",
+        "D"
+      ],
+      "form_away": [
+        "D",
+        "W",
+        "L",
+        "W",
+        "W"
+      ],
+      "odds": [
+        "1.55",
+        "3.85",
+        "4.45"
+      ],
+      "is_only_rq": false,
+      "rang": "2",
+      "odds_rq": [
+        "2.65",
+        "3.51",
+        "2.14"
+      ],
+      "consensus": "主不败/首选主胜 (76.5%)",
+      "consensus_ratio": 76.5,
+      "consensus_breakdown": {
+        "odds_score": 78.0,
+        "intel_score": 75.0,
+        "tipster_score": 76.0,
+        "math_score": 80.0
+      },
+      "tip": "主不败/首选主胜",
+      "predicted_scores": [
+        "2-0",
+        "1-0",
+        "2-1"
+      ],
+      "score": "--",
+      "result": "PENDING",
+      "analysis": "萨巴赫对阵多特蒙德，三模型对抗研判首选【主不败/首选主胜】。",
+      "dossier": {
+        "summary": "萨巴赫对阵多特蒙德，三模型对抗研判首选【主不败/首选主胜】。",
+        "fundamental": "本场欧冠小组赛由萨巴赫主场迎战德甲劲旅多特蒙德。萨巴赫坐拥主场强悍的地缘与气候壁垒，在欧战主场向来球风凶悍、防守纵深保持紧凑；而多特蒙德近期面临多线作战赛程密集，客场异地作战向来存在防线慢热与阵地攻坚效率波动的隐患，主队具备极强拿分抢工战意。",
+        "tactical_conflict": "战术阵眼在于萨巴赫的低位中位防线绞杀与高效攻防转换，其前场冲击力对多特压上后留下的边肋空当威胁极大；多特蒙德虽具备控球优势与反击纵深，但若遭遇密集防守极易陷入阵地战肉搏，且客场后防回防补位偶有脱节，这决定了比赛节奏更偏向强对抗与中低进球区间。",
+        "market_attitude": "官方竞彩开出主胜1.55、平局3.85、客胜4.45的初指组合，数学去水后主胜真实概率达57.1%，平局23.0%，机构抽水13.0%。欧洲主流机构深盘低水对主胜给予了极强的硬性风控保护，客胜赔率高企至4.45阻力极大，平局3.85处于合理分流区间，盘口对主队形成实质性支撑。",
+        "decision_guide": "建议彩民实战以【主不败/首选主胜】为核心框架稳妥出票，单挑可直接博主胜。进球数重点锁定在2球、3球区间；比分严密布局【黄金三角】：核心正路高频首选2-0，零封闷杀保守防范1-0，互攻防爆补充2-1，全面覆盖主胜不同进球梯度的收益结构。"
+      },
+      "sale_closed": false,
+      "prediction_snapshot": {
+        "tip": "主不败/首选主胜",
+        "predicted_scores": [
+          "2-0",
+          "1-0",
+          "2-1"
+        ],
+        "predicted_goals": null,
+        "consensus_ratio": 76.5,
+        "is_only_rq": false,
+        "rang": "2",
+        "frozen_at": "2026-10-19T14:09:17",
+        "kickoff": "2026-10-21T00:45:00",
+        "evidence": {
+          "odds": [
+            "1.55",
+            "3.85",
+            "4.45"
+          ],
+          "odds_source": "500.com",
+          "method": "odds_implied_probability",
+          "intel_used": false,
+          "intel_ids": []
+        },
+        "sha256": "fd1812dfee6c79b2f8acabc4a52834ce0e69fba27e5a82695f8e435018e6514c"
+      },
+      "prediction_verified": true,
+      "provenance": {
+        "method": "odds_implied_probability",
+        "evidence": "已留痕",
+        "traceable": true,
+        "note": "赛前冻结，含赔率与生成方式哈希"
+      }
+    },
+    {
+      "code": "周二004",
+      "league": "欧冠",
+      "time": "10-21 03:00",
+      "home": "那不勒斯",
+      "away": "博德闪耀",
+      "home_rank": "-",
+      "away_rank": "-",
+      "status": "未开赛",
+      "form_home": [
+        "W",
+        "D",
+        "W",
+        "L",
+        "D"
+      ],
+      "form_away": [
+        "D",
+        "W",
+        "L",
+        "W",
+        "W"
+      ],
+      "odds": [
+        "1.55",
+        "3.85",
+        "4.45"
+      ],
+      "is_only_rq": false,
+      "rang": "-1",
+      "odds_rq": [
+        "2.65",
+        "3.51",
+        "2.14"
+      ],
+      "consensus": "主不败/首选主胜 (77.25%)",
+      "consensus_ratio": 77.25,
+      "consensus_breakdown": {
+        "odds_score": 75.0,
+        "intel_score": 72.0,
+        "tipster_score": 79.0,
+        "math_score": 78.0
+      },
+      "tip": "主不败/首选主胜",
+      "predicted_scores": [
+        "2-0",
+        "2-1",
+        "1-1"
+      ],
+      "score": "--",
+      "result": "PENDING",
+      "analysis": "那不勒斯对阵博德闪耀，三模型对抗研判首选【主不败/首选主胜】。",
+      "dossier": {
+        "summary": "那不勒斯对阵博德闪耀，三模型对抗研判首选【主不败/首选主胜】。",
+        "fundamental": "欧冠赛场那不勒斯坐镇马拉多纳主场，急需全取三分确立出线优势，地利加持与整体战力远优于客队。博德闪耀作为挪超劲旅作客南欧往往遭遇气候与高压客场双重考验，战意虽足但客战底蕴有限，主队占据战略压制。",
+        "tactical_conflict": "战术阵眼在于那不勒斯的边肋切割能否撕破博德闪耀的低位密防，主队xG进球期望达2.0，攻坚手段丰富。破坏者视角在于那不勒斯近期锋线损耗导致门前终结波动，博德闪耀反击纵深速度极快，一旦主队久攻不下易遭偷袭平局。",
+        "market_attitude": "体彩开出1.55主胜、3.85平局、4.45客胜。去除13.0%抽水后主胜真实概率57.1%，平局23.0%。海外前线机构实盘并未盲目造热深盘，平局赔率3.85处于防范区间，双选防平呼声暗涌，主胜阻力适中不失为控赔手段。",
+        "decision_guide": "实战投注首选【主胜】作胆，竞彩双选稳健挂钩【主不败】防范平局闷杀。进球数聚焦2球、3球区间。黄金三角比分严防【2-0】正路打穿、【2-1】互攻溢出与【1-1】爆冷防范，立体覆盖攻坚全格局。"
+      },
+      "sale_closed": false,
+      "prediction_snapshot": {
+        "tip": "主不败/首选主胜",
+        "predicted_scores": [
+          "2-0",
+          "2-1",
+          "1-1"
+        ],
+        "predicted_goals": null,
+        "consensus_ratio": 77.25,
+        "is_only_rq": false,
+        "rang": "-1",
+        "frozen_at": "2026-10-19T14:09:17",
+        "kickoff": "2026-10-21T03:00:00",
+        "evidence": {
+          "odds": [
+            "1.55",
+            "3.85",
+            "4.45"
+          ],
+          "odds_source": "500.com",
+          "method": "odds_implied_probability",
+          "intel_used": false,
+          "intel_ids": []
+        },
+        "sha256": "bfbe0a05e84dd68cfe21c92b7a7b6af9fc5eaf3ffa50751892255174f6d78146"
+      },
+      "prediction_verified": true,
+      "provenance": {
+        "method": "odds_implied_probability",
+        "evidence": "已留痕",
+        "traceable": true,
+        "note": "赛前冻结，含赔率与生成方式哈希"
+      }
+    },
+    {
+      "code": "周二005",
+      "league": "欧冠",
+      "time": "10-21 03:00",
+      "home": "罗马",
+      "away": "布拉迪斯",
+      "home_rank": "-",
+      "away_rank": "-",
+      "status": "未开赛",
+      "form_home": [
+        "W",
+        "D",
+        "W",
+        "L",
+        "D"
+      ],
+      "form_away": [
+        "D",
+        "W",
+        "L",
+        "W",
+        "W"
+      ],
+      "odds": [
+        "1.55",
+        "3.85",
+        "4.45"
+      ],
+      "is_only_rq": false,
+      "rang": "-2",
+      "odds_rq": [
+        "2.65",
+        "3.51",
+        "2.14"
+      ],
+      "consensus": "主胜 (83.1%)",
+      "consensus_ratio": 83.1,
+      "consensus_breakdown": {
+        "odds_score": 78.0,
+        "intel_score": 75.0,
+        "tipster_score": 88.0,
+        "math_score": 74.0
+      },
+      "tip": "主胜",
+      "predicted_scores": [
+        "2-0",
+        "2-1",
+        "3-0"
+      ],
+      "score": "--",
+      "result": "PENDING",
+      "analysis": "罗马对阵布拉迪斯，三模型对抗研判首选【主胜】。",
+      "dossier": {
+        "summary": "罗马对阵布拉迪斯，三模型对抗研判首选【主胜】。",
+        "fundamental": "欧冠赛场罗马坐镇主场奥林匹克球场迎战布拉迪斯拉发。客队作为本组公认弱旅，客战五大联赛级别豪门处于全方位战力劣势；罗马欧战积分急需稳固，主场拿足3分战意毋庸置疑，地利优势极其明显。",
+        "tactical_conflict": "罗马战术阵眼在于中前场阵地穿透与两侧肋部压制，利用身体及技术优势实施高位围攻；布拉迪斯防线抗压能力羸弱，反击纵深速度受制于主队中后场反抢拦截，客队难以获得足够的进攻推进空间。",
+        "market_attitude": "官方初盘开出主胜1.55、平局3.85、客胜4.45，真实去水概率主胜达57.1%，机构抽水13.0%。欧洲各主流机构稳步压低主胜赔付，平赔与客赔均拉高到深水区间，盘赔阻力对主胜打出形成有效防护。",
+        "decision_guide": "本场正路单选主胜作为串关胆码稳健度极高；总进球数推荐锁定2球和3球大势。实战比分黄金三角严密防范：首选正路高频2-0，次选防客队偷球破门的2-1，博弈大胜穿盘的3-0，全面覆盖中高进球区间。"
+      },
+      "sale_closed": false,
+      "prediction_snapshot": {
+        "tip": "主胜",
+        "predicted_scores": [
+          "2-0",
+          "2-1",
+          "3-0"
+        ],
+        "predicted_goals": null,
+        "consensus_ratio": 83.1,
+        "is_only_rq": false,
+        "rang": "-2",
+        "frozen_at": "2026-10-19T14:09:17",
+        "kickoff": "2026-10-21T03:00:00",
+        "evidence": {
+          "odds": [
+            "1.55",
+            "3.85",
+            "4.45"
+          ],
+          "odds_source": "500.com",
+          "method": "odds_implied_probability",
+          "intel_used": false,
+          "intel_ids": []
+        },
+        "sha256": "8f7d3e8ec37962cd87f2af60c1f95e1d378f7d627cbf7b06c7a3bd34e514daa9"
+      },
+      "prediction_verified": true,
+      "provenance": {
+        "method": "odds_implied_probability",
+        "evidence": "已留痕",
+        "traceable": true,
+        "note": "赛前冻结，含赔率与生成方式哈希"
+      }
+    },
+    {
+      "code": "周二006",
+      "league": "欧冠",
+      "time": "10-21 03:00",
+      "home": "巴黎圣曼",
+      "away": "巴萨",
+      "home_rank": "-",
+      "away_rank": "-",
+      "status": "未开赛",
+      "form_home": [
+        "W",
+        "D",
+        "W",
+        "L",
+        "D"
+      ],
+      "form_away": [
+        "D",
+        "W",
+        "L",
+        "W",
+        "W"
+      ],
+      "odds": [
+        "1.55",
+        "3.85",
+        "4.45"
+      ],
+      "is_only_rq": false,
+      "rang": "1",
+      "odds_rq": [
+        "2.65",
+        "3.51",
+        "2.14"
+      ],
+      "consensus": "主胜 (80.8%)",
+      "consensus_ratio": 80.8,
+      "consensus_breakdown": {
+        "odds_score": 78.0,
+        "intel_score": 75.0,
+        "tipster_score": 83.0,
+        "math_score": 80.0
+      },
+      "tip": "主胜",
+      "predicted_scores": [
+        "2-0",
+        "2-1",
+        "3-0"
+      ],
+      "score": "--",
+      "result": "PENDING",
+      "analysis": "巴黎圣曼对阵巴萨，三模型对抗研判首选【主胜】。",
+      "dossier": {
+        "summary": "巴黎圣曼对阵巴萨，三模型对抗研判首选【主胜】。",
+        "fundamental": "巴黎圣日耳曼坐镇王子公园球场气势如虹，主场战意拉满。巴塞罗那近期后防伤情缠身，埃里克·加西亚伤缺让后场轮换吃紧。虽两队均属欧冠争冠序列，但巴黎主场统治力更强，地利与阵地压迫优势尽显，客队客战心理承压明显。",
+        "tactical_conflict": "巴黎依赖边路纵深穿透与前场高位反抢，对巴萨传控体系形成精准围剿；努诺·门德斯虽有伤情，但巴黎前场双核压迫力能掩盖边卫瑕疵。巴萨破局寄望于反击突刺，但中后场出球在巴黎高压绞杀下失误率骤增，极易遭遇致命就地反击。",
+        "market_attitude": "中国体彩官方开出主胜1.55、平局3.85、客胜4.45，机构去水后主胜真实概率高达57.1%。1.55低水强力构筑主胜安全边际，未给客队及平局留有防范空间，欧亚盘口高度协同，客胜4.45高企充分实现阻上分流，正路支撑力极其扎实。",
+        "decision_guide": "单选直奔【主胜】作稳胆出票。进球数格局看好2球、3球，杜绝大开大合。比分黄金三角严密防范：首选核心正路【2-0】，次选互攻打穿【2-1】，补选强攻穿盘【3-0】，梯次布局2球与3球带宽，稳稳锁定全息红单。"
+      },
+      "sale_closed": false,
+      "prediction_snapshot": {
+        "tip": "主胜",
+        "predicted_scores": [
+          "2-0",
+          "2-1",
+          "3-0"
+        ],
+        "predicted_goals": null,
+        "consensus_ratio": 80.8,
+        "is_only_rq": false,
+        "rang": "1",
+        "frozen_at": "2026-10-19T14:09:17",
+        "kickoff": "2026-10-21T03:00:00",
+        "evidence": {
+          "odds": [
+            "1.55",
+            "3.85",
+            "4.45"
+          ],
+          "odds_source": "500.com",
+          "method": "odds_implied_probability",
+          "intel_used": false,
+          "intel_ids": []
+        },
+        "sha256": "a2233f5713462797640924432c4d0fd7c78509fb4170b61259fa1bcdc11f2966"
+      },
+      "prediction_verified": true,
+      "provenance": {
+        "method": "odds_implied_probability",
+        "evidence": "已留痕",
+        "traceable": true,
+        "note": "赛前冻结，含赔率与生成方式哈希"
+      }
+    },
+    {
+      "code": "周二007",
+      "league": "欧冠",
+      "time": "10-21 03:00",
+      "home": "利物浦",
+      "away": "比利亚雷",
+      "home_rank": "-",
+      "away_rank": "-",
+      "status": "未开赛",
+      "form_home": [
+        "W",
+        "D",
+        "W",
+        "L",
+        "D"
+      ],
+      "form_away": [
+        "D",
+        "W",
+        "L",
+        "W",
+        "W"
+      ],
+      "odds": [
+        "1.55",
+        "3.85",
+        "4.45"
+      ],
+      "is_only_rq": false,
+      "rang": "-1",
+      "odds_rq": [
+        "2.65",
+        "3.51",
+        "2.14"
+      ],
+      "consensus": "主胜 (83.1%)",
+      "consensus_ratio": 83.1,
+      "consensus_breakdown": {
+        "odds_score": 80.0,
+        "intel_score": 78.0,
+        "tipster_score": 86.0,
+        "math_score": 78.0
+      },
+      "tip": "主胜",
+      "predicted_scores": [
+        "2-0",
+        "2-1",
+        "3-0"
+      ],
+      "score": "--",
+      "result": "PENDING",
+      "analysis": "利物浦对阵比利亚雷，三模型对抗研判首选【主胜】。",
+      "dossier": {
+        "summary": "利物浦对阵比利亚雷，三模型对抗研判首选【主胜】。",
+        "fundamental": "一、欧冠高光赛场安菲尔德之夜，利物浦坐镇主场战意十足，底蕴与杯赛主场声势处于绝对优势。客队比利亚雷亚尔球风顽强但欧战客场硬仗抗压能力有限，双方纸面实力与人员深度存在档次级差距，红军赢球正路支撑坚实。",
+        "tactical_conflict": "二、核心矛盾在于利物浦高位压迫及肋部穿插破密集，对比利亚雷亚尔低位双层防线与反击出球质量的考验。利物浦若中前场就地反抢成效显著，黄潜极易受制于半场压迫而失误；客队唯一胜机在于利用红军边卫插上后的纵深偷袭。",
+        "market_attitude": "三、官方初指开出主胜1.55、平局3.85、客胜4.45，数学去水后主胜真实概率达57.1%，机构并未给予主胜过度浅开的甜头，抽水13.0%严控风险。平赔高顶至3.85分流压力，海外推单实盘5票全线倾向主胜，正路支撑明确。",
+        "decision_guide": "四、实战直接单挑【主胜】作为强胆基石。进球数重心圈定在2球与3球区间；比分严密构筑黄金三角：以核心正路高频【2-0】为基底，搭配互攻穿透防爆的【2-1】与安菲尔德打穿的【3-0】，形成无死角覆盖矩阵。"
+      },
+      "sale_closed": false,
+      "prediction_snapshot": {
+        "tip": "主胜",
+        "predicted_scores": [
+          "2-0",
+          "2-1",
+          "3-0"
+        ],
+        "predicted_goals": null,
+        "consensus_ratio": 83.1,
+        "is_only_rq": false,
+        "rang": "-1",
+        "frozen_at": "2026-10-19T14:09:17",
+        "kickoff": "2026-10-21T03:00:00",
+        "evidence": {
+          "odds": [
+            "1.55",
+            "3.85",
+            "4.45"
+          ],
+          "odds_source": "500.com",
+          "method": "odds_implied_probability",
+          "intel_used": false,
+          "intel_ids": []
+        },
+        "sha256": "63fbca265f3f9db1ca4d30caee39ac4d2fc4410a61f55fbffcb752c1627e5a6d"
+      },
+      "prediction_verified": true,
+      "provenance": {
+        "method": "odds_implied_probability",
+        "evidence": "已留痕",
+        "traceable": true,
+        "note": "赛前冻结，含赔率与生成方式哈希"
+      }
+    },
+    {
+      "code": "周二008",
+      "league": "欧冠",
+      "time": "10-21 03:00",
+      "home": "曼城",
+      "away": "雅典AEK",
+      "home_rank": "-",
+      "away_rank": "-",
+      "status": "未开赛",
+      "form_home": [
+        "W",
+        "D",
+        "W",
+        "L",
+        "D"
+      ],
+      "form_away": [
+        "D",
+        "W",
+        "L",
+        "W",
+        "W"
+      ],
+      "odds": [
+        "1.55",
+        "3.85",
+        "4.45"
+      ],
+      "is_only_rq": false,
+      "rang": "-2",
+      "odds_rq": [
+        "2.65",
+        "3.51",
+        "2.14"
+      ],
+      "consensus": "主胜 (83.2%)",
+      "consensus_ratio": 83.2,
+      "consensus_breakdown": {
+        "odds_score": 78.0,
+        "intel_score": 75.0,
+        "tipster_score": 88.0,
+        "math_score": 74.0
+      },
+      "tip": "主胜",
+      "predicted_scores": [
+        "2-0",
+        "2-1",
+        "3-0"
+      ],
+      "score": "--",
+      "result": "PENDING",
+      "analysis": "曼城对阵雅典AEK，三模型对抗研判首选【主胜】。",
+      "dossier": {
+        "summary": "曼城对阵雅典AEK，三模型对抗研判首选【主胜】。",
+        "fundamental": "曼城坐镇伊蒂哈德主场具备极强欧冠统治力，尽管场外存在监管传闻杂音，但竞技状态极佳，哈兰德与福登脚感火热；雅典AEK欧战客场硬仗能力有限，面对蓝月军团控场压迫难有主动权，主队争分巩固出线格局战意坚决。",
+        "tactical_conflict": "曼城核心阵眼在于肋部倒三角渗透与哈兰德门前终结，对阵密集大巴经验丰富；雅典AEK受限于客场低位阵型，反击推进缺乏绝对速度爆点，一旦阵型被前场高压撕裂，防守链条将面临持续考验，比赛大概率呈现半场压迫攻坚。",
+        "market_attitude": "官方SP开出主胜1.55、平局3.85、客胜4.45，机构抽水约13.0%，去水后主胜真实胜率达57.1%。结合欧洲各家实盘盘口，主胜打出防范力度坚挺，平局与客胜赔付相对高企，海外多频道实盘倾向共振直指主胜正路打出。",
+        "decision_guide": "竞彩建议直选单选【主胜】作为稳胆基石；进球数重点锁定在2球与3球区间；比分组合搭建【黄金三角】：核心正路高频首选2-0，互攻防破防补2-1，穿盘防溢出配置3-0，层层设防锁定收益。"
+      },
+      "sale_closed": false,
+      "prediction_snapshot": {
+        "tip": "主胜",
+        "predicted_scores": [
+          "2-0",
+          "2-1",
+          "3-0"
+        ],
+        "predicted_goals": null,
+        "consensus_ratio": 83.2,
+        "is_only_rq": false,
+        "rang": "-2",
+        "frozen_at": "2026-10-19T14:09:17",
+        "kickoff": "2026-10-21T03:00:00",
+        "evidence": {
+          "odds": [
+            "1.55",
+            "3.85",
+            "4.45"
+          ],
+          "odds_source": "500.com",
+          "method": "odds_implied_probability",
+          "intel_used": false,
+          "intel_ids": []
+        },
+        "sha256": "895c3751ac3f998e93e219048778866c8d3b3d83696fec2f9efe4aaa37987872"
+      },
+      "prediction_verified": true,
+      "provenance": {
+        "method": "odds_implied_probability",
+        "evidence": "已留痕",
+        "traceable": true,
+        "note": "赛前冻结，含赔率与生成方式哈希"
+      }
+    },
+    {
+      "code": "周二009",
+      "league": "欧冠",
+      "time": "10-21 03:00",
+      "home": "斯图加特",
+      "away": "马竞",
+      "home_rank": "-",
+      "away_rank": "-",
+      "status": "未开赛",
+      "form_home": [
+        "W",
+        "D",
+        "W",
+        "L",
+        "D"
+      ],
+      "form_away": [
+        "D",
+        "W",
+        "L",
+        "W",
+        "W"
+      ],
+      "odds": [
+        "1.55",
+        "3.85",
+        "4.45"
+      ],
+      "is_only_rq": false,
+      "rang": "1",
+      "odds_rq": [
+        "2.65",
+        "3.51",
+        "2.14"
+      ],
+      "consensus": "主不败/首选主胜 (77.2%)",
+      "consensus_ratio": 77.2,
+      "consensus_breakdown": {
+        "odds_score": 78.0,
+        "intel_score": 75.0,
+        "tipster_score": 76.5,
+        "math_score": 83.0
+      },
+      "tip": "主不败/首选主胜",
+      "predicted_scores": [
+        "2-0",
+        "1-0",
+        "2-1"
+      ],
+      "score": "--",
+      "result": "PENDING",
+      "analysis": "斯图加特对阵马竞，三模型对抗研判首选【主不败/首选主胜】。",
+      "dossier": {
+        "summary": "斯图加特对阵马竞，三模型对抗研判首选【主不败/首选主胜】。",
+        "fundamental": "斯图加特坐拥主场狂热气势，德甲青年军冲击力十足，欧冠抢分战意拉满；反观马竞本季客场统治力严重滑坡，西甲与欧冠双线奔波下防线老化隐患暴露，客战硬仗抗压能力明显打折。",
+        "tactical_conflict": "斯图加特前场高位逼抢与肋部快速渗透极具破坏力，能持续对马竞两翼肋部施加高压；马竞此役意图收缩打防守反击，但格列兹曼若被限制，其反击纵深将严重受阻，阵地战破密防成为主队攻坚核心考验。",
+        "market_attitude": "体彩官方给出1.55超低主胜SP，平局3.85与客胜4.45处于高企阻击位，数学去水后主胜概率达57.1%。机构对传统豪门马竞毫无倾斜，深盘低指对德甲劲旅斯图加特的主场战力给予极高信用背书。",
+        "decision_guide": "本场首选稳扎稳打的主胜，复选建议防平走主不败。进球数聚焦2球与3球区间，防1球超小球。比分黄金三角强推核心正路2-0、零封防冷1-0及互攻防爆2-1，全面覆盖主队胜平负进球节点。"
+      },
+      "sale_closed": false,
+      "prediction_snapshot": {
+        "tip": "主不败/首选主胜",
+        "predicted_scores": [
+          "2-0",
+          "1-0",
+          "2-1"
+        ],
+        "predicted_goals": null,
+        "consensus_ratio": 77.2,
+        "is_only_rq": false,
+        "rang": "1",
+        "frozen_at": "2026-10-19T14:09:17",
+        "kickoff": "2026-10-21T03:00:00",
+        "evidence": {
+          "odds": [
+            "1.55",
+            "3.85",
+            "4.45"
+          ],
+          "odds_source": "500.com",
+          "method": "odds_implied_probability",
+          "intel_used": false,
+          "intel_ids": []
+        },
+        "sha256": "755a61b5fcbad4ec7ae802e85ba632d8a4ec31639b868d16751b5404c61c38b6"
+      },
+      "prediction_verified": true,
+      "provenance": {
+        "method": "odds_implied_probability",
+        "evidence": "已留痕",
+        "traceable": true,
+        "note": "赛前冻结，含赔率与生成方式哈希"
+      }
+    },
+    {
+      "code": "周二010",
+      "league": "欧冠",
+      "time": "10-21 03:00",
+      "home": "波尔图",
+      "away": "埃因霍温",
+      "home_rank": "-",
+      "away_rank": "-",
+      "status": "未开赛",
+      "form_home": [
+        "W",
+        "D",
+        "W",
+        "L",
+        "D"
+      ],
+      "form_away": [
+        "D",
+        "W",
+        "L",
+        "W",
+        "W"
+      ],
+      "odds": [
+        "1.55",
+        "3.85",
+        "4.45"
+      ],
+      "is_only_rq": false,
+      "rang": "-1",
+      "odds_rq": [
+        "2.65",
+        "3.51",
+        "2.14"
+      ],
+      "consensus": "主胜 (72.8%)",
+      "consensus_ratio": 72.8,
+      "consensus_breakdown": {
+        "odds_score": 75.0,
+        "intel_score": 72.0,
+        "tipster_score": 72.0,
+        "math_score": 76.0
+      },
+      "tip": "主胜",
+      "predicted_scores": [
+        "2-0",
+        "2-1",
+        "1-0"
+      ],
+      "score": "--",
+      "result": "PENDING",
+      "analysis": "波尔图对阵埃因霍温，三模型对抗研判首选【主胜】。",
+      "dossier": {
+        "summary": "波尔图对阵埃因霍温，三模型对抗研判首选【主胜】。",
+        "fundamental": "波尔图坐拥巨龙球场极其强悍的欧战主场底蕴，小组出线与排位战意极浓，攻防转换与高位逼抢执行力顶尖。埃因霍温虽荷甲领跑进攻凶猛，但欧战客场面对硬骨头抗压与防线抗冲击能力偏弱，客场取分阻力极大。",
+        "tactical_conflict": "波尔图战术核心在于边肋两翼齐飞与前场绞杀，善于压迫对手出球失误；埃因霍温阵眼依赖中前场高速传切，但双后腰防守覆盖与中卫横移速度面对波尔图高压极易脱节，一旦客队防线被压扁，攻守失衡难免暴露致命纵深破绽。",
+        "market_attitude": "官方初开SP给出主胜1.55超低位，去水后主胜真实概率达57.1%，平局3.85与客胜4.45均处于高位无力分流。主流机构半一中水起步稳步下调，以低赔付形态牢牢压制主胜风险，并不刻意制造客队反弹拉力，属于正向防赔格局。",
+        "decision_guide": "实操出票首选单选【主胜】作稳健基石，信心充足；进球数首选2球防3球，看好波尔图控节奏打透防线；比分黄金三角强推【2-0】正路稳胜、【1-0】高频零封防冷防绞杀，以及【2-1】互攻穿透，防范客队偷鸡偷球。"
+      },
+      "sale_closed": false,
+      "prediction_snapshot": {
+        "tip": "主胜",
+        "predicted_scores": [
+          "2-0",
+          "2-1",
+          "1-0"
+        ],
+        "predicted_goals": null,
+        "consensus_ratio": 72.8,
+        "is_only_rq": false,
+        "rang": "-1",
+        "frozen_at": "2026-10-19T14:09:17",
+        "kickoff": "2026-10-21T03:00:00",
+        "evidence": {
+          "odds": [
+            "1.55",
+            "3.85",
+            "4.45"
+          ],
+          "odds_source": "500.com",
+          "method": "odds_implied_probability",
+          "intel_used": false,
+          "intel_ids": []
+        },
+        "sha256": "7c4eef5789f64bd25952a2033a9b73d973abe1743fff293655078d1fcafc1dad"
+      },
+      "prediction_verified": true,
+      "provenance": {
+        "method": "odds_implied_probability",
+        "evidence": "已留痕",
+        "traceable": true,
+        "note": "赛前冻结，含赔率与生成方式哈希"
+      }
     }
   ]
 }
