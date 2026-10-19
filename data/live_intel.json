@@ -1,7 +1,18 @@
 {
-  "updated_at": "2026-10-19 22:10:42",
-  "total_tips": 10,
+  "updated_at": "2026-10-19 22:15:41",
+  "total_tips": 11,
   "live_feed": [
+    {
+      "id": 2835,
+      "channel": "FabrizioRomano",
+      "time": "2026-10-19 20:59",
+      "code": "周二007",
+      "league": "欧冠",
+      "category": "赛前军情(未翻译)",
+      "match": "利物浦 VS 比利亚雷",
+      "chinese": "[原文·未翻译] 🚨 Ronald Araujo on Liverpool buy option clause to sign him from Barça in 2027: “It's very early…”. “I'm just trying to enjoy every day, cont",
+      "translated": false
+    },
     {
       "id": 2848,
       "channel": "feedinco",
