@@ -1,7 +1,18 @@
 {
-  "updated_at": "2026-10-19 22:45:35",
-  "total_tips": 14,
+  "updated_at": "2026-10-19 22:55:30",
+  "total_tips": 15,
   "live_feed": [
+    {
+      "id": 2549,
+      "channel": "FabrizioRomano",
+      "time": "2026-10-19 01:38",
+      "code": "周二007",
+      "league": "欧冠",
+      "category": "赛前军情(未翻译)",
+      "match": "利物浦 VS 比利亚雷",
+      "chinese": "[原文·未翻译] 🚨 Rio Ngumoha on new contract talks with Liverpool: “It's all with my agent now. I think it is all going well”. “I am not too sure. I just l",
+      "translated": false
+    },
     {
       "id": 2795,
       "channel": "olimpbet",
