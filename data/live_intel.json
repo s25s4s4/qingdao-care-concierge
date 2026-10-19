@@ -1,7 +1,18 @@
 {
-  "updated_at": "2026-10-19 21:45:42",
-  "total_tips": 9,
+  "updated_at": "2026-10-19 22:10:42",
+  "total_tips": 10,
   "live_feed": [
+    {
+      "id": 2848,
+      "channel": "feedinco",
+      "time": "2026-10-19 22:05",
+      "code": "周二004",
+      "league": "欧冠",
+      "category": "赛前军情(未翻译)",
+      "match": "那不勒斯 VS 博德闪耀",
+      "chinese": "[原文·未翻译] FEEDINCO.com Tips for Tuesday, 20 October 1 - Man City - AEK Athens 1X - Fenerbahce - Slavia Prague 1X - Napoli - Bodoe/Glimt O1.5 - Liverpo",
+      "translated": false
+    },
     {
       "id": 2840,
       "channel": "olimpbet",
