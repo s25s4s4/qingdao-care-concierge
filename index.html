@@ -1061,24 +1061,7 @@
                     赛前建议锁定存盘，拒绝删单造假，以终场赛后比分为准。
                 </div>
             </div>
-            <!-- 通俗大白话 ROI 弹窗/说明胶囊 -->
-            <button onclick="toggleRoiTip()" style="background: rgba(210, 153, 34, 0.15); border: 1px solid rgba(210, 153, 34, 0.4); color: var(--accent-gold); font-size: 11px; font-weight: 700; padding: 4px 8px; border-radius: 6px; cursor: pointer; flex-shrink: 0;">
-                ❓ 什么是实战ROI
-            </button>
         </div>
-
-            <!-- 通俗大白话 ROI 释义卡片（默认轻量展开，支持折叠） -->
-            <div id="roi-tip-card" style="background: rgba(22, 27, 34, 0.85); border: 1px dashed rgba(210, 153, 34, 0.4); border-radius: 8px; padding: 10px 12px; margin-bottom: 12px; font-size: 11px; line-height: 1.6; color: #c9d1d9;">
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
-                    <b style="color: var(--accent-gold); font-size: 12px;">💡 店主白话：什么是【综合实战ROI】？</b>
-                    <span onclick="toggleRoiTip()" style="color: var(--text-secondary); cursor: pointer; font-size: 13px;">✕</span>
-                </div>
-                <div>
-                    <b>ROI 即“2串1全息实战净投资回报率”</b>。体彩绝大多数比赛不支持单场出票，必须 2 串 1 才能打票！<br>
-                    • <b>计算规则</b>：我们将当天全部比赛两两全息组合（单关亦参与组合）。以每组均注为基准，中奖奖金按 <code>SP₁ × SP₂</code> 复合相乘严格计算，<b>单日独立核算，彻底告别假大空单场算法</b>！<br>
-                    • <b>当前 <span id="tip-roi-val" style="color: var(--accent-gold); font-weight: 800;">--</span> 代表</b>：假设每组打 1000 元，投入 <span id="tip-roi-cost" style="font-weight: 700;">--</span> 元本金，除拿回本金外，<b>纯口袋<span id="tip-roi-status">净赚</span> <span id="tip-roi-profit" style="font-weight: 800;">--</span> 元</b>！随比赛完赛实时动态同步。
-                </div>
-            </div>
 
             <!-- ROI 算法双轨对照卡片 (前一结算日：首选纯单式 vs 容错防冷) -->
             <div style="background: rgba(13, 17, 23, 0.7); border: 1px solid var(--border-color); border-radius: 8px; padding: 12px; margin-bottom: 12px;">
@@ -2581,13 +2564,6 @@
         }
 
         // 复制微信号
-        function toggleRoiTip() {
-    const card = document.getElementById('roi-tip-card');
-    if (card) {
-        card.style.display = card.style.display === 'none' ? 'block' : 'none';
-    }
-}
-
 function copyWechat() {
             const wx = document.getElementById('wx-id').innerText;
             navigator.clipboard.writeText(wx).then(() => {
