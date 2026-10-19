@@ -1,7 +1,41 @@
 {
-  "updated_at": "2026-10-18 22:50:23",
-  "total_tips": 15,
+  "updated_at": "2026-10-19 14:54:22",
+  "total_tips": 18,
   "live_feed": [
+    {
+      "id": 2596,
+      "channel": "olimpbet",
+      "time": "2026-10-19 02:59",
+      "code": "周二006",
+      "league": "欧冠",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "巴黎圣曼 VS 巴萨",
+      "chinese": "萨福诺夫联赛战斯特拉斯堡单场7扑救，状态封神大概率连场首发。巴黎后防大轮休后体能占优，门将状态爆棚利好防守，热钱有博巴黎零封趋势，重点防小球与巴黎不败。",
+      "original": "🔥 ОЧЕРЕДНОЙ ТОП-МАТЧ САФОНОВА Вытащил семь ударов и оставил второй состав «ПСЖ» против «Страсбура» и был признан лучшим в матче 😎 А по оценке — минимум топ-5 ко"
+    },
+    {
+      "id": 2512,
+      "channel": "FabrizioRomano",
+      "time": "2026-10-18 23:53",
+      "code": "周二006",
+      "league": "欧冠",
+      "category": "赛前军情(未翻译)",
+      "match": "巴黎圣曼 VS 巴萨",
+      "chinese": "[原文·未翻译] 🚨 ⚠️ Eric García will be out for 3-4 weeks with an injury, Barcelona confirm. Out against PSG and Real Madrid. Koundé will miss PSG game on ",
+      "translated": false
+    },
+    {
+      "id": 2490,
+      "channel": "FabrizioRomano",
+      "time": "2026-10-18 22:33",
+      "code": "周二006",
+      "league": "欧冠",
+      "category": "赛前军情(未翻译)",
+      "match": "巴黎圣曼 VS 巴萨",
+      "chinese": "[原文·未翻译] 🚨 ⚠️ Nuno Mendes suffers muscle injury as tests done today have confirmed. The Portuguese left back will be out against Barcelona on Tuesday",
+      "translated": false
+    },
     {
       "id": 2493,
       "channel": "matchpreviews",
