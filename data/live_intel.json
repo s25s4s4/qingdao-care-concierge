@@ -1,7 +1,18 @@
 {
-  "updated_at": "2026-10-19 22:25:43",
-  "total_tips": 12,
+  "updated_at": "2026-10-19 22:35:36",
+  "total_tips": 13,
   "live_feed": [
+    {
+      "id": 2797,
+      "channel": "calciomercato",
+      "time": "2026-10-19 19:01",
+      "code": "周二005",
+      "league": "欧冠",
+      "category": "赛前军情(未翻译)",
+      "match": "罗马 VS 布拉迪斯",
+      "chinese": "[原文·未翻译] ‼️ 🔴 L’obiettivo principale del Milan nel mercato invernale sarà quello di rinforzare la difesa. 👀 Nel mirino c’è Daniele Ghilardi della Rom",
+      "translated": false
+    },
     {
       "id": 2849,
       "channel": "tribuna_football",
