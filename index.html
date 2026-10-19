@@ -1136,7 +1136,7 @@
                         <th style="width: 28%;">场次/对阵</th>
                         <th style="width: 38%;">赛前研判 · 比分进球</th>
                         <th style="width: 14%; text-align: center;">终场</th>
-                        <th style="width: 20%; text-align: center;">实单核销</th>
+                        <th style="width: 20%; text-align: center;">单场核销<br><span style="font-weight:400; font-size:9px; color:var(--text-tertiary);">按真实注数</span></th>
                     </tr>
                 </thead>
                 <tbody id="audit-tbody">
@@ -2394,8 +2394,12 @@
                         }
 
                         const profitVal = isHit ? (returnAmount - stakePerMatch) : -stakePerMatch;
-                        const profitColor = isHit ? '#3fb950' : '#f85149';
-                        const profitText = isHit ? `+${profitVal}元` : `-1000元`;
+                        const profitColor = (isHit && profitVal >= 0) ? '#3fb950' : '#f85149';
+                        // 命中但赔付不足以覆盖双选成本时，明确标出来，避免"中了却在亏"被误读成盈利
+                        const profitText = isHit
+                            ? (profitVal >= 0 ? `+${profitVal}元` : `${profitVal}元`)
+                            : `-${stakePerMatch}元`;
+                        const hitButLoss = isHit && profitVal < 0;
 
                         tr.innerHTML = `
                             <td style="font-family: var(--font-mono); font-size: 11px;">
@@ -2417,8 +2421,12 @@
                             </td>
                             <td style="text-align: center;">
                                 <span class="match-audit-tag ${tagClass}" style="display: block; margin-bottom: 3px; font-size: 10px; padding: 2px 4px;">${tagText}</span>
+                                ${hitButLoss ? '<div style="font-size:9px; color:#f85149; margin-bottom:2px;">命中但未回本</div>' : ''}
+                                <div style="font-size: 9px; color: var(--text-tertiary); font-family: var(--font-mono); margin-bottom: 2px;">
+                                    ${selCount > 1 ? `双选 ${selCount}注 · 投入${stakePerMatch}` : `单选 1注 · 投入1000`}
+                                </div>
                                 <div style="font-size: 10px; font-family: var(--font-mono); color: ${profitColor}; font-weight: 700;">
-                                    ${isPostponed ? '退本1000' : (isHit ? `<span style="color:var(--text-secondary); font-size:9px;">SP ${hitSpVal.toFixed(2)}</span><br>${profitText}` : profitText)}
+                                    ${isPostponed ? `退本${stakePerMatch}` : (isHit ? `<span style="color:var(--text-secondary); font-size:9px;">SP ${hitSpVal.toFixed(2)}</span><br>${profitText}` : profitText)}
                                 </div>
                             </td>
                         `;
