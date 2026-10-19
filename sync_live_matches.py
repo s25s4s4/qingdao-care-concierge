@@ -614,6 +614,16 @@ def full_pipeline_sync(auto_push=True):
                 log_messages.append(f"Frozen prediction: {m.get('code')}")
     except Exception as exc:
         log_messages.append(f"Freeze skipped: {type(exc).__name__}")
+    # 历史回填：已完赛但没来得及冻结的场次，从 kickoff 前的 git 提交里还原快照
+    # （自愈：任务中断、新加场次、旧数据都能补上，且可用 commit 复核）
+    try:
+        import backfill_from_git as _backfill
+        bstats, _bdetails = _backfill.backfill(existing_matches)
+        if bstats.get('backfilled'):
+            changes_made = True
+            log_messages.append(f"Backfilled from git: {bstats['backfilled']}")
+    except Exception as exc:
+        log_messages.append(f"Backfill skipped: {type(exc).__name__}")
     # 独立结算：只用外部源(FotMob)比分，不用自报比分
     try:
         import verify as _verify2

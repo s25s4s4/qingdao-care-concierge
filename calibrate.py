@@ -10,27 +10,52 @@ OUT = os.path.join(BASE, "data", "calibration.json")
 BUCKETS = [(0, 45), (45, 55), (55, 65), (65, 75), (75, 101)]
 
 
+def _origin(snap):
+    """快照来源。旧快照没有 origin 字段，按 method 推断。"""
+    if snap.get("origin"):
+        return snap["origin"]
+    method = (snap.get("evidence") or {}).get("method")
+    return "frozen_after_kickoff" if method == "frozen_after_kickoff" else "pre_match_freeze"
+
+
 def _settled(matches):
+    """只统计赛前可验证的快照；开赛后冻结的不进主口径。"""
     out = []
     for m in matches:
         st = m.get("settlement") or {}
         snap = m.get("prediction_snapshot") or {}
-        if st.get("result") in ("HIT", "MISS") and snap.get("frozen_at"):
-            out.append((m, snap, st))
+        if st.get("result") not in ("HIT", "MISS") or not snap.get("frozen_at"):
+            continue
+        if _origin(snap) == "frozen_after_kickoff":
+            continue
+        out.append((m, snap, st))
     return out
 
 
 def evaluate(matches):
     rows = _settled(matches)
     report = {"generated_at": datetime.now().isoformat(timespec="seconds"),
-              "samples": len(rows), "buckets": [], "overall": {}, "by_method": {}}
+              "samples": len(rows), "buckets": [], "overall": {}, "by_method": {},
+              "by_origin": {}, "excluded_after_kickoff": 0}
+    report["excluded_after_kickoff"] = sum(
+        1 for m in matches
+        if (m.get("settlement") or {}).get("result") in ("HIT", "MISS")
+        and _origin(m.get("prediction_snapshot") or {}) == "frozen_after_kickoff")
     if not rows:
-        report["note"] = "暂无已结算的冻结预测，无法评估"
+        report["note"] = "暂无已结算的赛前预测，无法评估"
         _write(report)
         return report
 
     hits = sum(1 for _m, _s, st in rows if st["result"] == "HIT")
     report["overall"] = {"hit_rate": round(hits / len(rows) * 100, 2), "n": len(rows)}
+
+    for m, s, st in rows:
+        slot = report["by_origin"].setdefault(_origin(s), {"n": 0, "hit": 0})
+        slot["n"] += 1
+        if st["result"] == "HIT":
+            slot["hit"] += 1
+    for _k, slot in report["by_origin"].items():
+        slot["hit_rate"] = round(slot["hit"] / slot["n"] * 100, 2)
 
     for low, high in BUCKETS:
         group = [(m, s, st) for m, s, st in rows

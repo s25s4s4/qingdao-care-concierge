@@ -1,0 +1,39 @@
+{
+  "generated_at": "2026-10-19T14:36:17",
+  "samples": 60,
+  "buckets": [
+    {
+      "range": "65-74",
+      "n": 45,
+      "claimed": 67.9,
+      "actual": 71.1,
+      "bias": 3.2
+    },
+    {
+      "range": "75-100",
+      "n": 15,
+      "claimed": 79.7,
+      "actual": 86.7,
+      "bias": 7.0
+    }
+  ],
+  "overall": {
+    "hit_rate": 75.0,
+    "n": 60
+  },
+  "by_method": {
+    "git_replay": {
+      "n": 60,
+      "hit": 45,
+      "hit_rate": 75.0
+    }
+  },
+  "by_origin": {
+    "git_replay": {
+      "n": 60,
+      "hit": 45,
+      "hit_rate": 75.0
+    }
+  },
+  "excluded_after_kickoff": 4
+}

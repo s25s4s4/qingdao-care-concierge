@@ -1112,6 +1112,10 @@
                 </div>
             </div>
 
+            <div id="audit-origin-note" style="font-size: 10px; color: var(--text-secondary); text-align: center; margin: -4px 0 10px; line-height: 1.6;">
+                口径：只统计赛前可验证的预测
+            </div>
+
         <!-- 按天分页选择栏 (一天一页，自适应展示) -->
         <div id="audit-pagination" class="audit-pagination-bar">
             <!-- 动态注入每天分页胶囊按钮 -->
@@ -1428,10 +1432,15 @@
                 const card = document.createElement('div');
                 let settledClass = '';
                 let auditTagHtml = '';
-                // 预测可信度标识：只有赛前冻结+外部结算的记录才算已验证
-                const verified = m.prediction_verified === true && (m.provenance || {}).traceable === true;
+                // 预测可信度标识：赛前冻结 / 历史回填（git 可复核）/ 未验证
+                const _prov = m.provenance || {};
+                const _snap = m.prediction_snapshot || {};
+                const verified = m.prediction_verified === true && _prov.traceable === true;
+                const isBackfill = _snap.origin === 'git_replay' || _prov.method === 'git_replay';
                 const verifyBadge = verified
-                    ? '<span class="match-audit-tag" style="background:rgba(63,185,80,.15);color:#3fb950;border:1px solid rgba(63,185,80,.45);">✅ 已验证</span>'
+                    ? (isBackfill
+                        ? '<span class="match-audit-tag" style="background:rgba(88,166,255,.15);color:#58a6ff;border:1px solid rgba(88,166,255,.45);">🗂 历史回填 · 可复核</span>'
+                        : '<span class="match-audit-tag" style="background:rgba(63,185,80,.15);color:#3fb950;border:1px solid rgba(63,185,80,.45);">✅ 赛前冻结</span>')
                     : '<span class="match-audit-tag" style="background:rgba(139,148,158,.12);color:#8b949e;border:1px solid rgba(139,148,158,.35);">⚠️ 未验证 · 不计准确率</span>';
 
                 // 比赛状态精确判定：完赛 / 中断 / 进行中实时实况 / 赛前未开赛
@@ -2004,6 +2013,28 @@
                         const rate = validSettled > 0 ? ((hitCount / validSettled) * 100).toFixed(1) : '100.0';
                         hitRateElem.innerText = rate + '%';
                         statTotalElem.innerText = `${todayHitCount} / ${todayValidSettled || todaySettledList.length}`;
+
+                        // 口径说明：拆出「赛前冻结」与「历史回填」，并给出无可复核依据的场次数
+                        (function () {
+                            const noteEl = document.getElementById('audit-origin-note');
+                            if (!noteEl) return;
+                            let frozen = 0, replay = 0, untrusted = 0;
+                            ALL_OFFICIAL_MATCHES.forEach(mm => {
+                                if (mm.result !== 'HIT' && mm.result !== 'MISS') return;
+                                const p = mm.provenance || {}, s = mm.prediction_snapshot || {};
+                                if (mm.prediction_verified === true && p.traceable === true) {
+                                    (s.origin === 'git_replay' || p.method === 'git_replay') ? replay++ : frozen++;
+                                } else {
+                                    untrusted++;
+                                }
+                            });
+                            const parts = [];
+                            if (frozen) parts.push(`赛前冻结 ${frozen}`);
+                            if (replay) parts.push(`历史回填 ${replay}`);
+                            noteEl.innerText = `口径：赛前可验证 ${frozen + replay} 场` +
+                                (parts.length ? `（${parts.join(' + ')}）` : '') +
+                                (untrusted ? `；另有 ${untrusted} 场无可复核依据，不计入准确率` : '');
+                        })();
 
                         // 核心重构：实战 ROI 严格按 2串1 全息组合独立核算（符合柜台实票规则）！
                         let totalParlayPairs = 0;

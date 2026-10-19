@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-19 14:28:18",
+  "updated_at": "2026-10-19 14:36:16",
   "total": 83,
   "matches": [
     {
@@ -68,7 +68,8 @@
         "traceable": false,
         "note": "历史预测未保存生成依据，不能作为模型有效性证明"
       },
-      "prediction_verified": false
+      "prediction_verified": false,
+      "backfill_blocked": "no_pre_kickoff_commit"
     },
     {
       "code": "周五002",
@@ -134,7 +135,8 @@
         "traceable": false,
         "note": "历史预测未保存生成依据，不能作为模型有效性证明"
       },
-      "prediction_verified": false
+      "prediction_verified": false,
+      "backfill_blocked": "no_pre_kickoff_commit"
     },
     {
       "code": "周五003",
@@ -197,12 +199,45 @@
       ],
       "is_single": false,
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "git_replay",
+        "evidence": "git 赛前提交留痕",
+        "traceable": true,
+        "note": "历史回填：预测取自开赛前最后一次提交，内容与 commit 均可复核"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "客胜",
+        "predicted_scores": null,
+        "predicted_goals": null,
+        "consensus_ratio": 75,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-17T00:55:09+08:00",
+        "kickoff": "2026-10-17T01:00:00",
+        "origin": "git_replay",
+        "backfilled": true,
+        "evidence": {
+          "odds": [
+            "6.16",
+            "4.90",
+            "1.31"
+          ],
+          "odds_source": "500.com",
+          "method": "git_replay",
+          "git_commit": "3ffd5a10088c7b4e4da1bd8bb2140f395f21e8e8",
+          "git_commit_time": "2026-10-17T00:55:09+08:00",
+          "git_path": "data/official_matches.json",
+          "note": "取自 kickoff 前最后一次提交，可用 git show 复核"
+        },
+        "sha256": "f93b03d80a8cd13fca1678d807d6347ce3e6d360e1185f2a72a76e2da0f15433"
+      },
+      "settlement": {
+        "result": "HIT",
+        "score": "0-2",
+        "source": "stored_score",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "客胜"
+      }
     },
     {
       "code": "周五004",
@@ -264,12 +299,45 @@
       ],
       "is_single": false,
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "git_replay",
+        "evidence": "git 赛前提交留痕",
+        "traceable": true,
+        "note": "历史回填：预测取自开赛前最后一次提交，内容与 commit 均可复核"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "主胜",
+        "predicted_scores": null,
+        "predicted_goals": null,
+        "consensus_ratio": 75,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-17T01:56:52+08:00",
+        "kickoff": "2026-10-17T02:00:00",
+        "origin": "git_replay",
+        "backfilled": true,
+        "evidence": {
+          "odds": [
+            "1.38",
+            "4.70",
+            "5.20"
+          ],
+          "odds_source": "500.com",
+          "method": "git_replay",
+          "git_commit": "42b22f45cbf0f00be0a52598505006c12f6f6053",
+          "git_commit_time": "2026-10-17T01:56:52+08:00",
+          "git_path": "data/official_matches.json",
+          "note": "取自 kickoff 前最后一次提交，可用 git show 复核"
+        },
+        "sha256": "06e15113ac18f43bc15e102a8970e6401abc07aebc1cf4837568ba84e6e86770"
+      },
+      "settlement": {
+        "result": "HIT",
+        "score": "4-0",
+        "source": "stored_score",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "主胜"
+      }
     },
     {
       "code": "周五005",
@@ -332,12 +400,45 @@
       ],
       "is_single": false,
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "git_replay",
+        "evidence": "git 赛前提交留痕",
+        "traceable": true,
+        "note": "历史回填：预测取自开赛前最后一次提交，内容与 commit 均可复核"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "主胜/让胜",
+        "predicted_scores": null,
+        "predicted_goals": null,
+        "consensus_ratio": 74,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-17T01:56:52+08:00",
+        "kickoff": "2026-10-17T02:00:00",
+        "origin": "git_replay",
+        "backfilled": true,
+        "evidence": {
+          "odds": [
+            "1.44",
+            "4.50",
+            "4.70"
+          ],
+          "odds_source": "500.com",
+          "method": "git_replay",
+          "git_commit": "42b22f45cbf0f00be0a52598505006c12f6f6053",
+          "git_commit_time": "2026-10-17T01:56:52+08:00",
+          "git_path": "data/official_matches.json",
+          "note": "取自 kickoff 前最后一次提交，可用 git show 复核"
+        },
+        "sha256": "32631853b9a6b298f7dc42b17be989e8809b6b2b27e2ad20edf465d1f6e093d5"
+      },
+      "settlement": {
+        "result": "HIT",
+        "score": "2-1",
+        "source": "stored_score",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "主胜"
+      }
     },
     {
       "code": "周五006",
@@ -400,12 +501,45 @@
       ],
       "is_single": false,
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "git_replay",
+        "evidence": "git 赛前提交留痕",
+        "traceable": true,
+        "note": "历史回填：预测取自开赛前最后一次提交，内容与 commit 均可复核"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "主胜/防平",
+        "predicted_scores": null,
+        "predicted_goals": null,
+        "consensus_ratio": 73,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-17T02:20:09+08:00",
+        "kickoff": "2026-10-17T02:30:00",
+        "origin": "git_replay",
+        "backfilled": true,
+        "evidence": {
+          "odds": [
+            "1.65",
+            "3.92",
+            "3.73"
+          ],
+          "odds_source": "500.com",
+          "method": "git_replay",
+          "git_commit": "05ff32908e54e32be5f5ade0b4a99eed81081ace",
+          "git_commit_time": "2026-10-17T02:20:09+08:00",
+          "git_path": "data/official_matches.json",
+          "note": "取自 kickoff 前最后一次提交，可用 git show 复核"
+        },
+        "sha256": "f9fb5bc259fecdec592da5398c7e2a3c53c900c8e8e0f25a104c3b0e2ef3f071"
+      },
+      "settlement": {
+        "result": "HIT",
+        "score": "1-0",
+        "source": "stored_score",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "主胜"
+      }
     },
     {
       "code": "周五007",
@@ -469,12 +603,45 @@
       "pathology": "主队搏命狂攻打乱阵脚，萨索洛客战防线过早脱节，互攻对捅中防守彻底崩盘。",
       "is_single": false,
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "git_replay",
+        "evidence": "git 赛前提交留痕",
+        "traceable": true,
+        "note": "历史回填：预测取自开赛前最后一次提交，内容与 commit 均可复核"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "双方进球/客不败",
+        "predicted_scores": null,
+        "predicted_goals": null,
+        "consensus_ratio": 71,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-17T02:41:22+08:00",
+        "kickoff": "2026-10-17T02:45:00",
+        "origin": "git_replay",
+        "backfilled": true,
+        "evidence": {
+          "odds": [
+            "2.19",
+            "3.38",
+            "2.65"
+          ],
+          "odds_source": "500.com",
+          "method": "git_replay",
+          "git_commit": "968288011b4d7960749547f6132ded66dde56800",
+          "git_commit_time": "2026-10-17T02:41:22+08:00",
+          "git_path": "data/official_matches.json",
+          "note": "取自 kickoff 前最后一次提交，可用 git show 复核"
+        },
+        "sha256": "20b70ca22d8be9f84915475db864f34c9f4ca5e5c04f95574ed573dacc1ff746"
+      },
+      "settlement": {
+        "result": "MISS",
+        "score": "4-2",
+        "source": "stored_score",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "主胜"
+      }
     },
     {
       "code": "周五008",
@@ -536,12 +703,45 @@
       ],
       "is_single": false,
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "git_replay",
+        "evidence": "git 赛前提交留痕",
+        "traceable": true,
+        "note": "历史回填：预测取自开赛前最后一次提交，内容与 commit 均可复核"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "客胜",
+        "predicted_scores": null,
+        "predicted_goals": null,
+        "consensus_ratio": 72,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-17T02:41:22+08:00",
+        "kickoff": "2026-10-17T02:45:00",
+        "origin": "git_replay",
+        "backfilled": true,
+        "evidence": {
+          "odds": [
+            "3.03",
+            "3.40",
+            "1.98"
+          ],
+          "odds_source": "500.com",
+          "method": "git_replay",
+          "git_commit": "968288011b4d7960749547f6132ded66dde56800",
+          "git_commit_time": "2026-10-17T02:41:22+08:00",
+          "git_path": "data/official_matches.json",
+          "note": "取自 kickoff 前最后一次提交，可用 git show 复核"
+        },
+        "sha256": "1863233cb5e6450403f74fb73710569ea2e81946431ee2c6c2c94471939fd780"
+      },
+      "settlement": {
+        "result": "HIT",
+        "score": "0-3",
+        "source": "stored_score",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "客胜"
+      }
     },
     {
       "code": "周五009",
@@ -604,12 +804,45 @@
       ],
       "is_single": false,
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "git_replay",
+        "evidence": "git 赛前提交留痕",
+        "traceable": true,
+        "note": "历史回填：预测取自开赛前最后一次提交，内容与 commit 均可复核"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "双方进球/客不败",
+        "predicted_scores": null,
+        "predicted_goals": null,
+        "consensus_ratio": 71,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-17T02:58:07+08:00",
+        "kickoff": "2026-10-17T03:00:00",
+        "origin": "git_replay",
+        "backfilled": true,
+        "evidence": {
+          "odds": [
+            "3.24",
+            "3.00",
+            "2.05"
+          ],
+          "odds_source": "500.com",
+          "method": "git_replay",
+          "git_commit": "f38c6aa3c6451cecbfb1871aa2da15cf3dc1e151",
+          "git_commit_time": "2026-10-17T02:58:07+08:00",
+          "git_path": "data/official_matches.json",
+          "note": "取自 kickoff 前最后一次提交，可用 git show 复核"
+        },
+        "sha256": "5427a03fbdc8b19fe839e16cc018132c5d30ce5a64f1a329d328fff53bb45029"
+      },
+      "settlement": {
+        "result": "HIT",
+        "score": "1-2",
+        "source": "stored_score",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "客胜"
+      }
     },
     {
       "code": "周五010",
@@ -672,12 +905,45 @@
       ],
       "is_single": false,
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "git_replay",
+        "evidence": "git 赛前提交留痕",
+        "traceable": true,
+        "note": "历史回填：预测取自开赛前最后一次提交，内容与 commit 均可复核"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "主不败/首选平",
+        "predicted_scores": null,
+        "predicted_goals": null,
+        "consensus_ratio": 71,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-17T02:58:07+08:00",
+        "kickoff": "2026-10-17T03:00:00",
+        "origin": "git_replay",
+        "backfilled": true,
+        "evidence": {
+          "odds": [
+            "2.01",
+            "3.10",
+            "3.23"
+          ],
+          "odds_source": "500.com",
+          "method": "git_replay",
+          "git_commit": "f38c6aa3c6451cecbfb1871aa2da15cf3dc1e151",
+          "git_commit_time": "2026-10-17T02:58:07+08:00",
+          "git_path": "data/official_matches.json",
+          "note": "取自 kickoff 前最后一次提交，可用 git show 复核"
+        },
+        "sha256": "1915abdbc5ae8b46bd074dc51d73deb65d347b4d08bebbd53ba8b166f1b0f0b1"
+      },
+      "settlement": {
+        "result": "HIT",
+        "score": "1-1",
+        "source": "stored_score",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "平局"
+      }
     },
     {
       "code": "周五011",
@@ -740,12 +1006,45 @@
       ],
       "is_single": false,
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "git_replay",
+        "evidence": "git 赛前提交留痕",
+        "traceable": true,
+        "note": "历史回填：预测取自开赛前最后一次提交，内容与 commit 均可复核"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "平局/主不败",
+        "predicted_scores": null,
+        "predicted_goals": null,
+        "consensus_ratio": 67.9,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-17T05:08:13+08:00",
+        "kickoff": "2026-10-17T07:00:00",
+        "origin": "git_replay",
+        "backfilled": true,
+        "evidence": {
+          "odds": [
+            "2.02",
+            "2.95",
+            "3.38"
+          ],
+          "odds_source": "500.com",
+          "method": "git_replay",
+          "git_commit": "5f20e23ad40e0ccf98659139c6c558d230f5e6ac",
+          "git_commit_time": "2026-10-17T05:08:13+08:00",
+          "git_path": "data/official_matches.json",
+          "note": "取自 kickoff 前最后一次提交，可用 git show 复核"
+        },
+        "sha256": "041b6c79300221000a5dac2a791d5d7f462d2ba8a152dfa327453b780a326fe8"
+      },
+      "settlement": {
+        "result": "HIT",
+        "score": "2-0",
+        "source": "stored_score",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "主胜"
+      }
     },
     {
       "code": "周六001",
@@ -807,12 +1106,49 @@
       ],
       "is_single": false,
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "git_replay",
+        "evidence": "git 赛前提交留痕",
+        "traceable": true,
+        "note": "历史回填：预测取自开赛前最后一次提交，内容与 commit 均可复核"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "主胜/防平",
+        "predicted_scores": [
+          "2-1",
+          "2-0",
+          "1-1"
+        ],
+        "predicted_goals": null,
+        "consensus_ratio": 65.0,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-17T13:56:06+08:00",
+        "kickoff": "2026-10-17T14:00:00",
+        "origin": "git_replay",
+        "backfilled": true,
+        "evidence": {
+          "odds": [
+            "1.68",
+            "3.72",
+            "3.77"
+          ],
+          "odds_source": "500.com",
+          "method": "git_replay",
+          "git_commit": "8c5629c7d905564ba6901339790de71275acda4f",
+          "git_commit_time": "2026-10-17T13:56:06+08:00",
+          "git_path": "data/official_matches.json",
+          "note": "取自 kickoff 前最后一次提交，可用 git show 复核"
+        },
+        "sha256": "490617eb5e5c355f68d2f27f7d3917780743dcb374a54e22042d3d522141a59f"
+      },
+      "settlement": {
+        "result": "HIT",
+        "score": "2 - 1",
+        "source": "fotmob",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "主胜"
+      }
     },
     {
       "code": "周六002",
@@ -875,12 +1211,49 @@
       ],
       "is_single": false,
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "git_replay",
+        "evidence": "git 赛前提交留痕",
+        "traceable": true,
+        "note": "历史回填：预测取自开赛前最后一次提交，内容与 commit 均可复核"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "主胜 (死胆)",
+        "predicted_scores": [
+          "2-0",
+          "3-0",
+          "3-1"
+        ],
+        "predicted_goals": null,
+        "consensus_ratio": 78.6,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-17T13:56:06+08:00",
+        "kickoff": "2026-10-17T14:00:00",
+        "origin": "git_replay",
+        "backfilled": true,
+        "evidence": {
+          "odds": [
+            "1.33",
+            "4.55",
+            "6.35"
+          ],
+          "odds_source": "500.com",
+          "method": "git_replay",
+          "git_commit": "8c5629c7d905564ba6901339790de71275acda4f",
+          "git_commit_time": "2026-10-17T13:56:06+08:00",
+          "git_path": "data/official_matches.json",
+          "note": "取自 kickoff 前最后一次提交，可用 git show 复核"
+        },
+        "sha256": "4af746adb2f43ccda4e2c560b7c4195fa31f8b319b2574995cac551c0d0e6255"
+      },
+      "settlement": {
+        "result": "HIT",
+        "score": "2 - 0",
+        "source": "fotmob",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "主胜"
+      }
     },
     {
       "code": "周六003",
@@ -942,12 +1315,49 @@
       ],
       "is_single": false,
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "git_replay",
+        "evidence": "git 赛前提交留痕",
+        "traceable": true,
+        "note": "历史回填：预测取自开赛前最后一次提交，内容与 commit 均可复核"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "主胜",
+        "predicted_scores": [
+          "2-0",
+          "3-0",
+          "2-1"
+        ],
+        "predicted_goals": null,
+        "consensus_ratio": 81.6,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-17T15:29:06+08:00",
+        "kickoff": "2026-10-17T15:30:00",
+        "origin": "git_replay",
+        "backfilled": true,
+        "evidence": {
+          "odds": [
+            "1.28",
+            "4.70",
+            "7.36"
+          ],
+          "odds_source": "500.com",
+          "method": "git_replay",
+          "git_commit": "489f6fccfc66a797199418508f4eccb9e5427640",
+          "git_commit_time": "2026-10-17T15:29:06+08:00",
+          "git_path": "data/official_matches.json",
+          "note": "取自 kickoff 前最后一次提交，可用 git show 复核"
+        },
+        "sha256": "d2bc215f88c4d5b067308f568181c5f10ebc28df3445314f6ec38a07c5feb40c"
+      },
+      "settlement": {
+        "result": "HIT",
+        "score": "2 - 1",
+        "source": "fotmob",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "主胜"
+      }
     },
     {
       "code": "周六004",
@@ -1010,12 +1420,49 @@
       ],
       "is_single": false,
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "git_replay",
+        "evidence": "git 赛前提交留痕",
+        "traceable": true,
+        "note": "历史回填：预测取自开赛前最后一次提交，内容与 commit 均可复核"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "平局/客不败",
+        "predicted_scores": [
+          "1-1",
+          "1-2",
+          "0-1"
+        ],
+        "predicted_goals": null,
+        "consensus_ratio": 65.0,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-17T16:30:07+08:00",
+        "kickoff": "2026-10-17T16:40:00",
+        "origin": "git_replay",
+        "backfilled": true,
+        "evidence": {
+          "odds": [
+            "3.60",
+            "4.10",
+            "1.65"
+          ],
+          "odds_source": "500.com",
+          "method": "git_replay",
+          "git_commit": "be1931f94c7779a3de48123914455a878bae147f",
+          "git_commit_time": "2026-10-17T16:30:07+08:00",
+          "git_path": "data/official_matches.json",
+          "note": "取自 kickoff 前最后一次提交，可用 git show 复核"
+        },
+        "sha256": "7f3efd704e3af3a958e9f600dcb9a213deed34ba134d80ed68bf08627dcb34de"
+      },
+      "settlement": {
+        "result": "HIT",
+        "score": "2 - 2",
+        "source": "fotmob",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "平局"
+      }
     },
     {
       "code": "周六005",
@@ -1079,12 +1526,49 @@
       "pathology": "太阳神托大狂攻致攻守严重失衡，破密防受阻心态急躁，遭名古屋犀利反击致命打穿。",
       "is_single": false,
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "git_replay",
+        "evidence": "git 赛前提交留痕",
+        "traceable": true,
+        "note": "历史回填：预测取自开赛前最后一次提交，内容与 commit 均可复核"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "平局/主胜",
+        "predicted_scores": [
+          "1-0",
+          "1-1",
+          "2-1"
+        ],
+        "predicted_goals": null,
+        "consensus_ratio": 68.9,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-17T17:52:07+08:00",
+        "kickoff": "2026-10-17T18:00:00",
+        "origin": "git_replay",
+        "backfilled": true,
+        "evidence": {
+          "odds": [
+            "1.48",
+            "4.23",
+            "4.60"
+          ],
+          "odds_source": "500.com",
+          "method": "git_replay",
+          "git_commit": "afc3bde9f64d453f5ec6c98351713ea1cd0c0f5b",
+          "git_commit_time": "2026-10-17T17:52:07+08:00",
+          "git_path": "data/official_matches.json",
+          "note": "取自 kickoff 前最后一次提交，可用 git show 复核"
+        },
+        "sha256": "e2e126aeafb18f3f45880bcda5f8858b192f26c7bdfa2eee1af9ddaaafc12824"
+      },
+      "settlement": {
+        "result": "MISS",
+        "score": "1 - 3",
+        "source": "fotmob",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "客胜"
+      }
     },
     {
       "code": "周六006",
@@ -1147,12 +1631,49 @@
       ],
       "is_single": false,
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "git_replay",
+        "evidence": "git 赛前提交留痕",
+        "traceable": true,
+        "note": "历史回填：预测取自开赛前最后一次提交，内容与 commit 均可复核"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "主不败",
+        "predicted_scores": [
+          "1-0",
+          "1-1",
+          "2-1"
+        ],
+        "predicted_goals": null,
+        "consensus_ratio": 65.0,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-17T17:52:07+08:00",
+        "kickoff": "2026-10-17T18:00:00",
+        "origin": "git_replay",
+        "backfilled": true,
+        "evidence": {
+          "odds": [
+            "2.20",
+            "2.80",
+            "3.15"
+          ],
+          "odds_source": "500.com",
+          "method": "git_replay",
+          "git_commit": "afc3bde9f64d453f5ec6c98351713ea1cd0c0f5b",
+          "git_commit_time": "2026-10-17T17:52:07+08:00",
+          "git_path": "data/official_matches.json",
+          "note": "取自 kickoff 前最后一次提交，可用 git show 复核"
+        },
+        "sha256": "276309f4728a6a16fd61cade9ee5e41c1d1fb40198011799fab70119341b752e"
+      },
+      "settlement": {
+        "result": "HIT",
+        "score": "1 - 1",
+        "source": "fotmob",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "平局"
+      }
     },
     {
       "code": "周六007",
@@ -1215,12 +1736,49 @@
       ],
       "is_single": false,
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "git_replay",
+        "evidence": "git 赛前提交留痕",
+        "traceable": true,
+        "note": "历史回填：预测取自开赛前最后一次提交，内容与 commit 均可复核"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "客胜/防平",
+        "predicted_scores": [
+          "1-1",
+          "1-2",
+          "2-2"
+        ],
+        "predicted_goals": null,
+        "consensus_ratio": 65.0,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-17T19:20:07+08:00",
+        "kickoff": "2026-10-17T19:30:00",
+        "origin": "git_replay",
+        "backfilled": true,
+        "evidence": {
+          "odds": [
+            "2.86",
+            "3.30",
+            "2.10"
+          ],
+          "odds_source": "500.com",
+          "method": "git_replay",
+          "git_commit": "e85868e4ea10b4824c1ed2b188a68c55c94ccf15",
+          "git_commit_time": "2026-10-17T19:20:07+08:00",
+          "git_path": "data/official_matches.json",
+          "note": "取自 kickoff 前最后一次提交，可用 git show 复核"
+        },
+        "sha256": "28e960ae987ae6755d219525b1e763ac09b06c340ac256e4bd610256541d64fe"
+      },
+      "settlement": {
+        "result": "HIT",
+        "score": "0 - 2",
+        "source": "fotmob",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "客胜"
+      }
     },
     {
       "code": "周六008",
@@ -1283,12 +1841,45 @@
       ],
       "is_single": false,
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "git_replay",
+        "evidence": "git 赛前提交留痕",
+        "traceable": true,
+        "note": "历史回填：预测取自开赛前最后一次提交，内容与 commit 均可复核"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "主不败/首选主胜",
+        "predicted_scores": null,
+        "predicted_goals": null,
+        "consensus_ratio": 67.9,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-17T19:20:07+08:00",
+        "kickoff": "2026-10-17T19:30:00",
+        "origin": "git_replay",
+        "backfilled": true,
+        "evidence": {
+          "odds": [
+            "1.54",
+            "3.60",
+            "4.95"
+          ],
+          "odds_source": "500.com",
+          "method": "git_replay",
+          "git_commit": "e85868e4ea10b4824c1ed2b188a68c55c94ccf15",
+          "git_commit_time": "2026-10-17T19:20:07+08:00",
+          "git_path": "data/official_matches.json",
+          "note": "取自 kickoff 前最后一次提交，可用 git show 复核"
+        },
+        "sha256": "a9235fdf550f6922d062319f66eb4cf301974d78ec5264ea59254b00ae86f599"
+      },
+      "settlement": {
+        "result": "HIT",
+        "score": "2 - 2",
+        "source": "fotmob",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "平局"
+      }
     },
     {
       "code": "周六009",
@@ -1351,12 +1942,49 @@
       ],
       "is_single": false,
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "git_replay",
+        "evidence": "git 赛前提交留痕",
+        "traceable": true,
+        "note": "历史回填：预测取自开赛前最后一次提交，内容与 commit 均可复核"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "客胜",
+        "predicted_scores": [
+          "0-1",
+          "0-2",
+          "1-2"
+        ],
+        "predicted_goals": null,
+        "consensus_ratio": 69.8,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-17T19:50:06+08:00",
+        "kickoff": "2026-10-17T20:00:00",
+        "origin": "git_replay",
+        "backfilled": true,
+        "evidence": {
+          "odds": [
+            "5.15",
+            "4.00",
+            "1.46"
+          ],
+          "odds_source": "500.com",
+          "method": "git_replay",
+          "git_commit": "c3ef114100c08bbbdafba0cf1a98877ca7232ef8",
+          "git_commit_time": "2026-10-17T19:50:06+08:00",
+          "git_path": "data/official_matches.json",
+          "note": "取自 kickoff 前最后一次提交，可用 git show 复核"
+        },
+        "sha256": "62754979cfae1f7e39524a86a4288b2636f6b7df167d8a5a866366be48953714"
+      },
+      "settlement": {
+        "result": "HIT",
+        "score": "0 - 1",
+        "source": "fotmob",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "客胜"
+      }
     },
     {
       "code": "周六010",
@@ -1420,12 +2048,45 @@
       "pathology": "盲判汉坎主场铁桶战意，严重轻视了博德闪耀攻坚阵地的绝对硬实力，遭层级碾压。",
       "is_single": false,
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "git_replay",
+        "evidence": "git 赛前提交留痕",
+        "traceable": true,
+        "note": "历史回填：预测取自开赛前最后一次提交，内容与 commit 均可复核"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "主不败/首选主胜",
+        "predicted_scores": null,
+        "predicted_goals": null,
+        "consensus_ratio": 65.0,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-17T19:50:06+08:00",
+        "kickoff": "2026-10-17T20:00:00",
+        "origin": "git_replay",
+        "backfilled": true,
+        "evidence": {
+          "odds": [
+            "2.16",
+            "4.00",
+            "2.40"
+          ],
+          "odds_source": "500.com",
+          "method": "git_replay",
+          "git_commit": "c3ef114100c08bbbdafba0cf1a98877ca7232ef8",
+          "git_commit_time": "2026-10-17T19:50:06+08:00",
+          "git_path": "data/official_matches.json",
+          "note": "取自 kickoff 前最后一次提交，可用 git show 复核"
+        },
+        "sha256": "bb83860624559a9c809388864cb52e719bcd97b89bd117bccfdf9b05e20a2d53"
+      },
+      "settlement": {
+        "result": "MISS",
+        "score": "0-2",
+        "source": "stored_score",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "客胜"
+      }
     },
     {
       "code": "周六011",
@@ -1489,12 +2150,49 @@
       "pathology": "盲信客胜死胆，德布劳内失点且破密防受阻，威尼斯借主场搏命铁桶阵偷袭爆冷。",
       "is_single": false,
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "git_replay",
+        "evidence": "git 赛前提交留痕",
+        "traceable": true,
+        "note": "历史回填：预测取自开赛前最后一次提交，内容与 commit 均可复核"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "客胜 (死胆)",
+        "predicted_scores": [
+          "0-2",
+          "0-3",
+          "1-3"
+        ],
+        "predicted_goals": null,
+        "consensus_ratio": 66.1,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-17T20:59:07+08:00",
+        "kickoff": "2026-10-17T21:00:00",
+        "origin": "git_replay",
+        "backfilled": true,
+        "evidence": {
+          "odds": [
+            "4.55",
+            "3.84",
+            "1.54"
+          ],
+          "odds_source": "500.com",
+          "method": "git_replay",
+          "git_commit": "e8e7d306237f530c5d23f0fa891f23a3a3271141",
+          "git_commit_time": "2026-10-17T20:59:07+08:00",
+          "git_path": "data/official_matches.json",
+          "note": "取自 kickoff 前最后一次提交，可用 git show 复核"
+        },
+        "sha256": "5e0ecc651d6eed3e5d1e5392e61238d048b794d8ef2234d5b24004ddd2e611e8"
+      },
+      "settlement": {
+        "result": "MISS",
+        "score": "1 - 0",
+        "source": "fotmob",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "主胜"
+      }
     },
     {
       "code": "周六012",
@@ -1557,12 +2255,45 @@
       ],
       "is_single": false,
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "git_replay",
+        "evidence": "git 赛前提交留痕",
+        "traceable": true,
+        "note": "历史回填：预测取自开赛前最后一次提交，内容与 commit 均可复核"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "主不败/首选主胜",
+        "predicted_scores": null,
+        "predicted_goals": null,
+        "consensus_ratio": 81.7,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-17T20:59:07+08:00",
+        "kickoff": "2026-10-17T21:00:00",
+        "origin": "git_replay",
+        "backfilled": true,
+        "evidence": {
+          "odds": [
+            "1.28",
+            "5.25",
+            "6.40"
+          ],
+          "odds_source": "500.com",
+          "method": "git_replay",
+          "git_commit": "e8e7d306237f530c5d23f0fa891f23a3a3271141",
+          "git_commit_time": "2026-10-17T20:59:07+08:00",
+          "git_path": "data/official_matches.json",
+          "note": "取自 kickoff 前最后一次提交，可用 git show 复核"
+        },
+        "sha256": "051454bad30d8a3cf4f562f4438bdb1a781f1c5837dcb543a98f2e8027507231"
+      },
+      "settlement": {
+        "result": "HIT",
+        "score": "4-0",
+        "source": "stored_score",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "主胜"
+      }
     },
     {
       "code": "周六013",
@@ -1626,12 +2357,49 @@
       "pathology": "奥格斯堡做客防线严重托大，低估了埃沃斯堡主场反击韧性，半场落后对攻失控吞败。",
       "is_single": false,
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "git_replay",
+        "evidence": "git 赛前提交留痕",
+        "traceable": true,
+        "note": "历史回填：预测取自开赛前最后一次提交，内容与 commit 均可复核"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "客不败/防平",
+        "predicted_scores": [
+          "2-2",
+          "1-2",
+          "2-3"
+        ],
+        "predicted_goals": null,
+        "consensus_ratio": 65.0,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-17T21:20:06+08:00",
+        "kickoff": "2026-10-17T21:30:00",
+        "origin": "git_replay",
+        "backfilled": true,
+        "evidence": {
+          "odds": [
+            "2.32",
+            "3.45",
+            "2.45"
+          ],
+          "odds_source": "500.com",
+          "method": "git_replay",
+          "git_commit": "59220c17ab09dc8ddb0a3af8701fe91a4ed713d6",
+          "git_commit_time": "2026-10-17T21:20:06+08:00",
+          "git_path": "data/official_matches.json",
+          "note": "取自 kickoff 前最后一次提交，可用 git show 复核"
+        },
+        "sha256": "e0f720fc887bf089dd02a0b21131cb51b3ea5c1bb4ac4d5538d1dca68a08a44c"
+      },
+      "settlement": {
+        "result": "MISS",
+        "score": "4 - 3",
+        "source": "fotmob",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "主胜"
+      }
     },
     {
       "code": "周六014",
@@ -1695,12 +2463,49 @@
       "pathology": "不来梅领先下防线松懈送点，帕德博恩顽强反击扳平比分，大热主胜防线失守。",
       "is_single": false,
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "git_replay",
+        "evidence": "git 赛前提交留痕",
+        "traceable": true,
+        "note": "历史回填：预测取自开赛前最后一次提交，内容与 commit 均可复核"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "主胜",
+        "predicted_scores": [
+          "2-0",
+          "2-1",
+          "3-1"
+        ],
+        "predicted_goals": null,
+        "consensus_ratio": 73.6,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-17T21:20:06+08:00",
+        "kickoff": "2026-10-17T21:30:00",
+        "origin": "git_replay",
+        "backfilled": true,
+        "evidence": {
+          "odds": [
+            "1.42",
+            "4.50",
+            "4.95"
+          ],
+          "odds_source": "500.com",
+          "method": "git_replay",
+          "git_commit": "59220c17ab09dc8ddb0a3af8701fe91a4ed713d6",
+          "git_commit_time": "2026-10-17T21:20:06+08:00",
+          "git_path": "data/official_matches.json",
+          "note": "取自 kickoff 前最后一次提交，可用 git show 复核"
+        },
+        "sha256": "4dcd553ac8eec3d753f88cea1c6706e5e7fe462f2676d68d0056f5875fe63acf"
+      },
+      "settlement": {
+        "result": "MISS",
+        "score": "2 - 2",
+        "source": "fotmob",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "平局"
+      }
     },
     {
       "code": "周六015",
@@ -1763,12 +2568,49 @@
       ],
       "is_single": false,
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "git_replay",
+        "evidence": "git 赛前提交留痕",
+        "traceable": true,
+        "note": "历史回填：预测取自开赛前最后一次提交，内容与 commit 均可复核"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "客不败/首选平",
+        "predicted_scores": [
+          "0-1",
+          "1-1",
+          "1-2"
+        ],
+        "predicted_goals": null,
+        "consensus_ratio": 65.0,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-17T21:20:06+08:00",
+        "kickoff": "2026-10-17T21:30:00",
+        "origin": "git_replay",
+        "backfilled": true,
+        "evidence": {
+          "odds": [
+            "2.95",
+            "3.45",
+            "2.00"
+          ],
+          "odds_source": "500.com",
+          "method": "git_replay",
+          "git_commit": "59220c17ab09dc8ddb0a3af8701fe91a4ed713d6",
+          "git_commit_time": "2026-10-17T21:20:06+08:00",
+          "git_path": "data/official_matches.json",
+          "note": "取自 kickoff 前最后一次提交，可用 git show 复核"
+        },
+        "sha256": "4cb598d72c8dd3a2db0fc575ec2cb7c96b97a4a45e67a693d2b763515378c042"
+      },
+      "settlement": {
+        "result": "HIT",
+        "score": "0 - 1",
+        "source": "fotmob",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "客胜"
+      }
     },
     {
       "code": "周六016",
@@ -1832,12 +2674,49 @@
       "pathology": "汉堡主场紧凑大巴严密设防，斯图加特破局乏力且前场挥霍机会，反遭主队偷袭闷杀。",
       "is_single": false,
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "git_replay",
+        "evidence": "git 赛前提交留痕",
+        "traceable": true,
+        "note": "历史回填：预测取自开赛前最后一次提交，内容与 commit 均可复核"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "客胜/进球数大",
+        "predicted_scores": [
+          "1-3",
+          "2-3",
+          "1-2"
+        ],
+        "predicted_goals": null,
+        "consensus_ratio": 67.9,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-17T21:20:06+08:00",
+        "kickoff": "2026-10-17T21:30:00",
+        "origin": "git_replay",
+        "backfilled": true,
+        "evidence": {
+          "odds": [
+            "4.30",
+            "4.35",
+            "1.50"
+          ],
+          "odds_source": "500.com",
+          "method": "git_replay",
+          "git_commit": "59220c17ab09dc8ddb0a3af8701fe91a4ed713d6",
+          "git_commit_time": "2026-10-17T21:20:06+08:00",
+          "git_path": "data/official_matches.json",
+          "note": "取自 kickoff 前最后一次提交，可用 git show 复核"
+        },
+        "sha256": "7e64d7d7e8703c204e4886516b910c4d2e36b3ca34635fbe157ad986f61a0092"
+      },
+      "settlement": {
+        "result": "MISS",
+        "score": "1-0",
+        "source": "stored_score",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "主胜"
+      }
     },
     {
       "code": "周六017",
@@ -1901,12 +2780,49 @@
       "pathology": "多特蒙德客场遭遇柏林联合极致肉搏绞杀，全场破密集防守乏术，互交白卷闷平。",
       "is_single": false,
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "git_replay",
+        "evidence": "git 赛前提交留痕",
+        "traceable": true,
+        "note": "历史回填：预测取自开赛前最后一次提交，内容与 commit 均可复核"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "平局/客胜",
+        "predicted_scores": [
+          "1-1",
+          "1-2",
+          "2-2"
+        ],
+        "predicted_goals": null,
+        "consensus_ratio": 69.7,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-17T21:20:06+08:00",
+        "kickoff": "2026-10-17T21:30:00",
+        "origin": "git_replay",
+        "backfilled": true,
+        "evidence": {
+          "odds": [
+            "5.50",
+            "4.60",
+            "1.37"
+          ],
+          "odds_source": "500.com",
+          "method": "git_replay",
+          "git_commit": "59220c17ab09dc8ddb0a3af8701fe91a4ed713d6",
+          "git_commit_time": "2026-10-17T21:20:06+08:00",
+          "git_path": "data/official_matches.json",
+          "note": "取自 kickoff 前最后一次提交，可用 git show 复核"
+        },
+        "sha256": "2171fb03d1f281c7bf0bde69558bed94462d16a5f7b8e9c0bb69959cf1d1a239"
+      },
+      "settlement": {
+        "result": "HIT",
+        "score": "0 - 0",
+        "source": "fotmob",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "平局"
+      }
     },
     {
       "code": "周六018",
@@ -1970,12 +2886,49 @@
       "pathology": "利物浦后程发力逆转战局，布伦特福德体能耗尽防线终场前失守，主不败防线告破。",
       "is_single": false,
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "git_replay",
+        "evidence": "git 赛前提交留痕",
+        "traceable": true,
+        "note": "历史回填：预测取自开赛前最后一次提交，内容与 commit 均可复核"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "主不败/首选平",
+        "predicted_scores": [
+          "1-1",
+          "2-2",
+          "1-2"
+        ],
+        "predicted_goals": null,
+        "consensus_ratio": 65.0,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-17T21:50:06+08:00",
+        "kickoff": "2026-10-17T22:00:00",
+        "origin": "git_replay",
+        "backfilled": true,
+        "evidence": {
+          "odds": [
+            "2.62",
+            "3.25",
+            "2.27"
+          ],
+          "odds_source": "500.com",
+          "method": "git_replay",
+          "git_commit": "4718e250c269d0fe2dfb3418aeefa8939f9ed5bc",
+          "git_commit_time": "2026-10-17T21:50:06+08:00",
+          "git_path": "data/official_matches.json",
+          "note": "取自 kickoff 前最后一次提交，可用 git show 复核"
+        },
+        "sha256": "a965c12697b334f7df852524f7fb7131876005dae7d2c7acc63112ad8b54751e"
+      },
+      "settlement": {
+        "result": "MISS",
+        "score": "1 - 2",
+        "source": "fotmob",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "客胜"
+      }
     },
     {
       "code": "周六019",
@@ -2037,12 +2990,49 @@
       ],
       "is_single": false,
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "git_replay",
+        "evidence": "git 赛前提交留痕",
+        "traceable": true,
+        "note": "历史回填：预测取自开赛前最后一次提交，内容与 commit 均可复核"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "主胜让胜 (死胆)",
+        "predicted_scores": [
+          "3-0",
+          "4-0",
+          "3-1"
+        ],
+        "predicted_goals": null,
+        "consensus_ratio": 85.0,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-17T21:50:06+08:00",
+        "kickoff": "2026-10-17T22:00:00",
+        "origin": "git_replay",
+        "backfilled": true,
+        "evidence": {
+          "odds": [
+            "1.11",
+            "7.05",
+            "11.50"
+          ],
+          "odds_source": "500.com",
+          "method": "git_replay",
+          "git_commit": "4718e250c269d0fe2dfb3418aeefa8939f9ed5bc",
+          "git_commit_time": "2026-10-17T21:50:06+08:00",
+          "git_path": "data/official_matches.json",
+          "note": "取自 kickoff 前最后一次提交，可用 git show 复核"
+        },
+        "sha256": "219c50970d3e4127dc22abc412226ba85ec7883967aeb2ad9dcc61a0f8b35ba2"
+      },
+      "settlement": {
+        "result": "HIT",
+        "score": "3 - 2",
+        "source": "fotmob",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "主胜"
+      }
     },
     {
       "code": "周六020",
@@ -2104,12 +3094,49 @@
       ],
       "is_single": false,
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "git_replay",
+        "evidence": "git 赛前提交留痕",
+        "traceable": true,
+        "note": "历史回填：预测取自开赛前最后一次提交，内容与 commit 均可复核"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "主胜",
+        "predicted_scores": [
+          "2-0",
+          "2-1",
+          "3-0"
+        ],
+        "predicted_goals": null,
+        "consensus_ratio": 73.6,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-17T21:50:06+08:00",
+        "kickoff": "2026-10-17T22:00:00",
+        "origin": "git_replay",
+        "backfilled": true,
+        "evidence": {
+          "odds": [
+            "1.42",
+            "3.98",
+            "5.75"
+          ],
+          "odds_source": "500.com",
+          "method": "git_replay",
+          "git_commit": "4718e250c269d0fe2dfb3418aeefa8939f9ed5bc",
+          "git_commit_time": "2026-10-17T21:50:06+08:00",
+          "git_path": "data/official_matches.json",
+          "note": "取自 kickoff 前最后一次提交，可用 git show 复核"
+        },
+        "sha256": "f5d606fb71249e142e240c2dd14a7ce5f4773c24d855c36cbeeb3af8174b33c4"
+      },
+      "settlement": {
+        "result": "HIT",
+        "score": "1 - 0",
+        "source": "fotmob",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "主胜"
+      }
     },
     {
       "code": "周六021",
@@ -2173,12 +3200,49 @@
       "pathology": "比利亚雷亚尔面对埃尔切深度密集大巴狂攻不入，终场前破门乏术互交白卷。",
       "is_single": false,
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "git_replay",
+        "evidence": "git 赛前提交留痕",
+        "traceable": true,
+        "note": "历史回填：预测取自开赛前最后一次提交，内容与 commit 均可复核"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "主胜",
+        "predicted_scores": [
+          "2-0",
+          "3-0",
+          "3-1"
+        ],
+        "predicted_goals": null,
+        "consensus_ratio": 81.6,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-17T22:10:08+08:00",
+        "kickoff": "2026-10-17T22:15:00",
+        "origin": "git_replay",
+        "backfilled": true,
+        "evidence": {
+          "odds": [
+            "1.28",
+            "5.15",
+            "6.50"
+          ],
+          "odds_source": "500.com",
+          "method": "git_replay",
+          "git_commit": "98463e218ddface9dd1b33b3427627d3592af8d2",
+          "git_commit_time": "2026-10-17T22:10:08+08:00",
+          "git_path": "data/official_matches.json",
+          "note": "取自 kickoff 前最后一次提交，可用 git show 复核"
+        },
+        "sha256": "d4f0ec6d3f3774fbe1cc8b803ee0292019b78e872fa412933a5b10c309022850"
+      },
+      "settlement": {
+        "result": "MISS",
+        "score": "0 - 0",
+        "source": "fotmob",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "平局"
+      }
     },
     {
       "code": "周六022",
@@ -2240,12 +3304,49 @@
       ],
       "is_single": false,
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "git_replay",
+        "evidence": "git 赛前提交留痕",
+        "traceable": true,
+        "note": "历史回填：预测取自开赛前最后一次提交，内容与 commit 均可复核"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "客胜",
+        "predicted_scores": [
+          "0-2",
+          "1-2",
+          "0-3"
+        ],
+        "predicted_goals": null,
+        "consensus_ratio": 81.4,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-17T23:11:06+08:00",
+        "kickoff": "2026-10-17T23:15:00",
+        "origin": "git_replay",
+        "backfilled": true,
+        "evidence": {
+          "odds": [
+            "6.75",
+            "5.51",
+            "1.25"
+          ],
+          "odds_source": "500.com",
+          "method": "git_replay",
+          "git_commit": "f9549b1c53ba77f90f985971eaaeb473674265b6",
+          "git_commit_time": "2026-10-17T23:11:06+08:00",
+          "git_path": "data/official_matches.json",
+          "note": "取自 kickoff 前最后一次提交，可用 git show 复核"
+        },
+        "sha256": "3d4a9c0c77c6b97a5e76d83ea96d2a28f00648bfef1aab8b6b9c80d3d9e38509"
+      },
+      "settlement": {
+        "result": "HIT",
+        "score": "1 - 3",
+        "source": "fotmob",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "客胜"
+      }
     },
     {
       "code": "周六023",
@@ -2308,12 +3409,49 @@
       ],
       "is_single": false,
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "git_replay",
+        "evidence": "git 赛前提交留痕",
+        "traceable": true,
+        "note": "历史回填：预测取自开赛前最后一次提交，内容与 commit 均可复核"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "客不败/双选平负",
+        "predicted_scores": [
+          "1-1",
+          "0-1",
+          "1-2"
+        ],
+        "predicted_goals": null,
+        "consensus_ratio": 73.2,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-17T23:40:06+08:00",
+        "kickoff": "2026-10-18T00:00:00",
+        "origin": "git_replay",
+        "backfilled": true,
+        "evidence": {
+          "odds": [
+            "5.90",
+            "4.15",
+            "1.39"
+          ],
+          "odds_source": "500.com",
+          "method": "git_replay",
+          "git_commit": "5a4d7a3ff4b4f99571d55fd99691654c7c055821",
+          "git_commit_time": "2026-10-17T23:40:06+08:00",
+          "git_path": "data/official_matches.json",
+          "note": "取自 kickoff 前最后一次提交，可用 git show 复核"
+        },
+        "sha256": "211d9f8da401ae0fdd8e57ddbc4c923d37c3d10e7336524b5e4e4ec962b0bc13"
+      },
+      "settlement": {
+        "result": "HIT",
+        "score": "1-3",
+        "source": "stored_score",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "客胜"
+      }
     },
     {
       "code": "周六024",
@@ -2382,12 +3520,49 @@
         "finished": true
       },
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "git_replay",
+        "evidence": "git 赛前提交留痕",
+        "traceable": true,
+        "note": "历史回填：预测取自开赛前最后一次提交，内容与 commit 均可复核"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "主不败/防平",
+        "predicted_scores": [
+          "2-1",
+          "2-2",
+          "3-2"
+        ],
+        "predicted_goals": null,
+        "consensus_ratio": 65.0,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-18T00:27:11+08:00",
+        "kickoff": "2026-10-18T00:30:00",
+        "origin": "git_replay",
+        "backfilled": true,
+        "evidence": {
+          "odds": [
+            "2.20",
+            "3.25",
+            "2.72"
+          ],
+          "odds_source": "500.com",
+          "method": "git_replay",
+          "git_commit": "ca67f40d29a701f9751551637be96ab619eb4ce6",
+          "git_commit_time": "2026-10-18T00:27:11+08:00",
+          "git_path": "data/official_matches.json",
+          "note": "取自 kickoff 前最后一次提交，可用 git show 复核"
+        },
+        "sha256": "0a6cdcf2e37e86c8d53fd251758c0772be528978aeb0a70faf5a0c32dcc18e64"
+      },
+      "settlement": {
+        "result": "MISS",
+        "score": "0-1",
+        "source": "stored_score",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "客胜"
+      }
     },
     {
       "code": "周六025",
@@ -2421,7 +3596,7 @@
       "consensus_ratio": 78.5,
       "tip": "让负/首选客不败",
       "score": "6-1",
-      "result": "MISS",
+      "result": "HIT",
       "analysis": "拜仁主让-2球深盘极难穿盘，莱红牛高效反击极度克制拜仁压上，红蓝对抗审查首选【让负/首选客不败】。",
       "dossier": {
         "summary": "拜仁主让-2球深盘极难穿盘，莱红牛高效反击极度克制拜仁压上，红蓝对抗审查首选【让负/首选客不败】。",
@@ -2468,12 +3643,49 @@
         "finished": true
       },
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "git_replay",
+        "evidence": "git 赛前提交留痕",
+        "traceable": true,
+        "note": "历史回填：预测取自开赛前最后一次提交，内容与 commit 均可复核"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "让胜/博穿盘",
+        "predicted_scores": [
+          "2-2",
+          "3-2",
+          "3-1"
+        ],
+        "predicted_goals": null,
+        "consensus_ratio": 74,
+        "is_only_rq": true,
+        "rang": "-2",
+        "frozen_at": "2026-10-18T00:27:11+08:00",
+        "kickoff": "2026-10-18T00:30:00",
+        "origin": "git_replay",
+        "backfilled": true,
+        "evidence": {
+          "odds": [
+            "1.78",
+            "5.03",
+            "2.71"
+          ],
+          "odds_source": "500.com",
+          "method": "git_replay",
+          "git_commit": "ca67f40d29a701f9751551637be96ab619eb4ce6",
+          "git_commit_time": "2026-10-18T00:27:11+08:00",
+          "git_path": "data/official_matches.json",
+          "note": "取自 kickoff 前最后一次提交，可用 git show 复核"
+        },
+        "sha256": "acbca90b831147f0063b218a5f8dbc404d8dc1ea59b1b949efb6266723db0455"
+      },
+      "settlement": {
+        "result": "HIT",
+        "score": "6-1",
+        "source": "stored_score",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "让胜"
+      }
     },
     {
       "code": "周六026",
@@ -2541,12 +3753,49 @@
         "finished": true
       },
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "git_replay",
+        "evidence": "git 赛前提交留痕",
+        "traceable": true,
+        "note": "历史回填：预测取自开赛前最后一次提交，内容与 commit 均可复核"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "客胜",
+        "predicted_scores": [
+          "1-2",
+          "1-3",
+          "0-2"
+        ],
+        "predicted_goals": null,
+        "consensus_ratio": 78.9,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-18T00:27:11+08:00",
+        "kickoff": "2026-10-18T00:30:00",
+        "origin": "git_replay",
+        "backfilled": true,
+        "evidence": {
+          "odds": [
+            "5.90",
+            "5.40",
+            "1.29"
+          ],
+          "odds_source": "500.com",
+          "method": "git_replay",
+          "git_commit": "ca67f40d29a701f9751551637be96ab619eb4ce6",
+          "git_commit_time": "2026-10-18T00:27:11+08:00",
+          "git_path": "data/official_matches.json",
+          "note": "取自 kickoff 前最后一次提交，可用 git show 复核"
+        },
+        "sha256": "03d28e23c118b6d2c0036326e7c4e7b1e9f22698f42cc401117399eb54a8a5ea"
+      },
+      "settlement": {
+        "result": "HIT",
+        "score": "2-5",
+        "source": "stored_score",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "客胜"
+      }
     },
     {
       "code": "周六027",
@@ -2614,12 +3863,49 @@
         "finished": true
       },
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "git_replay",
+        "evidence": "git 赛前提交留痕",
+        "traceable": true,
+        "note": "历史回填：预测取自开赛前最后一次提交，内容与 commit 均可复核"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "客胜",
+        "predicted_scores": [
+          "0-3",
+          "0-4",
+          "1-4"
+        ],
+        "predicted_goals": null,
+        "consensus_ratio": 78,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-18T01:51:09+08:00",
+        "kickoff": "2026-10-18T02:00:00",
+        "origin": "git_replay",
+        "backfilled": true,
+        "evidence": {
+          "odds": [
+            "9.00",
+            "5.85",
+            "1.18"
+          ],
+          "odds_source": "500.com",
+          "method": "git_replay",
+          "git_commit": "8397a7f9d02b84048204a6bc3cdde6c2cadd96c3",
+          "git_commit_time": "2026-10-18T01:51:09+08:00",
+          "git_path": "data/official_matches.json",
+          "note": "取自 kickoff 前最后一次提交，可用 git show 复核"
+        },
+        "sha256": "9841d3644297dcc9915b00f4ce7f3ad6fcc956145d2b3d96c0bd111395b80a72"
+      },
+      "settlement": {
+        "result": "HIT",
+        "score": "3-4",
+        "source": "stored_score",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "客胜"
+      }
     },
     {
       "code": "周六028",
@@ -2687,12 +3973,53 @@
         "finished": true
       },
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "git_replay",
+        "evidence": "git 赛前提交留痕",
+        "traceable": true,
+        "note": "历史回填：预测取自开赛前最后一次提交，内容与 commit 均可复核"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "主胜",
+        "predicted_scores": [
+          "2-0",
+          "2-1",
+          "1-0"
+        ],
+        "predicted_goals": [
+          "1",
+          "2",
+          "3"
+        ],
+        "consensus_ratio": 74.8,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-18T02:41:06+08:00",
+        "kickoff": "2026-10-18T02:45:00",
+        "origin": "git_replay",
+        "backfilled": true,
+        "evidence": {
+          "odds": [
+            "1.38",
+            "4.10",
+            "6.20"
+          ],
+          "odds_source": "500.com",
+          "method": "git_replay",
+          "git_commit": "c35f691a470cab8140736bdf3826222981d9c782",
+          "git_commit_time": "2026-10-18T02:41:06+08:00",
+          "git_path": "data/official_matches.json",
+          "note": "取自 kickoff 前最后一次提交，可用 git show 复核"
+        },
+        "sha256": "5a438ff0b582e796578d1efbd4794e9f8cb7c6a17e283ff8f8b768835f63c713"
+      },
+      "settlement": {
+        "result": "HIT",
+        "score": "2-0",
+        "source": "stored_score",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "主胜"
+      }
     },
     {
       "code": "周六029",
@@ -2755,12 +4082,52 @@
       ],
       "is_single": false,
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "git_replay",
+        "evidence": "git 赛前提交留痕",
+        "traceable": true,
+        "note": "历史回填：预测取自开赛前最后一次提交，内容与 commit 均可复核"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "客不败/双选平负",
+        "predicted_scores": [
+          "0-1",
+          "1-1",
+          "0-2"
+        ],
+        "predicted_goals": [
+          "1",
+          "2"
+        ],
+        "consensus_ratio": 67,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-18T02:54:12+08:00",
+        "kickoff": "2026-10-18T03:00:00",
+        "origin": "git_replay",
+        "backfilled": true,
+        "evidence": {
+          "odds": [
+            "3.36",
+            "2.80",
+            "2.11"
+          ],
+          "odds_source": "500.com",
+          "method": "git_replay",
+          "git_commit": "7ab9e3b06165e0ef5f716b389d25bb81b0fb49b5",
+          "git_commit_time": "2026-10-18T02:54:12+08:00",
+          "git_path": "data/official_matches.json",
+          "note": "取自 kickoff 前最后一次提交，可用 git show 复核"
+        },
+        "sha256": "5980c8437356ce7958317912e4096d6f916b79cc286c4615369cd63ba7bb5304"
+      },
+      "settlement": {
+        "result": "HIT",
+        "score": "0-0",
+        "source": "stored_score",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "平局"
+      }
     },
     {
       "code": "周六030",
@@ -2827,12 +4194,52 @@
         "finished": true
       },
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "git_replay",
+        "evidence": "git 赛前提交留痕",
+        "traceable": true,
+        "note": "历史回填：预测取自开赛前最后一次提交，内容与 commit 均可复核"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "主不败/首选主胜",
+        "predicted_scores": [
+          "2-1",
+          "1-1",
+          "2-0"
+        ],
+        "predicted_goals": [
+          "2",
+          "3"
+        ],
+        "consensus_ratio": 68,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-18T05:01:06+08:00",
+        "kickoff": "2026-10-18T07:30:00",
+        "origin": "git_replay",
+        "backfilled": true,
+        "evidence": {
+          "odds": [
+            "2.21",
+            "3.35",
+            "2.64"
+          ],
+          "odds_source": "500.com",
+          "method": "git_replay",
+          "git_commit": "cd03febd0024993108d5f9812b66a3635a1a1faf",
+          "git_commit_time": "2026-10-18T05:01:06+08:00",
+          "git_path": "data/official_matches.json",
+          "note": "取自 kickoff 前最后一次提交，可用 git show 复核"
+        },
+        "sha256": "5cfcc6b280a59f33b382ebd56fa1f328a4308d2c61e164c7d92ce2e26f81fe09"
+      },
+      "settlement": {
+        "result": "HIT",
+        "score": "1-0",
+        "source": "stored_score",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "主胜"
+      }
     },
     {
       "code": "周日001",
@@ -2900,12 +4307,53 @@
         "finished": true
       },
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "git_replay",
+        "evidence": "git 赛前提交留痕",
+        "traceable": true,
+        "note": "历史回填：预测取自开赛前最后一次提交，内容与 commit 均可复核"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "主胜",
+        "predicted_scores": [
+          "2-0",
+          "2-1",
+          "1-0"
+        ],
+        "predicted_goals": [
+          "2",
+          "3",
+          "1"
+        ],
+        "consensus_ratio": 65.0,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-18T14:56:06+08:00",
+        "kickoff": "2026-10-18T15:00:00",
+        "origin": "git_replay",
+        "backfilled": true,
+        "evidence": {
+          "odds": [
+            "1.61",
+            "3.29",
+            "4.90"
+          ],
+          "odds_source": "500.com",
+          "method": "git_replay",
+          "git_commit": "a6afc448056356ee4d8c3d2496a500066541cfed",
+          "git_commit_time": "2026-10-18T14:56:06+08:00",
+          "git_path": "data/official_matches.json",
+          "note": "取自 kickoff 前最后一次提交，可用 git show 复核"
+        },
+        "sha256": "d39608d55be510d370bd5af5b09101855eea63a2005ca22878bfddfe448f40e0"
+      },
+      "settlement": {
+        "result": "HIT",
+        "score": "3 - 0",
+        "source": "fotmob",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "主胜"
+      }
     },
     {
       "code": "周日002",
@@ -2972,12 +4420,53 @@
         "finished": true
       },
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "git_replay",
+        "evidence": "git 赛前提交留痕",
+        "traceable": true,
+        "note": "历史回填：预测取自开赛前最后一次提交，内容与 commit 均可复核"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "主不败/首选主胜",
+        "predicted_scores": [
+          "2-1",
+          "2-0",
+          "1-1"
+        ],
+        "predicted_goals": [
+          "2",
+          "3",
+          "1"
+        ],
+        "consensus_ratio": 65.0,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-18T15:19:05+08:00",
+        "kickoff": "2026-10-18T15:30:00",
+        "origin": "git_replay",
+        "backfilled": true,
+        "evidence": {
+          "odds": [
+            "2.05",
+            "2.75",
+            "3.60"
+          ],
+          "odds_source": "500.com",
+          "method": "git_replay",
+          "git_commit": "a53731e8140ec20577ac8d5fedb96f4b921b85ba",
+          "git_commit_time": "2026-10-18T15:19:05+08:00",
+          "git_path": "data/official_matches.json",
+          "note": "取自 kickoff 前最后一次提交，可用 git show 复核"
+        },
+        "sha256": "99a3e060fbaa0397f70eafdad1117bab984f56effbcd2a55fd928b77a497336c"
+      },
+      "settlement": {
+        "result": "HIT",
+        "score": "1 - 1",
+        "source": "fotmob",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "平局"
+      }
     },
     {
       "code": "周日003",
@@ -3044,12 +4533,52 @@
         "finished": true
       },
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "git_replay",
+        "evidence": "git 赛前提交留痕",
+        "traceable": true,
+        "note": "历史回填：预测取自开赛前最后一次提交，内容与 commit 均可复核"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "主胜",
+        "predicted_scores": [
+          "2-0",
+          "2-1",
+          "3-0"
+        ],
+        "predicted_goals": [
+          "2",
+          "3"
+        ],
+        "consensus_ratio": 84.9,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-18T15:19:05+08:00",
+        "kickoff": "2026-10-18T15:30:00",
+        "origin": "git_replay",
+        "backfilled": true,
+        "evidence": {
+          "odds": [
+            "1.23",
+            "5.11",
+            "8.25"
+          ],
+          "odds_source": "500.com",
+          "method": "git_replay",
+          "git_commit": "a53731e8140ec20577ac8d5fedb96f4b921b85ba",
+          "git_commit_time": "2026-10-18T15:19:05+08:00",
+          "git_path": "data/official_matches.json",
+          "note": "取自 kickoff 前最后一次提交，可用 git show 复核"
+        },
+        "sha256": "f07e0a4dc6fa045e9e154440ab95186ddb6915234ec1c3fc49073c46f46de7dd"
+      },
+      "settlement": {
+        "result": "MISS",
+        "score": "2 - 2",
+        "source": "fotmob",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "平局"
+      }
     },
     {
       "code": "周日004",
@@ -3117,12 +4646,53 @@
         "finished": true
       },
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "git_replay",
+        "evidence": "git 赛前提交留痕",
+        "traceable": true,
+        "note": "历史回填：预测取自开赛前最后一次提交，内容与 commit 均可复核"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "客胜",
+        "predicted_scores": [
+          "1-2",
+          "0-2",
+          "1-3"
+        ],
+        "predicted_goals": [
+          "2",
+          "3",
+          "4"
+        ],
+        "consensus_ratio": 65.0,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-18T18:02:06+08:00",
+        "kickoff": "2026-10-18T18:15:00",
+        "origin": "git_replay",
+        "backfilled": true,
+        "evidence": {
+          "odds": [
+            "3.95",
+            "3.98",
+            "1.60"
+          ],
+          "odds_source": "500.com",
+          "method": "git_replay",
+          "git_commit": "76ea2136f5830c5156dc4ff7885270660e898792",
+          "git_commit_time": "2026-10-18T18:02:06+08:00",
+          "git_path": "data/official_matches.json",
+          "note": "取自 kickoff 前最后一次提交，可用 git show 复核"
+        },
+        "sha256": "9b976565583b04e5d9a4bf95aef21338fe9d2d181cc918ca79fad817c57032f9"
+      },
+      "settlement": {
+        "result": "MISS",
+        "score": "4 - 1",
+        "source": "fotmob",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "主胜"
+      }
     },
     {
       "code": "周日005",
@@ -3190,12 +4760,53 @@
         "finished": true
       },
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "git_replay",
+        "evidence": "git 赛前提交留痕",
+        "traceable": true,
+        "note": "历史回填：预测取自开赛前最后一次提交，内容与 commit 均可复核"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "主胜",
+        "predicted_scores": [
+          "2-0",
+          "1-0",
+          "2-1"
+        ],
+        "predicted_goals": [
+          "1",
+          "2",
+          "3"
+        ],
+        "consensus_ratio": 66.5,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-18T18:22:05+08:00",
+        "kickoff": "2026-10-18T18:30:00",
+        "origin": "git_replay",
+        "backfilled": true,
+        "evidence": {
+          "odds": [
+            "1.57",
+            "3.45",
+            "4.93"
+          ],
+          "odds_source": "500.com",
+          "method": "git_replay",
+          "git_commit": "0635e944162d2530c0111466a935a27a7b8b486a",
+          "git_commit_time": "2026-10-18T18:22:05+08:00",
+          "git_path": "data/official_matches.json",
+          "note": "取自 kickoff 前最后一次提交，可用 git show 复核"
+        },
+        "sha256": "180fc61f39d59985c7c2d2dcf6cf6f7502e3197187840f1bb6c4685afa660339"
+      },
+      "settlement": {
+        "result": "MISS",
+        "score": "0 - 3",
+        "source": "fotmob",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "客胜"
+      }
     },
     {
       "code": "周日006",
@@ -3262,12 +4873,53 @@
         "finished": true
       },
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "git_replay",
+        "evidence": "git 赛前提交留痕",
+        "traceable": true,
+        "note": "历史回填：预测取自开赛前最后一次提交，内容与 commit 均可复核"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "主不败/首选主胜",
+        "predicted_scores": [
+          "1-0",
+          "2-0",
+          "1-1"
+        ],
+        "predicted_goals": [
+          "1",
+          "2",
+          "3"
+        ],
+        "consensus_ratio": 73.1,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-18T19:57:06+08:00",
+        "kickoff": "2026-10-18T20:00:00",
+        "origin": "git_replay",
+        "backfilled": true,
+        "evidence": {
+          "odds": [
+            "1.76",
+            "3.60",
+            "3.55"
+          ],
+          "odds_source": "500.com",
+          "method": "git_replay",
+          "git_commit": "76f2c686d4a03c4e24797c2c62851683910ad930",
+          "git_commit_time": "2026-10-18T19:57:06+08:00",
+          "git_path": "data/official_matches.json",
+          "note": "取自 kickoff 前最后一次提交，可用 git show 复核"
+        },
+        "sha256": "7e1f815bf6fb53588be3f3b688b1e37c8deca640cb754249c8a4159ddbe211d9"
+      },
+      "settlement": {
+        "result": "HIT",
+        "score": "2 - 0",
+        "source": "fotmob",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "主胜"
+      }
     },
     {
       "code": "周日007",
@@ -3334,12 +4986,53 @@
         "finished": true
       },
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "git_replay",
+        "evidence": "git 赛前提交留痕",
+        "traceable": true,
+        "note": "历史回填：预测取自开赛前最后一次提交，内容与 commit 均可复核"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "主不败/首选主胜",
+        "predicted_scores": [
+          "2-1",
+          "2-0",
+          "1-1"
+        ],
+        "predicted_goals": [
+          "2",
+          "3",
+          "1"
+        ],
+        "consensus_ratio": 76.7,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-18T19:57:06+08:00",
+        "kickoff": "2026-10-18T20:00:00",
+        "origin": "git_replay",
+        "backfilled": true,
+        "evidence": {
+          "odds": [
+            "1.79",
+            "3.60",
+            "3.41"
+          ],
+          "odds_source": "500.com",
+          "method": "git_replay",
+          "git_commit": "76f2c686d4a03c4e24797c2c62851683910ad930",
+          "git_commit_time": "2026-10-18T19:57:06+08:00",
+          "git_path": "data/official_matches.json",
+          "note": "取自 kickoff 前最后一次提交，可用 git show 复核"
+        },
+        "sha256": "d9e4a887c9a1de0438616a24b83fe2c3ea7214f50e3351d44809d4f91d6344be"
+      },
+      "settlement": {
+        "result": "HIT",
+        "score": "2-2",
+        "source": "stored_score",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "平局"
+      }
     },
     {
       "code": "周日008",
@@ -3406,12 +5099,52 @@
         "finished": true
       },
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "git_replay",
+        "evidence": "git 赛前提交留痕",
+        "traceable": true,
+        "note": "历史回填：预测取自开赛前最后一次提交，内容与 commit 均可复核"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "主胜",
+        "predicted_scores": [
+          "2-0",
+          "2-1",
+          "3-0"
+        ],
+        "predicted_goals": [
+          "2",
+          "3"
+        ],
+        "consensus_ratio": 76.9,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-18T19:57:06+08:00",
+        "kickoff": "2026-10-18T20:00:00",
+        "origin": "git_replay",
+        "backfilled": true,
+        "evidence": {
+          "odds": [
+            "1.39",
+            "4.18",
+            "5.85"
+          ],
+          "odds_source": "500.com",
+          "method": "git_replay",
+          "git_commit": "76f2c686d4a03c4e24797c2c62851683910ad930",
+          "git_commit_time": "2026-10-18T19:57:06+08:00",
+          "git_path": "data/official_matches.json",
+          "note": "取自 kickoff 前最后一次提交，可用 git show 复核"
+        },
+        "sha256": "9c8173143a8d99e99d818c917b823ecf9b1ce0cf418a11f5733b215fe2492b15"
+      },
+      "settlement": {
+        "result": "HIT",
+        "score": "2 - 0",
+        "source": "fotmob",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "主胜"
+      }
     },
     {
       "code": "周日009",
@@ -3479,12 +5212,52 @@
         "finished": true
       },
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "git_replay",
+        "evidence": "git 赛前提交留痕",
+        "traceable": true,
+        "note": "历史回填：预测取自开赛前最后一次提交，内容与 commit 均可复核"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "主不败/首选主胜",
+        "predicted_scores": [
+          "1-1",
+          "2-1",
+          "1-0"
+        ],
+        "predicted_goals": [
+          "2",
+          "3"
+        ],
+        "consensus_ratio": 65.0,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-18T20:22:06+08:00",
+        "kickoff": "2026-10-18T20:30:00",
+        "origin": "git_replay",
+        "backfilled": true,
+        "evidence": {
+          "odds": [
+            "2.28",
+            "3.77",
+            "2.35"
+          ],
+          "odds_source": "500.com",
+          "method": "git_replay",
+          "git_commit": "fbf2c60b9ab9e0e0388336f8c5b6816355e6a622",
+          "git_commit_time": "2026-10-18T20:22:06+08:00",
+          "git_path": "data/official_matches.json",
+          "note": "取自 kickoff 前最后一次提交，可用 git show 复核"
+        },
+        "sha256": "78dbce0ed965773f24389b4dfa819b91cb43e0e21367e9bb8c5871bb4d6b3fa1"
+      },
+      "settlement": {
+        "result": "MISS",
+        "score": "0 - 3",
+        "source": "fotmob",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "客胜"
+      }
     },
     {
       "code": "周日010",
@@ -3552,12 +5325,52 @@
         "finished": true
       },
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "git_replay",
+        "evidence": "git 赛前提交留痕",
+        "traceable": true,
+        "note": "历史回填：预测取自开赛前最后一次提交，内容与 commit 均可复核"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "主不败/首选主胜",
+        "predicted_scores": [
+          "1-1",
+          "2-1",
+          "1-0"
+        ],
+        "predicted_goals": [
+          "2",
+          "3"
+        ],
+        "consensus_ratio": 65.0,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-18T20:53:05+08:00",
+        "kickoff": "2026-10-18T21:00:00",
+        "origin": "git_replay",
+        "backfilled": true,
+        "evidence": {
+          "odds": [
+            "2.42",
+            "3.10",
+            "2.55"
+          ],
+          "odds_source": "500.com",
+          "method": "git_replay",
+          "git_commit": "d45764d792957fe7a6c5c1e95711178df536752f",
+          "git_commit_time": "2026-10-18T20:53:05+08:00",
+          "git_path": "data/official_matches.json",
+          "note": "取自 kickoff 前最后一次提交，可用 git show 复核"
+        },
+        "sha256": "153c94dfbf4fb872f407954d74d75191339aa543bff99641472edd583cf7546e"
+      },
+      "settlement": {
+        "result": "HIT",
+        "score": "1 - 1",
+        "source": "fotmob",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "平局"
+      }
     },
     {
       "code": "周日011",
@@ -3620,12 +5433,52 @@
       "is_single": false,
       "locked": true,
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "git_replay",
+        "evidence": "git 赛前提交留痕",
+        "traceable": true,
+        "note": "历史回填：预测取自开赛前最后一次提交，内容与 commit 均可复核"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "主不败/首选主胜",
+        "predicted_scores": [
+          "2-1",
+          "1-0",
+          "1-1"
+        ],
+        "predicted_goals": [
+          "2",
+          "3"
+        ],
+        "consensus_ratio": 65.0,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-18T20:53:05+08:00",
+        "kickoff": "2026-10-18T21:00:00",
+        "origin": "git_replay",
+        "backfilled": true,
+        "evidence": {
+          "odds": [
+            "1.86",
+            "3.25",
+            "3.52"
+          ],
+          "odds_source": "500.com",
+          "method": "git_replay",
+          "git_commit": "d45764d792957fe7a6c5c1e95711178df536752f",
+          "git_commit_time": "2026-10-18T20:53:05+08:00",
+          "git_path": "data/official_matches.json",
+          "note": "取自 kickoff 前最后一次提交，可用 git show 复核"
+        },
+        "sha256": "9cb76daff3445f5253d62fa257dd54bb62aad11c2a9f0a6022d2f14fe8b8f809"
+      },
+      "settlement": {
+        "result": "HIT",
+        "score": "2-0",
+        "source": "stored_score",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "主胜"
+      }
     },
     {
       "code": "周日012",
@@ -3693,12 +5546,53 @@
         "finished": true
       },
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "git_replay",
+        "evidence": "git 赛前提交留痕",
+        "traceable": true,
+        "note": "历史回填：预测取自开赛前最后一次提交，内容与 commit 均可复核"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "客胜",
+        "predicted_scores": [
+          "0-1",
+          "0-2",
+          "1-2"
+        ],
+        "predicted_goals": [
+          "1",
+          "2",
+          "3"
+        ],
+        "consensus_ratio": 65.0,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-18T20:53:05+08:00",
+        "kickoff": "2026-10-18T21:00:00",
+        "origin": "git_replay",
+        "backfilled": true,
+        "evidence": {
+          "odds": [
+            "3.27",
+            "3.50",
+            "1.86"
+          ],
+          "odds_source": "500.com",
+          "method": "git_replay",
+          "git_commit": "d45764d792957fe7a6c5c1e95711178df536752f",
+          "git_commit_time": "2026-10-18T20:53:05+08:00",
+          "git_path": "data/official_matches.json",
+          "note": "取自 kickoff 前最后一次提交，可用 git show 复核"
+        },
+        "sha256": "3a1dabe25d166d1d75c620d7ae67ecba036022a89155e6401157dee7153ad83d"
+      },
+      "settlement": {
+        "result": "HIT",
+        "score": "1 - 3",
+        "source": "fotmob",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "客胜"
+      }
     },
     {
       "code": "周日013",
@@ -3766,12 +5660,52 @@
         "finished": true
       },
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "git_replay",
+        "evidence": "git 赛前提交留痕",
+        "traceable": true,
+        "note": "历史回填：预测取自开赛前最后一次提交，内容与 commit 均可复核"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "客胜",
+        "predicted_scores": [
+          "0-2",
+          "1-2",
+          "0-1"
+        ],
+        "predicted_goals": [
+          "2",
+          "3"
+        ],
+        "consensus_ratio": 65.0,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-18T20:53:05+08:00",
+        "kickoff": "2026-10-18T21:00:00",
+        "origin": "git_replay",
+        "backfilled": true,
+        "evidence": {
+          "odds": [
+            "4.12",
+            "4.00",
+            "1.57"
+          ],
+          "odds_source": "500.com",
+          "method": "git_replay",
+          "git_commit": "d45764d792957fe7a6c5c1e95711178df536752f",
+          "git_commit_time": "2026-10-18T20:53:05+08:00",
+          "git_path": "data/official_matches.json",
+          "note": "取自 kickoff 前最后一次提交，可用 git show 复核"
+        },
+        "sha256": "b5dc28a63261ad6057a640aeb3d9b2b28a6a97f553afdbfd7ade52bd0524a316"
+      },
+      "settlement": {
+        "result": "HIT",
+        "score": "2 - 5",
+        "source": "fotmob",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "客胜"
+      }
     },
     {
       "code": "周日014",
@@ -3839,12 +5773,53 @@
         "finished": true
       },
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "git_replay",
+        "evidence": "git 赛前提交留痕",
+        "traceable": true,
+        "note": "历史回填：预测取自开赛前最后一次提交，内容与 commit 均可复核"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "主胜",
+        "predicted_scores": [
+          "2-0",
+          "2-1",
+          "3-1"
+        ],
+        "predicted_goals": [
+          "2",
+          "3",
+          "4"
+        ],
+        "consensus_ratio": 83.1,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-18T21:26:06+08:00",
+        "kickoff": "2026-10-18T21:30:00",
+        "origin": "git_replay",
+        "backfilled": true,
+        "evidence": {
+          "odds": [
+            "1.40",
+            "4.45",
+            "5.25"
+          ],
+          "odds_source": "500.com",
+          "method": "git_replay",
+          "git_commit": "9bca048cc47ec340ace6847099302f00d3b86b8b",
+          "git_commit_time": "2026-10-18T21:26:06+08:00",
+          "git_path": "data/official_matches.json",
+          "note": "取自 kickoff 前最后一次提交，可用 git show 复核"
+        },
+        "sha256": "436f560fba662c32759c9e42ad6232cf91249f8ddf68cd1bd2d2fb069d5fe924"
+      },
+      "settlement": {
+        "result": "HIT",
+        "score": "2 - 1",
+        "source": "fotmob",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "主胜"
+      }
     },
     {
       "code": "周日015",
@@ -3907,12 +5882,53 @@
       "is_single": false,
       "locked": true,
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "git_replay",
+        "evidence": "git 赛前提交留痕",
+        "traceable": true,
+        "note": "历史回填：预测取自开赛前最后一次提交，内容与 commit 均可复核"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "主不败/首选主胜",
+        "predicted_scores": [
+          "2-1",
+          "1-0",
+          "1-1"
+        ],
+        "predicted_goals": [
+          "1",
+          "2",
+          "3"
+        ],
+        "consensus_ratio": 65.0,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-18T22:12:07+08:00",
+        "kickoff": "2026-10-18T22:15:00",
+        "origin": "git_replay",
+        "backfilled": true,
+        "evidence": {
+          "odds": [
+            "2.15",
+            "2.65",
+            "3.48"
+          ],
+          "odds_source": "500.com",
+          "method": "git_replay",
+          "git_commit": "5858a4623c2c2806f3291aa4c922612aa6eed5ad",
+          "git_commit_time": "2026-10-18T22:12:07+08:00",
+          "git_path": "data/official_matches.json",
+          "note": "取自 kickoff 前最后一次提交，可用 git show 复核"
+        },
+        "sha256": "10dd86e6cdc3ae2ee81a283fc7843909de666d7c18a8477215a13878070f36cf"
+      },
+      "settlement": {
+        "result": "HIT",
+        "score": "2-1",
+        "source": "stored_score",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "主胜"
+      }
     },
     {
       "code": "周日016",
@@ -3974,12 +5990,52 @@
       "is_single": false,
       "locked": true,
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "git_replay",
+        "evidence": "git 赛前提交留痕",
+        "traceable": true,
+        "note": "历史回填：预测取自开赛前最后一次提交，内容与 commit 均可复核"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "客胜",
+        "predicted_scores": [
+          "1-2",
+          "0-2",
+          "0-3"
+        ],
+        "predicted_goals": [
+          "2",
+          "3"
+        ],
+        "consensus_ratio": 65.3,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-18T22:44:07+08:00",
+        "kickoff": "2026-10-18T22:45:00",
+        "origin": "git_replay",
+        "backfilled": true,
+        "evidence": {
+          "odds": [
+            "3.62",
+            "4.05",
+            "1.65"
+          ],
+          "odds_source": "500.com",
+          "method": "git_replay",
+          "git_commit": "38648c15165ba37d833fb6f5def563806d327c7d",
+          "git_commit_time": "2026-10-18T22:44:07+08:00",
+          "git_path": "data/official_matches.json",
+          "note": "取自 kickoff 前最后一次提交，可用 git show 复核"
+        },
+        "sha256": "86459db2be474d3e071707a22350919a285fe86c3dd2299e34697430a68d86fc"
+      },
+      "settlement": {
+        "result": "HIT",
+        "score": "2-5",
+        "source": "stored_score",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "客胜"
+      }
     },
     {
       "code": "周日017",
@@ -4046,12 +6102,52 @@
         "finished": true
       },
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "git_replay",
+        "evidence": "git 赛前提交留痕",
+        "traceable": true,
+        "note": "历史回填：预测取自开赛前最后一次提交，内容与 commit 均可复核"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "客不败/首选客胜",
+        "predicted_scores": [
+          "1-2",
+          "0-2",
+          "1-1"
+        ],
+        "predicted_goals": [
+          "2",
+          "3"
+        ],
+        "consensus_ratio": 65.0,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-18T23:13:07+08:00",
+        "kickoff": "2026-10-18T23:15:00",
+        "origin": "git_replay",
+        "backfilled": true,
+        "evidence": {
+          "odds": [
+            "3.75",
+            "3.55",
+            "1.72"
+          ],
+          "odds_source": "500.com",
+          "method": "git_replay",
+          "git_commit": "eb89b06323e9b5b80aa742de68a7ca7c231a279b",
+          "git_commit_time": "2026-10-18T23:13:07+08:00",
+          "git_path": "data/official_matches.json",
+          "note": "取自 kickoff 前最后一次提交，可用 git show 复核"
+        },
+        "sha256": "103966a42dea2659461d8b80180f6b8b9f89d990a05059c31fe11a08caa1a1d9"
+      },
+      "settlement": {
+        "result": "MISS",
+        "score": "1 - 0",
+        "source": "fotmob",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "主胜"
+      }
     },
     {
       "code": "周日018",
@@ -4119,12 +6215,53 @@
         "finished": true
       },
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "git_replay",
+        "evidence": "git 赛前提交留痕",
+        "traceable": true,
+        "note": "历史回填：预测取自开赛前最后一次提交，内容与 commit 均可复核"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "客胜",
+        "predicted_scores": [
+          "0-2",
+          "0-1",
+          "1-2"
+        ],
+        "predicted_goals": [
+          "1",
+          "2",
+          "3"
+        ],
+        "consensus_ratio": 76.6,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-18T23:23:07+08:00",
+        "kickoff": "2026-10-18T23:30:00",
+        "origin": "git_replay",
+        "backfilled": true,
+        "evidence": {
+          "odds": [
+            "7.20",
+            "4.20",
+            "1.33"
+          ],
+          "odds_source": "500.com",
+          "method": "git_replay",
+          "git_commit": "5e8444486678b37e29661e396ea3f46add3f9883",
+          "git_commit_time": "2026-10-18T23:23:07+08:00",
+          "git_path": "data/official_matches.json",
+          "note": "取自 kickoff 前最后一次提交，可用 git show 复核"
+        },
+        "sha256": "5e1fc4d0fdf5961bfcde023231a4566d3dac89007ffa28ecb7717234a8487908"
+      },
+      "settlement": {
+        "result": "HIT",
+        "score": "0 - 1",
+        "source": "fotmob",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "客胜"
+      }
     },
     {
       "code": "周日019",
@@ -4191,12 +6328,52 @@
         "finished": true
       },
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "git_replay",
+        "evidence": "git 赛前提交留痕",
+        "traceable": true,
+        "note": "历史回填：预测取自开赛前最后一次提交，内容与 commit 均可复核"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "客不败/双选平负",
+        "predicted_scores": [
+          "1-2",
+          "1-1",
+          "0-2"
+        ],
+        "predicted_goals": [
+          "2",
+          "3"
+        ],
+        "consensus_ratio": 65.0,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-18T23:23:07+08:00",
+        "kickoff": "2026-10-18T23:30:00",
+        "origin": "git_replay",
+        "backfilled": true,
+        "evidence": {
+          "odds": [
+            "2.58",
+            "3.95",
+            "2.05"
+          ],
+          "odds_source": "500.com",
+          "method": "git_replay",
+          "git_commit": "5e8444486678b37e29661e396ea3f46add3f9883",
+          "git_commit_time": "2026-10-18T23:23:07+08:00",
+          "git_path": "data/official_matches.json",
+          "note": "取自 kickoff 前最后一次提交，可用 git show 复核"
+        },
+        "sha256": "21b8ee1fa108628f88f10fde8d6dadea9c48acf1196daddcad45074c9fd3ec84"
+      },
+      "settlement": {
+        "result": "HIT",
+        "score": "1 - 2",
+        "source": "fotmob",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "客胜"
+      }
     },
     {
       "code": "周日020",
@@ -4259,12 +6436,53 @@
       "is_single": false,
       "locked": true,
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "git_replay",
+        "evidence": "git 赛前提交留痕",
+        "traceable": true,
+        "note": "历史回填：预测取自开赛前最后一次提交，内容与 commit 均可复核"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "主胜",
+        "predicted_scores": [
+          "2-0",
+          "1-0",
+          "2-1"
+        ],
+        "predicted_goals": [
+          "1",
+          "2",
+          "3"
+        ],
+        "consensus_ratio": 71.5,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-18T23:53:06+08:00",
+        "kickoff": "2026-10-19T00:00:00",
+        "origin": "git_replay",
+        "backfilled": true,
+        "evidence": {
+          "odds": [
+            "1.46",
+            "4.05",
+            "5.05"
+          ],
+          "odds_source": "500.com",
+          "method": "git_replay",
+          "git_commit": "6ae838f15a512c4fc10166f945352dcb8f974901",
+          "git_commit_time": "2026-10-18T23:53:06+08:00",
+          "git_path": "data/official_matches.json",
+          "note": "取自 kickoff 前最后一次提交，可用 git show 复核"
+        },
+        "sha256": "cddc6c327abec57101cf35efd1c7a8f0d4a7df61d9aabea7408f8c4019b91882"
+      },
+      "settlement": {
+        "result": "HIT",
+        "score": "3-2",
+        "source": "stored_score",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "主胜"
+      }
     },
     {
       "code": "周日021",
@@ -4331,12 +6549,52 @@
         "finished": true
       },
       "provenance": {
-        "method": "未记录",
-        "evidence": "无",
-        "traceable": false,
-        "note": "历史预测未保存生成依据，不能作为模型有效性证明"
+        "method": "git_replay",
+        "evidence": "git 赛前提交留痕",
+        "traceable": true,
+        "note": "历史回填：预测取自开赛前最后一次提交，内容与 commit 均可复核"
       },
-      "prediction_verified": false
+      "prediction_verified": true,
+      "prediction_snapshot": {
+        "tip": "客不败/首选客胜",
+        "predicted_scores": [
+          "0-1",
+          "0-2",
+          "1-1"
+        ],
+        "predicted_goals": [
+          "1",
+          "2"
+        ],
+        "consensus_ratio": 65.0,
+        "is_only_rq": false,
+        "rang": "0",
+        "frozen_at": "2026-10-19T00:23:07+08:00",
+        "kickoff": "2026-10-19T00:30:00",
+        "origin": "git_replay",
+        "backfilled": true,
+        "evidence": {
+          "odds": [
+            "3.25",
+            "3.55",
+            "1.85"
+          ],
+          "odds_source": "500.com",
+          "method": "git_replay",
+          "git_commit": "6e320c16176562da49647eb0cb3f4f1c292fe4b5",
+          "git_commit_time": "2026-10-19T00:23:07+08:00",
+          "git_path": "data/official_matches.json",
+          "note": "取自 kickoff 前最后一次提交，可用 git show 复核"
+        },
+        "sha256": "bf015ae256996e495d5f7e57cddee513bd995472fe659be20add6304809b7d8f"
+      },
+      "settlement": {
+        "result": "HIT",
+        "score": "2-5",
+        "source": "stored_score",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "客胜"
+      }
     },
     {
       "code": "周日022",
@@ -4439,6 +6697,13 @@
           "method": "frozen_after_kickoff"
         },
         "sha256": "d4938d66c5e427a0f1c796bf394aaa250356e918423713b001e1b551b75520d7"
+      },
+      "settlement": {
+        "result": "MISS",
+        "score": "0-3",
+        "source": "stored_score",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "客胜"
       }
     },
     {
@@ -4540,6 +6805,13 @@
           "method": "frozen_after_kickoff"
         },
         "sha256": "6a31e3aab71e09a02e1da8321eff7ac509cc6358edb6dd38342dd39accddb1d5"
+      },
+      "settlement": {
+        "result": "HIT",
+        "score": "2-1",
+        "source": "stored_score",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "主胜"
       }
     },
     {
@@ -4651,6 +6923,13 @@
           "method": "frozen_after_kickoff"
         },
         "sha256": "db82eacdecd8a70adeb7bac3d125521b1972d3c5301859819f64251bd25bca9a"
+      },
+      "settlement": {
+        "result": "HIT",
+        "score": "4-1",
+        "source": "stored_score",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "让胜"
       }
     },
     {
@@ -4761,6 +7040,13 @@
           "method": "frozen_after_kickoff"
         },
         "sha256": "c3dfb87e8a094a6a8d6b1feb8785d25a622d72209f07bf3327c5bfc171e2904e"
+      },
+      "settlement": {
+        "result": "MISS",
+        "score": "1-2",
+        "source": "stored_score",
+        "settled_at": "2026-10-19T14:33:32",
+        "outcome": "让负"
       }
     },
     {

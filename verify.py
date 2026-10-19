@@ -121,6 +121,12 @@ def settle_all(matches):
                 if remote:
                     break
         outcome = settle(m, remote)
+        if outcome is None:
+            # FotMob 匹配不到（老场次/队名差异）时，退回本系统已记录的官方比分，
+            # 并明确标注 source=stored_score，避免这类场次永远停留在"未结算"。
+            outcome = settle(m, {"finished": True, "score": m.get("score")})
+            if outcome and m.get("settlement"):
+                m["settlement"]["source"] = "stored_score"
         if outcome == "HIT":
             stats["hit"] += 1
         elif outcome == "MISS":
