@@ -1,7 +1,18 @@
 {
-  "updated_at": "2026-10-20 00:10:34",
-  "total_tips": 17,
+  "updated_at": "2026-10-20 00:15:31",
+  "total_tips": 18,
   "live_feed": [
+    {
+      "id": 2884,
+      "channel": "matchpreviews",
+      "time": "2026-10-20 00:14",
+      "code": "周二006",
+      "league": "欧冠",
+      "category": "赛前军情(未翻译)",
+      "match": "巴黎圣曼 VS 巴萨",
+      "chinese": "[原文·未翻译] It's a big week for Lamine Yamal and Barcelona 🔥 🚀 Crashino — THE ultimate casino and sportsbook on Telegram",
+      "translated": false
+    },
     {
       "id": 2883,
       "channel": "prognozy",
