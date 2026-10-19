@@ -1,7 +1,18 @@
 {
-  "updated_at": "2026-10-19 16:45:40",
-  "total_tips": 4,
+  "updated_at": "2026-10-19 17:10:41",
+  "total_tips": 5,
   "live_feed": [
+    {
+      "id": 2770,
+      "channel": "tribuna_football",
+      "time": "2026-10-19 16:58",
+      "code": "周二006",
+      "league": "欧冠",
+      "category": "赛前军情(未翻译)",
+      "match": "巴黎圣曼 VS 巴萨",
+      "chinese": "[原文·未翻译] Real Madrid have been awarded the most penalties in La Liga since VAR was introduced, with almost twice as many as Barcelona 😲 So, are Real ",
+      "translated": false
+    },
     {
       "id": 2553,
       "channel": "FabrizioRomano",
