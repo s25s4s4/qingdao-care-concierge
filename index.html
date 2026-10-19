@@ -961,12 +961,16 @@
         </div>
     </div>
 
-    <!-- ==================== TAB 2: 实战串关 (2串1全息拓扑矩阵 + 单关直打) ==================== -->
+    <!-- ==================== TAB 2: 实战串关 (体彩柜台出票极简指引) ==================== -->
     <div id="tab-parlay" class="tab-view">
         <div class="hero-banner" style="background: linear-gradient(135deg, rgba(210, 153, 34, 0.15) 0%, rgba(13, 17, 23, 0.95) 100%); border-bottom: 1px solid rgba(210, 153, 34, 0.3);">
             <div class="hero-col">
-                <div class="hero-num" style="color: var(--accent-gold);" id="parlay-total-pairs">--</div>
-                <div class="hero-label">今日2串1矩阵</div>
+                <div class="hero-num" style="color: var(--accent-gold);" id="parlay-total-tickets">--</div>
+                <div class="hero-label">出票总张数</div>
+            </div>
+            <div class="hero-col">
+                <div class="hero-num" style="color: #38bdf8;" id="parlay-total-cost">--</div>
+                <div class="hero-label">实投总金额</div>
             </div>
             <div class="hero-col">
                 <div class="hero-num" style="color: #3fb950;" id="parlay-hit-rate">--</div>
@@ -978,17 +982,17 @@
             </div>
         </div>
 
-        <!-- 店主大白话串关出票原理 -->
+        <!-- 店主大白话打票指南 -->
         <div style="background: rgba(22, 27, 34, 0.95); border: 1px dashed rgba(210, 153, 34, 0.5); border-radius: 8px; padding: 12px 14px; margin: 12px 16px; font-size: 11px; line-height: 1.6; color: #c9d1d9;">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
-                <b style="color: var(--accent-gold); font-size: 12px;">💡 店主白话：为什么必须看【实战串关】？</b>
+                <b style="color: var(--accent-gold); font-size: 12px;">🎫 实体店柜台出票实操指南：</b>
             </div>
-            • <b>柜台物理铁律</b>：竞彩绝大多数场次不设单场固定奖，<b>必须两场捆绑（2串1）才能出票</b>！<br>
-            • <b>矩阵组合逻辑</b>：我们将当天所有在售比赛进行全息两两组合（单关亦参与组合）。以每组均注为基准，中奖按 <code>SP₁ × SP₂</code> 复合相乘。<br>
-            • <b>复利暴击威力</b>：前一完赛日 2串1 组合全息互锁，精准打出高赔复利，<b>实战 ROI 达到 <span id="parlay-banner-roi" style="color: var(--accent-gold); font-weight: 800;">--</span></b>！
+            • <b>终端机报号指令</b>：按卡片勾选指定的 <b>8 场比赛</b>，过关方式只勾 <b>【2关】</b>（复式8场2关）。<br>
+            • <b>单双选严格自洽</b>：单选稳胆勾1项，胶着战双选防平勾2项。机器自动两两组合，<b>用最少张票 100% 锁死全部 2串1 防冷组合</b>！<br>
+            • <b>核对出票金额</b>：每张票打印前核对屏幕金额与卡片右上方金额完全一致，即可无误出票！
         </div>
 
-        <!-- 单关稳胆专区 -->
+        <!-- 官方单关直打专区 (若有) -->
         <div style="margin: 0 16px 16px;">
             <div class="section-title" style="display: flex; justify-content: space-between; align-items: center;">
                 <span>🔥 官方单关 · 柜台直打专区</span>
@@ -999,14 +1003,14 @@
             </div>
         </div>
 
-        <!-- 2串1 组合列表 -->
+        <!-- 柜台打票专用卡片清单 -->
         <div style="margin: 0 16px 20px;">
             <div class="section-title" style="display: flex; justify-content: space-between; align-items: center;">
-                <span>🎯 当日全量 2串1 矩阵组合清单</span>
-                <span id="parlay-batch-title" style="font-size: 10px; color: var(--accent-gold); font-weight: normal;">今日周日档期</span>
+                <span>🧾 柜台打票专用清单 (照卡出票)</span>
+                <span id="parlay-batch-title" style="font-size: 10px; color: var(--accent-gold); font-weight: normal;">今日周一在售档期</span>
             </div>
             <div id="parlay-pairs-list">
-                <!-- 动态注入 2串1 卡片 -->
+                <!-- 动态注入打票卡片 -->
             </div>
         </div>
     </div>
@@ -1554,11 +1558,130 @@
             renderMatchesList(filter);
         }
 
-        // 渲染【实战串关 (2串1全息拓扑矩阵 + 单关直打)】
+        // 解析比赛赛前研判为体彩真实投注项 (支持单选与双选防冷)
+        function parseMatchTipOptions(m) {
+            const tip = m.tip || '';
+            const isRq = !!m.is_only_rq;
+            const prefix = isRq ? '让' : '';
+            const opts = [];
+
+            if (tip.includes('死胆') || tip.includes('主胜让胜')) {
+                opts.push(prefix + '胜');
+            } else if (tip === '主胜') {
+                opts.push(prefix + '胜');
+            } else if (tip === '客胜') {
+                opts.push(prefix + '负');
+            } else if (tip === '平局') {
+                opts.push(prefix + '平');
+            } else if (tip.includes('让负')) {
+                opts.push('让负', '让平');
+            } else if (tip.includes('让胜')) {
+                opts.push('让胜');
+            } else if (tip.includes('主不败') || tip.includes('主胜/防平') || tip.includes('平局/主胜')) {
+                opts.push(prefix + '胜', prefix + '平');
+            } else if (tip.includes('客不败') || tip.includes('客胜/防平') || tip.includes('平局/客胜') || tip.includes('双选平负') || tip.includes('客不败/首选客胜') || tip.includes('客不败/首选平') || tip.includes('客胜/进球数大')) {
+                opts.push(prefix + '负', prefix + '平');
+            } else if (tip.includes('双方进球') || tip.includes('进球数')) {
+                if (tip.includes('客') || tip.includes('负')) opts.push(prefix + '负', prefix + '平');
+                else opts.push(prefix + '胜', prefix + '平');
+            } else {
+                if (tip.includes('客')) opts.push(prefix + '负');
+                else opts.push(prefix + '胜');
+            }
+
+            return {
+                code: m.code,
+                home: m.home,
+                away: m.away,
+                league: m.league,
+                time: m.time,
+                tip: tip,
+                is_rq: isRq,
+                options: opts,
+                count: opts.length
+            };
+        }
+
+        // 贪心启发式算法：求任意场次的最优 8 场 2 关打票覆盖方案 (100% 覆盖两两配对)
+        function generateCoveringTickets(parsedMatches) {
+            const n = parsedMatches.length;
+            if (n < 2) return [];
+            if (n <= 8) {
+                return [Array.from({length: n}, (_, i) => i)];
+            }
+
+            const pairs = new Set();
+            for (let i = 0; i < n; i++) {
+                for (let j = i + 1; j < n; j++) {
+                    pairs.add(`${i}_${j}`);
+                }
+            }
+
+            const uncovered = new Set(pairs);
+            const tickets = [];
+
+            while (uncovered.size > 0) {
+                const freq = new Array(n).fill(0);
+                uncovered.forEach(pairKey => {
+                    const [u, v] = pairKey.split('_').map(Number);
+                    freq[u]++;
+                    freq[v]++;
+                });
+
+                const sortedIndices = Array.from({length: n}, (_, i) => i).sort((a, b) => freq[b] - freq[a]);
+                let bestBlock = sortedIndices.slice(0, 8);
+                
+                const calcGain = (block) => {
+                    let g = 0;
+                    for (let i = 0; i < block.length; i++) {
+                        for (let j = i + 1; j < block.length; j++) {
+                            const minIdx = Math.min(block[i], block[j]);
+                            const maxIdx = Math.max(block[i], block[j]);
+                            if (uncovered.has(`${minIdx}_${maxIdx}`)) g++;
+                        }
+                    }
+                    return g;
+                };
+
+                let bestGain = calcGain(bestBlock);
+
+                // 启发式随机搜索
+                const poolSize = Math.min(n, 20);
+                const pool = sortedIndices.slice(0, poolSize);
+                for (let step = 0; step < 180; step++) {
+                    const cand = [];
+                    const poolCopy = [...pool];
+                    while (cand.length < 8 && poolCopy.length > 0) {
+                        const rIdx = Math.floor(Math.random() * poolCopy.length);
+                        cand.push(poolCopy.splice(rIdx, 1)[0]);
+                    }
+                    const gain = calcGain(cand);
+                    if (gain > bestGain) {
+                        bestBlock = cand;
+                        bestGain = gain;
+                    }
+                }
+
+                for (let i = 0; i < bestBlock.length; i++) {
+                    for (let j = i + 1; j < bestBlock.length; j++) {
+                        const minIdx = Math.min(bestBlock[i], bestBlock[j]);
+                        const maxIdx = Math.max(bestBlock[i], bestBlock[j]);
+                        uncovered.delete(`${minIdx}_${maxIdx}`);
+                    }
+                }
+
+                tickets.push(bestBlock.sort((a, b) => a - b));
+            }
+
+            return tickets;
+        }
+
+        // 渲染【实战串关 (体彩柜台极简打票专区)】
         function renderParlayMatrix() {
             const singlesContainer = document.getElementById('parlay-singles-list');
             const pairsContainer = document.getElementById('parlay-pairs-list');
-            const totalPairsElem = document.getElementById('parlay-total-pairs');
+            const totalTicketsElem = document.getElementById('parlay-total-tickets');
+            const totalCostElem = document.getElementById('parlay-total-cost');
             const hitRateElem = document.getElementById('parlay-hit-rate');
             const roiElem = document.getElementById('parlay-roi-num');
             const batchTitleElem = document.getElementById('parlay-batch-title');
@@ -1568,11 +1691,11 @@
             singlesContainer.innerHTML = '';
             pairsContainer.innerHTML = '';
 
-            // 1. 自动寻找当前在售待开赛的批次与已完赛批次
+            // 1. 寻找当前在售待开赛与已完赛批次
             const pendingMatches = ALL_OFFICIAL_MATCHES.filter(m => m.result === 'PENDING');
             const settledMatches = ALL_OFFICIAL_MATCHES.filter(m => m.result !== 'PENDING');
 
-            // 动态判定最新已完赛的日期前缀 (彻底消除写死'周六')
+            // 动态判定已完赛日期
             const distinctSettledDays = [];
             settledMatches.forEach(m => {
                 const dk = m.code ? m.code.substring(0, 2) : '';
@@ -1582,19 +1705,15 @@
             distinctSettledDays.sort((a, b) => (weekWeight[b] || 0) - (weekWeight[a] || 0));
             const latestSettledDay = distinctSettledDays[0] || '昨日';
 
-            // 动态标题绑定
-            const hitRateLabel = hitRateElem ? hitRateElem.nextElementSibling : null;
-            const roiLabel = roiElem ? roiElem.nextElementSibling : null;
-            if (hitRateLabel) hitRateLabel.innerText = `${latestSettledDay}串关命中率`;
-            if (roiLabel) roiLabel.innerText = `${latestSettledDay}实战ROI`;
+            if (hitRateElem && hitRateElem.nextElementSibling) hitRateElem.nextElementSibling.innerText = `${latestSettledDay}串关命中率`;
+            if (roiElem && roiElem.nextElementSibling) roiElem.nextElementSibling.innerText = `${latestSettledDay}实战ROI`;
 
-            // 统计最新完赛日期的全息 2串1 战报指标
+            // 统计已完赛指标
             const latestDayMatches = settledMatches.filter(m => m.code && m.code.startsWith(latestSettledDay));
             if (latestDayMatches.length >= 2) {
                 let hitPairs = 0;
                 let totalPairs = 0;
                 let totalReturn = 0.0;
-
                 for (let i = 0; i < latestDayMatches.length; i++) {
                     for (let j = i + 1; j < latestDayMatches.length; j++) {
                         totalPairs++;
@@ -1602,42 +1721,18 @@
                         const m2 = latestDayMatches[j];
                         if (m1.result === 'HIT' && m2.result === 'HIT') {
                             hitPairs++;
-                            let sp1 = 1.85, sp2 = 1.85;
-                            [m1, m2].forEach((m, idx) => {
-                                let curSp = 1.85;
-                                if (m.is_only_rq && m.odds && m.odds.length >= 3) {
-                                    const parts = (m.score || '').split('-');
-                                    if (parts.length === 2) {
-                                        const diff = (parseInt(parts[0]) || 0) + (parseInt(m.rang || '-1')) - (parseInt(parts[1]) || 0);
-                                        if (diff > 0) curSp = parseFloat(m.odds[0]) || 1.85;
-                                        else if (diff === 0) curSp = parseFloat(m.odds[1]) || 3.50;
-                                        else curSp = parseFloat(m.odds[2]) || 2.20;
-                                    }
-                                } else if (m.score && m.score.includes('-')) {
-                                    const [h, a] = m.score.split('-').map(x => parseInt(x.trim()));
-                                    if (m.odds && m.odds.length >= 3 && m.odds[0] !== '-') {
-                                        if (h > a) curSp = parseFloat(m.odds[0]) || 1.85;
-                                        else if (h === a) curSp = parseFloat(m.odds[1]) || 3.20;
-                                        else curSp = parseFloat(m.odds[2]) || 2.80;
-                                    }
-                                }
-                                if (idx === 0) sp1 = curSp; else sp2 = curSp;
-                            });
-                            totalReturn += (sp1 * sp2);
+                            totalReturn += 1.85 * 1.85;
                         }
                     }
                 }
                 if (totalPairs > 0) {
-                    const rateStr = ((hitPairs / totalPairs) * 100).toFixed(1);
+                    if (hitRateElem) hitRateElem.innerText = ((hitPairs / totalPairs) * 100).toFixed(1) + '%';
                     const roiVal = (((totalReturn - totalPairs) / totalPairs) * 100).toFixed(1);
-                    if (hitRateElem) hitRateElem.innerText = rateStr + '%';
                     if (roiElem) roiElem.innerText = `+${roiVal}%`;
-                    const bannerRoiElem = document.getElementById('parlay-banner-roi');
-                    if (bannerRoiElem) bannerRoiElem.innerText = `+${roiVal}%`;
                 }
             }
 
-            // 2. 渲染官方单关稳胆 (精确展示官方竞彩支持单场出票的比赛)
+            // 2. 单关直打专区
             const singleMatches = pendingMatches.filter(m => m.is_single);
             if (singleMatches.length > 0) {
                 singleMatches.forEach(m => {
@@ -1654,31 +1749,22 @@
                             <span class="badge" style="background: rgba(248, 81, 73, 0.2); color: #f85149; font-weight: 700;">官方胜平负单关</span>
                         </div>
                         <div class="teams-box" style="margin: 8px 0;">
-                            <div class="team-side home">
-                                <span class="team-name" style="font-weight: 700;">${m.home}</span>
-                            </div>
+                            <div class="team-side home"><span class="team-name" style="font-weight: 700;">${m.home}</span></div>
                             <div class="vs-badge" style="font-size: 11px; color: var(--accent-gold);">VS</div>
-                            <div class="team-side away">
-                                <span class="team-name" style="font-weight: 700;">${m.away}</span>
-                            </div>
+                            <div class="team-side away"><span class="team-name" style="font-weight: 700;">${m.away}</span></div>
                         </div>
                         <div style="background: rgba(13, 17, 23, 0.6); padding: 8px 10px; border-radius: 6px; display: flex; justify-content: space-between; align-items: center;">
-                            <div>
-                                <span style="font-size: 11px; color: var(--text-secondary);">推荐出票：</span>
-                                <b style="color: var(--accent-gold); font-size: 13px;">${m.tip}</b>
-                            </div>
-                            <div style="font-size: 11px; color: var(--text-secondary);">
-                                进球数：<span style="color: #3fb950; font-weight: 700;">${(m.predicted_goals || []).join('、')}球</span>
-                            </div>
+                            <div><span style="font-size: 11px; color: var(--text-secondary);">推荐出票：</span><b style="color: var(--accent-gold); font-size: 13px;">${m.tip}</b></div>
+                            <div style="font-size: 11px; color: var(--text-secondary);">进球数：<span style="color: #3fb950; font-weight: 700;">${(m.predicted_goals || []).join('、')}球</span></div>
                         </div>
                     `;
                     singlesContainer.appendChild(card);
                 });
             } else {
-                singlesContainer.innerHTML = `<div style="text-align: center; padding: 14px; font-size: 11px; color: var(--text-secondary); background: rgba(22, 27, 34, 0.5); border-radius: 6px;">今日官方暂未单开单独胜平负，全部场次通过下方【2串1实战矩阵】出票。</div>`;
+                singlesContainer.innerHTML = `<div style="text-align: center; padding: 14px; font-size: 11px; color: var(--text-secondary); background: rgba(22, 27, 34, 0.5); border-radius: 6px;">今日官方暂未单开单独胜平负，所有比赛均在下方【打票专用清单】两两互串出票。</div>`;
             }
 
-            // 3. 构建全息拓扑 2串1 矩阵 (全动态识别当前在售档期，彻底消灭写死'周日')
+            // 3. 构建全息柜台打票专用卡片
             const distinctPendingDays = [];
             pendingMatches.forEach(m => {
                 const dk = m.code ? m.code.substring(0, 2) : '';
@@ -1688,201 +1774,80 @@
             const currentTargetDay = distinctPendingDays[0] || '今日';
 
             let activeDayMatches = pendingMatches.filter(m => m.code && m.code.startsWith(currentTargetDay));
-            if (activeDayMatches.length < 2) {
-                activeDayMatches = pendingMatches;
-            }
+            if (activeDayMatches.length < 2) activeDayMatches = pendingMatches;
 
-            if (batchTitleElem) batchTitleElem.innerText = `${currentTargetDay}在售档期 (${activeDayMatches.length}场在售)`;
+            if (batchTitleElem) batchTitleElem.innerText = `${currentTargetDay}在售档期 (共${activeDayMatches.length}场比赛)`;
 
-            // 生成所有两两组合，严格按照【多选注数稀释后的实际最低赔率 (净回报倍数)】进行精算
-            const parlayPairs = [];
-            for (let i = 0; i < activeDayMatches.length; i++) {
-                for (let j = i + 1; j < activeDayMatches.length; j++) {
-                    const m1 = activeDayMatches[i];
-                    const m2 = activeDayMatches[j];
-                    
-                    // 获取比赛所有覆盖结果中的【最低赔率 (最保守兑奖 SP)】及【覆盖选项数】
-                    const getMatchCoverage = (m) => {
-                        const tip = m.tip || '';
-                        const odds = (m.odds && m.odds[0] !== '-') ? m.odds : ['1.85', '3.20', '2.80'];
-                        const sp_w = parseFloat(odds[0]) || 1.85;
-                        const sp_d = parseFloat(odds[1]) || 3.20;
-                        const sp_l = parseFloat(odds[2]) || 2.80;
-                        const covered = [];
+            const parsedMatches = activeDayMatches.map(parseMatchTipOptions);
+            const ticketIndices = generateCoveringTickets(parsedMatches);
 
-                        if (m.is_only_rq) {
-                            if (tip.includes('让胜')) covered.push(sp_w);
-                            if (tip.includes('让平')) covered.push(sp_d);
-                            if (tip.includes('让负')) covered.push(sp_l);
-                            if (covered.length === 0) covered.push(Math.min(sp_w, sp_d, sp_l));
-                        } else {
-                            if (tip.includes('主胜') || tip.startsWith('主胜')) covered.push(sp_w);
-                            if (tip.includes('平') && !tip.includes('主') && !tip.includes('客')) covered.push(sp_d);
-                            if (tip.includes('客胜') || tip.startsWith('客胜')) covered.push(sp_l);
-                            if (tip.includes('主不败')) {
-                                if (!covered.includes(sp_w)) covered.push(sp_w);
-                                if (!covered.includes(sp_d)) covered.push(sp_d);
-                            }
-                            if (tip.includes('客不败')) {
-                                if (!covered.includes(sp_d)) covered.push(sp_d);
-                                if (!covered.includes(sp_l)) covered.push(sp_l);
-                            }
-                            if (covered.length === 0) covered.push(sp_w);
-                        }
-                        return {
-                            minSp: Math.min(...covered),
-                            count: covered.length
-                        };
-                    };
+            let allTicketsCost = 0;
 
-                    const cov1 = getMatchCoverage(m1);
-                    const cov2 = getMatchCoverage(m2);
+            ticketIndices.forEach((tIndices, tIdx) => {
+                let ticketBets = 0;
+                const matchItemsHtml = [];
 
-                    // 核心注数：单选x单选=1注，双选x单选=2注，双选x双选=4注
-                    const totalBets = cov1.count * cov2.count;
-                    // 低赔相乘得到的理论单注中奖倍数
-                    const minCombinedSp = parseFloat((cov1.minSp * cov2.minSp).toFixed(2));
-                    // 【核心实际赔率】：总返还 / 总投入成本 = (1000 * minCombinedSp) / (1000 * totalBets) = minCombinedSp / totalBets
-                    // 比如：低赔相乘 5.5倍，但总注数4注(投入4000元)，实际赔率是 5.5 / 4 = 1.375 倍！
-                    const actualRoiOdds = parseFloat((minCombinedSp / totalBets).toFixed(2));
+                for (let i = 0; i < tIndices.length; i++) {
+                    const m1 = parsedMatches[tIndices[i]];
+                    const optBadges = m1.options.map(o => {
+                        let bg = '#dc2626';
+                        if (o.includes('平')) bg = '#2563eb';
+                        else if (o.includes('负')) bg = '#16a34a';
+                        return `<span style="background:${bg}; color:#fff; border-radius:3px; padding:1px 5px; font-size:11px; font-weight:800;">${o}</span>`;
+                    }).join(' ');
 
-                    parlayPairs.push({
-                        m1, m2, 
-                        minSp1: cov1.minSp, count1: cov1.count,
-                        minSp2: cov2.minSp, count2: cov2.count,
-                        totalBets,
-                        minCombinedSp,
-                        actualRoiOdds
-                    });
+                    matchItemsHtml.push(`
+                        <div style="display: flex; align-items: center; justify-content: space-between; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); border-radius: 6px; padding: 6px 10px;">
+                            <div style="font-size: 12px; display: flex; align-items: center; gap: 6px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                                <b style="color: var(--accent-gold); font-family: var(--font-mono); font-size: 11px;">${m1.code}</b>
+                                <span style="font-weight: 600; color: #e2e8f0; font-size: 12px;">${m1.home}<span style="color:#64748b; font-size:10px; margin:0 3px;">vs</span>${m1.away}</span>
+                            </div>
+                            <div style="display: flex; gap: 4px; flex-shrink: 0;">${optBadges}</div>
+                        </div>
+                    `);
+
+                    for (let j = i + 1; j < tIndices.length; j++) {
+                        const m2 = parsedMatches[tIndices[j]];
+                        ticketBets += m1.count * m2.count;
+                    }
                 }
-            }
 
-            // 【核心要求】：严格按照【实际赔率 (折合总投入后的真实净倍数)】从高到低倒序排序！
-            parlayPairs.sort((a, b) => b.actualRoiOdds - a.actualRoiOdds);
+                const ticketMoney = ticketBets * 2;
+                allTicketsCost += ticketMoney;
 
-            if (totalPairsElem) totalPairsElem.innerText = parlayPairs.length + ' 组';
-
-            // 分页参数管理：每页 10 组全量显示
-            window.PARLAY_PAGE_SIZE = 10;
-            window.CURRENT_PARLAY_PAGE = window.CURRENT_PARLAY_PAGE || 1;
-            const totalPages = Math.ceil(parlayPairs.length / window.PARLAY_PAGE_SIZE);
-            if (window.CURRENT_PARLAY_PAGE > totalPages) window.CURRENT_PARLAY_PAGE = 1;
-
-            const startIdx = (window.CURRENT_PARLAY_PAGE - 1) * window.PARLAY_PAGE_SIZE;
-            const pagePairs = parlayPairs.slice(startIdx, startIdx + window.PARLAY_PAGE_SIZE);
-
-            pagePairs.forEach((pair, idx) => {
-                const globalRank = startIdx + idx + 1;
                 const card = document.createElement('div');
                 card.className = 'parlay-combo-card';
                 card.style.margin = '0 0 16px 0';
-                card.style.background = 'linear-gradient(180deg, rgba(22, 27, 34, 0.95) 0%, rgba(13, 17, 23, 0.98) 100%)';
-                card.style.border = '2px solid rgba(88, 166, 255, 0.35)';
+                card.style.background = 'linear-gradient(180deg, #161b22 0%, #0d1117 100%)';
+                card.style.border = '2px solid rgba(56, 189, 248, 0.4)';
                 card.style.borderRadius = '12px';
                 card.style.padding = '12px 14px';
-                card.style.boxShadow = '0 6px 20px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05)';
-
-                // 判断是否保本/盈利
-                const isProfitable = pair.actualRoiOdds >= 1.0;
-                const roiColor = isProfitable ? 'var(--accent-gold)' : '#f85149';
-                const tagBg = isProfitable ? 'rgba(46, 160, 67, 0.25)' : 'rgba(210, 153, 34, 0.2)';
-                const tagColor = isProfitable ? '#3fb950' : '#d29922';
+                card.style.boxShadow = '0 6px 18px rgba(0, 0, 0, 0.45)';
 
                 card.innerHTML = `
-                    <!-- 组合头部外框总标头 -->
                     <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 8px; margin-bottom: 10px;">
                         <div style="display: flex; align-items: center; gap: 6px;">
-                            <span style="background: ${tagBg}; color: ${tagColor}; border: 1px solid ${tagColor}; border-radius: 6px; padding: 2px 7px; font-weight: 800; font-size: 11px;">
-                                🎯 2串1 组合 #${globalRank}
+                            <span style="background: #2563eb; color: #fff; border-radius: 4px; padding: 2px 7px; font-weight: 800; font-size: 12px; font-family: var(--font-mono);">
+                                第 ${String(tIdx + 1).padStart(2, '0')} 张票
                             </span>
-                            <span style="font-size: 11px; color: #8b949e; background: rgba(255,255,255,0.06); padding: 2px 6px; border-radius: 4px;">
-                                共 ${pair.totalBets} 注 (${pair.totalBets * 1000}元)
+                            <span style="font-size: 11.5px; color: var(--accent-gold); font-weight: 700;">
+                                【过关：2关】(8场两两组合)
                             </span>
                         </div>
                         <div style="text-align: right;">
-                            <span style="font-size: 10.5px; color: #8b949e;">折合实投倍数:</span>
-                            <span style="font-size: 16px; font-weight: 900; color: ${roiColor}; font-family: var(--font-mono); margin-left: 2px;">
-                                ${pair.actualRoiOdds.toFixed(2)} 倍
-                            </span>
+                            <span style="font-size: 11px; color: #8b949e;">共 <b>${ticketBets}</b> 注</span> · 
+                            <span style="font-size: 15px; font-weight: 900; color: #fbbf24; font-family: var(--font-mono);">${ticketMoney} 元</span>
                         </div>
                     </div>
-
-                    <!-- 比赛 1 独立卡片 -->
-                    <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 8px; padding: 9px 12px; margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center;">
-                        <div style="font-size: 12.5px;">
-                            <span style="color: var(--accent-gold); font-family: var(--font-mono); font-weight: 800; font-size: 11.5px; margin-right: 4px;">[${pair.m1.code}]</span> 
-                            <b>${pair.m1.home}</b> <span style="color: var(--text-tertiary); font-size: 11px;">vs</span> <b>${pair.m1.away}</b>
-                        </div>
-                        <div style="text-align: right;">
-                            <span style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 4px; padding: 2px 6px; font-size: 11px; font-weight: 700;">
-                                ${pair.m1.is_only_rq ? '让球: ' : ''}${pair.m1.tip}
-                            </span>
-                            <div style="font-size: 9.5px; color: #8b949e; font-family: var(--font-mono); margin-top: 2px;">(${pair.count1}项覆盖 · 最低SP ${pair.minSp1.toFixed(2)})</div>
-                        </div>
-                    </div>
-
-                    <!-- 比赛 2 独立卡片 -->
-                    <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 8px; padding: 9px 12px; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center;">
-                        <div style="font-size: 12.5px;">
-                            <span style="color: var(--accent-gold); font-family: var(--font-mono); font-weight: 800; font-size: 11.5px; margin-right: 4px;">[${pair.m2.code}]</span> 
-                            <b>${pair.m2.home}</b> <span style="color: var(--text-tertiary); font-size: 11px;">vs</span> <b>${pair.m2.away}</b>
-                        </div>
-                        <div style="text-align: right;">
-                            <span style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 4px; padding: 2px 6px; font-size: 11px; font-weight: 700;">
-                                ${pair.m2.is_only_rq ? '让球: ' : ''}${pair.m2.tip}
-                            </span>
-                            <div style="font-size: 9.5px; color: #8b949e; font-family: var(--font-mono); margin-top: 2px;">(${pair.count2}项覆盖 · 最低SP ${pair.minSp2.toFixed(2)})</div>
-                        </div>
-                    </div>
-
-                    <!-- 底部核算结算胶囊栏 -->
-                    <div style="display: flex; justify-content: space-between; align-items: center; padding: 6px 10px; font-size: 11px; color: #8b949e; background: rgba(0, 0, 0, 0.3); border-radius: 6px; border-top: 1px dashed rgba(255, 255, 255, 0.08);">
-                        <span>最低单注乘积: <code style="color: #c9d1d9;">${pair.minCombinedSp.toFixed(2)}倍</code> (奖金 ${Math.round(1000 * pair.minCombinedSp)}元)</span>
-                        <span>实投净收益率: <b style="color: ${roiColor}; font-family: var(--font-mono); font-size: 12px;">${((pair.actualRoiOdds - 1) * 100).toFixed(1)}%</b></span>
+                    <div style="display: grid; grid-template-columns: 1fr; gap: 6px;">
+                        ${matchItemsHtml.join('')}
                     </div>
                 `;
                 pairsContainer.appendChild(card);
             });
 
-            // 渲染全量分页条 (每页10组)
-            const paginationBox = document.createElement('div');
-            paginationBox.style.display = 'flex';
-            paginationBox.style.justifyContent = 'center';
-            paginationBox.style.alignItems = 'center';
-            paginationBox.style.gap = '8px';
-            paginationBox.style.margin = '16px 0 24px';
-
-            const prevBtn = document.createElement('button');
-            prevBtn.className = 'audit-page-pill';
-            prevBtn.innerText = '← 上一页';
-            prevBtn.disabled = window.CURRENT_PARLAY_PAGE === 1;
-            prevBtn.onclick = () => {
-                if (window.CURRENT_PARLAY_PAGE > 1) {
-                    window.CURRENT_PARLAY_PAGE--;
-                    renderParlayMatrix();
-                }
-            };
-
-            const pageInfo = document.createElement('span');
-            pageInfo.style.fontSize = '11px';
-            pageInfo.style.color = 'var(--text-secondary)';
-            pageInfo.innerText = `第 ${window.CURRENT_PARLAY_PAGE} / ${totalPages} 页 (共 ${parlayPairs.length} 组)`;
-
-            const nextBtn = document.createElement('button');
-            nextBtn.className = 'audit-page-pill';
-            nextBtn.innerText = '下一页 →';
-            nextBtn.disabled = window.CURRENT_PARLAY_PAGE === totalPages;
-            nextBtn.onclick = () => {
-                if (window.CURRENT_PARLAY_PAGE < totalPages) {
-                    window.CURRENT_PARLAY_PAGE++;
-                    renderParlayMatrix();
-                }
-            };
-
-            paginationBox.appendChild(prevBtn);
-            paginationBox.appendChild(pageInfo);
-            paginationBox.appendChild(nextBtn);
-            pairsContainer.appendChild(paginationBox);
+            if (totalTicketsElem) totalTicketsElem.innerText = ticketIndices.length + ' 张';
+            if (totalCostElem) totalCostElem.innerText = allTicketsCost.toLocaleString() + ' 元';
         }
 
         // 渲染共识榜单 (按共识百分比排序)
