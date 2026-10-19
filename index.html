@@ -1296,9 +1296,13 @@
             const tabParlay = document.getElementById('tab-parlay');
             if (tabParlay) tabParlay.style.display = 'none';
 
-            // 3) 赛果验证页：隐藏「今日实战ROI」指标格
+            // 3) 赛果验证页：隐藏「今日实战ROI」指标格（4 栏改 3 栏，避免留空位）
             const roiStat = document.getElementById('audit-stat-roi');
-            if (roiStat && roiStat.parentElement) roiStat.parentElement.style.display = 'none';
+            if (roiStat && roiStat.parentElement) {
+                roiStat.parentElement.style.display = 'none';
+                const box = roiStat.closest('.audit-stat-box');
+                if (box) box.style.gridTemplateColumns = 'repeat(3, 1fr)';
+            }
 
             // 4) 赛果验证页：隐藏「2串1 实盘投注策略对比」卡片
             const cmpBox = document.getElementById('audit-compare-container');
@@ -2629,6 +2633,7 @@ function copyWechat() {
         }
 
                 // 页面打开自动初始化
+        applyFeatureFlags();
         loadMatchesData();
         fetchLiveIntel();
 
