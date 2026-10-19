@@ -1116,7 +1116,6 @@
                 口径：只统计赛前可验证的预测
             </div>
 
-            <!-- 历史存档说明：2026-10-20 ROI 产品线下架，历史票单转为存档并按真实注数复核 -->
         <!-- 按天分页选择栏 (一天一页，自适应展示) -->
         <div id="audit-pagination" class="audit-pagination-bar">
             <!-- 动态注入每天分页胶囊按钮 -->
@@ -1129,7 +1128,7 @@
                         <th style="width: 28%;">场次/对阵</th>
                         <th style="width: 38%;">赛前研判 · 比分进球</th>
                         <th style="width: 14%; text-align: center;">终场</th>
-                        <th style="width: 20%; text-align: center;">单场核销<br><span style="font-weight:400; font-size:9px; color:var(--text-tertiary);">按真实注数</span></th>
+                        <th style="width: 20%; text-align: center;">研判结果</th>
                     </tr>
                 </thead>
                 <tbody id="audit-tbody">
@@ -1494,7 +1493,7 @@
                     auditTagHtml = `<span class="match-audit-tag" style="background: rgba(248, 81, 73, 0.2); color: #f85149; border: 1px solid rgba(248, 81, 73, 0.5); animation: pulse 1.5s infinite;">⏸ 突发比赛中断 · 待裁定</span>`;
                 } else if (isPostponed) {
                     settledClass = ' settled-postponed';
-                    auditTagHtml = `<span class="match-audit-tag" style="background: rgba(227, 179, 65, 0.2); color: var(--accent-gold); border: 1px solid rgba(227, 179, 65, 0.4);">⚠️ 官方延期 · 按退本金算</span>`;
+                    auditTagHtml = `<span class="match-audit-tag" style="background: rgba(227, 179, 65, 0.2); color: var(--accent-gold); border: 1px solid rgba(227, 179, 65, 0.4);">⚠️ 官方延期</span>`;
                 } else if (isLiveNow) {
                     auditTagHtml = `<span class="match-audit-tag tag-live">🔴 ${m.status}</span>`;
                 } else {
@@ -2324,8 +2323,8 @@
                         let scoreText = m.score || '--';
                         if (isPostponed) {
                             tagClass = 'tag-postponed';
-                            tagText = '🟡 官方延期 (退本金)';
-                            scoreText = `${m.score} (按1.0算)`;
+                            tagText = '🟡 官方延期';
+                            scoreText = m.score || '--';
                         }
                 
                         // 比分与进球数胶囊列表渲染
@@ -2359,41 +2358,6 @@
                             }
                         }).join('');
 
-                        // 计算单场中奖 SP 与金额回报
-                        // 口径：投入 = 1000 元 × 真实注数（单选 1 注 / 双选 2 注）；
-                        //       中奖只按真实打出的那一项 SP 赔付（同一场最多打出 1 注）。
-                        const selCount = Math.max(1, (parseMatchTipOptions(m).options || []).length);
-                        const stakePerMatch = 1000 * selCount;
-                        let returnAmount = 0;
-                        let hitSpVal = 0.0;
-                        if (isHit) {
-                            if (m.is_only_rq && m.odds && m.odds.length >= 3) {
-                                const parts = actualScore.split('-');
-                                if (parts.length === 2) {
-                                    const diff = (parseInt(parts[0]) || 0) + (parseInt(m.rang || '-1')) - (parseInt(parts[1]) || 0);
-                                    if (diff > 0) hitSpVal = parseFloat(m.odds[0]) || 1.85;
-                                    else if (diff === 0) hitSpVal = parseFloat(m.odds[1]) || 3.50;
-                                    else hitSpVal = parseFloat(m.odds[2]) || 2.20;
-                                }
-                            } else if (actualScore.includes('-')) {
-                                const [h, a] = actualScore.split('-').map(x => parseInt(x.trim()));
-                                if (m.odds && m.odds.length >= 3 && m.odds[0] !== '-') {
-                                    if (h > a) hitSpVal = parseFloat(m.odds[0]) || 1.85;
-                                    else if (h === a) hitSpVal = parseFloat(m.odds[1]) || 3.20;
-                                    else hitSpVal = parseFloat(m.odds[2]) || 2.80;
-                                }
-                            }
-                            returnAmount = Math.round(1000 * hitSpVal);
-                        }
-
-                        const profitVal = isHit ? (returnAmount - stakePerMatch) : -stakePerMatch;
-                        const profitColor = (isHit && profitVal >= 0) ? '#3fb950' : '#f85149';
-                        // 命中但赔付不足以覆盖双选成本时，明确标出来，避免"中了却在亏"被误读成盈利
-                        const profitText = isHit
-                            ? (profitVal >= 0 ? `+${profitVal}元` : `${profitVal}元`)
-                            : `-${stakePerMatch}元`;
-                        const hitButLoss = isHit && profitVal < 0;
-
                         tr.innerHTML = `
                             <td style="font-family: var(--font-mono); font-size: 11px;">
                                 <span style="color: var(--accent-gold); font-weight: 700;">${m.code}</span> · ${m.league}<br>
@@ -2413,14 +2377,7 @@
                                 ${scoreText}
                             </td>
                             <td style="text-align: center;">
-                                <span class="match-audit-tag ${tagClass}" style="display: block; margin-bottom: 3px; font-size: 10px; padding: 2px 4px;">${tagText}</span>
-                                ${hitButLoss ? '<div style="font-size:9px; color:#f85149; margin-bottom:2px;">命中但未回本</div>' : ''}
-                                <div style="font-size: 9px; color: var(--text-tertiary); font-family: var(--font-mono); margin-bottom: 2px;">
-                                    ${selCount > 1 ? `双选 ${selCount}注 · 投入${stakePerMatch}` : `单选 1注 · 投入1000`}
-                                </div>
-                                <div style="font-size: 10px; font-family: var(--font-mono); color: ${profitColor}; font-weight: 700;">
-                                    ${isPostponed ? `退本${stakePerMatch}` : (isHit ? `<span style="color:var(--text-secondary); font-size:9px;">SP ${hitSpVal.toFixed(2)}</span><br>${profitText}` : profitText)}
-                                </div>
+                                <span class="match-audit-tag ${tagClass}" style="display: inline-block; font-size: 10px; padding: 3px 6px;">${tagText}</span>
                             </td>
                         `;
                         tbody.appendChild(tr);
