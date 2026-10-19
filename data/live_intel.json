@@ -1,7 +1,18 @@
 {
-  "updated_at": "2026-10-20 00:15:31",
-  "total_tips": 18,
+  "updated_at": "2026-10-20 00:25:30",
+  "total_tips": 19,
   "live_feed": [
+    {
+      "id": 2882,
+      "channel": "stavki",
+      "time": "2026-10-20 00:06",
+      "code": "周二006",
+      "league": "欧冠",
+      "category": "赛前军情(未翻译)",
+      "match": "巴黎圣曼 VS 巴萨",
+      "chinese": "[原文·未翻译] 🔥 ТОП ПРОГНОЗ НА ШИКАРНУЮ БИТВУ ВТОРНИКА ⚡️ 🇫🇷 ПСЖ - БАРСЕЛОНА 🇪🇸 🔜",
+      "translated": false
+    },
     {
       "id": 2884,
       "channel": "matchpreviews",
