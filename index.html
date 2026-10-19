@@ -1277,12 +1277,42 @@
     </div>
 
     <script>
+        // ========================================================================
+        // 【功能开关】实战串关 / ROI 产品线
+        // 2026-10-20：14 年 80,284 场回测确认，在当前 11.7% 抽水下不存在正期望的
+        // 2串1 结构（最优 让负×让负 −17.0%，网站原双选防冷 −21.1%）。
+        // 在找到可验证的正期望方案之前，整条 ROI 产品线暂时下架。
+        // 恢复上架：把下面的 false 改成 true 即可，无需改动其它代码。
+        const FEATURE_PARLAY_ROI = false;
+
+        function applyFeatureFlags() {
+            if (FEATURE_PARLAY_ROI) return;
+
+            // 1) 底部导航：隐藏「实战串关」入口（保留 DOM，避免 nav 索引错位）
+            const navParlay = document.querySelector('.nav-link[onclick*="parlay"]');
+            if (navParlay) navParlay.style.display = 'none';
+
+            // 2) 隐藏串关整页
+            const tabParlay = document.getElementById('tab-parlay');
+            if (tabParlay) tabParlay.style.display = 'none';
+
+            // 3) 赛果验证页：隐藏「今日实战ROI」指标格
+            const roiStat = document.getElementById('audit-stat-roi');
+            if (roiStat && roiStat.parentElement) roiStat.parentElement.style.display = 'none';
+
+            // 4) 赛果验证页：隐藏「2串1 实盘投注策略对比」卡片
+            const cmpBox = document.getElementById('audit-compare-container');
+            if (cmpBox && cmpBox.parentElement) cmpBox.parentElement.style.display = 'none';
+        }
+
         // 核心全局数据
         // 不再内嵌历史快照：数据只来自接口，避免把旧比分当实时数据展示
         let ALL_OFFICIAL_MATCHES = [];
 
         // Tab 切换逻辑
         function switchNav(tabId) {
+            // ROI 产品线下架期间，任何指向串关的跳转都回落到赛事中心
+            if (tabId === 'parlay' && !FEATURE_PARLAY_ROI) tabId = 'matches';
             document.querySelectorAll('.tab-view').forEach(v => v.classList.remove('active'));
             document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
 
