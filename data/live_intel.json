@@ -1,7 +1,18 @@
 {
-  "updated_at": "2026-10-19 17:50:38",
-  "total_tips": 7,
+  "updated_at": "2026-10-19 18:05:32",
+  "total_tips": 8,
   "live_feed": [
+    {
+      "id": 2611,
+      "channel": "FabrizioRomano",
+      "time": "2026-10-19 03:43",
+      "code": "周二005",
+      "league": "欧冠",
+      "category": "赛前军情(未翻译)",
+      "match": "罗马 VS 布拉迪斯",
+      "chinese": "[原文·未翻译] ⚪️ ✨ Arda Güler with three G/A in the last two games. Two assists against Roma and a golazo tonight. 🇹🇷",
+      "translated": false
+    },
     {
       "id": 2642,
       "channel": "FabrizioRomano",
