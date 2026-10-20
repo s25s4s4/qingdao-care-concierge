@@ -1,7 +1,19 @@
 {
-  "updated_at": "2026-10-20 19:55:56",
-  "total_tips": 10,
+  "updated_at": "2026-10-20 20:01:00",
+  "total_tips": 11,
   "live_feed": [
+    {
+      "id": 3156,
+      "channel": "football_predictions_ai",
+      "time": "2026-10-20 20:00",
+      "code": "周二007",
+      "league": "欧冠",
+      "category": "推单",
+      "is_tip": true,
+      "match": "利物浦 VS 比利亚雷",
+      "chinese": "欧洲前线指向大球。红军场均轰2球火力拉满，黄潜后防漏洞大、场均丢超2球，防线基本漏勺。机构走势死防大球，欧指大2.5水位狠压至1.44，本场首选全场至少进3球，防大胜。",
+      "original": "🔥 HOT PICK 🌍 UEFA Champions League 🆚 Liverpool vs Villarreal 🕐 Tue, 20 Oct · 19:00 UTC 💡 Over/Under: Over 2.5 📊 Odds: 1.44 ✅ Confidence: 65% 📌 Match Facts • UEF"
+    },
     {
       "id": 3153,
       "channel": "matchplug",
