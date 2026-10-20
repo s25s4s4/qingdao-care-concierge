@@ -42,17 +42,27 @@ def _index():
     return _CACHE["idx"]
 
 
-def enrich(matches, limit=120):
-    """就地给 matches 补 stats，返回补充的场次数"""
+def enrich(matches, limit=120, refresh_hours=12):
+    """就地给 matches 补 stats，返回补充/刷新的场次数。
+    已有 stats 的场次不是永久跳过：超过 refresh_hours 会重算，否则归档进来的新赛果永远进不去。"""
     idx = _index()
     if not idx:
         return 0
+    now = datetime.now()
     n = 0
     for m in matches:
         if n >= limit:
             break
         if m.get("stats"):
-            continue
+            ts = m.get("stats_ts")
+            fresh = False
+            if ts:
+                try:
+                    fresh = (now - datetime.strptime(ts, "%Y-%m-%d %H:%M:%S")).total_seconds() < refresh_hours * 3600
+                except Exception:
+                    fresh = False
+            if fresh:
+                continue
         home, away = m.get("home"), m.get("away")
         day = full_date(m.get("time"))
         if not home or not away or not day:
@@ -64,6 +74,7 @@ def enrich(matches, limit=120):
         if not (blk.get("home") or blk.get("away")):
             continue
         m["stats"] = blk
+        m["stats_ts"] = now.strftime("%Y-%m-%d %H:%M:%S")
         n += 1
     return n
 

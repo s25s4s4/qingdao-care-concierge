@@ -62,6 +62,24 @@ def load(path=CSV):
                 "oh": _f(g(r, "胜")), "od": _f(g(r, "平")), "oa": _f(g(r, "负"))}
         idx[home].append(item)
         idx[away].append(item)
+    # 合并赛果归档（data/match_results.jsonl），让库随着流水线不断变长
+    try:
+        import result_archive
+        seen = {(x["date"], x["home"], x["away"]) for v in idx.values() for x in v}
+        added = 0
+        for it in result_archive.load_items():
+            key = (it["date"], it["home"], it["away"])
+            if key in seen:
+                continue
+            seen.add(key)
+            idx[it["home"]].append(it)
+            idx[it["away"]].append(it)
+            added += 1
+        if added:
+            pass  # 归档合并完成
+    except Exception:
+        pass
+
     for k in idx:
         idx[k].sort(key=lambda x: x["date"])
     return idx

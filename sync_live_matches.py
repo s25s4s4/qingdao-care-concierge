@@ -652,6 +652,20 @@ def full_pipeline_sync(auto_push=True):
                 log_messages.append(f"Official SP: updated={upd} conflicts={conf}")
     except Exception as exc:
         log_messages.append(f"Sporttery skipped: {type(exc).__name__}")
+    # 赛果归档：把已完赛场次追加进本地历史库，让它随流水线持续变长。
+    # 放在所有结算步骤之后统一扫描，live500 / fotmob 两条路径都能覆盖；按 code 去重。
+    try:
+        import result_archive
+        from enrich_team_stats import full_date
+        _settled = [m for m in existing_matches
+                    if m.get('status') == '已完赛'
+                    and m.get('score') and m.get('score') not in ('--', '延期')]
+        _a = result_archive.append(_settled, date_of=lambda x: full_date(x.get('time')))
+        if _a:
+            log_messages.append(f"Archive: +{_a} results")
+    except Exception as _exc:
+        log_messages.append(f"Archive skipped: {type(_exc).__name__}")
+
     if changes_made:
         data['updated_at'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         data['total'] = len(existing_matches)
@@ -678,7 +692,7 @@ def full_pipeline_sync(auto_push=True):
 
         if auto_push:
             os.chdir(WEB_DIR)
-            silent_subprocess_run(["git", "add", "data/official_matches.json", "data/matches_34.json", "index.html"], cwd=WEB_DIR)
+            silent_subprocess_run(["git", "add", "data/official_matches.json", "data/matches_34.json", "data/match_results.jsonl", "index.html"], cwd=WEB_DIR)
             commit_title = f"Live-Pulse: {len(log_messages)} match status/score updates ({datetime.now().strftime('%H:%M:%S')})"
             silent_subprocess_run(["git", "commit", "-m", commit_title], cwd=WEB_DIR)
             res = silent_subprocess_run(["git", "push", "origin", "main"], cwd=WEB_DIR)
