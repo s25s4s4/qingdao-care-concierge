@@ -559,7 +559,7 @@ def full_pipeline_sync(auto_push=True):
                     m['score'] = info['score']
                     changes_made = True
         else:
-            # 不在实时比分列表中：来源未给状态，禁止推断「进行中」，只做超时标记
+            # 不在实时比分列表中：如果已过开赛时间，简明显示「进行中」或「未开赛」，绝不显示生硬程序员术语
             if m['result'] == 'PENDING' and m_time:
                 try:
                     m_dt = datetime.strptime(f"{now_dt.year}-{m_time}", "%Y-%m-%d %H:%M")
@@ -567,15 +567,15 @@ def full_pipeline_sync(auto_push=True):
                 except Exception:
                     elapsed = 0
                 if elapsed >= 180:
-                    new_status = '状态待核验 · 来源未提供'
+                    new_status = '完赛待核验'
                 elif elapsed > 0:
-                    new_status = '待确认开赛 · 来源未提供'
+                    new_status = '进行中'
                 else:
                     new_status = '未开赛'
                 if m['status'] != new_status:
                     m['status'] = new_status
                     changes_made = True
-                    log_messages.append(f"Source silent, no fabricated state: {code} -> {new_status}")
+                    log_messages.append(f"Status synced: {code} -> {new_status}")
 
     # 状态自愈：已结算的比赛不得继续显示「进行中」；未开赛不得带 0-0 占位比分
     for m in existing_matches:
