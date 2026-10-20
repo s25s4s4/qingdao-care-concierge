@@ -2408,10 +2408,12 @@
                 .then(data => {
 
                     const timeEl = document.getElementById('wire-meta-time');
+                    // 计数也走同一套过滤，避免"显示 5 条实际只渲染 3 条"的错位
+                    const _feed = (data.live_feed || []).filter(it => it && it.translated !== false);
                     if (timeEl && data.updated_at) {
-                        timeEl.innerText = '最后同步：' + data.updated_at + ' (共 ' + data.total_tips + ' 条体彩在售一手情报)';
+                        timeEl.innerText = '最后同步：' + data.updated_at + ' (共 ' + _feed.length + ' 条体彩在售一手情报)';
                     }
-                    renderLiveFeed(data.live_feed);
+                    renderLiveFeed(_feed);
                 })
                 .catch(err => {
                     updateSyncStatus();
@@ -2422,6 +2424,9 @@
         // 渲染纯正体彩情报流
         function renderLiveFeed(items) {
             const container = document.getElementById('wire-feed-container');
+            // 双保险：翻译失败兜底留下的外文生肉（translated === false）不渲染，
+            // 历史遗留条目也不会再露出英文/俄文原文。
+            items = (items || []).filter(it => it && it.translated !== false);
             if (!items || items.length === 0) {
                 container.innerHTML = '<div style="text-align: center; padding: 20px; color: var(--text-tertiary);">暂无匹配体彩官方在售场次的实时情报</div>';
                 return;
