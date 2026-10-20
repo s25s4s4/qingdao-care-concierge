@@ -1,7 +1,20 @@
 {
-  "updated_at": "2026-10-20 10:00:44",
-  "total_tips": 4,
+  "updated_at": "2026-10-20 10:10:39",
+  "total_tips": 5,
   "live_feed": [
+    {
+      "id": 3003,
+      "channel": "FabrizioRomano",
+      "time": "2026-10-20 07:23",
+      "code": "周二006",
+      "league": "欧冠",
+      "category": "推单·原文",
+      "is_tip": true,
+      "match": "巴黎圣曼 VS 巴萨",
+      "chinese": "🔵 🔴 Hansi Flick: “I’m really enjoying the journey we’re on at Barcelona”. “The work and mentality we’re showing make me proud of this team. What the players hav",
+      "original": "🔵 🔴 Hansi Flick: “I’m really enjoying the journey we’re on at Barcelona”. “The work and mentality we’re showing make me proud of this team. What the players hav",
+      "translated": false
+    },
     {
       "id": 2840,
       "channel": "olimpbet",
