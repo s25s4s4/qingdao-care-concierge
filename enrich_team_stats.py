@@ -1,0 +1,83 @@
+# -*- coding: utf-8 -*-
+"""把本地 14 年竞彩库算出的球队数据，合并进 official_matches.json。
+
+设计原则：
+  * 只补不覆盖 —— 已有 match["stats"] 就跳过，避免每分钟重复计算；
+  * 全程 try/except —— 这一步失败绝不能让同步流水线中断；
+  * 索引按文件 mtime 缓存 —— 一分钟跑一次不会反复读 8 万行 CSV。
+"""
+import os
+import time
+from datetime import datetime, timedelta
+
+import team_stats as TS
+
+_CACHE = {"mtime": None, "idx": None}
+
+
+def full_date(t, today=None):
+    """站点里的 time 是 'MM-DD HH:MM'（无年份），补成 YYYY-MM-DD。
+    若补出来的日期比今天早 200 天以上，判定为跨年（去年 12 月 vs 今年 1 月）。"""
+    if not t:
+        return None
+    today = today or datetime.now()
+    try:
+        md = t.strip()[:5]                      # 'MM-DD'
+        dt = datetime.strptime(f"{today.year}-{md}", "%Y-%m-%d")
+    except Exception:
+        return None
+    if (today - dt).days > 200:
+        dt = dt.replace(year=dt.year + 1)
+    return dt.strftime("%Y-%m-%d")
+
+
+def _index():
+    try:
+        mt = os.path.getmtime(TS.CSV)
+    except OSError:
+        return None
+    if _CACHE["idx"] is None or _CACHE["mtime"] != mt:
+        _CACHE["idx"] = TS.load()
+        _CACHE["mtime"] = mt
+    return _CACHE["idx"]
+
+
+def enrich(matches, limit=120):
+    """就地给 matches 补 stats，返回补充的场次数"""
+    idx = _index()
+    if not idx:
+        return 0
+    n = 0
+    for m in matches:
+        if n >= limit:
+            break
+        if m.get("stats"):
+            continue
+        home, away = m.get("home"), m.get("away")
+        day = full_date(m.get("time"))
+        if not home or not away or not day:
+            continue
+        try:
+            blk = TS.build(home, away, day, idx)
+        except Exception:
+            continue
+        if not (blk.get("home") or blk.get("away")):
+            continue
+        m["stats"] = blk
+        n += 1
+    return n
+
+
+if __name__ == "__main__":
+    import json
+    import sys
+
+    path = sys.argv[1] if len(sys.argv) > 1 else r"E:\euro_intel_web\data\official_matches.json"
+    with open(path, encoding="utf-8") as f:
+        d = json.load(f)
+    ms = d.get("matches") or []
+    k = enrich(ms)
+    if k:
+        with open(path, "w", encoding="utf-8") as f:
+            json.dump(d, f, ensure_ascii=False, indent=2)
+    print(f"补充 {k} 场 / 共 {len(ms)} 场 -> {path}")

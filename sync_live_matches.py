@@ -657,6 +657,15 @@ def full_pipeline_sync(auto_push=True):
         data['total'] = len(existing_matches)
         data['matches'] = existing_matches
 
+        # 补充球队近期战绩 / 历史交锋（本地 14 年库，失败不影响主流程）
+        try:
+            import enrich_team_stats
+            _n = enrich_team_stats.enrich(existing_matches)
+            if _n:
+                log_messages.append(f"TeamStats: +{_n} matches")
+        except Exception as _exc:
+            log_messages.append(f"TeamStats skipped: {type(_exc).__name__}")
+
         with open(MATCHES_FILE, 'w', encoding='utf-8') as f:
             json.dump(data, f, ensure_ascii=False, indent=2)
 
@@ -679,7 +688,9 @@ def full_pipeline_sync(auto_push=True):
             try:
                 subprocess.Popen(
                     ["scp", "-o", "StrictHostKeyChecking=no", MATCHES_FILE, "aliyun:/var/www/football_live/official_matches.json"],
-                    stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL
+                    stdin=subprocess.DEVNULL,
+                    stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+                    creationflags=CREATE_NO_WINDOW
                 )
             except Exception as e:
                 pass
