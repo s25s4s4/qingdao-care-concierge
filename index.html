@@ -1546,24 +1546,9 @@
             const container = document.getElementById('match-feed');
             container.innerHTML = '';
 
-            // 严格业务铁律：首页赛事中心只显示【当前比赛日及最新轮次】（周二/周三等在售、进行中及本轮刚完赛场次）！
-            // 历史已经过去的旧比赛日（周五、周六、周日、周一），全部彻底归档在【赛果验证】大账本中，绝不在首页堆积！
-            // 找出当前未开赛或进行中场次所涉及的比赛日（如 '周二', '周三'）
-            const activeDayPrefixes = new Set(
-                ALL_OFFICIAL_MATCHES
-                    .filter(m => m.result === 'PENDING')
-                    .map(m => (m.code || '').substring(0, 2))
-                    .filter(Boolean)
-            );
-
-            let activeList = ALL_OFFICIAL_MATCHES.filter(m => {
-                const day = (m.code || '').substring(0, 2);
-                // 1. 未完赛的在售/进行中比赛：必须显示
-                if (m.result === 'PENDING') return true;
-                // 2. 已完赛的比赛：严格只展示属于当前活跃轮次（如今天的周二比赛），历史旧天数绝不展示！
-                if (activeDayPrefixes.has(day)) return true;
-                return false;
-            });
+            // 严格业务铁律：首页赛事中心只显示【未完赛】的在售与进行中比赛！
+            // 只要比赛吹终场哨出赛果，立即自动从首页剥离消失，转入底部【赛果验证】大账本归档！
+            let activeList = ALL_OFFICIAL_MATCHES.filter(m => m.result === 'PENDING' && m.status !== '已完赛');
 
             let list = activeList.filter(m => {
                 if (filterMode === 'pending_only') return !m.status.includes('进行中') && !m.status.includes('半场') && !m.status.includes('中断');
