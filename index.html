@@ -786,15 +786,16 @@
             font-weight: 600;
         }
 
-        /* 模态弹窗 (移动端极致底部抽屉 Bottom Sheet 规范) */
+        /* 模态弹窗 (移动端极致底部抽屉 Bottom Sheet 规范) - 99分深层毛玻璃与阻尼 */
         .modal-overlay {
             position: fixed;
             top: 0;
             left: 0;
             width: 100vw;
             height: 100vh;
-            background: rgba(0, 0, 0, 0.78);
-            backdrop-filter: blur(10px);
+            background: rgba(0, 0, 0, 0.82);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
             z-index: 200;
             display: none;
             align-items: flex-end;
@@ -808,20 +809,20 @@
         }
 
         .modal-card {
-            background: var(--bg-card);
-            border-top: 1px solid var(--border-color);
-            border-left: 1px solid var(--border-color);
-            border-right: 1px solid var(--border-color);
+            background: #0d1117;
+            border-top: 1px solid rgba(255, 255, 255, 0.16);
+            border-left: 1px solid rgba(255, 255, 255, 0.08);
+            border-right: 1px solid rgba(255, 255, 255, 0.08);
             border-bottom: none;
-            border-radius: 20px 20px 0 0;
+            border-radius: 22px 22px 0 0;
             width: 100%;
             max-width: 600px;
             max-height: 88vh;
             overflow-y: auto;
             -webkit-overflow-scrolling: touch;
             padding: 16px 18px env(safe-area-inset-bottom, 20px) 18px;
-            box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.6);
-            animation: slideUpBottom 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 -16px 40px rgba(0, 0, 0, 0.85);
+            animation: slideUpBottom 0.30s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         @keyframes slideUpBottom {
