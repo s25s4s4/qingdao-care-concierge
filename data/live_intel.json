@@ -1,7 +1,33 @@
 {
-  "updated_at": "2026-10-21 05:00:23",
-  "total_tips": 6,
+  "updated_at": "2026-10-21 05:10:29",
+  "total_tips": 2,
   "live_feed": [
+    {
+      "id": 3189,
+      "channel": "feedinco",
+      "time": "2026-10-20 22:05",
+      "code": "周三004",
+      "league": "欧冠",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "科莫 VS 曼联",
+      "chinese": "欧洲推单机构倾向科莫主场拿分，本场给出的核心态度是主不败（双选胜/平）。曼联客场面临硬仗，庄家资金流向对红魔客胜缺乏防范，建议重点防冷门打出，博主队受让拿分。",
+      "original": "FEEDINCO.com Tips for Wednesday, 21 October 1X - Aston Villa - Viking 1X - Betis - Feyenoord 1X - Como - Man Utd 1X - Real Madrid - RB Leipzig 🔥 All upcoming Fo"
+    },
+    {
+      "id": 3162,
+      "channel": "tribuna_football",
+      "time": "2026-10-20 20:07",
+      "code": "周三010",
+      "league": "欧冠",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "拜仁 VS 阿森纳",
+      "chinese": "阿森纳本季欧冠零失球防线遇大考。拜仁主场火力凶猛，机构给到拜仁让步微弱，资金有搏枪手不败趋势。枪手立足防反，此役恶战首选防守绞杀，走双平稳妥，看好小比分2球封顶。",
+      "original": "Arsenal are the only team yet to concede a goal in this season’s Champions League! 🔒 Their next opponents? Bayern Munich ⚡️ 📲 Follow your favourite club in our "
+    }
+  ],
+  "archived": [
     {
       "id": 3357,
       "channel": "footballbettingtips10",
@@ -50,32 +76,6 @@
       "chinese": "欧冠焦点战，海外小单实盘开搞。外部机构一手单主攻双方进球（BTTS - Yes），看好对攻破门，两边防线都有漏洞，走大球、两队皆有破门稳当。",
       "original": "👉 BET 1 👈 £60 IN FREE BETS WITH SPREADEX FOR ELIGIBLE NEW PLAYERS! BEST VALUE ONLY AT SPREADEX! SIGN UP NOW! ✅ Match : PSG v Barca ✅ Selection : BTTS - Yes ✅ St"
     },
-    {
-      "id": 3189,
-      "channel": "feedinco",
-      "time": "2026-10-20 22:05",
-      "code": "周三004",
-      "league": "欧冠",
-      "category": "赛前军情",
-      "is_tip": false,
-      "match": "科莫 VS 曼联",
-      "chinese": "欧洲推单机构倾向科莫主场拿分，本场给出的核心态度是主不败（双选胜/平）。曼联客场面临硬仗，庄家资金流向对红魔客胜缺乏防范，建议重点防冷门打出，博主队受让拿分。",
-      "original": "FEEDINCO.com Tips for Wednesday, 21 October 1X - Aston Villa - Viking 1X - Betis - Feyenoord 1X - Como - Man Utd 1X - Real Madrid - RB Leipzig 🔥 All upcoming Fo"
-    },
-    {
-      "id": 3162,
-      "channel": "tribuna_football",
-      "time": "2026-10-20 20:07",
-      "code": "周三010",
-      "league": "欧冠",
-      "category": "赛前军情",
-      "is_tip": false,
-      "match": "拜仁 VS 阿森纳",
-      "chinese": "阿森纳本季欧冠零失球防线遇大考。拜仁主场火力凶猛，机构给到拜仁让步微弱，资金有搏枪手不败趋势。枪手立足防反，此役恶战首选防守绞杀，走双平稳妥，看好小比分2球封顶。",
-      "original": "Arsenal are the only team yet to concede a goal in this season’s Champions League! 🔒 Their next opponents? Bayern Munich ⚡️ 📲 Follow your favourite club in our "
-    }
-  ],
-  "archived": [
     {
       "id": 3298,
       "channel": "calciomercato",
