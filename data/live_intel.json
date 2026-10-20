@@ -1,7 +1,19 @@
 {
-  "updated_at": "2026-10-20 20:06:01",
-  "total_tips": 12,
+  "updated_at": "2026-10-20 20:30:59",
+  "total_tips": 13,
   "live_feed": [
+    {
+      "id": 3162,
+      "channel": "tribuna_football",
+      "time": "2026-10-20 20:07",
+      "code": "周三010",
+      "league": "欧冠",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "拜仁 VS 阿森纳",
+      "chinese": "阿森纳本季欧冠零失球防线遇大考。拜仁主场火力凶猛，机构给到拜仁让步微弱，资金有搏枪手不败趋势。枪手立足防反，此役恶战首选防守绞杀，走双平稳妥，看好小比分2球封顶。",
+      "original": "Arsenal are the only team yet to concede a goal in this season’s Champions League! 🔒 Their next opponents? Bayern Munich ⚡️ 📲 Follow your favourite club in our "
+    },
     {
       "id": 3157,
       "channel": "TipstrrTips",
