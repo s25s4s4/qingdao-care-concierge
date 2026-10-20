@@ -1003,6 +1003,38 @@
         </div>
     </div>
 
+    <!-- ==================== TAB: 传足比赛 (传统足彩14场/任九) ==================== -->
+    <div id="tab-sfc" class="tab-view">
+        <!-- 传足期号与基本信息看板 -->
+        <div class="hero-banner" style="background: linear-gradient(135deg, rgba(56, 189, 248, 0.15) 0%, rgba(13, 17, 23, 0.95) 100%); border-bottom: 1px solid rgba(56, 189, 248, 0.3);">
+            <div class="hero-col">
+                <div class="hero-num" style="color: #38bdf8;" id="sfc-period-num">26147期</div>
+                <div class="hero-label">当前传足期号</div>
+            </div>
+            <div class="hero-col">
+                <div class="hero-num" style="color: #3fb950;">14场</div>
+                <div class="hero-label">胜负彩 / 任九</div>
+            </div>
+            <div class="hero-col">
+                <div class="hero-num" style="color: var(--accent-gold);" id="sfc-deadline-time">10-21 03:00</div>
+                <div class="hero-label">全国停售截止</div>
+            </div>
+        </div>
+
+        <div style="background: rgba(22, 27, 34, 0.95); border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 8px; padding: 10px 14px; margin: 12px 16px 8px; font-size: 11px; line-height: 1.6; color: #c9d1d9;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                <b style="color: #38bdf8; font-size: 12px;">🏆 传统足球彩票（14场胜负彩 / 胜负任九）：</b>
+                <span style="font-size: 10px; color: var(--text-tertiary); font-family: var(--font-mono);">官方统一期号排期</span>
+            </div>
+            本期聚焦 <b>欧洲顶级焦点对决（欧冠全景战）</b>。第 1 至 14 场完整对阵如下，支持 3/1/0 赔率分布与对阵态势速查。
+        </div>
+
+        <!-- 14场比赛独立流式列表 -->
+        <div id="sfc-matches-feed" style="margin-bottom: 40px;">
+            <!-- 动态注入 14 场对阵 -->
+        </div>
+    </div>
+
     <!-- ==================== TAB 2: 实战串关 (体彩柜台出票极简指引) ==================== -->
     <div id="tab-parlay" class="tab-view">
         <div class="hero-banner" style="background: linear-gradient(135deg, rgba(210, 153, 34, 0.15) 0%, rgba(13, 17, 23, 0.95) 100%); border-bottom: 1px solid rgba(210, 153, 34, 0.3);">
@@ -2406,6 +2438,168 @@
                         tbody.appendChild(tr);
                     });
                 }
+
+        // 异步获取传足14场比赛数据
+        let SFC_MATCHES_CACHE = null;
+        function loadSfcData() {
+            const feed = document.getElementById('sfc-matches-feed');
+            const periodNum = document.getElementById('sfc-period-num');
+            const deadlineTime = document.getElementById('sfc-deadline-time');
+            if (!feed) return;
+
+            if (SFC_MATCHES_CACHE) {
+                renderSfcList(SFC_MATCHES_CACHE);
+                return;
+            }
+
+            feed.innerHTML = '<div style="text-align: center; padding: 40px; color: var(--text-tertiary); font-size: 12px;">正在加载传足14场排期...</div>';
+
+            const sfcUrl = './data/sfc_matches.json?t=' + Date.now();
+            fetch(sfcUrl)
+                .then(res => {
+                    if (!res.ok) throw new Error('Failed to load sfc_matches.json');
+                    return res.json();
+                })
+                .then(data => {
+                    SFC_MATCHES_CACHE = data;
+                    if (periodNum && data.period) periodNum.innerText = data.period + '期';
+                    if (deadlineTime && data.deadline) deadlineTime.innerText = data.deadline;
+                    renderSfcList(data);
+                })
+                .catch(err => {
+                    console.error('loadSfcData error:', err);
+                    feed.innerHTML = '<div style="text-align: center; padding: 40px; color: var(--accent-red); font-size: 12px;">传足数据加载失败，请检查网络后刷新</div>';
+                });
+        }
+
+        function renderSfcList(data) {
+            const feed = document.getElementById('sfc-matches-feed');
+            if (!feed) return;
+            feed.innerHTML = '';
+
+            const list = data.matches || [];
+            if (list.length === 0) {
+                feed.innerHTML = '<div style="text-align: center; padding: 40px; color: var(--text-tertiary); font-size: 12px;">暂无传足开售场次</div>';
+                return;
+            }
+
+            list.forEach(m => {
+                const card = document.createElement('div');
+                card.className = 'match-card';
+                card.style.position = 'relative';
+                card.style.overflow = 'hidden';
+
+                // 欧赔 SP 渲染
+                let oddsHtml = '';
+                if (m.odds && m.odds.length >= 3) {
+                    oddsHtml = `
+                        <div class="odds-strip" style="margin-top: 8px;">
+                            <div class="odds-box">
+                                <div class="odds-name">主胜(3)</div>
+                                <div class="odds-val" style="color: #38bdf8;">${m.odds[0]}</div>
+                            </div>
+                            <div class="odds-box">
+                                <div class="odds-name">平局(1)</div>
+                                <div class="odds-val" style="color: var(--accent-gold);">${m.odds[1]}</div>
+                            </div>
+                            <div class="odds-box">
+                                <div class="odds-name">客胜(0)</div>
+                                <div class="odds-val" style="color: #f85149;">${m.odds[2]}</div>
+                            </div>
+                        </div>
+                    `;
+                }
+
+                // 战术案卷弹窗按钮
+                let dossierBtn = '';
+                if (m.dossier && (m.dossier.conflict || m.dossier.market_depth)) {
+                    dossierBtn = `
+                        <button class="expand-btn" style="margin-top: 6px;" onclick="openSfcDetail(${m.no})">
+                            📑 查看战术案卷与机构去水深度 →
+                        </button>
+                    `;
+                }
+
+                card.innerHTML = `
+                    <div class="card-header">
+                        <div class="league-tag" style="background: ${m.league_color || '#F75000'}; font-weight: 800; font-family: var(--font-mono);">
+                            第 ${m.no} 场 · ${m.league || '传足'}
+                        </div>
+                        <div class="kickoff-time">
+                            ⏰ ${m.time} 鸣哨
+                        </div>
+                    </div>
+
+                    <div class="match-teams">
+                        <div class="team-block home" style="flex: 1;">
+                            <div class="team-title">${m.home} ${m.home_rank ? `<span style="font-size: 10px; color: var(--text-tertiary);">[${m.home_rank}]</span>` : ''}</div>
+                        </div>
+                        <div class="vs-box">
+                            <span class="vs-divider">VS</span>
+                        </div>
+                        <div class="team-block away" style="flex: 1; text-align: right;">
+                            <div class="team-title">${m.away_rank ? `<span style="font-size: 10px; color: var(--text-tertiary);">[${m.away_rank}]</span>` : ''} ${m.away}</div>
+                        </div>
+                    </div>
+
+                    ${oddsHtml}
+                    ${dossierBtn}
+                `;
+
+                feed.appendChild(card);
+            });
+        }
+
+        // 打开传足专属案卷弹窗
+        function openSfcDetail(matchNo) {
+            if (!SFC_MATCHES_CACHE || !SFC_MATCHES_CACHE.matches) return;
+            const m = SFC_MATCHES_CACHE.matches.find(item => item.no === matchNo);
+            if (!m) return;
+
+            const modal = document.getElementById('detailModal');
+            const title = document.getElementById('modalTitle');
+            const content = document.getElementById('modalContent');
+            if (!modal || !title || !content) return;
+
+            title.innerText = `传足第 ${m.no} 场 · ${m.home} vs ${m.away}`;
+
+            const d = m.dossier || {};
+            content.innerHTML = `
+                <div style="margin-bottom: 14px; padding: 10px 12px; background: rgba(56, 189, 248, 0.08); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 8px;">
+                    <div style="font-size: 12px; font-weight: 700; color: #38bdf8; margin-bottom: 4px;">🏆 赛事基本面与排期</div>
+                    <div><b>比赛编号</b>：胜负彩第 ${SFC_MATCHES_CACHE.period} 期 · 第 ${m.no} 场</div>
+                    <div><b>开赛时间</b>：${m.time}（${m.league}）</div>
+                    <div><b>对阵双方</b>：${m.home} vs ${m.away}</div>
+                    ${m.odds ? `<div style="margin-top: 4px; font-family: var(--font-mono);"><b>竞彩/百家平均SP</b>：主胜 ${m.odds[0]} | 平 ${m.odds[1]} | 客胜 ${m.odds[2]}</div>` : ''}
+                </div>
+
+                ${d.league_rank ? `
+                <div style="margin-bottom: 12px;">
+                    <b style="color: var(--text-primary);">一、积分排名与核心战意：</b><br>
+                    ${d.league_rank}
+                </div>` : ''}
+
+                ${d.conflict ? `
+                <div style="margin-bottom: 12px;">
+                    <b style="color: var(--text-primary);">二、战术矛盾与人员阵眼：</b><br>
+                    ${d.conflict}
+                </div>` : ''}
+
+                ${d.market_depth ? `
+                <div style="margin-bottom: 12px;">
+                    <b style="color: var(--text-primary);">三、欧洲机构盘口与去水态度：</b><br>
+                    ${d.market_depth}
+                </div>` : ''}
+
+                ${d.decision_guide ? `
+                <div style="margin-bottom: 12px;">
+                    <b style="color: var(--text-primary);">四、深度研判与选号指引：</b><br>
+                    ${d.decision_guide}
+                </div>` : ''}
+            `;
+
+            modal.classList.add('active');
+        }
 
         // 异步获取纯体彩情报流 (HTTPS混合内容防御：优先相对路径同源，彻底解决手机端HTTPS混合内容拦截)
         function fetchLiveIntel() {
