@@ -740,6 +740,11 @@
             padding-bottom: env(safe-area-inset-bottom, 0px);
         }
 
+        /* 当未启用串关时为 6 栏，启用时为 7 栏 */
+        .bottom-nav.nav-7-cols {
+            grid-template-columns: repeat(7, 1fr);
+        }
+
         .nav-link {
             display: flex;
             flex-direction: column;
@@ -1347,12 +1352,23 @@
             const targetView = document.getElementById('tab-' + tabId);
             if (targetView) targetView.classList.add('active');
 
-            const navIndex = ['matches', 'parlay', 'consensus', 'livewire', 'audit', 'owner'].indexOf(tabId);
-            if (navIndex !== -1) {
-                document.querySelectorAll('.nav-link')[navIndex].classList.add('active');
+            const navMap = {
+                'matches': 0,
+                'sfc': 1,
+                'parlay': 2,
+                'consensus': 3,
+                'livewire': 4,
+                'audit': 5,
+                'owner': 6
+            };
+            const navLinks = document.querySelectorAll('.nav-link');
+            if (navMap[tabId] !== undefined && navLinks[navMap[tabId]]) {
+                navLinks[navMap[tabId]].classList.add('active');
             }
 
-            if (tabId === 'parlay') {
+            if (tabId === 'sfc') {
+                loadSfcData();
+            } else if (tabId === 'parlay') {
                 renderParlayMatrix();
             } else if (tabId === 'livewire') {
                 fetchLiveIntel();
