@@ -893,6 +893,43 @@
             }
         }
     </style>
+    <style>
+        /* 详情弹窗：可折叠案卷模块 */
+        .dossier-fold {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+        .dossier-fold > summary {
+            list-style: none;
+            cursor: pointer;
+            padding: 11px 12px;
+            font-weight: 800;
+            color: #fff;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .dossier-fold > summary::-webkit-details-marker { display: none; }
+        .dossier-fold > summary::after {
+            content: '▾';
+            margin-left: auto;
+            color: var(--text-tertiary);
+            font-size: 11px;
+            transition: transform .2s;
+        }
+        .dossier-fold[open] > summary::after { transform: rotate(180deg); }
+        .dossier-fold > p {
+            margin: 0;
+            padding: 0 12px 12px;
+            font-size: 12.5px;
+            color: #cbd5e1;
+            line-height: 1.65;
+        }
+    </style>
 </head>
 <body>
 
@@ -2630,28 +2667,22 @@
                 ${mdl ? renderGoalChart(mdl, predGoals) + renderScoreMatrix(mdl, predScores) : ''}
 
                 <!-- 模块一：基本面与战意格局 -->
-                <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); border-radius: 8px; padding: 12px; margin-bottom: 10px;">
-                    <div style="font-weight: 800; color: #fff; font-size: 13px; margin-bottom: 6px; display: flex; align-items: center; gap: 5px;">
-                        <span>📊</span> 一、联赛积分与基本面战意格局
-                    </div>
-                    <p style="font-size: 12.5px; color: #cbd5e1; line-height: 1.65; margin: 0;">${dossier.fundamental}</p>
-                </div>
+                <details class="dossier-fold" open>
+                    <summary><span>📊</span> 一、联赛积分与基本面战意格局</summary>
+                    <p>${dossier.fundamental}</p>
+                </details>
 
                 <!-- 模块二：核心矛盾与关键战术 -->
-                <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); border-radius: 8px; padding: 12px; margin-bottom: 10px;">
-                    <div style="font-weight: 800; color: #fff; font-size: 13px; margin-bottom: 6px; display: flex; align-items: center; gap: 5px;">
-                        <span>⚔️</span> 二、核心战术矛盾与人员阵眼
-                    </div>
-                    <p style="font-size: 12.5px; color: #cbd5e1; line-height: 1.65; margin: 0;">${dossier.tactical_conflict}</p>
-                </div>
+                <details class="dossier-fold">
+                    <summary><span>⚔️</span> 二、核心战术矛盾与人员阵眼</summary>
+                    <p>${dossier.tactical_conflict}</p>
+                </details>
 
                 <!-- 模块三：机构态度与欧赔盘口 -->
-                <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); border-radius: 8px; padding: 12px; margin-bottom: 10px;">
-                    <div style="font-weight: 800; color: #fff; font-size: 13px; margin-bottom: 6px; display: flex; align-items: center; gap: 5px;">
-                        <span>📈</span> 三、欧洲机构盘口与去水态度
-                    </div>
-                    <p style="font-size: 12.5px; color: #cbd5e1; line-height: 1.65; margin: 0;">${dossier.market_attitude}</p>
-                </div>
+                <details class="dossier-fold">
+                    <summary><span>📈</span> 三、欧洲机构盘口与去水态度</summary>
+                    <p>${dossier.market_attitude}</p>
+                </details>
 
                 <!-- 模块四：实战研判与决策指引 -->
                 <div style="background: rgba(35, 134, 54, 0.12); border: 1px solid rgba(46, 160, 67, 0.4); border-radius: 8px; padding: 12px; margin-bottom: 12px;">
