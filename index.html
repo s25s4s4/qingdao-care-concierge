@@ -2418,6 +2418,177 @@
             return div.innerHTML;
         }
 
+        // ========================================================================
+        // 详情弹窗：把官方 SP 里隐含的概率结构显性化
+        // 说明：泊松分布是用「去水后的胜平负概率」反推 xG，再展开成比分/进球分布。
+        //       它不产生独立于市场的预测，只是把赔率里隐含的结构画出来。
+        //       不要把它当成"模型比市场准"，两者在数学上是同一件事的两种写法。
+        // ========================================================================
+        function _pois(lam, k) {
+            let f = 1;
+            for (let i = 2; i <= k; i++) f *= i;
+            return Math.exp(-lam) * Math.pow(lam, k) / f;
+        }
+
+        function buildMatchModel(match) {
+            const raw = (match.odds || []).map(v => parseFloat(v));
+            if (raw.length < 3 || raw.some(v => !isFinite(v) || v <= 0)) return null;
+            const inv = raw.map(v => 1 / v);
+            const tot = inv.reduce((a, b) => a + b, 0);
+            const pure = inv.map(v => v / tot * 100);
+            const margin = (tot - 1) * 100;
+
+            const lg = match.league || '';
+            let base = 1.35;
+            if (['荷甲', '德甲', '美职足', '瑞士超'].indexOf(lg) >= 0) base = 1.65;
+            else if (['意甲', '西甲', '法乙', '西乙'].indexOf(lg) >= 0) base = 1.15;
+
+            let lh, ma;
+            if (match.is_only_rq && parseInt(match.rang) <= -2) { lh = 2.65; ma = 0.95; }
+            else {
+                const r = inv[0] / (inv[0] + inv[2] + 1e-5);
+                lh = Math.max(0.6, Math.min(3.8, base * (r / 0.5)));
+                ma = Math.max(0.4, Math.min(3.5, (base - 0.1) * ((1 - r) / 0.5)));
+            }
+
+            const N = 9;
+            const ph = [], pa = [];
+            for (let k = 0; k <= N; k++) { ph.push(_pois(lh, k)); pa.push(_pois(ma, k)); }
+
+            const goals = [0, 0, 0, 0, 0, 0, 0, 0];
+            for (let x = 0; x <= N; x++) {
+                for (let y = 0; y <= N; y++) {
+                    goals[Math.min(x + y, 7)] += ph[x] * pa[y];
+                }
+            }
+
+            const scores = [];
+            for (let x = 0; x <= 4; x++) {
+                for (let y = 0; y <= 4; y++) scores.push({ s: x + '-' + y, p: ph[x] * pa[y] });
+            }
+            const top = scores.slice().sort((a, b) => b.p - a.p).slice(0, 4);
+
+            return { pure: pure, margin: margin, lh: lh, ma: ma, goals: goals, scores: scores, top: top };
+        }
+
+        // 去水胜平负概率条
+        function renderProbBar(m) {
+            const segs = [
+                { n: '主胜', v: m.pure[0], c: '#3fb950' },
+                { n: '平局', v: m.pure[1], c: '#8b949e' },
+                { n: '客胜', v: m.pure[2], c: '#f85149' }
+            ];
+            const bars = segs.map(s =>
+                `<div style="flex:${Math.max(s.v, 3)}; background:${s.c}; height:100%; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:800; color:#0d1117; overflow:hidden;">${s.v.toFixed(1)}%</div>`
+            ).join('');
+            const legend = segs.map(s =>
+                `<span style="display:inline-flex; align-items:center; gap:3px; font-size:10px; color:var(--text-secondary);"><i style="width:7px;height:7px;border-radius:2px;background:${s.c};display:inline-block;"></i>${s.n}</span>`
+            ).join('');
+            return `
+              <div style="background:rgba(255,255,255,0.03); border:1px solid var(--border-color); border-radius:8px; padding:10px 12px; margin-bottom:10px;">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+                  <span style="font-size:11.5px; font-weight:800; color:#fff;">去水胜平负概率</span>
+                  <span style="font-size:9.5px; color:var(--text-tertiary); font-family:var(--font-mono);">机构抽水 ${m.margin.toFixed(1)}%</span>
+                </div>
+                <div style="display:flex; height:20px; border-radius:5px; overflow:hidden; gap:1px;">${bars}</div>
+                <div style="display:flex; gap:10px; margin-top:6px; flex-wrap:wrap; align-items:center;">${legend}
+                  <span style="font-size:9.5px; color:var(--text-tertiary); margin-left:auto; font-family:var(--font-mono);">隐含 xG ${m.lh.toFixed(2)} : ${m.ma.toFixed(2)}</span>
+                </div>
+              </div>`;
+        }
+
+        // 总进球分布（内联 SVG，无外部依赖）
+        function renderGoalChart(m, predGoals) {
+            const W = 320, H = 92, padL = 6, padR = 6, baseY = H - 16;
+            const max = Math.max.apply(null, m.goals) || 1;
+            const bw = (W - padL - padR) / 8;
+            const hits = (predGoals || []).map(String);
+            let g = '';
+            m.goals.forEach((p, i) => {
+                const h = (p / max) * (baseY - 22);
+                const x = padL + i * bw + 3;
+                const y = baseY - h;
+                const on = hits.indexOf(String(i)) >= 0 || (i === 7 && hits.indexOf('7+') >= 0);
+                g += `<rect x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${(bw - 6).toFixed(1)}" height="${h.toFixed(1)}" rx="2" fill="${on ? '#d29922' : 'rgba(139,148,158,0.28)'}"></rect>`;
+                g += `<text x="${(x + (bw - 6) / 2).toFixed(1)}" y="${(y - 3).toFixed(1)}" font-size="7.5" fill="${on ? '#e3b341' : '#6e7681'}" text-anchor="middle">${(p * 100).toFixed(1)}</text>`;
+                g += `<text x="${(x + (bw - 6) / 2).toFixed(1)}" y="${H - 4}" font-size="8" fill="#8b949e" text-anchor="middle">${i === 7 ? '7+' : i}</text>`;
+            });
+            return `
+              <div style="background:rgba(255,255,255,0.03); border:1px solid var(--border-color); border-radius:8px; padding:8px 10px 4px; margin-bottom:10px;">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:2px;">
+                  <span style="font-size:11.5px; font-weight:800; color:#fff;">总进球概率分布</span>
+                  <span style="font-size:9px; color:var(--text-tertiary);">金色 = 研判区间</span>
+                </div>
+                <svg viewBox="0 0 ${W} ${H}" width="100%" height="${H}" style="display:block;">${g}</svg>
+              </div>`;
+        }
+
+        // 比分概率热力矩阵 5×5
+        function renderScoreMatrix(m, predScores) {
+            const max = Math.max.apply(null, m.scores.map(s => s.p)) || 1;
+            const picks = (predScores || []).slice();
+            let rows = '';
+            for (let x = 0; x <= 4; x++) {
+                let cells = '';
+                for (let y = 0; y <= 4; y++) {
+                    const it = m.scores[x * 5 + y];
+                    const a = it.p / max;
+                    const on = picks.indexOf(it.s) >= 0;
+                    const bg = on
+                        ? 'rgba(56,189,248,0.28)'
+                        : `rgba(210,153,34,${(0.04 + a * 0.20).toFixed(3)})`;
+                    const bd = on ? '1px solid #38bdf8' : '1px solid rgba(255,255,255,0.05)';
+                    const tc = on ? '#7dd3fc' : (a > 0.55 ? '#e3b341' : '#8b949e');
+                    cells += `<div style="background:${bg}; border:${bd}; border-radius:3px; padding:3px 0; text-align:center; line-height:1.15;">
+                        <div style="font-size:9px; font-family:var(--font-mono); color:${tc}; font-weight:${on ? 800 : 600};">${it.s}</div>
+                        <div style="font-size:7.5px; color:${on ? '#7dd3fc' : '#6e7681'}; font-family:var(--font-mono);">${(it.p * 100).toFixed(1)}</div>
+                    </div>`;
+                }
+                rows += `<div style="display:grid; grid-template-columns:repeat(5,1fr); gap:2px; margin-bottom:2px;">${cells}</div>`;
+            }
+            const topTxt = m.top.slice(0, 3).map(t => `${t.s} <span style="color:#6e7681;">${(t.p * 100).toFixed(1)}%</span>`).join('　');
+            return `
+              <div style="background:rgba(255,255,255,0.03); border:1px solid var(--border-color); border-radius:8px; padding:9px 10px; margin-bottom:10px;">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+                  <span style="font-size:11.5px; font-weight:800; color:#fff;">比分概率矩阵 <span style="font-size:9px; font-weight:400; color:var(--text-tertiary);">（行=主，列=客）</span></span>
+                  <span style="font-size:9px; color:#38bdf8; font-family:var(--font-mono);">蓝框 = 研判</span>
+                </div>
+                <div style="display:flex; align-items:center; gap:4px;">
+                  <div style="display:flex; flex-direction:column; justify-content:space-around; height:100%; font-size:8px; color:#6e7681; padding-right:2px;">
+                    ${[0,1,2,3,4].map(i => `<span style="height:18px; line-height:18px;">${i}</span>`).join('')}
+                  </div>
+                  <div style="flex:1;">${rows}</div>
+                </div>
+                <div style="font-size:9px; color:var(--text-tertiary); margin-top:6px; font-family:var(--font-mono);">理论前三：${topTxt}</div>
+              </div>`;
+        }
+
+        // 近期状态 + 排名
+        function renderFormStrip(match) {
+            const chip = r => {
+                const c = r === 'W' ? '#3fb950' : r === 'D' ? '#8b949e' : '#f85149';
+                const t = r === 'W' ? '胜' : r === 'D' ? '平' : '负';
+                return `<span style="width:16px;height:16px;border-radius:3px;background:${c}1f;border:1px solid ${c}66;color:${c};font-size:9px;font-weight:800;display:inline-flex;align-items:center;justify-content:center;">${t}</span>`;
+            };
+            const line = (name, form, rank, side) => `
+                <div style="display:flex; align-items:center; gap:6px; margin-bottom:4px;">
+                  <span style="font-size:10px; color:var(--text-secondary); width:26px; flex-shrink:0;">${side}</span>
+                  <span style="font-size:10.5px; color:#cbd5e1; flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${name}</span>
+                  ${rank ? `<span style="font-size:9px; color:var(--accent-gold); font-family:var(--font-mono); flex-shrink:0;">#${rank}</span>` : ''}
+                  <span style="display:flex; gap:2px; flex-shrink:0;">${(form || []).slice(0, 5).map(chip).join('') || '<span style="font-size:9px;color:#6e7681;">近况未采集</span>'}</span>
+                </div>`;
+            if (!(match.form_home || []).length && !(match.form_away || []).length) return '';
+            return `
+              <div style="background:rgba(255,255,255,0.03); border:1px solid var(--border-color); border-radius:8px; padding:9px 10px; margin-bottom:10px;">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+                  <span style="font-size:11.5px; font-weight:800; color:#fff;">近期战绩</span>
+                  <span style="font-size:9px; color:var(--text-tertiary);">左新 → 右旧</span>
+                </div>
+                ${line(match.home || '主队', match.form_home, match.home_rank, '主')}
+                ${line(match.away || '客队', match.form_away, match.away_rank, '客')}
+              </div>`;
+        }
+
         // 详情弹窗：全方位深度战术案卷 (4大硬核模块详解)
         function openDetail(code) {
             // 直接根据全局比赛唯一的 code 索引完整对象，杜绝传参截断或引号注入问题！
@@ -2442,8 +2613,7 @@
 
             const predGoals = match.predicted_goals || ['2', '3'];
             const predScores = match.predicted_scores || ['1-0', '2-1', '1-1'];
-            const goalsDisplay = predGoals.map(g => `<span style="background: rgba(210, 153, 34, 0.2); color: var(--accent-gold); border: 1px solid rgba(210, 153, 34, 0.4); padding: 2px 6px; border-radius: 4px; font-weight: 800; font-size: 11px; white-space: nowrap;">⚽ ${g}球</span>`).join('');
-            const scoresDisplay = predScores.map(s => `<span style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.35); padding: 2px 6px; border-radius: 4px; font-weight: 800; font-size: 11px; font-family: var(--font-mono); white-space: nowrap;">🎯 ${s}</span>`).join('');
+            const mdl = buildMatchModel(match);
 
             document.getElementById('modalTitle').innerText = `${code} ${league} · ${home} VS ${away}`;
             document.getElementById('modalContent').innerHTML = startedNotice + `
@@ -2453,23 +2623,11 @@
                     <span style="background: rgba(46, 160, 67, 0.15); color: #3fb950; padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: 700;">共识: ${match.consensus || '75%'}</span>
                 </div>
 
-                <!-- 专项强化：实战双核心出票导航栏 (进球数 + 比分黄金三角，彻底防折行重叠) -->
-                <div style="background: linear-gradient(135deg, rgba(210, 153, 34, 0.12), rgba(56, 189, 248, 0.08)); border: 1px solid rgba(210, 153, 34, 0.3); border-radius: 8px; padding: 10px 12px; margin-bottom: 12px; display: flex; flex-direction: column; gap: 8px;">
-                    <div style="display: flex; flex-direction: column; gap: 4px;">
-                        <div style="display: flex; align-items: center; justify-content: space-between;">
-                            <span style="font-size: 11.5px; font-weight: 800; color: #fff;">【总进球精算区间】:</span>
-                            <span style="font-size: 10px; color: var(--accent-gold); font-weight: 700;">双变量泊松精算</span>
-                        </div>
-                        <div style="display: flex; align-items: center; gap: 6px; flex-wrap: wrap;">${goalsDisplay}</div>
-                    </div>
-                    <div style="display: flex; flex-direction: column; gap: 4px; border-top: 1px dashed rgba(255,255,255,0.08); padding-top: 6px;">
-                        <div style="display: flex; align-items: center; justify-content: space-between;">
-                            <span style="font-size: 11.5px; font-weight: 800; color: #fff;">【黄金三角比分矩阵】:</span>
-                            <span style="font-size: 10px; color: #38bdf8; font-weight: 700;">梯队跨度全覆盖</span>
-                        </div>
-                        <div style="display: flex; align-items: center; gap: 6px; flex-wrap: wrap;">${scoresDisplay}</div>
-                    </div>
-                </div>
+                ${mdl ? renderProbBar(mdl) : ''}
+                ${renderFormStrip(match)}
+
+                <!-- 数据可视化：进球分布 + 比分概率矩阵（由官方 SP 反推） -->
+                ${mdl ? renderGoalChart(mdl, predGoals) + renderScoreMatrix(mdl, predScores) : ''}
 
                 <!-- 模块一：基本面与战意格局 -->
                 <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); border-radius: 8px; padding: 12px; margin-bottom: 10px;">
