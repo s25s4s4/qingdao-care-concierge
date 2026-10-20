@@ -2540,7 +2540,7 @@
             const max = Math.max.apply(null, m.goals) || 1;
             const bw = (W - padL - padR) / 8;
             const hits = (predGoals || []).map(String);
-            let g = '';
+            let g = `<line x1="${padL}" y1="${baseY}" x2="${W - padR}" y2="${baseY}" stroke="rgba(255,255,255,0.12)" stroke-width="1"></line>`;
             m.goals.forEach((p, i) => {
                 const h = (p / max) * (baseY - 22);
                 const x = padL + i * bw + 3;
