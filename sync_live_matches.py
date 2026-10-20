@@ -683,6 +683,34 @@ def full_pipeline_sync(auto_push=True):
     except Exception as _exc:
         log_messages.append(f"Archive skipped: {type(_exc).__name__}")
 
+    # 动态量化推演：每当官方SP变动或有新情报时，自动重算 8 万场相同赔率、EV值与爆冷预警
+    try:
+        import quant_engine
+        for m in existing_matches:
+            if m.get('status') == '未开赛' and m.get('result') == 'PENDING' and not m.get('locked'):
+                odds = m.get('odds', [])
+                if odds and len(odds) >= 3:
+                    try:
+                        sh, sd, sa = float(odds[0]), float(odds[1]), float(odds[2])
+                        q_res = quant_engine.analyze_match_factors(
+                            sh=sh, sd=sd, sa=sa,
+                            league=m.get('league', ''),
+                            home=m.get('home', ''),
+                            away=m.get('away', ''),
+                            is_only_rq=m.get('is_only_rq', False),
+                            rang=m.get('rang', '0')
+                        )
+                        if q_res:
+                            old_q = m.get('quant_factors')
+                            # 只要历史概率或诱盘等级有实质变化，更新并标记 changes_made
+                            if not old_q or old_q.get('win_rate') != q_res['win_rate'] or old_q.get('trap_level') != q_res['trap_level']:
+                                m['quant_factors'] = q_res
+                                changes_made = True
+                    except Exception:
+                        continue
+    except Exception as _exc:
+        log_messages.append(f"QuantEngine live sync skipped: {type(_exc).__name__}")
+
     if changes_made:
         data['updated_at'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         data['total'] = len(existing_matches)
