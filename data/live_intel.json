@@ -1,7 +1,19 @@
 {
-  "updated_at": "2026-10-21 02:56:28",
-  "total_tips": 16,
+  "updated_at": "2026-10-21 03:41:46",
+  "total_tips": 17,
   "live_feed": [
+    {
+      "id": 3325,
+      "channel": "calciomercato",
+      "time": "2026-10-21 03:40",
+      "code": "周二005",
+      "league": "欧冠",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "罗马 VS 布拉迪斯",
+      "chinese": "罗马半场直接打穿，莫利纳39分钟再下一城2-0领先！前场火力全开，布拉迪斯防线完全顶不住冲击。走地大球趋势明朗，罗马主胜稳如狗，防守端没压力，看好下半场继续穿盘大胜！",
+      "original": "🇪🇺 UEFA CHAMPIONS LEAGUE 🇪🇺 3ª Giornata GOAL 🟡 Roma 2-0 Slovan Bratislava ⚪ ⚽️ N. Molina 👟 - ⏱️ 39’ ⚽️"
+    },
     {
       "id": 3289,
       "channel": "footballbettingtips10",
