@@ -661,8 +661,10 @@ def full_pipeline_sync(auto_push=True):
                     if m.get('status') == '已完赛'
                     and m.get('score') and m.get('score') not in ('--', '延期')]
         _a = result_archive.append(_settled, date_of=lambda x: full_date(x.get('time')))
+        _snap = result_archive.record_stats(added=_a)
         if _a:
-            log_messages.append(f"Archive: +{_a} results")
+            log_messages.append(f"Archive: +{_a} results (总 {_snap['total']} 场 / "
+                                f"{_snap['teams']} 队 / 可凑10场 {_snap['teams_ge10']} 队)")
     except Exception as _exc:
         log_messages.append(f"Archive skipped: {type(_exc).__name__}")
 
@@ -692,7 +694,7 @@ def full_pipeline_sync(auto_push=True):
 
         if auto_push:
             os.chdir(WEB_DIR)
-            silent_subprocess_run(["git", "add", "data/official_matches.json", "data/matches_34.json", "data/match_results.jsonl", "index.html"], cwd=WEB_DIR)
+            silent_subprocess_run(["git", "add", "data/official_matches.json", "data/matches_34.json", "data/match_results.jsonl", "data/archive_stats.json", "index.html"], cwd=WEB_DIR)
             commit_title = f"Live-Pulse: {len(log_messages)} match status/score updates ({datetime.now().strftime('%H:%M:%S')})"
             silent_subprocess_run(["git", "commit", "-m", commit_title], cwd=WEB_DIR)
             res = silent_subprocess_run(["git", "push", "origin", "main"], cwd=WEB_DIR)
