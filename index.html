@@ -2645,6 +2645,38 @@
                 </div>`;
             };
 
+            // 当季数据（Understat 五大联赛）：场次少但新鲜，且带 xG
+            const sea = st.season;
+            let seasonHtml = '';
+            if (sea && (sea.home || sea.away)) {
+                const sline = (t, side) => {
+                    if (!t || !t.gp) return '';
+                    const gap = (t.gf - (t.xg || 0));
+                    const gapTxt = Math.abs(gap) >= 3
+                        ? `<span style="font-size:9px; color:${gap > 0 ? '#3fb950' : '#f0883e'}; margin-left:4px;">${gap > 0 ? '进球超出xG ' : '进球低于xG '}${Math.abs(gap).toFixed(1)}</span>`
+                        : '';
+                    return `
+                    <div style="display:flex; align-items:center; gap:6px; margin-bottom:4px;">
+                      <span style="font-size:10px; color:var(--text-secondary); width:14px; flex-shrink:0;">${side}</span>
+                      <span style="font-size:10.5px; color:#cbd5e1; width:64px; flex-shrink:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${t.cn || ''}</span>
+                      <span style="font-size:10px; color:var(--text-tertiary); font-family:var(--font-mono); flex-shrink:0;">${t.gp}场</span>
+                      <span style="font-size:10px; color:#e3b341; font-family:var(--font-mono); flex-shrink:0;">${t.w}-${t.d}-${t.l}</span>
+                      <span style="font-size:10px; color:var(--text-secondary); font-family:var(--font-mono); flex-shrink:0;">${t.gf}:${t.ga}</span>
+                      <span style="font-size:9.5px; color:#8b949e; font-family:var(--font-mono); margin-left:auto; flex-shrink:0;">xG ${(t.xg || 0).toFixed(1)} / ${(t.xga || 0).toFixed(1)}</span>
+                      ${gapTxt}
+                    </div>`;
+                };
+                seasonHtml = `
+                <div style="border-top:1px dashed rgba(255,255,255,0.08); margin-top:6px; padding-top:6px;">
+                  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:5px;">
+                    <span style="font-size:10px; color:#fff; font-weight:700;">本季战绩 <span style="font-weight:400; color:var(--text-tertiary);">Understat · xG 为期望进球</span></span>
+                    <span style="font-size:9px; color:var(--text-tertiary);">截至 ${(sea.updated_at || '').slice(5, 10)}</span>
+                  </div>
+                  ${sline(sea.home, '主')}
+                  ${sline(sea.away, '客')}
+                </div>`;
+            }
+
             const z = st.h2h;
             let h2h = '';
             if (z && z.n) {
@@ -2676,6 +2708,7 @@
                 ${row(st.home, '主')}
                 ${row(st.away, '客')}
                 ${(!row(st.home, '主') && !row(st.away, '客')) ? '<div style="font-size:10px; color:var(--text-tertiary);">两队近期数据均超过两年，已隐藏</div>' : ''}
+                ${seasonHtml}
                 ${h2h}
                 ${warn}
               </div>`;
