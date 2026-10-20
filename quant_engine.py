@@ -306,6 +306,76 @@ def run_full_pipeline_on_matches(official_json_path="E:/euro_intel_web/data/offi
     return results
 
 
+def run_pipeline_on_sfc(sfc_json_path="E:/euro_intel_web/data/sfc_matches.json"):
+    """对传足 14 场 (sfc_matches.json) 完整运行 8 万场多因子量化推演，自动驱动选号与爆冷标记"""
+    if not os.path.exists(sfc_json_path):
+        return []
+
+    with open(sfc_json_path, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    matches = data.get("matches", [])
+    results = []
+
+    for m in matches:
+        odds = m.get("odds", [])
+        if not odds or len(odds) < 3:
+            continue
+
+        try:
+            sh = float(odds[0])
+            sd = float(odds[1])
+            sa = float(odds[2])
+        except (ValueError, TypeError):
+            continue
+
+        factor_res = analyze_match_factors(
+            sh=sh,
+            sd=sd,
+            sa=sa,
+            league=m.get("league", "欧冠"),
+            home=m.get("home", ""),
+            away=m.get("away", "")
+        )
+
+        if factor_res:
+            m["quant_factors"] = factor_res
+            
+            # 用 8 万场真实同赔数据自动校准传足的三色选号：
+            # 1. 核心首选 (pick_primary): 按真实打出胜率最高的方向
+            if factor_res["win_rate"] >= 50.0:
+                m["pick_primary"] = "3"
+            elif factor_res["loss_rate"] >= 45.0:
+                m["pick_primary"] = "0"
+            else:
+                m["pick_primary"] = "3" if factor_res["win_rate"] >= factor_res["loss_rate"] else "0"
+
+            # 2. 次选防冷 (pick_secondary): 如果胜率没达到72%绝对死胆，自动补平局1
+            if factor_res["win_rate"] < 72.0 or factor_res["draw_rate"] >= 21.0:
+                m["pick_secondary"] = "1"
+            else:
+                m["pick_secondary"] = None
+
+            # 3. 🚨 爆冷预警 (pick_upset): 触发诱盘预警或深水冷门时，自动打上防大冷标记
+            if factor_res["trap_level"] == "HIGH_TRAP":
+                # 如果主队大热诱盘，爆冷项标记为客胜0
+                m["pick_upset"] = "0" if m["pick_primary"] == "3" else "3"
+            elif factor_res["loss_rate"] >= 25.0 and sa >= 2.0:
+                m["pick_upset"] = "0"
+            elif factor_res["win_rate"] <= 35.0 and sh >= 2.8:
+                m["pick_upset"] = "3"
+            elif factor_res["tier_title"] == "深水博冷区间":
+                m["pick_upset"] = "0" if m["pick_primary"] == "3" else "3"
+
+            results.append(m)
+
+    # 保存传足数据
+    with open(sfc_json_path, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+    return results
+
+
 if __name__ == "__main__":
     import sys
     print("正在启动 8 万场多因子历史同赔推演引擎...")

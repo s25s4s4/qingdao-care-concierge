@@ -32,9 +32,31 @@
       "live_status": "PRE",
       "score": "--",
       "pick_primary": "3",
-      "pick_secondary": null,
+      "pick_secondary": "1",
       "pick_desc": "单选主胜(3)",
-      "pick_upset": null
+      "pick_upset": null,
+      "quant_factors": {
+        "samples": 1438,
+        "win_rate": 70.1,
+        "draw_rate": 18.6,
+        "loss_rate": 11.3,
+        "ev_home": -0.075,
+        "ev_draw": -0.127,
+        "ev_away": -0.289,
+        "lambda_h": 2.3,
+        "lambda_a": 0.9,
+        "golden_scores": [
+          "2-0",
+          "2-1",
+          "1-0"
+        ],
+        "trap_level": "NORMAL",
+        "trap_warning": "盘面处于正常期望区间",
+        "stars": "★★★★☆",
+        "tier_title": "高确定性稳胆",
+        "smart_pick": "单选主胜 (3)",
+        "smart_type": "SINGLE"
+      }
     },
     {
       "no": 2,
@@ -64,9 +86,31 @@
       "live_status": "PRE",
       "score": "--",
       "pick_primary": "3",
-      "pick_secondary": null,
+      "pick_secondary": "1",
       "pick_desc": "单选主胜(3)",
-      "pick_upset": null
+      "pick_upset": null,
+      "quant_factors": {
+        "samples": 10150,
+        "win_rate": 57.1,
+        "draw_rate": 24.9,
+        "loss_rate": 18.0,
+        "ev_home": -0.098,
+        "ev_draw": 0.133,
+        "ev_away": -0.349,
+        "lambda_h": 1.77,
+        "lambda_a": 0.95,
+        "golden_scores": [
+          "1-0",
+          "1-1",
+          "2-1"
+        ],
+        "trap_level": "NORMAL",
+        "trap_warning": "盘面处于正常期望区间",
+        "stars": "★★★☆☆",
+        "tier_title": "双选防冷格局",
+        "smart_pick": "首选主胜(3) / 次选防平(1)",
+        "smart_type": "DOUBLE"
+      }
     },
     {
       "no": 3,
@@ -98,7 +142,29 @@
       "pick_primary": "3",
       "pick_secondary": "1",
       "pick_desc": "单选主胜(3)",
-      "pick_upset": null
+      "pick_upset": null,
+      "quant_factors": {
+        "samples": 1185,
+        "win_rate": 54.6,
+        "draw_rate": 25.7,
+        "loss_rate": 19.7,
+        "ev_home": -0.121,
+        "ev_draw": 0.052,
+        "ev_away": -0.25,
+        "lambda_h": 1.95,
+        "lambda_a": 1.16,
+        "golden_scores": [
+          "1-1",
+          "2-1",
+          "2-0"
+        ],
+        "trap_level": "CAUTION",
+        "trap_warning": "⚠️ 胶着震荡预警：历史胜率仅 54%，防平局闷平打出",
+        "stars": "★★★☆☆",
+        "tier_title": "双选防冷格局",
+        "smart_pick": "首选主胜(3) / 次选防平(1)",
+        "smart_type": "DOUBLE"
+      }
     },
     {
       "no": 4,
@@ -128,9 +194,31 @@
       "live_status": "PRE",
       "score": "--",
       "pick_primary": "3",
-      "pick_secondary": null,
+      "pick_secondary": "1",
       "pick_desc": "单选主胜(3)",
-      "pick_upset": null
+      "pick_upset": null,
+      "quant_factors": {
+        "samples": 1038,
+        "win_rate": 67.8,
+        "draw_rate": 18.2,
+        "loss_rate": 14.0,
+        "ev_home": -0.091,
+        "ev_draw": -0.126,
+        "ev_away": -0.197,
+        "lambda_h": 2.25,
+        "lambda_a": 0.95,
+        "golden_scores": [
+          "2-0",
+          "1-0",
+          "2-1"
+        ],
+        "trap_level": "NORMAL",
+        "trap_warning": "盘面处于正常期望区间",
+        "stars": "★★★★☆",
+        "tier_title": "高确定性稳胆",
+        "smart_pick": "首选主胜(3) / 次选防平(1)",
+        "smart_type": "DOUBLE"
+      }
     },
     {
       "no": 5,
@@ -162,7 +250,29 @@
       "pick_primary": "3",
       "pick_secondary": "1",
       "pick_desc": "首选主胜(3)·次选平局(1)",
-      "pick_upset": "0"
+      "pick_upset": "0",
+      "quant_factors": {
+        "samples": 17645,
+        "win_rate": 37.7,
+        "draw_rate": 29.2,
+        "loss_rate": 33.1,
+        "ev_home": -0.121,
+        "ev_draw": 0.264,
+        "ev_away": -0.295,
+        "lambda_h": 1.32,
+        "lambda_a": 1.22,
+        "golden_scores": [
+          "1-1",
+          "1-0",
+          "0-1"
+        ],
+        "trap_level": "NORMAL",
+        "trap_warning": "盘面处于正常期望区间",
+        "stars": "★★☆☆☆",
+        "tier_title": "深水博冷区间",
+        "smart_pick": "胜平双选 (3/1)",
+        "smart_type": "DOUBLE"
+      }
     },
     {
       "no": 6,
@@ -192,9 +302,31 @@
       "live_status": "PRE",
       "score": "--",
       "pick_primary": "3",
-      "pick_secondary": null,
+      "pick_secondary": "1",
       "pick_desc": "单选主胜(3)",
-      "pick_upset": null
+      "pick_upset": null,
+      "quant_factors": {
+        "samples": 18004,
+        "win_rate": 51.8,
+        "draw_rate": 26.6,
+        "loss_rate": 21.6,
+        "ev_home": -0.104,
+        "ev_draw": 0.171,
+        "ev_away": -0.331,
+        "lambda_h": 1.63,
+        "lambda_a": 1.01,
+        "golden_scores": [
+          "1-1",
+          "1-0",
+          "2-1"
+        ],
+        "trap_level": "CAUTION",
+        "trap_warning": "⚠️ 胶着震荡预警：历史胜率仅 51%，防平局闷平打出",
+        "stars": "★★★☆☆",
+        "tier_title": "双选防冷格局",
+        "smart_pick": "首选主胜(3) / 次选防平(1)",
+        "smart_type": "DOUBLE"
+      }
     },
     {
       "no": 7,
@@ -226,7 +358,29 @@
       "pick_primary": "0",
       "pick_secondary": "1",
       "pick_desc": "单选客胜(0)",
-      "pick_upset": "3"
+      "pick_upset": "3",
+      "quant_factors": {
+        "samples": 378,
+        "win_rate": 29.1,
+        "draw_rate": 19.8,
+        "loss_rate": 51.1,
+        "ev_home": -0.046,
+        "ev_draw": -0.226,
+        "ev_away": -0.101,
+        "lambda_h": 1.29,
+        "lambda_a": 1.83,
+        "golden_scores": [
+          "1-1",
+          "1-2",
+          "0-2"
+        ],
+        "trap_level": "NORMAL",
+        "trap_warning": "盘面处于正常期望区间",
+        "stars": "★★☆☆☆",
+        "tier_title": "深水博冷区间",
+        "smart_pick": "首选客不败 / 让负",
+        "smart_type": "UPSET"
+      }
     },
     {
       "no": 8,
@@ -258,7 +412,29 @@
       "pick_primary": "3",
       "pick_secondary": "1",
       "pick_desc": "首选主胜(3)·次选平局(1)",
-      "pick_upset": "0"
+      "pick_upset": "0",
+      "quant_factors": {
+        "samples": 3448,
+        "win_rate": 39.7,
+        "draw_rate": 27.6,
+        "loss_rate": 32.7,
+        "ev_home": -0.146,
+        "ev_draw": -0.048,
+        "ev_away": -0.127,
+        "lambda_h": 1.47,
+        "lambda_a": 1.3,
+        "golden_scores": [
+          "1-1",
+          "1-0",
+          "2-1"
+        ],
+        "trap_level": "NORMAL",
+        "trap_warning": "盘面处于正常期望区间",
+        "stars": "★★☆☆☆",
+        "tier_title": "深水博冷区间",
+        "smart_pick": "胜平双选 (3/1)",
+        "smart_type": "DOUBLE"
+      }
     },
     {
       "no": 9,
@@ -290,7 +466,29 @@
       "pick_primary": "3",
       "pick_secondary": "1",
       "pick_desc": "首选主胜(3)·次选平局(1)",
-      "pick_upset": "0"
+      "pick_upset": "0",
+      "quant_factors": {
+        "samples": 5994,
+        "win_rate": 45.7,
+        "draw_rate": 27.5,
+        "loss_rate": 26.8,
+        "ev_home": -0.131,
+        "ev_draw": -0.038,
+        "ev_away": -0.156,
+        "lambda_h": 1.58,
+        "lambda_a": 1.17,
+        "golden_scores": [
+          "1-1",
+          "1-0",
+          "2-1"
+        ],
+        "trap_level": "NORMAL",
+        "trap_warning": "盘面处于正常期望区间",
+        "stars": "★★☆☆☆",
+        "tier_title": "深水博冷区间",
+        "smart_pick": "胜平双选 (3/1)",
+        "smart_type": "DOUBLE"
+      }
     },
     {
       "no": 10,
@@ -322,7 +520,29 @@
       "pick_primary": "3",
       "pick_secondary": null,
       "pick_desc": "单选主胜(3)",
-      "pick_upset": null
+      "pick_upset": null,
+      "quant_factors": {
+        "samples": 419,
+        "win_rate": 81.6,
+        "draw_rate": 12.6,
+        "loss_rate": 5.7,
+        "ev_home": -0.061,
+        "ev_draw": -0.178,
+        "ev_away": -0.462,
+        "lambda_h": 2.75,
+        "lambda_a": 0.75,
+        "golden_scores": [
+          "2-0",
+          "3-0",
+          "2-1"
+        ],
+        "trap_level": "NORMAL",
+        "trap_warning": "盘面处于正常期望区间",
+        "stars": "★★★★★",
+        "tier_title": "正路核心死胆",
+        "smart_pick": "单选主胜 (3)",
+        "smart_type": "SINGLE"
+      }
     },
     {
       "no": 11,
@@ -354,7 +574,29 @@
       "pick_primary": "3",
       "pick_secondary": "1",
       "pick_desc": "首选主胜(3)·次选平局(1)",
-      "pick_upset": "0"
+      "pick_upset": "0",
+      "quant_factors": {
+        "samples": 5269,
+        "win_rate": 45.8,
+        "draw_rate": 27.4,
+        "loss_rate": 26.8,
+        "ev_home": -0.135,
+        "ev_draw": -0.026,
+        "ev_away": -0.158,
+        "lambda_h": 1.61,
+        "lambda_a": 1.19,
+        "golden_scores": [
+          "1-1",
+          "1-0",
+          "2-1"
+        ],
+        "trap_level": "NORMAL",
+        "trap_warning": "盘面处于正常期望区间",
+        "stars": "★★☆☆☆",
+        "tier_title": "深水博冷区间",
+        "smart_pick": "胜平双选 (3/1)",
+        "smart_type": "DOUBLE"
+      }
     },
     {
       "no": 12,
@@ -386,7 +628,29 @@
       "pick_primary": "3",
       "pick_secondary": "1",
       "pick_desc": "首选主胜(3)·次选平局(1)",
-      "pick_upset": null
+      "pick_upset": "0",
+      "quant_factors": {
+        "samples": 2134,
+        "win_rate": 48.2,
+        "draw_rate": 24.1,
+        "loss_rate": 27.7,
+        "ev_home": -0.085,
+        "ev_draw": -0.107,
+        "ev_away": -0.169,
+        "lambda_h": 1.74,
+        "lambda_a": 1.27,
+        "golden_scores": [
+          "1-1",
+          "2-1",
+          "1-0"
+        ],
+        "trap_level": "NORMAL",
+        "trap_warning": "盘面处于正常期望区间",
+        "stars": "★★☆☆☆",
+        "tier_title": "深水博冷区间",
+        "smart_pick": "首选主胜(3) / 次选防平(1)",
+        "smart_type": "DOUBLE"
+      }
     },
     {
       "no": 13,
@@ -418,7 +682,29 @@
       "pick_primary": "3",
       "pick_secondary": "1",
       "pick_desc": "单选主胜(3)",
-      "pick_upset": null
+      "pick_upset": null,
+      "quant_factors": {
+        "samples": 1297,
+        "win_rate": 62.4,
+        "draw_rate": 22.1,
+        "loss_rate": 15.6,
+        "ev_home": -0.108,
+        "ev_draw": -0.008,
+        "ev_away": -0.252,
+        "lambda_h": 2.08,
+        "lambda_a": 1.01,
+        "golden_scores": [
+          "2-0",
+          "1-0",
+          "1-1"
+        ],
+        "trap_level": "NORMAL",
+        "trap_warning": "盘面处于正常期望区间",
+        "stars": "★★★★☆",
+        "tier_title": "高确定性稳胆",
+        "smart_pick": "首选主胜(3) / 次选防平(1)",
+        "smart_type": "DOUBLE"
+      }
     },
     {
       "no": 14,
@@ -450,7 +736,29 @@
       "pick_primary": "3",
       "pick_secondary": null,
       "pick_desc": "单选主胜(3)",
-      "pick_upset": null
+      "pick_upset": null,
+      "quant_factors": {
+        "samples": 287,
+        "win_rate": 82.2,
+        "draw_rate": 13.2,
+        "loss_rate": 4.5,
+        "ev_home": -0.046,
+        "ev_draw": -0.139,
+        "ev_away": -0.601,
+        "lambda_h": 2.76,
+        "lambda_a": 0.81,
+        "golden_scores": [
+          "2-0",
+          "3-0",
+          "2-1"
+        ],
+        "trap_level": "NORMAL",
+        "trap_warning": "盘面处于正常期望区间",
+        "stars": "★★★★★",
+        "tier_title": "正路核心死胆",
+        "smart_pick": "单选主胜 (3)",
+        "smart_type": "SINGLE"
+      }
     }
   ]
 }
