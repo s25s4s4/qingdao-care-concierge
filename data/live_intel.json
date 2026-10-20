@@ -1,7 +1,19 @@
 {
-  "updated_at": "2026-10-20 19:30:49",
-  "total_tips": 9,
+  "updated_at": "2026-10-20 19:50:46",
+  "total_tips": 10,
   "live_feed": [
+    {
+      "id": 3152,
+      "channel": "matchplug",
+      "time": "2026-10-20 19:47",
+      "code": "周二006",
+      "league": "欧冠",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "巴黎圣曼 VS 巴萨",
+      "chinese": "欧洲那边暗流看好巴黎主场猛攻，砸向巴黎单队射正破5.5次。大巴黎主场必定抢开局疯狂压迫，巴萨后防压力极大，防守漏洞难补，本场奔着对攻大比分去，走胜平负不如搏巴黎多进球。",
+      "original": "FOOTBALL CHAMPIONS LEAGUE PSG VS BARCELONA PSG OVER 5.5 SHOTS ON TARGET ODDS : 1.77"
+    },
     {
       "id": 3146,
       "channel": "Upper90TipsFree",
