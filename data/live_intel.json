@@ -1,7 +1,19 @@
 {
-  "updated_at": "2026-10-20 22:06:01",
-  "total_tips": 15,
+  "updated_at": "2026-10-21 00:06:26",
+  "total_tips": 16,
   "live_feed": [
+    {
+      "id": 3226,
+      "channel": "football_predictions_ai",
+      "time": "2026-10-21 00:00",
+      "code": "周二005",
+      "league": "欧冠",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "罗马 VS 布拉迪斯",
+      "chinese": "欧冠这场罗马主场打布拉迪斯，外盘信心全扎堆主队，主推“半全场胜胜”，赔率压到1.40。红狼点球全中、零封率高，欺负斯洛伐克客队绰绰有余。看好罗马半场奠定胜局，稳稳拿下。",
+      "original": "🔥 HOT PICK 🌍 UEFA Champions League 🆚 AS Roma vs Slovan Bratislava 🕐 Tue, 20 Oct · 19:00 UTC 💡 Half Time / Full Time: Home/Home 📊 Odds: 1.40 ✅ Confidence: 71% 📌 "
+    },
     {
       "id": 3189,
       "channel": "feedinco",
