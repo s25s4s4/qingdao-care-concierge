@@ -1495,8 +1495,8 @@
                     if (!res.ok) throw new Error('Primary response not ok');
                     return res.json();
                 })
-                .catch(() => fetch(fallbackUrl, { cache: 'no-store' }).then(r => {
-                    if (!r.ok) throw new Error('Fallback response not ok');
+                .catch(() => fetch(rawUrl, { cache: 'no-store' }).then(r => {
+                    if (!r.ok) throw new Error('Raw response not ok');
                     return r.json();
                 }))
                 .catch(() => fetch(localUrl, { cache: 'no-store' }).then(r => r.json()))
