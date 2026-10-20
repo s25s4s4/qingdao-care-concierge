@@ -1,7 +1,19 @@
 {
-  "updated_at": "2026-10-21 04:27:00",
-  "total_tips": 17,
+  "updated_at": "2026-10-21 04:37:07",
+  "total_tips": 18,
   "live_feed": [
+    {
+      "id": 3298,
+      "channel": "calciomercato",
+      "time": "2026-10-21 03:05",
+      "code": "周二004",
+      "league": "欧冠",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "那不勒斯 VS 博德闪耀",
+      "chinese": "那不勒斯闪击得手！斯皮纳佐拉开场1分钟助攻波利塔诺破门，主场迅速建立优势。博德闪耀立足未稳先丢一球，后防漏洞彻底暴露。那不勒斯掌控进攻主动权，本场主胜走势极稳，顺势防大球穿盘！",
+      "original": "🇪🇺 UEFA CHAMPIONS LEAGUE 🇪🇺 3ª Giornata GOAL 🔵 Napoli 1-0 Bodø / Glimt 🟡 ⚽️ M. Politano 👟 L. Spinazzola ⏱️ 1’ ⚽️"
+    },
     {
       "id": 3357,
       "channel": "footballbettingtips10",
