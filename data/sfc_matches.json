@@ -32,7 +32,7 @@
       "live_status": "PRE",
       "score": "--",
       "pick_primary": "3",
-      "pick_secondary": "1",
+      "pick_secondary": null,
       "pick_desc": "单选主胜(3)",
       "pick_upset": null,
       "quant_factors": {
@@ -194,7 +194,7 @@
       "live_status": "PRE",
       "score": "--",
       "pick_primary": "3",
-      "pick_secondary": "1",
+      "pick_secondary": null,
       "pick_desc": "单选主胜(3)",
       "pick_upset": null,
       "quant_factors": {
@@ -248,7 +248,7 @@
       "live_status": "PRE",
       "score": "--",
       "pick_primary": "3",
-      "pick_secondary": "1",
+      "pick_secondary": null,
       "pick_desc": "首选主胜(3)·次选平局(1)",
       "pick_upset": "0",
       "quant_factors": {
@@ -356,9 +356,9 @@
       "live_status": "PRE",
       "score": "--",
       "pick_primary": "0",
-      "pick_secondary": "1",
+      "pick_secondary": null,
       "pick_desc": "单选客胜(0)",
-      "pick_upset": "3",
+      "pick_upset": null,
       "quant_factors": {
         "samples": 378,
         "win_rate": 29.1,
@@ -410,7 +410,7 @@
       "live_status": "PRE",
       "score": "--",
       "pick_primary": "3",
-      "pick_secondary": "1",
+      "pick_secondary": null,
       "pick_desc": "首选主胜(3)·次选平局(1)",
       "pick_upset": "0",
       "quant_factors": {
@@ -464,9 +464,9 @@
       "live_status": "PRE",
       "score": "--",
       "pick_primary": "3",
-      "pick_secondary": "1",
+      "pick_secondary": null,
       "pick_desc": "首选主胜(3)·次选平局(1)",
-      "pick_upset": "0",
+      "pick_upset": null,
       "quant_factors": {
         "samples": 5994,
         "win_rate": 45.7,
@@ -572,9 +572,9 @@
       "live_status": "PRE",
       "score": "--",
       "pick_primary": "3",
-      "pick_secondary": "1",
+      "pick_secondary": null,
       "pick_desc": "首选主胜(3)·次选平局(1)",
-      "pick_upset": "0",
+      "pick_upset": null,
       "quant_factors": {
         "samples": 5269,
         "win_rate": 45.8,
@@ -628,7 +628,7 @@
       "pick_primary": "3",
       "pick_secondary": "1",
       "pick_desc": "首选主胜(3)·次选平局(1)",
-      "pick_upset": "0",
+      "pick_upset": null,
       "quant_factors": {
         "samples": 2134,
         "win_rate": 48.2,

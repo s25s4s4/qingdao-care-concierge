@@ -341,8 +341,8 @@ def run_pipeline_on_sfc(sfc_json_path="E:/euro_intel_web/data/sfc_matches.json")
         if factor_res:
             m["quant_factors"] = factor_res
             
-            # 用 8 万场真实同赔数据自动校准传足的三色选号：
-            # 1. 核心首选 (pick_primary): 按真实打出胜率最高的方向
+            # 【实体店老彩民黄金做单法则】：
+            # 1. 核心首选 (pick_primary): 真实胜率最高的方向
             if factor_res["win_rate"] >= 50.0:
                 m["pick_primary"] = "3"
             elif factor_res["loss_rate"] >= 45.0:
@@ -350,22 +350,23 @@ def run_pipeline_on_sfc(sfc_json_path="E:/euro_intel_web/data/sfc_matches.json")
             else:
                 m["pick_primary"] = "3" if factor_res["win_rate"] >= factor_res["loss_rate"] else "0"
 
-            # 2. 次选防冷 (pick_secondary): 如果胜率没达到72%绝对死胆，自动补平局1
-            if factor_res["win_rate"] < 72.0 or factor_res["draw_rate"] >= 21.0:
+            # 2. 次选防冷 (pick_secondary): 严禁全盘泛滥点亮！
+            # 只有当胜率介于 48%~65% 之间且平局率高企(>=22%)的真正胶着战才允许双选防平！
+            # 高确定性稳胆(>=65%)与死胆必须单挑，严禁画蛇添足补平！
+            if 48.0 <= factor_res["win_rate"] < 65.0 and factor_res["draw_rate"] >= 22.0:
                 m["pick_secondary"] = "1"
             else:
                 m["pick_secondary"] = None
 
-            # 3. 🚨 爆冷预警 (pick_upset): 触发诱盘预警或深水冷门时，自动打上防大冷标记
+            # 3. 🚨 爆冷预警 (pick_upset): 严苛门槛，全期只抓 2~4 场真正的机构异常杀庄冷门！
+            # 只有当触发 HIGH_TRAP 严重诱盘、或强弱两头对冲战客胜率明显倒挂时才允许标记！
             if factor_res["trap_level"] == "HIGH_TRAP":
-                # 如果主队大热诱盘，爆冷项标记为客胜0
                 m["pick_upset"] = "0" if m["pick_primary"] == "3" else "3"
-            elif factor_res["loss_rate"] >= 25.0 and sa >= 2.0:
-                m["pick_upset"] = "0"
-            elif factor_res["win_rate"] <= 35.0 and sh >= 2.8:
-                m["pick_upset"] = "3"
-            elif factor_res["tier_title"] == "深水博冷区间":
+            elif factor_res["win_rate"] < 40.0 and factor_res["loss_rate"] >= 32.0 and sa >= 2.0:
+                # 豪门势均力敌巅峰战（如巴黎vs巴萨）
                 m["pick_upset"] = "0" if m["pick_primary"] == "3" else "3"
+            else:
+                m["pick_upset"] = None
 
             results.append(m)
 

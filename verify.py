@@ -122,11 +122,12 @@ def settle_all(matches):
                     break
         outcome = settle(m, remote)
         if outcome is None:
-            # FotMob 匹配不到（老场次/队名差异）时，退回本系统已记录的官方比分，
-            # 并明确标注 source=stored_score，避免这类场次永远停留在"未结算"。
-            outcome = settle(m, {"finished": True, "score": m.get("score")})
-            if outcome and m.get("settlement"):
-                m["settlement"]["source"] = "stored_score"
+            # 只有当比赛明确为【已完赛】且有真实终场比分时，才允许退回 stored_score 结算！
+            # 绝不能对【正在进行中 (is_live / PENDING)】的半场 0-0 误判为完赛！
+            if m.get("status") == "已完赛" and m.get("result") != "PENDING" and m.get("score") and m.get("score") not in ("--", "延期"):
+                outcome = settle(m, {"finished": True, "score": m.get("score")})
+                if outcome and m.get("settlement"):
+                    m["settlement"]["source"] = "stored_score"
         if outcome == "HIT":
             stats["hit"] += 1
         elif outcome == "MISS":
