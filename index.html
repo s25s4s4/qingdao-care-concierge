@@ -9,19 +9,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700;800&family=PingFang+SC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-body: #0d1117;
-            --bg-card: #161b22;
-            --bg-card-elevated: #21262d;
-            --border-color: #30363d;
-            --border-light: #484f58;
-            --text-primary: #f0f6fc;
-            --text-secondary: #8b949e;
-            --text-tertiary: #6e7681;
-            --brand-green: #238636;
-            --brand-green-light: #2ea043;
-            --accent-blue: #58a6ff;
-            --accent-gold: #d29922;
-            --accent-red: #f85149;
+            --bg-body: #07090e;
+            --bg-card: #0d1117;
+            --bg-card-elevated: #161c24;
+            --border-color: rgba(255, 255, 255, 0.08);
+            --border-light: rgba(255, 255, 255, 0.14);
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --text-tertiary: #64748b;
+            --brand-green: #10b981;
+            --brand-green-light: #34d399;
+            --accent-blue: #38bdf8;
+            --accent-gold: #f59e0b;
+            --accent-red: #f43f5e;
             --font-main: -apple-system, BlinkMacSystemFont, "PingFang SC", "Inter", "Microsoft YaHei", sans-serif;
             --font-mono: "JetBrains Mono", Consolas, monospace;
         }
@@ -222,25 +222,32 @@
             color: #fff;
         }
 
-        /* 比赛卡片 (含实机核销印章与比分) */
+        /* 比赛卡片 (含实机核销印章与比分) - 99分高光切边与微阻尼质感 */
         .match-row-card {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 14px;
+            border-top: 1px solid rgba(255, 255, 255, 0.12); /* 顶部精密捕光微刃 */
+            border-radius: 14px;
+            padding: 15px;
             margin-bottom: 12px;
-            transition: all 0.2s;
+            box-shadow: 0 10px 24px -6px rgba(0, 0, 0, 0.65); /* 弥散深邃悬浮 */
+            transition: transform 0.16s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.16s ease, border-color 0.16s ease;
             position: relative;
+            cursor: pointer;
+        }
+
+        .match-row-card:active {
+            transform: scale(0.988); /* 按压微阻尼反馈 */
         }
 
         .match-row-card.settled-hit {
-            border-color: rgba(46, 160, 67, 0.5);
-            background: rgba(22, 27, 34, 0.96);
+            border-color: rgba(16, 185, 129, 0.35);
+            background: rgba(13, 17, 23, 0.98);
         }
 
         .match-row-card.settled-miss {
-            border-color: rgba(248, 81, 73, 0.4);
-            background: rgba(22, 27, 34, 0.96);
+            border-color: rgba(244, 63, 94, 0.25);
+            background: rgba(13, 17, 23, 0.98);
         }
 
         .card-meta-line {
