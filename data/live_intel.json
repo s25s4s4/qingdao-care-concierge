@@ -1,7 +1,19 @@
 {
-  "updated_at": "2026-10-21 02:41:16",
+  "updated_at": "2026-10-21 02:56:28",
   "total_tips": 16,
   "live_feed": [
+    {
+      "id": 3289,
+      "channel": "footballbettingtips10",
+      "time": "2026-10-21 02:54",
+      "code": "周二006",
+      "league": "欧冠",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "巴黎圣曼 VS 巴萨",
+      "chinese": "欧冠焦点战，海外小单实盘开搞。外部机构一手单主攻双方进球（BTTS - Yes），看好对攻破门，两边防线都有漏洞，走大球、两队皆有破门稳当。",
+      "original": "👉 BET 1 👈 £60 IN FREE BETS WITH SPREADEX FOR ELIGIBLE NEW PLAYERS! BEST VALUE ONLY AT SPREADEX! SIGN UP NOW! ✅ Match : PSG v Barca ✅ Selection : BTTS - Yes ✅ St"
+    },
     {
       "id": 3226,
       "channel": "football_predictions_ai",
@@ -123,18 +135,6 @@
       "original": "🇪🇺 UCL BTTS TREBLE (Tue/Wed) —————————————— [Treble] - - - - - - - 🏟 VfB Stuttgart v Atletico Madrid (Tue) 📝 BOTH TEAMS TO SCORE 🇪🇺 UEFA Champions League ➕ 🏟 Co"
     },
     {
-      "id": 3105,
-      "channel": "tribuna_football",
-      "time": "2026-10-20 17:04",
-      "code": "周二006",
-      "league": "欧冠",
-      "category": "赛前军情",
-      "is_tip": false,
-      "match": "巴黎圣曼 VS 巴萨",
-      "chinese": "大巴黎欧冠12场不败，巴萨本赛季狂砍11连胜，两队状态全在峰顶！针尖对麦芒，两头连胜必断一家，机构造势分流意图明显。防守端巴萨更稳，看好客队不败，走让负，比分防1-1、1-2。",
-      "original": "PSG are unbeaten in their last 12 Champions League matches, with their last defeat coming against Sporting back in January 👀 Meanwhile, Barcelona have won 11 ga"
-    },
-    {
       "id": 3084,
       "channel": "prognozy",
       "time": "2026-10-20 16:05",
@@ -196,6 +196,18 @@
     }
   ],
   "archived": [
+    {
+      "id": 3105,
+      "channel": "tribuna_football",
+      "time": "2026-10-20 17:04",
+      "code": "周二006",
+      "league": "欧冠",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "巴黎圣曼 VS 巴萨",
+      "chinese": "大巴黎欧冠12场不败，巴萨本赛季狂砍11连胜，两队状态全在峰顶！针尖对麦芒，两头连胜必断一家，机构造势分流意图明显。防守端巴萨更稳，看好客队不败，走让负，比分防1-1、1-2。",
+      "original": "PSG are unbeaten in their last 12 Champions League matches, with their last defeat coming against Sporting back in January 👀 Meanwhile, Barcelona have won 11 ga"
+    },
     {
       "id": 3266,
       "channel": "matchpreviews",
