@@ -3099,6 +3099,59 @@
                     <p>${dossier.market_attitude}</p>
                 </details>
 
+                ${match.quant_factors ? `
+                <!-- 模块三点五：8万场竞彩多因子量化推演 -->
+                <div style="background: rgba(56, 189, 248, 0.08); border: 1px solid rgba(56, 189, 248, 0.35); border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+                        <div style="font-weight: 800; color: #38bdf8; font-size: 13px; display: flex; align-items: center; gap: 6px;">
+                            <span>📊</span> 8万场同赔多因子实战推演
+                        </div>
+                        <span style="font-size: 10px; background: rgba(56, 189, 248, 0.2); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.4); padding: 1px 6px; border-radius: 4px; font-weight: 700;">
+                            样本 ${match.quant_factors.samples} 场
+                        </span>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-bottom: 8px; text-align: center;">
+                        <div style="background: rgba(35, 134, 54, 0.15); border: 1px solid rgba(63, 185, 80, 0.3); border-radius: 6px; padding: 6px 2px;">
+                            <div style="font-size: 10px; color: var(--text-tertiary);">历史主胜概率</div>
+                            <div style="font-size: 14px; font-weight: 800; color: #3fb950; font-family: var(--font-mono);">${match.quant_factors.win_rate}%</div>
+                            <div style="font-size: 9px; color: ${match.quant_factors.ev_home>0?'#3fb950':'#8b949e'};">EV: ${match.quant_factors.ev_home>0?'+':''}${match.quant_factors.ev_home}</div>
+                        </div>
+                        <div style="background: rgba(210, 153, 34, 0.15); border: 1px solid rgba(210, 153, 34, 0.3); border-radius: 6px; padding: 6px 2px;">
+                            <div style="font-size: 10px; color: var(--text-tertiary);">历史平局概率</div>
+                            <div style="font-size: 14px; font-weight: 800; color: #d29922; font-family: var(--font-mono);">${match.quant_factors.draw_rate}%</div>
+                            <div style="font-size: 9px; color: ${match.quant_factors.ev_draw>0?'#3fb950':'#8b949e'};">EV: ${match.quant_factors.ev_draw>0?'+':''}${match.quant_factors.ev_draw}</div>
+                        </div>
+                        <div style="background: rgba(248, 81, 73, 0.12); border: 1px solid rgba(248, 81, 73, 0.3); border-radius: 6px; padding: 6px 2px;">
+                            <div style="font-size: 10px; color: var(--text-tertiary);">历史客胜概率</div>
+                            <div style="font-size: 14px; font-weight: 800; color: #ff7b72; font-family: var(--font-mono);">${match.quant_factors.loss_rate}%</div>
+                            <div style="font-size: 9px; color: ${match.quant_factors.ev_away>0?'#3fb950':'#8b949e'};">EV: ${match.quant_factors.ev_away>0?'+':''}${match.quant_factors.ev_away}</div>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; gap: 5px; font-size: 11px; background: rgba(0,0,0,0.25); padding: 8px 10px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.06);">
+                        <div style="display: flex; justify-content: space-between;">
+                            <span style="color: var(--text-secondary);">🎖️ 稳胆定级:</span>
+                            <span style="color: #e3b341; font-weight: 800;">${match.quant_factors.stars} [${match.quant_factors.tier_title}]</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between;">
+                            <span style="color: var(--text-secondary);">📐 泊松进球期望 (λ):</span>
+                            <span style="color: #fff; font-family: var(--font-mono); font-weight: 700;">主 ${match.quant_factors.lambda_h} : 客 ${match.quant_factors.lambda_a}</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between;">
+                            <span style="color: var(--text-secondary);">🎯 泊松聚类黄金比分:</span>
+                            <span style="color: #38bdf8; font-family: var(--font-mono); font-weight: 800;">${match.quant_factors.golden_scores.join(' / ')}</span>
+                        </div>
+                    </div>
+
+                    ${match.quant_factors.trap_level !== 'NORMAL' ? `
+                    <div style="margin-top: 8px; font-size: 11px; color: #ff7b72; font-weight: 700; background: rgba(248, 81, 73, 0.15); padding: 6px 10px; border-radius: 5px; border-left: 3px solid #f85149; line-height: 1.4;">
+                        ${match.quant_factors.trap_warning}
+                    </div>
+                    ` : ''}
+                </div>
+                ` : ''}
+
                 <!-- 模块四：实战研判与决策指引 -->
                 <div style="background: rgba(35, 134, 54, 0.12); border: 1px solid rgba(46, 160, 67, 0.4); border-radius: 8px; padding: 12px; margin-bottom: 12px;">
                     <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
