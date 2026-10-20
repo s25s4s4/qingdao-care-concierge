@@ -1,7 +1,19 @@
 {
-  "updated_at": "2026-10-20 20:01:00",
-  "total_tips": 11,
+  "updated_at": "2026-10-20 20:06:01",
+  "total_tips": 12,
   "live_feed": [
+    {
+      "id": 3157,
+      "channel": "TipstrrTips",
+      "time": "2026-10-20 20:05",
+      "code": "周二006",
+      "league": "欧冠",
+      "category": "推单",
+      "is_tip": true,
+      "match": "巴黎圣曼 VS 巴萨",
+      "chinese": "欧冠强强对话，外网情报倾向力挺巴黎主场拿下巴萨。巴萨近期火力虽猛，但巴黎主胜2.40高水资金正在持续汇入，防线互捅局直奔主胜，去主赢球性价比极高。",
+      "original": "Our daily free football tip is provided by Javier Rey , who expects Paris Saint-Germain to get the better of free-scoring Barcelona in Tuesday's heavyweight Cha"
+    },
     {
       "id": 3156,
       "channel": "football_predictions_ai",
