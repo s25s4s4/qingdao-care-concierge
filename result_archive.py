@@ -128,7 +128,7 @@ def snapshot(path=ARCHIVE):
             teams[t] = teams.get(t, 0) + 1
         leagues[x["lg"]] = leagues.get(x["lg"], 0) + 1
     ready = sum(1 for c in teams.values() if c >= 10)
-    return {
+    out = {
         "total": len(items),
         "teams": len(teams),
         "teams_ge10": ready,
@@ -137,6 +137,13 @@ def snapshot(path=ARCHIVE):
         "first_date": items[0]["date"] if items else None,
         "last_date": items[-1]["date"] if items else None,
     }
+    # 归档只是"最近那层"，真正决定详情页能不能看的是全库覆盖度
+    try:
+        import team_stats as _ts
+        out["library"] = _ts.coverage()
+    except Exception:
+        pass
+    return out
 
 
 def record_stats(added=0, path=ARCHIVE, stats_path=STATS):
@@ -172,10 +179,20 @@ if __name__ == "__main__":
     import sys
     if "--stats" in sys.argv:
         snap = snapshot()
-        print(f"归档总数 {snap['total']} 场  球队 {snap['teams']} 支  联赛 {snap['leagues']} 个")
-        print(f"能凑齐 10 场的球队：{snap['teams_ge10']} 支 "
+        print("【归档层】最近赛果，随流水线增长")
+        print(f"  {snap['total']} 场  球队 {snap['teams']} 支  联赛 {snap['leagues']} 个  "
+              f"日期 {snap['first_date']} ~ {snap['last_date']}")
+        print(f"  能凑齐 10 场的球队：{snap['teams_ge10']} 支 "
               f"({snap['teams_ge10'] / snap['teams'] * 100 if snap['teams'] else 0:.0f}%)")
-        print(f"日期范围 {snap['first_date']} ~ {snap['last_date']}")
+        lib = snap.get("library")
+        if lib:
+            tot = lib["teams"] or 1
+            print("\n【全库覆盖度】决定详情页「近期战绩」能不能信的真实指标")
+            print(f"  库内球队 {lib['teams']} 支")
+            print(f"  全部历史能凑 10 场：{lib['all']} 支 ({lib['all'] / tot * 100:.1f}%)")
+            for w in ("365", "180"):
+                if w in lib:
+                    print(f"  近 {w} 天能凑 10 场：{lib[w]} 支 ({lib[w] / tot * 100:.1f}%)")
         print("\n联赛分布 Top10:")
         for lg, c in list(snap["by_league"].items())[:10]:
             print(f"  {lg:<12}{c:>5} 场")

@@ -181,6 +181,24 @@ def build(home, away, before, idx=None):
     }
 
 
+def coverage(windows=(365, 180), idx=None):
+    """全库覆盖度：不同时间窗内能凑齐 10 场的球队占比。
+    注意这是「库」的覆盖度，不是「归档」的覆盖度 —— 归档只是最近那层。"""
+    idx = idx or load()
+    from datetime import datetime as _dt, timedelta as _td
+    out = {"teams": len(idx), "all": 0}
+    for w in windows:
+        out[str(w)] = 0
+    floors = {w: (_dt.now() - _td(days=w)).strftime("%Y-%m-%d") for w in windows}
+    for t, games in idx.items():
+        if len(games) >= 10:
+            out["all"] += 1
+        for w in windows:
+            if sum(1 for x in games if x["date"] >= floors[w]) >= 10:
+                out[str(w)] += 1
+    return out
+
+
 def _fmt(blk):
     if not blk:
         return "  无数据"
