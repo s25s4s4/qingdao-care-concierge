@@ -1,18 +1,7 @@
 {
   "updated_at": "2026-10-20 09:45:19",
-  "total_tips": 13,
+  "total_tips": 3,
   "live_feed": [
-    {
-      "id": 3003,
-      "channel": "FabrizioRomano",
-      "time": "2026-10-20 07:23",
-      "code": "周二006",
-      "league": "欧冠",
-      "category": "赛前军情(未翻译)",
-      "match": "巴黎圣曼 VS 巴萨",
-      "chinese": "[原文·未翻译] 🔵 🔴 Hansi Flick: “I’m really enjoying the journey we’re on at Barcelona”. “The work and mentality we’re showing make me proud of this team. ",
-      "translated": false
-    },
     {
       "id": 2986,
       "channel": "Upper90TipsFree",
@@ -21,30 +10,8 @@
       "league": "欧冠",
       "category": "赛前军情(未翻译)",
       "match": "巴黎圣曼 VS 巴萨",
-      "chinese": "[原文·未翻译] 🎯 FREE SELECTION DAY 10/30 —————————————— - - - - - - - 🏟 PSG v Barcelona 📝 BOTH TEAMS TO SCORE 📝 BARCELONA OVER 1.5 GOALS 🇪🇺 UEFA Champions",
-      "translated": false
-    },
-    {
-      "id": 2926,
-      "channel": "FabrizioRomano",
-      "time": "2026-10-20 02:23",
-      "code": "周二006",
-      "league": "欧冠",
-      "category": "赛前军情(未翻译)",
-      "match": "巴黎圣曼 VS 巴萨",
-      "chinese": "[原文·未翻译] 🚨 Barça president Laporta on Mbappé to Real Madrid: “I said it! Having more than one rooster in the same chicken coop can't work, never”. “T",
-      "translated": false
-    },
-    {
-      "id": 2913,
-      "channel": "FabrizioRomano",
-      "time": "2026-10-20 01:49",
-      "code": "周二006",
-      "league": "欧冠",
-      "category": "赛前军情(未翻译)",
-      "match": "巴黎圣曼 VS 巴萨",
-      "chinese": "[原文·未翻译] ⭐️ 🇪🇸 Luis Enrique: “Lamine Yamal is a special player, he is the chosen one”. “He has a fantastic future and present already, he’s a gift fo",
-      "translated": false
+      "chinese": "这期欧冠重头戏，欧洲内部看好对攻互爆！资金死盯两队皆有破门，重点防巴萨客场进球至少打入2球。巴黎后防抗压成疑，走势极度倾向大球对捅，建议防双方进球，客队攻击群值得高看。",
+      "translated": true
     },
     {
       "id": 2880,
@@ -59,61 +26,6 @@
       "original": "⚽ 🔥 CHAMPIONS LEAGUE – tomorrow PICKS 🔥 ⚽ Four exciting matchups to follow, featuring goals, anytime scorers and player markets! 🎯 🇵🇹 PORTO – PSV 🇳🇱 ⚽ Both Team"
     },
     {
-      "id": 2549,
-      "channel": "FabrizioRomano",
-      "time": "2026-10-19 01:38",
-      "code": "周二007",
-      "league": "欧冠",
-      "category": "赛前军情(未翻译)",
-      "match": "利物浦 VS 比利亚雷",
-      "chinese": "[原文·未翻译] 🚨 Rio Ngumoha on new contract talks with Liverpool: “It's all with my agent now. I think it is all going well”. “I am not too sure. I just l",
-      "translated": false
-    },
-    {
-      "id": 2795,
-      "channel": "olimpbet",
-      "time": "2026-10-19 18:59",
-      "code": "周二005",
-      "league": "欧冠",
-      "category": "赛前军情(未翻译)",
-      "match": "罗马 VS 布拉迪斯",
-      "chinese": "[原文·未翻译] 🔥 УГАДЫВАЙ КОЛИЧЕСТВО ГОЛОВ И ЗАБИРАЙ ФРИБЕТ 😍 Уже завтра стартует 3-й тур ЛЧ — идеальный шанс залутать фрибетики! 👉 Пиши коммент с логином ",
-      "translated": false
-    },
-    {
-      "id": 2797,
-      "channel": "calciomercato",
-      "time": "2026-10-19 19:01",
-      "code": "周二005",
-      "league": "欧冠",
-      "category": "赛前军情(未翻译)",
-      "match": "罗马 VS 布拉迪斯",
-      "chinese": "[原文·未翻译] ‼️ 🔴 L’obiettivo principale del Milan nel mercato invernale sarà quello di rinforzare la difesa. 👀 Nel mirino c’è Daniele Ghilardi della Rom",
-      "translated": false
-    },
-    {
-      "id": 2849,
-      "channel": "tribuna_football",
-      "time": "2026-10-19 22:18",
-      "code": "周二008",
-      "league": "欧冠",
-      "category": "赛前军情(未翻译)",
-      "match": "曼城 VS 雅典AEK",
-      "chinese": "[原文·未翻译] Man City's future could be turned upside down if the latest reports are accurate 😳 Insiders reportedly expect a huge points deduction that c",
-      "translated": false
-    },
-    {
-      "id": 2835,
-      "channel": "FabrizioRomano",
-      "time": "2026-10-19 20:59",
-      "code": "周二007",
-      "league": "欧冠",
-      "category": "赛前军情(未翻译)",
-      "match": "利物浦 VS 比利亚雷",
-      "chinese": "[原文·未翻译] 🚨 Ronald Araujo on Liverpool buy option clause to sign him from Barça in 2027: “It's very early…”. “I'm just trying to enjoy every day, cont",
-      "translated": false
-    },
-    {
       "id": 2848,
       "channel": "feedinco",
       "time": "2026-10-19 22:05",
@@ -121,30 +33,8 @@
       "league": "欧冠",
       "category": "赛前军情(未翻译)",
       "match": "那不勒斯 VS 博德闪耀",
-      "chinese": "[原文·未翻译] FEEDINCO.com Tips for Tuesday, 20 October 1 - Man City - AEK Athens 1X - Fenerbahce - Slavia Prague 1X - Napoli - Bodoe/Glimt O1.5 - Liverpo",
-      "translated": false
-    },
-    {
-      "id": 2840,
-      "channel": "olimpbet",
-      "time": "2026-10-19 21:28",
-      "code": "周二004",
-      "league": "欧冠",
-      "category": "赛前军情(未翻译)",
-      "match": "那不勒斯 VS 博德闪耀",
-      "chinese": "[原文·未翻译] 🔥 АДМИН СОБИРАЕТ ЭКСПРЕСС НА ЛЧ 🤩 Захотел поучаствовать в акции «Турнир на футбол» и побороться за большой приз 👀 Выбрал 12 возможных вариан",
-      "translated": false
-    },
-    {
-      "id": 2611,
-      "channel": "FabrizioRomano",
-      "time": "2026-10-19 03:43",
-      "code": "周二005",
-      "league": "欧冠",
-      "category": "赛前军情(未翻译)",
-      "match": "罗马 VS 布拉迪斯",
-      "chinese": "[原文·未翻译] ⚪️ ✨ Arda Güler with three G/A in the last two games. Two assists against Roma and a golazo tonight. 🇹🇷",
-      "translated": false
+      "chinese": "周二004那不勒斯这战，海外料子明确看好主场不败（1X）。博德闪耀客战防守偏软，那不勒斯主场掌控节奏，机构暗盘对主队打穿有防备，稳妥首选主胜防平，双选防平局足够，看好主队拿分。",
+      "translated": true
     }
   ],
   "archived": [
