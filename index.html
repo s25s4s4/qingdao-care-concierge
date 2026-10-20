@@ -1465,19 +1465,22 @@
         setInterval(updateSyncStatus, 5000);
         function fetchLiveScoresPulse() { /* 由 initLiveSSE 替代，保留函数名兼容旧调用 */ }
 
-        // 加载全量官方比赛数据 (协议智能适配：优先相对路径同源直连，避免 HTTPS 跨协议拦截)
+        // 加载全量官方比赛数据 (强制穿透所有缓存，优先获取阿里云高频直通与同源)
         function loadMatchesData(filterMode = 'all') {
             const isHttps = location.protocol === 'https:';
-            const localUrl = './data/official_matches.json?_t=' + Date.now();
-            const aliyunUrl = 'http://47.121.185.16/football/official_matches.json?_t=' + Date.now();
-            const rawUrl = 'https://raw.githubusercontent.com/s25s4s4/qingdao-care-concierge/main/data/official_matches.json?_t=' + Date.now();
+            // 加多重随机参数与时间戳，彻底粉碎浏览器和手机运营商对 json 的强缓存
+            const bust = '_t=' + Date.now() + '&_r=' + Math.random().toString(36).substring(2, 8);
+            const localUrl = './data/official_matches.json?' + bust;
+            const aliyunUrl = 'http://47.121.185.16/football/official_matches.json?' + bust;
+            const rawUrl = 'https://raw.githubusercontent.com/s25s4s4/qingdao-care-concierge/main/data/official_matches.json?' + bust;
 
-            // 同源优先：GitHub raw 在移动网络经常长时间挂起，会让首屏白屏。
-            // 两个源并发请求，谁先成功用谁；同源优先，避免 raw 拖慢首屏。
             const withTimeout = (url, ms) => new Promise((resolve, reject) => {
                 const done = (fn, v) => { clearTimeout(t); fn(v); };
                 const t = setTimeout(() => reject(new Error('timeout ' + url)), ms);
-                fetch(url, { cache: 'no-store' }).then(r => done(resolve, r), e => done(reject, e));
+                fetch(url, { 
+                    cache: 'no-store',
+                    headers: { 'Cache-Control': 'no-cache, no-store, must-revalidate', 'Pragma': 'no-cache' }
+                }).then(r => done(resolve, r), e => done(reject, e));
             });
             const sources = isHttps ? [localUrl, rawUrl] : [aliyunUrl, localUrl];
 
