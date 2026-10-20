@@ -1,7 +1,19 @@
 {
-  "updated_at": "2026-10-20 17:51:21",
+  "updated_at": "2026-10-20 19:30:49",
   "total_tips": 9,
   "live_feed": [
+    {
+      "id": 3146,
+      "channel": "Upper90TipsFree",
+      "time": "2026-10-20 19:28",
+      "code": "周二009",
+      "league": "欧冠",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "斯图加特 VS 马竞",
+      "chinese": "欧冠这场斯图加特死磕马竞，外围热钱串子单猛砸“双方都有进球（BTTS）”。德甲主场打法激进，马竞客战防线有漏洞但反击贼狠，奔着大球走，双破门概率极大，建议防个2-1或1-1。",
+      "original": "🇪🇺 UCL BTTS TREBLE (Tue/Wed) —————————————— [Treble] - - - - - - - 🏟 VfB Stuttgart v Atletico Madrid (Tue) 📝 BOTH TEAMS TO SCORE 🇪🇺 UEFA Champions League ➕ 🏟 Co"
+    },
     {
       "id": 3105,
       "channel": "tribuna_football",
@@ -49,18 +61,6 @@
       "match": "斯图加特 VS 马竞",
       "chinese": "斯图加特联赛3败外战回光，马竞6连胜火力凶猛但后防缺核心。客队底蕴硬吃对手，主看马竞不败、走平负，防平打出；两边火力都在线，重点防大球，单挑看好客胜搏2球以上。",
       "original": "🔥 Ставка дня от TelegaBet 🇩🇪 Штутгарт - Атлетико 🇪🇸 🇪🇺 Лига Чемпионов, Тур - 3 ⏰ Начало матча в 22:00 МСК Швабы успешно выступают в ЛЧ, одержав победы в обоих с"
-    },
-    {
-      "id": 3074,
-      "channel": "football_predictions_ai",
-      "time": "2026-10-20 16:00",
-      "code": "周二009",
-      "league": "欧冠",
-      "category": "推单",
-      "is_tip": true,
-      "match": "斯图加特 VS 马竞",
-      "chinese": "欧冠焦点战。外盘初指倾向马竞客让平半低水，机构对西蒙尼客场抢分信心达七成。斯图加特近期虽连胜且点球全中，但马竞场均轰入2.2球火力更硬，正路首选马竞保平争胜，防平走客队受让或平半盘。",
-      "original": "🔥 HOT PICK 🌍 UEFA Champions League 🆚 VfB Stuttgart vs Atletico Madrid 🕐 Tue, 20 Oct · 19:00 UTC 💡 Asian Handicap: Away -0.25 📊 Odds: 1.40 ✅ Confidence: 71% 📌 Ma"
     },
     {
       "id": 3056,
@@ -112,6 +112,18 @@
     }
   ],
   "archived": [
+    {
+      "id": 3074,
+      "channel": "football_predictions_ai",
+      "time": "2026-10-20 16:00",
+      "code": "周二009",
+      "league": "欧冠",
+      "category": "推单",
+      "is_tip": true,
+      "match": "斯图加特 VS 马竞",
+      "chinese": "欧冠焦点战。外盘初指倾向马竞客让平半低水，机构对西蒙尼客场抢分信心达七成。斯图加特近期虽连胜且点球全中，但马竞场均轰入2.2球火力更硬，正路首选马竞保平争胜，防平走客队受让或平半盘。",
+      "original": "🔥 HOT PICK 🌍 UEFA Champions League 🆚 VfB Stuttgart vs Atletico Madrid 🕐 Tue, 20 Oct · 19:00 UTC 💡 Asian Handicap: Away -0.25 📊 Odds: 1.40 ✅ Confidence: 71% 📌 Ma"
+    },
     {
       "id": 3053,
       "channel": "bulletbetpredictions",
