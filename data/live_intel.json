@@ -1,7 +1,19 @@
 {
-  "updated_at": "2026-10-20 20:51:07",
-  "total_tips": 14,
+  "updated_at": "2026-10-20 22:06:01",
+  "total_tips": 15,
   "live_feed": [
+    {
+      "id": 3189,
+      "channel": "feedinco",
+      "time": "2026-10-20 22:05",
+      "code": "周三004",
+      "league": "欧冠",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "科莫 VS 曼联",
+      "chinese": "欧洲推单机构倾向科莫主场拿分，本场给出的核心态度是主不败（双选胜/平）。曼联客场面临硬仗，庄家资金流向对红魔客胜缺乏防范，建议重点防冷门打出，博主队受让拿分。",
+      "original": "FEEDINCO.com Tips for Wednesday, 21 October 1X - Aston Villa - Viking 1X - Betis - Feyenoord 1X - Como - Man Utd 1X - Real Madrid - RB Leipzig 🔥 All upcoming Fo"
+    },
     {
       "id": 3163,
       "channel": "matchplug",
