@@ -1546,9 +1546,9 @@
             const container = document.getElementById('match-feed');
             container.innerHTML = '';
 
-            // 严格业务铁律：首页赛事中心只显示【未完赛】的在售与进行中比赛！
-            // 只要比赛比完，自动从首页剥离，只在【赛果验证】大账本中展示！
-            let activeList = ALL_OFFICIAL_MATCHES.filter(m => m.result === 'PENDING');
+            // 严格业务铁律：首页赛事中心只显示【未完赛】的在售与进行中比赛，以及【刚刚完赛】的比赛保留展示！
+            // 只要比赛正式核销且过了本轮，自动归入【赛果验证】大账本！
+            let activeList = ALL_OFFICIAL_MATCHES.filter(m => m.result === 'PENDING' || m.status === '已完赛');
 
             let list = activeList.filter(m => {
                 if (filterMode === 'pending_only') return !m.status.includes('进行中') && !m.status.includes('半场') && !m.status.includes('中断');
