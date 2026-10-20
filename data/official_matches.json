@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-20 08:51:20",
+  "updated_at": "2026-10-20 08:52:17",
   "total": 83,
   "matches": [
     {
@@ -199,7 +199,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周五002",
@@ -352,7 +353,8 @@
         },
         "h2h": null,
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周五003",
@@ -451,7 +453,7 @@
         "result": "HIT",
         "score": "0-2",
         "source": "stored_score",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "客胜"
       },
       "stats": {
@@ -583,7 +585,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周五004",
@@ -681,7 +684,7 @@
         "result": "HIT",
         "score": "4-0",
         "source": "stored_score",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "主胜"
       },
       "stats": {
@@ -813,7 +816,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周五005",
@@ -912,7 +916,7 @@
         "result": "HIT",
         "score": "2-1",
         "source": "stored_score",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "主胜"
       },
       "stats": {
@@ -1044,7 +1048,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周五006",
@@ -1143,7 +1148,7 @@
         "result": "HIT",
         "score": "1-0",
         "source": "stored_score",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "主胜"
       },
       "stats": {
@@ -1275,7 +1280,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周五007",
@@ -1375,7 +1381,7 @@
         "result": "MISS",
         "score": "4-2",
         "source": "stored_score",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "主胜"
       },
       "stats": {
@@ -1507,7 +1513,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周五008",
@@ -1605,7 +1612,7 @@
         "result": "HIT",
         "score": "0-3",
         "source": "stored_score",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "客胜"
       },
       "stats": {
@@ -1713,7 +1720,8 @@
         },
         "h2h": null,
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周五009",
@@ -1812,7 +1820,7 @@
         "result": "HIT",
         "score": "1-2",
         "source": "stored_score",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "客胜"
       },
       "stats": {
@@ -1870,7 +1878,8 @@
         "away": null,
         "h2h": null,
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周五010",
@@ -1969,7 +1978,7 @@
         "result": "HIT",
         "score": "1-1",
         "source": "stored_score",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "平局"
       },
       "stats": {
@@ -2101,7 +2110,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周五011",
@@ -2200,7 +2210,7 @@
         "result": "HIT",
         "score": "2-0",
         "source": "stored_score",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "主胜"
       },
       "stats": {
@@ -2308,7 +2318,8 @@
         },
         "h2h": null,
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周六001",
@@ -2410,7 +2421,7 @@
         "result": "HIT",
         "score": "2 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "主胜"
       },
       "stats": {
@@ -2518,7 +2529,8 @@
         },
         "h2h": null,
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周六002",
@@ -2621,7 +2633,7 @@
         "result": "HIT",
         "score": "2 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "主胜"
       },
       "stats": {
@@ -2753,7 +2765,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周六003",
@@ -2855,7 +2868,7 @@
         "result": "HIT",
         "score": "2 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "主胜"
       },
       "stats": {
@@ -2973,7 +2986,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周六004",
@@ -3076,7 +3090,7 @@
         "result": "HIT",
         "score": "2 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "平局"
       },
       "stats": {
@@ -3208,7 +3222,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周六005",
@@ -3312,7 +3327,7 @@
         "result": "MISS",
         "score": "1 - 3",
         "source": "fotmob",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "客胜"
       },
       "stats": {
@@ -3444,7 +3459,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周六006",
@@ -3547,7 +3563,7 @@
         "result": "HIT",
         "score": "1 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "平局"
       },
       "stats": {
@@ -3605,7 +3621,8 @@
         },
         "h2h": null,
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周六007",
@@ -3708,7 +3725,7 @@
         "result": "HIT",
         "score": "0 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "客胜"
       },
       "stats": {
@@ -3840,7 +3857,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周六008",
@@ -3939,7 +3957,7 @@
         "result": "HIT",
         "score": "2 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "平局"
       },
       "stats": {
@@ -4047,7 +4065,8 @@
         },
         "h2h": null,
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周六009",
@@ -4150,7 +4169,7 @@
         "result": "HIT",
         "score": "0 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "客胜"
       },
       "stats": {
@@ -4282,7 +4301,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周六010",
@@ -4382,7 +4402,7 @@
         "result": "MISS",
         "score": "0-2",
         "source": "stored_score",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "客胜"
       },
       "stats": {
@@ -4514,7 +4534,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周六011",
@@ -4618,7 +4639,7 @@
         "result": "MISS",
         "score": "1 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "主胜"
       },
       "stats": {
@@ -4740,7 +4761,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周六012",
@@ -4839,7 +4861,7 @@
         "result": "HIT",
         "score": "4-0",
         "source": "stored_score",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "主胜"
       },
       "stats": {
@@ -4961,7 +4983,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周六013",
@@ -5065,7 +5088,7 @@
         "result": "MISS",
         "score": "4 - 3",
         "source": "fotmob",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "主胜"
       },
       "stats": {
@@ -5187,7 +5210,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周六014",
@@ -5291,7 +5315,7 @@
         "result": "MISS",
         "score": "2 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "平局"
       },
       "stats": {
@@ -5423,7 +5447,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周六015",
@@ -5526,7 +5551,7 @@
         "result": "HIT",
         "score": "0 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "客胜"
       },
       "stats": {
@@ -5658,7 +5683,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周六016",
@@ -5762,7 +5788,7 @@
         "result": "MISS",
         "score": "1-0",
         "source": "stored_score",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "主胜"
       },
       "stats": {
@@ -5894,7 +5920,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周六017",
@@ -5998,7 +6025,7 @@
         "result": "HIT",
         "score": "0 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "平局"
       },
       "stats": {
@@ -6130,7 +6157,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周六018",
@@ -6234,7 +6262,7 @@
         "result": "MISS",
         "score": "1 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "客胜"
       },
       "stats": {
@@ -6366,7 +6394,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周六019",
@@ -6468,7 +6497,7 @@
         "result": "HIT",
         "score": "3 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "主胜"
       },
       "stats": {
@@ -6576,7 +6605,8 @@
         },
         "h2h": null,
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周六020",
@@ -6678,7 +6708,7 @@
         "result": "HIT",
         "score": "1 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "主胜"
       },
       "stats": {
@@ -6810,7 +6840,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周六021",
@@ -6914,7 +6945,7 @@
         "result": "MISS",
         "score": "0 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "平局"
       },
       "stats": {
@@ -7046,7 +7077,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周六022",
@@ -7148,7 +7180,7 @@
         "result": "HIT",
         "score": "1 - 3",
         "source": "fotmob",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "客胜"
       },
       "stats": {
@@ -7280,7 +7312,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周六023",
@@ -7383,7 +7416,7 @@
         "result": "HIT",
         "score": "1-3",
         "source": "stored_score",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "客胜"
       },
       "stats": {
@@ -7515,7 +7548,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周六024",
@@ -7624,7 +7658,7 @@
         "result": "MISS",
         "score": "0-1",
         "source": "stored_score",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "客胜"
       },
       "stats": {
@@ -7756,7 +7790,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周六025",
@@ -7877,7 +7912,7 @@
         "result": "HIT",
         "score": "6-1",
         "source": "stored_score",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "让胜"
       },
       "stats": {
@@ -8009,7 +8044,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周六026",
@@ -8117,7 +8153,7 @@
         "result": "HIT",
         "score": "2-5",
         "source": "stored_score",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "客胜"
       },
       "stats": {
@@ -8249,7 +8285,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周六027",
@@ -8357,7 +8394,7 @@
         "result": "HIT",
         "score": "3-4",
         "source": "stored_score",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "客胜"
       },
       "stats": {
@@ -8479,7 +8516,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周六028",
@@ -8591,7 +8629,7 @@
         "result": "HIT",
         "score": "2-0",
         "source": "stored_score",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "主胜"
       },
       "stats": {
@@ -8723,7 +8761,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周六029",
@@ -8829,7 +8868,7 @@
         "result": "HIT",
         "score": "0-0",
         "source": "stored_score",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "平局"
       },
       "stats": {
@@ -8961,7 +9000,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周六030",
@@ -9071,7 +9111,7 @@
         "result": "HIT",
         "score": "1-0",
         "source": "stored_score",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "主胜"
       },
       "stats": {
@@ -9203,7 +9243,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周日001",
@@ -9315,7 +9356,7 @@
         "result": "HIT",
         "score": "3 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "主胜"
       },
       "stats": {
@@ -9447,7 +9488,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周日002",
@@ -9558,7 +9600,7 @@
         "result": "HIT",
         "score": "1 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "平局"
       },
       "stats": {
@@ -9690,7 +9732,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周日003",
@@ -9800,7 +9843,7 @@
         "result": "MISS",
         "score": "2 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "平局"
       },
       "stats": {
@@ -9932,7 +9975,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周日004",
@@ -10044,7 +10088,7 @@
         "result": "MISS",
         "score": "4 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "主胜"
       },
       "stats": {
@@ -10176,7 +10220,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周日005",
@@ -10288,7 +10333,7 @@
         "result": "MISS",
         "score": "0 - 3",
         "source": "fotmob",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "客胜"
       },
       "stats": {
@@ -10420,7 +10465,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周日006",
@@ -10531,7 +10577,7 @@
         "result": "HIT",
         "score": "2 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "主胜"
       },
       "stats": {
@@ -10628,7 +10674,8 @@
         },
         "h2h": null,
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周日007",
@@ -10739,7 +10786,7 @@
         "result": "HIT",
         "score": "2-2",
         "source": "stored_score",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "平局"
       },
       "stats": {
@@ -10871,7 +10918,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周日008",
@@ -10981,7 +11029,7 @@
         "result": "HIT",
         "score": "2 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "主胜"
       },
       "stats": {
@@ -11086,7 +11134,8 @@
         },
         "h2h": null,
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周日009",
@@ -11197,7 +11246,7 @@
         "result": "MISS",
         "score": "0 - 3",
         "source": "fotmob",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "客胜"
       },
       "stats": {
@@ -11329,7 +11378,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周日010",
@@ -11440,7 +11490,7 @@
         "result": "HIT",
         "score": "1 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "平局"
       },
       "stats": {
@@ -11572,7 +11622,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周日011",
@@ -11678,7 +11729,7 @@
         "result": "HIT",
         "score": "2-0",
         "source": "stored_score",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "主胜"
       },
       "stats": {
@@ -11810,7 +11861,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周日012",
@@ -11922,7 +11974,7 @@
         "result": "HIT",
         "score": "1 - 3",
         "source": "fotmob",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "客胜"
       },
       "stats": {
@@ -12054,7 +12106,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周日013",
@@ -12165,7 +12218,7 @@
         "result": "HIT",
         "score": "2 - 5",
         "source": "fotmob",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "客胜"
       },
       "stats": {
@@ -12297,7 +12350,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周日014",
@@ -12409,7 +12463,7 @@
         "result": "HIT",
         "score": "2 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "主胜"
       },
       "stats": {
@@ -12541,7 +12595,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周日015",
@@ -12648,7 +12703,7 @@
         "result": "HIT",
         "score": "2-1",
         "source": "stored_score",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "主胜"
       },
       "stats": {
@@ -12780,7 +12835,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周日016",
@@ -12885,7 +12941,7 @@
         "result": "HIT",
         "score": "2-5",
         "source": "stored_score",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "客胜"
       },
       "stats": {
@@ -13017,7 +13073,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周日017",
@@ -13127,7 +13184,7 @@
         "result": "MISS",
         "score": "1 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "主胜"
       },
       "stats": {
@@ -13259,7 +13316,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周日018",
@@ -13371,7 +13429,7 @@
         "result": "HIT",
         "score": "0 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "客胜"
       },
       "stats": {
@@ -13503,7 +13561,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周日019",
@@ -13613,7 +13672,7 @@
         "result": "HIT",
         "score": "1 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "客胜"
       },
       "stats": {
@@ -13745,7 +13804,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周日020",
@@ -13852,7 +13912,7 @@
         "result": "HIT",
         "score": "3-2",
         "source": "stored_score",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "主胜"
       },
       "stats": {
@@ -13984,7 +14044,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周日021",
@@ -14094,7 +14155,7 @@
         "result": "HIT",
         "score": "2-5",
         "source": "stored_score",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "客胜"
       },
       "stats": {
@@ -14226,7 +14287,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周日022",
@@ -14334,7 +14396,7 @@
         "result": "MISS",
         "score": "0-3",
         "source": "stored_score",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "客胜"
       },
       "stats": {
@@ -14466,7 +14528,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周日023",
@@ -14572,7 +14635,7 @@
         "result": "HIT",
         "score": "2-1",
         "source": "stored_score",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "主胜"
       },
       "stats": {
@@ -14704,7 +14767,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周日024",
@@ -14820,7 +14884,7 @@
         "result": "HIT",
         "score": "4-1",
         "source": "stored_score",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "让胜"
       },
       "stats": {
@@ -14952,7 +15016,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周日025",
@@ -15067,7 +15132,7 @@
         "result": "MISS",
         "score": "1-2",
         "source": "stored_score",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "让负"
       },
       "stats": {
@@ -15199,7 +15264,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周一001",
@@ -15312,7 +15378,7 @@
         "result": "HIT",
         "score": "4-0",
         "source": "stored_score",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "主胜"
       },
       "stats": {
@@ -15439,7 +15505,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周一002",
@@ -15549,7 +15616,7 @@
         "result": "HIT",
         "score": "1-2",
         "source": "stored_score",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "客胜"
       },
       "stats": {
@@ -15681,7 +15748,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周一003",
@@ -15796,7 +15864,7 @@
         "result": "HIT",
         "score": "0-3",
         "source": "stored_score",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "客胜"
       },
       "stats": {
@@ -15928,7 +15996,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周一004",
@@ -16043,7 +16112,7 @@
         "result": "HIT",
         "score": "0-3",
         "source": "stored_score",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "客胜"
       },
       "stats": {
@@ -16165,7 +16234,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周一005",
@@ -16280,13 +16350,13 @@
         "result": "HIT",
         "score": "2-1",
         "source": "stored_score",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "主胜"
       },
       "score_conflict": {
         "local": "2 - 1",
         "fotmob": "3 - 1",
-        "at": "2026-10-20 08:51:07"
+        "at": "2026-10-20 08:52:05"
       },
       "stats": {
         "home": {
@@ -16393,7 +16463,8 @@
         },
         "h2h": null,
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周一006",
@@ -16508,7 +16579,7 @@
         "result": "HIT",
         "score": "1-1",
         "source": "stored_score",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "平局"
       },
       "stats": {
@@ -16640,7 +16711,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周一007",
@@ -16755,7 +16827,7 @@
         "result": "MISS",
         "score": "1-2",
         "source": "stored_score",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "客胜"
       },
       "stats": {
@@ -16887,7 +16959,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周一008",
@@ -17002,7 +17075,7 @@
         "result": "MISS",
         "score": "1-1",
         "source": "stored_score",
-        "settled_at": "2026-10-20T08:51:18",
+        "settled_at": "2026-10-20T08:52:15",
         "outcome": "平局"
       },
       "stats": {
@@ -17134,7 +17207,8 @@
           ]
         },
         "source": "本地竞彩历史库"
-      }
+      },
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周二001",
@@ -17353,7 +17427,8 @@
         "4.70"
       ],
       "official_market": "had",
-      "odds_source": "sporttery_official"
+      "odds_source": "sporttery_official",
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周二002",
@@ -17466,17 +17541,17 @@
           "name": "多特蒙德",
           "recent": {
             "n": 10,
-            "w": 7,
-            "d": 0,
+            "w": 6,
+            "d": 1,
             "l": 3,
-            "gf": 1.9,
-            "ga": 0.9,
+            "gf": 1.7,
+            "ga": 0.8,
             "form": [
+              "D",
               "W",
               "W",
               "L",
-              "W",
-              "L"
+              "W"
             ]
           },
           "home": {
@@ -17499,19 +17574,19 @@
             "w": 5,
             "d": 1,
             "l": 4,
-            "gf": 1.6,
-            "ga": 1.4,
+            "gf": 1.3,
+            "ga": 1.1,
             "form": [
+              "D",
               "W",
               "L",
               "L",
-              "W",
               "W"
             ]
           },
-          "total": 470,
-          "last_date": "2026-05-16",
-          "stale_days": 158
+          "total": 471,
+          "last_date": "2026-10-17",
+          "stale_days": 4
         },
         "h2h": null,
         "source": "本地竞彩历史库"
@@ -17522,7 +17597,8 @@
         "1.21"
       ],
       "official_market": "had",
-      "odds_source": "sporttery_official"
+      "odds_source": "sporttery_official",
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周二004",
@@ -17634,17 +17710,17 @@
           "name": "那不勒斯",
           "recent": {
             "n": 10,
-            "w": 6,
+            "w": 5,
             "d": 2,
-            "l": 2,
-            "gf": 1.4,
+            "l": 3,
+            "gf": 1.2,
             "ga": 0.8,
             "form": [
+              "L",
               "W",
               "L",
               "D",
-              "W",
-              "L"
+              "W"
             ]
           },
           "home": {
@@ -17664,22 +17740,22 @@
           },
           "away": {
             "n": 10,
-            "w": 5,
+            "w": 4,
             "d": 4,
-            "l": 1,
-            "gf": 1.4,
-            "ga": 1.0,
+            "l": 2,
+            "gf": 1.2,
+            "ga": 1.1,
             "form": [
+              "L",
               "D",
               "D",
-              "W",
               "W",
               "W"
             ]
           },
-          "total": 453,
-          "last_date": "2026-05-24",
-          "stale_days": 150
+          "total": 454,
+          "last_date": "2026-10-17",
+          "stale_days": 4
         },
         "away": {
           "name": "博德闪耀",
@@ -17689,13 +17765,13 @@
             "d": 2,
             "l": 2,
             "gf": 2.2,
-            "ga": 1.0,
+            "ga": 0.9,
             "form": [
+              "W",
               "D",
               "W",
               "W",
-              "W",
-              "L"
+              "W"
             ]
           },
           "home": {
@@ -17719,18 +17795,18 @@
             "d": 3,
             "l": 1,
             "gf": 1.9,
-            "ga": 1.3,
+            "ga": 1.2,
             "form": [
+              "W",
               "D",
               "W",
               "W",
-              "D",
-              "L"
+              "D"
             ]
           },
-          "total": 299,
-          "last_date": "2026-05-29",
-          "stale_days": 145
+          "total": 300,
+          "last_date": "2026-10-17",
+          "stale_days": 4
         },
         "h2h": null,
         "source": "本地竞彩历史库"
@@ -17741,7 +17817,8 @@
         "4.60"
       ],
       "official_market": "had",
-      "odds_source": "sporttery_official"
+      "odds_source": "sporttery_official",
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周二005",
@@ -17853,11 +17930,11 @@
           "name": "罗马",
           "recent": {
             "n": 10,
-            "w": 7,
-            "d": 2,
+            "w": 8,
+            "d": 1,
             "l": 1,
-            "gf": 2.3,
-            "ga": 1.1,
+            "gf": 2.2,
+            "ga": 0.8,
             "form": [
               "W",
               "W",
@@ -17876,8 +17953,8 @@
             "form": [
               "W",
               "W",
-              "D",
               "W",
+              "D",
               "W"
             ]
           },
@@ -17896,9 +17973,9 @@
               "L"
             ]
           },
-          "total": 494,
-          "last_date": "2026-05-24",
-          "stale_days": 150
+          "total": 495,
+          "last_date": "2026-10-18",
+          "stale_days": 3
         },
         "away": {
           "name": "布拉迪斯",
@@ -17961,7 +18038,8 @@
       ],
       "official_market": "hhad",
       "official_goal_line": "-2",
-      "odds_source": "sporttery_official"
+      "odds_source": "sporttery_official",
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周二006",
@@ -18078,13 +18156,13 @@
             "w": 7,
             "d": 1,
             "l": 2,
-            "gf": 2.2,
-            "ga": 0.8,
+            "gf": 2.4,
+            "ga": 0.9,
             "form": [
+              "W",
               "W",
               "D",
               "L",
-              "W",
               "W"
             ]
           },
@@ -18109,18 +18187,18 @@
             "d": 2,
             "l": 3,
             "gf": 1.4,
-            "ga": 0.9,
+            "ga": 1.0,
             "form": [
               "W",
-              "L",
-              "L",
               "W",
-              "D"
+              "L",
+              "L",
+              "W"
             ]
           },
-          "total": 388,
-          "last_date": "2025-08-17",
-          "stale_days": 430
+          "total": 389,
+          "last_date": "2026-10-17",
+          "stale_days": 4
         },
         "away": {
           "name": "巴萨",
@@ -18129,13 +18207,13 @@
             "w": 6,
             "d": 3,
             "l": 1,
-            "gf": 2.7,
-            "ga": 1.9,
+            "gf": 2.8,
+            "ga": 1.8,
             "form": [
               "W",
               "W",
-              "L",
               "W",
+              "L",
               "W"
             ]
           },
@@ -18159,19 +18237,19 @@
             "w": 6,
             "d": 3,
             "l": 1,
-            "gf": 2.7,
-            "ga": 1.3,
+            "gf": 2.8,
+            "ga": 1.5,
             "form": [
               "W",
               "W",
               "W",
-              "D",
-              "W"
+              "W",
+              "D"
             ]
           },
-          "total": 392,
-          "last_date": "2025-08-23",
-          "stale_days": 424
+          "total": 393,
+          "last_date": "2026-10-18",
+          "stale_days": 3
         },
         "h2h": {
           "n": 8,
@@ -18206,7 +18284,8 @@
         "2.20"
       ],
       "official_market": "had",
-      "odds_source": "sporttery_official"
+      "odds_source": "sporttery_official",
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周二007",
@@ -18318,17 +18397,17 @@
           "name": "利物浦",
           "recent": {
             "n": 10,
-            "w": 3,
+            "w": 4,
             "d": 2,
-            "l": 5,
-            "gf": 1.3,
-            "ga": 1.9,
+            "l": 4,
+            "gf": 1.5,
+            "ga": 1.6,
             "form": [
+              "W",
               "D",
               "L",
               "D",
-              "L",
-              "W"
+              "L"
             ]
           },
           "home": {
@@ -18348,34 +18427,34 @@
           },
           "away": {
             "n": 10,
-            "w": 3,
+            "w": 4,
             "d": 0,
-            "l": 7,
+            "l": 6,
             "gf": 1.3,
-            "ga": 2.1,
+            "ga": 1.9,
             "form": [
+              "W",
               "L",
               "L",
               "W",
-              "L",
               "L"
             ]
           },
-          "total": 535,
-          "last_date": "2026-05-24",
-          "stale_days": 150
+          "total": 536,
+          "last_date": "2026-10-17",
+          "stale_days": 4
         },
         "away": {
           "name": "比利亚雷",
           "recent": {
             "n": 10,
-            "w": 8,
-            "d": 1,
+            "w": 7,
+            "d": 2,
             "l": 1,
-            "gf": 2.7,
-            "ga": 1.3,
+            "gf": 2.2,
+            "ga": 1.1,
             "form": [
-              "W",
+              "D",
               "W",
               "W",
               "W",
@@ -18384,13 +18463,13 @@
           },
           "home": {
             "n": 10,
-            "w": 6,
-            "d": 3,
+            "w": 5,
+            "d": 4,
             "l": 1,
-            "gf": 2.5,
+            "gf": 2.2,
             "ga": 1.1,
             "form": [
-              "W",
+              "D",
               "W",
               "W",
               "W",
@@ -18412,9 +18491,9 @@
               "L"
             ]
           },
-          "total": 426,
-          "last_date": "2025-08-24",
-          "stale_days": 423
+          "total": 427,
+          "last_date": "2026-10-17",
+          "stale_days": 4
         },
         "h2h": {
           "n": 4,
@@ -18449,7 +18528,8 @@
         "5.90"
       ],
       "official_market": "had",
-      "odds_source": "sporttery_official"
+      "odds_source": "sporttery_official",
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周二008",
@@ -18566,27 +18646,27 @@
             "w": 6,
             "d": 2,
             "l": 2,
-            "gf": 1.9,
-            "ga": 0.8,
+            "gf": 2.0,
+            "ga": 1.0,
             "form": [
+              "W",
               "L",
               "W",
               "D",
-              "W",
               "W"
             ]
           },
           "home": {
             "n": 10,
-            "w": 4,
+            "w": 5,
             "d": 3,
-            "l": 3,
-            "gf": 1.6,
-            "ga": 1.6,
+            "l": 2,
+            "gf": 1.9,
+            "ga": 1.4,
             "form": [
+              "W",
               "L",
               "D",
-              "W",
               "W",
               "W"
             ]
@@ -18606,9 +18686,9 @@
               "D"
             ]
           },
-          "total": 418,
-          "last_date": "2025-08-23",
-          "stale_days": 424
+          "total": 419,
+          "last_date": "2026-10-17",
+          "stale_days": 4
         },
         "away": {
           "name": "雅典AEK",
@@ -18671,7 +18751,8 @@
       ],
       "official_market": "hhad",
       "official_goal_line": "-2",
-      "odds_source": "sporttery_official"
+      "odds_source": "sporttery_official",
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周二009",
@@ -18785,16 +18866,16 @@
           "name": "斯图加特",
           "recent": {
             "n": 10,
-            "w": 3,
+            "w": 2,
             "d": 4,
-            "l": 3,
-            "gf": 2.1,
-            "ga": 1.9,
+            "l": 4,
+            "gf": 1.6,
+            "ga": 1.8,
             "form": [
+              "L",
               "L",
               "D",
               "W",
-              "D",
               "D"
             ]
           },
@@ -18815,22 +18896,22 @@
           },
           "away": {
             "n": 10,
-            "w": 3,
+            "w": 2,
             "d": 3,
-            "l": 4,
-            "gf": 2.1,
-            "ga": 2.0,
+            "l": 5,
+            "gf": 1.8,
+            "ga": 2.1,
             "form": [
               "L",
-              "D",
-              "D",
               "L",
-              "W"
+              "D",
+              "D",
+              "L"
             ]
           },
-          "total": 348,
-          "last_date": "2026-05-23",
-          "stale_days": 151
+          "total": 349,
+          "last_date": "2026-10-17",
+          "stale_days": 4
         },
         "away": {
           "name": "马竞",
@@ -18839,13 +18920,13 @@
             "w": 5,
             "d": 2,
             "l": 3,
-            "gf": 1.9,
+            "gf": 1.6,
             "ga": 1.2,
             "form": [
+              "W",
               "D",
               "D",
               "L",
-              "W",
               "W"
             ]
           },
@@ -18869,19 +18950,19 @@
             "w": 4,
             "d": 2,
             "l": 4,
-            "gf": 1.6,
+            "gf": 1.2,
             "ga": 1.2,
             "form": [
+              "W",
               "D",
               "L",
               "W",
-              "L",
-              "W"
+              "L"
             ]
           },
-          "total": 457,
-          "last_date": "2025-08-30",
-          "stale_days": 417
+          "total": 458,
+          "last_date": "2026-10-17",
+          "stale_days": 4
         },
         "h2h": null,
         "source": "本地竞彩历史库"
@@ -18892,7 +18973,8 @@
         "1.90"
       ],
       "official_market": "had",
-      "odds_source": "sporttery_official"
+      "odds_source": "sporttery_official",
+      "stats_ts": "2026-10-20 08:52:00"
     },
     {
       "code": "周二010",
@@ -19125,7 +19207,8 @@
         "5.00"
       ],
       "official_market": "had",
-      "odds_source": "sporttery_official"
+      "odds_source": "sporttery_official",
+      "stats_ts": "2026-10-20 08:52:00"
     }
   ]
 }

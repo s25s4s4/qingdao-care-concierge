@@ -2633,6 +2633,8 @@
                 if (!blk) return '';
                 const r = blk.recent;
                 if (!r) return '';
+                // 超过两年的数据不再展示，避免"拿十年前的交锋当近期状态"
+                if (blk.stale_days && blk.stale_days > 730) return '';
                 return `
                 <div style="display:flex; align-items:center; gap:6px; margin-bottom:5px;">
                   <span style="font-size:10px; color:var(--text-secondary); width:14px; flex-shrink:0;">${side}</span>
@@ -2671,6 +2673,7 @@
                 </div>
                 ${row(st.home, '主')}
                 ${row(st.away, '客')}
+                ${(!row(st.home, '主') && !row(st.away, '客')) ? '<div style="font-size:10px; color:var(--text-tertiary);">两队近期数据均超过两年，已隐藏</div>' : ''}
                 ${h2h}
                 ${warn}
               </div>`;
