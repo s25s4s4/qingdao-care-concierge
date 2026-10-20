@@ -1,7 +1,43 @@
 {
-  "updated_at": "2026-10-21 03:41:46",
+  "updated_at": "2026-10-21 04:27:00",
   "total_tips": 17,
   "live_feed": [
+    {
+      "id": 3357,
+      "channel": "footballbettingtips10",
+      "time": "2026-10-21 04:20",
+      "code": "周二006",
+      "league": "欧冠",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "巴黎圣曼 VS 巴萨",
+      "chinese": "巴黎打巴萨，海外料子实单砸了大球，走全场至少进3个球（全场大于2.5）。两边前场火力全开，防线都有漏勺属性，庄家资金正往大比分涌，今晚奔着对攻去，直接防大球！",
+      "original": "👉 BET 2 👈 £60 IN FREE BETS WITH SPREADEX FOR ELIGIBLE NEW PLAYERS! BEST VALUE ONLY AT SPREADEX! SIGN UP NOW! ✅ Match : PSG v Barca ✅ Selection : over 2.5 goals "
+    },
+    {
+      "id": 3355,
+      "channel": "matchplug",
+      "time": "2026-10-21 04:22",
+      "code": "周二006",
+      "league": "欧冠",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "巴黎圣曼 VS 巴萨",
+      "chinese": "欧料直指大巴黎主场猛攻，砸门框范围至少6脚射正。巴萨后防承压，主队前场攻势拉满，走势极其利好巴黎主攻与大球方向。竞彩直接看好巴黎主场拿分，进球数3球起步。",
+      "original": "FOOTBALL CHAMPIONS LEAGUE PSG VS BARCELONA PSG OVER 5.5 SHOTS ON TARGET ODDS : 1.77"
+    },
+    {
+      "id": 3354,
+      "channel": "matchplug",
+      "time": "2026-10-21 04:22",
+      "code": "周二006",
+      "league": "欧冠",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "巴黎圣曼 VS 巴萨",
+      "chinese": "欧战前线资金走高压打法！欧洲暗流主攻巴黎进攻端，强推大巴黎射正超5.5次。主场势头极猛，锋线开火权拉满，今晚大概率围攻压制，主打进攻造杀机，防守端巴萨门前风声鹤唳。",
+      "original": "FOOTBALL CHAMPIONS LEAGUE PSG VS BARCELONA PSG OVER 5.5 SHOTS ON TARGET ODDS : 1.77"
+    },
     {
       "id": 3325,
       "channel": "calciomercato",
@@ -63,18 +99,6 @@
       "original": "FOOTBALL CHAMPIONS LEAGUE VILLARREAL VS LIVERPOOL VILLARREAL OVER 3.5 SHOTS ON TARGET ODDS : 1.96"
     },
     {
-      "id": 3161,
-      "channel": "olimpbet",
-      "time": "2026-10-20 20:01",
-      "code": "周二006",
-      "league": "欧冠",
-      "category": "赛前军情",
-      "is_tip": false,
-      "match": "巴黎圣曼 VS 巴萨",
-      "chinese": "巴萨各项赛事11连胜、场均轰4球状态炸裂。本场机构平手盘客队微幅占优，客胜赔率被暗压，两边进攻全拉满，决胜手看巴萨锋线效率，首选双平防客胜，大球走起。",
-      "original": "🔥 «БАРСЕЛОНА» НЕ ОСТАНАВЛИВАЕТСЯ 🤯 11 побед подряд во всех турнирах и в среднем четыре гола за матч 💣 В среду — серьёзная проверка: «ПСЖ» в ЛЧ. Как она закончит"
-    },
-    {
       "id": 3162,
       "channel": "tribuna_football",
       "time": "2026-10-20 20:07",
@@ -85,18 +109,6 @@
       "match": "拜仁 VS 阿森纳",
       "chinese": "阿森纳本季欧冠零失球防线遇大考。拜仁主场火力凶猛，机构给到拜仁让步微弱，资金有搏枪手不败趋势。枪手立足防反，此役恶战首选防守绞杀，走双平稳妥，看好小比分2球封顶。",
       "original": "Arsenal are the only team yet to concede a goal in this season’s Champions League! 🔒 Their next opponents? Bayern Munich ⚡️ 📲 Follow your favourite club in our "
-    },
-    {
-      "id": 3157,
-      "channel": "TipstrrTips",
-      "time": "2026-10-20 20:05",
-      "code": "周二006",
-      "league": "欧冠",
-      "category": "推单",
-      "is_tip": true,
-      "match": "巴黎圣曼 VS 巴萨",
-      "chinese": "欧冠强强对话，外网情报倾向力挺巴黎主场拿下巴萨。巴萨近期火力虽猛，但巴黎主胜2.40高水资金正在持续汇入，防线互捅局直奔主胜，去主赢球性价比极高。",
-      "original": "Our daily free football tip is provided by Javier Rey , who expects Paris Saint-Germain to get the better of free-scoring Barcelona in Tuesday's heavyweight Cha"
     },
     {
       "id": 3156,
@@ -121,18 +133,6 @@
       "match": "斯图加特 VS 马竞",
       "chinese": "欧洲前线暗流直指马竞客胜，欧指2.13诱惑力拉满。床单军团打欧冠经验老辣，客场硬实力压制斯图加特，资金明显向客队倾斜，这单博马竞全取三分很稳，首选客胜！",
       "original": "FOOTBALL CHAMPIONS LEAGUE STUTTGART VS ATL. MADRID ATL. MADRID MONEYLINE ODDS : 2.13"
-    },
-    {
-      "id": 3152,
-      "channel": "matchplug",
-      "time": "2026-10-20 19:47",
-      "code": "周二006",
-      "league": "欧冠",
-      "category": "赛前军情",
-      "is_tip": false,
-      "match": "巴黎圣曼 VS 巴萨",
-      "chinese": "欧洲那边暗流看好巴黎主场猛攻，砸向巴黎单队射正破5.5次。大巴黎主场必定抢开局疯狂压迫，巴萨后防压力极大，防守漏洞难补，本场奔着对攻大比分去，走胜平负不如搏巴黎多进球。",
-      "original": "FOOTBALL CHAMPIONS LEAGUE PSG VS BARCELONA PSG OVER 5.5 SHOTS ON TARGET ODDS : 1.77"
     },
     {
       "id": 3146,
@@ -208,6 +208,42 @@
     }
   ],
   "archived": [
+    {
+      "id": 3161,
+      "channel": "olimpbet",
+      "time": "2026-10-20 20:01",
+      "code": "周二006",
+      "league": "欧冠",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "巴黎圣曼 VS 巴萨",
+      "chinese": "巴萨各项赛事11连胜、场均轰4球状态炸裂。本场机构平手盘客队微幅占优，客胜赔率被暗压，两边进攻全拉满，决胜手看巴萨锋线效率，首选双平防客胜，大球走起。",
+      "original": "🔥 «БАРСЕЛОНА» НЕ ОСТАНАВЛИВАЕТСЯ 🤯 11 побед подряд во всех турнирах и в среднем четыре гола за матч 💣 В среду — серьёзная проверка: «ПСЖ» в ЛЧ. Как она закончит"
+    },
+    {
+      "id": 3157,
+      "channel": "TipstrrTips",
+      "time": "2026-10-20 20:05",
+      "code": "周二006",
+      "league": "欧冠",
+      "category": "推单",
+      "is_tip": true,
+      "match": "巴黎圣曼 VS 巴萨",
+      "chinese": "欧冠强强对话，外网情报倾向力挺巴黎主场拿下巴萨。巴萨近期火力虽猛，但巴黎主胜2.40高水资金正在持续汇入，防线互捅局直奔主胜，去主赢球性价比极高。",
+      "original": "Our daily free football tip is provided by Javier Rey , who expects Paris Saint-Germain to get the better of free-scoring Barcelona in Tuesday's heavyweight Cha"
+    },
+    {
+      "id": 3152,
+      "channel": "matchplug",
+      "time": "2026-10-20 19:47",
+      "code": "周二006",
+      "league": "欧冠",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "巴黎圣曼 VS 巴萨",
+      "chinese": "欧洲那边暗流看好巴黎主场猛攻，砸向巴黎单队射正破5.5次。大巴黎主场必定抢开局疯狂压迫，巴萨后防压力极大，防守漏洞难补，本场奔着对攻大比分去，走胜平负不如搏巴黎多进球。",
+      "original": "FOOTBALL CHAMPIONS LEAGUE PSG VS BARCELONA PSG OVER 5.5 SHOTS ON TARGET ODDS : 1.77"
+    },
     {
       "id": 3105,
       "channel": "tribuna_football",
