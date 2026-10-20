@@ -2563,17 +2563,22 @@
         // 比分概率热力矩阵 5×5
         function renderScoreMatrix(m, predScores) {
             const max = Math.max.apply(null, m.scores.map(s => s.p)) || 1;
-            const picks = (predScores || []).slice();
-            let rows = '';
+            const picks = predScores || [];
+            const G = 'display:grid; grid-template-columns:16px repeat(5,1fr); gap:2px;';
+
+            let head = '<div></div>';
+            for (let y = 0; y <= 4; y++) {
+                head += `<div style="text-align:center;font-size:8px;color:#6e7681;font-family:var(--font-mono);">${y}</div>`;
+            }
+            let rows = `<div style="${G}">${head}</div>`;
+
             for (let x = 0; x <= 4; x++) {
-                let cells = '';
+                let cells = `<div style="display:flex;align-items:center;justify-content:center;font-size:8px;color:#6e7681;font-family:var(--font-mono);">${x}</div>`;
                 for (let y = 0; y <= 4; y++) {
                     const it = m.scores[x * 5 + y];
                     const a = it.p / max;
                     const on = picks.indexOf(it.s) >= 0;
-                    const bg = on
-                        ? 'rgba(56,189,248,0.28)'
-                        : `rgba(210,153,34,${(0.04 + a * 0.20).toFixed(3)})`;
+                    const bg = on ? 'rgba(56,189,248,0.28)' : `rgba(210,153,34,${(0.04 + a * 0.20).toFixed(3)})`;
                     const bd = on ? '1px solid #38bdf8' : '1px solid rgba(255,255,255,0.05)';
                     const tc = on ? '#7dd3fc' : (a > 0.55 ? '#e3b341' : '#8b949e');
                     cells += `<div style="background:${bg}; border:${bd}; border-radius:3px; padding:3px 0; text-align:center; line-height:1.15;">
@@ -2581,21 +2586,20 @@
                         <div style="font-size:7.5px; color:${on ? '#7dd3fc' : '#6e7681'}; font-family:var(--font-mono);">${(it.p * 100).toFixed(1)}</div>
                     </div>`;
                 }
-                rows += `<div style="display:grid; grid-template-columns:repeat(5,1fr); gap:2px; margin-bottom:2px;">${cells}</div>`;
+                rows += `<div style="${G}; margin-top:2px;">${cells}</div>`;
             }
+
             const topTxt = m.top.slice(0, 3).map(t => `${t.s} <span style="color:#6e7681;">${(t.p * 100).toFixed(1)}%</span>`).join('　');
             return `
               <div style="background:rgba(255,255,255,0.03); border:1px solid var(--border-color); border-radius:8px; padding:9px 10px; margin-bottom:10px;">
                 <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
-                  <span style="font-size:11.5px; font-weight:800; color:#fff;">比分概率矩阵 <span style="font-size:9px; font-weight:400; color:var(--text-tertiary);">（行=主，列=客）</span></span>
+                  <span style="font-size:11.5px; font-weight:800; color:#fff;">比分概率矩阵</span>
                   <span style="font-size:9px; color:#38bdf8; font-family:var(--font-mono);">蓝框 = 研判</span>
                 </div>
-                <div style="display:flex; align-items:center; gap:4px;">
-                  <div style="display:flex; flex-direction:column; justify-content:space-around; height:100%; font-size:8px; color:#6e7681; padding-right:2px;">
-                    ${[0,1,2,3,4].map(i => `<span style="height:18px; line-height:18px;">${i}</span>`).join('')}
-                  </div>
-                  <div style="flex:1;">${rows}</div>
+                <div style="display:flex; justify-content:space-between; font-size:8px; color:#6e7681; margin-bottom:2px;">
+                  <span>↓ 主队进球</span><span>客队进球 →</span>
                 </div>
+                ${rows}
                 <div style="font-size:9px; color:var(--text-tertiary); margin-top:6px; font-family:var(--font-mono);">理论前三：${topTxt}</div>
               </div>`;
         }
