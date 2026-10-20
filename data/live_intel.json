@@ -1,7 +1,19 @@
 {
-  "updated_at": "2026-10-20 16:12:03",
+  "updated_at": "2026-10-20 16:21:41",
   "total_tips": 8,
   "live_feed": [
+    {
+      "id": 3084,
+      "channel": "prognozy",
+      "time": "2026-10-20 16:05",
+      "code": "周二009",
+      "league": "欧冠",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "斯图加特 VS 马竞",
+      "chinese": "斯图加特联赛3败外战回勇，马竞各项赛事6连胜正值巅峰。虽缺防线核心，但马竞硬仗底蕴太足。主队防线难顶，客队反击见血。看好马竞客场不败，双选平/负，进球至少2个起步。",
+      "original": "🔥 Ставка дня от TelegaBet 🇩🇪 Штутгарт - Атлетико 🇪🇸 🇪🇺 Лига Чемпионов, Тур - 3 ⏰ Начало матча в 22:00 МСК Швабы успешно выступают в ЛЧ, одержав победы в обоих с"
+    },
     {
       "id": 3085,
       "channel": "stavki",
@@ -37,18 +49,6 @@
       "match": "斯图加特 VS 马竞",
       "chinese": "欧冠焦点战。外盘初指倾向马竞客让平半低水，机构对西蒙尼客场抢分信心达七成。斯图加特近期虽连胜且点球全中，但马竞场均轰入2.2球火力更硬，正路首选马竞保平争胜，防平走客队受让或平半盘。",
       "original": "🔥 HOT PICK 🌍 UEFA Champions League 🆚 VfB Stuttgart vs Atletico Madrid 🕐 Tue, 20 Oct · 19:00 UTC 💡 Asian Handicap: Away -0.25 📊 Odds: 1.40 ✅ Confidence: 71% 📌 Ma"
-    },
-    {
-      "id": 3053,
-      "channel": "bulletbetpredictions",
-      "time": "2026-10-20 14:53",
-      "code": "周二009",
-      "league": "欧冠",
-      "category": "推单",
-      "is_tip": true,
-      "match": "斯图加特 VS 马竞",
-      "chinese": "欧洲前线来料：斯图加特打马竞，两队本季欧冠场场打穿大球加双方进球（双破门）。打法全是大开大合，后防没一个稳的，进球数直接往3球以上看，双破门稳如狗！",
-      "original": "5/5 🤯 Sabah home wins this season. Dortmund visit. Champions League 20 Oct: THE NUMBERS 📊 👉 Swipe through all 9 matches before kick-off. 🔥 PSG vs Barça: both wo"
     },
     {
       "id": 3056,
@@ -100,6 +100,18 @@
     }
   ],
   "archived": [
+    {
+      "id": 3053,
+      "channel": "bulletbetpredictions",
+      "time": "2026-10-20 14:53",
+      "code": "周二009",
+      "league": "欧冠",
+      "category": "推单",
+      "is_tip": true,
+      "match": "斯图加特 VS 马竞",
+      "chinese": "欧洲前线来料：斯图加特打马竞，两队本季欧冠场场打穿大球加双方进球（双破门）。打法全是大开大合，后防没一个稳的，进球数直接往3球以上看，双破门稳如狗！",
+      "original": "5/5 🤯 Sabah home wins this season. Dortmund visit. Champions League 20 Oct: THE NUMBERS 📊 👉 Swipe through all 9 matches before kick-off. 🔥 PSG vs Barça: both wo"
+    },
     {
       "id": 2882,
       "channel": "stavki",
