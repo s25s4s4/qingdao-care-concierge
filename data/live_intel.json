@@ -1,33 +1,7 @@
 {
   "updated_at": "2026-10-20 10:10:39",
-  "total_tips": 5,
+  "total_tips": 3,
   "live_feed": [
-    {
-      "id": 3003,
-      "channel": "FabrizioRomano",
-      "time": "2026-10-20 07:23",
-      "code": "周二006",
-      "league": "欧冠",
-      "category": "推单·原文",
-      "is_tip": true,
-      "match": "巴黎圣曼 VS 巴萨",
-      "chinese": "🔵 🔴 Hansi Flick: “I’m really enjoying the journey we’re on at Barcelona”. “The work and mentality we’re showing make me proud of this team. What the players hav",
-      "original": "🔵 🔴 Hansi Flick: “I’m really enjoying the journey we’re on at Barcelona”. “The work and mentality we’re showing make me proud of this team. What the players hav",
-      "translated": false
-    },
-    {
-      "id": 2840,
-      "channel": "olimpbet",
-      "time": "2026-10-19 21:28",
-      "code": "周二009",
-      "league": "欧冠",
-      "category": "军情·原文",
-      "is_tip": false,
-      "match": "斯图加特 VS 马竞",
-      "chinese": "🔥 АДМИН СОБИРАЕТ ЭКСПРЕСС НА ЛЧ 🤩 Захотел поучаствовать в акции «Турнир на футбол» и побороться за большой приз 👀 Выбрал 12 возможных вариантов — собираю экспре",
-      "original": "🔥 АДМИН СОБИРАЕТ ЭКСПРЕСС НА ЛЧ 🤩 Захотел поучаствовать в акции «Турнир на футбол» и побороться за большой приз 👀 Выбрал 12 возможных вариантов — собираю экспре",
-      "translated": false
-    },
     {
       "id": 2986,
       "channel": "Upper90TipsFree",
