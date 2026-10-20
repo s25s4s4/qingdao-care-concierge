@@ -1,19 +1,7 @@
 {
-  "updated_at": "2026-10-21 04:37:07",
-  "total_tips": 18,
+  "updated_at": "2026-10-21 05:00:23",
+  "total_tips": 6,
   "live_feed": [
-    {
-      "id": 3298,
-      "channel": "calciomercato",
-      "time": "2026-10-21 03:05",
-      "code": "周二004",
-      "league": "欧冠",
-      "category": "赛前军情",
-      "is_tip": false,
-      "match": "那不勒斯 VS 博德闪耀",
-      "chinese": "那不勒斯闪击得手！斯皮纳佐拉开场1分钟助攻波利塔诺破门，主场迅速建立优势。博德闪耀立足未稳先丢一球，后防漏洞彻底暴露。那不勒斯掌控进攻主动权，本场主胜走势极稳，顺势防大球穿盘！",
-      "original": "🇪🇺 UEFA CHAMPIONS LEAGUE 🇪🇺 3ª Giornata GOAL 🔵 Napoli 1-0 Bodø / Glimt 🟡 ⚽️ M. Politano 👟 L. Spinazzola ⏱️ 1’ ⚽️"
-    },
     {
       "id": 3357,
       "channel": "footballbettingtips10",
@@ -51,18 +39,6 @@
       "original": "FOOTBALL CHAMPIONS LEAGUE PSG VS BARCELONA PSG OVER 5.5 SHOTS ON TARGET ODDS : 1.77"
     },
     {
-      "id": 3325,
-      "channel": "calciomercato",
-      "time": "2026-10-21 03:40",
-      "code": "周二005",
-      "league": "欧冠",
-      "category": "赛前军情",
-      "is_tip": false,
-      "match": "罗马 VS 布拉迪斯",
-      "chinese": "罗马半场直接打穿，莫利纳39分钟再下一城2-0领先！前场火力全开，布拉迪斯防线完全顶不住冲击。走地大球趋势明朗，罗马主胜稳如狗，防守端没压力，看好下半场继续穿盘大胜！",
-      "original": "🇪🇺 UEFA CHAMPIONS LEAGUE 🇪🇺 3ª Giornata GOAL 🟡 Roma 2-0 Slovan Bratislava ⚪ ⚽️ N. Molina 👟 - ⏱️ 39’ ⚽️"
-    },
-    {
       "id": 3289,
       "channel": "footballbettingtips10",
       "time": "2026-10-21 02:54",
@@ -73,18 +49,6 @@
       "match": "巴黎圣曼 VS 巴萨",
       "chinese": "欧冠焦点战，海外小单实盘开搞。外部机构一手单主攻双方进球（BTTS - Yes），看好对攻破门，两边防线都有漏洞，走大球、两队皆有破门稳当。",
       "original": "👉 BET 1 👈 £60 IN FREE BETS WITH SPREADEX FOR ELIGIBLE NEW PLAYERS! BEST VALUE ONLY AT SPREADEX! SIGN UP NOW! ✅ Match : PSG v Barca ✅ Selection : BTTS - Yes ✅ St"
-    },
-    {
-      "id": 3226,
-      "channel": "football_predictions_ai",
-      "time": "2026-10-21 00:00",
-      "code": "周二005",
-      "league": "欧冠",
-      "category": "赛前军情",
-      "is_tip": false,
-      "match": "罗马 VS 布拉迪斯",
-      "chinese": "欧冠这场罗马主场打布拉迪斯，外盘信心全扎堆主队，主推“半全场胜胜”，赔率压到1.40。红狼点球全中、零封率高，欺负斯洛伐克客队绰绰有余。看好罗马半场奠定胜局，稳稳拿下。",
-      "original": "🔥 HOT PICK 🌍 UEFA Champions League 🆚 AS Roma vs Slovan Bratislava 🕐 Tue, 20 Oct · 19:00 UTC 💡 Half Time / Full Time: Home/Home 📊 Odds: 1.40 ✅ Confidence: 71% 📌 "
     },
     {
       "id": 3189,
@@ -99,18 +63,6 @@
       "original": "FEEDINCO.com Tips for Wednesday, 21 October 1X - Aston Villa - Viking 1X - Betis - Feyenoord 1X - Como - Man Utd 1X - Real Madrid - RB Leipzig 🔥 All upcoming Fo"
     },
     {
-      "id": 3163,
-      "channel": "matchplug",
-      "time": "2026-10-20 20:12",
-      "code": "周二007",
-      "league": "欧冠",
-      "category": "赛前军情",
-      "is_tip": false,
-      "match": "利物浦 VS 比利亚雷",
-      "chinese": "欧指资金暗流紧盯黄潜攻势，单开比利亚雷射正超3.5次、高水1.96。外盘警惕客队反击穿透力，红军防线存有隐患，绝非单边吊打。本场谨防黄潜偷袭得手，防线受压，重点看好双方进球与大格局！",
-      "original": "FOOTBALL CHAMPIONS LEAGUE VILLARREAL VS LIVERPOOL VILLARREAL OVER 3.5 SHOTS ON TARGET ODDS : 1.96"
-    },
-    {
       "id": 3162,
       "channel": "tribuna_football",
       "time": "2026-10-20 20:07",
@@ -121,6 +73,56 @@
       "match": "拜仁 VS 阿森纳",
       "chinese": "阿森纳本季欧冠零失球防线遇大考。拜仁主场火力凶猛，机构给到拜仁让步微弱，资金有搏枪手不败趋势。枪手立足防反，此役恶战首选防守绞杀，走双平稳妥，看好小比分2球封顶。",
       "original": "Arsenal are the only team yet to concede a goal in this season’s Champions League! 🔒 Their next opponents? Bayern Munich ⚡️ 📲 Follow your favourite club in our "
+    }
+  ],
+  "archived": [
+    {
+      "id": 3298,
+      "channel": "calciomercato",
+      "time": "2026-10-21 03:05",
+      "code": "周二004",
+      "league": "欧冠",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "那不勒斯 VS 博德闪耀",
+      "chinese": "那不勒斯闪击得手！斯皮纳佐拉开场1分钟助攻波利塔诺破门，主场迅速建立优势。博德闪耀立足未稳先丢一球，后防漏洞彻底暴露。那不勒斯掌控进攻主动权，本场主胜走势极稳，顺势防大球穿盘！",
+      "original": "🇪🇺 UEFA CHAMPIONS LEAGUE 🇪🇺 3ª Giornata GOAL 🔵 Napoli 1-0 Bodø / Glimt 🟡 ⚽️ M. Politano 👟 L. Spinazzola ⏱️ 1’ ⚽️"
+    },
+    {
+      "id": 3325,
+      "channel": "calciomercato",
+      "time": "2026-10-21 03:40",
+      "code": "周二005",
+      "league": "欧冠",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "罗马 VS 布拉迪斯",
+      "chinese": "罗马半场直接打穿，莫利纳39分钟再下一城2-0领先！前场火力全开，布拉迪斯防线完全顶不住冲击。走地大球趋势明朗，罗马主胜稳如狗，防守端没压力，看好下半场继续穿盘大胜！",
+      "original": "🇪🇺 UEFA CHAMPIONS LEAGUE 🇪🇺 3ª Giornata GOAL 🟡 Roma 2-0 Slovan Bratislava ⚪ ⚽️ N. Molina 👟 - ⏱️ 39’ ⚽️"
+    },
+    {
+      "id": 3226,
+      "channel": "football_predictions_ai",
+      "time": "2026-10-21 00:00",
+      "code": "周二005",
+      "league": "欧冠",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "罗马 VS 布拉迪斯",
+      "chinese": "欧冠这场罗马主场打布拉迪斯，外盘信心全扎堆主队，主推“半全场胜胜”，赔率压到1.40。红狼点球全中、零封率高，欺负斯洛伐克客队绰绰有余。看好罗马半场奠定胜局，稳稳拿下。",
+      "original": "🔥 HOT PICK 🌍 UEFA Champions League 🆚 AS Roma vs Slovan Bratislava 🕐 Tue, 20 Oct · 19:00 UTC 💡 Half Time / Full Time: Home/Home 📊 Odds: 1.40 ✅ Confidence: 71% 📌 "
+    },
+    {
+      "id": 3163,
+      "channel": "matchplug",
+      "time": "2026-10-20 20:12",
+      "code": "周二007",
+      "league": "欧冠",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "利物浦 VS 比利亚雷",
+      "chinese": "欧指资金暗流紧盯黄潜攻势，单开比利亚雷射正超3.5次、高水1.96。外盘警惕客队反击穿透力，红军防线存有隐患，绝非单边吊打。本场谨防黄潜偷袭得手，防线受压，重点看好双方进球与大格局！",
+      "original": "FOOTBALL CHAMPIONS LEAGUE VILLARREAL VS LIVERPOOL VILLARREAL OVER 3.5 SHOTS ON TARGET ODDS : 1.96"
     },
     {
       "id": 3156,
@@ -217,9 +219,7 @@
       "chinese": "周二004那不勒斯这战，海外料子明确看好主场不败（1X）。博德闪耀客战防守偏软，那不勒斯主场掌控节奏，机构暗盘对主队打穿有防备，稳妥首选主胜防平，双选防平局足够，看好主队拿分。",
       "translated": true,
       "is_tip": false
-    }
-  ],
-  "archived": [
+    },
     {
       "id": 3161,
       "channel": "olimpbet",
