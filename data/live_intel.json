@@ -1,7 +1,19 @@
 {
-  "updated_at": "2026-10-20 16:21:41",
-  "total_tips": 8,
+  "updated_at": "2026-10-20 17:51:21",
+  "total_tips": 9,
   "live_feed": [
+    {
+      "id": 3105,
+      "channel": "tribuna_football",
+      "time": "2026-10-20 17:04",
+      "code": "周二006",
+      "league": "欧冠",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "巴黎圣曼 VS 巴萨",
+      "chinese": "大巴黎欧冠12场不败，巴萨本赛季狂砍11连胜，两队状态全在峰顶！针尖对麦芒，两头连胜必断一家，机构造势分流意图明显。防守端巴萨更稳，看好客队不败，走让负，比分防1-1、1-2。",
+      "original": "PSG are unbeaten in their last 12 Champions League matches, with their last defeat coming against Sporting back in January 👀 Meanwhile, Barcelona have won 11 ga"
+    },
     {
       "id": 3084,
       "channel": "prognozy",
