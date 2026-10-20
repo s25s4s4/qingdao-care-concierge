@@ -1,7 +1,19 @@
 {
-  "updated_at": "2026-10-20 15:02:48",
-  "total_tips": 4,
+  "updated_at": "2026-10-20 15:22:26",
+  "total_tips": 5,
   "live_feed": [
+    {
+      "id": 3053,
+      "channel": "bulletbetpredictions",
+      "time": "2026-10-20 14:53",
+      "code": "周二009",
+      "league": "欧冠",
+      "category": "推单",
+      "is_tip": true,
+      "match": "斯图加特 VS 马竞",
+      "chinese": "欧洲前线来料：斯图加特打马竞，两队本季欧冠场场打穿大球加双方进球（双破门）。打法全是大开大合，后防没一个稳的，进球数直接往3球以上看，双破门稳如狗！",
+      "original": "5/5 🤯 Sabah home wins this season. Dortmund visit. Champions League 20 Oct: THE NUMBERS 📊 👉 Swipe through all 9 matches before kick-off. 🔥 PSG vs Barça: both wo"
+    },
     {
       "id": 3056,
       "channel": "olimpbet",
