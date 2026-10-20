@@ -1470,6 +1470,7 @@
             const isHttps = location.protocol === 'https:';
             // 加多重随机参数与时间戳，彻底粉碎浏览器和手机运营商对 json 的强缓存
             const bust = '_t=' + Date.now() + '&_r=' + Math.random().toString(36).substring(2, 8);
+            const directApiUrl = 'https://api.qingdaocare.top/data/official_matches.json?' + bust;
             const localUrl = './data/official_matches.json?' + bust;
             const aliyunUrl = 'http://47.121.185.16/football/official_matches.json?' + bust;
             const rawUrl = 'https://raw.githubusercontent.com/s25s4s4/qingdao-care-concierge/main/data/official_matches.json?' + bust;
@@ -1482,13 +1483,18 @@
                     headers: { 'Cache-Control': 'no-cache, no-store, must-revalidate', 'Pragma': 'no-cache' }
                 }).then(r => done(resolve, r), e => done(reject, e));
             });
-            const sources = isHttps ? [localUrl, rawUrl] : [aliyunUrl, localUrl];
+            // 极速直通：优先请求阿里云国内自建高频 HTTPS 节点 (5毫秒直连)，彻底消灭 GitHub Pages 缓存延迟！
+            const sources = isHttps ? [directApiUrl, localUrl, rawUrl] : [aliyunUrl, localUrl];
 
             (async () => {
                 try {
-                    return await withTimeout(sources[0], 4000);
+                    return await withTimeout(sources[0], 2500);
                 } catch (e) {
-                    return await withTimeout(sources[1], 8000);
+                    try {
+                        return await withTimeout(sources[1], 4000);
+                    } catch (e2) {
+                        return await withTimeout(sources[2] || localUrl, 8000);
+                    }
                 }
             })()
                 .then(res => {
