@@ -1520,6 +1520,12 @@
                     auditTagHtml = `<span class="match-audit-tag tag-pending">${m.time} | ${m.status}</span>`;
                 }
                 auditTagHtml += verifyBadge;
+                const _reg = regressionSignal(m);
+                if (_reg) {
+                    auditTagHtml += _reg.strong
+                        ? '<span class="match-audit-tag" style="background:rgba(240,136,62,.15);color:#f0883e;border:1px solid rgba(240,136,62,.45);">📉 回归信号</span>'
+                        : '<span class="match-audit-tag" style="background:rgba(139,148,158,.12);color:#8b949e;border:1px solid rgba(139,148,158,.3);">xG 偏差</span>';
+                }
 
                 // 双方近期战绩药丸
                 const homeDots = m.form_home.map(f => `<span class="form-pill form-${f.toLowerCase()}">${f==='W'?'胜':(f==='D'?'平':'负')}</span>`).join('');
@@ -2467,6 +2473,37 @@
             return Math.exp(-lam) * Math.pow(lam, k) / f;
         }
 
+        // ========================================================================
+        // xG 回归信号：用「实际进球 − 期望进球」判断谁在超常/低迷
+        // 门槛：至少 5 场（样本太少没有意义）、偏差 ≥3 球（约等于一个标准差量级）
+        // 只作为提示，不改变推荐——6~7 轮的 xG 偏差噪声很大，别当结论用。
+        // ========================================================================
+        function regressionSignal(match) {
+            const sea = match && match.stats && match.stats.season;
+            if (!sea) return null;
+            const pick = t => {
+                if (!t || !t.gp || t.gp < 5 || t.xg === null || t.xg === undefined) return null;
+                const gap = t.gf - t.xg;
+                if (Math.abs(gap) < 3) return null;
+                return { gap: +gap.toFixed(1), up: gap > 0, gp: t.gp, gf: t.gf, xg: t.xg, cn: t.cn };
+            };
+            const h = pick(sea.home), a = pick(sea.away);
+            if (!h && !a) return null;
+            const word = x => x.up ? '虚高' : '被低估';
+            let text, strong = false;
+            if (h && a) {
+                strong = (h.up !== a.up);        // 一方虚高、一方被低估 —— 这才是有方向的信息
+                text = strong
+                    ? `主队进球${word(h)} ${Math.abs(h.gap)}，客队${word(a)} ${Math.abs(a.gap)}`
+                    : `双方进球均${h.up ? '虚高' : '被低估'}`;
+            } else if (h) {
+                text = `主队进球${word(h)} ${Math.abs(h.gap)}`;
+            } else {
+                text = `客队进球${word(a)} ${Math.abs(a.gap)}`;
+            }
+            return { text: text, strong: strong, home: h, away: a };
+        }
+
         function buildMatchModel(match) {
             const raw = (match.odds || []).map(v => parseFloat(v));
             if (raw.length < 3 || raw.some(v => !isFinite(v) || v <= 0)) return null;
@@ -2674,6 +2711,14 @@
                   </div>
                   ${sline(sea.home, '主')}
                   ${sline(sea.away, '客')}
+                  ${(() => {
+                      const r = regressionSignal(match);
+                      if (!r) return '';
+                      return `<div style="font-size:9.5px; line-height:1.5; margin-top:5px; padding:4px 6px; border-radius:4px; background:rgba(240,136,62,${r.strong ? '0.12' : '0.06'}); color:${r.strong ? '#f0883e' : '#8b949e'};">
+                        ${r.strong ? '📉 回归信号：' : 'xG 偏差：'}${r.text}
+                        <span style="color:var(--text-tertiary);">（样本仅 ${(r.home || r.away).gp} 轮，噪声较大，仅供参考）</span>
+                      </div>`;
+                  })()}
                 </div>`;
             }
 
