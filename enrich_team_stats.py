@@ -73,6 +73,20 @@ def enrich(matches, limit=120, refresh_hours=12):
             continue
         if not (blk.get("home") or blk.get("away")):
             continue
+        # 当季数据（Understat，仅五大联赛）：场次少但新鲜，且带 xG
+        try:
+            import fetch_understat as _us
+            _d = _us.load()
+            _lg = m.get("league")
+            if _d and _lg in _d.get("leagues", {}):
+                _h = _us.team_season(home, _lg, _d)
+                _a = _us.team_season(away, _lg, _d)
+                if _h or _a:
+                    blk["season"] = {"home": _h, "away": _a,
+                                     "updated_at": _d.get("updated_at"),
+                                     "season": _d.get("season")}
+        except Exception:
+            pass
         m["stats"] = blk
         m["stats_ts"] = now.strftime("%Y-%m-%d %H:%M:%S")
         n += 1
@@ -83,11 +97,13 @@ if __name__ == "__main__":
     import json
     import sys
 
-    path = sys.argv[1] if len(sys.argv) > 1 else r"E:\euro_intel_web\data\official_matches.json"
+    _args = [a for a in sys.argv[1:] if not a.startswith("--")]
+    force = "--force" in sys.argv
+    path = _args[0] if _args else r"E:\euro_intel_web\data\official_matches.json"
     with open(path, encoding="utf-8") as f:
         d = json.load(f)
     ms = d.get("matches") or []
-    k = enrich(ms)
+    k = enrich(ms, refresh_hours=0 if force else 12)
     if k:
         with open(path, "w", encoding="utf-8") as f:
             json.dump(d, f, ensure_ascii=False, indent=2)

@@ -652,6 +652,21 @@ def full_pipeline_sync(auto_push=True):
                 log_messages.append(f"Official SP: updated={upd} conflicts={conf}")
     except Exception as exc:
         log_messages.append(f"Sporttery skipped: {type(exc).__name__}")
+    # Understat 当季数据：过期就在后台静默刷新（5 个联赛约 2 分钟，不能阻塞主流程）
+    try:
+        import fetch_understat as _us
+        if _us.stale(6) and not _us.is_locked():
+            _udd = os.environ.get("TEMP", ".")
+            subprocess.Popen(
+                [sys.executable, os.path.join(WEB_DIR, "fetch_understat.py")],
+                cwd=WEB_DIR, stdin=subprocess.DEVNULL,
+                stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+                creationflags=getattr(subprocess, "CREATE_NO_WINDOW", 0),
+            )
+            log_messages.append("Understat refresh spawned")
+    except Exception as _exc:
+        log_messages.append(f"Understat refresh skipped: {type(_exc).__name__}")
+
     # 赛果归档：把已完赛场次追加进本地历史库，让它随流水线持续变长。
     # 放在所有结算步骤之后统一扫描，live500 / fotmob 两条路径都能覆盖；按 code 去重。
     try:
@@ -694,7 +709,7 @@ def full_pipeline_sync(auto_push=True):
 
         if auto_push:
             os.chdir(WEB_DIR)
-            silent_subprocess_run(["git", "add", "data/official_matches.json", "data/matches_34.json", "data/match_results.jsonl", "data/archive_stats.json", "index.html"], cwd=WEB_DIR)
+            silent_subprocess_run(["git", "add", "data/official_matches.json", "data/matches_34.json", "data/match_results.jsonl", "data/archive_stats.json", "data/understat_teams.json", "data/team_aliases.json", "index.html"], cwd=WEB_DIR)
             commit_title = f"Live-Pulse: {len(log_messages)} match status/score updates ({datetime.now().strftime('%H:%M:%S')})"
             silent_subprocess_run(["git", "commit", "-m", commit_title], cwd=WEB_DIR)
             res = silent_subprocess_run(["git", "push", "origin", "main"], cwd=WEB_DIR)
