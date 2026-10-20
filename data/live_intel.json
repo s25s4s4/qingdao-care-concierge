@@ -1,7 +1,19 @@
 {
-  "updated_at": "2026-10-21 00:06:26",
-  "total_tips": 16,
+  "updated_at": "2026-10-21 02:36:43",
+  "total_tips": 17,
   "live_feed": [
+    {
+      "id": 3266,
+      "channel": "matchpreviews",
+      "time": "2026-10-21 01:57",
+      "code": "周二002",
+      "league": "欧冠",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "萨巴赫 VS 多特蒙德",
+      "chinese": "吉拉西欧冠脚感滚烫，首发效率极高，绝对是多特前场定海神针。大黄蜂锋线火力有保障，客战弱旅优势明显，盘口资金铁定偏向客胜与大球方向，跟着吉拉西走正路。",
+      "original": "Serhou Guirassy scores his third Champions League goal of the season 🌟 He has been involved in 25 goals in 23 UCL starts at Dortmund. 🚀 Crashino — THE ultimate "
+    },
     {
       "id": 3226,
       "channel": "football_predictions_ai",
