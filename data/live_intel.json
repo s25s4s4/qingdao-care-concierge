@@ -1,7 +1,18 @@
 {
-  "updated_at": "2026-10-20 05:25:28",
-  "total_tips": 22,
+  "updated_at": "2026-10-20 08:15:29",
+  "total_tips": 23,
   "live_feed": [
+    {
+      "id": 3003,
+      "channel": "FabrizioRomano",
+      "time": "2026-10-20 07:23",
+      "code": "周二006",
+      "league": "欧冠",
+      "category": "赛前军情(未翻译)",
+      "match": "巴黎圣曼 VS 巴萨",
+      "chinese": "[原文·未翻译] 🔵 🔴 Hansi Flick: “I’m really enjoying the journey we’re on at Barcelona”. “The work and mentality we’re showing make me proud of this team. ",
+      "translated": false
+    },
     {
       "id": 2986,
       "channel": "Upper90TipsFree",
