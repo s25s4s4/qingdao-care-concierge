@@ -1,7 +1,19 @@
 {
-  "updated_at": "2026-10-21 17:16:00",
-  "total_tips": 8,
+  "updated_at": "2026-10-21 17:30:44",
+  "total_tips": 9,
   "live_feed": [
+    {
+      "id": 3553,
+      "channel": "FabrizioRomano",
+      "time": "2026-10-21 17:28",
+      "code": "周三010",
+      "league": "欧冠",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "拜仁 VS 阿森纳",
+      "chinese": "紧急军情！拜仁绝对中场枢纽基米希因家庭变故突发缺阵，右路攻防与出球体系遭重创。阿森纳客场受让空间拉大，拜仁单核运转吃力，谨防主胜难出，重点防平或直接博让负。",
+      "original": "🚨 Joshua Kimmich, out of Bayern squad to face Arsenal tonight due to a death in his close family."
+    },
     {
       "id": 3544,
       "channel": "matchplug",
