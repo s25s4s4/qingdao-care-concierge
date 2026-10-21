@@ -3186,7 +3186,8 @@
             const dates = shown.map(b => b.last_date).filter(Boolean).sort();
             const oldest = dates[0];
             const stale = shown.reduce((mx, b) => Math.max(mx, b.stale_days || 0), 0);
-            const warn = stale > 60
+            // 严格体验铁律：只要近况数据在 30 天以内，属于正常国际比赛日或休赛周期，绝不弹窗打扰！
+            const warn = stale > 45
                 ? `<div style="font-size:9px; color:#e3b341; margin-top:5px;">⚠ 本地库覆盖到此，最早一队数据截至 ${oldest}（距今 ${stale} 天），仅作历史参考</div>`
                 : '';
 
