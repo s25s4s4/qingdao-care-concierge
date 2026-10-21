@@ -418,6 +418,78 @@
             letter-spacing: -0.4px;
         }
 
+        /* 实体彩票质感：经典复古物理对错印章 (醒目盖在选项方块上) */
+        .option-stamp {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-14deg);
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            pointer-events: none;
+            z-index: 10;
+            font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            text-transform: uppercase;
+            box-sizing: border-box;
+            line-height: 1.1;
+            box-shadow: 0 0 16px rgba(0,0,0,0.6);
+            backdrop-filter: blur(1px);
+            animation: stampIn 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .option-stamp::before {
+            content: '';
+            position: absolute;
+            inset: 2px;
+            border-radius: 50%;
+            border: 1px dashed currentColor;
+            opacity: 0.65;
+        }
+
+        .option-stamp-hit {
+            border: 2.5px solid #10b981;
+            color: #10b981;
+            background: radial-gradient(circle, rgba(16, 185, 129, 0.32) 0%, rgba(5, 46, 22, 0.75) 100%);
+            text-shadow: 0 0 6px rgba(16, 185, 129, 0.8);
+        }
+
+        .option-stamp-miss {
+            border: 2.5px solid #ef4444;
+            color: #ef4444;
+            background: radial-gradient(circle, rgba(239, 68, 68, 0.32) 0%, rgba(69, 10, 10, 0.75) 100%);
+            text-shadow: 0 0 6px rgba(239, 68, 68, 0.8);
+        }
+
+        .option-stamp-actual {
+            border: 2.5px solid #38bdf8;
+            color: #38bdf8;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.28) 0%, rgba(12, 74, 110, 0.75) 100%);
+            text-shadow: 0 0 6px rgba(56, 189, 248, 0.8);
+        }
+
+        .option-stamp .stamp-icon {
+            font-size: 15px;
+            font-weight: 900;
+            line-height: 1;
+            margin-bottom: 1px;
+        }
+
+        .option-stamp .stamp-text {
+            font-size: 9.5px;
+            font-weight: 900;
+            letter-spacing: 0.5px;
+        }
+
+        @keyframes stampIn {
+            0% { transform: translate(-50%, -50%) scale(2.2) rotate(-35deg); opacity: 0; }
+            100% { transform: translate(-50%, -50%) scale(1) rotate(-14deg); opacity: 1; }
+        }
+
         /* 欧洲机构去水共识条 */
         .consensus-indicator {
             background: var(--bg-card-elevated);
