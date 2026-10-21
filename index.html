@@ -1829,8 +1829,12 @@
                 opts.push(prefix + '负');
             } else if (tip === '平局') {
                 opts.push(prefix + '平');
-            } else if (tip.includes('让负')) {
+            } else if (tip.includes('让负/防让平')) {
                 opts.push('让负', '让平');
+            } else if (tip.includes('让胜/防让平')) {
+                opts.push('让胜', '让平');
+            } else if (tip.includes('让负')) {
+                opts.push('让负');
             } else if (tip.includes('让胜')) {
                 opts.push('让胜');
             } else if (tip.includes('主不败') || tip.includes('主胜/防平') || tip.includes('平局/主胜')) {
@@ -3303,6 +3307,13 @@
                             <span style="color: #38bdf8; font-family: var(--font-mono); font-weight: 800;">${match.quant_factors.golden_scores.join(' / ')}</span>
                         </div>
                     </div>
+
+                    ${match.quant_factors.quant_detail_note ? `
+                    <!-- 8万场让球利刃专属深度案卷 -->
+                    <div style="margin-top: 8px; font-size: 11.5px; color: #38bdf8; font-weight: 700; background: rgba(56, 189, 248, 0.12); padding: 8px 10px; border-radius: 6px; border-left: 3px solid #38bdf8; line-height: 1.5;">
+                        ${match.quant_factors.quant_detail_note}
+                    </div>
+                    ` : ''}
 
                     ${match.quant_factors.trap_level !== 'NORMAL' ? `
                     <div style="margin-top: 8px; font-size: 11px; color: #ff7b72; font-weight: 700; background: rgba(248, 81, 73, 0.15); padding: 6px 10px; border-radius: 5px; border-left: 3px solid #f85149; line-height: 1.4;">

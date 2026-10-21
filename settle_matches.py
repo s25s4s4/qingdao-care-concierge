@@ -31,13 +31,17 @@ def calculate_result(tip, score):
         if total >= 3: return "HIT"
     if "双方进球" in tip:
         if h > 0 and a > 0: return "HIT"
+    if "让负/防让平" in tip:
+        if a >= h or h - a == 1: return "HIT"
+    if "让胜/防让平" in tip:
+        if h >= a or a - h == 1: return "HIT"
     if "让胜" in tip:
         if h - a >= 2: return "HIT"
     if "让负" in tip:
         if a - h >= 1 or a == h: return "HIT"
-        
+
     # 如果明确建议但未满足
-    if any(k in tip for k in ["主胜", "客胜", "平局", "进球数", "让胜"]):
+    if any(k in tip for k in ["主胜", "客胜", "平局", "进球数", "让胜", "让负"]):
         return "MISS"
         
     return "PENDING"
