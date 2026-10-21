@@ -1,7 +1,19 @@
 {
-  "updated_at": "2026-10-22 01:11:28",
+  "updated_at": "2026-10-22 01:36:12",
   "total_tips": 14,
   "live_feed": [
+    {
+      "id": 3676,
+      "channel": "calciomercato",
+      "time": "2026-10-22 00:49",
+      "code": "周三004",
+      "league": "欧冠",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "科莫 VS 曼联",
+      "chinese": "科莫开场闪击，帕斯开门红打破僵局。曼联客场早早落后，防线专注度极差，临场追红利好大球走势。科莫主场士气暴涨，曼联被迫压上，防守反击与破门机会骤增，提防大比分打出。",
+      "original": "🇪🇺 UEFA CHAMPIONS LEAGUE 🇪🇺 3ª Giornata GOAL ⚪ Como 1-0 Manchester United 🔴 ⚽️ N. Paz 👟 L.Da Cunha ⏱️ 2’ ⚽️"
+    },
     {
       "id": 3686,
       "channel": "Free365Tips",
@@ -157,7 +169,9 @@
       "match": "科莫 VS 曼联",
       "chinese": "欧冠焦点战科莫打曼联，海外主力资金正疯狂砸向全场至少进3球的大比分，2.5大赔率被狠狠压到1.59超低位，防守端两边都漏，这架势对攻局没跑，无脑冲大球！",
       "original": "FOOTBALL CHAMPIONS LEAGUE COMO VS MANCHESTER UTD OVER 2.5 GOALS ODDS : 1.59"
-    },
+    }
+  ],
+  "archived": [
     {
       "id": 3524,
       "channel": "victorspredict",
@@ -169,9 +183,7 @@
       "match": "科莫 VS 曼联",
       "chinese": "欧前线最新风向：客队曼联热度不减，主力框架齐整，外界资金防一手冷平，倾向曼联客场不败（双平/让平让负）。客胜及平局回报适中，本场防守反击是关键，看好红魔客场保平争胜。",
       "original": "⭐ SUPER SINGLE TIP - 21-10-2026 Como vs Manchester United World: UEFA Champions League Prediction: Away Win or Draw (1.74) 🔗 View Details ⚠️ All predictions are"
-    }
-  ],
-  "archived": [
+    },
     {
       "id": 3162,
       "channel": "tribuna_football",
