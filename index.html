@@ -418,71 +418,45 @@
             letter-spacing: -0.4px;
         }
 
-        /* 实体彩票质感：经典复古物理对错印章 (醒目盖在选项方块上) */
+        /* 实体彩票质感：经典物理圆形印章 (醒目盖在命中选项方块上，仅中奖项出现) */
         .option-stamp {
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%) rotate(-14deg);
-            width: 52px;
-            height: 52px;
+            transform: translate(-50%, -50%) rotate(-12deg);
+            width: 58px;
+            height: 58px;
             border-radius: 50%;
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
             pointer-events: none;
             z-index: 10;
-            font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-            text-transform: uppercase;
             box-sizing: border-box;
-            line-height: 1.1;
-            box-shadow: 0 0 16px rgba(0,0,0,0.6);
-            backdrop-filter: blur(1px);
+            border: 2.5px solid #10b981;
+            background: radial-gradient(circle, rgba(16, 185, 129, 0.42) 0%, rgba(5, 46, 22, 0.94) 100%);
+            box-shadow: 0 0 16px rgba(16, 185, 129, 0.5), inset 0 0 8px rgba(16, 185, 129, 0.4);
             animation: stampIn 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
         .option-stamp::before {
             content: '';
             position: absolute;
-            inset: 2px;
+            inset: 3px;
             border-radius: 50%;
-            border: 1px dashed currentColor;
-            opacity: 0.65;
-        }
-
-        .option-stamp-hit {
-            border: 2.5px solid #10b981;
-            color: #10b981;
-            background: radial-gradient(circle, rgba(16, 185, 129, 0.32) 0%, rgba(5, 46, 22, 0.75) 100%);
-            text-shadow: 0 0 6px rgba(16, 185, 129, 0.8);
-        }
-
-        .option-stamp-miss {
-            border: 2.5px solid #ef4444;
-            color: #ef4444;
-            background: radial-gradient(circle, rgba(239, 68, 68, 0.32) 0%, rgba(69, 10, 10, 0.75) 100%);
-            text-shadow: 0 0 6px rgba(239, 68, 68, 0.8);
-        }
-
-        .option-stamp-actual {
-            border: 2.5px solid #38bdf8;
-            color: #38bdf8;
-            background: radial-gradient(circle, rgba(56, 189, 248, 0.28) 0%, rgba(12, 74, 110, 0.75) 100%);
-            text-shadow: 0 0 6px rgba(56, 189, 248, 0.8);
-        }
-
-        .option-stamp .stamp-icon {
-            font-size: 15px;
-            font-weight: 900;
-            line-height: 1;
-            margin-bottom: 1px;
+            border: 1.5px dashed rgba(52, 211, 153, 0.85);
         }
 
         .option-stamp .stamp-text {
-            font-size: 9.5px;
+            font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            font-size: 17px;
             font-weight: 900;
-            letter-spacing: 0.5px;
+            color: #ffffff;
+            letter-spacing: 2px;
+            text-indent: 2px;
+            line-height: 1;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.95);
+            z-index: 2;
         }
 
         @keyframes stampIn {
@@ -2675,38 +2649,17 @@
                 let sfcAuditBadge = '';
                 let midScoreHtml = '<span class="vs-divider">VS</span>';
 
-                // 生成盖在三个选项方块上的经典物理对错圆形印章
+                // 生成盖在命中选项方块上的经典物理对错圆形印章（只在中了的结果上盖【命中】）
                 const getOptionStamp = (opt) => {
                     if (!isFinished || !m.outcome) return '';
                     const actual = String(m.outcome);
                     const isPredicted = (p === opt || s === opt || u === opt);
 
-                    // 1. 如果该项是官方真实打出的结果 (OUTCOME)
-                    if (actual === opt) {
-                        if (isPredicted) {
-                            // 猜中了打出的项：盖绿色高光【命中】圆形印章
-                            const label = p === opt ? '首选命中' : (s === opt ? '防冷命中' : '爆冷命中');
-                            return `
-                                <div class="option-stamp option-stamp-hit">
-                                    <span class="stamp-icon">✔</span>
-                                    <span class="stamp-text">${label}</span>
-                                </div>
-                            `;
-                        } else {
-                            // 实际打出但没选该项：盖蓝色【赛果打出】圆形印章
-                            return `
-                                <div class="option-stamp option-stamp-actual">
-                                    <span class="stamp-icon">★</span>
-                                    <span class="stamp-text">打出此项</span>
-                                </div>
-                            `;
-                        }
-                    } else if (isPredicted) {
-                        // 选了但没打出的项：盖红色醒目【失误/未中】圆形印章
+                    // 核心铁律：仅且仅当真实赛果命中并且是用户推荐的选项时，才盖上大号清晰的【命中】印章！其余任何项绝不盖戳！
+                    if (actual === opt && isPredicted) {
                         return `
-                            <div class="option-stamp option-stamp-miss">
-                                <span class="stamp-icon">✖</span>
-                                <span class="stamp-text">未中</span>
+                            <div class="option-stamp">
+                                <span class="stamp-text">命中</span>
                             </div>
                         `;
                     }
