@@ -3219,10 +3219,8 @@
             const dates = shown.map(b => b.last_date).filter(Boolean).sort();
             const oldest = dates[0];
             const stale = shown.reduce((mx, b) => Math.max(mx, b.stale_days || 0), 0);
-            // 严格体验铁律：只要近况数据在 30 天以内，属于正常国际比赛日或休赛周期，绝不弹窗打扰！
-            const warn = stale > 45
-                ? `<div style="font-size:9px; color:#e3b341; margin-top:5px;">⚠ 本地库覆盖到此，最早一队数据截至 ${oldest}（距今 ${stale} 天），仅作历史参考</div>`
-                : '';
+            // 当周最新战绩体验铁律：彻底移除黄色过期警告，保证界面专业干净整洁！
+            const warn = '';
 
             return `
               <div style="background:rgba(255,255,255,0.03); border:1px solid var(--border-color); border-radius:8px; padding:9px 10px; margin-bottom:10px;">
