@@ -19752,7 +19752,7 @@
         "tipster_score": 72.0,
         "math_score": 76.0
       },
-      "tip": "胜平双选",
+      "tip": "让负",
       "predicted_scores": [
         "2-1",
         "1-0",
@@ -19952,9 +19952,9 @@
         "trap_warning": "盘面处于正常期望区间",
         "stars": "★★☆☆☆",
         "tier_title": "深水博冷区间",
-        "smart_pick": "胜平双选",
-        "smart_type": "DOUBLE",
-        "quant_detail_note": ""
+        "smart_pick": "让负",
+        "smart_type": "SINGLE",
+        "quant_detail_note": "【8万场让球利刃 · 极简让球直打】：8万场历史大数据同赔率下最高胜率仅为 45.9%，客队具备极强反客为主抗衡力。实战果断单挑【让负】，一注通吃客队不败！"
       }
     },
     {
@@ -20685,7 +20685,7 @@
         "tipster_score": 68.9,
         "math_score": 68.2
       },
-      "tip": "胜平双选",
+      "tip": "主胜/防平",
       "predicted_scores": [
         "2-1",
         "1-1",
@@ -20861,7 +20861,7 @@
         "trap_warning": "盘面处于正常期望区间",
         "stars": "★★☆☆☆",
         "tier_title": "深水博冷区间",
-        "smart_pick": "胜平双选",
+        "smart_pick": "主胜/防平",
         "smart_type": "DOUBLE",
         "quant_detail_note": ""
       }
@@ -21853,7 +21853,7 @@
         "tipster_score": 68.9,
         "math_score": 68.2
       },
-      "tip": "胜平双选",
+      "tip": "让负",
       "predicted_scores": [
         "2-1",
         "1-1",
@@ -22053,9 +22053,9 @@
         "trap_warning": "盘面处于正常期望区间",
         "stars": "★★☆☆☆",
         "tier_title": "深水博冷区间",
-        "smart_pick": "胜平双选",
-        "smart_type": "DOUBLE",
-        "quant_detail_note": ""
+        "smart_pick": "让负",
+        "smart_type": "SINGLE",
+        "quant_detail_note": "【8万场让球利刃 · 极简让球直打】：8万场历史大数据同赔率下最高胜率仅为 45.3%，客队具备极强反客为主抗衡力。实战果断单挑【让负】，一注通吃客队不败！"
       }
     },
     {

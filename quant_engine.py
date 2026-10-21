@@ -232,19 +232,19 @@ def analyze_match_factors(sh, sd, sa, league="", home="", away="", is_only_rq=Fa
     if p_w >= 0.68:
         smart_pick = "主胜"
         smart_type = "SINGLE"
-    elif p_w >= 0.48:
+    elif p_w >= 0.50:
         smart_pick = "主胜/防平"
         smart_type = "DOUBLE"
-    elif p_w <= 0.45 and p_w >= p_l:
-        # 主让1球但主胜率不足45%：触发让球量化利刃！
+    elif p_w <= 0.47 and p_w >= p_l:
+        # 主让1球但主胜率不足47%（主队极弱微让）：触发让球量化利刃，坚决不推胜平双选，直接上让负！
         if should_add_rp:
             smart_pick = "让负/防让平"
             smart_type = "DOUBLE"
         else:
             smart_pick = "让负"
             smart_type = "SINGLE"
-    elif p_l <= 0.45 and p_l > p_w:
-        # 客让1球但客胜率不足45%：触发让球量化利刃！
+    elif p_l <= 0.47 and p_l > p_w:
+        # 客让1球但客胜率不足47%：触发让球量化利刃！
         if should_add_rp:
             smart_pick = "让胜/防让平"
             smart_type = "DOUBLE"
@@ -255,7 +255,7 @@ def analyze_match_factors(sh, sd, sa, league="", home="", away="", is_only_rq=Fa
         smart_pick = "客胜/防平"
         smart_type = "DOUBLE"
     else:
-        smart_pick = "胜平双选"
+        smart_pick = "主胜/防平"
         smart_type = "DOUBLE"
 
     # 7. 注入量化利刃详情说明 (用于点击详情抽屉弹窗展示)
