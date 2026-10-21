@@ -1,7 +1,19 @@
 {
-  "updated_at": "2026-10-22 03:56:32",
+  "updated_at": "2026-10-22 04:01:33",
   "total_tips": 12,
   "live_feed": [
+    {
+      "id": 3747,
+      "channel": "footballbettingtips10",
+      "time": "2026-10-22 02:56",
+      "code": "周三010",
+      "league": "欧冠",
+      "category": "推单·已开赛",
+      "is_tip": true,
+      "match": "拜仁 VS 阿森纳",
+      "chinese": "海外滚球带单客正猛砸半场进球。核心直指半场至少轰入1球、博2球的大球盘，实单已砸65镑跟进。场子预期两队开局极可能提速对攻，半场大球资金暗流极重，防早泄球！",
+      "original": "BET 4 my TRAIN CHALLENGE £25 - £1,000 NO DELAYS WITH MY TRAINS ! Departing from Munich 🇩🇪 Those of you WITHOUT a MIDNITE account get £30 in FREE BETS when you d"
+    },
     {
       "id": 3759,
       "channel": "matchpreviews",
@@ -75,18 +87,6 @@
       "original": "🔥 HOT PICK 🌍 UEFA Champions League 🆚 Real Madrid vs RB Leipzig 🕐 Wed, 21 Oct · 19:00 UTC 💡 Half Time / Full Time: Home/Home 📊 Odds: 1.54 ✅ Confidence: 65% 📌 Mat"
     },
     {
-      "id": 3614,
-      "channel": "tribuna_football",
-      "time": "2026-10-21 21:01",
-      "code": "周三010",
-      "league": "欧冠",
-      "category": "赛前军情",
-      "is_tip": false,
-      "match": "拜仁 VS 阿森纳",
-      "chinese": "突发大雷！拜仁队长基米希因父亲变故今晚铁定缺席，中后场枢纽直接瘫痪，这对枪手客场抢分是超级利好。拜仁硬度骤降，阿森纳客不败甚至偷胜呼声拉满，防守大开，重心防客队、走大球。",
-      "original": "Bayern Munich captain Joshua Kimmich will miss tonight's clash with Arsenal due to the sudden passing of his father 💔 Sending strength to Joshua and his family "
-    },
-    {
       "id": 3604,
       "channel": "Upper90TipsFree",
       "time": "2026-10-21 20:05",
@@ -148,6 +148,18 @@
     }
   ],
   "archived": [
+    {
+      "id": 3614,
+      "channel": "tribuna_football",
+      "time": "2026-10-21 21:01",
+      "code": "周三010",
+      "league": "欧冠",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "拜仁 VS 阿森纳",
+      "chinese": "突发大雷！拜仁队长基米希因父亲变故今晚铁定缺席，中后场枢纽直接瘫痪，这对枪手客场抢分是超级利好。拜仁硬度骤降，阿森纳客不败甚至偷胜呼声拉满，防守大开，重心防客队、走大球。",
+      "original": "Bayern Munich captain Joshua Kimmich will miss tonight's clash with Arsenal due to the sudden passing of his father 💔 Sending strength to Joshua and his family "
+    },
     {
       "id": 3553,
       "channel": "FabrizioRomano",
