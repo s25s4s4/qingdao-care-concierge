@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-21 09:36:24",
+  "updated_at": "2026-10-21 09:37:24",
   "total": 97,
   "matches": [
     {
@@ -453,7 +453,7 @@
         "result": "HIT",
         "score": "0-2",
         "source": "stored_score",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "客胜"
       },
       "stats": {
@@ -684,7 +684,7 @@
         "result": "HIT",
         "score": "4-0",
         "source": "stored_score",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "主胜"
       },
       "stats": {
@@ -916,7 +916,7 @@
         "result": "HIT",
         "score": "2-1",
         "source": "stored_score",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "主胜"
       },
       "stats": {
@@ -1148,7 +1148,7 @@
         "result": "HIT",
         "score": "1-0",
         "source": "stored_score",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "主胜"
       },
       "stats": {
@@ -1381,7 +1381,7 @@
         "result": "MISS",
         "score": "4-2",
         "source": "stored_score",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "主胜"
       },
       "stats": {
@@ -1612,7 +1612,7 @@
         "result": "HIT",
         "score": "0-3",
         "source": "stored_score",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "客胜"
       },
       "stats": {
@@ -1820,7 +1820,7 @@
         "result": "HIT",
         "score": "1-2",
         "source": "stored_score",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "客胜"
       },
       "stats": {
@@ -1978,7 +1978,7 @@
         "result": "HIT",
         "score": "1-1",
         "source": "stored_score",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "平局"
       },
       "stats": {
@@ -2210,7 +2210,7 @@
         "result": "HIT",
         "score": "2-0",
         "source": "stored_score",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "主胜"
       },
       "stats": {
@@ -2421,7 +2421,7 @@
         "result": "HIT",
         "score": "2 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "主胜"
       },
       "stats": {
@@ -2633,7 +2633,7 @@
         "result": "HIT",
         "score": "2 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "主胜"
       },
       "stats": {
@@ -2868,7 +2868,7 @@
         "result": "HIT",
         "score": "2 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "主胜"
       },
       "stats": {
@@ -3090,7 +3090,7 @@
         "result": "HIT",
         "score": "2 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "平局"
       },
       "stats": {
@@ -3327,7 +3327,7 @@
         "result": "MISS",
         "score": "1 - 3",
         "source": "fotmob",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "客胜"
       },
       "stats": {
@@ -3563,7 +3563,7 @@
         "result": "HIT",
         "score": "1 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "平局"
       },
       "stats": {
@@ -3725,7 +3725,7 @@
         "result": "HIT",
         "score": "0 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "客胜"
       },
       "stats": {
@@ -3957,7 +3957,7 @@
         "result": "HIT",
         "score": "2 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "平局"
       },
       "stats": {
@@ -4169,7 +4169,7 @@
         "result": "HIT",
         "score": "0 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "客胜"
       },
       "stats": {
@@ -4402,7 +4402,7 @@
         "result": "MISS",
         "score": "0-2",
         "source": "stored_score",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "客胜"
       },
       "stats": {
@@ -4639,7 +4639,7 @@
         "result": "MISS",
         "score": "1 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "主胜"
       },
       "stats": {
@@ -4861,7 +4861,7 @@
         "result": "HIT",
         "score": "4-0",
         "source": "stored_score",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "主胜"
       },
       "stats": {
@@ -5088,7 +5088,7 @@
         "result": "MISS",
         "score": "4 - 3",
         "source": "fotmob",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "主胜"
       },
       "stats": {
@@ -5315,7 +5315,7 @@
         "result": "MISS",
         "score": "2 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "平局"
       },
       "stats": {
@@ -5551,7 +5551,7 @@
         "result": "HIT",
         "score": "0 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "客胜"
       },
       "stats": {
@@ -5788,7 +5788,7 @@
         "result": "MISS",
         "score": "1-0",
         "source": "stored_score",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "主胜"
       },
       "stats": {
@@ -6025,7 +6025,7 @@
         "result": "HIT",
         "score": "0 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "平局"
       },
       "stats": {
@@ -6262,7 +6262,7 @@
         "result": "MISS",
         "score": "1 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "客胜"
       },
       "stats": {
@@ -6497,7 +6497,7 @@
         "result": "HIT",
         "score": "3 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "主胜"
       },
       "stats": {
@@ -6708,7 +6708,7 @@
         "result": "HIT",
         "score": "1 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "主胜"
       },
       "stats": {
@@ -6945,7 +6945,7 @@
         "result": "MISS",
         "score": "0 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "平局"
       },
       "stats": {
@@ -7180,7 +7180,7 @@
         "result": "HIT",
         "score": "1 - 3",
         "source": "fotmob",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "客胜"
       },
       "stats": {
@@ -7416,7 +7416,7 @@
         "result": "HIT",
         "score": "1-3",
         "source": "stored_score",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "客胜"
       },
       "stats": {
@@ -7658,7 +7658,7 @@
         "result": "MISS",
         "score": "0-1",
         "source": "stored_score",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "客胜"
       },
       "stats": {
@@ -7912,7 +7912,7 @@
         "result": "HIT",
         "score": "6-1",
         "source": "stored_score",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "让胜"
       },
       "stats": {
@@ -8153,7 +8153,7 @@
         "result": "HIT",
         "score": "2-5",
         "source": "stored_score",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "客胜"
       },
       "stats": {
@@ -8394,7 +8394,7 @@
         "result": "HIT",
         "score": "3-4",
         "source": "stored_score",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "客胜"
       },
       "stats": {
@@ -8629,7 +8629,7 @@
         "result": "HIT",
         "score": "2-0",
         "source": "stored_score",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "主胜"
       },
       "stats": {
@@ -8868,7 +8868,7 @@
         "result": "HIT",
         "score": "0-0",
         "source": "stored_score",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "平局"
       },
       "stats": {
@@ -9111,7 +9111,7 @@
         "result": "HIT",
         "score": "1-0",
         "source": "stored_score",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "主胜"
       },
       "stats": {
@@ -9356,7 +9356,7 @@
         "result": "HIT",
         "score": "3 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "主胜"
       },
       "stats": {
@@ -9600,7 +9600,7 @@
         "result": "HIT",
         "score": "1 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "平局"
       },
       "stats": {
@@ -9843,7 +9843,7 @@
         "result": "MISS",
         "score": "2 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "平局"
       },
       "stats": {
@@ -10088,7 +10088,7 @@
         "result": "MISS",
         "score": "4 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "主胜"
       },
       "stats": {
@@ -10333,7 +10333,7 @@
         "result": "MISS",
         "score": "0 - 3",
         "source": "fotmob",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "客胜"
       },
       "stats": {
@@ -10577,7 +10577,7 @@
         "result": "HIT",
         "score": "2 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "主胜"
       },
       "stats": {
@@ -10786,7 +10786,7 @@
         "result": "HIT",
         "score": "2-2",
         "source": "stored_score",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "平局"
       },
       "stats": {
@@ -11029,7 +11029,7 @@
         "result": "HIT",
         "score": "2 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "主胜"
       },
       "stats": {
@@ -11246,7 +11246,7 @@
         "result": "MISS",
         "score": "0 - 3",
         "source": "fotmob",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "客胜"
       },
       "stats": {
@@ -11490,7 +11490,7 @@
         "result": "HIT",
         "score": "1 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "平局"
       },
       "stats": {
@@ -11729,7 +11729,7 @@
         "result": "HIT",
         "score": "2-0",
         "source": "stored_score",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "主胜"
       },
       "stats": {
@@ -11974,7 +11974,7 @@
         "result": "HIT",
         "score": "1 - 3",
         "source": "fotmob",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "客胜"
       },
       "stats": {
@@ -12218,7 +12218,7 @@
         "result": "HIT",
         "score": "2 - 5",
         "source": "fotmob",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "客胜"
       },
       "stats": {
@@ -12463,7 +12463,7 @@
         "result": "HIT",
         "score": "2 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "主胜"
       },
       "stats": {
@@ -12703,7 +12703,7 @@
         "result": "HIT",
         "score": "2-1",
         "source": "stored_score",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "主胜"
       },
       "stats": {
@@ -12941,7 +12941,7 @@
         "result": "HIT",
         "score": "2-5",
         "source": "stored_score",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "客胜"
       },
       "stats": {
@@ -13184,7 +13184,7 @@
         "result": "MISS",
         "score": "1 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "主胜"
       },
       "stats": {
@@ -13429,7 +13429,7 @@
         "result": "HIT",
         "score": "0 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "客胜"
       },
       "stats": {
@@ -13672,7 +13672,7 @@
         "result": "HIT",
         "score": "1 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "客胜"
       },
       "stats": {
@@ -13912,7 +13912,7 @@
         "result": "HIT",
         "score": "3-2",
         "source": "stored_score",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "主胜"
       },
       "stats": {
@@ -14155,7 +14155,7 @@
         "result": "HIT",
         "score": "2-5",
         "source": "stored_score",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "客胜"
       },
       "stats": {
@@ -14396,7 +14396,7 @@
         "result": "MISS",
         "score": "0-3",
         "source": "stored_score",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "客胜"
       },
       "stats": {
@@ -14635,7 +14635,7 @@
         "result": "HIT",
         "score": "2-1",
         "source": "stored_score",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "主胜"
       },
       "stats": {
@@ -14884,7 +14884,7 @@
         "result": "HIT",
         "score": "4-1",
         "source": "stored_score",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "让胜"
       },
       "stats": {
@@ -15132,7 +15132,7 @@
         "result": "MISS",
         "score": "1-2",
         "source": "stored_score",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "让负"
       },
       "stats": {
@@ -15378,7 +15378,7 @@
         "result": "HIT",
         "score": "4-0",
         "source": "stored_score",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "主胜"
       },
       "stats": {
@@ -15616,7 +15616,7 @@
         "result": "HIT",
         "score": "1-2",
         "source": "stored_score",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "客胜"
       },
       "stats": {
@@ -15864,7 +15864,7 @@
         "result": "HIT",
         "score": "0-3",
         "source": "stored_score",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "客胜"
       },
       "stats": {
@@ -16112,7 +16112,7 @@
         "result": "HIT",
         "score": "0-3",
         "source": "stored_score",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "客胜"
       },
       "stats": {
@@ -16350,13 +16350,13 @@
         "result": "HIT",
         "score": "2-1",
         "source": "stored_score",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "主胜"
       },
       "score_conflict": {
         "local": "2 - 1",
         "fotmob": "3 - 1",
-        "at": "2026-10-21 09:36:05"
+        "at": "2026-10-21 09:37:07"
       },
       "stats": {
         "home": {
@@ -16579,7 +16579,7 @@
         "result": "HIT",
         "score": "1-1",
         "source": "stored_score",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "平局"
       },
       "stats": {
@@ -16827,7 +16827,7 @@
         "result": "MISS",
         "score": "1-2",
         "source": "stored_score",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "客胜"
       },
       "stats": {
@@ -17075,7 +17075,7 @@
         "result": "MISS",
         "score": "1-1",
         "source": "stored_score",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "平局"
       },
       "stats": {
@@ -17456,7 +17456,7 @@
         "result": "MISS",
         "score": "2-2",
         "source": "stored_score",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "平局"
       }
     },
@@ -17656,7 +17656,7 @@
         "result": "HIT",
         "score": "1-2",
         "source": "stored_score",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "客胜"
       }
     },
@@ -17865,7 +17865,7 @@
         "result": "MISS",
         "score": "1-1",
         "source": "stored_score",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "平局"
       }
     },
@@ -18125,7 +18125,7 @@
         "result": "HIT",
         "score": "4-3",
         "source": "stored_score",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "主胜"
       }
     },
@@ -18376,7 +18376,7 @@
         "result": "HIT",
         "score": "4-0",
         "source": "stored_score",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "让胜"
       }
     },
@@ -18657,7 +18657,7 @@
         "result": "HIT",
         "score": "4-2",
         "source": "stored_score",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "主胜"
       }
     },
@@ -18936,7 +18936,7 @@
         "result": "HIT",
         "score": "4-3",
         "source": "stored_score",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "主胜"
       }
     },
@@ -19189,7 +19189,7 @@
         "result": "HIT",
         "score": "5-1",
         "source": "stored_score",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "让胜"
       }
     },
@@ -19441,7 +19441,7 @@
         "result": "MISS",
         "score": "1-1",
         "source": "stored_score",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "平局"
       }
     },
@@ -19705,7 +19705,7 @@
         "result": "MISS",
         "score": "0-1",
         "source": "stored_score",
-        "settled_at": "2026-10-21T09:36:17",
+        "settled_at": "2026-10-21T09:37:18",
         "outcome": "客胜"
       }
     },
