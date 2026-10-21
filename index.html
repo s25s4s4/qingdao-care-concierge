@@ -2673,19 +2673,57 @@
                 // 完赛状态与对错印章计算
                 const isFinished = (m.status === '已完赛' || m.live_status === 'FIN') && m.score && m.score !== '--';
                 let sfcAuditBadge = '';
-                let midScoreHtml = '<span class=\"vs-divider\">VS</span>';
+                let midScoreHtml = '<span class="vs-divider">VS</span>';
+
+                // 生成盖在三个选项方块上的经典物理对错圆形印章
+                const getOptionStamp = (opt) => {
+                    if (!isFinished || !m.outcome) return '';
+                    const actual = String(m.outcome);
+                    const isPredicted = (p === opt || s === opt || u === opt);
+
+                    // 1. 如果该项是官方真实打出的结果 (OUTCOME)
+                    if (actual === opt) {
+                        if (isPredicted) {
+                            // 猜中了打出的项：盖绿色高光【命中】圆形印章
+                            const label = p === opt ? '首选命中' : (s === opt ? '防冷命中' : '爆冷命中');
+                            return `
+                                <div class="option-stamp option-stamp-hit">
+                                    <span class="stamp-icon">✔</span>
+                                    <span class="stamp-text">${label}</span>
+                                </div>
+                            `;
+                        } else {
+                            // 实际打出但没选该项：盖蓝色【赛果打出】圆形印章
+                            return `
+                                <div class="option-stamp option-stamp-actual">
+                                    <span class="stamp-icon">★</span>
+                                    <span class="stamp-text">打出此项</span>
+                                </div>
+                            `;
+                        }
+                    } else if (isPredicted) {
+                        // 选了但没打出的项：盖红色醒目【失误/未中】圆形印章
+                        return `
+                            <div class="option-stamp option-stamp-miss">
+                                <span class="stamp-icon">✖</span>
+                                <span class="stamp-text">未中</span>
+                            </div>
+                        `;
+                    }
+                    return '';
+                };
 
                 if (isFinished) {
-                    midScoreHtml = `<div style=\"font-family: var(--font-mono); font-size: 18px; font-weight: 900; color: #fff; letter-spacing: 1px;\">${m.score}</div><div style=\"font-size: 9.5px; color: var(--text-tertiary); font-weight: 700;\">完赛</div>`;
+                    midScoreHtml = `<div style="font-family: var(--font-mono); font-size: 18px; font-weight: 900; color: #fff; letter-spacing: 1px;">${m.score}</div><div style="font-size: 9.5px; color: var(--text-tertiary); font-weight: 700;">完赛</div>`;
                     if (m.result === 'HIT_PRIMARY' || m.result === 'HIT_SECONDARY' || m.result === 'HIT_UPSET' || m.result === 'HIT') {
                         const hitLabel = m.result === 'HIT_PRIMARY' ? '✔ 核心首选命中' : (m.result === 'HIT_SECONDARY' ? '✔ 次选防冷命中' : (m.result === 'HIT_UPSET' ? '✔ 防大冷命中' : '✔ 研判命中'));
-                        sfcAuditBadge = `<span class=\"match-audit-tag tag-hit\" style=\"font-size: 10px; padding: 2px 7px;\">${hitLabel}</span>`;
+                        sfcAuditBadge = `<span class="match-audit-tag tag-hit" style="font-size: 10px; padding: 2px 7px;">${hitLabel}</span>`;
                     } else if (m.result === 'MISS') {
-                        sfcAuditBadge = `<span class=\"match-audit-tag tag-miss\" style=\"font-size: 10px; padding: 2px 7px;\">✖ 选号失误</span>`;
+                        sfcAuditBadge = `<span class="match-audit-tag tag-miss" style="font-size: 10px; padding: 2px 7px;">✖ 选号失误</span>`;
                     }
                 } else if (m.status && m.status.includes('进行中')) {
-                    midScoreHtml = `<div class=\"live-score-now\" style=\"font-size: 16px;\">${m.score || '0-0'}</div><div style=\"font-size: 9px; color: #ef4444; font-weight: 800;\">LIVE</div>`;
-                    sfcAuditBadge = `<span class=\"match-audit-tag tag-live\" style=\"font-size: 10px; padding: 2px 7px;\">🔴 进行中</span>`;
+                    midScoreHtml = `<div class="live-score-now" style="font-size: 16px;">${m.score || '0-0'}</div><div style="font-size: 9px; color: #ef4444; font-weight: 800;">LIVE</div>`;
+                    sfcAuditBadge = `<span class="match-audit-tag tag-live" style="font-size: 10px; padding: 2px 7px;">🔴 进行中</span>`;
                 }
 
                 const getTextColor = (opt) => {
@@ -2696,21 +2734,24 @@
                 };
 
                 const oddsHtml = `
-                    <div class=\"odds-strip\" style=\"margin-top: 10px; margin-bottom: 2px; grid-template-columns: repeat(3, 1fr); gap: 8px;\">
-                        <div class=\"odds-box\" style=\"position: relative; overflow: hidden; padding: 8px 4px; ${getBoxStyle('3')}\">
+                    <div class="odds-strip" style="margin-top: 10px; margin-bottom: 2px; grid-template-columns: repeat(3, 1fr); gap: 8px;">
+                        <div class="odds-box" style="position: relative; overflow: hidden; padding: 8px 4px; min-height: 62px; display: flex; flex-direction: column; justify-content: center; ${getBoxStyle('3')}">
                             ${getBadge('3')}
-                            <div class=\"odds-name\" style=\"font-weight: 700; ${getTextColor('3')}\">主胜 (3)</div>
-                            <div class=\"odds-val\" style=\"font-size: 13px; font-weight: 800; ${p==='3'||s==='3'||u==='3'?'color:#fff;':''}\">${odds[0]}</div>
+                            ${getOptionStamp('3')}
+                            <div class="odds-name" style="font-weight: 700; ${getTextColor('3')}">主胜 (3)</div>
+                            <div class="odds-val" style="font-size: 13px; font-weight: 800; ${p==='3'||s==='3'||u==='3'?'color:#fff;':''}">${odds[0]}</div>
                         </div>
-                        <div class=\"odds-box\" style=\"position: relative; overflow: hidden; padding: 8px 4px; ${getBoxStyle('1')}\">
+                        <div class="odds-box" style="position: relative; overflow: hidden; padding: 8px 4px; min-height: 62px; display: flex; flex-direction: column; justify-content: center; ${getBoxStyle('1')}">
                             ${getBadge('1')}
-                            <div class=\"odds-name\" style=\"font-weight: 700; ${getTextColor('1')}\">平局 (1)</div>
-                            <div class=\"odds-val\" style=\"font-size: 13px; font-weight: 800; ${p==='1'||s==='1'||u==='1'?'color:#fff;':''}\">${odds[1]}</div>
+                            ${getOptionStamp('1')}
+                            <div class="odds-name" style="font-weight: 700; ${getTextColor('1')}">平局 (1)</div>
+                            <div class="odds-val" style="font-size: 13px; font-weight: 800; ${p==='1'||s==='1'||u==='1'?'color:#fff;':''}">${odds[1]}</div>
                         </div>
-                        <div class=\"odds-box\" style=\"position: relative; overflow: hidden; padding: 8px 4px; ${getBoxStyle('0')}\">
+                        <div class="odds-box" style="position: relative; overflow: hidden; padding: 8px 4px; min-height: 62px; display: flex; flex-direction: column; justify-content: center; ${getBoxStyle('0')}">
                             ${getBadge('0')}
-                            <div class=\"odds-name\" style=\"font-weight: 700; ${getTextColor('0')}\">客胜 (0)</div>
-                            <div class=\"odds-val\" style=\"font-size: 13px; font-weight: 800; ${p==='0'||s==='0'||u==='0'?'color:#fff;':''}\">${odds[2]}</div>
+                            ${getOptionStamp('0')}
+                            <div class="odds-name" style="font-weight: 700; ${getTextColor('0')}">客胜 (0)</div>
+                            <div class="odds-val" style="font-size: 13px; font-weight: 800; ${p==='0'||s==='0'||u==='0'?'color:#fff;':''}">${odds[2]}</div>
                         </div>
                     </div>
                 `;
