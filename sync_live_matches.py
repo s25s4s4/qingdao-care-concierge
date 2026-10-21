@@ -764,6 +764,9 @@ def full_pipeline_sync(auto_push=True):
         # 2. 客胜+平局 >= 70% 时，必须推【客胜】或【客胜/防平】！
         # 3. 只有当让球方胜率低（<=48%）且冷门几率大时，才允许推让负！
         for m in existing_matches:
+            # 关键：已完赛比赛绝对物理锁死，严禁被每分钟轮询覆写或重设 tip！
+            if m.get('status') == '已完赛' or m.get('result') != 'PENDING' or m.get('locked'):
+                continue
             try:
                 # 优先采用 quant_factors 物理概率硬门控对齐
                 qf = m.get('quant_factors') or {}
