@@ -11,12 +11,43 @@ CURRENT_SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 if CURRENT_SCRIPT_DIR not in sys.path:
     sys.path.insert(0, CURRENT_SCRIPT_DIR)
 
-# 引入最高难度三模型对抗深度推演引擎 (Low数学 + High战术攻防 + High前线22频道实盘共振)
+# 研判引擎开关：
+#   0 = 纯规则引擎（默认，不消耗任何 token）
+#   1 = 走 deep_reasoning_engine 的三模型 LLM 推演
+# 2026-10-22 起默认关掉 LLM：推荐方向本来就由下方「铁壁守门员」按去水概率覆盖，
+# LLM 只贡献四段文案和一个共识分，token 成本却按场次线性增长。
+USE_LLM_DOSSIER = os.environ.get("USE_LLM_DOSSIER", "0") == "1"
+
 try:
     from deep_reasoning_engine import run_tri_model_deep_reasoning
 except ImportError as e:
     print(f"Warning: deep_reasoning_engine import failed: {e}")
     run_tri_model_deep_reasoning = None
+
+
+def rule_dossier(of):
+    """用赔率 + 本地 14 年库 + Understat xG 现算一份研判，不调用任何模型。"""
+    try:
+        import rule_engine
+        import enrich_team_stats as _E
+        import team_stats as _TS
+        import fetch_understat as _US
+
+        day = _E.full_date(of.get("time"))
+        idx = _E._index()
+        ts_blk = _TS.build(of["home"], of["away"], day, idx) if (idx and day) else None
+
+        season = None
+        us = _US.load()
+        if us and of.get("league") in us.get("leagues", {}):
+            h = _US.team_season(of["home"], of["league"], us)
+            a = _US.team_season(of["away"], of["league"], us)
+            if h or a:
+                season = {"home": h, "away": a}
+        return rule_engine.build(of, team_stats=ts_blk, understat=season)
+    except Exception as e:
+        print(f"[{datetime.now()}] rule_dossier failed for {of.get('code')}: {type(e).__name__} {e}")
+        return None
 
 # Windows 底层彻底静默调用标志 (100% 杜绝黑框闪烁弹窗)
 CREATE_NO_WINDOW = 0x08000000
@@ -392,14 +423,16 @@ def full_pipeline_sync(auto_push=True):
         if code not in existing_map:
             # 优先尝试最高难度三模型交叉推演引擎
             deep_res = None
-            if run_tri_model_deep_reasoning:
+            if USE_LLM_DOSSIER and run_tri_model_deep_reasoning:
                 try:
                     deep_res = run_tri_model_deep_reasoning(of)
                 except Exception as e:
                     print(f"[{datetime.now()}] Deep reasoning fallback for {code}: {e}")
+            else:
+                deep_res = rule_dossier(of)
 
             if deep_res:
-                st = "三模型深度裁决"
+                st = "量化研判" if deep_res.get("engine") == "rule" else "三模型深度裁决"
                 tip = deep_res["tip"]
                 cons = f"{tip} ({deep_res['consensus_ratio']}%)"
                 ratio = deep_res["consensus_ratio"]
@@ -407,8 +440,9 @@ def full_pipeline_sync(auto_push=True):
                 bd = deep_res.get("consensus_breakdown", {
                     "odds_score": 75.0, "intel_score": 75.0, "tipster_score": 75.0, "math_score": 75.0
                 })
+                _eng = "量化" if deep_res.get("engine") == "rule" else "三模型对抗"
                 dossier = {
-                    "summary": f"{of['home']}对阵{of['away']}，三模型对抗研判首选【{tip}】。",
+                    "summary": f"{of['home']}对阵{of['away']}，{_eng}研判首选【{tip}】。",
                     "fundamental": deep_res.get("fundamental", ""),
                     "tactical_conflict": deep_res.get("tactical_conflict", ""),
                     "market_attitude": deep_res.get("market_attitude", ""),
