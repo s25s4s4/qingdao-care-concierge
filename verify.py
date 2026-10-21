@@ -92,7 +92,11 @@ def settle(match, remote):
         rq_outcome = "客不败" if diff <= 0 else "主胜"
 
     hit = False
-    if "让负" in tip:
+    if "让负/防让平" in tip or ("让负" in tip and "让平" in tip):
+        hit = (rq_outcome in ("让负", "让平"))
+    elif "让胜/防让平" in tip or ("让胜" in tip and "让平" in tip):
+        hit = (rq_outcome in ("让胜", "让平"))
+    elif "让负" in tip:
         if rang_val is not None:
             hit = (rq_outcome == "让负")
         else:
