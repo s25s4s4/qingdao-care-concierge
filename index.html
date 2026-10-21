@@ -2627,6 +2627,13 @@
                 return;
             }
 
+            // 本期赔率未开出时没有选号：不能默认当成「首选主胜」，否则满屏都是假的绿标
+            if (data.picks_ready === false) {
+                feed.innerHTML = `<div style="background: rgba(210, 153, 34, 0.10); border: 1px solid rgba(210, 153, 34, 0.4); border-radius: 8px; padding: 10px 12px; margin: 0 16px 10px; font-size: 11px; line-height: 1.6; color: #e3b341;">
+                    ⏳ 本期（${data.period || ''}）已开售，但官方赔率尚未开出，<b>选号待生成</b>。下方为先出赛程，赔率开出后会自动补上首选 / 防冷标记。
+                </div>`;
+            }
+
             list.forEach(m => {
                 const card = document.createElement('div');
                 card.className = 'match-card';
@@ -2634,7 +2641,8 @@
                 card.style.overflow = 'hidden';
 
                 // 核心首选、次选与爆冷判断 (3=胜, 1=平, 0=负)
-                const p = String(m.pick_primary || '3');
+                // 注意：pick_primary 为空时不能兜底成 '3'，否则每场都会显示「首选主胜」
+                const p = m.pick_primary ? String(m.pick_primary) : null;
                 const s = m.pick_secondary ? String(m.pick_secondary) : null;
                 const u = m.pick_upset ? String(m.pick_upset) : null;
 
