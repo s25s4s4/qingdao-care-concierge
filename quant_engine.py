@@ -175,17 +175,15 @@ def analyze_match_factors(sh, sd, sa, league="", home="", away="", is_only_rq=Fa
 
     poisson_scores = compute_poisson_scores(lh, la)
 
-    # 黄金比分融合：历史高频比分 (50%) + 泊松理论分布 (50%)
+    # 黄金比分融合：严格根据 smart_pick (让球利刃/选号方向) 进行定向聚类！
+    # 彻底杜绝“建议让负(看好客不败)，但泊松比分却给出主胜(1-0, 2-1)”的撕裂打架！
     score_weights = {}
-    for sc, prob in poisson_scores[:10]:
+    for sc, prob in poisson_scores[:12]:
         score_weights[sc] = score_weights.get(sc, 0) + prob * 0.5
 
-    for sc, c in score_counts.most_common(10):
+    for sc, c in score_counts.most_common(12):
         h_prob = c / total_samples
         score_weights[sc] = score_weights.get(sc, 0) + h_prob * 0.5
-
-    ranked_scores = sorted(score_weights.items(), key=lambda x: x[1], reverse=True)
-    top_3_scores = [sc for sc, _ in ranked_scores[:3]]
 
     # 4. 诱盘陷阱与爆冷预警
     # 典型陷阱：主胜极热（SP < 1.50），但历史同赔爆冷（平或负）概率超过 38%
@@ -235,16 +233,16 @@ def analyze_match_factors(sh, sd, sa, league="", home="", away="", is_only_rq=Fa
     elif p_w >= 0.50:
         smart_pick = "主胜/防平"
         smart_type = "DOUBLE"
-    elif p_w <= 0.47 and p_w >= p_l:
-        # 主让1球但主胜率不足47%（主队极弱微让）：触发让球量化利刃，坚决不推胜平双选，直接上让负！
+    elif p_w <= 0.49 and p_w >= p_l:
+        # 主让1球但主胜率不足49%（主队极弱微让）：触发让球量化利刃，坚决不推胜平双选，直接上让负！
         if should_add_rp:
             smart_pick = "让负/防让平"
             smart_type = "DOUBLE"
         else:
             smart_pick = "让负"
             smart_type = "SINGLE"
-    elif p_l <= 0.47 and p_l > p_w:
-        # 客让1球但客胜率不足47%：触发让球量化利刃！
+    elif p_l <= 0.49 and p_l > p_w:
+        # 客让1球但客胜率不足49%：触发让球量化利刃！
         if should_add_rp:
             smart_pick = "让胜/防让平"
             smart_type = "DOUBLE"
@@ -257,6 +255,46 @@ def analyze_match_factors(sh, sd, sa, league="", home="", away="", is_only_rq=Fa
     else:
         smart_pick = "主胜/防平"
         smart_type = "DOUBLE"
+
+    # 黄金比分融合：在确定 smart_pick 之后，严格根据其方向进行定向聚类！
+    # 彻底杜绝“建议让负(看好客不败)，但泊松比分却给出主胜(1-0, 2-1)”的撕裂打架！
+    cur_pick = smart_pick
+    filtered_score_weights = {}
+    for sc, w in score_weights.items():
+        try:
+            gh, ga = [int(x) for x in sc.split("-")[:2]]
+        except:
+            continue
+        
+        weight_mult = 1.0
+        if "让负" in cur_pick and "防让平" not in cur_pick:
+            # 纯让负 (看好客不败)：主胜比分直接归零！平局与客胜比分获得强加权！
+            if gh > ga: weight_mult = 0.0
+            else: weight_mult = 2.0
+        elif "让负/防让平" in cur_pick:
+            # 让负/防让平：覆盖平局、客胜、以及主胜刚好1球(险胜卡让平)；主胜2球及以上直接归零！
+            if gh - ga >= 2: weight_mult = 0.0
+            else: weight_mult = 1.5
+        elif "让胜" in cur_pick and "防让平" not in cur_pick:
+            # 纯让胜：平局和客胜归零
+            if gh <= ga: weight_mult = 0.0
+            else: weight_mult = 2.0
+        elif "让胜/防让平" in cur_pick:
+            # 客让球下的让胜/防让平：客赢3球及以上归零
+            if ga - gh >= 3: weight_mult = 0.0
+            else: weight_mult = 1.5
+        elif "主胜" in cur_pick:
+            if gh <= ga: weight_mult = 0.0
+            else: weight_mult = 1.8
+        elif "客胜" in cur_pick:
+            if ga <= gh: weight_mult = 0.0
+            else: weight_mult = 1.8
+
+        if weight_mult > 0:
+            filtered_score_weights[sc] = w * weight_mult
+
+    ranked_scores = sorted(filtered_score_weights.items(), key=lambda x: x[1], reverse=True)
+    top_3_scores = [sc for sc, _ in ranked_scores[:3]] if ranked_scores else [sc for sc, _ in sorted(score_weights.items(), key=lambda x: x[1], reverse=True)[:3]]
 
     # 7. 注入量化利刃详情说明 (用于点击详情抽屉弹窗展示)
     quant_detail_note = ""
