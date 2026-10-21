@@ -3066,6 +3066,9 @@
                   <span style="font-size:11.5px; font-weight:800; color:#fff;">总进球概率分布</span>
                   <span style="font-size:9px; color:var(--text-tertiary);">金色 = 研判区间</span>
                 </div>
+                <div style="font-size:8px; color:#8b949e; margin-bottom:4px; font-family:var(--font-mono);">
+                  📌 融合模型: 机构去水xG 50% + 8.4万场同赔 30% + 当季攻防 20%
+                </div>
                 <svg viewBox="0 0 ${W} ${H}" width="100%" height="${H}" style="display:block;">${g}</svg>
               </div>`;
         }
@@ -3102,9 +3105,12 @@
             const topTxt = m.top.slice(0, 3).map(t => `${t.s} <span style="color:#6e7681;">${(t.p * 100).toFixed(1)}%</span>`).join('　');
             return `
               <div style="background:rgba(255,255,255,0.03); border:1px solid var(--border-color); border-radius:8px; padding:9px 10px; margin-bottom:10px;">
-                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:2px;">
                   <span style="font-size:11.5px; font-weight:800; color:#fff;">比分概率矩阵</span>
                   <span style="font-size:9px; color:#38bdf8; font-family:var(--font-mono);">蓝框 = 研判</span>
+                </div>
+                <div style="font-size:8px; color:#8b949e; margin-bottom:5px; font-family:var(--font-mono);">
+                  📌 融合模型: 机构去水xG 50% + 8.4万场同赔 30% + 当季攻防 20%
                 </div>
                 <div style="display:flex; justify-content:space-between; font-size:8px; color:#6e7681; margin-bottom:2px;">
                   <span>↓ 主队进球</span><span>客队进球 →</span>
