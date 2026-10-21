@@ -1,7 +1,19 @@
 {
-  "updated_at": "2026-10-21 20:11:00",
-  "total_tips": 10,
+  "updated_at": "2026-10-21 20:15:55",
+  "total_tips": 11,
   "live_feed": [
+    {
+      "id": 3604,
+      "channel": "Upper90TipsFree",
+      "time": "2026-10-21 20:05",
+      "code": "周三008",
+      "league": "欧冠",
+      "category": "推单",
+      "is_tip": true,
+      "match": "维拉 VS 维京",
+      "chinese": "欧冠维拉打维京，外围资金死怼维拉全场射门超17.5次。前场火力压制格局明显，维拉主场势必狂轰滥炸，走正路防线守不住，看好主队围攻穿盘，大球和维拉大胜值得重防。",
+      "original": "🎯 FREE SELECTION DAY 11/30 —————————————— - - - - - - - 🏟 Aston Villa v Viking FK 📝 ASTON VILLA OVER 17.5 SHOTS 🇪🇺 UEFA Champions League - - - - - - - ⏰ Kick Of"
+    },
     {
       "id": 3603,
       "channel": "matchplug",
