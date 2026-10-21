@@ -1,7 +1,19 @@
 {
-  "updated_at": "2026-10-22 03:11:15",
+  "updated_at": "2026-10-22 03:56:32",
   "total_tips": 12,
   "live_feed": [
+    {
+      "id": 3759,
+      "channel": "matchpreviews",
+      "time": "2026-10-22 03:18",
+      "code": "周三010",
+      "league": "欧冠",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "拜仁 VS 阿森纳",
+      "chinese": "萨卡踢拜仁刚开场9分钟就伤退，枪手右路爆破点直接瘫痪！拜仁左路警报解除，战意和盘口势头必然倒向主队，阿森纳客场进攻哑火，本场防一手小球，拜仁坐镇主场胜面极大！",
+      "original": "Bukayo Saka was forced off due to injury just nine minutes into the game vs. Bayern 💔 🚀 Crashino — THE ultimate casino and sportsbook on Telegram"
+    },
     {
       "id": 3557,
       "channel": "stavki",
@@ -99,18 +111,6 @@
       "original": "FOOTBALL CHAMPIONS LEAGUE REAL BETIS VS FEYENOORD FEYENOORD OVER 3.5 CORNERS ODDS : 1.72"
     },
     {
-      "id": 3553,
-      "channel": "FabrizioRomano",
-      "time": "2026-10-21 17:28",
-      "code": "周三010",
-      "league": "欧冠",
-      "category": "赛前军情",
-      "is_tip": false,
-      "match": "拜仁 VS 阿森纳",
-      "chinese": "紧急军情！拜仁绝对中场枢纽基米希因家庭变故突发缺阵，右路攻防与出球体系遭重创。阿森纳客场受让空间拉大，拜仁单核运转吃力，谨防主胜难出，重点防平或直接博让负。",
-      "original": "🚨 Joshua Kimmich, out of Bayern squad to face Arsenal tonight due to a death in his close family."
-    },
-    {
       "id": 3544,
       "channel": "matchplug",
       "time": "2026-10-21 16:39",
@@ -148,6 +148,18 @@
     }
   ],
   "archived": [
+    {
+      "id": 3553,
+      "channel": "FabrizioRomano",
+      "time": "2026-10-21 17:28",
+      "code": "周三010",
+      "league": "欧冠",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "拜仁 VS 阿森纳",
+      "chinese": "紧急军情！拜仁绝对中场枢纽基米希因家庭变故突发缺阵，右路攻防与出球体系遭重创。阿森纳客场受让空间拉大，拜仁单核运转吃力，谨防主胜难出，重点防平或直接博让负。",
+      "original": "🚨 Joshua Kimmich, out of Bayern squad to face Arsenal tonight due to a death in his close family."
+    },
     {
       "id": 3711,
       "channel": "FabrizioRomano",
