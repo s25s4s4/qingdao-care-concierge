@@ -1,7 +1,19 @@
 {
-  "updated_at": "2026-10-21 20:15:55",
-  "total_tips": 11,
+  "updated_at": "2026-10-21 21:06:02",
+  "total_tips": 12,
   "live_feed": [
+    {
+      "id": 3614,
+      "channel": "tribuna_football",
+      "time": "2026-10-21 21:01",
+      "code": "周三010",
+      "league": "欧冠",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "拜仁 VS 阿森纳",
+      "chinese": "突发大雷！拜仁队长基米希因父亲变故今晚铁定缺席，中后场枢纽直接瘫痪，这对枪手客场抢分是超级利好。拜仁硬度骤降，阿森纳客不败甚至偷胜呼声拉满，防守大开，重心防客队、走大球。",
+      "original": "Bayern Munich captain Joshua Kimmich will miss tonight's clash with Arsenal due to the sudden passing of his father 💔 Sending strength to Joshua and his family "
+    },
     {
       "id": 3604,
       "channel": "Upper90TipsFree",
