@@ -1,7 +1,19 @@
 {
-  "updated_at": "2026-10-21 23:11:13",
-  "total_tips": 12,
+  "updated_at": "2026-10-22 00:01:18",
+  "total_tips": 13,
   "live_feed": [
+    {
+      "id": 3660,
+      "channel": "football_predictions_ai",
+      "time": "2026-10-22 00:00",
+      "code": "周三007",
+      "league": "欧冠",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "皇马 VS 莱红牛",
+      "chinese": "欧冠这把欧洲前线看好皇马半全场直落，主推“胜胜”（参考值1.54）。皇马主场拿分率超七成，虽防守动作大易染红，但底蕴摆在这，红牛客战难顶冲击，看好主队早早破局双杀半全场。",
+      "original": "🔥 HOT PICK 🌍 UEFA Champions League 🆚 Real Madrid vs RB Leipzig 🕐 Wed, 21 Oct · 19:00 UTC 💡 Half Time / Full Time: Home/Home 📊 Odds: 1.54 ✅ Confidence: 65% 📌 Mat"
+    },
     {
       "id": 3644,
       "channel": "bad_man_betting_tips",
