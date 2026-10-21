@@ -1,7 +1,19 @@
 {
-  "updated_at": "2026-10-21 21:06:02",
+  "updated_at": "2026-10-21 23:11:13",
   "total_tips": 12,
   "live_feed": [
+    {
+      "id": 3644,
+      "channel": "bad_man_betting_tips",
+      "time": "2026-10-21 23:07",
+      "code": "周三004",
+      "league": "欧冠",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "科莫 VS 曼联",
+      "chinese": "科莫战意拉满，前场核心尼科·帕斯欧冠场均犯规高达2.5次。曼联新中场绞杀力极强，近两战狂造对手犯规。中场拼抢势必白热化，防线吃紧，本场看好肉搏出小球，科莫受让可博。",
+      "original": "Como vs Man Utd Bet Builder incoming & Nico Paz fouls are included. Here's why... First up, he's averaging 2.06 fouls P/90 in the league, which jumps to 2.50 in"
+    },
     {
       "id": 3614,
       "channel": "tribuna_football",
@@ -123,18 +135,6 @@
       "original": "⭐ SUPER SINGLE TIP - 21-10-2026 Como vs Manchester United World: UEFA Champions League Prediction: Away Win or Draw (1.74) 🔗 View Details ⚠️ All predictions are"
     },
     {
-      "id": 3511,
-      "channel": "olimpbet",
-      "time": "2026-10-21 15:01",
-      "code": "周三004",
-      "league": "欧冠",
-      "category": "赛前军情",
-      "is_tip": false,
-      "match": "科莫 VS 曼联",
-      "chinese": "科莫主场硬碰曼联。红魔近期各项赛事连续6场不胜，状态烂到谷底；欧巡资金正疯狂扑向主队，目前盘口极度倾向科莫，机构直接给出主胜超低位诱下。本场直接博科莫主胜，防平打让胜稳过。",
-      "original": "🔥 НА ЧТО СТАВИТЬ В СРЕДУ? 👉 Рублёв — явный фаворит в матче с Маннарино. Даём кэф 1.9 на сухую победу Андрея 👉 У ЦСКА винстрик из 12 игр. Держи П2 за 2.18 и изуч"
-    },
-    {
       "id": 3162,
       "channel": "tribuna_football",
       "time": "2026-10-20 20:07",
@@ -148,6 +148,18 @@
     }
   ],
   "archived": [
+    {
+      "id": 3511,
+      "channel": "olimpbet",
+      "time": "2026-10-21 15:01",
+      "code": "周三004",
+      "league": "欧冠",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "科莫 VS 曼联",
+      "chinese": "科莫主场硬碰曼联。红魔近期各项赛事连续6场不胜，状态烂到谷底；欧巡资金正疯狂扑向主队，目前盘口极度倾向科莫，机构直接给出主胜超低位诱下。本场直接博科莫主胜，防平打让胜稳过。",
+      "original": "🔥 НА ЧТО СТАВИТЬ В СРЕДУ? 👉 Рублёв — явный фаворит в матче с Маннарино. Даём кэф 1.9 на сухую победу Андрея 👉 У ЦСКА винстрик из 12 игр. Держи П2 за 2.18 и изуч"
+    },
     {
       "id": 3189,
       "channel": "feedinco",
