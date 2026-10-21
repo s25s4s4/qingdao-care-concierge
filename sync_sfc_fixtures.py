@@ -23,6 +23,8 @@ from datetime import datetime
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, "data", "sfc_matches.json")
+HISTORY = os.path.join(HERE, "data", "sfc_history.json")
+HISTORY_KEEP = 30        # 最多留 30 期
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0 Safari/537.36"
 
 
@@ -136,6 +138,137 @@ def build(period, matches, existing):
     }
 
 
+def update_scores():
+    """从 live.500.com 完场页按 **fid** 精确取比分。
+
+    为什么不用服务器上原来那套：它是拿 `home[:2]` 去 `html.find()`，
+    「利物」先命中的是 **利物浦U19 vs 比利亚雷亚尔U19**（欧青联 0-0），
+    于是把成年队 4-3 覆盖成 0-0。2026-10-22 实测就是这样，7 场全错。
+    改用 500 页面自带的 `gy="赛事,主队,客队"` 与 `fid` 精确对应。
+    """
+    try:
+        html = _get("https://live.500.com/wanchang.php")
+    except Exception as e:
+        _log(f"完场页抓取失败: {type(e).__name__}")
+        return 0
+
+    # fid -> (主队进球, 客队进球, 是否完场)
+    by_fid = {}
+    for fid, gy in re.findall(r'<tr id="a(\d+)" gy="([^"]*)"', html):
+        st = html.find(f'id="a{fid}"')
+        tr = html[st:html.find("</tr>", st)]
+        pk = re.findall(r'class="clt[13]"\s*>([^<]*)</a>', tr)
+        if len(pk) < 2 or not pk[0].strip() or not pk[1].strip():
+            continue
+        try:
+            by_fid[fid] = (int(pk[0]), int(pk[1]), "完" in tr[:600])
+        except ValueError:
+            continue
+
+    if not by_fid:
+        _log("完场页没有可用比分")
+        return 0
+
+    data = load_existing()
+    if not data.get("matches"):
+        return 0
+
+    changed = 0
+    for m in data["matches"]:
+        fid = str(m.get("fid") or "")
+        got = by_fid.get(fid) if fid else None
+        if not got:
+            continue
+        hg, ag, fin = got
+        score = f"{hg}-{ag}"
+        if m.get("score") == score and (not fin or m.get("status") == "已完赛"):
+            continue
+        m["score"] = score
+        if fin:
+            m["status"] = "已完赛"
+            m["live_status"] = "FIN"
+            outcome = "3" if hg > ag else ("1" if hg == ag else "0")
+            m["outcome"] = outcome
+            if outcome == str(m.get("pick_primary") or ""):
+                m["result"], m["result_text"] = "HIT_PRIMARY", "首选命中"
+            elif outcome == str(m.get("pick_secondary") or ""):
+                m["result"], m["result_text"] = "HIT_SECONDARY", "次选命中"
+            elif outcome == str(m.get("pick_upset") or ""):
+                m["result"], m["result_text"] = "HIT_UPSET", "防冷命中"
+            else:
+                m["result"], m["result_text"] = "MISS", "未中"
+        else:
+            m["status"] = "进行中"
+        changed += 1
+
+    if changed:
+        with open(OUT, "w", encoding="utf-8") as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
+        _log(f"比分更新 {changed} 场")
+    return changed
+
+
+def archive_period(old):
+    """换期前把上一期存进历史，否则一切期就永久丢了。
+
+    只留精简字段——案卷(dossier)体积大且只在当期有用。
+    """
+    if not old or not old.get("matches"):
+        return None
+    period = str(old.get("period") or "")
+    if not period:
+        return None
+
+    hist = {"updated_at": "", "periods": []}
+    if os.path.exists(HISTORY):
+        try:
+            with open(HISTORY, encoding="utf-8") as f:
+                hist = json.load(f)
+        except Exception:
+            pass
+    periods = [p for p in hist.get("periods", []) if str(p.get("period")) != period]
+
+    s = {"total": 0, "hit_primary": 0, "hit_secondary": 0, "hit_upset": 0, "miss": 0, "pending": 0}
+    ms = []
+    for m in old["matches"]:
+        r = str(m.get("result") or "")
+        s["total"] += 1
+        if r == "HIT_PRIMARY":
+            s["hit_primary"] += 1
+        elif r == "HIT_SECONDARY":
+            s["hit_secondary"] += 1
+        elif r == "HIT_UPSET":
+            s["hit_upset"] += 1
+        elif r == "MISS":
+            s["miss"] += 1
+        else:
+            s["pending"] += 1
+        ms.append({
+            "no": m.get("no"), "league": m.get("league"), "time": m.get("time"),
+            "home": m.get("home"), "away": m.get("away"),
+            "score": m.get("score", ""), "outcome": m.get("outcome", ""),
+            "pick_primary": m.get("pick_primary"), "pick_secondary": m.get("pick_secondary"),
+            "pick_upset": m.get("pick_upset"), "result": r,
+            "result_text": m.get("result_text", ""),
+        })
+    s["hit"] = s["hit_primary"] + s["hit_secondary"] + s["hit_upset"]
+
+    periods.append({
+        "period": period,
+        "deadline": old.get("deadline", ""),
+        "archived_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        "summary": s,
+        "matches": ms,
+    })
+    periods.sort(key=lambda x: str(x.get("period")), reverse=True)
+    hist["periods"] = periods[:HISTORY_KEEP]
+    hist["updated_at"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    os.makedirs(os.path.dirname(HISTORY), exist_ok=True)
+    with open(HISTORY, "w", encoding="utf-8") as f:
+        json.dump(hist, f, ensure_ascii=False, indent=2)
+    return s
+
+
 def all_finished(existing):
     """上一期是否已经全部打完。
 
@@ -176,6 +309,7 @@ def main(force=False):
         _log(f"只解析到 {len(matches)} 场（应为 14），放弃")
         return 1
 
+    update_scores()          # 先把比分刷新（按 fid 精确匹配）
     existing = load_existing()
 
     # 换期闸门：上一期没打完就不动
@@ -186,6 +320,11 @@ def main(force=False):
         return 0
 
     same = same_round(matches, existing)
+    if not same:
+        _s = archive_period(existing)
+        if _s:
+            _log(f"上一期 {existing.get('period')} 已归档：{_s['hit']} 中 / {_s['miss']} 失")
+
     if same and not odds_ready and not force:
         _log(f"{period} 期赔率尚未开出，保持现状")
         return 0
@@ -231,7 +370,7 @@ def publish():
         except Exception as e:
             print(f"  ! {' '.join(cmd[:3])} 失败: {type(e).__name__}")
 
-    run(["git", "add", "data/sfc_matches.json"])
+    run(["git", "add", "data/sfc_matches.json", "data/sfc_history.json"])
     run(["git", "-c", "user.name=owner", "-c", "user.email=owner@local",
          "commit", "-m", "Auto-Update: 传足赛程刷新"])
     run(["git", "push", "origin", "main"])
