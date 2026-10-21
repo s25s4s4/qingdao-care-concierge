@@ -30,7 +30,7 @@
         "decision_guide": "实战投注首选标准【主胜】作为稳健核心胆码，追求高回报可博让球胜/平。进球数区间锁定在2球与3球。比分黄金三角策略精准覆盖：核心高频首选2-0，互攻防爆补充2-1，穿盘防溢出首选3-0，严密防死冷门并锁定主力利润带。"
       },
       "live_status": "FIN",
-      "score": "0-0",
+      "score": "4-3",
       "pick_primary": "3",
       "pick_secondary": null,
       "pick_desc": "单选主胜(3)",
@@ -57,9 +57,9 @@
         "smart_pick": "单选主胜 (3)",
         "smart_type": "SINGLE"
       },
-      "outcome": "1",
-      "result": "MISS",
-      "result_text": "未中"
+      "outcome": "3",
+      "result": "HIT_PRIMARY",
+      "result_text": "首选命中"
     },
     {
       "no": 2,
@@ -87,7 +87,7 @@
         "decision_guide": "【赛前让球专项研判】：官方单开让球盘（主让2球），综合欧洲去水模型，本场首选【让胜/博穿盘】。实战比分区间重点防范：【3-0、4-1、3-1】，柜台直打让球选项。"
       },
       "live_status": "FIN",
-      "score": "1-1",
+      "score": "5-1",
       "pick_primary": "3",
       "pick_secondary": "1",
       "pick_desc": "单选主胜(3)",
@@ -114,9 +114,9 @@
         "smart_pick": "首选主胜(3) / 次选防平(1)",
         "smart_type": "DOUBLE"
       },
-      "outcome": "1",
-      "result": "HIT_SECONDARY",
-      "result_text": "次选命中"
+      "outcome": "3",
+      "result": "HIT_PRIMARY",
+      "result_text": "首选命中"
     },
     {
       "no": 3,
@@ -144,7 +144,7 @@
         "decision_guide": "实操出票首选单选【主胜】作为稳健胆码；进球数锁定在【2球、3球】区间；比分组合搭建【黄金三角矩阵】：正路首选核心高频比分【2-0】，防范防守失误丢球的互攻比分【2-1】，同时以保守经济性小胜比分【1-0】作为零封底线保护。"
       },
       "live_status": "FIN",
-      "score": "1-0",
+      "score": "4-3",
       "pick_primary": "3",
       "pick_secondary": "1",
       "pick_desc": "单选主胜(3)",
@@ -201,7 +201,7 @@
         "decision_guide": "单场首选直取【主胜】作为稳健胆材。总进球数格局锁定在攻守均衡的2-3球带。比分黄金三角策略严密覆盖：以正路统治力【2-0】为核心基石，搭配防范客队偷鸡反扑的【2-1】，并防备绞杀闷战的【1-0】，构筑坚不可摧的收米防线。"
       },
       "live_status": "FIN",
-      "score": "3-1",
+      "score": "0-1",
       "pick_primary": "3",
       "pick_secondary": null,
       "pick_desc": "单选主胜(3)",
@@ -228,9 +228,9 @@
         "smart_pick": "首选主胜(3) / 次选防平(1)",
         "smart_type": "DOUBLE"
       },
-      "outcome": "3",
-      "result": "HIT_PRIMARY",
-      "result_text": "首选命中"
+      "outcome": "0",
+      "result": "MISS",
+      "result_text": "未命中"
     },
     {
       "no": 5,
@@ -401,7 +401,7 @@
       },
       "outcome": "1",
       "result": "MISS",
-      "result_text": "未中"
+      "result_text": "未命中"
     },
     {
       "no": 8,
