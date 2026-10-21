@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-21 16:54:27",
+  "updated_at": "2026-10-21 17:00:25",
   "total": 108,
   "matches": [
     {
@@ -453,7 +453,7 @@
         "result": "HIT",
         "score": "0-2",
         "source": "stored_score",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "客胜"
       },
       "stats": {
@@ -684,7 +684,7 @@
         "result": "HIT",
         "score": "4-0",
         "source": "stored_score",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "主胜"
       },
       "stats": {
@@ -916,7 +916,7 @@
         "result": "HIT",
         "score": "2-1",
         "source": "stored_score",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "主胜"
       },
       "stats": {
@@ -1148,7 +1148,7 @@
         "result": "HIT",
         "score": "1-0",
         "source": "stored_score",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "主胜"
       },
       "stats": {
@@ -1381,7 +1381,7 @@
         "result": "MISS",
         "score": "4-2",
         "source": "stored_score",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "主胜"
       },
       "stats": {
@@ -1612,7 +1612,7 @@
         "result": "HIT",
         "score": "0-3",
         "source": "stored_score",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "客胜"
       },
       "stats": {
@@ -1820,7 +1820,7 @@
         "result": "HIT",
         "score": "1-2",
         "source": "stored_score",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "客胜"
       },
       "stats": {
@@ -1978,7 +1978,7 @@
         "result": "HIT",
         "score": "1-1",
         "source": "stored_score",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "平局"
       },
       "stats": {
@@ -2210,7 +2210,7 @@
         "result": "HIT",
         "score": "2-0",
         "source": "stored_score",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "主胜"
       },
       "stats": {
@@ -2421,7 +2421,7 @@
         "result": "HIT",
         "score": "2 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "主胜"
       },
       "stats": {
@@ -2633,7 +2633,7 @@
         "result": "HIT",
         "score": "2 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "主胜"
       },
       "stats": {
@@ -2868,7 +2868,7 @@
         "result": "HIT",
         "score": "2 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "主胜"
       },
       "stats": {
@@ -3090,7 +3090,7 @@
         "result": "HIT",
         "score": "2 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "平局"
       },
       "stats": {
@@ -3327,7 +3327,7 @@
         "result": "MISS",
         "score": "1 - 3",
         "source": "fotmob",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "客胜"
       },
       "stats": {
@@ -3563,7 +3563,7 @@
         "result": "HIT",
         "score": "1 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "平局"
       },
       "stats": {
@@ -3725,7 +3725,7 @@
         "result": "HIT",
         "score": "0 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "客胜"
       },
       "stats": {
@@ -3957,7 +3957,7 @@
         "result": "HIT",
         "score": "2 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "平局"
       },
       "stats": {
@@ -4169,7 +4169,7 @@
         "result": "HIT",
         "score": "0 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "客胜"
       },
       "stats": {
@@ -4402,7 +4402,7 @@
         "result": "MISS",
         "score": "0-2",
         "source": "stored_score",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "客胜"
       },
       "stats": {
@@ -4639,7 +4639,7 @@
         "result": "MISS",
         "score": "1 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "主胜"
       },
       "stats": {
@@ -4861,7 +4861,7 @@
         "result": "HIT",
         "score": "4-0",
         "source": "stored_score",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "主胜"
       },
       "stats": {
@@ -5088,7 +5088,7 @@
         "result": "MISS",
         "score": "4 - 3",
         "source": "fotmob",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "主胜"
       },
       "stats": {
@@ -5315,7 +5315,7 @@
         "result": "MISS",
         "score": "2 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "平局"
       },
       "stats": {
@@ -5551,7 +5551,7 @@
         "result": "HIT",
         "score": "0 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "客胜"
       },
       "stats": {
@@ -5788,7 +5788,7 @@
         "result": "MISS",
         "score": "1-0",
         "source": "stored_score",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "主胜"
       },
       "stats": {
@@ -6025,7 +6025,7 @@
         "result": "HIT",
         "score": "0 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "平局"
       },
       "stats": {
@@ -6262,7 +6262,7 @@
         "result": "MISS",
         "score": "1 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "客胜"
       },
       "stats": {
@@ -6497,7 +6497,7 @@
         "result": "HIT",
         "score": "3 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "主胜"
       },
       "stats": {
@@ -6708,7 +6708,7 @@
         "result": "HIT",
         "score": "1 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "主胜"
       },
       "stats": {
@@ -6945,7 +6945,7 @@
         "result": "MISS",
         "score": "0 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "平局"
       },
       "stats": {
@@ -7180,7 +7180,7 @@
         "result": "HIT",
         "score": "1 - 3",
         "source": "fotmob",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "客胜"
       },
       "stats": {
@@ -7416,7 +7416,7 @@
         "result": "HIT",
         "score": "1-3",
         "source": "stored_score",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "客胜"
       },
       "stats": {
@@ -7658,7 +7658,7 @@
         "result": "MISS",
         "score": "0-1",
         "source": "stored_score",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "客胜"
       },
       "stats": {
@@ -7911,7 +7911,7 @@
         "result": "HIT",
         "score": "6-1",
         "source": "stored_score",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "让胜"
       },
       "stats": {
@@ -8152,7 +8152,7 @@
         "result": "HIT",
         "score": "2-5",
         "source": "stored_score",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "客胜"
       },
       "stats": {
@@ -8393,7 +8393,7 @@
         "result": "HIT",
         "score": "3-4",
         "source": "stored_score",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "客胜"
       },
       "stats": {
@@ -8628,7 +8628,7 @@
         "result": "HIT",
         "score": "2-0",
         "source": "stored_score",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "主胜"
       },
       "stats": {
@@ -8867,7 +8867,7 @@
         "result": "HIT",
         "score": "0-0",
         "source": "stored_score",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "平局"
       },
       "stats": {
@@ -9110,7 +9110,7 @@
         "result": "HIT",
         "score": "1-0",
         "source": "stored_score",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "主胜"
       },
       "stats": {
@@ -9355,7 +9355,7 @@
         "result": "HIT",
         "score": "3 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "主胜"
       },
       "stats": {
@@ -9599,7 +9599,7 @@
         "result": "HIT",
         "score": "1 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "平局"
       },
       "stats": {
@@ -9842,7 +9842,7 @@
         "result": "MISS",
         "score": "2 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "平局"
       },
       "stats": {
@@ -10087,7 +10087,7 @@
         "result": "MISS",
         "score": "4 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "主胜"
       },
       "stats": {
@@ -10332,7 +10332,7 @@
         "result": "MISS",
         "score": "0 - 3",
         "source": "fotmob",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "客胜"
       },
       "stats": {
@@ -10576,7 +10576,7 @@
         "result": "HIT",
         "score": "2 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "主胜"
       },
       "stats": {
@@ -10785,7 +10785,7 @@
         "result": "HIT",
         "score": "2-2",
         "source": "stored_score",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "平局"
       },
       "stats": {
@@ -11028,7 +11028,7 @@
         "result": "HIT",
         "score": "2 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "主胜"
       },
       "stats": {
@@ -11245,7 +11245,7 @@
         "result": "MISS",
         "score": "0 - 3",
         "source": "fotmob",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "客胜"
       },
       "stats": {
@@ -11489,7 +11489,7 @@
         "result": "HIT",
         "score": "1 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "平局"
       },
       "stats": {
@@ -11728,7 +11728,7 @@
         "result": "HIT",
         "score": "2-0",
         "source": "stored_score",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "主胜"
       },
       "stats": {
@@ -11973,7 +11973,7 @@
         "result": "HIT",
         "score": "1 - 3",
         "source": "fotmob",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "客胜"
       },
       "stats": {
@@ -12217,7 +12217,7 @@
         "result": "HIT",
         "score": "2 - 5",
         "source": "fotmob",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "客胜"
       },
       "stats": {
@@ -12462,7 +12462,7 @@
         "result": "HIT",
         "score": "2 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "主胜"
       },
       "stats": {
@@ -12702,7 +12702,7 @@
         "result": "HIT",
         "score": "2-1",
         "source": "stored_score",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "主胜"
       },
       "stats": {
@@ -12940,7 +12940,7 @@
         "result": "HIT",
         "score": "2-5",
         "source": "stored_score",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "客胜"
       },
       "stats": {
@@ -13183,7 +13183,7 @@
         "result": "MISS",
         "score": "1 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "主胜"
       },
       "stats": {
@@ -13428,7 +13428,7 @@
         "result": "HIT",
         "score": "0 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "客胜"
       },
       "stats": {
@@ -13671,7 +13671,7 @@
         "result": "HIT",
         "score": "1 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "客胜"
       },
       "stats": {
@@ -13911,7 +13911,7 @@
         "result": "HIT",
         "score": "3-2",
         "source": "stored_score",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "主胜"
       },
       "stats": {
@@ -14154,7 +14154,7 @@
         "result": "HIT",
         "score": "2-5",
         "source": "stored_score",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "客胜"
       },
       "stats": {
@@ -14395,7 +14395,7 @@
         "result": "MISS",
         "score": "0-3",
         "source": "stored_score",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "客胜"
       },
       "stats": {
@@ -14634,7 +14634,7 @@
         "result": "HIT",
         "score": "2-1",
         "source": "stored_score",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "主胜"
       },
       "stats": {
@@ -14882,7 +14882,7 @@
         "result": "HIT",
         "score": "4-1",
         "source": "stored_score",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "让胜"
       },
       "stats": {
@@ -15130,7 +15130,7 @@
         "result": "MISS",
         "score": "1-2",
         "source": "stored_score",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "让负"
       },
       "stats": {
@@ -15376,7 +15376,7 @@
         "result": "HIT",
         "score": "4-0",
         "source": "stored_score",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "主胜"
       },
       "stats": {
@@ -15614,7 +15614,7 @@
         "result": "HIT",
         "score": "1-2",
         "source": "stored_score",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "客胜"
       },
       "stats": {
@@ -15862,7 +15862,7 @@
         "result": "HIT",
         "score": "0-3",
         "source": "stored_score",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "客胜"
       },
       "stats": {
@@ -16110,7 +16110,7 @@
         "result": "HIT",
         "score": "0-3",
         "source": "stored_score",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "客胜"
       },
       "stats": {
@@ -16348,13 +16348,13 @@
         "result": "HIT",
         "score": "2-1",
         "source": "stored_score",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "主胜"
       },
       "score_conflict": {
         "local": "2 - 1",
         "fotmob": "3 - 1",
-        "at": "2026-10-21 16:54:07"
+        "at": "2026-10-21 17:00:06"
       },
       "stats": {
         "home": {
@@ -16577,7 +16577,7 @@
         "result": "HIT",
         "score": "1-1",
         "source": "stored_score",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "平局"
       },
       "stats": {
@@ -16825,7 +16825,7 @@
         "result": "MISS",
         "score": "1-2",
         "source": "stored_score",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "客胜"
       },
       "stats": {
@@ -17073,7 +17073,7 @@
         "result": "MISS",
         "score": "1-1",
         "source": "stored_score",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "平局"
       },
       "stats": {
@@ -17454,7 +17454,7 @@
         "result": "MISS",
         "score": "2-2",
         "source": "stored_score",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "平局"
       }
     },
@@ -17654,7 +17654,7 @@
         "result": "HIT",
         "score": "1-2",
         "source": "stored_score",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "客胜"
       }
     },
@@ -17863,7 +17863,7 @@
         "result": "MISS",
         "score": "1-1",
         "source": "stored_score",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "平局"
       }
     },
@@ -18123,7 +18123,7 @@
         "result": "HIT",
         "score": "4-3",
         "source": "stored_score",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "主胜"
       }
     },
@@ -18372,7 +18372,7 @@
         "result": "HIT",
         "score": "4-0",
         "source": "stored_score",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "让胜"
       }
     },
@@ -18653,7 +18653,7 @@
         "result": "HIT",
         "score": "4-2",
         "source": "stored_score",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "主胜"
       }
     },
@@ -18932,7 +18932,7 @@
         "result": "HIT",
         "score": "4-3",
         "source": "stored_score",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "主胜"
       }
     },
@@ -19183,7 +19183,7 @@
         "result": "HIT",
         "score": "5-1",
         "source": "stored_score",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "让胜"
       }
     },
@@ -19435,7 +19435,7 @@
         "result": "MISS",
         "score": "1-1",
         "source": "stored_score",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "平局"
       }
     },
@@ -19699,7 +19699,7 @@
         "result": "MISS",
         "score": "0-1",
         "source": "stored_score",
-        "settled_at": "2026-10-21T16:54:21",
+        "settled_at": "2026-10-21T17:00:20",
         "outcome": "客胜"
       }
     },
@@ -19713,23 +19713,23 @@
       "away_rank": "-",
       "status": "未开赛",
       "form_home": [
+        "W",
+        "D",
+        "W",
         "L",
+        "D"
+      ],
+      "form_away": [
+        "D",
         "W",
-        "W",
+        "L",
         "W",
         "W"
       ],
-      "form_away": [
-        "W",
-        "W",
-        "W",
-        "L",
-        "L"
-      ],
       "odds": [
-        "1.65",
-        "3.80",
-        "3.85"
+        "1.58",
+        "3.92",
+        "4.15"
       ],
       "is_only_rq": false,
       "rang": "-1",
@@ -19800,104 +19800,104 @@
         "home": {
           "name": "东京FC",
           "recent": {
-            "n": 5,
-            "w": 4,
-            "d": 0,
+            "n": 10,
+            "w": 6,
+            "d": 3,
             "l": 1,
-            "gf": 2.0,
-            "ga": 0.2,
+            "gf": 1.2,
+            "ga": 0.4,
             "form": [
-              "L",
+              "D",
               "W",
-              "W",
+              "D",
               "W",
               "W"
             ]
           },
           "home": {
-            "n": 5,
+            "n": 10,
             "w": 4,
-            "d": 0,
-            "l": 1,
-            "gf": 2.0,
-            "ga": 0.2,
+            "d": 3,
+            "l": 3,
+            "gf": 1.1,
+            "ga": 1.4,
             "form": [
+              "D",
               "L",
               "W",
               "W",
-              "W",
-              "W"
+              "L"
             ]
           },
           "away": {
-            "n": 5,
-            "w": 4,
-            "d": 0,
-            "l": 1,
-            "gf": 2.0,
-            "ga": 0.2,
+            "n": 10,
+            "w": 5,
+            "d": 2,
+            "l": 3,
+            "gf": 1.1,
+            "ga": 0.7,
             "form": [
-              "L",
+              "D",
               "W",
               "W",
               "W",
-              "W"
+              "D"
             ]
           },
-          "total": 5,
-          "last_date": "2026-10-14",
-          "stale_days": 7
+          "total": 344,
+          "last_date": "2026-05-16",
+          "stale_days": 158
         },
         "away": {
           "name": "柏太阳神",
           "recent": {
-            "n": 5,
-            "w": 3,
+            "n": 10,
+            "w": 5,
             "d": 0,
-            "l": 2,
-            "gf": 2.8,
-            "ga": 1.4,
+            "l": 5,
+            "gf": 1.5,
+            "ga": 1.3,
             "form": [
-              "W",
-              "W",
-              "W",
               "L",
-              "L"
+              "L",
+              "W",
+              "W",
+              "W"
             ]
           },
           "home": {
-            "n": 5,
-            "w": 3,
+            "n": 10,
+            "w": 4,
             "d": 0,
-            "l": 2,
-            "gf": 2.8,
+            "l": 6,
+            "gf": 1.0,
             "ga": 1.4,
             "form": [
-              "W",
-              "W",
-              "W",
               "L",
+              "L",
+              "W",
+              "W",
               "L"
             ]
           },
           "away": {
-            "n": 5,
-            "w": 3,
-            "d": 0,
-            "l": 2,
-            "gf": 2.8,
-            "ga": 1.4,
+            "n": 10,
+            "w": 4,
+            "d": 3,
+            "l": 3,
+            "gf": 2.4,
+            "ga": 1.6,
             "form": [
               "W",
               "W",
               "W",
-              "L",
+              "W",
               "L"
             ]
           },
-          "total": 5,
-          "last_date": "2026-10-14",
-          "stale_days": 7
+          "total": 363,
+          "last_date": "2026-10-17",
+          "stale_days": 4
         },
         "h2h": {
           "n": 8,
@@ -19924,22 +19924,22 @@
             }
           ]
         },
-        "source": "500网即时战绩直连"
+        "source": "本地竞彩历史库"
       },
-      "stats_ts": "2026-10-21 16:58:28",
+      "stats_ts": "2026-10-21 11:17:28",
       "quant_factors": {
-        "samples": 3503,
-        "win_rate": 56.5,
-        "draw_rate": 24.3,
-        "loss_rate": 19.2,
-        "ev_home": -0.068,
-        "ev_draw": -0.078,
-        "ev_away": -0.259,
-        "lambda_h": 1.82,
-        "lambda_a": 1.06,
+        "samples": 3165,
+        "win_rate": 57.9,
+        "draw_rate": 23.4,
+        "loss_rate": 18.7,
+        "ev_home": -0.085,
+        "ev_draw": -0.082,
+        "ev_away": -0.225,
+        "lambda_h": 1.94,
+        "lambda_a": 1.09,
         "golden_scores": [
-          "1-0",
           "2-1",
+          "1-0",
           "2-0"
         ],
         "trap_level": "NORMAL",
@@ -19967,14 +19967,15 @@
       "status": "未开赛",
       "form_home": [
         "W",
+        "D",
         "W",
         "L",
-        "W"
+        "D"
       ],
       "form_away": [
+        "D",
         "W",
         "L",
-        "W",
         "W",
         "W"
       ],
@@ -20052,101 +20053,104 @@
         "home": {
           "name": "川崎前锋",
           "recent": {
-            "n": 4,
-            "w": 3,
-            "d": 0,
-            "l": 1,
-            "gf": 2.5,
-            "ga": 1.25,
+            "n": 10,
+            "w": 4,
+            "d": 2,
+            "l": 4,
+            "gf": 1.1,
+            "ga": 1.2,
             "form": [
+              "L",
               "W",
-              "W",
+              "D",
               "L",
               "W"
             ]
           },
           "home": {
-            "n": 4,
-            "w": 3,
-            "d": 0,
-            "l": 1,
-            "gf": 2.5,
-            "ga": 1.25,
+            "n": 10,
+            "w": 4,
+            "d": 3,
+            "l": 3,
+            "gf": 1.6,
+            "ga": 1.5,
             "form": [
-              "W",
-              "W",
               "L",
-              "W"
+              "D",
+              "W",
+              "W",
+              "L"
             ]
           },
           "away": {
-            "n": 4,
-            "w": 3,
-            "d": 0,
-            "l": 1,
-            "gf": 2.5,
-            "ga": 1.25,
+            "n": 10,
+            "w": 2,
+            "d": 1,
+            "l": 7,
+            "gf": 0.9,
+            "ga": 1.8,
             "form": [
               "W",
-              "W",
               "L",
-              "W"
+              "L",
+              "D",
+              "L"
             ]
           },
-          "total": 4,
-          "last_date": "2026-10-07",
-          "stale_days": 14
+          "total": 400,
+          "last_date": "2026-06-06",
+          "stale_days": 137
         },
         "away": {
           "name": "神户胜利",
           "recent": {
-            "n": 6,
+            "n": 10,
             "w": 5,
-            "d": 0,
-            "l": 1,
-            "gf": 1.83,
-            "ga": 1.0,
+            "d": 3,
+            "l": 2,
+            "gf": 0.9,
+            "ga": 0.7,
             "form": [
               "W",
+              "D",
+              "W",
               "L",
-              "W",
-              "W",
-              "W"
+              "L"
             ]
           },
           "home": {
-            "n": 6,
-            "w": 5,
-            "d": 0,
+            "n": 10,
+            "w": 8,
+            "d": 1,
             "l": 1,
-            "gf": 1.83,
-            "ga": 1.0,
+            "gf": 1.8,
+            "ga": 0.8,
             "form": [
               "W",
               "L",
-              "W",
+              "D",
               "W",
               "W"
             ]
           },
           "away": {
-            "n": 6,
+            "n": 10,
             "w": 5,
-            "d": 0,
-            "l": 1,
-            "gf": 1.83,
-            "ga": 1.0,
+            "d": 3,
+            "l": 2,
+            "gf": 1.3,
+            "ga": 1.1,
             "form": [
+              "D",
               "W",
               "L",
               "W",
-              "W",
-              "W"
+              "D"
             ]
           },
-          "total": 6,
-          "last_date": "2026-10-14",
-          "stale_days": 7
+          "total": 365,
+          "last_date": "2025-08-30",
+          "stale_days": 417
         },
         "h2h": {
           "n": 8,
@@ -20173,9 +20177,9 @@
             }
           ]
         },
-        "source": "500网即时战绩直连"
+        "source": "本地竞彩历史库"
       },
-      "stats_ts": "2026-10-21 16:58:32",
+      "stats_ts": "2026-10-21 11:17:28",
       "quant_factors": {
         "samples": 3360,
         "win_rate": 31.4,
@@ -20214,11 +20218,11 @@
       "away_rank": "-",
       "status": "未开赛",
       "form_home": [
-        "L",
+        "W",
+        "D",
         "W",
         "L",
-        "W",
-        "L"
+        "D"
       ],
       "form_away": [
         "D",
@@ -20299,53 +20303,42 @@
         "home": {
           "name": "大宫松鼠RB",
           "recent": {
-            "n": 5,
-            "w": 2,
+            "n": 2,
+            "w": 0,
             "d": 0,
-            "l": 3,
-            "gf": 2.4,
-            "ga": 2.0,
+            "l": 2,
+            "gf": 2.0,
+            "ga": 3.0,
             "form": [
               "L",
-              "W",
-              "L",
-              "W",
               "L"
             ]
           },
           "home": {
-            "n": 5,
-            "w": 2,
+            "n": 1,
+            "w": 0,
             "d": 0,
-            "l": 3,
-            "gf": 2.4,
+            "l": 1,
+            "gf": 1.0,
             "ga": 2.0,
             "form": [
-              "L",
-              "W",
-              "L",
-              "W",
               "L"
             ]
           },
           "away": {
-            "n": 5,
-            "w": 2,
+            "n": 1,
+            "w": 0,
             "d": 0,
-            "l": 3,
-            "gf": 2.4,
-            "ga": 2.0,
+            "l": 1,
+            "gf": 3.0,
+            "ga": 4.0,
             "form": [
-              "L",
-              "W",
-              "L",
-              "W",
               "L"
             ]
           },
-          "total": 5,
-          "last_date": "2026-10-17",
-          "stale_days": 4
+          "total": 2,
+          "last_date": "2025-12-07",
+          "stale_days": 318
         },
         "away": {
           "name": "富山胜利",
@@ -20399,9 +20392,9 @@
           "stale_days": 326
         },
         "h2h": null,
-        "source": "500网即时战绩直连"
+        "source": "本地竞彩历史库"
       },
-      "stats_ts": "2026-10-21 16:58:36",
+      "stats_ts": "2026-10-21 11:17:28",
       "quant_factors": {
         "samples": 5932,
         "win_rate": 45.3,
@@ -20436,17 +20429,18 @@
       "away_rank": "-",
       "status": "未开赛",
       "form_home": [
-        "L",
-        "L",
         "W",
+        "D",
         "W",
-        "L"
+        "L",
+        "D"
       ],
       "form_away": [
+        "D",
+        "W",
         "L",
         "W",
-        "W",
-        "L"
+        "W"
       ],
       "odds": [
         "2.07",
@@ -20520,106 +20514,109 @@
         "home": {
           "name": "科莫",
           "recent": {
-            "n": 5,
-            "w": 2,
-            "d": 0,
+            "n": 10,
+            "w": 5,
+            "d": 2,
             "l": 3,
-            "gf": 1.6,
-            "ga": 1.8,
+            "gf": 1.7,
+            "ga": 1.1,
             "form": [
-              "L",
-              "L",
               "W",
               "W",
-              "L"
+              "W",
+              "W",
+              "D"
             ]
           },
           "home": {
-            "n": 5,
-            "w": 2,
-            "d": 0,
-            "l": 3,
-            "gf": 1.6,
-            "ga": 1.8,
+            "n": 10,
+            "w": 5,
+            "d": 3,
+            "l": 2,
+            "gf": 2.1,
+            "ga": 0.9,
             "form": [
-              "L",
+              "W",
+              "D",
               "L",
               "W",
-              "W",
-              "L"
+              "W"
             ]
           },
           "away": {
-            "n": 5,
-            "w": 2,
-            "d": 0,
-            "l": 3,
-            "gf": 1.6,
-            "ga": 1.8,
+            "n": 10,
+            "w": 6,
+            "d": 2,
+            "l": 2,
+            "gf": 1.9,
+            "ga": 1.0,
             "form": [
-              "L",
-              "L",
+              "W",
+              "W",
               "W",
               "W",
               "L"
             ]
           },
-          "total": 5,
-          "last_date": "2026-10-15",
-          "stale_days": 6
+          "total": 56,
+          "last_date": "2026-10-18",
+          "stale_days": 4
         },
         "away": {
           "name": "曼联",
           "recent": {
-            "n": 4,
-            "w": 2,
-            "d": 0,
-            "l": 2,
-            "gf": 2.25,
-            "ga": 1.5,
+            "n": 10,
+            "w": 3,
+            "d": 2,
+            "l": 5,
+            "gf": 1.4,
+            "ga": 1.4,
             "form": [
+              "D",
+              "W",
+              "D",
               "L",
-              "W",
-              "W",
-              "L"
+              "W"
             ]
           },
           "home": {
-            "n": 4,
-            "w": 2,
+            "n": 10,
+            "w": 4,
             "d": 0,
-            "l": 2,
-            "gf": 2.25,
+            "l": 6,
+            "gf": 1.5,
             "ga": 1.5,
             "form": [
+              "W",
               "L",
               "W",
-              "W",
-              "L"
+              "L",
+              "W"
             ]
           },
           "away": {
-            "n": 4,
+            "n": 10,
             "w": 2,
-            "d": 0,
-            "l": 2,
-            "gf": 2.25,
-            "ga": 1.5,
+            "d": 3,
+            "l": 5,
+            "gf": 1.4,
+            "ga": 1.6,
             "form": [
+              "D",
+              "D",
               "L",
-              "W",
-              "W",
+              "L",
               "L"
             ]
           },
-          "total": 4,
-          "last_date": "2026-10-14",
-          "stale_days": 7
+          "total": 527,
+          "last_date": "2026-10-18",
+          "stale_days": 4
         },
         "h2h": null,
-        "source": "500网即时战绩直连"
+        "source": "本地竞彩历史库"
       },
-      "stats_ts": "2026-10-21 16:58:40",
+      "stats_ts": "2026-10-21 11:17:28",
       "quant_factors": {
         "samples": 2266,
         "win_rate": 42.1,
@@ -20654,17 +20651,17 @@
       "away_rank": "-",
       "status": "未开赛",
       "form_home": [
-        "L",
         "W",
+        "D",
         "W",
         "L",
-        "W"
+        "D"
       ],
       "form_away": [
+        "D",
         "W",
         "L",
         "W",
-        "L",
         "W"
       ],
       "odds": [
@@ -20741,109 +20738,109 @@
         "home": {
           "name": "里尔",
           "recent": {
-            "n": 5,
-            "w": 3,
-            "d": 0,
-            "l": 2,
+            "n": 10,
+            "w": 5,
+            "d": 2,
+            "l": 3,
             "gf": 1.2,
-            "ga": 1.2,
+            "ga": 0.7,
             "form": [
               "L",
               "W",
+              "D",
               "W",
-              "L",
-              "W"
+              "D"
             ]
           },
           "home": {
-            "n": 5,
-            "w": 3,
-            "d": 0,
-            "l": 2,
-            "gf": 1.2,
-            "ga": 1.2,
+            "n": 10,
+            "w": 2,
+            "d": 3,
+            "l": 5,
+            "gf": 0.8,
+            "ga": 1.3,
             "form": [
               "L",
+              "D",
+              "D",
               "W",
-              "W",
-              "L",
-              "W"
+              "L"
             ]
           },
           "away": {
-            "n": 5,
-            "w": 3,
-            "d": 0,
-            "l": 2,
-            "gf": 1.2,
-            "ga": 1.2,
+            "n": 10,
+            "w": 5,
+            "d": 1,
+            "l": 4,
+            "gf": 1.0,
+            "ga": 0.9,
             "form": [
-              "L",
               "W",
               "W",
-              "L",
-              "W"
+              "W",
+              "W",
+              "L"
             ]
           },
-          "total": 5,
-          "last_date": "2026-10-14",
-          "stale_days": 7
+          "total": 395,
+          "last_date": "2026-05-17",
+          "stale_days": 158
         },
         "away": {
           "name": "加拉塔萨",
           "recent": {
-            "n": 5,
-            "w": 3,
-            "d": 0,
-            "l": 2,
-            "gf": 1.6,
-            "ga": 2.0,
+            "n": 10,
+            "w": 1,
+            "d": 3,
+            "l": 6,
+            "gf": 1.3,
+            "ga": 2.1,
             "form": [
-              "W",
+              "D",
+              "D",
               "L",
-              "W",
               "L",
-              "W"
+              "L"
             ]
           },
           "home": {
-            "n": 5,
-            "w": 3,
-            "d": 0,
-            "l": 2,
-            "gf": 1.6,
-            "ga": 2.0,
+            "n": 10,
+            "w": 2,
+            "d": 3,
+            "l": 5,
+            "gf": 1.4,
+            "ga": 1.7,
             "form": [
-              "W",
+              "L",
+              "D",
               "L",
               "W",
-              "L",
-              "W"
+              "L"
             ]
           },
           "away": {
-            "n": 5,
-            "w": 3,
-            "d": 0,
-            "l": 2,
-            "gf": 1.6,
-            "ga": 2.0,
+            "n": 10,
+            "w": 2,
+            "d": 4,
+            "l": 4,
+            "gf": 1.5,
+            "ga": 1.8,
             "form": [
-              "W",
+              "D",
+              "D",
               "L",
-              "W",
               "L",
-              "W"
+              "L"
             ]
           },
-          "total": 5,
-          "last_date": "2026-10-10",
-          "stale_days": 11
+          "total": 46,
+          "last_date": "2024-12-13",
+          "stale_days": 678
         },
         "h2h": null,
-        "source": "500网即时战绩直连"
+        "source": "本地竞彩历史库"
       },
-      "stats_ts": "2026-10-21 16:58:45",
+      "stats_ts": "2026-10-21 11:17:28",
       "quant_factors": {
         "samples": 4489,
         "win_rate": 49.2,
@@ -20878,21 +20875,23 @@
       "away_rank": "-",
       "status": "未开赛",
       "form_home": [
-        "L",
+        "W",
+        "D",
         "W",
         "L",
-        "L"
+        "D"
       ],
       "form_away": [
+        "D",
         "W",
         "L",
-        "L",
-        "L"
+        "W",
+        "W"
       ],
       "odds": [
-        "3.60",
-        "3.20",
-        "1.86"
+        "3.72",
+        "3.25",
+        "1.81"
       ],
       "is_only_rq": false,
       "rang": "1",
@@ -20963,98 +20962,104 @@
         "home": {
           "name": "莱万特",
           "recent": {
-            "n": 4,
-            "w": 1,
-            "d": 0,
+            "n": 10,
+            "w": 5,
+            "d": 2,
             "l": 3,
-            "gf": 1.5,
-            "ga": 2.25,
+            "gf": 1.4,
+            "ga": 1.4,
             "form": [
+              "D",
               "L",
               "W",
-              "L",
-              "L"
+              "W",
+              "W"
             ]
           },
           "home": {
-            "n": 4,
-            "w": 1,
-            "d": 0,
-            "l": 3,
-            "gf": 1.5,
-            "ga": 2.25,
+            "n": 10,
+            "w": 7,
+            "d": 3,
+            "l": 0,
+            "gf": 1.9,
+            "ga": 0.8,
             "form": [
-              "L",
               "W",
-              "L",
-              "L"
+              "W",
+              "W",
+              "W",
+              "W"
             ]
           },
           "away": {
-            "n": 4,
-            "w": 1,
-            "d": 0,
-            "l": 3,
-            "gf": 1.5,
-            "ga": 2.25,
+            "n": 10,
+            "w": 2,
+            "d": 3,
+            "l": 5,
+            "gf": 1.2,
+            "ga": 1.9,
             "form": [
+              "D",
               "L",
               "W",
               "L",
-              "L"
+              "D"
             ]
           },
-          "total": 4,
-          "last_date": "2026-09-21",
-          "stale_days": 30
+          "total": 249,
+          "last_date": "2026-10-17",
+          "stale_days": 5
         },
         "away": {
           "name": "毕尔巴鄂",
           "recent": {
-            "n": 4,
-            "w": 1,
-            "d": 0,
+            "n": 10,
+            "w": 5,
+            "d": 2,
             "l": 3,
-            "gf": 1.0,
-            "ga": 1.5,
+            "gf": 0.8,
+            "ga": 1.0,
             "form": [
+              "D",
               "W",
-              "L",
-              "L",
-              "L"
+              "W",
+              "W",
+              "W"
             ]
           },
           "home": {
-            "n": 4,
-            "w": 1,
-            "d": 0,
-            "l": 3,
-            "gf": 1.0,
-            "ga": 1.5,
+            "n": 10,
+            "w": 8,
+            "d": 1,
+            "l": 1,
+            "gf": 1.5,
+            "ga": 0.7,
             "form": [
               "W",
+              "W",
+              "W",
               "L",
-              "L",
-              "L"
+              "W"
             ]
           },
           "away": {
-            "n": 4,
-            "w": 1,
-            "d": 0,
-            "l": 3,
+            "n": 10,
+            "w": 4,
+            "d": 4,
+            "l": 2,
             "gf": 1.0,
-            "ga": 1.5,
+            "ga": 0.9,
             "form": [
+              "D",
               "W",
               "L",
-              "L",
+              "D",
               "L"
             ]
           },
-          "total": 4,
-          "last_date": "2026-09-05",
-          "stale_days": 46
+          "total": 408,
+          "last_date": "2026-10-18",
+          "stale_days": 4
         },
         "h2h": {
           "n": 8,
@@ -21081,23 +21086,23 @@
             }
           ]
         },
-        "source": "500网即时战绩直连"
+        "source": "本地竞彩历史库"
       },
-      "stats_ts": "2026-10-21 16:58:51",
+      "stats_ts": "2026-10-21 11:17:28",
       "quant_factors": {
-        "samples": 1560,
-        "win_rate": 23.4,
-        "draw_rate": 27.8,
-        "loss_rate": 48.8,
-        "ev_home": -0.158,
-        "ev_draw": -0.112,
-        "ev_away": -0.091,
+        "samples": 1237,
+        "win_rate": 20.9,
+        "draw_rate": 28.9,
+        "loss_rate": 50.1,
+        "ev_home": -0.221,
+        "ev_draw": -0.059,
+        "ev_away": -0.093,
         "lambda_h": 1.01,
-        "lambda_a": 1.55,
+        "lambda_a": 1.6,
         "golden_scores": [
-          "1-1",
           "0-1",
-          "1-2"
+          "1-2",
+          "0-2"
         ],
         "trap_level": "NORMAL",
         "trap_warning": "盘面处于正常期望区间",
@@ -21119,17 +21124,17 @@
       "status": "未开赛",
       "form_home": [
         "W",
+        "D",
+        "W",
+        "L",
+        "D"
+      ],
+      "form_away": [
+        "D",
         "W",
         "L",
         "W",
         "W"
-      ],
-      "form_away": [
-        "L",
-        "L",
-        "L",
-        "L",
-        "L"
       ],
       "odds": [
         "1.13",
@@ -21205,104 +21210,104 @@
         "home": {
           "name": "皇马",
           "recent": {
-            "n": 8,
-            "w": 6,
-            "d": 0,
-            "l": 2,
-            "gf": 2.5,
-            "ga": 0.88,
+            "n": 10,
+            "w": 8,
+            "d": 1,
+            "l": 1,
+            "gf": 2.1,
+            "ga": 0.9,
             "form": [
               "W",
               "W",
-              "L",
               "W",
+              "L",
               "W"
             ]
           },
           "home": {
-            "n": 8,
-            "w": 6,
-            "d": 0,
-            "l": 2,
-            "gf": 2.5,
-            "ga": 0.88,
+            "n": 10,
+            "w": 9,
+            "d": 1,
+            "l": 0,
+            "gf": 2.1,
+            "ga": 0.8,
             "form": [
               "W",
               "W",
-              "L",
+              "W",
               "W",
               "W"
             ]
           },
           "away": {
-            "n": 8,
+            "n": 10,
             "w": 6,
-            "d": 0,
+            "d": 2,
             "l": 2,
-            "gf": 2.5,
-            "ga": 0.88,
+            "gf": 2.2,
+            "ga": 1.6,
             "form": [
-              "W",
               "W",
               "L",
               "W",
-              "W"
+              "W",
+              "L"
             ]
           },
-          "total": 8,
+          "total": 448,
           "last_date": "2026-10-19",
-          "stale_days": 2
+          "stale_days": 3
         },
         "away": {
           "name": "莱红牛",
           "recent": {
-            "n": 9,
-            "w": 0,
-            "d": 0,
-            "l": 9,
-            "gf": 0.44,
-            "ga": 3.67,
+            "n": 10,
+            "w": 2,
+            "d": 3,
+            "l": 5,
+            "gf": 1.2,
+            "ga": 2.9,
             "form": [
               "L",
+              "W",
               "L",
               "L",
-              "L",
-              "L"
+              "D"
             ]
           },
           "home": {
-            "n": 9,
-            "w": 0,
-            "d": 0,
-            "l": 9,
-            "gf": 0.44,
-            "ga": 3.67,
+            "n": 10,
+            "w": 4,
+            "d": 3,
+            "l": 3,
+            "gf": 2.0,
+            "ga": 1.8,
             "form": [
+              "W",
               "L",
-              "L",
-              "L",
-              "L",
-              "L"
+              "D",
+              "D",
+              "W"
             ]
           },
           "away": {
-            "n": 9,
-            "w": 0,
-            "d": 0,
-            "l": 9,
-            "gf": 0.44,
-            "ga": 3.67,
+            "n": 10,
+            "w": 2,
+            "d": 1,
+            "l": 7,
+            "gf": 1.0,
+            "ga": 2.8,
             "form": [
               "L",
               "L",
-              "L",
+              "D",
               "L",
               "L"
             ]
           },
-          "total": 9,
+          "total": 368,
           "last_date": "2026-10-18",
-          "stale_days": 3
+          "stale_days": 4
         },
         "h2h": {
           "n": 3,
@@ -21329,9 +21334,9 @@
             }
           ]
         },
-        "source": "500网即时战绩直连"
+        "source": "本地竞彩历史库"
       },
-      "stats_ts": "2026-10-21 16:58:57",
+      "stats_ts": "2026-10-21 11:17:28",
       "quant_factors": {
         "samples": 146,
         "win_rate": 82.9,
@@ -21366,13 +21371,17 @@
       "away_rank": "-",
       "status": "未开赛",
       "form_home": [
-        "W"
-      ],
-      "form_away": [
         "W",
-        "W",
+        "D",
         "W",
         "L",
+        "D"
+      ],
+      "form_away": [
+        "D",
+        "W",
+        "L",
+        "W",
         "W"
       ],
       "odds": [
@@ -21449,97 +21458,109 @@
         "home": {
           "name": "维拉",
           "recent": {
-            "n": 1,
-            "w": 1,
-            "d": 0,
-            "l": 0,
-            "gf": 6.0,
-            "ga": 0.0,
+            "n": 10,
+            "w": 5,
+            "d": 1,
+            "l": 4,
+            "gf": 1.0,
+            "ga": 0.9,
             "form": [
+              "W",
+              "L",
+              "D",
+              "L",
               "W"
             ]
           },
           "home": {
-            "n": 1,
-            "w": 1,
-            "d": 0,
+            "n": 10,
+            "w": 6,
+            "d": 4,
             "l": 0,
-            "gf": 6.0,
-            "ga": 0.0,
+            "gf": 1.7,
+            "ga": 0.7,
             "form": [
-              "W"
+              "D",
+              "W",
+              "W",
+              "W",
+              "D"
             ]
           },
           "away": {
-            "n": 1,
-            "w": 1,
+            "n": 10,
+            "w": 3,
             "d": 0,
-            "l": 0,
-            "gf": 6.0,
-            "ga": 0.0,
+            "l": 7,
+            "gf": 0.7,
+            "ga": 1.8,
             "form": [
-              "W"
+              "W",
+              "L",
+              "L",
+              "W",
+              "L"
             ]
           },
-          "total": 1,
-          "last_date": "2026-10-15",
-          "stale_days": 6
+          "total": 402,
+          "last_date": "2026-10-18",
+          "stale_days": 4
         },
         "away": {
           "name": "维京",
           "recent": {
-            "n": 5,
-            "w": 4,
+            "n": 10,
+            "w": 10,
             "d": 0,
-            "l": 1,
-            "gf": 3.4,
-            "ga": 1.4,
+            "l": 0,
+            "gf": 2.9,
+            "ga": 0.6,
             "form": [
               "W",
               "W",
               "W",
-              "L",
+              "W",
               "W"
             ]
           },
           "home": {
-            "n": 5,
-            "w": 4,
+            "n": 10,
+            "w": 9,
             "d": 0,
             "l": 1,
-            "gf": 3.4,
-            "ga": 1.4,
+            "gf": 2.9,
+            "ga": 0.8,
             "form": [
               "W",
               "W",
               "W",
-              "L",
+              "W",
               "W"
             ]
           },
           "away": {
-            "n": 5,
-            "w": 4,
-            "d": 0,
+            "n": 10,
+            "w": 7,
+            "d": 2,
             "l": 1,
-            "gf": 3.4,
-            "ga": 1.4,
+            "gf": 1.8,
+            "ga": 1.1,
             "form": [
               "W",
               "W",
               "W",
-              "L",
+              "W",
               "W"
             ]
           },
-          "total": 5,
-          "last_date": "2026-10-18",
-          "stale_days": 3
+          "total": 255,
+          "last_date": "2026-05-24",
+          "stale_days": 151
         },
         "h2h": null,
-        "source": "500网即时战绩直连"
+        "source": "本地竞彩历史库"
       },
-      "stats_ts": "2026-10-21 16:59:01",
+      "stats_ts": "2026-10-21 11:17:28",
       "quant_factors": {
         "samples": 333,
         "win_rate": 80.8,
@@ -21575,16 +21596,17 @@
       "status": "未开赛",
       "form_home": [
         "W",
+        "D",
         "W",
-        "W",
-        "W",
-        "L"
+        "L",
+        "D"
       ],
       "form_away": [
+        "D",
         "W",
+        "L",
         "W",
-        "W",
-        "L"
+        "W"
       ],
       "odds": [
         "1.40",
@@ -21660,106 +21682,109 @@
         "home": {
           "name": "贝蒂斯",
           "recent": {
-            "n": 5,
-            "w": 4,
-            "d": 0,
-            "l": 1,
-            "gf": 2.4,
-            "ga": 1.8,
+            "n": 10,
+            "w": 1,
+            "d": 5,
+            "l": 4,
+            "gf": 1.2,
+            "ga": 2.1,
             "form": [
+              "L",
+              "D",
               "W",
-              "W",
-              "W",
-              "W",
+              "D",
               "L"
             ]
           },
           "home": {
-            "n": 5,
-            "w": 4,
-            "d": 0,
-            "l": 1,
-            "gf": 2.4,
-            "ga": 1.8,
+            "n": 10,
+            "w": 3,
+            "d": 5,
+            "l": 2,
+            "gf": 1.4,
+            "ga": 1.7,
             "form": [
+              "L",
               "W",
-              "W",
-              "W",
-              "W",
-              "L"
+              "L",
+              "D",
+              "D"
             ]
           },
           "away": {
-            "n": 5,
-            "w": 4,
-            "d": 0,
-            "l": 1,
-            "gf": 2.4,
-            "ga": 1.8,
+            "n": 10,
+            "w": 3,
+            "d": 3,
+            "l": 4,
+            "gf": 1.2,
+            "ga": 1.6,
             "form": [
-              "W",
-              "W",
-              "W",
-              "W",
+              "D",
+              "D",
+              "L",
+              "D",
               "L"
             ]
           },
-          "total": 5,
-          "last_date": "2026-10-15",
-          "stale_days": 6
+          "total": 328,
+          "last_date": "2026-10-18",
+          "stale_days": 4
         },
         "away": {
           "name": "费耶诺德",
           "recent": {
-            "n": 4,
-            "w": 3,
-            "d": 0,
+            "n": 10,
+            "w": 4,
+            "d": 5,
             "l": 1,
-            "gf": 2.75,
-            "ga": 1.75,
+            "gf": 1.7,
+            "ga": 1.4,
             "form": [
               "W",
+              "D",
               "W",
               "W",
-              "L"
+              "D"
             ]
           },
           "home": {
-            "n": 4,
-            "w": 3,
-            "d": 0,
-            "l": 1,
-            "gf": 2.75,
-            "ga": 1.75,
+            "n": 10,
+            "w": 4,
+            "d": 3,
+            "l": 3,
+            "gf": 2.1,
+            "ga": 1.7,
             "form": [
+              "D",
               "W",
+              "D",
               "W",
-              "W",
-              "L"
+              "W"
             ]
           },
           "away": {
-            "n": 4,
+            "n": 10,
             "w": 3,
-            "d": 0,
-            "l": 1,
-            "gf": 2.75,
-            "ga": 1.75,
+            "d": 4,
+            "l": 3,
+            "gf": 1.4,
+            "ga": 1.7,
             "form": [
               "W",
               "W",
-              "W",
-              "L"
+              "D",
+              "D",
+              "D"
             ]
           },
-          "total": 4,
-          "last_date": "2026-10-15",
-          "stale_days": 6
+          "total": 345,
+          "last_date": "2026-10-18",
+          "stale_days": 4
         },
         "h2h": null,
-        "source": "500网即时战绩直连"
+        "source": "本地竞彩历史库"
       },
-      "stats_ts": "2026-10-21 16:59:06",
+      "stats_ts": "2026-10-21 11:17:28",
       "quant_factors": {
         "samples": 893,
         "win_rate": 63.0,
@@ -21795,12 +21820,13 @@
       "status": "未开赛",
       "form_home": [
         "W",
+        "D",
         "W",
-        "W",
-        "W"
+        "L",
+        "D"
       ],
       "form_away": [
-        "W",
+        "D",
         "W",
         "L",
         "W",
@@ -21880,101 +21906,104 @@
         "home": {
           "name": "拜仁",
           "recent": {
-            "n": 4,
-            "w": 4,
-            "d": 0,
-            "l": 0,
-            "gf": 5.75,
-            "ga": 0.5,
+            "n": 10,
+            "w": 7,
+            "d": 1,
+            "l": 2,
+            "gf": 3.3,
+            "ga": 1.1,
             "form": [
               "W",
               "W",
               "W",
+              "L",
               "W"
             ]
           },
           "home": {
-            "n": 4,
-            "w": 4,
-            "d": 0,
-            "l": 0,
-            "gf": 5.75,
-            "ga": 0.5,
+            "n": 10,
+            "w": 8,
+            "d": 1,
+            "l": 1,
+            "gf": 2.9,
+            "ga": 0.4,
             "form": [
               "W",
               "W",
               "W",
-              "W"
+              "W",
+              "L"
             ]
           },
           "away": {
-            "n": 4,
-            "w": 4,
-            "d": 0,
-            "l": 0,
-            "gf": 5.75,
-            "ga": 0.5,
+            "n": 10,
+            "w": 5,
+            "d": 2,
+            "l": 3,
+            "gf": 2.0,
+            "ga": 1.2,
             "form": [
               "W",
+              "L",
               "W",
-              "W",
-              "W"
+              "L",
+              "D"
             ]
           },
-          "total": 4,
+          "total": 337,
           "last_date": "2026-10-18",
-          "stale_days": 3
+          "stale_days": 4
         },
         "away": {
           "name": "阿森纳",
           "recent": {
-            "n": 5,
-            "w": 4,
-            "d": 0,
+            "n": 10,
+            "w": 6,
+            "d": 3,
             "l": 1,
-            "gf": 2.0,
-            "ga": 1.0,
+            "gf": 1.2,
+            "ga": 0.5,
             "form": [
               "W",
+              "D",
               "W",
-              "L",
               "W",
               "W"
             ]
           },
           "home": {
-            "n": 5,
-            "w": 4,
-            "d": 0,
-            "l": 1,
-            "gf": 2.0,
-            "ga": 1.0,
+            "n": 10,
+            "w": 7,
+            "d": 1,
+            "l": 2,
+            "gf": 1.5,
+            "ga": 0.5,
             "form": [
               "W",
               "W",
-              "L",
               "W",
-              "W"
+              "D",
+              "L"
             ]
           },
           "away": {
-            "n": 5,
+            "n": 10,
             "w": 4,
-            "d": 0,
-            "l": 1,
-            "gf": 2.0,
-            "ga": 1.0,
+            "d": 4,
+            "l": 2,
+            "gf": 1.1,
+            "ga": 0.9,
             "form": [
               "W",
+              "D",
               "W",
-              "L",
               "W",
-              "W"
+              "D"
             ]
           },
-          "total": 5,
-          "last_date": "2026-10-14",
-          "stale_days": 7
+          "total": 493,
+          "last_date": "2026-10-18",
+          "stale_days": 4
         },
         "h2h": {
           "n": 7,
@@ -22001,9 +22030,9 @@
             }
           ]
         },
-        "source": "500网即时战绩直连"
+        "source": "本地竞彩历史库"
       },
-      "stats_ts": "2026-10-21 16:59:11",
+      "stats_ts": "2026-10-21 11:17:28",
       "quant_factors": {
         "samples": 7775,
         "win_rate": 45.3,
@@ -22038,15 +22067,17 @@
       "away_rank": "-",
       "status": "未开赛",
       "form_home": [
-        "L",
-        "L",
-        "L",
-        "L"
-      ],
-      "form_away": [
+        "W",
+        "D",
         "W",
         "L",
+        "D"
+      ],
+      "form_away": [
+        "D",
+        "W",
         "L",
+        "W",
         "W"
       ],
       "odds": [
@@ -22122,98 +22153,104 @@
         "home": {
           "name": "里斯本",
           "recent": {
-            "n": 4,
-            "w": 0,
-            "d": 0,
-            "l": 4,
-            "gf": 1.0,
-            "ga": 2.75,
+            "n": 10,
+            "w": 4,
+            "d": 4,
+            "l": 2,
+            "gf": 1.7,
+            "ga": 1.1,
             "form": [
-              "L",
-              "L",
-              "L",
-              "L"
+              "W",
+              "W",
+              "W",
+              "D",
+              "D"
             ]
           },
           "home": {
-            "n": 4,
-            "w": 0,
-            "d": 0,
-            "l": 4,
-            "gf": 1.0,
-            "ga": 2.75,
+            "n": 10,
+            "w": 7,
+            "d": 2,
+            "l": 1,
+            "gf": 1.9,
+            "ga": 0.9,
             "form": [
+              "W",
+              "W",
+              "D",
               "L",
-              "L",
-              "L",
-              "L"
+              "W"
             ]
           },
           "away": {
-            "n": 4,
-            "w": 0,
-            "d": 0,
-            "l": 4,
-            "gf": 1.0,
-            "ga": 2.75,
+            "n": 10,
+            "w": 5,
+            "d": 3,
+            "l": 2,
+            "gf": 2.3,
+            "ga": 1.2,
             "form": [
-              "L",
-              "L",
-              "L",
-              "L"
+              "W",
+              "W",
+              "D",
+              "D",
+              "D"
             ]
           },
-          "total": 4,
-          "last_date": "2026-09-10",
-          "stale_days": 41
+          "total": 376,
+          "last_date": "2025-08-23",
+          "stale_days": 425
         },
         "away": {
           "name": "LASK林茨",
           "recent": {
-            "n": 4,
-            "w": 2,
-            "d": 0,
-            "l": 2,
-            "gf": 1.5,
-            "ga": 1.0,
+            "n": 10,
+            "w": 3,
+            "d": 3,
+            "l": 4,
+            "gf": 1.3,
+            "ga": 2.1,
             "form": [
-              "W",
+              "D",
               "L",
+              "D",
               "L",
-              "W"
+              "D"
             ]
           },
           "home": {
-            "n": 4,
-            "w": 2,
-            "d": 0,
+            "n": 8,
+            "w": 3,
+            "d": 3,
             "l": 2,
-            "gf": 1.5,
-            "ga": 1.0,
+            "gf": 1.75,
+            "ga": 1.25,
             "form": [
-              "W",
+              "D",
+              "D",
               "L",
-              "L",
+              "D",
               "W"
             ]
           },
           "away": {
-            "n": 4,
+            "n": 7,
             "w": 2,
-            "d": 0,
-            "l": 2,
-            "gf": 1.5,
-            "ga": 1.0,
+            "d": 1,
+            "l": 4,
+            "gf": 0.71,
+            "ga": 2.14,
             "form": [
+              "L",
               "W",
               "L",
               "L",
               "W"
             ]
           },
-          "total": 4,
-          "last_date": "2026-10-02",
-          "stale_days": 19
+          "total": 15,
+          "last_date": "2024-12-20",
+          "stale_days": 671
         },
         "h2h": {
           "n": 1,
@@ -22230,9 +22267,9 @@
             }
           ]
         },
-        "source": "500网即时战绩直连"
+        "source": "本地竞彩历史库"
       },
-      "stats_ts": "2026-10-21 16:59:16",
+      "stats_ts": "2026-10-21 11:17:28",
       "quant_factors": {
         "samples": 15400,
         "win_rate": 41.9,
@@ -22273,16 +22310,16 @@
       "status": "未开赛",
       "form_home": [
         "W",
-        "W",
+        "D",
         "W",
         "L",
-        "W"
+        "D"
       ],
       "form_away": [
-        "W",
+        "D",
         "W",
         "L",
-        "L",
+        "W",
         "W"
       ],
       "odds": [
@@ -22359,109 +22396,109 @@
         "home": {
           "name": "布鲁日",
           "recent": {
-            "n": 5,
-            "w": 4,
-            "d": 0,
-            "l": 1,
-            "gf": 1.8,
-            "ga": 0.6,
+            "n": 10,
+            "w": 5,
+            "d": 1,
+            "l": 4,
+            "gf": 2.5,
+            "ga": 2.0,
             "form": [
-              "W",
-              "W",
+              "L",
               "W",
               "L",
-              "W"
+              "L",
+              "D"
             ]
           },
           "home": {
-            "n": 5,
-            "w": 4,
-            "d": 0,
-            "l": 1,
-            "gf": 1.8,
-            "ga": 0.6,
+            "n": 10,
+            "w": 5,
+            "d": 2,
+            "l": 3,
+            "gf": 2.0,
+            "ga": 1.4,
             "form": [
-              "W",
-              "W",
-              "W",
               "L",
+              "D",
+              "W",
+              "W",
               "W"
             ]
           },
           "away": {
-            "n": 5,
+            "n": 10,
             "w": 4,
-            "d": 0,
-            "l": 1,
-            "gf": 1.8,
-            "ga": 0.6,
+            "d": 1,
+            "l": 5,
+            "gf": 1.9,
+            "ga": 2.0,
             "form": [
+              "L",
               "W",
-              "W",
-              "W",
+              "L",
               "L",
               "W"
             ]
           },
-          "total": 5,
-          "last_date": "2026-10-18",
-          "stale_days": 3
+          "total": 191,
+          "last_date": "2026-02-24",
+          "stale_days": 240
         },
         "away": {
           "name": "朗斯",
           "recent": {
-            "n": 5,
-            "w": 3,
-            "d": 0,
+            "n": 10,
+            "w": 6,
+            "d": 2,
             "l": 2,
-            "gf": 2.2,
+            "gf": 2.4,
             "ga": 1.4,
             "form": [
               "W",
               "W",
               "L",
-              "L",
-              "W"
+              "W",
+              "D"
             ]
           },
           "home": {
-            "n": 5,
-            "w": 3,
+            "n": 10,
+            "w": 9,
             "d": 0,
-            "l": 2,
-            "gf": 2.2,
-            "ga": 1.4,
+            "l": 1,
+            "gf": 2.1,
+            "ga": 0.7,
             "form": [
               "W",
+              "L",
               "W",
-              "L",
-              "L",
+              "W",
               "W"
             ]
           },
           "away": {
-            "n": 5,
+            "n": 10,
             "w": 3,
-            "d": 0,
-            "l": 2,
-            "gf": 2.2,
-            "ga": 1.4,
+            "d": 4,
+            "l": 3,
+            "gf": 2.0,
+            "ga": 1.7,
             "form": [
               "W",
-              "W",
+              "D",
+              "D",
               "L",
-              "L",
-              "W"
+              "L"
             ]
           },
-          "total": 5,
-          "last_date": "2026-10-10",
-          "stale_days": 11
+          "total": 338,
+          "last_date": "2026-05-22",
+          "stale_days": 153
         },
         "h2h": null,
-        "source": "500网即时战绩直连"
+        "source": "本地竞彩历史库"
       },
-      "stats_ts": "2026-10-21 16:59:20",
+      "stats_ts": "2026-10-21 11:17:28",
       "quant_factors": {
         "samples": 375,
         "win_rate": 60.3,
@@ -22496,17 +22533,17 @@
       "away_rank": "-",
       "status": "未开赛",
       "form_home": [
-        "L",
-        "L",
-        "L",
-        "L",
-        "L"
-      ],
-      "form_away": [
-        "L",
+        "W",
+        "D",
         "W",
         "L",
+        "D"
+      ],
+      "form_away": [
+        "D",
+        "W",
         "L",
+        "W",
         "W"
       ],
       "odds": [
@@ -22583,104 +22620,104 @@
         "home": {
           "name": "帕梅拉斯",
           "recent": {
-            "n": 5,
-            "w": 0,
-            "d": 0,
-            "l": 5,
-            "gf": 0.6,
-            "ga": 2.2,
+            "n": 10,
+            "w": 2,
+            "d": 6,
+            "l": 2,
+            "gf": 1.4,
+            "ga": 0.9,
             "form": [
               "L",
-              "L",
-              "L",
-              "L",
-              "L"
+              "D",
+              "D",
+              "W",
+              "D"
             ]
           },
           "home": {
-            "n": 5,
-            "w": 0,
-            "d": 0,
-            "l": 5,
-            "gf": 0.6,
-            "ga": 2.2,
+            "n": 10,
+            "w": 3,
+            "d": 5,
+            "l": 2,
+            "gf": 1.2,
+            "ga": 0.9,
             "form": [
               "L",
-              "L",
-              "L",
-              "L",
-              "L"
+              "D",
+              "W",
+              "D",
+              "D"
             ]
           },
           "away": {
-            "n": 5,
-            "w": 0,
-            "d": 0,
-            "l": 5,
-            "gf": 0.6,
-            "ga": 2.2,
+            "n": 10,
+            "w": 5,
+            "d": 3,
+            "l": 2,
+            "gf": 1.7,
+            "ga": 0.8,
             "form": [
+              "D",
               "L",
-              "L",
-              "L",
-              "L",
-              "L"
+              "W",
+              "D",
+              "W"
             ]
           },
-          "total": 5,
-          "last_date": "2026-10-12",
-          "stale_days": 9
+          "total": 435,
+          "last_date": "2025-07-04",
+          "stale_days": 475
         },
         "away": {
           "name": "弗鲁米嫩",
           "recent": {
-            "n": 6,
-            "w": 3,
-            "d": 0,
+            "n": 10,
+            "w": 5,
+            "d": 2,
             "l": 3,
-            "gf": 1.5,
+            "gf": 1.2,
             "ga": 1.0,
             "form": [
               "L",
+              "L",
               "W",
-              "L",
-              "L",
-              "W"
+              "W",
+              "D"
             ]
           },
           "home": {
-            "n": 6,
-            "w": 3,
-            "d": 0,
-            "l": 3,
-            "gf": 1.5,
-            "ga": 1.0,
+            "n": 10,
+            "w": 6,
+            "d": 2,
+            "l": 2,
+            "gf": 1.7,
+            "ga": 1.2,
             "form": [
               "L",
+              "L",
               "W",
-              "L",
-              "L",
-              "W"
+              "W",
+              "D"
             ]
           },
           "away": {
-            "n": 6,
+            "n": 10,
             "w": 3,
-            "d": 0,
-            "l": 3,
-            "gf": 1.5,
-            "ga": 1.0,
+            "d": 2,
+            "l": 5,
+            "gf": 0.8,
+            "ga": 1.3,
             "form": [
-              "L",
               "W",
+              "D",
               "L",
               "L",
-              "W"
+              "L"
             ]
           },
-          "total": 6,
-          "last_date": "2026-10-12",
-          "stale_days": 9
+          "total": 330,
+          "last_date": "2026-10-19",
+          "stale_days": 3
         },
         "h2h": {
           "n": 8,
@@ -22707,9 +22744,9 @@
             }
           ]
         },
-        "source": "500网即时战绩直连"
+        "source": "本地竞彩历史库"
       },
-      "stats_ts": "2026-10-21 16:59:24",
+      "stats_ts": "2026-10-21 11:17:28",
       "quant_factors": {
         "samples": 6619,
         "win_rate": 52.0,
@@ -22744,16 +22781,17 @@
       "away_rank": "-",
       "status": "未开赛",
       "form_home": [
+        "W",
+        "D",
+        "W",
         "L",
-        "L",
-        "L",
-        "L",
-        "L"
+        "D"
       ],
       "form_away": [
+        "D",
+        "W",
         "L",
-        "L",
-        "L",
+        "W",
         "W"
       ],
       "odds": [
@@ -22852,42 +22890,42 @@
         "home": {
           "name": "格风暴",
           "recent": {
-            "n": 6,
-            "w": 0,
+            "n": 10,
+            "w": 4,
             "d": 0,
             "l": 6,
-            "gf": 0.67,
-            "ga": 3.33,
+            "gf": 0.9,
+            "ga": 1.8,
             "form": [
+              "W",
               "L",
               "L",
-              "L",
-              "L",
-              "L"
+              "W",
+              "W"
             ]
           },
           "home": {
-            "n": 6,
-            "w": 0,
+            "n": 7,
+            "w": 4,
             "d": 0,
-            "l": 6,
-            "gf": 0.67,
-            "ga": 3.33,
+            "l": 3,
+            "gf": 1.43,
+            "ga": 1.43,
             "form": [
-              "L",
-              "L",
-              "L",
-              "L",
+              "W",
+              "W",
+              "W",
+              "W",
               "L"
             ]
           },
           "away": {
-            "n": 6,
+            "n": 7,
             "w": 0,
-            "d": 0,
-            "l": 6,
-            "gf": 0.67,
-            "ga": 3.33,
+            "d": 2,
+            "l": 5,
+            "gf": 0.57,
+            "ga": 2.14,
             "form": [
               "L",
               "L",
@@ -22896,62 +22934,65 @@
               "L"
             ]
           },
-          "total": 6,
-          "last_date": "2026-10-18",
-          "stale_days": 3
+          "total": 14,
+          "last_date": "2025-08-26",
+          "stale_days": 423
         },
         "away": {
           "name": "马赛",
           "recent": {
-            "n": 4,
-            "w": 1,
-            "d": 0,
+            "n": 10,
+            "w": 5,
+            "d": 2,
             "l": 3,
-            "gf": 1.25,
-            "ga": 1.75,
+            "gf": 1.8,
+            "ga": 1.3,
             "form": [
-              "L",
-              "L",
+              "W",
+              "W",
+              "D",
               "L",
               "W"
             ]
           },
           "home": {
-            "n": 4,
-            "w": 1,
-            "d": 0,
-            "l": 3,
-            "gf": 1.25,
-            "ga": 1.75,
+            "n": 10,
+            "w": 6,
+            "d": 2,
+            "l": 2,
+            "gf": 2.0,
+            "ga": 1.3,
             "form": [
-              "L",
-              "L",
+              "W",
+              "D",
+              "W",
               "L",
               "W"
             ]
           },
           "away": {
-            "n": 4,
-            "w": 1,
-            "d": 0,
-            "l": 3,
-            "gf": 1.25,
-            "ga": 1.75,
+            "n": 10,
+            "w": 5,
+            "d": 1,
+            "l": 4,
+            "gf": 1.8,
+            "ga": 1.7,
             "form": [
+              "W",
               "L",
               "L",
-              "L",
-              "W"
+              "W",
+              "L"
             ]
           },
-          "total": 4,
-          "last_date": "2026-09-18",
-          "stale_days": 33
+          "total": 402,
+          "last_date": "2026-10-18",
+          "stale_days": 5
         },
         "h2h": null,
-        "source": "500网即时战绩直连"
+        "source": "本地竞彩历史库"
       },
-      "stats_ts": "2026-10-21 16:59:30",
+      "stats_ts": "2026-10-21 11:06:45",
       "predicted_goals": [
         "2",
         "3"
@@ -22968,15 +23009,15 @@
       "status": "未开赛",
       "form_home": [
         "W",
+        "D",
         "W",
         "L",
-        "L",
-        "W"
+        "D"
       ],
       "form_away": [
-        "L",
-        "L",
+        "D",
         "W",
+        "L",
         "W",
         "W"
       ],
@@ -23076,109 +23117,109 @@
         "home": {
           "name": "波兹南",
           "recent": {
-            "n": 6,
-            "w": 4,
-            "d": 0,
-            "l": 2,
-            "gf": 2.5,
-            "ga": 1.5,
+            "n": 10,
+            "w": 5,
+            "d": 1,
+            "l": 4,
+            "gf": 1.2,
+            "ga": 1.7,
             "form": [
               "W",
+              "L",
               "W",
-              "L",
-              "L",
+              "W",
               "W"
             ]
           },
           "home": {
-            "n": 6,
+            "n": 10,
             "w": 4,
-            "d": 0,
-            "l": 2,
-            "gf": 2.5,
+            "d": 1,
+            "l": 5,
+            "gf": 1.1,
             "ga": 1.5,
             "form": [
+              "L",
               "W",
               "W",
-              "L",
-              "L",
-              "W"
+              "W",
+              "L"
             ]
           },
           "away": {
-            "n": 6,
+            "n": 10,
             "w": 4,
-            "d": 0,
-            "l": 2,
-            "gf": 2.5,
-            "ga": 1.5,
+            "d": 2,
+            "l": 4,
+            "gf": 1.8,
+            "ga": 1.6,
             "form": [
               "W",
               "W",
+              "D",
               "L",
-              "L",
-              "W"
+              "L"
             ]
           },
-          "total": 6,
-          "last_date": "2026-10-18",
-          "stale_days": 3
+          "total": 29,
+          "last_date": "2023-04-21",
+          "stale_days": 1281
         },
         "away": {
           "name": "桑德兰",
           "recent": {
-            "n": 6,
-            "w": 3,
-            "d": 0,
+            "n": 10,
+            "w": 5,
+            "d": 2,
             "l": 3,
-            "gf": 1.17,
+            "gf": 1.3,
             "ga": 1.5,
             "form": [
               "L",
-              "L",
               "W",
               "W",
-              "W"
+              "D",
+              "D"
             ]
           },
           "home": {
-            "n": 6,
-            "w": 3,
-            "d": 0,
-            "l": 3,
-            "gf": 1.17,
-            "ga": 1.5,
+            "n": 10,
+            "w": 5,
+            "d": 3,
+            "l": 2,
+            "gf": 1.0,
+            "ga": 0.9,
             "form": [
-              "L",
+              "W",
+              "D",
               "L",
               "W",
-              "W",
-              "W"
+              "L"
             ]
           },
           "away": {
-            "n": 6,
+            "n": 10,
             "w": 3,
-            "d": 0,
-            "l": 3,
-            "gf": 1.17,
-            "ga": 1.5,
+            "d": 3,
+            "l": 4,
+            "gf": 1.3,
+            "ga": 1.7,
             "form": [
               "L",
+              "W",
+              "D",
               "L",
-              "W",
-              "W",
               "W"
             ]
           },
-          "total": 6,
+          "total": 299,
           "last_date": "2026-10-18",
-          "stale_days": 3
+          "stale_days": 5
         },
         "h2h": null,
-        "source": "500网即时战绩直连"
+        "source": "本地竞彩历史库"
       },
-      "stats_ts": "2026-10-21 16:59:36"
+      "stats_ts": "2026-10-21 11:06:45"
     },
     {
       "code": "周四003",
@@ -23190,16 +23231,18 @@
       "away_rank": "-",
       "status": "未开赛",
       "form_home": [
+        "W",
+        "D",
+        "W",
         "L",
-        "L",
-        "L",
-        "L",
-        "L"
+        "D"
       ],
       "form_away": [
+        "D",
+        "W",
         "L",
-        "L",
-        "L"
+        "W",
+        "W"
       ],
       "odds": [
         "1.42",
@@ -23298,103 +23341,109 @@
         "home": {
           "name": "萨迪纳摩",
           "recent": {
-            "n": 5,
-            "w": 0,
+            "n": 10,
+            "w": 7,
             "d": 0,
-            "l": 5,
-            "gf": 1.0,
-            "ga": 2.2,
+            "l": 3,
+            "gf": 1.7,
+            "ga": 1.3,
             "form": [
               "L",
+              "W",
               "L",
               "L",
-              "L",
-              "L"
+              "W"
             ]
           },
           "home": {
-            "n": 5,
-            "w": 0,
-            "d": 0,
-            "l": 5,
-            "gf": 1.0,
-            "ga": 2.2,
+            "n": 10,
+            "w": 6,
+            "d": 2,
+            "l": 2,
+            "gf": 1.6,
+            "ga": 1.1,
             "form": [
-              "L",
-              "L",
-              "L",
-              "L",
+              "W",
+              "W",
+              "W",
+              "W",
               "L"
             ]
           },
           "away": {
-            "n": 5,
-            "w": 0,
-            "d": 0,
-            "l": 5,
-            "gf": 1.0,
-            "ga": 2.2,
+            "n": 10,
+            "w": 5,
+            "d": 1,
+            "l": 4,
+            "gf": 1.2,
+            "ga": 1.2,
             "form": [
               "L",
+              "W",
               "L",
               "L",
-              "L",
-              "L"
+              "W"
             ]
           },
-          "total": 5,
-          "last_date": "2026-10-16",
-          "stale_days": 5
+          "total": 59,
+          "last_date": "2023-09-01",
+          "stale_days": 1148
         },
         "away": {
           "name": "奈梅亨",
           "recent": {
-            "n": 3,
-            "w": 0,
-            "d": 0,
+            "n": 10,
+            "w": 4,
+            "d": 3,
             "l": 3,
-            "gf": 0.0,
-            "ga": 3.67,
+            "gf": 1.8,
+            "ga": 2.0,
             "form": [
               "L",
               "L",
-              "L"
+              "D",
+              "D",
+              "W"
             ]
           },
           "home": {
-            "n": 3,
-            "w": 0,
-            "d": 0,
-            "l": 3,
-            "gf": 0.0,
-            "ga": 3.67,
+            "n": 10,
+            "w": 5,
+            "d": 4,
+            "l": 1,
+            "gf": 2.0,
+            "ga": 1.2,
             "form": [
+              "D",
+              "D",
+              "W",
               "L",
-              "L",
-              "L"
+              "W"
             ]
           },
           "away": {
-            "n": 3,
-            "w": 0,
-            "d": 0,
-            "l": 3,
-            "gf": 0.0,
-            "ga": 3.67,
+            "n": 10,
+            "w": 5,
+            "d": 1,
+            "l": 4,
+            "gf": 2.1,
+            "ga": 1.9,
             "form": [
               "L",
               "L",
-              "L"
+              "W",
+              "W",
+              "D"
             ]
           },
-          "total": 3,
-          "last_date": "2026-09-18",
-          "stale_days": 33
+          "total": 283,
+          "last_date": "2026-05-10",
+          "stale_days": 166
         },
         "h2h": null,
-        "source": "500网即时战绩直连"
+        "source": "本地竞彩历史库"
       },
-      "stats_ts": "2026-10-21 16:59:41"
+      "stats_ts": "2026-10-21 11:06:45"
     },
     {
       "code": "周四004",
@@ -23407,16 +23456,17 @@
       "status": "未开赛",
       "form_home": [
         "W",
+        "D",
         "W",
         "L",
-        "W"
+        "D"
       ],
       "form_away": [
+        "D",
+        "W",
         "L",
         "W",
-        "W",
-        "L",
-        "L"
+        "W"
       ],
       "odds": [
         "1.45",
@@ -23514,106 +23564,109 @@
         "home": {
           "name": "尤文图斯",
           "recent": {
-            "n": 4,
-            "w": 3,
-            "d": 0,
-            "l": 1,
-            "gf": 2.75,
-            "ga": 0.75,
+            "n": 10,
+            "w": 4,
+            "d": 4,
+            "l": 2,
+            "gf": 1.0,
+            "ga": 0.9,
             "form": [
-              "W",
-              "W",
               "L",
-              "W"
+              "D",
+              "L",
+              "W",
+              "D"
             ]
           },
           "home": {
-            "n": 4,
-            "w": 3,
-            "d": 0,
-            "l": 1,
-            "gf": 2.75,
-            "ga": 0.75,
+            "n": 10,
+            "w": 5,
+            "d": 3,
+            "l": 2,
+            "gf": 1.8,
+            "ga": 0.9,
             "form": [
-              "W",
-              "W",
               "L",
+              "L",
+              "D",
+              "W",
               "W"
             ]
           },
           "away": {
-            "n": 4,
-            "w": 3,
-            "d": 0,
-            "l": 1,
-            "gf": 2.75,
-            "ga": 0.75,
+            "n": 10,
+            "w": 4,
+            "d": 4,
+            "l": 2,
+            "gf": 1.2,
+            "ga": 1.0,
             "form": [
+              "D",
               "W",
+              "D",
               "W",
-              "L",
               "W"
             ]
           },
-          "total": 4,
-          "last_date": "2026-09-21",
-          "stale_days": 30
+          "total": 507,
+          "last_date": "2026-10-19",
+          "stale_days": 4
         },
         "away": {
           "name": "雷恩",
           "recent": {
-            "n": 7,
-            "w": 4,
+            "n": 10,
+            "w": 5,
             "d": 0,
-            "l": 3,
-            "gf": 1.86,
-            "ga": 1.86,
+            "l": 5,
+            "gf": 1.5,
+            "ga": 1.9,
             "form": [
               "L",
-              "W",
-              "W",
               "L",
-              "L"
+              "W",
+              "W",
+              "W"
             ]
           },
           "home": {
-            "n": 7,
-            "w": 4,
-            "d": 0,
-            "l": 3,
-            "gf": 1.86,
-            "ga": 1.86,
+            "n": 10,
+            "w": 6,
+            "d": 2,
+            "l": 2,
+            "gf": 2.1,
+            "ga": 1.2,
             "form": [
-              "L",
               "W",
               "W",
+              "W",
               "L",
-              "L"
+              "W"
             ]
           },
           "away": {
-            "n": 7,
+            "n": 10,
             "w": 4,
-            "d": 0,
-            "l": 3,
-            "gf": 1.86,
-            "ga": 1.86,
+            "d": 1,
+            "l": 5,
+            "gf": 1.2,
+            "ga": 2.1,
             "form": [
               "L",
-              "W",
+              "L",
               "W",
               "L",
               "L"
             ]
           },
-          "total": 7,
-          "last_date": "2026-10-18",
-          "stale_days": 3
+          "total": 342,
+          "last_date": "2026-05-17",
+          "stale_days": 159
         },
         "h2h": null,
-        "source": "500网即时战绩直连"
+        "source": "本地竞彩历史库"
       },
-      "stats_ts": "2026-10-21 16:59:46"
+      "stats_ts": "2026-10-21 11:06:45"
     },
     {
       "code": "周四005",
@@ -23625,18 +23678,18 @@
       "away_rank": "-",
       "status": "未开赛",
       "form_home": [
+        "W",
+        "D",
+        "W",
         "L",
-        "L",
+        "D"
+      ],
+      "form_away": [
+        "D",
+        "W",
         "L",
         "W",
         "W"
-      ],
-      "form_away": [
-        "W",
-        "W",
-        "W",
-        "W",
-        "L"
       ],
       "odds": [
         "2.36",
@@ -23732,112 +23785,62 @@
         "quant_detail_note": ""
       },
       "stats": {
-        "home": {
-          "name": "克里特",
-          "recent": {
-            "n": 7,
-            "w": 3,
-            "d": 0,
-            "l": 4,
-            "gf": 1.71,
-            "ga": 1.57,
-            "form": [
-              "L",
-              "L",
-              "L",
-              "W",
-              "W"
-            ]
-          },
-          "home": {
-            "n": 7,
-            "w": 3,
-            "d": 0,
-            "l": 4,
-            "gf": 1.71,
-            "ga": 1.57,
-            "form": [
-              "L",
-              "L",
-              "L",
-              "W",
-              "W"
-            ]
-          },
-          "away": {
-            "n": 7,
-            "w": 3,
-            "d": 0,
-            "l": 4,
-            "gf": 1.71,
-            "ga": 1.57,
-            "form": [
-              "L",
-              "L",
-              "L",
-              "W",
-              "W"
-            ]
-          },
-          "total": 7,
-          "last_date": "2026-10-18",
-          "stale_days": 3
-        },
+        "home": null,
         "away": {
           "name": "勒沃库森",
           "recent": {
-            "n": 5,
-            "w": 4,
-            "d": 0,
-            "l": 1,
-            "gf": 2.4,
-            "ga": 0.8,
+            "n": 10,
+            "w": 5,
+            "d": 2,
+            "l": 3,
+            "gf": 2.1,
+            "ga": 1.7,
             "form": [
               "W",
+              "D",
+              "L",
               "W",
-              "W",
-              "W",
-              "L"
+              "W"
             ]
           },
           "home": {
-            "n": 5,
-            "w": 4,
-            "d": 0,
-            "l": 1,
-            "gf": 2.4,
-            "ga": 0.8,
+            "n": 10,
+            "w": 3,
+            "d": 5,
+            "l": 2,
+            "gf": 1.7,
+            "ga": 1.3,
             "form": [
               "W",
+              "D",
               "W",
-              "W",
-              "W",
+              "L",
               "L"
             ]
           },
           "away": {
-            "n": 5,
+            "n": 10,
             "w": 4,
-            "d": 0,
-            "l": 1,
-            "gf": 2.4,
-            "ga": 0.8,
+            "d": 3,
+            "l": 3,
+            "gf": 1.5,
+            "ga": 1.6,
             "form": [
+              "L",
               "W",
               "W",
-              "W",
-              "W",
+              "D",
               "L"
             ]
           },
-          "total": 5,
+          "total": 435,
           "last_date": "2026-10-18",
-          "stale_days": 3
+          "stale_days": 5
         },
         "h2h": null,
-        "source": "500网即时战绩直连"
+        "source": "本地竞彩历史库"
       },
-      "stats_ts": "2026-10-21 16:59:50",
+      "stats_ts": "2026-10-21 11:06:45",
       "predicted_goals": [
         "2",
         "3"
@@ -23854,13 +23857,15 @@
       "status": "未开赛",
       "form_home": [
         "W",
+        "D",
         "W",
         "L",
-        "W",
-        "L"
+        "D"
       ],
       "form_away": [
+        "D",
         "W",
+        "L",
         "W",
         "W"
       ],
@@ -23960,103 +23965,109 @@
         "home": {
           "name": "伯恩茅斯",
           "recent": {
-            "n": 5,
-            "w": 3,
-            "d": 0,
-            "l": 2,
-            "gf": 2.2,
-            "ga": 1.4,
+            "n": 10,
+            "w": 5,
+            "d": 5,
+            "l": 0,
+            "gf": 1.6,
+            "ga": 0.8,
             "form": [
               "W",
+              "D",
+              "D",
               "W",
-              "L",
-              "W",
-              "L"
+              "W"
             ]
           },
           "home": {
-            "n": 5,
-            "w": 3,
-            "d": 0,
-            "l": 2,
-            "gf": 2.2,
-            "ga": 1.4,
+            "n": 10,
+            "w": 4,
+            "d": 6,
+            "l": 0,
+            "gf": 1.8,
+            "ga": 1.1,
             "form": [
               "W",
+              "D",
               "W",
-              "L",
-              "W",
-              "L"
+              "D",
+              "D"
             ]
           },
           "away": {
-            "n": 5,
-            "w": 3,
-            "d": 0,
-            "l": 2,
-            "gf": 2.2,
-            "ga": 1.4,
+            "n": 10,
+            "w": 5,
+            "d": 4,
+            "l": 1,
+            "gf": 1.5,
+            "ga": 1.2,
             "form": [
+              "D",
               "W",
               "W",
-              "L",
               "W",
-              "L"
+              "D"
             ]
           },
-          "total": 5,
+          "total": 413,
           "last_date": "2026-10-18",
-          "stale_days": 3
+          "stale_days": 5
         },
         "away": {
           "name": "AC米兰",
           "recent": {
-            "n": 3,
-            "w": 3,
-            "d": 0,
-            "l": 0,
-            "gf": 2.67,
-            "ga": 0.67,
+            "n": 10,
+            "w": 4,
+            "d": 1,
+            "l": 5,
+            "gf": 1.2,
+            "ga": 1.6,
             "form": [
               "W",
+              "L",
               "W",
-              "W"
+              "L",
+              "L"
             ]
           },
           "home": {
-            "n": 3,
-            "w": 3,
-            "d": 0,
-            "l": 0,
-            "gf": 2.67,
-            "ga": 0.67,
+            "n": 10,
+            "w": 5,
+            "d": 2,
+            "l": 3,
+            "gf": 1.5,
+            "ga": 1.3,
             "form": [
               "W",
-              "W",
-              "W"
+              "L",
+              "L",
+              "D",
+              "L"
             ]
           },
           "away": {
-            "n": 3,
-            "w": 3,
-            "d": 0,
-            "l": 0,
-            "gf": 2.67,
-            "ga": 0.67,
+            "n": 10,
+            "w": 6,
+            "d": 1,
+            "l": 3,
+            "gf": 1.4,
+            "ga": 0.8,
             "form": [
               "W",
+              "L",
               "W",
-              "W"
+              "L",
+              "L"
             ]
           },
-          "total": 3,
+          "total": 493,
           "last_date": "2026-10-19",
-          "stale_days": 2
+          "stale_days": 4
         },
         "h2h": null,
-        "source": "500网即时战绩直连"
+        "source": "本地竞彩历史库"
       },
-      "stats_ts": "2026-10-21 16:59:54"
+      "stats_ts": "2026-10-21 11:06:45"
     },
     {
       "code": "周四007",
@@ -24069,15 +24080,17 @@
       "status": "未开赛",
       "form_home": [
         "W",
+        "D",
+        "W",
         "L",
+        "D"
+      ],
+      "form_away": [
+        "D",
+        "W",
         "L",
         "W",
         "W"
-      ],
-      "form_away": [
-        "W",
-        "W",
-        "L"
       ],
       "odds": [
         "2.48",
@@ -24176,103 +24189,109 @@
         "home": {
           "name": "凯尔特人",
           "recent": {
-            "n": 5,
-            "w": 3,
-            "d": 0,
+            "n": 10,
+            "w": 4,
+            "d": 4,
             "l": 2,
-            "gf": 2.6,
-            "ga": 1.8,
+            "gf": 1.4,
+            "ga": 1.7,
             "form": [
               "W",
-              "L",
-              "L",
               "W",
+              "D",
+              "L",
               "W"
             ]
           },
           "home": {
-            "n": 5,
-            "w": 3,
-            "d": 0,
-            "l": 2,
-            "gf": 2.6,
-            "ga": 1.8,
+            "n": 10,
+            "w": 4,
+            "d": 2,
+            "l": 4,
+            "gf": 1.5,
+            "ga": 1.9,
             "form": [
               "W",
               "L",
-              "L",
+              "D",
               "W",
-              "W"
+              "D"
             ]
           },
           "away": {
-            "n": 5,
+            "n": 10,
             "w": 3,
-            "d": 0,
-            "l": 2,
-            "gf": 2.6,
-            "ga": 1.8,
+            "d": 3,
+            "l": 4,
+            "gf": 1.2,
+            "ga": 2.1,
             "form": [
               "W",
-              "L",
-              "L",
+              "D",
               "W",
-              "W"
+              "D",
+              "D"
             ]
           },
-          "total": 5,
-          "last_date": "2026-10-18",
-          "stale_days": 3
+          "total": 233,
+          "last_date": "2026-02-26",
+          "stale_days": 239
         },
         "away": {
           "name": "塞尔塔",
           "recent": {
-            "n": 3,
-            "w": 2,
-            "d": 0,
-            "l": 1,
-            "gf": 2.33,
-            "ga": 0.67,
+            "n": 10,
+            "w": 5,
+            "d": 2,
+            "l": 3,
+            "gf": 1.6,
+            "ga": 1.3,
             "form": [
               "W",
-              "W",
-              "L"
+              "D",
+              "D",
+              "L",
+              "W"
             ]
           },
           "home": {
-            "n": 3,
-            "w": 2,
-            "d": 0,
-            "l": 1,
-            "gf": 2.33,
-            "ga": 0.67,
+            "n": 10,
+            "w": 6,
+            "d": 2,
+            "l": 2,
+            "gf": 1.7,
+            "ga": 1.0,
             "form": [
               "W",
-              "W",
-              "L"
+              "D",
+              "L",
+              "L",
+              "W"
             ]
           },
           "away": {
-            "n": 3,
+            "n": 10,
             "w": 2,
-            "d": 0,
-            "l": 1,
-            "gf": 2.33,
-            "ga": 0.67,
+            "d": 2,
+            "l": 6,
+            "gf": 1.5,
+            "ga": 2.1,
             "form": [
+              "D",
               "W",
               "W",
+              "L",
               "L"
             ]
           },
-          "total": 3,
+          "total": 345,
           "last_date": "2026-10-18",
-          "stale_days": 3
+          "stale_days": 5
         },
         "h2h": null,
-        "source": "500网即时战绩直连"
+        "source": "本地竞彩历史库"
       },
-      "stats_ts": "2026-10-21 16:59:59",
+      "stats_ts": "2026-10-21 11:06:45",
       "predicted_goals": [
         "2",
         "3"
@@ -24288,16 +24307,16 @@
       "away_rank": "-",
       "status": "未开赛",
       "form_home": [
-        "L",
+        "W",
+        "D",
         "W",
         "L",
-        "W",
-        "W"
+        "D"
       ],
       "form_away": [
-        "L",
-        "L",
+        "D",
         "W",
+        "L",
         "W",
         "W"
       ],
@@ -24396,109 +24415,109 @@
         "home": {
           "name": "贝西克塔",
           "recent": {
-            "n": 8,
-            "w": 4,
-            "d": 0,
-            "l": 4,
-            "gf": 2.12,
-            "ga": 1.38,
+            "n": 10,
+            "w": 1,
+            "d": 1,
+            "l": 8,
+            "gf": 1.1,
+            "ga": 3.1,
             "form": [
               "L",
-              "W",
               "L",
-              "W",
-              "W"
+              "D",
+              "L",
+              "L"
             ]
           },
           "home": {
-            "n": 8,
-            "w": 4,
-            "d": 0,
-            "l": 4,
-            "gf": 2.12,
-            "ga": 1.38,
+            "n": 10,
+            "w": 3,
+            "d": 2,
+            "l": 5,
+            "gf": 1.4,
+            "ga": 1.9,
             "form": [
               "L",
               "W",
               "L",
-              "W",
-              "W"
+              "L",
+              "L"
             ]
           },
           "away": {
-            "n": 8,
-            "w": 4,
-            "d": 0,
-            "l": 4,
-            "gf": 2.12,
-            "ga": 1.38,
+            "n": 10,
+            "w": 1,
+            "d": 2,
+            "l": 7,
+            "gf": 1.2,
+            "ga": 2.8,
             "form": [
               "L",
-              "W",
               "L",
-              "W",
-              "W"
+              "D",
+              "L",
+              "L"
             ]
           },
-          "total": 8,
-          "last_date": "2026-10-20",
-          "stale_days": 1
+          "total": 46,
+          "last_date": "2024-12-13",
+          "stale_days": 679
         },
         "away": {
           "name": "水晶宫",
           "recent": {
-            "n": 5,
+            "n": 10,
             "w": 3,
-            "d": 0,
-            "l": 2,
-            "gf": 2.4,
-            "ga": 1.8,
+            "d": 3,
+            "l": 4,
+            "gf": 1.3,
+            "ga": 1.5,
             "form": [
-              "L",
-              "L",
               "W",
-              "W",
-              "W"
+              "L",
+              "D",
+              "D",
+              "L"
             ]
           },
           "home": {
-            "n": 5,
+            "n": 10,
             "w": 3,
-            "d": 0,
-            "l": 2,
-            "gf": 2.4,
-            "ga": 1.8,
+            "d": 4,
+            "l": 3,
+            "gf": 1.2,
+            "ga": 1.1,
             "form": [
-              "L",
-              "L",
               "W",
-              "W",
+              "L",
+              "D",
+              "D",
               "W"
             ]
           },
           "away": {
-            "n": 5,
-            "w": 3,
-            "d": 0,
-            "l": 2,
-            "gf": 2.4,
-            "ga": 1.8,
+            "n": 10,
+            "w": 1,
+            "d": 3,
+            "l": 6,
+            "gf": 1.1,
+            "ga": 1.9,
             "form": [
+              "D",
               "L",
               "L",
-              "W",
-              "W",
-              "W"
+              "L",
+              "D"
             ]
           },
-          "total": 5,
-          "last_date": "2026-10-18",
-          "stale_days": 3
+          "total": 415,
+          "last_date": "2026-05-27",
+          "stale_days": 149
         },
         "h2h": null,
-        "source": "500网即时战绩直连"
+        "source": "本地竞彩历史库"
       },
-      "stats_ts": "2026-10-21 17:00:03"
+      "stats_ts": "2026-10-21 11:06:45"
     },
     {
       "code": "周四009",
@@ -24510,13 +24529,14 @@
       "away_rank": "-",
       "status": "未开赛",
       "form_home": [
-        "L",
-        "L",
         "W",
-        "L"
+        "D",
+        "W",
+        "L",
+        "D"
       ],
       "form_away": [
-        "W",
+        "D",
         "W",
         "L",
         "W",
@@ -24617,101 +24637,104 @@
         "home": {
           "name": "霍芬海姆",
           "recent": {
-            "n": 4,
-            "w": 1,
-            "d": 0,
+            "n": 10,
+            "w": 4,
+            "d": 3,
             "l": 3,
-            "gf": 1.25,
-            "ga": 2.25,
+            "gf": 1.4,
+            "ga": 2.0,
             "form": [
-              "L",
+              "W",
               "L",
               "W",
-              "L"
+              "D",
+              "W"
             ]
           },
           "home": {
-            "n": 4,
-            "w": 1,
-            "d": 0,
-            "l": 3,
-            "gf": 1.25,
-            "ga": 2.25,
+            "n": 10,
+            "w": 6,
+            "d": 2,
+            "l": 2,
+            "gf": 2.1,
+            "ga": 1.1,
             "form": [
-              "L",
-              "L",
               "W",
-              "L"
+              "D",
+              "W",
+              "L",
+              "D"
             ]
           },
           "away": {
-            "n": 4,
-            "w": 1,
-            "d": 0,
+            "n": 10,
+            "w": 5,
+            "d": 2,
             "l": 3,
-            "gf": 1.25,
-            "ga": 2.25,
+            "gf": 1.6,
+            "ga": 2.1,
             "form": [
-              "L",
+              "W",
               "L",
               "W",
+              "D",
               "L"
             ]
           },
-          "total": 4,
-          "last_date": "2026-09-21",
-          "stale_days": 30
+          "total": 327,
+          "last_date": "2026-10-18",
+          "stale_days": 5
         },
         "away": {
           "name": "里昂",
           "recent": {
-            "n": 5,
-            "w": 4,
-            "d": 0,
-            "l": 1,
-            "gf": 2.6,
-            "ga": 1.2,
+            "n": 10,
+            "w": 3,
+            "d": 5,
+            "l": 2,
+            "gf": 1.2,
+            "ga": 1.4,
             "form": [
-              "W",
               "W",
               "L",
               "W",
-              "W"
+              "W",
+              "D"
             ]
           },
           "home": {
-            "n": 5,
-            "w": 4,
-            "d": 0,
-            "l": 1,
-            "gf": 2.6,
-            "ga": 1.2,
+            "n": 10,
+            "w": 6,
+            "d": 2,
+            "l": 2,
+            "gf": 1.7,
+            "ga": 1.5,
             "form": [
-              "W",
               "W",
               "L",
               "W",
-              "W"
+              "L",
+              "D"
             ]
           },
           "away": {
-            "n": 5,
-            "w": 4,
-            "d": 0,
+            "n": 10,
+            "w": 6,
+            "d": 3,
             "l": 1,
-            "gf": 2.6,
-            "ga": 1.2,
+            "gf": 1.7,
+            "ga": 0.9,
             "form": [
               "W",
-              "W",
-              "L",
-              "W",
-              "W"
+              "D",
+              "D",
+              "D",
+              "L"
             ]
           },
-          "total": 5,
+          "total": 406,
           "last_date": "2026-10-19",
-          "stale_days": 2
+          "stale_days": 4
         },
         "h2h": {
           "n": 3,
@@ -24738,9 +24761,9 @@
             }
           ]
         },
-        "source": "500网即时战绩直连"
+        "source": "本地竞彩历史库"
       },
-      "stats_ts": "2026-10-21 17:00:08"
+      "stats_ts": "2026-10-21 11:06:45"
     },
     {
       "code": "周四010",
@@ -24752,17 +24775,23 @@
       "away_rank": "-",
       "status": "未开赛",
       "form_home": [
+        "W",
+        "D",
+        "W",
         "L",
-        "W"
+        "D"
       ],
       "form_away": [
+        "D",
+        "W",
+        "L",
         "W",
         "W"
       ],
       "odds": [
-        "4.95",
-        "4.20",
-        "1.45"
+        "5.20",
+        "4.30",
+        "1.42"
       ],
       "is_only_rq": false,
       "rang": "1",
@@ -24771,8 +24800,8 @@
         "3.65",
         "3.40"
       ],
-      "consensus": "客胜 (70.2%)",
-      "consensus_ratio": 70.2,
+      "consensus": "客胜 (71.7%)",
+      "consensus_ratio": 71.7,
       "consensus_breakdown": {
         "odds_score": 77.0,
         "intel_score": 74.0,
@@ -24830,116 +24859,135 @@
         "note": "赛前冻结，含赔率与生成方式哈希"
       },
       "quant_factors": {
-        "samples": 207,
-        "win_rate": 14.0,
-        "draw_rate": 19.8,
-        "loss_rate": 66.2,
-        "ev_home": -0.307,
-        "ev_draw": -0.168,
-        "ev_away": -0.04,
-        "lambda_h": 1.1,
-        "lambda_a": 2.29,
+        "samples": 179,
+        "win_rate": 19.6,
+        "draw_rate": 21.2,
+        "loss_rate": 59.2,
+        "ev_home": 0.017,
+        "ev_draw": -0.087,
+        "ev_away": -0.159,
+        "lambda_h": 1.0,
+        "lambda_a": 1.96,
         "golden_scores": [
-          "1-2",
           "0-1",
-          "1-1"
+          "0-2",
+          "1-2"
         ],
         "trap_level": "NORMAL",
         "trap_warning": "盘面处于正常期望区间",
         "stars": "★★☆☆☆",
         "tier_title": "深水博冷区间",
-        "smart_pick": "首选客不败 / 让负",
-        "smart_type": "UPSET"
+        "smart_pick": "客胜/防平",
+        "smart_type": "DOUBLE",
+        "quant_detail_note": ""
       },
       "stats": {
         "home": {
           "name": "利勒斯特",
           "recent": {
-            "n": 2,
-            "w": 1,
-            "d": 0,
-            "l": 1,
-            "gf": 1.0,
-            "ga": 1.5,
+            "n": 10,
+            "w": 3,
+            "d": 1,
+            "l": 6,
+            "gf": 1.5,
+            "ga": 1.8,
             "form": [
+              "W",
               "L",
-              "W"
+              "L",
+              "L",
+              "L"
             ]
           },
           "home": {
-            "n": 2,
-            "w": 1,
-            "d": 0,
-            "l": 1,
-            "gf": 1.0,
-            "ga": 1.5,
+            "n": 10,
+            "w": 6,
+            "d": 2,
+            "l": 2,
+            "gf": 2.6,
+            "ga": 1.4,
             "form": [
+              "W",
               "L",
+              "L",
+              "D",
               "W"
             ]
           },
           "away": {
-            "n": 2,
-            "w": 1,
-            "d": 0,
-            "l": 1,
-            "gf": 1.0,
-            "ga": 1.5,
+            "n": 10,
+            "w": 3,
+            "d": 1,
+            "l": 6,
+            "gf": 1.2,
+            "ga": 1.8,
             "form": [
+              "L",
+              "L",
+              "L",
               "L",
               "W"
             ]
           },
-          "total": 2,
-          "last_date": "2026-09-20",
-          "stale_days": 31
+          "total": 226,
+          "last_date": "2024-10-28",
+          "stale_days": 725
         },
         "away": {
           "name": "皇家社会",
           "recent": {
-            "n": 2,
-            "w": 2,
-            "d": 0,
-            "l": 0,
-            "gf": 2.5,
-            "ga": 1.5,
+            "n": 10,
+            "w": 1,
+            "d": 6,
+            "l": 3,
+            "gf": 2.0,
+            "ga": 2.0,
             "form": [
               "W",
-              "W"
+              "D",
+              "L",
+              "D",
+              "D"
             ]
           },
           "home": {
-            "n": 2,
-            "w": 2,
-            "d": 0,
-            "l": 0,
-            "gf": 2.5,
-            "ga": 1.5,
+            "n": 10,
+            "w": 6,
+            "d": 2,
+            "l": 2,
+            "gf": 2.2,
+            "ga": 1.4,
             "form": [
-              "W",
+              "L",
+              "D",
+              "L",
+              "D",
               "W"
             ]
           },
           "away": {
-            "n": 2,
-            "w": 2,
-            "d": 0,
-            "l": 0,
-            "gf": 2.5,
-            "ga": 1.5,
+            "n": 10,
+            "w": 3,
+            "d": 4,
+            "l": 3,
+            "gf": 1.7,
+            "ga": 1.6,
             "form": [
               "W",
-              "W"
+              "D",
+              "D",
+              "L",
+              "D"
             ]
           },
-          "total": 2,
-          "last_date": "2026-10-11",
-          "stale_days": 10
+          "total": 414,
+          "last_date": "2026-10-19",
+          "stale_days": 4
         },
         "h2h": null,
-        "source": "500网即时战绩直连"
+        "source": "本地竞彩历史库"
       },
-      "stats_ts": "2026-10-21 17:00:12"
+      "stats_ts": "2026-10-21 11:06:45"
     },
     {
       "code": "周四013",
@@ -24952,15 +25000,17 @@
       "status": "未开赛",
       "form_home": [
         "W",
+        "D",
         "W",
-        "W",
-        "W"
+        "L",
+        "D"
       ],
       "form_away": [
+        "D",
+        "W",
         "L",
-        "L",
-        "L",
-        "L"
+        "W",
+        "W"
       ],
       "odds": [
         "1.26",
@@ -25058,103 +25108,109 @@
         "home": {
           "name": "弗拉门戈",
           "recent": {
-            "n": 4,
-            "w": 4,
-            "d": 0,
-            "l": 0,
-            "gf": 1.75,
-            "ga": 0.5,
+            "n": 10,
+            "w": 5,
+            "d": 3,
+            "l": 2,
+            "gf": 1.8,
+            "ga": 1.2,
             "form": [
               "W",
+              "D",
               "W",
               "W",
-              "W"
+              "D"
             ]
           },
           "home": {
-            "n": 4,
-            "w": 4,
+            "n": 10,
+            "w": 8,
             "d": 0,
-            "l": 0,
-            "gf": 1.75,
-            "ga": 0.5,
+            "l": 2,
+            "gf": 1.8,
+            "ga": 0.9,
             "form": [
               "W",
               "W",
+              "L",
               "W",
               "W"
             ]
           },
           "away": {
-            "n": 4,
-            "w": 4,
-            "d": 0,
-            "l": 0,
-            "gf": 1.75,
-            "ga": 0.5,
+            "n": 10,
+            "w": 2,
+            "d": 4,
+            "l": 4,
+            "gf": 1.0,
+            "ga": 1.2,
             "form": [
+              "D",
               "W",
+              "D",
               "W",
-              "W",
-              "W"
+              "L"
             ]
           },
-          "total": 4,
-          "last_date": "2026-10-12",
-          "stale_days": 9
+          "total": 377,
+          "last_date": "2026-05-20",
+          "stale_days": 156
         },
         "away": {
           "name": "拉普大学",
           "recent": {
-            "n": 4,
-            "w": 0,
-            "d": 0,
-            "l": 4,
-            "gf": 0.5,
-            "ga": 2.0,
+            "n": 10,
+            "w": 4,
+            "d": 3,
+            "l": 3,
+            "gf": 1.0,
+            "ga": 0.9,
             "form": [
+              "D",
               "L",
-              "L",
-              "L",
-              "L"
+              "D",
+              "W",
+              "D"
             ]
           },
           "home": {
-            "n": 4,
-            "w": 0,
-            "d": 0,
-            "l": 4,
-            "gf": 0.5,
-            "ga": 2.0,
+            "n": 10,
+            "w": 5,
+            "d": 2,
+            "l": 3,
+            "gf": 1.2,
+            "ga": 0.8,
             "form": [
               "L",
-              "L",
-              "L",
+              "W",
+              "W",
+              "W",
               "L"
             ]
           },
           "away": {
-            "n": 4,
-            "w": 0,
-            "d": 0,
-            "l": 4,
-            "gf": 0.5,
-            "ga": 2.0,
+            "n": 10,
+            "w": 2,
+            "d": 5,
+            "l": 3,
+            "gf": 0.8,
+            "ga": 1.1,
             "form": [
+              "D",
+              "D",
+              "D",
               "L",
-              "L",
-              "L",
-              "L"
+              "W"
             ]
           },
-          "total": 4,
-          "last_date": "2026-10-06",
-          "stale_days": 15
+          "total": 175,
+          "last_date": "2024-06-09",
+          "stale_days": 866
         },
         "h2h": null,
-        "source": "500网即时战绩直连"
+        "source": "本地竞彩历史库"
       },
-      "stats_ts": "2026-10-21 17:00:16"
+      "stats_ts": "2026-10-21 11:06:45"
     }
   ]
 }
