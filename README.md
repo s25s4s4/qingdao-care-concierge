@@ -101,12 +101,23 @@ images/logo.jpg         唯一在用的图片
 
 ## 五、跑起来
 
-计划任务（每 1 分钟）：
+计划任务：
+
+| 任务名 | 频率 | 跑什么 |
+|---|---|---|
+| `FootballLiveAuditor` | 每 1 分钟 | `sync_live_matches.py`（主流水线） |
+| `SfcFixtureSync` | 每 30 分钟 | `sync_sfc_fixtures.py`（传足换期，出赔率后补选号） |
+| `TelegramFootballMonitor` | 每 5 分钟 | 另一个仓库的 `monitor_engine.py` |
 
 ```
 FootballLiveAuditor
   C:\Users\Administrator\.hermes\hermes-agent\venv\Scripts\pythonw.exe E:\euro_intel_web\sync_live_matches.py
+
+SfcFixtureSync
+  C:\Users\Administrator\.hermes\hermes-agent\venv\Scripts\pythonw.exe E:\euro_intel_web\sync_sfc_fixtures.py
 ```
+
+传足的日志在 `sfc_sync.log`（pythonw 没有控制台，所以落文件）。
 
 手动跑一次（会写文件、提交、推送）：
 
