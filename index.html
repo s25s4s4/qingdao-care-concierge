@@ -3304,7 +3304,7 @@
                         </div>
                         <div style="display: flex; justify-content: space-between;">
                             <span style="color: var(--text-secondary);">🎯 泊松聚类黄金比分:</span>
-                            <span style="color: #38bdf8; font-family: var(--font-mono); font-weight: 800;">${match.quant_factors.golden_scores.join(' / ')}</span>
+                            <span style="color: #38bdf8; font-family: var(--font-mono); font-weight: 800;">${(match.predicted_scores || match.quant_factors.golden_scores).join(' / ')}</span>
                         </div>
                     </div>
 
