@@ -413,7 +413,7 @@
       "away": "曼联",
       "away_rank": "",
       "fid": "1479932",
-      "status": "PENDING",
+      "status": "已完赛",
       "matched_id": null,
       "odds": [
         "2.15",
@@ -428,8 +428,8 @@
         "market_attitude": "官方开出主胜2.15、平局3.45、客胜2.67，数学去水后主胜概率达41.2%居绝对主导，客胜被压制在33.2%。欧洲亚盘普遍开出主让平半低水，机构未因曼联豪门声望而示弱，反而持续压低主胜赔付以严密防范主队打出，平赔高顶分流意图清晰。",
         "decision_guide": "实战投注首选【主不败/首选主胜】，单选博单直接走【主胜】；进球数重点锁定在2、3球防1球；比分构建黄金三角组合：核心正路选择【2-1】，零封保守防范【1-0】，互攻防爆平局严密覆盖【1-1】，实现胜平负与比分矩阵全方位精准兜底。"
       },
-      "live_status": "PRE",
-      "score": "--",
+      "live_status": "FIN",
+      "score": "4-1",
       "pick_primary": "3",
       "pick_secondary": null,
       "pick_desc": "首选主胜(3)·次选平局(1)",
@@ -455,7 +455,10 @@
         "tier_title": "深水博冷区间",
         "smart_pick": "胜平双选 (3/1)",
         "smart_type": "DOUBLE"
-      }
+      },
+      "outcome": "3",
+      "result": "HIT_PRIMARY",
+      "result_text": "首选命中"
     },
     {
       "no": 9,
@@ -467,7 +470,7 @@
       "away": "加拉塔",
       "away_rank": "",
       "fid": "1480004",
-      "status": "PENDING",
+      "status": "已完赛",
       "matched_id": null,
       "odds": [
         "1.90",
@@ -482,8 +485,8 @@
         "market_attitude": "本场初赔给出1.9 / 3.5 / 3.15的胶着组合，平局SP处于3.10~3.45敏感安全带，欧洲机构分歧度较大。多方模型去水后显示两队胜率极为接近，机构通过微调水位平衡双边筹码，平局与冷门防范系数显著抬升。",
         "decision_guide": "【赛前综合研判】：结合基本面梯度、更衣室军情与机构防范态度，本场首选【主不败/首选主胜】。实战比分区间重点防范：【2-1、1-1、2-0】，建议结合让球防平双选求稳。"
       },
-      "live_status": "PRE",
-      "score": "--",
+      "live_status": "FIN",
+      "score": "2-4",
       "pick_primary": "3",
       "pick_secondary": null,
       "pick_desc": "首选主胜(3)·次选平局(1)",
@@ -509,7 +512,10 @@
         "tier_title": "深水博冷区间",
         "smart_pick": "胜平双选 (3/1)",
         "smart_type": "DOUBLE"
-      }
+      },
+      "outcome": "0",
+      "result": "MISS",
+      "result_text": "未中"
     },
     {
       "no": 10,
@@ -521,7 +527,7 @@
       "away": "维京",
       "away_rank": "",
       "fid": "1479884",
-      "status": "PENDING",
+      "status": "已完赛",
       "matched_id": null,
       "odds": [
         "1.15",
@@ -536,8 +542,8 @@
         "market_attitude": "体彩官方主胜给在1.15较低区间，欧洲主流机构早盘普遍将主胜赔率压制在防范水位，去水后机构模型测算主队胜率高达65%~70%。机构在让球盘面上给予主队坚实门槛，阻上意图明显，整体盘面态度高度向主队倾斜。",
         "decision_guide": "【赛前综合研判】：结合基本面梯度、更衣室军情与机构防范态度，本场首选【主胜】。实战比分区间重点防范：【3-0、4-0、3-1】，建议结合让球防平双选求稳。"
       },
-      "live_status": "PRE",
-      "score": "--",
+      "live_status": "FIN",
+      "score": "3-1",
       "pick_primary": "3",
       "pick_secondary": null,
       "pick_desc": "单选主胜(3)",
@@ -563,7 +569,10 @@
         "tier_title": "正路核心死胆",
         "smart_pick": "单选主胜 (3)",
         "smart_type": "SINGLE"
-      }
+      },
+      "outcome": "3",
+      "result": "HIT_PRIMARY",
+      "result_text": "首选命中"
     },
     {
       "no": 11,
@@ -575,7 +584,7 @@
       "away": "阿森纳",
       "away_rank": "",
       "fid": "1479902",
-      "status": "PENDING",
+      "status": "已完赛",
       "matched_id": null,
       "odds": [
         "1.89",
@@ -590,8 +599,8 @@
         "market_attitude": "本场初赔给出1.89 / 3.55 / 3.14的胶着组合，平局SP处于3.10~3.45敏感安全带，欧洲机构分歧度较大。多方模型去水后显示两队胜率极为接近，机构通过微调水位平衡双边筹码，平局与冷门防范系数显著抬升。",
         "decision_guide": "【赛前综合研判】：结合基本面梯度、更衣室军情与机构防范态度，本场首选【主不败/首选主胜】。实战比分区间重点防范：【2-1、1-1、2-0】，建议结合让球防平双选求稳。"
       },
-      "live_status": "PRE",
-      "score": "--",
+      "live_status": "FIN",
+      "score": "2-2",
       "pick_primary": "3",
       "pick_secondary": null,
       "pick_desc": "首选主胜(3)·次选平局(1)",
@@ -617,7 +626,10 @@
         "tier_title": "深水博冷区间",
         "smart_pick": "胜平双选 (3/1)",
         "smart_type": "DOUBLE"
-      }
+      },
+      "outcome": "1",
+      "result": "MISS",
+      "result_text": "未中"
     },
     {
       "no": 12,
@@ -629,7 +641,7 @@
       "away": "朗斯",
       "away_rank": "",
       "fid": "1479929",
-      "status": "PENDING",
+      "status": "已完赛",
       "matched_id": null,
       "odds": [
         "1.90",
@@ -644,8 +656,8 @@
         "market_attitude": "官方初赔给到主胜1.9、平局3.7、客胜3.0，去水后主胜真实概率达46.6%，机构对布鲁日主场让半球规格保持低水受注，高企平赔3.7有效实施两头分流，阻上意图明显且防范主胜正路打出。",
         "decision_guide": "实战出票首选单选【主胜】，求稳双选【胜+平】完美覆盖冷门；进球数锁定2、3球中低位带；比分黄金三角策略直击正路【2-1】、零封防守【1-0】以及客队偷袭逼平的【1-1】。"
       },
-      "live_status": "PRE",
-      "score": "--",
+      "live_status": "FIN",
+      "score": "3-0",
       "pick_primary": "3",
       "pick_secondary": "1",
       "pick_desc": "首选主胜(3)·次选平局(1)",
@@ -671,7 +683,10 @@
         "tier_title": "深水博冷区间",
         "smart_pick": "首选主胜(3) / 次选防平(1)",
         "smart_type": "DOUBLE"
-      }
+      },
+      "outcome": "3",
+      "result": "HIT_PRIMARY",
+      "result_text": "首选命中"
     },
     {
       "no": 13,
@@ -683,7 +698,7 @@
       "away": "费耶诺",
       "away_rank": "",
       "fid": "1479912",
-      "status": "PENDING",
+      "status": "已完赛",
       "matched_id": null,
       "odds": [
         "1.43",
@@ -698,8 +713,8 @@
         "market_attitude": "体彩官方主胜给在1.43较低区间，欧洲主流机构早盘普遍将主胜赔率压制在防范水位，去水后机构模型测算主队胜率高达65%~70%。机构在让球盘面上给予主队坚实门槛，阻上意图明显，整体盘面态度高度向主队倾斜。",
         "decision_guide": "【赛前综合研判】：结合基本面梯度、更衣室军情与机构防范态度，本场首选【主胜】。实战比分区间重点防范：【2-0、2-1、3-1】，建议结合让球防平双选求稳。"
       },
-      "live_status": "PRE",
-      "score": "--",
+      "live_status": "FIN",
+      "score": "1-0",
       "pick_primary": "3",
       "pick_secondary": "1",
       "pick_desc": "单选主胜(3)",
@@ -725,7 +740,10 @@
         "tier_title": "高确定性稳胆",
         "smart_pick": "首选主胜(3) / 次选防平(1)",
         "smart_type": "DOUBLE"
-      }
+      },
+      "outcome": "3",
+      "result": "HIT_PRIMARY",
+      "result_text": "首选命中"
     },
     {
       "no": 14,
@@ -737,7 +755,7 @@
       "away": "莱比锡红牛",
       "away_rank": "",
       "fid": "1480064",
-      "status": "PENDING",
+      "status": "已完赛",
       "matched_id": null,
       "odds": [
         "1.16",
@@ -752,8 +770,8 @@
         "market_attitude": "三、欧洲37家机构盘口与去水态度详细解析：官方SP开出主胜1.16、平局6.50、客胜8.80的悬殊初指，去水真实主胜概率高达76.3%，机构抽水13.0%仍极度防范主胜赔付，平负高企毫无分流防备。海外推单主胜倾向达33票呈现压倒性共振，盘口坚实体现了对主队全取三分的绝对信任。",
         "decision_guide": "四、小杨店主研判与选择指引详细解析：彩民出票直接将【主胜】作为稳胆基石，单挑求稳稳稳过关。进球数严防2、3球黄金区间。比分实战组合搭建严密黄金三角：【2-0】（核心正路零封）、【2-1】（客队偷袭破门互攻防爆）、【3-0】（主队火力全开穿盘），兼顾稳健与防冷容错。"
       },
-      "live_status": "PRE",
-      "score": "--",
+      "live_status": "FIN",
+      "score": "4-1",
       "pick_primary": "3",
       "pick_secondary": null,
       "pick_desc": "单选主胜(3)",
@@ -779,7 +797,10 @@
         "tier_title": "正路核心死胆",
         "smart_pick": "单选主胜 (3)",
         "smart_type": "SINGLE"
-      }
+      },
+      "outcome": "3",
+      "result": "HIT_PRIMARY",
+      "result_text": "首选命中"
     }
   ],
   "picks_ready": true

@@ -139,34 +139,42 @@ def build(period, matches, existing):
 
 
 def update_scores():
-    """从 live.500.com 完场页按 **fid** 精确取比分。
+    """从 live.500.com 首页按 **fid** 精确取比分。
 
-    为什么不用服务器上原来那套：它是拿 `home[:2]` 去 `html.find()`，
-    「利物」先命中的是 **利物浦U19 vs 比利亚雷亚尔U19**（欧青联 0-0），
-    于是把成年队 4-3 覆盖成 0-0。2026-10-22 实测就是这样，7 场全错。
-    改用 500 页面自带的 `gy="赛事,主队,客队"` 与 `fid` 精确对应。
+    两个坑都踩过：
+    1. 服务器上原来那套用 `home[:2]` 去 `html.find()`，「利物」先命中
+       **利物浦U19 vs 比利亚雷亚尔U19**（欧青联 0-0），把成年队 4-3 覆盖成 0-0。
+    2. `wanchang.php`（完场页）**不是实时**：2026-10-22 06:20 抓它，最新只到 10-21 09:30，
+       当天凌晨的 7 场全不在里面，所以命中戳一直打不上。
+
+    现在统一走 `live.500.com/` 首页：每行带 `id="a<fid>" gy="赛事,主队,客队" status="N"`，
+    status 4=完场，1/2/3=进行中，比分在 `class="clt1/clt3"`。
     """
     try:
-        html = _get("https://live.500.com/wanchang.php")
+        html = _get("https://live.500.com/")
     except Exception as e:
-        _log(f"完场页抓取失败: {type(e).__name__}")
+        _log(f"比分页抓取失败: {type(e).__name__}")
         return 0
 
-    # fid -> (主队进球, 客队进球, 是否完场)
+    # 属性顺序不固定（实测是 id → order → status → gy），所以先取开标签再逐个抽
     by_fid = {}
-    for fid, gy in re.findall(r'<tr id="a(\d+)" gy="([^"]*)"', html):
-        st = html.find(f'id="a{fid}"')
-        tr = html[st:html.find("</tr>", st)]
-        pk = re.findall(r'class="clt[13]"\s*>([^<]*)</a>', tr)
+    for m in re.finditer(r"<tr([^>]*)>(.*?)</tr>", html, re.S):
+        attrs, body = m.group(1), m.group(2)
+        f = re.search(r'id="a(\d+)"', attrs)
+        st = re.search(r'status="([^"]*)"', attrs)
+        if not (f and st):
+            continue
+        fid, status = f.group(1), st.group(1)
+        pk = re.findall(r'class="clt[13]"\s*>([^<]*)</a>', body)
         if len(pk) < 2 or not pk[0].strip() or not pk[1].strip():
             continue
         try:
-            by_fid[fid] = (int(pk[0]), int(pk[1]), "完" in tr[:600])
+            by_fid[fid] = (int(pk[0]), int(pk[1]), status)
         except ValueError:
             continue
 
     if not by_fid:
-        _log("完场页没有可用比分")
+        _log("比分页没有可用数据")
         return 0
 
     data = load_existing()
@@ -175,18 +183,24 @@ def update_scores():
 
     changed = 0
     for m in data["matches"]:
-        fid = str(m.get("fid") or "")
-        got = by_fid.get(fid) if fid else None
+        got = by_fid.get(str(m.get("fid") or ""))
         if not got:
             continue
-        hg, ag, fin = got
+        hg, ag, status = got
         score = f"{hg}-{ag}"
-        if m.get("score") == score and (not fin or m.get("status") == "已完赛"):
+        fin = status == "4"
+        if fin:
+            new_status, new_live = "已完赛", "FIN"
+        elif status in ("1", "2", "3"):
+            new_status, new_live = "进行中", "LIVE"
+        else:
+            continue          # 0=未开赛，不覆盖
+        if m.get("score") == score and m.get("status") == new_status:
             continue
         m["score"] = score
+        m["status"] = new_status
+        m["live_status"] = new_live
         if fin:
-            m["status"] = "已完赛"
-            m["live_status"] = "FIN"
             outcome = "3" if hg > ag else ("1" if hg == ag else "0")
             m["outcome"] = outcome
             if outcome == str(m.get("pick_primary") or ""):
@@ -197,8 +211,6 @@ def update_scores():
                 m["result"], m["result_text"] = "HIT_UPSET", "防冷命中"
             else:
                 m["result"], m["result_text"] = "MISS", "未中"
-        else:
-            m["status"] = "进行中"
         changed += 1
 
     if changed:
