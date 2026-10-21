@@ -150,23 +150,23 @@ def same_round(matches, existing):
 def main(force=False):
     period = fetch_current_period()
     if not period:
-        print("拿不到当前期号，放弃")
+        _log("拿不到当前期号，放弃")
         return 1
     html = _get(f"https://trade.500.com/sfc/?expect={period}")
     matches, odds_ready = parse_fixtures(html)
     if len(matches) < 14:
-        print(f"只解析到 {len(matches)} 场（应为 14），放弃")
+        _log(f"只解析到 {len(matches)} 场（应为 14），放弃")
         return 1
 
     existing = load_existing()
     same = same_round(matches, existing)
     if same and not odds_ready and not force:
-        print(f"{period} 期赔率尚未开出，保持现状")
+        _log(f"{period} 期赔率尚未开出，保持现状")
         return 0
     if same and odds_ready and not force:
         # 同期已有完整数据且已算过，不用重算
         if all(m.get("quant_factors") for m in existing.get("matches", [])):
-            print(f"{period} 期已完成，跳过")
+            _log(f"{period} 期已完成，跳过")
             return 0
 
     data = build(period, matches, existing if same else {})
@@ -180,18 +180,18 @@ def main(force=False):
             import quant_engine
             quant_engine.run_pipeline_on_sfc(OUT)
         except Exception as e:
-            print("量化失败:", type(e).__name__, e)
+            _log(f"量化失败: {type(e).__name__} {e}")
 
     with open(OUT, encoding="utf-8") as f:
         final = f.read()
 
     # 内容没变就不推，避免每半小时一次空提交
     if final.strip() == json.dumps(existing, ensure_ascii=False, indent=2).strip():
-        print(f"{period} 期内容无变化，跳过发布")
+        _log(f"{period} 期内容无变化，跳过发布")
         return 0
 
     publish()
-    print(f"{period} 期已更新：{len(matches)} 场，赔率{'就绪' if odds_ready else '未开'}")
+    _log(f"{period} 期已更新：{len(matches)} 场，赔率{'就绪' if odds_ready else '未开'}")
     return 0
 
 
@@ -215,5 +215,20 @@ def publish():
          "aliyun:/var/www/football_live/sfc_matches.json"])
 
 
+def _log(msg):
+    """pythonw 没有控制台，输出落文件方便事后查"""
+    try:
+        with open(os.path.join(HERE, "sfc_sync.log"), "a", encoding="utf-8") as f:
+            f.write(f"[{datetime.now():%Y-%m-%d %H:%M:%S}] {msg}\n")
+    except Exception:
+        pass
+    print(msg)
+
+
 if __name__ == "__main__":
-    sys.exit(main(force="--force" in sys.argv))
+    try:
+        code = main(force="--force" in sys.argv)
+    except Exception as exc:
+        _log(f"异常 {type(exc).__name__}: {exc}")
+        raise SystemExit(1)
+    sys.exit(code)
