@@ -1,7 +1,19 @@
 {
-  "updated_at": "2026-10-22 04:01:33",
+  "updated_at": "2026-10-22 04:21:24",
   "total_tips": 12,
   "live_feed": [
+    {
+      "id": 3721,
+      "channel": "footballbettingtips10",
+      "time": "2026-10-22 02:10",
+      "code": "周三010",
+      "league": "欧冠",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "拜仁 VS 阿森纳",
+      "chinese": "海外游资串关猛砸大球，看好拜仁枪手对轰打穿2.5个进球线。两边进攻火力全开防线都有漏洞，庄家顺势抬高大球水位诱盘，本场奔着3球以上去，进球数走大稳妥。",
+      "original": "🔥 OVER 2.5 GOALS ACCA 🔥 5 games, all Over 2.5 Goals! ⚽️ GET £30 IN FREE BETS WITH MIDNITE! 👉 ⚽️ Como v Man United – Over 2.5 Como beat Leipzig 4-1, United won 4"
+    },
     {
       "id": 3747,
       "channel": "footballbettingtips10",
@@ -61,18 +73,6 @@
       "match": "拜仁 VS 阿森纳",
       "chinese": "欧洲料子硬推大球！拜仁刚轰了莱比锡6个，近18场狂出17场大；枪手最近5战4场大球，火力全开。欧指大2.5低水1.60被资金硬砸，本场防守靠不住，首选3球起步。",
       "original": "⚽️ UEFA Champions League 🇪🇺 ⠀ 🇩🇪 Bayern 🆚 Arsenal 🏴 ⠀ • In the last meeting between the teams, Arsenal won 3-1. • Bayern are coming off a 6-1 win against Leipzi"
-    },
-    {
-      "id": 3668,
-      "channel": "TipstrrTips",
-      "time": "2026-10-22 00:18",
-      "code": "周三010",
-      "league": "欧冠",
-      "category": "推单·已开赛",
-      "is_tip": true,
-      "match": "拜仁 VS 阿森纳",
-      "chinese": "欧洲前线看好对攻局。老牌资金主推拜仁主胜叠加双方进球，认为枪手客场能破门但防不住拜仁主场火力。这场防守都有漏洞，主胜稳当，博高赔盯死“胜+双破门”，进球数3球起步。",
-      "original": "The Champions League is producing goals galore this season, and Super BTS expects both Bayern Munich and Arsenal to find the net before the home side prevails i"
     },
     {
       "id": 3660,
@@ -148,6 +148,18 @@
     }
   ],
   "archived": [
+    {
+      "id": 3668,
+      "channel": "TipstrrTips",
+      "time": "2026-10-22 00:18",
+      "code": "周三010",
+      "league": "欧冠",
+      "category": "推单·已开赛",
+      "is_tip": true,
+      "match": "拜仁 VS 阿森纳",
+      "chinese": "欧洲前线看好对攻局。老牌资金主推拜仁主胜叠加双方进球，认为枪手客场能破门但防不住拜仁主场火力。这场防守都有漏洞，主胜稳当，博高赔盯死“胜+双破门”，进球数3球起步。",
+      "original": "The Champions League is producing goals galore this season, and Super BTS expects both Bayern Munich and Arsenal to find the net before the home side prevails i"
+    },
     {
       "id": 3614,
       "channel": "tribuna_football",
