@@ -750,6 +750,14 @@ def full_pipeline_sync(auto_push=True):
         except Exception as _exc:
             log_messages.append(f"TeamStats skipped: {type(_exc).__name__}")
 
+        # 实时连线 500.com 刷新球队当周最新战绩（彻底消灭400多天旧数据）
+        try:
+            import live_team_form
+            live_team_form.update_all_live_stats(MATCHES_FILE)
+            log_messages.append("LiveTeamForm updated successfully")
+        except Exception as _exc:
+            log_messages.append(f"LiveTeamForm skipped: {type(_exc).__name__}")
+
         # 【核心铁壁守门员】：全自动自洽门控 (Enforce Match Consistency & Zero Conflict)
         # 绝不允许任何新一天的比赛出现“建议让负却给出主胜比分”或“让球盘口与比分打架”！
         for m in existing_matches:
