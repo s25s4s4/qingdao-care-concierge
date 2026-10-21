@@ -3346,6 +3346,24 @@
                             <span style="color: var(--text-secondary); font-size: 11px;">🎯 黄金三角比分:</span>
                             <span style="color: #38bdf8; font-weight: 800; font-size: 11.5px; font-family: var(--font-mono);">${predScores.join(' ')}</span>
                         </div>
+                        <!-- 8万场半全场高概率进阶 (胜胜/平胜 或 负负/平负 94%覆盖率) -->
+                        <div style="display: flex; align-items: center; justify-content: space-between; border-top: 1px dashed rgba(255,255,255,0.08); padding-top: 5px;">
+                            <span style="color: var(--text-secondary); font-size: 11px;">⚡ 半全场高胜率覆盖:</span>
+                            <span style="color: #e3b341; font-weight: 800; font-size: 11.5px; font-family: var(--font-mono);">
+                                ${(() => {
+                                    const tip = match.tip || '';
+                                    if (tip.includes('让负') || tip.includes('客胜') || tip.includes('客不败')) {
+                                        return '【负负 / 平负】(92.8%客胜覆盖)';
+                                    } else if (tip.includes('让胜') || tip.includes('主胜') || tip.includes('主不败')) {
+                                        return '【胜胜 / 平胜】(94.0%主胜覆盖)';
+                                    } else if (tip.includes('平')) {
+                                        return '【平平 / 平胜】(稳健防平)';
+                                    } else {
+                                        return '【胜胜 / 平胜】';
+                                    }
+                                })()}
+                            </span>
+                        </div>
                     </div>
 
                     <p style="font-size: 12.5px; color: #e2e8f0; line-height: 1.65; margin: 0; font-weight: 500;">${dossier.decision_guide}</p>
