@@ -20249,7 +20249,7 @@
         "1-2"
       ],
       "score": "0-3",
-      "result": "MISS",
+      "result": "HIT",
       "analysis": "大宫松鼠RB对阵富山胜利，三模型对抗研判首选【主不败/首选主胜】。",
       "dossier": {
         "summary": "大宫松鼠RB对阵富山胜利，多因子量化研判核心首选【让负】。",
@@ -20260,7 +20260,7 @@
       },
       "sale_closed": true,
       "prediction_snapshot": {
-        "tip": "主不败/首选主胜",
+        "tip": "让负",
         "predicted_scores": [
           "2-1",
           "1-0",
@@ -20418,11 +20418,11 @@
       ],
       "locked": true,
       "settlement": {
-        "result": "MISS",
+        "result": "HIT",
         "score": "0-3",
         "source": "stored_score",
-        "settled_at": "2026-10-21T20:10:27",
-        "outcome": "客胜"
+        "settled_at": "2026-10-21T20:15:00",
+        "outcome": "让负"
       }
     },
     {
