@@ -1,7 +1,19 @@
 {
-  "updated_at": "2026-10-21 17:00:48",
-  "total_tips": 7,
+  "updated_at": "2026-10-21 17:16:00",
+  "total_tips": 8,
   "live_feed": [
+    {
+      "id": 3544,
+      "channel": "matchplug",
+      "time": "2026-10-21 16:39",
+      "code": "周三008",
+      "league": "欧冠",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "维拉 VS 维京",
+      "chinese": "欧冠维拉打维京，外围这波资金直扑大角球，全场9.5个角球赔率杀到1.56超低位，防范意图极明显！两队边路压制打得极凶，今晚高频起球少不了，刷角节奏拉满，场面冲击力十足！",
+      "original": "FOOTBALL CHAMPIONS LEAGUE ASTON VILLA VS VIKING OVER 9.5 CORNERS ODDS : 1.56"
+    },
     {
       "id": 3525,
       "channel": "victorspredict",
