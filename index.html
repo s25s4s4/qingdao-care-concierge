@@ -2652,7 +2652,7 @@
                 const mark = hit ? '✔' : (miss ? '✖' : '·');
                 return `<div style="display:flex; align-items:center; gap:6px; font-size:10px; padding:3px 0; border-top:1px solid rgba(255,255,255,0.04);">
                     <span style="width:14px; color:#6e7681; font-family:var(--font-mono);">${m.no}</span>
-                    <span style="flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; color:#c9d1d9;">${m.home} <span style="color:#6e7681;">vs</span> ${m.away}</span>
+                    <span style="flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; color:#c9d1d9;">${m.home} <span style="color:#6e7681;">vs</span> ${m.away}</span>
                     <span style="color:#8b949e; font-family:var(--font-mono); width:34px; text-align:right;">${m.score || '--'}</span>
                     <span style="color:var(--accent-gold); font-family:var(--font-mono); width:26px; text-align:center;">${picks || '--'}</span>
                     <span style="color:${color}; width:12px; text-align:center; font-weight:800;">${mark}</span>
