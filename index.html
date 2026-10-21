@@ -1131,9 +1131,12 @@
         </div>
 
         <!-- 14场比赛独立流式列表 -->
-        <div id="sfc-matches-feed" style="margin-bottom: 40px;">
+        <div id="sfc-matches-feed" style="margin-bottom: 16px;">
             <!-- 动态注入 14 场对阵 -->
         </div>
+
+        <!-- 往期战绩（换期后上一期会被归档到这里） -->
+        <div id="sfc-history" style="margin: 0 16px 40px;"></div>
     </div>
 
     <!-- ==================== TAB 2: 实战串关 (体彩柜台出票极简指引) ==================== -->
@@ -2605,6 +2608,7 @@
                     if (periodNum && data.period) periodNum.innerText = data.period + '期';
                     if (deadlineTime && data.deadline) deadlineTime.innerText = data.deadline;
                     renderSfcList(data);
+                    loadSfcHistory();
                 })
                 .catch(err => {
                     console.error('loadSfcData error:', err);
@@ -2614,6 +2618,69 @@
                         feed.innerHTML = '<div style="text-align: center; padding: 40px; color: var(--accent-red); font-size: 12px;">传足数据加载失败，请检查网络后刷新</div>';
                     }
                 });
+        }
+
+        function loadSfcHistory() {
+            const box = document.getElementById('sfc-history');
+            if (!box) return;
+            const bust = '_t=' + Date.now();
+            const url = (location.protocol === 'https:'
+                ? 'https://api.qingdaocare.top/data/sfc_history.json?'
+                : 'http://47.121.185.16/football/sfc_history.json?') + bust;
+            fetch(url, { cache: 'no-store' })
+                .then(r => (r.ok ? r.json() : null))
+                .catch(() => fetch('./data/sfc_history.json?' + bust, { cache: 'no-store' })
+                    .then(r => (r.ok ? r.json() : null))
+                    .catch(() => null))
+                .then(d => renderSfcHistory(d))
+                .catch(() => {});
+        }
+
+        function renderSfcHistory(data) {
+            const box = document.getElementById('sfc-history');
+            if (!box) return;
+            const periods = (data && data.periods) || [];
+            if (!periods.length) { box.innerHTML = ''; return; }
+
+            const rowHtml = (m) => {
+                const hit = m.result && m.result.indexOf('HIT') === 0;
+                const miss = m.result === 'MISS';
+                const color = hit ? '#3fb950' : (miss ? '#f85149' : '#8b949e');
+                const pickMap = { '3': '胜', '1': '平', '0': '负' };
+                const picks = [m.pick_primary, m.pick_secondary, m.pick_upset]
+                    .filter(Boolean).map(x => pickMap[x] || x).join('/');
+                const mark = hit ? '✔' : (miss ? '✖' : '·');
+                return `<div style="display:flex; align-items:center; gap:6px; font-size:10px; padding:3px 0; border-top:1px solid rgba(255,255,255,0.04);">
+                    <span style="width:14px; color:#6e7681; font-family:var(--font-mono);">${m.no}</span>
+                    <span style="flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; color:#c9d1d9;">${m.home} <span style="color:#6e7681;">vs</span> ${m.away}</span>
+                    <span style="color:#8b949e; font-family:var(--font-mono); width:34px; text-align:right;">${m.score || '--'}</span>
+                    <span style="color:var(--accent-gold); font-family:var(--font-mono); width:26px; text-align:center;">${picks || '--'}</span>
+                    <span style="color:${color}; width:12px; text-align:center; font-weight:800;">${mark}</span>
+                </div>`;
+            };
+
+            box.innerHTML = periods.map(p => {
+                const s = p.summary || {};
+                const total = s.total || 0;
+                const hit = s.hit || 0;
+                const rate = total ? Math.round(hit / total * 100) : 0;
+                const color = rate >= 60 ? '#3fb950' : (rate >= 40 ? 'var(--accent-gold)' : '#f85149');
+                return `<details style="background:rgba(22,27,34,0.9); border:1px solid var(--border-color); border-radius:8px; margin-bottom:8px; overflow:hidden;">
+                    <summary style="list-style:none; cursor:pointer; padding:9px 12px; display:flex; align-items:center; gap:8px;">
+                        <span style="font-size:12px; font-weight:800; color:#fff; font-family:var(--font-mono);">${p.period} 期</span>
+                        <span style="font-size:10px; color:var(--text-tertiary);">停售 ${p.deadline || '--'}</span>
+                        <span style="margin-left:auto; font-size:11px; font-weight:800; color:${color}; font-family:var(--font-mono);">${hit}/${total} · ${rate}%</span>
+                        <span style="font-size:10px; color:var(--text-tertiary);">▾</span>
+                    </summary>
+                    <div style="padding:0 12px 10px;">
+                        ${(p.matches || []).map(rowHtml).join('')}
+                        <div style="font-size:9px; color:var(--text-tertiary); margin-top:6px;">归档于 ${p.archived_at || ''}</div>
+                    </div>
+                </details>`;
+            }).join('');
+
+            box.insertAdjacentHTML('afterbegin',
+                '<div style="font-size:11.5px; font-weight:800; color:#fff; margin:0 0 8px 2px;">往期战绩</div>');
         }
 
         function renderSfcList(data) {
