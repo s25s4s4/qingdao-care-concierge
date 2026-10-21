@@ -34,9 +34,14 @@ YEAR = 2026
 _blob_cache = {}
 
 
+CREATE_NO_WINDOW = 0x08000000
+
+
 def _git(*args):
     return subprocess.run(["git", "-C", BASE] + list(args),
-                          capture_output=True, text=True, encoding="utf-8")
+                          stdin=subprocess.DEVNULL,
+                          capture_output=True, text=True, encoding="utf-8",
+                          creationflags=CREATE_NO_WINDOW)
 
 
 def _commit_before(kickoff):
