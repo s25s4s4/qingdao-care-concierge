@@ -1,7 +1,19 @@
 {
-  "updated_at": "2026-10-22 04:21:24",
-  "total_tips": 12,
+  "updated_at": "2026-10-22 04:51:39",
+  "total_tips": 13,
   "live_feed": [
+    {
+      "id": 3818,
+      "channel": "matchplug",
+      "time": "2026-10-22 04:47",
+      "code": "周三009",
+      "league": "欧冠",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "贝蒂斯 VS 费耶诺德",
+      "chinese": "欧洲情报直指边路：费耶诺德客场反击坚决，主攻两翼走外线，机构看好客队角球数破4个（大3.5）。贝蒂斯主场压迫但防边易漏底线，本场防反角球暗流涌动，客队角球可做稳胆。",
+      "original": "FOOTBALL CHAMPIONS LEAGUE REAL BETIS VS FEYENOORD FEYENOORD OVER 3.5 CORNERS ODDS : 1.72"
+    },
     {
       "id": 3721,
       "channel": "footballbettingtips10",
