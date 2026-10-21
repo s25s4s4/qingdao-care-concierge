@@ -136,6 +136,24 @@ def build(period, matches, existing):
     }
 
 
+def all_finished(existing):
+    """上一期是否已经全部打完。
+
+    竞彩一期 14 场会跨两天（例如 26146 是 10-21 03:00 到 10-22 03:00）。
+    只要还有一场没结束就不能换期——否则会把正在进行的这期连同已算好的选号一起冲掉，
+    用户看到的就是「上一期还没打完，页面已经跳到下一期」。
+    """
+    ms = existing.get("matches") or []
+    if not ms:
+        return True
+    for m in ms:
+        st = str(m.get("status") or "")
+        if "已完赛" in st or str(m.get("live_status") or "") == "FIN":
+            continue
+        return False
+    return True
+
+
 def same_round(matches, existing):
     """按对阵判断是不是同一期。
 
@@ -159,6 +177,14 @@ def main(force=False):
         return 1
 
     existing = load_existing()
+
+    # 换期闸门：上一期没打完就不动
+    if not all_finished(existing) and not force:
+        left = sum(1 for m in existing.get("matches", [])
+                   if "已完赛" not in str(m.get("status") or ""))
+        _log(f"上一期（{existing.get('period')}）还有 {left} 场未结束，暂不换到 {period} 期")
+        return 0
+
     same = same_round(matches, existing)
     if same and not odds_ready and not force:
         _log(f"{period} 期赔率尚未开出，保持现状")
