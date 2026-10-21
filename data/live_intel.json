@@ -1,7 +1,19 @@
 {
-  "updated_at": "2026-10-22 02:06:41",
+  "updated_at": "2026-10-22 02:16:43",
   "total_tips": 14,
   "live_feed": [
+    {
+      "id": 3713,
+      "channel": "footballbettingtips10",
+      "time": "2026-10-22 02:01",
+      "code": "周三004",
+      "league": "欧冠",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "科莫 VS 曼联",
+      "chinese": "欧洲滚球滚盘客在强推大球，主打两队互捅。海外资金直接下注全场至少进4球（大3.5），搏双方防线漏洞大开。这场重点看进球数，追大球跑出，防冷平，建议直接走大分防高比分互爆。",
+      "original": "BET 3 my TRAIN CHALLENGE £25 - £1,000 NO DELAYS WITH MY TRAINS ! WE GO AGAIN 🇮🇹 🇮🇹 🇮🇹 EMERGENCY TRAIN DEPLOYED Those of you WITHOUT a MIDNITE account get £30 in"
+    },
     {
       "id": 3707,
       "channel": "footballbettingtips10",
@@ -111,18 +123,6 @@
       "original": "FOOTBALL CHAMPIONS LEAGUE REAL BETIS VS FEYENOORD FEYENOORD OVER 3.5 CORNERS ODDS : 1.72"
     },
     {
-      "id": 3578,
-      "channel": "ibettingxx",
-      "time": "2026-10-21 18:54",
-      "code": "周三004",
-      "league": "欧冠",
-      "category": "推单",
-      "is_tip": true,
-      "match": "科莫 VS 曼联",
-      "chinese": "欧冠科莫打曼联，海外单挑重心直指双方进球（BTTS），给到1.48超低赔付，信心度近七成。防守端两边都有漏洞，资金面强走对攻互捅，首选两队皆有破门、大球走起！",
-      "original": "================================ 🎟 SINGLE TICKET | OCT 21, 2026 🎟 ================================ 🕕 Match Time: 18:45 GMT ⚽️ Champions League ⚽️ 🏟 Como vs. Man"
-    },
-    {
       "id": 3553,
       "channel": "FabrizioRomano",
       "time": "2026-10-21 17:28",
@@ -172,6 +172,18 @@
     }
   ],
   "archived": [
+    {
+      "id": 3578,
+      "channel": "ibettingxx",
+      "time": "2026-10-21 18:54",
+      "code": "周三004",
+      "league": "欧冠",
+      "category": "推单",
+      "is_tip": true,
+      "match": "科莫 VS 曼联",
+      "chinese": "欧冠科莫打曼联，海外单挑重心直指双方进球（BTTS），给到1.48超低赔付，信心度近七成。防守端两边都有漏洞，资金面强走对攻互捅，首选两队皆有破门、大球走起！",
+      "original": "================================ 🎟 SINGLE TICKET | OCT 21, 2026 🎟 ================================ 🕕 Match Time: 18:45 GMT ⚽️ Champions League ⚽️ 🏟 Como vs. Man"
+    },
     {
       "id": 3545,
       "channel": "matchplug",
