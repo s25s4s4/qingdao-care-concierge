@@ -1,7 +1,31 @@
 {
-  "updated_at": "2026-10-22 02:16:43",
+  "updated_at": "2026-10-22 02:36:51",
   "total_tips": 14,
   "live_feed": [
+    {
+      "id": 3711,
+      "channel": "FabrizioRomano",
+      "time": "2026-10-22 01:58",
+      "code": "周三004",
+      "league": "欧冠",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "科莫 VS 曼联",
+      "chinese": "分析这条消息：原文描述的是比赛中的实时进球/赛后事件（“Nico Páz, at it again for Como against Man United with an assist for Douvikas. 4 G/A in three UCL games”），这是赛中播报/赛后统计或纯比赛事实回放，并非赛前前瞻分析、突发伤停、首发阵容或资金盘口情报，对赛前投注指导没有前瞻参考价值。\n\n根据【价值判定】：如果这条消息虽然提到本场，但只是历史回顾、球员轶事、情怀旧闻、旧赛季数据、纯广告引流，对赛前投注没有任何参考价值，请只回复三个字：无价值。\n\n因此判定为：无价值。\n无价值",
+      "original": "💙 🤍 🇦🇷 Nico Páz, at it again for Como against Man United with an assist for Douvikas. 4 G/A (3 assists, 1 goal) in three UCL games."
+    },
+    {
+      "id": 3705,
+      "channel": "calciomercato",
+      "time": "2026-10-22 01:53",
+      "code": "周三004",
+      "league": "欧冠",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "科莫 VS 曼联",
+      "chinese": "科莫下半场刚开局打出精妙配合，帕斯送出助攻，杜维卡斯闪击破门，主队2比0扩大优势！曼联防线被打穿，场面极度被动，科莫气势正盛，走地重点防大球和科莫受让。",
+      "original": "🇪🇺 UEFA CHAMPIONS LEAGUE 🇪🇺 3ª Giornata GOAL ⚪ Como 2-0 Manchester United 🔴 ⚽️ A. Douvikas 👟 N. Paz ⏱️ 49’ ⚽️"
+    },
     {
       "id": 3713,
       "channel": "footballbettingtips10",
@@ -25,18 +49,6 @@
       "match": "科莫 VS 曼联",
       "chinese": "兄弟们看一眼，海外车头砸了35镑起步冲挑战，硬顶科莫打曼联全场出大球（至少3球）。纯纯的跟风追大资金流，没掏伤停和阵眼，机构赔付给得高，提防假球假盘，谨慎防个2球小。",
       "original": "BET 2 my TRAIN CHALLENGE £25 - £1,000 NO DELAYS WITH MY TRAINS ! WE GO AGAIN 🇮🇹 🇮🇹 🇮🇹 EMERGENCY TRAIN DEPLOYED Those of you WITHOUT a MIDNITE account get £30 in"
-    },
-    {
-      "id": 3676,
-      "channel": "calciomercato",
-      "time": "2026-10-22 00:49",
-      "code": "周三004",
-      "league": "欧冠",
-      "category": "赛前军情",
-      "is_tip": false,
-      "match": "科莫 VS 曼联",
-      "chinese": "科莫开场闪击，帕斯开门红打破僵局。曼联客场早早落后，防线专注度极差，临场追红利好大球走势。科莫主场士气暴涨，曼联被迫压上，防守反击与破门机会骤增，提防大比分打出。",
-      "original": "🇪🇺 UEFA CHAMPIONS LEAGUE 🇪🇺 3ª Giornata GOAL ⚪ Como 1-0 Manchester United 🔴 ⚽️ N. Paz 👟 L.Da Cunha ⏱️ 2’ ⚽️"
     },
     {
       "id": 3686,
@@ -73,18 +85,6 @@
       "match": "皇马 VS 莱红牛",
       "chinese": "欧冠这把欧洲前线看好皇马半全场直落，主推“胜胜”（参考值1.54）。皇马主场拿分率超七成，虽防守动作大易染红，但底蕴摆在这，红牛客战难顶冲击，看好主队早早破局双杀半全场。",
       "original": "🔥 HOT PICK 🌍 UEFA Champions League 🆚 Real Madrid vs RB Leipzig 🕐 Wed, 21 Oct · 19:00 UTC 💡 Half Time / Full Time: Home/Home 📊 Odds: 1.54 ✅ Confidence: 65% 📌 Mat"
-    },
-    {
-      "id": 3644,
-      "channel": "bad_man_betting_tips",
-      "time": "2026-10-21 23:07",
-      "code": "周三004",
-      "league": "欧冠",
-      "category": "赛前军情",
-      "is_tip": false,
-      "match": "科莫 VS 曼联",
-      "chinese": "科莫战意拉满，前场核心尼科·帕斯欧冠场均犯规高达2.5次。曼联新中场绞杀力极强，近两战狂造对手犯规。中场拼抢势必白热化，防线吃紧，本场看好肉搏出小球，科莫受让可博。",
-      "original": "Como vs Man Utd Bet Builder incoming & Nico Paz fouls are included. Here's why... First up, he's averaging 2.06 fouls P/90 in the league, which jumps to 2.50 in"
     },
     {
       "id": 3614,
@@ -172,6 +172,30 @@
     }
   ],
   "archived": [
+    {
+      "id": 3676,
+      "channel": "calciomercato",
+      "time": "2026-10-22 00:49",
+      "code": "周三004",
+      "league": "欧冠",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "科莫 VS 曼联",
+      "chinese": "科莫开场闪击，帕斯开门红打破僵局。曼联客场早早落后，防线专注度极差，临场追红利好大球走势。科莫主场士气暴涨，曼联被迫压上，防守反击与破门机会骤增，提防大比分打出。",
+      "original": "🇪🇺 UEFA CHAMPIONS LEAGUE 🇪🇺 3ª Giornata GOAL ⚪ Como 1-0 Manchester United 🔴 ⚽️ N. Paz 👟 L.Da Cunha ⏱️ 2’ ⚽️"
+    },
+    {
+      "id": 3644,
+      "channel": "bad_man_betting_tips",
+      "time": "2026-10-21 23:07",
+      "code": "周三004",
+      "league": "欧冠",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "科莫 VS 曼联",
+      "chinese": "科莫战意拉满，前场核心尼科·帕斯欧冠场均犯规高达2.5次。曼联新中场绞杀力极强，近两战狂造对手犯规。中场拼抢势必白热化，防线吃紧，本场看好肉搏出小球，科莫受让可博。",
+      "original": "Como vs Man Utd Bet Builder incoming & Nico Paz fouls are included. Here's why... First up, he's averaging 2.06 fouls P/90 in the league, which jumps to 2.50 in"
+    },
     {
       "id": 3578,
       "channel": "ibettingxx",
