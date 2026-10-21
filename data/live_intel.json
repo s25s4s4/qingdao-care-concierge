@@ -1,7 +1,19 @@
 {
-  "updated_at": "2026-10-22 00:01:18",
-  "total_tips": 13,
+  "updated_at": "2026-10-22 00:21:14",
+  "total_tips": 14,
   "live_feed": [
+    {
+      "id": 3668,
+      "channel": "TipstrrTips",
+      "time": "2026-10-22 00:18",
+      "code": "周三010",
+      "league": "欧冠",
+      "category": "推单·已开赛",
+      "is_tip": true,
+      "match": "拜仁 VS 阿森纳",
+      "chinese": "欧洲前线看好对攻局。老牌资金主推拜仁主胜叠加双方进球，认为枪手客场能破门但防不住拜仁主场火力。这场防守都有漏洞，主胜稳当，博高赔盯死“胜+双破门”，进球数3球起步。",
+      "original": "The Champions League is producing goals galore this season, and Super BTS expects both Bayern Munich and Arsenal to find the net before the home side prevails i"
+    },
     {
       "id": 3660,
       "channel": "football_predictions_ai",
