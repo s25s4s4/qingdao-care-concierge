@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-21 22:18:40",
+  "updated_at": "2026-10-21 22:21:12",
   "total": 108,
   "matches": [
     {
@@ -19974,7 +19974,7 @@
         "4.15",
         "1.45"
       ],
-      "consensus": "主不败/首选主胜 (76.15%)",
+      "consensus": "让平/让负双选 (76.2%)",
       "consensus_ratio": 76.15,
       "consensus_breakdown": {
         "odds_score": 78.0,
@@ -19982,14 +19982,14 @@
         "tipster_score": 76.0,
         "math_score": 76.0
       },
-      "tip": "让负",
+      "tip": "让负/防让平",
       "predicted_scores": [
         "1-1",
         "0-1",
-        "1-2"
+        "2-1"
       ],
       "score": "2-1",
-      "result": "MISS",
+      "result": "HIT",
       "analysis": "川崎前锋对阵神户胜利，三模型对抗研判首选【主不败/首选主胜】。",
       "dossier": {
         "summary": "川崎前锋对阵神户胜利，多因子量化研判核心首选【让负/防让平】。",
@@ -20000,11 +20000,11 @@
       },
       "sale_closed": true,
       "prediction_snapshot": {
-        "tip": "主不败/首选主胜",
+        "tip": "让负/防让平",
         "predicted_scores": [
-          "2-1",
           "1-1",
-          "1-0"
+          "0-1",
+          "2-1"
         ],
         "predicted_goals": null,
         "consensus_ratio": 76.15,
@@ -20174,29 +20174,28 @@
         "lambda_h": 1.19,
         "lambda_a": 1.47,
         "golden_scores": [
-          "1-0",
-          "2-1",
-          "2-0"
+          "1-1",
+          "0-1",
+          "2-1"
         ],
         "trap_level": "NORMAL",
         "trap_warning": "盘面处于正常期望区间",
         "stars": "★★☆☆☆",
         "tier_title": "深水博冷区间",
-        "smart_pick": "让胜",
+        "smart_pick": "让负/防让平",
         "smart_type": "SINGLE",
         "quant_detail_note": "【8万场让球利刃 · 极简让球直打】：8万场历史大数据同赔率下最高胜率仅为 42.4%，客队具备极强反客为主抗衡力。实战果断单挑【让胜】，一注通吃客队不败！"
       },
       "predicted_goals": [
-        "1",
         "2",
         "3"
       ],
       "locked": true,
       "settlement": {
-        "result": "MISS",
+        "result": "HIT",
         "score": "2-1",
         "source": "stored_score",
-        "settled_at": "2026-10-21T22:18:34",
+        "settled_at": "2026-10-21T22:21:12",
         "outcome": "让平"
       }
     },
