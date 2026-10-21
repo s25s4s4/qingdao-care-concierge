@@ -1,54 +1,18 @@
 {
-  "updated_at": "2026-10-22 02:36:51",
-  "total_tips": 14,
+  "updated_at": "2026-10-22 02:56:17",
+  "total_tips": 11,
   "live_feed": [
     {
-      "id": 3711,
-      "channel": "FabrizioRomano",
-      "time": "2026-10-22 01:58",
-      "code": "周三004",
+      "id": 3556,
+      "channel": "prognozy",
+      "time": "2026-10-21 17:57",
+      "code": "周三007",
       "league": "欧冠",
       "category": "赛前军情",
       "is_tip": false,
-      "match": "科莫 VS 曼联",
-      "chinese": "分析这条消息：原文描述的是比赛中的实时进球/赛后事件（“Nico Páz, at it again for Como against Man United with an assist for Douvikas. 4 G/A in three UCL games”），这是赛中播报/赛后统计或纯比赛事实回放，并非赛前前瞻分析、突发伤停、首发阵容或资金盘口情报，对赛前投注指导没有前瞻参考价值。\n\n根据【价值判定】：如果这条消息虽然提到本场，但只是历史回顾、球员轶事、情怀旧闻、旧赛季数据、纯广告引流，对赛前投注没有任何参考价值，请只回复三个字：无价值。\n\n因此判定为：无价值。\n无价值",
-      "original": "💙 🤍 🇦🇷 Nico Páz, at it again for Como against Man United with an assist for Douvikas. 4 G/A (3 assists, 1 goal) in three UCL games."
-    },
-    {
-      "id": 3705,
-      "channel": "calciomercato",
-      "time": "2026-10-22 01:53",
-      "code": "周三004",
-      "league": "欧冠",
-      "category": "赛前军情",
-      "is_tip": false,
-      "match": "科莫 VS 曼联",
-      "chinese": "科莫下半场刚开局打出精妙配合，帕斯送出助攻，杜维卡斯闪击破门，主队2比0扩大优势！曼联防线被打穿，场面极度被动，科莫气势正盛，走地重点防大球和科莫受让。",
-      "original": "🇪🇺 UEFA CHAMPIONS LEAGUE 🇪🇺 3ª Giornata GOAL ⚪ Como 2-0 Manchester United 🔴 ⚽️ A. Douvikas 👟 N. Paz ⏱️ 49’ ⚽️"
-    },
-    {
-      "id": 3713,
-      "channel": "footballbettingtips10",
-      "time": "2026-10-22 02:01",
-      "code": "周三004",
-      "league": "欧冠",
-      "category": "赛前军情",
-      "is_tip": false,
-      "match": "科莫 VS 曼联",
-      "chinese": "欧洲滚球滚盘客在强推大球，主打两队互捅。海外资金直接下注全场至少进4球（大3.5），搏双方防线漏洞大开。这场重点看进球数，追大球跑出，防冷平，建议直接走大分防高比分互爆。",
-      "original": "BET 3 my TRAIN CHALLENGE £25 - £1,000 NO DELAYS WITH MY TRAINS ! WE GO AGAIN 🇮🇹 🇮🇹 🇮🇹 EMERGENCY TRAIN DEPLOYED Those of you WITHOUT a MIDNITE account get £30 in"
-    },
-    {
-      "id": 3707,
-      "channel": "footballbettingtips10",
-      "time": "2026-10-22 01:57",
-      "code": "周三004",
-      "league": "欧冠",
-      "category": "赛前军情",
-      "is_tip": false,
-      "match": "科莫 VS 曼联",
-      "chinese": "兄弟们看一眼，海外车头砸了35镑起步冲挑战，硬顶科莫打曼联全场出大球（至少3球）。纯纯的跟风追大资金流，没掏伤停和阵眼，机构赔付给得高，提防假球假盘，谨慎防个2球小。",
-      "original": "BET 2 my TRAIN CHALLENGE £25 - £1,000 NO DELAYS WITH MY TRAINS ! WE GO AGAIN 🇮🇹 🇮🇹 🇮🇹 EMERGENCY TRAIN DEPLOYED Those of you WITHOUT a MIDNITE account get £30 in"
+      "match": "皇马 VS 莱红牛",
+      "chinese": "皇马火力正盛近战屡轰大比分，红牛客场防线崩盘近4战狂丢15球、纯属客场虫。盘口资金死砸主队穿盘，结合客队豆腐渣防守，这场直接看好皇马打穿，首选让胜（让球-1.5），大球防3-1。",
+      "original": "🔥 Ставка дня от TelegaBet 🇪🇸 Реал Мадрид - Лейпциг 🇩🇪 🇪🇺 Лига Чемпионов, Тур - 3 ⏰ Начало матча в 22:00 МСК Мадридский клуб набрал отличную форму и демонстрируе"
     },
     {
       "id": 3686,
@@ -172,6 +136,54 @@
     }
   ],
   "archived": [
+    {
+      "id": 3711,
+      "channel": "FabrizioRomano",
+      "time": "2026-10-22 01:58",
+      "code": "周三004",
+      "league": "欧冠",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "科莫 VS 曼联",
+      "chinese": "分析这条消息：原文描述的是比赛中的实时进球/赛后事件（“Nico Páz, at it again for Como against Man United with an assist for Douvikas. 4 G/A in three UCL games”），这是赛中播报/赛后统计或纯比赛事实回放，并非赛前前瞻分析、突发伤停、首发阵容或资金盘口情报，对赛前投注指导没有前瞻参考价值。\n\n根据【价值判定】：如果这条消息虽然提到本场，但只是历史回顾、球员轶事、情怀旧闻、旧赛季数据、纯广告引流，对赛前投注没有任何参考价值，请只回复三个字：无价值。\n\n因此判定为：无价值。\n无价值",
+      "original": "💙 🤍 🇦🇷 Nico Páz, at it again for Como against Man United with an assist for Douvikas. 4 G/A (3 assists, 1 goal) in three UCL games."
+    },
+    {
+      "id": 3705,
+      "channel": "calciomercato",
+      "time": "2026-10-22 01:53",
+      "code": "周三004",
+      "league": "欧冠",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "科莫 VS 曼联",
+      "chinese": "科莫下半场刚开局打出精妙配合，帕斯送出助攻，杜维卡斯闪击破门，主队2比0扩大优势！曼联防线被打穿，场面极度被动，科莫气势正盛，走地重点防大球和科莫受让。",
+      "original": "🇪🇺 UEFA CHAMPIONS LEAGUE 🇪🇺 3ª Giornata GOAL ⚪ Como 2-0 Manchester United 🔴 ⚽️ A. Douvikas 👟 N. Paz ⏱️ 49’ ⚽️"
+    },
+    {
+      "id": 3713,
+      "channel": "footballbettingtips10",
+      "time": "2026-10-22 02:01",
+      "code": "周三004",
+      "league": "欧冠",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "科莫 VS 曼联",
+      "chinese": "欧洲滚球滚盘客在强推大球，主打两队互捅。海外资金直接下注全场至少进4球（大3.5），搏双方防线漏洞大开。这场重点看进球数，追大球跑出，防冷平，建议直接走大分防高比分互爆。",
+      "original": "BET 3 my TRAIN CHALLENGE £25 - £1,000 NO DELAYS WITH MY TRAINS ! WE GO AGAIN 🇮🇹 🇮🇹 🇮🇹 EMERGENCY TRAIN DEPLOYED Those of you WITHOUT a MIDNITE account get £30 in"
+    },
+    {
+      "id": 3707,
+      "channel": "footballbettingtips10",
+      "time": "2026-10-22 01:57",
+      "code": "周三004",
+      "league": "欧冠",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "科莫 VS 曼联",
+      "chinese": "兄弟们看一眼，海外车头砸了35镑起步冲挑战，硬顶科莫打曼联全场出大球（至少3球）。纯纯的跟风追大资金流，没掏伤停和阵眼，机构赔付给得高，提防假球假盘，谨慎防个2球小。",
+      "original": "BET 2 my TRAIN CHALLENGE £25 - £1,000 NO DELAYS WITH MY TRAINS ! WE GO AGAIN 🇮🇹 🇮🇹 🇮🇹 EMERGENCY TRAIN DEPLOYED Those of you WITHOUT a MIDNITE account get £30 in"
+    },
     {
       "id": 3676,
       "channel": "calciomercato",
