@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-21 20:06:35",
+  "updated_at": "2026-10-21 20:10:32",
   "total": 108,
   "matches": [
     {
@@ -199,14 +199,7 @@
         },
         "source": "本地竞彩历史库"
       },
-      "stats_ts": "2026-10-21 09:25:23",
-      "settlement": {
-        "result": "HIT",
-        "score": "0-0",
-        "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
-        "outcome": "平局"
-      }
+      "stats_ts": "2026-10-21 09:25:23"
     },
     {
       "code": "周五002",
@@ -362,14 +355,7 @@
         "h2h": null,
         "source": "本地竞彩历史库"
       },
-      "stats_ts": "2026-10-21 09:25:23",
-      "settlement": {
-        "result": "HIT",
-        "score": "1-1",
-        "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
-        "outcome": "客不败"
-      }
+      "stats_ts": "2026-10-21 09:25:23"
     },
     {
       "code": "周五003",
@@ -467,7 +453,7 @@
         "result": "HIT",
         "score": "0-2",
         "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "客胜"
       },
       "stats": {
@@ -698,7 +684,7 @@
         "result": "HIT",
         "score": "4-0",
         "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "主胜"
       },
       "stats": {
@@ -929,7 +915,7 @@
         "result": "HIT",
         "score": "2-1",
         "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "主胜"
       },
       "stats": {
@@ -1160,7 +1146,7 @@
         "result": "HIT",
         "score": "1-0",
         "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "主胜"
       },
       "stats": {
@@ -1393,7 +1379,7 @@
         "result": "MISS",
         "score": "4-2",
         "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "主胜"
       },
       "stats": {
@@ -1625,8 +1611,8 @@
         "result": "HIT",
         "score": "0-3",
         "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
-        "outcome": "客不败"
+        "settled_at": "2026-10-21T20:10:27",
+        "outcome": "客胜"
       },
       "stats": {
         "home": {
@@ -1832,7 +1818,7 @@
         "result": "HIT",
         "score": "1-2",
         "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "客胜"
       },
       "stats": {
@@ -1989,7 +1975,7 @@
         "result": "HIT",
         "score": "1-1",
         "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "平局"
       },
       "stats": {
@@ -2220,7 +2206,7 @@
         "result": "HIT",
         "score": "2-0",
         "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "主胜"
       },
       "stats": {
@@ -2429,9 +2415,9 @@
       },
       "settlement": {
         "result": "HIT",
-        "score": "2-1",
-        "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "score": "2 - 1",
+        "source": "fotmob",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "主胜"
       },
       "stats": {
@@ -2640,9 +2626,9 @@
       },
       "settlement": {
         "result": "HIT",
-        "score": "2-0",
-        "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "score": "2 - 0",
+        "source": "fotmob",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "主胜"
       },
       "stats": {
@@ -2875,9 +2861,9 @@
       },
       "settlement": {
         "result": "HIT",
-        "score": "2-1",
-        "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "score": "2 - 1",
+        "source": "fotmob",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "主胜"
       },
       "stats": {
@@ -3096,9 +3082,9 @@
       },
       "settlement": {
         "result": "HIT",
-        "score": "2-2",
-        "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "score": "2 - 2",
+        "source": "fotmob",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "平局"
       },
       "stats": {
@@ -3332,9 +3318,9 @@
       },
       "settlement": {
         "result": "MISS",
-        "score": "1-3",
-        "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "score": "1 - 3",
+        "source": "fotmob",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "客胜"
       },
       "stats": {
@@ -3567,9 +3553,9 @@
       },
       "settlement": {
         "result": "HIT",
-        "score": "1-1",
-        "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "score": "1 - 1",
+        "source": "fotmob",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "平局"
       },
       "stats": {
@@ -3729,10 +3715,10 @@
       },
       "settlement": {
         "result": "HIT",
-        "score": "0-2",
-        "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
-        "outcome": "客不败"
+        "score": "0 - 2",
+        "source": "fotmob",
+        "settled_at": "2026-10-21T20:10:27",
+        "outcome": "客胜"
       },
       "stats": {
         "home": {
@@ -3960,9 +3946,9 @@
       },
       "settlement": {
         "result": "HIT",
-        "score": "2-2",
-        "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "score": "2 - 2",
+        "source": "fotmob",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "平局"
       },
       "stats": {
@@ -4171,9 +4157,9 @@
       },
       "settlement": {
         "result": "HIT",
-        "score": "0-1",
-        "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "score": "0 - 1",
+        "source": "fotmob",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "客胜"
       },
       "stats": {
@@ -4340,7 +4326,7 @@
       "consensus_ratio": 65.0,
       "tip": "让负",
       "score": "0-2",
-      "result": "HIT",
+      "result": "MISS",
       "analysis": "汉坎对阵博德闪耀，攻防节奏对抗激烈，战术建议【主不败/首选主胜】。",
       "dossier": {
         "summary": "汉坎对阵博德闪耀，攻防节奏对抗激烈，战术建议【主不败/首选主胜】。",
@@ -4403,11 +4389,11 @@
         "sha256": "bb83860624559a9c809388864cb52e719bcd97b89bd117bccfdf9b05e20a2d53"
       },
       "settlement": {
-        "result": "HIT",
+        "result": "MISS",
         "score": "0-2",
         "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
-        "outcome": "客不败"
+        "settled_at": "2026-10-21T20:10:27",
+        "outcome": "客胜"
       },
       "stats": {
         "home": {
@@ -4640,9 +4626,9 @@
       },
       "settlement": {
         "result": "MISS",
-        "score": "1-0",
-        "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "score": "1 - 0",
+        "source": "fotmob",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "主胜"
       },
       "stats": {
@@ -4863,7 +4849,7 @@
         "result": "HIT",
         "score": "4-0",
         "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "主胜"
       },
       "stats": {
@@ -5088,9 +5074,9 @@
       },
       "settlement": {
         "result": "MISS",
-        "score": "4-3",
-        "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "score": "4 - 3",
+        "source": "fotmob",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "主胜"
       },
       "stats": {
@@ -5247,7 +5233,7 @@
       "consensus_ratio": 73.6,
       "tip": "主胜/防平",
       "score": "2-2",
-      "result": "HIT",
+      "result": "MISS",
       "analysis": "云达不来梅坐拥威悉球场地利，阵地战配合细腻且前场就地反抢凶悍；帕德博恩防线单薄客场抗压不足，不来梅凭借球星个人终结能力足以两球致胜。",
       "dossier": {
         "summary": "云达不来梅主场威悉球场气势如虹，德甲攻防节奏远超德乙帕德博恩；帕德博恩客场防守整体单薄，不来梅凭借球星个人能力足以常规时间解决战斗。",
@@ -5313,10 +5299,10 @@
         "sha256": "4dcd553ac8eec3d753f88cea1c6706e5e7fe462f2676d68d0056f5875fe63acf"
       },
       "settlement": {
-        "result": "HIT",
-        "score": "2-2",
-        "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "result": "MISS",
+        "score": "2 - 2",
+        "source": "fotmob",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "平局"
       },
       "stats": {
@@ -5550,10 +5536,10 @@
       },
       "settlement": {
         "result": "HIT",
-        "score": "0-1",
-        "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
-        "outcome": "客不败"
+        "score": "0 - 1",
+        "source": "fotmob",
+        "settled_at": "2026-10-21T20:10:27",
+        "outcome": "客胜"
       },
       "stats": {
         "home": {
@@ -5788,7 +5774,7 @@
         "result": "MISS",
         "score": "1-0",
         "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "主胜"
       },
       "stats": {
@@ -6022,9 +6008,9 @@
       },
       "settlement": {
         "result": "HIT",
-        "score": "0-0",
-        "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "score": "0 - 0",
+        "source": "fotmob",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "平局"
       },
       "stats": {
@@ -6191,7 +6177,7 @@
       "consensus_ratio": 65.0,
       "tip": "让负",
       "score": "1-2",
-      "result": "HIT",
+      "result": "MISS",
       "analysis": "布伦特福德主场高位反抢专治强队，长传冲吊与手抛球战术威胁大；利物浦客战面临国际比赛日体能透支，防守端偶有漏人，小蜜蜂主场完全有爆冷拿分可能。",
       "dossier": {
         "summary": "布伦特福德主场高位压迫反抢极其凶悍，主场对阵传统BIG6战绩彪炳；利物浦客战面临国家队比赛日后体能恢复问题，小蜜蜂主场完全有爆冷拿分空间。",
@@ -6258,11 +6244,11 @@
         "sha256": "a965c12697b334f7df852524f7fb7131876005dae7d2c7acc63112ad8b54751e"
       },
       "settlement": {
-        "result": "HIT",
-        "score": "1-2",
-        "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
-        "outcome": "客不败"
+        "result": "MISS",
+        "score": "1 - 2",
+        "source": "fotmob",
+        "settled_at": "2026-10-21T20:10:27",
+        "outcome": "客胜"
       },
       "stats": {
         "home": {
@@ -6494,9 +6480,9 @@
       },
       "settlement": {
         "result": "HIT",
-        "score": "3-2",
-        "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "score": "3 - 2",
+        "source": "fotmob",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "主胜"
       },
       "stats": {
@@ -6705,9 +6691,9 @@
       },
       "settlement": {
         "result": "HIT",
-        "score": "1-0",
-        "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "score": "1 - 0",
+        "source": "fotmob",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "主胜"
       },
       "stats": {
@@ -6941,9 +6927,9 @@
       },
       "settlement": {
         "result": "MISS",
-        "score": "0-0",
-        "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "score": "0 - 0",
+        "source": "fotmob",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "平局"
       },
       "stats": {
@@ -7176,9 +7162,9 @@
       },
       "settlement": {
         "result": "HIT",
-        "score": "1-3",
-        "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "score": "1 - 3",
+        "source": "fotmob",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "客胜"
       },
       "stats": {
@@ -7413,7 +7399,7 @@
         "result": "HIT",
         "score": "1-3",
         "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "客胜"
       },
       "stats": {
@@ -7580,7 +7566,7 @@
       "consensus_ratio": 68,
       "tip": "让负",
       "score": "0-1",
-      "result": "HIT",
+      "result": "MISS",
       "analysis": "纽卡斯尔对阵维拉，攻防节奏对抗激烈，战术建议【主不败/首选主胜】。",
       "dossier": {
         "summary": "纽卡斯尔对阵维拉，攻防节奏对抗激烈，战术建议【主不败/首选主胜】。",
@@ -7652,11 +7638,11 @@
         "sha256": "0a6cdcf2e37e86c8d53fd251758c0772be528978aeb0a70faf5a0c32dcc18e64"
       },
       "settlement": {
-        "result": "HIT",
+        "result": "MISS",
         "score": "0-1",
         "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
-        "outcome": "客不败"
+        "settled_at": "2026-10-21T20:10:27",
+        "outcome": "客胜"
       },
       "stats": {
         "home": {
@@ -7909,7 +7895,7 @@
         "result": "HIT",
         "score": "6-1",
         "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "让胜"
       },
       "stats": {
@@ -8149,7 +8135,7 @@
         "result": "HIT",
         "score": "2-5",
         "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "客胜"
       },
       "stats": {
@@ -8389,7 +8375,7 @@
         "result": "HIT",
         "score": "3-4",
         "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "客胜"
       },
       "stats": {
@@ -8623,7 +8609,7 @@
         "result": "HIT",
         "score": "2-0",
         "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "主胜"
       },
       "stats": {
@@ -8861,7 +8847,7 @@
         "result": "HIT",
         "score": "0-0",
         "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "平局"
       },
       "stats": {
@@ -9028,7 +9014,7 @@
       "consensus_ratio": 68,
       "tip": "让负",
       "score": "1-0",
-      "result": "MISS",
+      "result": "HIT",
       "analysis": "新英格兰对阵芝加哥，攻防节奏对抗激烈，战术建议【主不败/首选主胜】。",
       "dossier": {
         "summary": "新英格兰对阵芝加哥，攻防节奏对抗激烈，战术建议【主不败/首选主胜】。",
@@ -9102,10 +9088,10 @@
         "sha256": "5cfcc6b280a59f33b382ebd56fa1f328a4308d2c61e164c7d92ce2e26f81fe09"
       },
       "settlement": {
-        "result": "MISS",
+        "result": "HIT",
         "score": "1-0",
         "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "主胜"
       },
       "stats": {
@@ -9347,9 +9333,9 @@
       },
       "settlement": {
         "result": "HIT",
-        "score": "3-0",
-        "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "score": "3 - 0",
+        "source": "fotmob",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "主胜"
       },
       "stats": {
@@ -9591,9 +9577,9 @@
       },
       "settlement": {
         "result": "HIT",
-        "score": "1-1",
-        "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "score": "1 - 1",
+        "source": "fotmob",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "平局"
       },
       "stats": {
@@ -9834,9 +9820,9 @@
       },
       "settlement": {
         "result": "MISS",
-        "score": "2-2",
-        "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "score": "2 - 2",
+        "source": "fotmob",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "平局"
       },
       "stats": {
@@ -10078,9 +10064,9 @@
       },
       "settlement": {
         "result": "MISS",
-        "score": "4-1",
-        "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "score": "4 - 1",
+        "source": "fotmob",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "主胜"
       },
       "stats": {
@@ -10322,9 +10308,9 @@
       },
       "settlement": {
         "result": "MISS",
-        "score": "0-3",
-        "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "score": "0 - 3",
+        "source": "fotmob",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "客胜"
       },
       "stats": {
@@ -10566,9 +10552,9 @@
       },
       "settlement": {
         "result": "HIT",
-        "score": "2-0",
-        "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "score": "2 - 0",
+        "source": "fotmob",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "主胜"
       },
       "stats": {
@@ -10777,7 +10763,7 @@
         "result": "HIT",
         "score": "2-2",
         "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "平局"
       },
       "stats": {
@@ -11018,9 +11004,9 @@
       },
       "settlement": {
         "result": "HIT",
-        "score": "2-0",
-        "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "score": "2 - 0",
+        "source": "fotmob",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "主胜"
       },
       "stats": {
@@ -11160,7 +11146,7 @@
       "consensus_ratio": 65.0,
       "tip": "让负",
       "score": "0-3",
-      "result": "HIT",
+      "result": "MISS",
       "analysis": "萨普斯堡对阵罗森博格，基于赔率与可得情报的研判首选【客不败/双选平负】。",
       "dossier": {
         "summary": "主不败/首选主胜，四维综合共识度 76.5%\\由此",
@@ -11234,11 +11220,11 @@
         "sha256": "78dbce0ed965773f24389b4dfa819b91cb43e0e21367e9bb8c5871bb4d6b3fa1"
       },
       "settlement": {
-        "result": "HIT",
-        "score": "0-3",
-        "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
-        "outcome": "客不败"
+        "result": "MISS",
+        "score": "0 - 3",
+        "source": "fotmob",
+        "settled_at": "2026-10-21T20:10:27",
+        "outcome": "客胜"
       },
       "stats": {
         "home": {
@@ -11479,10 +11465,10 @@
       },
       "settlement": {
         "result": "HIT",
-        "score": "1-1",
-        "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
-        "outcome": "客不败"
+        "score": "1 - 1",
+        "source": "fotmob",
+        "settled_at": "2026-10-21T20:10:27",
+        "outcome": "平局"
       },
       "stats": {
         "home": {
@@ -11719,7 +11705,7 @@
         "result": "HIT",
         "score": "2-0",
         "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "主胜"
       },
       "stats": {
@@ -11961,9 +11947,9 @@
       },
       "settlement": {
         "result": "HIT",
-        "score": "1-3",
-        "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "score": "1 - 3",
+        "source": "fotmob",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "客胜"
       },
       "stats": {
@@ -12204,9 +12190,9 @@
       },
       "settlement": {
         "result": "HIT",
-        "score": "2-5",
-        "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "score": "2 - 5",
+        "source": "fotmob",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "客胜"
       },
       "stats": {
@@ -12448,9 +12434,9 @@
       },
       "settlement": {
         "result": "HIT",
-        "score": "2-1",
-        "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "score": "2 - 1",
+        "source": "fotmob",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "主胜"
       },
       "stats": {
@@ -12689,7 +12675,7 @@
         "result": "HIT",
         "score": "2-1",
         "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "主胜"
       },
       "stats": {
@@ -12927,7 +12913,7 @@
         "result": "HIT",
         "score": "2-5",
         "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "客胜"
       },
       "stats": {
@@ -13168,9 +13154,9 @@
       },
       "settlement": {
         "result": "MISS",
-        "score": "1-0",
-        "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "score": "1 - 0",
+        "source": "fotmob",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "主胜"
       },
       "stats": {
@@ -13412,9 +13398,9 @@
       },
       "settlement": {
         "result": "HIT",
-        "score": "0-1",
-        "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "score": "0 - 1",
+        "source": "fotmob",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "客胜"
       },
       "stats": {
@@ -13656,10 +13642,10 @@
       },
       "settlement": {
         "result": "HIT",
-        "score": "1-2",
-        "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
-        "outcome": "客不败"
+        "score": "1 - 2",
+        "source": "fotmob",
+        "settled_at": "2026-10-21T20:10:27",
+        "outcome": "客胜"
       },
       "stats": {
         "home": {
@@ -13897,7 +13883,7 @@
         "result": "HIT",
         "score": "3-2",
         "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "主胜"
       },
       "stats": {
@@ -14140,7 +14126,7 @@
         "result": "HIT",
         "score": "2-5",
         "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "客胜"
       },
       "stats": {
@@ -14380,7 +14366,7 @@
         "result": "MISS",
         "score": "0-3",
         "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "客胜"
       },
       "stats": {
@@ -14619,7 +14605,7 @@
         "result": "HIT",
         "score": "2-1",
         "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "主胜"
       },
       "stats": {
@@ -14786,7 +14772,7 @@
       "consensus_ratio": 86.8,
       "tip": "让负",
       "score": "4-1",
-      "result": "MISS",
+      "result": "HIT",
       "analysis": "皇马对阵塞维利亚，官方单开让球胜平负(-2)，战术首选【让平/防让胜】。",
       "dossier": {
         "summary": "让胜/博穿盘，四维综合共识度 86.8%\\由此",
@@ -14865,10 +14851,10 @@
         "sha256": "db82eacdecd8a70adeb7bac3d125521b1972d3c5301859819f64251bd25bca9a"
       },
       "settlement": {
-        "result": "MISS",
+        "result": "HIT",
         "score": "4-1",
         "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "让胜"
       },
       "stats": {
@@ -15035,7 +15021,7 @@
       "consensus_ratio": 65.0,
       "tip": "让负",
       "score": "1-2",
-      "result": "HIT",
+      "result": "MISS",
       "analysis": "弗鲁米嫩对阵桑托斯，基于赔率与可得情报的研判首选【主不败/首选主胜】。",
       "dossier": {
         "summary": "主不败/首选主胜，四维综合共识度 76.9%\\由此",
@@ -15113,10 +15099,10 @@
         "sha256": "c3dfb87e8a094a6a8d6b1feb8785d25a622d72209f07bf3327c5bfc171e2904e"
       },
       "settlement": {
-        "result": "HIT",
+        "result": "MISS",
         "score": "1-2",
         "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "让负"
       },
       "stats": {
@@ -15283,7 +15269,7 @@
       "consensus_ratio": 65.0,
       "tip": "让负",
       "score": "4-0",
-      "result": "MISS",
+      "result": "HIT",
       "analysis": "蒙扎对阵卡利亚里，基于赔率与可得情报的研判首选【主不败/首选主胜】。",
       "dossier": {
         "summary": "主不败/首选主胜，四维综合共识度 76.6%\\由此",
@@ -15360,10 +15346,10 @@
         "finished": true
       },
       "settlement": {
-        "result": "MISS",
+        "result": "HIT",
         "score": "4-0",
         "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "主胜"
       },
       "stats": {
@@ -15601,8 +15587,8 @@
         "result": "HIT",
         "score": "1-2",
         "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
-        "outcome": "客不败"
+        "settled_at": "2026-10-21T20:10:27",
+        "outcome": "客胜"
       },
       "stats": {
         "home": {
@@ -15848,7 +15834,7 @@
         "result": "HIT",
         "score": "0-3",
         "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "客胜"
       },
       "stats": {
@@ -16096,8 +16082,8 @@
         "result": "HIT",
         "score": "0-3",
         "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
-        "outcome": "客不败"
+        "settled_at": "2026-10-21T20:10:27",
+        "outcome": "客胜"
       },
       "stats": {
         "home": {
@@ -16333,13 +16319,13 @@
         "result": "HIT",
         "score": "2-1",
         "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "主胜"
       },
       "score_conflict": {
         "local": "2 - 1",
         "fotmob": "3 - 1",
-        "at": "2026-10-21 20:06:07"
+        "at": "2026-10-21 20:10:06"
       },
       "stats": {
         "home": {
@@ -16562,8 +16548,8 @@
         "result": "HIT",
         "score": "1-1",
         "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
-        "outcome": "客不败"
+        "settled_at": "2026-10-21T20:10:27",
+        "outcome": "平局"
       },
       "stats": {
         "home": {
@@ -16809,7 +16795,7 @@
         "result": "MISS",
         "score": "1-2",
         "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "客胜"
       },
       "stats": {
@@ -16976,7 +16962,7 @@
       "consensus_ratio": 74.1,
       "tip": "主胜/防平",
       "score": "1-1",
-      "result": "HIT",
+      "result": "MISS",
       "analysis": "科林蒂安对阵维多利亚，基于赔率与可得情报的研判首选【主胜】。",
       "dossier": {
         "summary": "主胜，四维综合共识度 78.4%\\由此",
@@ -17053,10 +17039,10 @@
         "finished": true
       },
       "settlement": {
-        "result": "HIT",
+        "result": "MISS",
         "score": "1-1",
         "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "平局"
       },
       "stats": {
@@ -17437,7 +17423,7 @@
         "result": "MISS",
         "score": "2-2",
         "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "平局"
       }
     },
@@ -17637,7 +17623,7 @@
         "result": "HIT",
         "score": "1-2",
         "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "客胜"
       }
     },
@@ -17691,7 +17677,7 @@
         "1-1"
       ],
       "score": "1-1",
-      "result": "HIT",
+      "result": "MISS",
       "analysis": "伍尔弗汉普顿对阵朴次茅斯，三模型对抗研判首选【主胜】。",
       "dossier": {
         "summary": "伍尔弗汉普顿对阵朴次茅斯，三模型对抗研判首选【主胜】。",
@@ -17843,10 +17829,10 @@
       },
       "locked": true,
       "settlement": {
-        "result": "HIT",
+        "result": "MISS",
         "score": "1-1",
         "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "平局"
       },
       "predicted_goals": [
@@ -18110,7 +18096,7 @@
         "result": "HIT",
         "score": "4-3",
         "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "主胜"
       }
     },
@@ -18361,8 +18347,8 @@
         "result": "HIT",
         "score": "4-0",
         "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
-        "outcome": "主胜"
+        "settled_at": "2026-10-21T20:10:27",
+        "outcome": "让胜"
       }
     },
     {
@@ -18415,7 +18401,7 @@
         "0-3"
       ],
       "score": "4-2",
-      "result": "MISS",
+      "result": "HIT",
       "analysis": "巴黎圣曼对阵巴萨，三模型对抗研判首选【主不败/首选主胜】。",
       "dossier": {
         "summary": "巴黎圣曼对阵巴萨，三模型对抗研判首选【主不败/首选主胜】。",
@@ -18639,11 +18625,11 @@
         "finished": true
       },
       "settlement": {
-        "result": "MISS",
+        "result": "HIT",
         "score": "4-2",
         "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
-        "outcome": "让胜"
+        "settled_at": "2026-10-21T20:10:27",
+        "outcome": "主胜"
       }
     },
     {
@@ -18921,7 +18907,7 @@
         "result": "HIT",
         "score": "4-3",
         "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "主胜"
       }
     },
@@ -19173,8 +19159,8 @@
         "result": "HIT",
         "score": "5-1",
         "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
-        "outcome": "主胜"
+        "settled_at": "2026-10-21T20:10:27",
+        "outcome": "让胜"
       }
     },
     {
@@ -19227,7 +19213,7 @@
         "1-1"
       ],
       "score": "1-1",
-      "result": "HIT",
+      "result": "MISS",
       "analysis": "斯图加特对阵马竞，三模型对抗研判首选【客胜】。",
       "dossier": {
         "summary": "斯图加特对阵马竞，三模型对抗研判首选【客胜】。",
@@ -19421,10 +19407,10 @@
       },
       "locked": true,
       "settlement": {
-        "result": "HIT",
+        "result": "MISS",
         "score": "1-1",
         "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "平局"
       }
     },
@@ -19688,7 +19674,7 @@
         "result": "MISS",
         "score": "0-1",
         "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "客胜"
       }
     },
@@ -19948,7 +19934,7 @@
         "result": "HIT",
         "score": "0-0",
         "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
+        "settled_at": "2026-10-21T20:10:27",
         "outcome": "平局"
       }
     },
@@ -19960,7 +19946,7 @@
       "away": "神户胜利",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "进行中 · 下半场",
+      "status": "已完赛",
       "form_home": [
         "W",
         "D",
@@ -20002,7 +19988,7 @@
         "1-2"
       ],
       "score": "2-1",
-      "result": "PENDING",
+      "result": "HIT",
       "analysis": "川崎前锋对阵神户胜利，三模型对抗研判首选【主不败/首选主胜】。",
       "dossier": {
         "summary": "川崎前锋对阵神户胜利，多因子量化研判核心首选【让负/防让平】。",
@@ -20204,7 +20190,14 @@
         "2",
         "3"
       ],
-      "locked": true
+      "locked": true,
+      "settlement": {
+        "result": "HIT",
+        "score": "2-1",
+        "source": "stored_score",
+        "settled_at": "2026-10-21T20:10:27",
+        "outcome": "主胜"
+      }
     },
     {
       "code": "周三003",
@@ -20256,7 +20249,7 @@
         "1-2"
       ],
       "score": "0-3",
-      "result": "HIT",
+      "result": "MISS",
       "analysis": "大宫松鼠RB对阵富山胜利，三模型对抗研判首选【主不败/首选主胜】。",
       "dossier": {
         "summary": "大宫松鼠RB对阵富山胜利，多因子量化研判核心首选【让负】。",
@@ -20425,11 +20418,11 @@
       ],
       "locked": true,
       "settlement": {
-        "result": "HIT",
+        "result": "MISS",
         "score": "0-3",
         "source": "stored_score",
-        "settled_at": "2026-10-21T20:12:23",
-        "outcome": "让负"
+        "settled_at": "2026-10-21T20:10:27",
+        "outcome": "客胜"
       }
     },
     {
