@@ -1,7 +1,19 @@
 {
-  "updated_at": "2026-10-22 00:21:14",
+  "updated_at": "2026-10-22 01:11:28",
   "total_tips": 14,
   "live_feed": [
+    {
+      "id": 3686,
+      "channel": "Free365Tips",
+      "time": "2026-10-22 01:05",
+      "code": "周三010",
+      "league": "欧冠",
+      "category": "推单·已开赛",
+      "is_tip": true,
+      "match": "拜仁 VS 阿森纳",
+      "chinese": "欧洲料子硬推大球！拜仁刚轰了莱比锡6个，近18场狂出17场大；枪手最近5战4场大球，火力全开。欧指大2.5低水1.60被资金硬砸，本场防守靠不住，首选3球起步。",
+      "original": "⚽️ UEFA Champions League 🇪🇺 ⠀ 🇩🇪 Bayern 🆚 Arsenal 🏴 ⠀ • In the last meeting between the teams, Arsenal won 3-1. • Bayern are coming off a 6-1 win against Leipzi"
+    },
     {
       "id": 3668,
       "channel": "TipstrrTips",
@@ -157,7 +169,9 @@
       "match": "科莫 VS 曼联",
       "chinese": "欧前线最新风向：客队曼联热度不减，主力框架齐整，外界资金防一手冷平，倾向曼联客场不败（双平/让平让负）。客胜及平局回报适中，本场防守反击是关键，看好红魔客场保平争胜。",
       "original": "⭐ SUPER SINGLE TIP - 21-10-2026 Como vs Manchester United World: UEFA Champions League Prediction: Away Win or Draw (1.74) 🔗 View Details ⚠️ All predictions are"
-    },
+    }
+  ],
+  "archived": [
     {
       "id": 3162,
       "channel": "tribuna_football",
@@ -169,9 +183,7 @@
       "match": "拜仁 VS 阿森纳",
       "chinese": "阿森纳本季欧冠零失球防线遇大考。拜仁主场火力凶猛，机构给到拜仁让步微弱，资金有搏枪手不败趋势。枪手立足防反，此役恶战首选防守绞杀，走双平稳妥，看好小比分2球封顶。",
       "original": "Arsenal are the only team yet to concede a goal in this season’s Champions League! 🔒 Their next opponents? Bayern Munich ⚡️ 📲 Follow your favourite club in our "
-    }
-  ],
-  "archived": [
+    },
     {
       "id": 3511,
       "channel": "olimpbet",
