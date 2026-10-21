@@ -1,7 +1,19 @@
 {
-  "updated_at": "2026-10-22 01:36:12",
+  "updated_at": "2026-10-22 02:06:41",
   "total_tips": 14,
   "live_feed": [
+    {
+      "id": 3707,
+      "channel": "footballbettingtips10",
+      "time": "2026-10-22 01:57",
+      "code": "周三004",
+      "league": "欧冠",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "科莫 VS 曼联",
+      "chinese": "兄弟们看一眼，海外车头砸了35镑起步冲挑战，硬顶科莫打曼联全场出大球（至少3球）。纯纯的跟风追大资金流，没掏伤停和阵眼，机构赔付给得高，提防假球假盘，谨慎防个2球小。",
+      "original": "BET 2 my TRAIN CHALLENGE £25 - £1,000 NO DELAYS WITH MY TRAINS ! WE GO AGAIN 🇮🇹 🇮🇹 🇮🇹 EMERGENCY TRAIN DEPLOYED Those of you WITHOUT a MIDNITE account get £30 in"
+    },
     {
       "id": 3676,
       "channel": "calciomercato",
@@ -157,7 +169,9 @@
       "match": "贝蒂斯 VS 费耶诺德",
       "chinese": "费耶诺德客场后防直接漏成筛子，上个客场被狂灌5球，防守端完全不设防。贝蒂斯主场战力向来凶猛，本场盘口利好主队进攻，防线隐患直指大球，看好贝蒂斯主胜打底，进球数至少3球起步。",
       "original": "2/2 🤯 Viking away games with over 2.5 and both teams scoring. At Villa. Champions League 21 Oct: THE NUMBERS 📊 👉 Swipe through all 9 matches before kick-off. 🔥 "
-    },
+    }
+  ],
+  "archived": [
     {
       "id": 3545,
       "channel": "matchplug",
@@ -169,9 +183,7 @@
       "match": "科莫 VS 曼联",
       "chinese": "欧冠焦点战科莫打曼联，海外主力资金正疯狂砸向全场至少进3球的大比分，2.5大赔率被狠狠压到1.59超低位，防守端两边都漏，这架势对攻局没跑，无脑冲大球！",
       "original": "FOOTBALL CHAMPIONS LEAGUE COMO VS MANCHESTER UTD OVER 2.5 GOALS ODDS : 1.59"
-    }
-  ],
-  "archived": [
+    },
     {
       "id": 3524,
       "channel": "victorspredict",
