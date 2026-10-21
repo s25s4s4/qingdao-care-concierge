@@ -22811,7 +22811,7 @@
         "tipster_score": 77.0,
         "math_score": 77.0
       },
-      "tip": "客胜",
+      "tip": "客胜/防平",
       "predicted_scores": [
         "1-2",
         "0-2",
@@ -22989,7 +22989,11 @@
         "h2h": null,
         "source": "本地竞彩历史库"
       },
-      "stats_ts": "2026-10-21 11:06:45"
+      "stats_ts": "2026-10-21 11:06:45",
+      "predicted_goals": [
+        "2",
+        "3"
+      ]
     },
     {
       "code": "周四002",
@@ -24099,7 +24103,7 @@
         "tipster_score": 82.0,
         "math_score": 77.0
       },
-      "tip": "客胜",
+      "tip": "客胜/防平",
       "predicted_scores": [
         "1-2",
         "0-2",
@@ -24277,7 +24281,11 @@
         "h2h": null,
         "source": "本地竞彩历史库"
       },
-      "stats_ts": "2026-10-21 11:06:45"
+      "stats_ts": "2026-10-21 11:06:45",
+      "predicted_goals": [
+        "2",
+        "3"
+      ]
     },
     {
       "code": "周四008",
