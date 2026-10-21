@@ -1,7 +1,19 @@
 {
-  "updated_at": "2026-10-21 16:00:47",
-  "total_tips": 4,
+  "updated_at": "2026-10-21 16:45:50",
+  "total_tips": 5,
   "live_feed": [
+    {
+      "id": 3545,
+      "channel": "matchplug",
+      "time": "2026-10-21 16:40",
+      "code": "周三004",
+      "league": "欧冠",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "科莫 VS 曼联",
+      "chinese": "欧冠焦点战科莫打曼联，海外主力资金正疯狂砸向全场至少进3球的大比分，2.5大赔率被狠狠压到1.59超低位，防守端两边都漏，这架势对攻局没跑，无脑冲大球！",
+      "original": "FOOTBALL CHAMPIONS LEAGUE COMO VS MANCHESTER UTD OVER 2.5 GOALS ODDS : 1.59"
+    },
     {
       "id": 3524,
       "channel": "victorspredict",
