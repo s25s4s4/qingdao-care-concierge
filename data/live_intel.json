@@ -1,7 +1,19 @@
 {
-  "updated_at": "2026-10-21 16:50:48",
-  "total_tips": 6,
+  "updated_at": "2026-10-21 17:00:48",
+  "total_tips": 7,
   "live_feed": [
+    {
+      "id": 3525,
+      "channel": "victorspredict",
+      "time": "2026-10-21 16:00",
+      "code": "周三008",
+      "league": "欧冠",
+      "category": "推单",
+      "is_tip": true,
+      "match": "维拉 VS 维京",
+      "chinese": "维拉打维京欧洲庄家一致走主胜，超低赔防范拉满，维拉主场压制力巨大。这料就是冲稳胆去的，客队毫无抵抗空间，单选主胜做胆稳当，防大胜直接穿盘。",
+      "original": "🏆 BANKER TIPS - 21-10-2026 Aston Villa vs Viking World: UEFA Champions League Prediction: Home (1.26) 🔗 View Details Persija vs Arema FC Indonesia: Liga 1 Predi"
+    },
     {
       "id": 3521,
       "channel": "bulletbetpredictions",
