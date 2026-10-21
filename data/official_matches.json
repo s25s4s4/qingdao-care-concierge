@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-21 17:06:27",
+  "updated_at": "2026-10-21 17:09:27",
   "total": 108,
   "matches": [
     {
@@ -32,7 +32,7 @@
       ],
       "consensus": "主不败/防平 (68.6%)",
       "consensus_ratio": 68.6,
-      "tip": "主不败/防平",
+      "tip": "主胜/防平",
       "score": "0-0",
       "result": "HIT",
       "analysis": "悉尼同城德比对抗强度极大，两队休赛期后首战动作拘谨。悉尼FC控球占据微弱优势但破密防手段单一，西悉尼打法粗犷频繁通过犯规切碎比赛节奏，中场缠斗导致进球难产。",
@@ -52,14 +52,13 @@
       "sale_closed": true,
       "locked": true,
       "predicted_scores": [
-        "0-0",
         "1-0",
+        "2-1",
         "1-1"
       ],
       "predicted_goals": [
-        "0",
-        "1",
-        "2"
+        "2",
+        "3"
       ],
       "is_single": false,
       "provenance": {
@@ -232,7 +231,7 @@
       ],
       "consensus": "主不败/防平 (67.6%)",
       "consensus_ratio": 67.6,
-      "tip": "主不败/防平",
+      "tip": "让负",
       "score": "1-1",
       "result": "HIT",
       "analysis": "纽伦堡前场反击极其犀利，客战抓转换进攻效率极高；科特布斯主场球风崇尚进攻，前场压迫投入兵力过多，后防肋部频繁暴露空档，两队陷入大开大合的互攻对捅节奏。",
@@ -253,9 +252,11 @@
       "locked": true,
       "predicted_scores": [
         "1-1",
-        "2-1"
+        "0-1",
+        "1-2"
       ],
       "predicted_goals": [
+        "1",
         "2",
         "3"
       ],
@@ -406,12 +407,11 @@
       "sale_closed": true,
       "locked": true,
       "predicted_scores": [
-        "0-1",
         "0-2",
-        "1-2"
+        "1-2",
+        "0-3"
       ],
       "predicted_goals": [
-        "1",
         "2",
         "3"
       ],
@@ -453,7 +453,7 @@
         "result": "HIT",
         "score": "0-2",
         "source": "stored_score",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "客胜"
       },
       "stats": {
@@ -618,7 +618,7 @@
       ],
       "consensus": "主胜 (72.1%)",
       "consensus_ratio": 72.1,
-      "tip": "主胜",
+      "tip": "主胜/防平",
       "score": "4-0",
       "result": "HIT",
       "analysis": "海伦芬主场进攻节奏极快，两翼边锋内切射门威胁大；SBV精英客场防守整体退缩严重，禁区弧顶保护不足，海伦芬远射与二次进攻机会充裕，主胜正路打出。",
@@ -638,9 +638,9 @@
       "sale_closed": true,
       "locked": true,
       "predicted_scores": [
-        "2-0",
-        "3-0",
-        "2-1"
+        "1-0",
+        "2-1",
+        "1-1"
       ],
       "predicted_goals": [
         "2",
@@ -684,7 +684,7 @@
         "result": "HIT",
         "score": "4-0",
         "source": "stored_score",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "主胜"
       },
       "stats": {
@@ -849,7 +849,7 @@
       ],
       "consensus": "主胜/让胜 (71.7%)",
       "consensus_ratio": 71.7,
-      "tip": "让胜",
+      "tip": "主胜/防平",
       "score": "2-1",
       "result": "HIT",
       "analysis": "登博思状态极佳，中前场串联行云流水；奥斯遭遇客场连败士气低迷，后防注意力不集中，登博思开场猛攻抢开局战术效果显著，常规时间分差大概率拉开。",
@@ -869,14 +869,13 @@
       "sale_closed": true,
       "locked": true,
       "predicted_scores": [
-        "2-0",
-        "3-1",
-        "3-0"
+        "1-0",
+        "2-1",
+        "1-1"
       ],
       "predicted_goals": [
         "2",
-        "3",
-        "4"
+        "3"
       ],
       "is_single": false,
       "provenance": {
@@ -916,7 +915,7 @@
         "result": "HIT",
         "score": "2-1",
         "source": "stored_score",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "主胜"
       },
       "stats": {
@@ -1106,7 +1105,6 @@
         "1-1"
       ],
       "predicted_goals": [
-        "1",
         "2",
         "3"
       ],
@@ -1148,7 +1146,7 @@
         "result": "HIT",
         "score": "1-0",
         "source": "stored_score",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "主胜"
       },
       "stats": {
@@ -1313,7 +1311,7 @@
       ],
       "consensus": "客不败/防平 (71.2%)",
       "consensus_ratio": 71.2,
-      "tip": "客不败/防平",
+      "tip": "让负",
       "score": "4-2",
       "result": "MISS",
       "analysis": "萨索洛前场由贝拉尔迪领衔，小范围撞墙配合默契极高；弗洛西诺内主场逼抢强硬但防线转身慢是致命死穴，萨索洛反击刀刀见血，双方进球几率极高。",
@@ -1334,13 +1332,13 @@
       "locked": true,
       "predicted_scores": [
         "1-1",
-        "1-2",
-        "2-2"
+        "0-1",
+        "1-2"
       ],
       "predicted_goals": [
+        "1",
         "2",
-        "3",
-        "4"
+        "3"
       ],
       "pathology": "主队搏命狂攻打乱阵脚，萨索洛客战防线过早脱节，互攻对捅中防守彻底崩盘。",
       "is_single": false,
@@ -1381,7 +1379,7 @@
         "result": "MISS",
         "score": "4-2",
         "source": "stored_score",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "主胜"
       },
       "stats": {
@@ -1546,7 +1544,7 @@
       ],
       "consensus": "客胜 (66.6%)",
       "consensus_ratio": 66.6,
-      "tip": "客胜",
+      "tip": "让负",
       "score": "0-3",
       "result": "HIT",
       "analysis": "图卢兹法甲正规军身体与脚下技术全方位碾压；勒芒低级别球队主场虽斗志昂扬，但后场传球失误率高，图卢兹高位逼抢容易就地断球反击破门。",
@@ -1566,11 +1564,12 @@
       "sale_closed": true,
       "locked": true,
       "predicted_scores": [
-        "0-2",
-        "1-2",
-        "0-3"
+        "1-1",
+        "0-1",
+        "1-2"
       ],
       "predicted_goals": [
+        "1",
         "2",
         "3"
       ],
@@ -1612,7 +1611,7 @@
         "result": "HIT",
         "score": "0-3",
         "source": "stored_score",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "客胜"
       },
       "stats": {
@@ -1753,7 +1752,7 @@
       ],
       "consensus": "客不败/防平 (67.2%)",
       "consensus_ratio": 67.2,
-      "tip": "客不败/防平",
+      "tip": "客胜/防平",
       "score": "1-2",
       "result": "HIT",
       "analysis": "狼队英超主力前锋库尼亚与黄喜灿反击冲击力顶级；伯恩利主场球风硬朗高空球威胁大，双方攻防势均力敌，狼队反击效率稍占优势，客不败格局明朗。",
@@ -1773,12 +1772,11 @@
       "sale_closed": true,
       "locked": true,
       "predicted_scores": [
-        "1-1",
+        "0-1",
         "1-2",
-        "0-1"
+        "1-1"
       ],
       "predicted_goals": [
-        "1",
         "2",
         "3"
       ],
@@ -1820,7 +1818,7 @@
         "result": "HIT",
         "score": "1-2",
         "source": "stored_score",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "客胜"
       },
       "stats": {
@@ -1911,7 +1909,7 @@
       ],
       "consensus": "主不败/首选平 (68.6%)",
       "consensus_ratio": 68.6,
-      "tip": "主不败/首选平",
+      "tip": "主胜/防平",
       "score": "1-1",
       "result": "HIT",
       "analysis": "拉科鲁尼亚主场防守坚壁清野，后腰拦截覆盖面广；莱万特客战打法求稳缺乏锋线单兵爆破点，两队均无绝对把握击穿对手防线，场面极易陷入胶着互交白卷。",
@@ -1931,14 +1929,13 @@
       "sale_closed": true,
       "locked": true,
       "predicted_scores": [
-        "0-0",
-        "1-1",
-        "1-0"
+        "1-0",
+        "2-1",
+        "1-1"
       ],
       "predicted_goals": [
-        "0",
-        "1",
-        "2"
+        "2",
+        "3"
       ],
       "is_single": false,
       "provenance": {
@@ -1978,7 +1975,7 @@
         "result": "HIT",
         "score": "1-1",
         "source": "stored_score",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "平局"
       },
       "stats": {
@@ -2143,7 +2140,7 @@
       ],
       "consensus": "平局/主不败 (67.9%)",
       "consensus_ratio": 67.9,
-      "tip": "平局/主不败",
+      "tip": "主胜/防平",
       "score": "2-0",
       "result": "HIT",
       "analysis": "米拉索尔坐拥高温高湿主场地利，主场跑动消耗极大；巴西国际长途飞行体能严重受限，阵容轮换部分老将，客场控节奏保平意图浓厚，小比分防守战首选。",
@@ -2163,14 +2160,13 @@
       "sale_closed": true,
       "locked": true,
       "predicted_scores": [
-        "0-0",
         "1-0",
+        "2-1",
         "1-1"
       ],
       "predicted_goals": [
-        "0",
-        "1",
-        "2"
+        "2",
+        "3"
       ],
       "is_single": false,
       "provenance": {
@@ -2210,7 +2206,7 @@
         "result": "HIT",
         "score": "2-0",
         "source": "stored_score",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "主胜"
       },
       "stats": {
@@ -2370,8 +2366,8 @@
       },
       "sale_closed": true,
       "predicted_scores": [
+        "1-0",
         "2-1",
-        "2-0",
         "1-1"
       ],
       "locked": true,
@@ -2421,7 +2417,7 @@
         "result": "HIT",
         "score": "2 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "主胜"
       },
       "stats": {
@@ -2562,7 +2558,7 @@
       ],
       "consensus": "主胜 (死胆) (78.6%)",
       "consensus_ratio": 78.6,
-      "tip": "主胜 (死胆)",
+      "tip": "主胜",
       "score": "2-0",
       "result": "HIT",
       "analysis": "鹿岛鹿角全主力出击杯赛志在必得，铃木优磨与知念庆锋线状态正值火热；长崎航海联赛保级压力缠身派遣大量替补练兵，鹿岛鹿角攻防碾压打穿对手。",
@@ -2582,14 +2578,13 @@
       "sale_closed": true,
       "predicted_scores": [
         "2-0",
-        "3-0",
+        "2-1",
         "3-1"
       ],
       "locked": true,
       "predicted_goals": [
         "2",
-        "3",
-        "4"
+        "3"
       ],
       "is_single": false,
       "provenance": {
@@ -2633,7 +2628,7 @@
         "result": "HIT",
         "score": "2 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "主胜"
       },
       "stats": {
@@ -2818,8 +2813,8 @@
       "sale_closed": true,
       "predicted_scores": [
         "2-0",
-        "3-0",
-        "2-1"
+        "2-1",
+        "3-1"
       ],
       "locked": true,
       "predicted_goals": [
@@ -2868,7 +2863,7 @@
         "result": "HIT",
         "score": "2 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "主胜"
       },
       "stats": {
@@ -3019,7 +3014,7 @@
       ],
       "consensus": "平局/客不败 (65.0%)",
       "consensus_ratio": 65.0,
-      "tip": "平局/客不败",
+      "tip": "客胜/防平",
       "score": "2-2",
       "result": "HIT",
       "analysis": "中央海岸水手多名夺冠功勋离队导致防线重组阵痛明显；纽卡斯尔喷气机季前赛展现出极佳的防守反击硬度，水手阵地战久攻不下极易被客队偷袭得手。",
@@ -3038,13 +3033,12 @@
       },
       "sale_closed": true,
       "predicted_scores": [
-        "1-1",
+        "0-1",
         "1-2",
-        "0-1"
+        "1-1"
       ],
       "locked": true,
       "predicted_goals": [
-        "1",
         "2",
         "3"
       ],
@@ -3090,7 +3084,7 @@
         "result": "HIT",
         "score": "2 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "平局"
       },
       "stats": {
@@ -3255,7 +3249,7 @@
       ],
       "consensus": "平局/主胜 (68.9%)",
       "consensus_ratio": 68.9,
-      "tip": "平局/主胜",
+      "tip": "主胜/防平",
       "score": "1-3",
       "result": "MISS",
       "analysis": "柏太阳神近4个主场保持不败，中场拦截硬度极高；名古屋鲸八客场攻坚过于依赖单一支点容易被针对限制，柏太阳神主场立足防守保平争胜。",
@@ -3275,12 +3269,11 @@
       "sale_closed": true,
       "predicted_scores": [
         "1-0",
-        "1-1",
-        "2-1"
+        "2-1",
+        "1-1"
       ],
       "locked": true,
       "predicted_goals": [
-        "1",
         "2",
         "3"
       ],
@@ -3327,7 +3320,7 @@
         "result": "MISS",
         "score": "1 - 3",
         "source": "fotmob",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "客胜"
       },
       "stats": {
@@ -3492,7 +3485,7 @@
       ],
       "consensus": "主不败 (65.0%)",
       "consensus_ratio": 65.0,
-      "tip": "主不败",
+      "tip": "主胜/防平",
       "score": "1-1",
       "result": "HIT",
       "analysis": "宫崎惊奇牛鸟主场战绩位居联赛前列，高空球与定位球冲击力极大；磐田喜悦近期客战防线注意力涣散失误频频，平手盘面下主队爆冷抢分概率极高。",
@@ -3512,12 +3505,11 @@
       "sale_closed": true,
       "predicted_scores": [
         "1-0",
-        "1-1",
-        "2-1"
+        "2-1",
+        "1-1"
       ],
       "locked": true,
       "predicted_goals": [
-        "1",
         "2",
         "3"
       ],
@@ -3563,7 +3555,7 @@
         "result": "HIT",
         "score": "1 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "平局"
       },
       "stats": {
@@ -3654,7 +3646,7 @@
       ],
       "consensus": "客胜/防平 (65.0%)",
       "consensus_ratio": 65.0,
-      "tip": "客胜/防平",
+      "tip": "让负",
       "score": "0-2",
       "result": "HIT",
       "analysis": "切尔西由帕尔默与恩佐掌控中场枢纽，边路冲击力凶悍；埃弗顿古迪逊公园主场对抗极其血腥擅长高空轰炸，切尔西控球虽优但极难防住埃弗顿的定位球乱战，防冷平。",
@@ -3674,14 +3666,14 @@
       "sale_closed": true,
       "predicted_scores": [
         "1-1",
-        "1-2",
-        "2-2"
+        "0-1",
+        "1-2"
       ],
       "locked": true,
       "predicted_goals": [
+        "1",
         "2",
-        "3",
-        "4"
+        "3"
       ],
       "is_single": false,
       "provenance": {
@@ -3725,7 +3717,7 @@
         "result": "HIT",
         "score": "0 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "客胜"
       },
       "stats": {
@@ -3890,7 +3882,7 @@
       ],
       "consensus": "主不败/首选主胜 (67.9%)",
       "consensus_ratio": 67.9,
-      "tip": "主不败/首选主胜",
+      "tip": "主胜/防平",
       "score": "2-2",
       "result": "HIT",
       "analysis": "米尔沃尔对阵林肯城，攻防节奏对抗激烈，战术建议【主不败/首选主胜】。",
@@ -3910,14 +3902,13 @@
         "math_score": 67.2
       },
       "predicted_scores": [
-        "1-1",
-        "2-2",
-        "2-1"
+        "1-0",
+        "2-1",
+        "1-1"
       ],
       "predicted_goals": [
         "2",
-        "3",
-        "4"
+        "3"
       ],
       "is_single": false,
       "provenance": {
@@ -3957,7 +3948,7 @@
         "result": "HIT",
         "score": "2 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "平局"
       },
       "stats": {
@@ -4098,7 +4089,7 @@
       ],
       "consensus": "客胜 (69.8%)",
       "consensus_ratio": 69.8,
-      "tip": "客胜",
+      "tip": "客胜/防平",
       "score": "0-1",
       "result": "HIT",
       "analysis": "马竞在西蒙尼麾下防守反击密不透风，阿尔瓦雷斯跑位穿透力强；西班牙人后卫线转身慢容易出现回传失误，马竞客战节奏掌控游刃有余，零封取胜希望大。",
@@ -4118,12 +4109,11 @@
       "sale_closed": true,
       "predicted_scores": [
         "0-1",
-        "0-2",
-        "1-2"
+        "1-2",
+        "1-1"
       ],
       "locked": true,
       "predicted_goals": [
-        "1",
         "2",
         "3"
       ],
@@ -4169,7 +4159,7 @@
         "result": "HIT",
         "score": "0 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "客胜"
       },
       "stats": {
@@ -4334,7 +4324,7 @@
       ],
       "consensus": "主不败/首选主胜 (65.0%)",
       "consensus_ratio": 65.0,
-      "tip": "主不败/首选主胜",
+      "tip": "让负",
       "score": "0-2",
       "result": "MISS",
       "analysis": "汉坎对阵博德闪耀，攻防节奏对抗激烈，战术建议【主不败/首选主胜】。",
@@ -4355,13 +4345,13 @@
       },
       "predicted_scores": [
         "1-1",
-        "2-2",
-        "2-1"
+        "0-1",
+        "1-2"
       ],
       "predicted_goals": [
+        "1",
         "2",
-        "3",
-        "4"
+        "3"
       ],
       "pathology": "盲判汉坎主场铁桶战意，严重轻视了博德闪耀攻坚阵地的绝对硬实力，遭层级碾压。",
       "is_single": false,
@@ -4402,7 +4392,7 @@
         "result": "MISS",
         "score": "0-2",
         "source": "stored_score",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "客胜"
       },
       "stats": {
@@ -4567,7 +4557,7 @@
       ],
       "consensus": "客胜 (死胆) (66.1%)",
       "consensus_ratio": 66.1,
-      "tip": "客胜 (死胆)",
+      "tip": "客胜/防平",
       "score": "1-0",
       "result": "MISS",
       "analysis": "孔蒂治下的那不勒斯战术纪律严苛，卢卡库在前场支点分球作用极其恐怖；威尼斯深陷保级泥潭后防场均丢球近2个，面对那不勒斯立体轰炸防线难免崩溃。",
@@ -4586,15 +4576,14 @@
       },
       "sale_closed": true,
       "predicted_scores": [
-        "0-2",
-        "0-3",
-        "1-3"
+        "0-1",
+        "1-2",
+        "1-1"
       ],
       "locked": true,
       "predicted_goals": [
         "2",
-        "3",
-        "4"
+        "3"
       ],
       "pathology": "盲信客胜死胆，德布劳内失点且破密防受阻，威尼斯借主场搏命铁桶阵偷袭爆冷。",
       "is_single": false,
@@ -4639,7 +4628,7 @@
         "result": "MISS",
         "score": "1 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "主胜"
       },
       "stats": {
@@ -4794,7 +4783,7 @@
       ],
       "consensus": "主不败/首选主胜 (81.7%)",
       "consensus_ratio": 81.7,
-      "tip": "主不败/首选主胜",
+      "tip": "主胜",
       "score": "4-0",
       "result": "HIT",
       "analysis": "赫尔辛基对阵赫尔辛基火花，攻防节奏对抗激烈，战术建议【主不败/首选主胜】。",
@@ -4814,14 +4803,13 @@
         "math_score": 80.4
       },
       "predicted_scores": [
-        "1-1",
-        "2-2",
-        "2-1"
+        "2-0",
+        "2-1",
+        "3-1"
       ],
       "predicted_goals": [
         "2",
-        "3",
-        "4"
+        "3"
       ],
       "is_single": false,
       "provenance": {
@@ -4861,7 +4849,7 @@
         "result": "HIT",
         "score": "4-0",
         "source": "stored_score",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "主胜"
       },
       "stats": {
@@ -5016,7 +5004,7 @@
       ],
       "consensus": "客不败/防平 (65.0%)",
       "consensus_ratio": 65.0,
-      "tip": "客不败/防平",
+      "tip": "让负",
       "score": "4-3",
       "result": "MISS",
       "analysis": "埃沃斯堡主场风格大开大合敢于对攻；奥格斯堡德甲反击速率远超低级别队伍，双方防线均有较大空档，本场比赛必定演变成大比分对轰大战。",
@@ -5035,15 +5023,15 @@
       },
       "sale_closed": true,
       "predicted_scores": [
-        "2-2",
-        "1-2",
-        "2-3"
+        "1-1",
+        "0-1",
+        "1-2"
       ],
       "locked": true,
       "predicted_goals": [
-        "3",
-        "4",
-        "5"
+        "1",
+        "2",
+        "3"
       ],
       "pathology": "奥格斯堡做客防线严重托大，低估了埃沃斯堡主场反击韧性，半场落后对攻失控吞败。",
       "is_single": false,
@@ -5088,7 +5076,7 @@
         "result": "MISS",
         "score": "4 - 3",
         "source": "fotmob",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "主胜"
       },
       "stats": {
@@ -5243,7 +5231,7 @@
       ],
       "consensus": "主胜 (73.6%)",
       "consensus_ratio": 73.6,
-      "tip": "主胜",
+      "tip": "主胜/防平",
       "score": "2-2",
       "result": "MISS",
       "analysis": "云达不来梅坐拥威悉球场地利，阵地战配合细腻且前场就地反抢凶悍；帕德博恩防线单薄客场抗压不足，不来梅凭借球星个人终结能力足以两球致胜。",
@@ -5262,15 +5250,14 @@
       },
       "sale_closed": true,
       "predicted_scores": [
-        "2-0",
+        "1-0",
         "2-1",
-        "3-1"
+        "1-1"
       ],
       "locked": true,
       "predicted_goals": [
         "2",
-        "3",
-        "4"
+        "3"
       ],
       "pathology": "不来梅领先下防线松懈送点，帕德博恩顽强反击扳平比分，大热主胜防线失守。",
       "is_single": false,
@@ -5315,7 +5302,7 @@
         "result": "MISS",
         "score": "2 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "平局"
       },
       "stats": {
@@ -5480,7 +5467,7 @@
       ],
       "consensus": "客不败/首选平 (65.0%)",
       "consensus_ratio": 65.0,
-      "tip": "客不败/首选平",
+      "tip": "让负",
       "score": "0-1",
       "result": "HIT",
       "analysis": "沙尔克04后防失误连连重组困难；美因茨反击速度全欧瞩目，两翼边锋套边下底传中极具威胁，美因茨战术克制沙尔克，客队保平争胜。",
@@ -5499,8 +5486,8 @@
       },
       "sale_closed": true,
       "predicted_scores": [
-        "0-1",
         "1-1",
+        "0-1",
         "1-2"
       ],
       "locked": true,
@@ -5551,7 +5538,7 @@
         "result": "HIT",
         "score": "0 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "客胜"
       },
       "stats": {
@@ -5716,7 +5703,7 @@
       ],
       "consensus": "客胜/进球数大 (67.9%)",
       "consensus_ratio": 67.9,
-      "tip": "客胜/进球数大",
+      "tip": "客胜/防平",
       "score": "1-0",
       "result": "MISS",
       "analysis": "斯图加特攻击火力极其暴烈，前场连续短传推进渗透力极强；汉堡主场防守漏洞巨大后卫盯人不紧，斯图加特客场进球大概率2球以上，客胜大球格局。",
@@ -5735,15 +5722,14 @@
       },
       "sale_closed": true,
       "predicted_scores": [
-        "1-3",
-        "2-3",
-        "1-2"
+        "0-1",
+        "1-2",
+        "1-1"
       ],
       "locked": true,
       "predicted_goals": [
-        "3",
-        "4",
-        "5"
+        "2",
+        "3"
       ],
       "pathology": "汉堡主场紧凑大巴严密设防，斯图加特破局乏力且前场挥霍机会，反遭主队偷袭闷杀。",
       "is_single": false,
@@ -5788,7 +5774,7 @@
         "result": "MISS",
         "score": "1-0",
         "source": "stored_score",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "主胜"
       },
       "stats": {
@@ -5953,7 +5939,7 @@
       ],
       "consensus": "平局/客胜 (69.7%)",
       "consensus_ratio": 69.7,
-      "tip": "平局/客胜",
+      "tip": "客胜/防平",
       "score": "0-0",
       "result": "HIT",
       "analysis": "柏林联合森林球场是著名的豪门杀手，身体绞杀与高空压迫全德甲第一；多特蒙德客场作战容易脱节，多特攻坚受到极大阻力，必须严防平局打出。",
@@ -5972,15 +5958,14 @@
       },
       "sale_closed": true,
       "predicted_scores": [
-        "1-1",
+        "0-1",
         "1-2",
-        "2-2"
+        "1-1"
       ],
       "locked": true,
       "predicted_goals": [
         "2",
-        "3",
-        "4"
+        "3"
       ],
       "pathology": "多特蒙德客场遭遇柏林联合极致肉搏绞杀，全场破密集防守乏术，互交白卷闷平。",
       "is_single": false,
@@ -6025,7 +6010,7 @@
         "result": "HIT",
         "score": "0 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "平局"
       },
       "stats": {
@@ -6190,7 +6175,7 @@
       ],
       "consensus": "主不败/首选平 (65.0%)",
       "consensus_ratio": 65.0,
-      "tip": "主不败/首选平",
+      "tip": "让负",
       "score": "1-2",
       "result": "MISS",
       "analysis": "布伦特福德主场高位反抢专治强队，长传冲吊与手抛球战术威胁大；利物浦客战面临国际比赛日体能透支，防守端偶有漏人，小蜜蜂主场完全有爆冷拿分可能。",
@@ -6210,14 +6195,14 @@
       "sale_closed": true,
       "predicted_scores": [
         "1-1",
-        "2-2",
-        "2-1"
+        "0-1",
+        "1-2"
       ],
       "locked": true,
       "predicted_goals": [
+        "1",
         "2",
-        "3",
-        "4"
+        "3"
       ],
       "pathology": "利物浦后程发力逆转战局，布伦特福德体能耗尽防线终场前失守，主不败防线告破。",
       "is_single": false,
@@ -6262,7 +6247,7 @@
         "result": "MISS",
         "score": "1 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "客胜"
       },
       "stats": {
@@ -6427,7 +6412,7 @@
       ],
       "consensus": "主胜让胜 (死胆) (85.0%)",
       "consensus_ratio": 85.0,
-      "tip": "让胜",
+      "tip": "主胜",
       "score": "3-2",
       "result": "HIT",
       "analysis": "曼城在伊蒂哈德球场统治力绝对压制，哈兰德与德布劳内连线状态神勇；升班马伊普斯维奇后防难以招架曼城持续禁区围攻，正路大胜穿盘。",
@@ -6446,14 +6431,14 @@
       },
       "sale_closed": true,
       "predicted_scores": [
-        "3-0",
-        "4-0",
+        "2-0",
+        "2-1",
         "3-1"
       ],
       "locked": true,
       "predicted_goals": [
-        "3",
-        "4"
+        "2",
+        "3"
       ],
       "is_single": false,
       "provenance": {
@@ -6497,7 +6482,7 @@
         "result": "HIT",
         "score": "3 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "主胜"
       },
       "stats": {
@@ -6638,7 +6623,7 @@
       ],
       "consensus": "主胜 (73.6%)",
       "consensus_ratio": 73.6,
-      "tip": "主胜",
+      "tip": "主胜/防平",
       "score": "1-0",
       "result": "HIT",
       "analysis": "富勒姆主场控球调度极为熟练，两翼突破传中质量高；赫尔城阵容深度不足面对英超高强度逼抢出球困难，富勒姆主场赢球正路。",
@@ -6657,9 +6642,9 @@
       },
       "sale_closed": true,
       "predicted_scores": [
-        "2-0",
+        "1-0",
         "2-1",
-        "3-0"
+        "1-1"
       ],
       "locked": true,
       "predicted_goals": [
@@ -6708,7 +6693,7 @@
         "result": "HIT",
         "score": "1 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "主胜"
       },
       "stats": {
@@ -6893,14 +6878,13 @@
       "sale_closed": true,
       "predicted_scores": [
         "2-0",
-        "3-0",
+        "2-1",
         "3-1"
       ],
       "locked": true,
       "predicted_goals": [
         "2",
-        "3",
-        "4"
+        "3"
       ],
       "pathology": "比利亚雷亚尔面对埃尔切深度密集大巴狂攻不入，终场前破门乏术互交白卷。",
       "is_single": false,
@@ -6945,7 +6929,7 @@
         "result": "MISS",
         "score": "0 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "平局"
       },
       "stats": {
@@ -7180,7 +7164,7 @@
         "result": "HIT",
         "score": "1 - 3",
         "source": "fotmob",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "客胜"
       },
       "stats": {
@@ -7345,7 +7329,7 @@
       ],
       "consensus": "客胜优势 (77%)",
       "consensus_ratio": 77,
-      "tip": "客不败/首选客胜",
+      "tip": "客胜/防平",
       "score": "1-3",
       "result": "HIT",
       "analysis": "博洛尼亚对阵国际米兰，攻防节奏对抗激烈，战术建议【客胜】。",
@@ -7364,13 +7348,12 @@
       },
       "sale_closed": true,
       "predicted_scores": [
-        "1-1",
         "0-1",
-        "1-2"
+        "1-2",
+        "1-1"
       ],
       "locked": true,
       "predicted_goals": [
-        "1",
         "2",
         "3"
       ],
@@ -7416,7 +7399,7 @@
         "result": "HIT",
         "score": "1-3",
         "source": "stored_score",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "客胜"
       },
       "stats": {
@@ -7581,7 +7564,7 @@
       ],
       "consensus": "主不败 (68%)",
       "consensus_ratio": 68,
-      "tip": "主不败/首选主胜",
+      "tip": "让负",
       "score": "0-1",
       "result": "MISS",
       "analysis": "纽卡斯尔对阵维拉，攻防节奏对抗激烈，战术建议【主不败/首选主胜】。",
@@ -7600,15 +7583,15 @@
       },
       "sale_closed": true,
       "predicted_scores": [
-        "2-1",
-        "2-2",
-        "3-2"
+        "1-1",
+        "0-1",
+        "1-2"
       ],
       "locked": true,
       "predicted_goals": [
-        "3",
-        "4",
-        "5"
+        "1",
+        "2",
+        "3"
       ],
       "pathology": "纽卡斯尔半场破密防受阻急躁冒进，攻守脱节遭阿斯顿维拉犀利防反反客为主。",
       "is_single": false,
@@ -7658,7 +7641,7 @@
         "result": "MISS",
         "score": "0-1",
         "source": "stored_score",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "客胜"
       },
       "stats": {
@@ -7823,7 +7806,7 @@
       ],
       "consensus": "让负/首选客不败 (78.5%)",
       "consensus_ratio": 78.5,
-      "tip": "让负",
+      "tip": "让胜",
       "score": "6-1",
       "result": "HIT",
       "analysis": "拜仁主让-2球深盘极难穿盘，莱红牛高效反击极度克制拜仁压上，红蓝对抗审查首选【让负/首选客不败】。",
@@ -7842,8 +7825,9 @@
       },
       "sale_closed": true,
       "predicted_scores": [
-        "1-1",
-        "2-2"
+        "2-0",
+        "3-1",
+        "3-0"
       ],
       "is_only_rq": true,
       "rang": "-2",
@@ -7911,7 +7895,7 @@
         "result": "HIT",
         "score": "6-1",
         "source": "stored_score",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "让胜"
       },
       "stats": {
@@ -8095,15 +8079,14 @@
       },
       "sale_closed": true,
       "predicted_scores": [
+        "0-2",
         "1-2",
-        "1-3",
-        "0-2"
+        "0-3"
       ],
       "locked": true,
       "predicted_goals": [
         "2",
-        "3",
-        "4"
+        "3"
       ],
       "is_single": false,
       "crosscheck": {
@@ -8152,7 +8135,7 @@
         "result": "HIT",
         "score": "2-5",
         "source": "stored_score",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "客胜"
       },
       "stats": {
@@ -8338,13 +8321,12 @@
       "predicted_scores": [
         "0-2",
         "1-2",
-        "1-3"
+        "0-3"
       ],
       "locked": true,
       "predicted_goals": [
         "2",
-        "3",
-        "4"
+        "3"
       ],
       "is_single": false,
       "crosscheck": {
@@ -8393,7 +8375,7 @@
         "result": "HIT",
         "score": "3-4",
         "source": "stored_score",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "客胜"
       },
       "stats": {
@@ -8548,7 +8530,7 @@
       ],
       "consensus": "主胜 (74.8%)",
       "consensus_ratio": 74.8,
-      "tip": "主胜",
+      "tip": "主胜/防平",
       "score": "2-0",
       "result": "HIT",
       "analysis": "罗马对阵热那亚，基于赔率与可得情报的研判首选【主胜】。",
@@ -8567,15 +8549,14 @@
       },
       "sale_closed": true,
       "predicted_scores": [
-        "2-0",
+        "1-0",
         "2-1",
-        "3-1"
+        "1-1"
       ],
       "locked": true,
       "predicted_goals": [
         "2",
-        "3",
-        "4"
+        "3"
       ],
       "is_single": false,
       "crosscheck": {
@@ -8628,7 +8609,7 @@
         "result": "HIT",
         "score": "2-0",
         "source": "stored_score",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "主胜"
       },
       "stats": {
@@ -8793,7 +8774,7 @@
       ],
       "consensus": "客不败 (67%)",
       "consensus_ratio": 67,
-      "tip": "客不败/双选平负",
+      "tip": "客胜/防平",
       "score": "0-0",
       "result": "HIT",
       "analysis": "巴伦西亚对阵毕尔巴鄂，攻防节奏对抗激烈，战术建议【客不败/双选平负】。",
@@ -8812,13 +8793,12 @@
       },
       "sale_closed": true,
       "predicted_scores": [
+        "0-1",
         "1-2",
-        "1-1",
-        "0-1"
+        "1-1"
       ],
       "locked": true,
       "predicted_goals": [
-        "1",
         "2",
         "3"
       ],
@@ -8867,7 +8847,7 @@
         "result": "HIT",
         "score": "0-0",
         "source": "stored_score",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "平局"
       },
       "stats": {
@@ -9032,7 +9012,7 @@
       ],
       "consensus": "主不败 (68%)",
       "consensus_ratio": 68,
-      "tip": "主不败/首选主胜",
+      "tip": "让负",
       "score": "1-0",
       "result": "HIT",
       "analysis": "新英格兰对阵芝加哥，攻防节奏对抗激烈，战术建议【主不败/首选主胜】。",
@@ -9052,11 +9032,12 @@
         "math_score": 67.3
       },
       "predicted_scores": [
-        "2-1",
         "1-1",
-        "2-0"
+        "0-1",
+        "1-2"
       ],
       "predicted_goals": [
+        "1",
         "2",
         "3"
       ],
@@ -9110,7 +9091,7 @@
         "result": "HIT",
         "score": "1-0",
         "source": "stored_score",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "主胜"
       },
       "stats": {
@@ -9275,7 +9256,7 @@
       ],
       "consensus": "主胜 (65.0%)",
       "consensus_ratio": 65.0,
-      "tip": "主胜",
+      "tip": "主胜/防平",
       "score": "3-0",
       "result": "HIT",
       "analysis": "町田泽维对阵福冈黄蜂，基于赔率与可得情报的研判首选【主胜】。",
@@ -9294,12 +9275,11 @@
         "math_score": 80.0
       },
       "predicted_scores": [
-        "2-0",
+        "1-0",
         "2-1",
-        "1-0"
+        "1-1"
       ],
       "predicted_goals": [
-        "1",
         "2",
         "3"
       ],
@@ -9355,7 +9335,7 @@
         "result": "HIT",
         "score": "3 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "主胜"
       },
       "stats": {
@@ -9520,7 +9500,7 @@
       ],
       "consensus": "主不败/首选主胜 (65.0%)",
       "consensus_ratio": 65.0,
-      "tip": "主不败/首选主胜",
+      "tip": "主胜/防平",
       "score": "1-1",
       "result": "HIT",
       "analysis": "江原FC对阵仁川联，基于赔率与可得情报的研判首选【主不败/首选主胜】。",
@@ -9539,8 +9519,8 @@
         "math_score": 82.0
       },
       "predicted_scores": [
+        "1-0",
         "2-1",
-        "2-0",
         "1-1"
       ],
       "predicted_goals": [
@@ -9599,7 +9579,7 @@
         "result": "HIT",
         "score": "1 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "平局"
       },
       "stats": {
@@ -9785,7 +9765,7 @@
       "predicted_scores": [
         "2-0",
         "2-1",
-        "3-0"
+        "3-1"
       ],
       "predicted_goals": [
         "2",
@@ -9842,7 +9822,7 @@
         "result": "MISS",
         "score": "2 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "平局"
       },
       "stats": {
@@ -10007,7 +9987,7 @@
       ],
       "consensus": "客胜 (65.0%)",
       "consensus_ratio": 65.0,
-      "tip": "客胜",
+      "tip": "客胜/防平",
       "score": "4-1",
       "result": "MISS",
       "analysis": "兹沃勒对阵前进之鹰，基于赔率与可得情报的研判首选【客胜】。",
@@ -10026,14 +10006,13 @@
       },
       "sale_closed": true,
       "predicted_scores": [
+        "0-1",
         "1-2",
-        "0-2",
-        "1-3"
+        "1-1"
       ],
       "predicted_goals": [
         "2",
-        "3",
-        "4"
+        "3"
       ],
       "is_single": false,
       "locked": true,
@@ -10087,7 +10066,7 @@
         "result": "MISS",
         "score": "4 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "主胜"
       },
       "stats": {
@@ -10252,7 +10231,7 @@
       ],
       "consensus": "主胜 (66.5%)",
       "consensus_ratio": 66.5,
-      "tip": "主胜",
+      "tip": "主胜/防平",
       "score": "0-3",
       "result": "MISS",
       "analysis": "乌迪内斯对阵莱切，基于赔率与可得情报的研判首选【主胜】。",
@@ -10271,12 +10250,11 @@
       },
       "sale_closed": true,
       "predicted_scores": [
-        "2-0",
         "1-0",
-        "2-1"
+        "2-1",
+        "1-1"
       ],
       "predicted_goals": [
-        "1",
         "2",
         "3"
       ],
@@ -10332,7 +10310,7 @@
         "result": "MISS",
         "score": "0 - 3",
         "source": "fotmob",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "客胜"
       },
       "stats": {
@@ -10497,7 +10475,7 @@
       ],
       "consensus": "主不败/首选主胜 (73.1%)由此",
       "consensus_ratio": 73.1,
-      "tip": "主不败/首选主胜",
+      "tip": "主胜/防平",
       "score": "2-0",
       "result": "HIT",
       "analysis": "奥萨苏纳对阵桑坦德，基于赔率与可得情报的研判首选【主不败/首选主胜】。",
@@ -10517,12 +10495,12 @@
       "sale_closed": true,
       "predicted_scores": [
         "1-0",
-        "2-0",
+        "2-1",
         "1-1"
       ],
       "predicted_goals": [
-        "1",
-        "2"
+        "2",
+        "3"
       ],
       "is_single": false,
       "locked": true,
@@ -10576,7 +10554,7 @@
         "result": "HIT",
         "score": "2 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "主胜"
       },
       "stats": {
@@ -10706,7 +10684,7 @@
       ],
       "consensus": "主不败/首选主胜 (76.7%)由此",
       "consensus_ratio": 76.7,
-      "tip": "主不败/首选主胜",
+      "tip": "主胜/防平",
       "score": "2-2",
       "result": "HIT",
       "analysis": "天狼星对阵埃夫斯堡，基于赔率与可得情报的研判首选【主不败/首选主胜】。",
@@ -10725,8 +10703,8 @@
         "math_score": 79.0
       },
       "predicted_scores": [
+        "1-0",
         "2-1",
-        "2-0",
         "1-1"
       ],
       "predicted_goals": [
@@ -10785,7 +10763,7 @@
         "result": "HIT",
         "score": "2-2",
         "source": "stored_score",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "平局"
       },
       "stats": {
@@ -10950,7 +10928,7 @@
       ],
       "consensus": "主胜 (76.9%)由此",
       "consensus_ratio": 76.9,
-      "tip": "主胜",
+      "tip": "主胜/防平",
       "score": "2-0",
       "result": "HIT",
       "analysis": "库奥皮奥对阵瓦萨，基于赔率与可得情报的研判首选【主胜】。",
@@ -10969,9 +10947,9 @@
         "math_score": 80.0
       },
       "predicted_scores": [
-        "2-0",
+        "1-0",
         "2-1",
-        "3-0"
+        "1-1"
       ],
       "predicted_goals": [
         "2",
@@ -11028,7 +11006,7 @@
         "result": "HIT",
         "score": "2 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "主胜"
       },
       "stats": {
@@ -11166,7 +11144,7 @@
       ],
       "consensus": "主不败/首选主胜 (65.0%)",
       "consensus_ratio": 65.0,
-      "tip": "主不败/首选主胜",
+      "tip": "让负",
       "score": "0-3",
       "result": "MISS",
       "analysis": "萨普斯堡对阵罗森博格，基于赔率与可得情报的研判首选【客不败/双选平负】。",
@@ -11186,8 +11164,8 @@
       },
       "predicted_scores": [
         "1-1",
-        "2-1",
-        "1-0"
+        "0-1",
+        "1-2"
       ],
       "predicted_goals": [
         "1",
@@ -11245,7 +11223,7 @@
         "result": "MISS",
         "score": "0 - 3",
         "source": "fotmob",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "客胜"
       },
       "stats": {
@@ -11410,7 +11388,7 @@
       ],
       "consensus": "主不败/首选主胜 (65.0%)",
       "consensus_ratio": 65.0,
-      "tip": "主不败/首选主胜",
+      "tip": "让负",
       "score": "1-1",
       "result": "HIT",
       "analysis": "利兹联对阵曼联，基于赔率与可得情报的研判首选【主不败/首选主胜】。",
@@ -11430,8 +11408,8 @@
       "sale_closed": true,
       "predicted_scores": [
         "1-1",
-        "2-1",
-        "1-0"
+        "0-1",
+        "1-2"
       ],
       "predicted_goals": [
         "1",
@@ -11489,7 +11467,7 @@
         "result": "HIT",
         "score": "1 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "平局"
       },
       "stats": {
@@ -11654,7 +11632,7 @@
       ],
       "consensus": "主不败/首选主胜 (65.0%)",
       "consensus_ratio": 65.0,
-      "tip": "主不败/首选主胜",
+      "tip": "主胜/防平",
       "score": "2-0",
       "result": "HIT",
       "analysis": "伯恩茅斯对阵桑德兰，基于赔率与可得情报的研判首选【主不败/首选主胜】。",
@@ -11673,12 +11651,11 @@
         "math_score": 73.0
       },
       "predicted_scores": [
-        "2-1",
         "1-0",
+        "2-1",
         "1-1"
       ],
       "predicted_goals": [
-        "1",
         "2",
         "3"
       ],
@@ -11728,7 +11705,7 @@
         "result": "HIT",
         "score": "2-0",
         "source": "stored_score",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "主胜"
       },
       "stats": {
@@ -11893,7 +11870,7 @@
       ],
       "consensus": "客胜 (65.0%)",
       "consensus_ratio": 65.0,
-      "tip": "客胜",
+      "tip": "客胜/防平",
       "score": "1-3",
       "result": "HIT",
       "analysis": "佛罗伦萨对阵科莫，基于赔率与可得情报的研判首选【客胜】。",
@@ -11913,11 +11890,10 @@
       "sale_closed": true,
       "predicted_scores": [
         "0-1",
-        "0-2",
-        "1-2"
+        "1-2",
+        "1-1"
       ],
       "predicted_goals": [
-        "1",
         "2",
         "3"
       ],
@@ -11973,7 +11949,7 @@
         "result": "HIT",
         "score": "1 - 3",
         "source": "fotmob",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "客胜"
       },
       "stats": {
@@ -12138,7 +12114,7 @@
       ],
       "consensus": "客胜 (65.0%)",
       "consensus_ratio": 65.0,
-      "tip": "客胜",
+      "tip": "客胜/防平",
       "score": "2-5",
       "result": "HIT",
       "analysis": "昂热对阵马赛，基于赔率与可得情报的研判首选【客不败/双选平负】。",
@@ -12157,12 +12133,11 @@
         "math_score": 75.0
       },
       "predicted_scores": [
-        "0-2",
+        "0-1",
         "1-2",
-        "0-1"
+        "1-1"
       ],
       "predicted_goals": [
-        "1",
         "2",
         "3"
       ],
@@ -12217,7 +12192,7 @@
         "result": "HIT",
         "score": "2 - 5",
         "source": "fotmob",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "客胜"
       },
       "stats": {
@@ -12382,7 +12357,7 @@
       ],
       "consensus": "主胜 (83.1%)由此",
       "consensus_ratio": 83.1,
-      "tip": "主胜",
+      "tip": "主胜/防平",
       "score": "2-1",
       "result": "HIT",
       "analysis": "勒沃库森对阵弗赖堡，基于赔率与可得情报的研判首选【主胜】。",
@@ -12401,14 +12376,13 @@
         "math_score": 77.0
       },
       "predicted_scores": [
-        "2-0",
+        "1-0",
         "2-1",
-        "3-1"
+        "1-1"
       ],
       "predicted_goals": [
         "2",
-        "3",
-        "4"
+        "3"
       ],
       "is_single": false,
       "locked": true,
@@ -12462,7 +12436,7 @@
         "result": "HIT",
         "score": "2 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "主胜"
       },
       "stats": {
@@ -12627,7 +12601,7 @@
       ],
       "consensus": "主不败/首选主胜 (65.0%)",
       "consensus_ratio": 65.0,
-      "tip": "主不败/首选主胜",
+      "tip": "主胜/防平",
       "score": "2-1",
       "result": "HIT",
       "analysis": "塞尔塔对阵阿拉维斯，基于赔率与可得情报的研判首选【主不败/首选主胜】。",
@@ -12646,12 +12620,11 @@
         "math_score": 78.0
       },
       "predicted_scores": [
-        "2-1",
         "1-0",
+        "2-1",
         "1-1"
       ],
       "predicted_goals": [
-        "1",
         "2",
         "3"
       ],
@@ -12702,7 +12675,7 @@
         "result": "HIT",
         "score": "2-1",
         "source": "stored_score",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "主胜"
       },
       "stats": {
@@ -12867,7 +12840,7 @@
       ],
       "consensus": "客胜 (65.3%)",
       "consensus_ratio": 65.3,
-      "tip": "客胜",
+      "tip": "客胜/防平",
       "score": "2-5",
       "result": "HIT",
       "analysis": "格罗宁根对阵阿贾克斯，基于赔率与可得情报的研判首选【客胜】。",
@@ -12886,9 +12859,9 @@
       },
       "sale_closed": true,
       "predicted_scores": [
+        "0-1",
         "1-2",
-        "0-2",
-        "0-3"
+        "1-1"
       ],
       "predicted_goals": [
         "2",
@@ -12940,7 +12913,7 @@
         "result": "HIT",
         "score": "2-5",
         "source": "stored_score",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "客胜"
       },
       "stats": {
@@ -13105,7 +13078,7 @@
       ],
       "consensus": "客胜 (65.0%)",
       "consensus_ratio": 65.0,
-      "tip": "客不败/首选客胜",
+      "tip": "客胜/防平",
       "score": "1-0",
       "result": "MISS",
       "analysis": "洛里昂对阵摩纳哥，基于赔率与可得情报的研判首选【客胜】。",
@@ -13124,8 +13097,8 @@
         "math_score": 78.0
       },
       "predicted_scores": [
+        "0-1",
         "1-2",
-        "0-2",
         "1-1"
       ],
       "predicted_goals": [
@@ -13183,7 +13156,7 @@
         "result": "MISS",
         "score": "1 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "主胜"
       },
       "stats": {
@@ -13368,11 +13341,10 @@
       "sale_closed": true,
       "predicted_scores": [
         "0-2",
-        "0-1",
-        "1-2"
+        "1-2",
+        "0-3"
       ],
       "predicted_goals": [
-        "1",
         "2",
         "3"
       ],
@@ -13428,7 +13400,7 @@
         "result": "HIT",
         "score": "0 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "客胜"
       },
       "stats": {
@@ -13593,7 +13565,7 @@
       ],
       "consensus": "客不败/双选平负 (65.0%)",
       "consensus_ratio": 65.0,
-      "tip": "客不败/双选平负",
+      "tip": "让负",
       "score": "1-2",
       "result": "HIT",
       "analysis": "门兴对阵霍芬海姆，基于赔率与可得情报的研判首选【客胜】。",
@@ -13612,11 +13584,12 @@
         "math_score": 74.0
       },
       "predicted_scores": [
-        "1-2",
         "1-1",
-        "0-2"
+        "0-1",
+        "1-2"
       ],
       "predicted_goals": [
+        "1",
         "2",
         "3"
       ],
@@ -13671,7 +13644,7 @@
         "result": "HIT",
         "score": "1 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "客胜"
       },
       "stats": {
@@ -13836,7 +13809,7 @@
       ],
       "consensus": "主胜 (71.5%)",
       "consensus_ratio": 71.5,
-      "tip": "主胜",
+      "tip": "主胜/防平",
       "score": "3-2",
       "result": "HIT",
       "analysis": "AC米兰对阵亚特兰大，基于赔率与可得情报的研判首选【主不败/首选主胜】。",
@@ -13855,12 +13828,11 @@
         "math_score": 79.0
       },
       "predicted_scores": [
-        "2-0",
         "1-0",
-        "2-1"
+        "2-1",
+        "1-1"
       ],
       "predicted_goals": [
-        "1",
         "2",
         "3"
       ],
@@ -13911,7 +13883,7 @@
         "result": "HIT",
         "score": "3-2",
         "source": "stored_score",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "主胜"
       },
       "stats": {
@@ -14076,7 +14048,7 @@
       ],
       "consensus": "客胜 (65.0%)",
       "consensus_ratio": 65.0,
-      "tip": "客不败/首选客胜",
+      "tip": "客胜/防平",
       "score": "2-5",
       "result": "HIT",
       "analysis": "马拉加对阵皇家社会，基于赔率与可得情报的研判首选【客不败/双选平负】。",
@@ -14096,12 +14068,12 @@
       },
       "predicted_scores": [
         "0-1",
-        "0-2",
+        "1-2",
         "1-1"
       ],
       "predicted_goals": [
-        "1",
-        "2"
+        "2",
+        "3"
       ],
       "is_single": false,
       "locked": true,
@@ -14154,7 +14126,7 @@
         "result": "HIT",
         "score": "2-5",
         "source": "stored_score",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "客胜"
       },
       "stats": {
@@ -14319,7 +14291,7 @@
       ],
       "consensus": "主胜 (70.1%)",
       "consensus_ratio": 70.1,
-      "tip": "主胜",
+      "tip": "主胜/防平",
       "score": "0-3",
       "result": "MISS",
       "analysis": "尤文图斯对阵拉齐奥，基于赔率与可得情报的研判首选【主不败/首选主胜】。",
@@ -14338,12 +14310,11 @@
         "math_score": 71.0
       },
       "predicted_scores": [
-        "2-0",
         "1-0",
-        "2-1"
+        "2-1",
+        "1-1"
       ],
       "predicted_goals": [
-        "1",
         "2",
         "3"
       ],
@@ -14395,7 +14366,7 @@
         "result": "MISS",
         "score": "0-3",
         "source": "stored_score",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "客胜"
       },
       "stats": {
@@ -14560,7 +14531,7 @@
       ],
       "consensus": "主不败/首选主胜 (65.7%)",
       "consensus_ratio": 65.7,
-      "tip": "主不败/首选主胜",
+      "tip": "主胜/防平",
       "score": "2-1",
       "result": "HIT",
       "analysis": "里昂对阵尼斯，基于赔率与可得情报的研判首选【主胜】。",
@@ -14579,8 +14550,8 @@
         "math_score": 75.5
       },
       "predicted_scores": [
+        "1-0",
         "2-1",
-        "2-0",
         "1-1"
       ],
       "predicted_goals": [
@@ -14634,7 +14605,7 @@
         "result": "HIT",
         "score": "2-1",
         "source": "stored_score",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "主胜"
       },
       "stats": {
@@ -14799,7 +14770,7 @@
       ],
       "consensus": "让胜/博穿盘 (86.8%)由此",
       "consensus_ratio": 86.8,
-      "tip": "让胜",
+      "tip": "让负",
       "score": "4-1",
       "result": "HIT",
       "analysis": "皇马对阵塞维利亚，官方单开让球胜平负(-2)，战术首选【让平/防让胜】。",
@@ -14825,13 +14796,14 @@
         "math_score": 77.0
       },
       "predicted_scores": [
-        "3-0",
-        "4-1"
+        "1-1",
+        "0-1",
+        "1-2"
       ],
       "predicted_goals": [
-        "3",
-        "4",
-        "5"
+        "1",
+        "2",
+        "3"
       ],
       "is_single": false,
       "decision_guide": "四、实体彩店实战研判与出票指引：本场体彩官方未开常规胜平负，仅单开主让-2球深盘。海外120个频道45票压倒性共识看好皇马狂攻穿盘，塞维利亚客场防线主力伤停严重，建议直挂【让胜/博穿盘】（SP约2.85高回报），重点防范3-0、3-1大比分穿盘，容错补2-0（让平）。",
@@ -14882,7 +14854,7 @@
         "result": "HIT",
         "score": "4-1",
         "source": "stored_score",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "让胜"
       },
       "stats": {
@@ -15047,7 +15019,7 @@
       ],
       "consensus": "主不败/首选主胜 (65.0%)",
       "consensus_ratio": 65.0,
-      "tip": "主不败/首选主胜",
+      "tip": "让负",
       "score": "1-2",
       "result": "MISS",
       "analysis": "弗鲁米嫩对阵桑托斯，基于赔率与可得情报的研判首选【主不败/首选主胜】。",
@@ -15066,9 +15038,9 @@
         "math_score": 74.0
       },
       "predicted_scores": [
-        "1-0",
-        "2-1",
-        "1-1"
+        "1-1",
+        "0-1",
+        "1-2"
       ],
       "predicted_goals": [
         "1",
@@ -15130,7 +15102,7 @@
         "result": "MISS",
         "score": "1-2",
         "source": "stored_score",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "让负"
       },
       "stats": {
@@ -15295,7 +15267,7 @@
       ],
       "consensus": "主不败/首选主胜 (65.0%)",
       "consensus_ratio": 65.0,
-      "tip": "主不败/首选主胜",
+      "tip": "让负",
       "score": "4-0",
       "result": "HIT",
       "analysis": "蒙扎对阵卡利亚里，基于赔率与可得情报的研判首选【主不败/首选主胜】。",
@@ -15314,13 +15286,14 @@
         "math_score": 76.0
       },
       "predicted_scores": [
-        "1-0",
         "1-1",
-        "2-0"
+        "0-1",
+        "1-2"
       ],
       "predicted_goals": [
         "1",
-        "2"
+        "2",
+        "3"
       ],
       "is_single": true,
       "provenance": {
@@ -15376,7 +15349,7 @@
         "result": "HIT",
         "score": "4-0",
         "source": "stored_score",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "主胜"
       },
       "stats": {
@@ -15536,7 +15509,7 @@
       ],
       "consensus": "客不败/双选平负 (65.0%)",
       "consensus_ratio": 65.0,
-      "tip": "客不败/双选平负",
+      "tip": "让负",
       "score": "1-2",
       "result": "HIT",
       "analysis": "代格福什对阵卡尔马，基于赔率与可得情报的研判首选【客不败/双选平负】。",
@@ -15614,7 +15587,7 @@
         "result": "HIT",
         "score": "1-2",
         "source": "stored_score",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "客胜"
       },
       "stats": {
@@ -15779,7 +15752,7 @@
       ],
       "consensus": "客不败/双选平负 (65.0%)",
       "consensus_ratio": 65.0,
-      "tip": "客不败/双选平负",
+      "tip": "客胜/防平",
       "score": "0-3",
       "result": "HIT",
       "analysis": "帕尔马对阵都灵，基于赔率与可得情报的研判首选【客不败/双选平负】。",
@@ -15799,13 +15772,12 @@
       },
       "predicted_scores": [
         "0-1",
-        "1-1",
-        "0-0"
+        "1-2",
+        "1-1"
       ],
       "predicted_goals": [
-        "0",
-        "1",
-        "2"
+        "2",
+        "3"
       ],
       "is_single": false,
       "provenance": {
@@ -15862,7 +15834,7 @@
         "result": "HIT",
         "score": "0-3",
         "source": "stored_score",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "客胜"
       },
       "stats": {
@@ -16027,7 +15999,7 @@
       ],
       "consensus": "客不败/双选平负 (65.0%)",
       "consensus_ratio": 65.0,
-      "tip": "客不败/双选平负",
+      "tip": "让负",
       "score": "0-3",
       "result": "HIT",
       "analysis": "罗德兹对阵蒙彼利埃，基于赔率与可得情报的研判首选【客不败/双选平负】。",
@@ -16110,7 +16082,7 @@
         "result": "HIT",
         "score": "0-3",
         "source": "stored_score",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "客胜"
       },
       "stats": {
@@ -16285,11 +16257,10 @@
       },
       "predicted_scores": [
         "2-0",
-        "1-0",
-        "2-1"
+        "2-1",
+        "3-1"
       ],
       "predicted_goals": [
-        "1",
         "2",
         "3"
       ],
@@ -16348,13 +16319,13 @@
         "result": "HIT",
         "score": "2-1",
         "source": "stored_score",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "主胜"
       },
       "score_conflict": {
         "local": "2 - 1",
         "fotmob": "3 - 1",
-        "at": "2026-10-21 17:06:06"
+        "at": "2026-10-21 17:09:06"
       },
       "stats": {
         "home": {
@@ -16494,7 +16465,7 @@
       ],
       "consensus": "平局/防冷 (77.2%)由此",
       "consensus_ratio": 77.2,
-      "tip": "平局/防冷",
+      "tip": "让负",
       "score": "1-1",
       "result": "HIT",
       "analysis": "赫塔费对阵巴列卡诺，基于赔率与可得情报的研判首选【平局/防冷】。",
@@ -16514,13 +16485,13 @@
       },
       "predicted_scores": [
         "1-1",
-        "0-0",
-        "1-0"
+        "0-1",
+        "1-2"
       ],
       "predicted_goals": [
-        "0",
         "1",
-        "2"
+        "2",
+        "3"
       ],
       "is_single": false,
       "provenance": {
@@ -16577,7 +16548,7 @@
         "result": "HIT",
         "score": "1-1",
         "source": "stored_score",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "平局"
       },
       "stats": {
@@ -16763,10 +16734,9 @@
       "predicted_scores": [
         "2-0",
         "2-1",
-        "1-0"
+        "3-1"
       ],
       "predicted_goals": [
-        "1",
         "2",
         "3"
       ],
@@ -16825,7 +16795,7 @@
         "result": "MISS",
         "score": "1-2",
         "source": "stored_score",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "客胜"
       },
       "stats": {
@@ -16990,7 +16960,7 @@
       ],
       "consensus": "主胜 (74.1%)",
       "consensus_ratio": 74.1,
-      "tip": "主胜",
+      "tip": "主胜/防平",
       "score": "1-1",
       "result": "MISS",
       "analysis": "科林蒂安对阵维多利亚，基于赔率与可得情报的研判首选【主胜】。",
@@ -17009,12 +16979,11 @@
         "math_score": 74.0
       },
       "predicted_scores": [
-        "2-0",
         "1-0",
-        "2-1"
+        "2-1",
+        "1-1"
       ],
       "predicted_goals": [
-        "1",
         "2",
         "3"
       ],
@@ -17073,7 +17042,7 @@
         "result": "MISS",
         "score": "1-1",
         "source": "stored_score",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "平局"
       },
       "stats": {
@@ -17255,7 +17224,7 @@
       "predicted_scores": [
         "2-0",
         "2-1",
-        "1-0"
+        "3-1"
       ],
       "score": "2-2",
       "result": "MISS",
@@ -17454,7 +17423,7 @@
         "result": "MISS",
         "score": "2-2",
         "source": "stored_score",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "平局"
       }
     },
@@ -17504,8 +17473,8 @@
       "tip": "客胜",
       "predicted_scores": [
         "0-2",
-        "0-1",
-        "1-2"
+        "1-2",
+        "0-3"
       ],
       "score": "1-2",
       "result": "HIT",
@@ -17654,7 +17623,7 @@
         "result": "HIT",
         "score": "1-2",
         "source": "stored_score",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "客胜"
       }
     },
@@ -17701,11 +17670,11 @@
         "tipster_score": 86.0,
         "math_score": 78.0
       },
-      "tip": "主胜",
+      "tip": "主胜/防平",
       "predicted_scores": [
-        "2-0",
         "1-0",
-        "2-1"
+        "2-1",
+        "1-1"
       ],
       "score": "1-1",
       "result": "MISS",
@@ -17863,9 +17832,13 @@
         "result": "MISS",
         "score": "1-1",
         "source": "stored_score",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "平局"
-      }
+      },
+      "predicted_goals": [
+        "2",
+        "3"
+      ]
     },
     {
       "code": "周二004",
@@ -17910,11 +17883,11 @@
         "tipster_score": 82.0,
         "math_score": 71.0
       },
-      "tip": "主胜",
+      "tip": "主胜/防平",
       "predicted_scores": [
-        "2-0",
+        "1-0",
         "2-1",
-        "1-0"
+        "1-1"
       ],
       "score": "4-3",
       "result": "HIT",
@@ -18123,7 +18096,7 @@
         "result": "HIT",
         "score": "4-3",
         "source": "stored_score",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "主胜"
       }
     },
@@ -18170,9 +18143,11 @@
         "tipster_score": 92.0,
         "math_score": 77.0
       },
-      "tip": "让胜",
+      "tip": "主胜/防平",
       "predicted_scores": [
-        "3-0"
+        "1-0",
+        "2-1",
+        "1-1"
       ],
       "score": "4-0",
       "result": "HIT",
@@ -18198,8 +18173,8 @@
         "-"
       ],
       "predicted_goals": [
-        "3",
-        "4"
+        "2",
+        "3"
       ],
       "prediction_snapshot": {
         "tip": "让胜/博穿盘",
@@ -18372,7 +18347,7 @@
         "result": "HIT",
         "score": "4-0",
         "source": "stored_score",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "让胜"
       }
     },
@@ -18419,11 +18394,11 @@
         "tipster_score": 86.0,
         "math_score": 79.0
       },
-      "tip": "主不败/首选主胜",
+      "tip": "让负",
       "predicted_scores": [
-        "2-1",
-        "1-1",
-        "3-1"
+        "0-2",
+        "1-3",
+        "0-3"
       ],
       "score": "4-2",
       "result": "HIT",
@@ -18653,7 +18628,7 @@
         "result": "HIT",
         "score": "4-2",
         "source": "stored_score",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "主胜"
       }
     },
@@ -18704,7 +18679,7 @@
       "predicted_scores": [
         "2-0",
         "2-1",
-        "3-0"
+        "3-1"
       ],
       "score": "4-3",
       "result": "HIT",
@@ -18932,7 +18907,7 @@
         "result": "HIT",
         "score": "4-3",
         "source": "stored_score",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "主胜"
       }
     },
@@ -18979,9 +18954,11 @@
         "tipster_score": 88.0,
         "math_score": 76.0
       },
-      "tip": "让胜",
+      "tip": "主胜/防平",
       "predicted_scores": [
-        "3-0"
+        "1-0",
+        "2-1",
+        "1-1"
       ],
       "score": "5-1",
       "result": "HIT",
@@ -19008,8 +18985,7 @@
       ],
       "predicted_goals": [
         "2",
-        "3",
-        "4"
+        "3"
       ],
       "prediction_snapshot": {
         "tip": "让胜/博穿盘",
@@ -19183,7 +19159,7 @@
         "result": "HIT",
         "score": "5-1",
         "source": "stored_score",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "让胜"
       }
     },
@@ -19230,11 +19206,11 @@
         "tipster_score": 88.0,
         "math_score": 74.0
       },
-      "tip": "客胜",
+      "tip": "客胜/防平",
       "predicted_scores": [
-        "1-2",
         "0-1",
-        "0-2"
+        "1-2",
+        "1-1"
       ],
       "score": "1-1",
       "result": "MISS",
@@ -19261,8 +19237,7 @@
       ],
       "predicted_goals": [
         "2",
-        "3",
-        "1"
+        "3"
       ],
       "prediction_snapshot": {
         "tip": "客胜",
@@ -19435,7 +19410,7 @@
         "result": "MISS",
         "score": "1-1",
         "source": "stored_score",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "平局"
       }
     },
@@ -19486,7 +19461,7 @@
       "predicted_scores": [
         "2-0",
         "2-1",
-        "1-0"
+        "3-1"
       ],
       "score": "0-1",
       "result": "MISS",
@@ -19699,7 +19674,7 @@
         "result": "MISS",
         "score": "0-1",
         "source": "stored_score",
-        "settled_at": "2026-10-21T17:06:21",
+        "settled_at": "2026-10-21T17:09:20",
         "outcome": "客胜"
       }
     },
@@ -19727,9 +19702,9 @@
         "W"
       ],
       "odds": [
-        "1.58",
-        "3.92",
-        "4.15"
+        "1.61",
+        "3.85",
+        "4.02"
       ],
       "is_only_rq": false,
       "rang": "-1",
@@ -19756,11 +19731,11 @@
       "result": "PENDING",
       "analysis": "东京FC对阵柏太阳神，三模型对抗研判首选【主不败/首选主胜】。",
       "dossier": {
-        "summary": "东京FC对阵柏太阳神，多因子量化研判核心首选【主胜/防平】。",
+        "summary": "东京FC对阵柏太阳神，多因子量化研判核心首选【让负】。",
         "fundamental": "一、联赛积分与基本面战意格局：东京FC坐镇味之素体育场，主场作战兼具地利与阵容厚度优势，近期急需稳定拿分以冲入积分榜上半区；柏太阳神客场作风偏向保守，客战抗压韧性尚可但锋线终结效率偏低，战意上更偏向稳守反击争取保平带走1分。",
         "tactical_conflict": "二、核心战术矛盾与人员阵眼：东京FC主打边肋结合与前场就地反抢，破大巴能力依赖前场外援的单兵爆破与弧顶二点球施压；柏太阳神阵眼在于双后腰对禁区前沿的保护以及长传打东京FC身后空当的纵深速度，但客队一旦陷入被动容易在下半场体能节点暴露出肋部防守漏洞。",
         "market_attitude": "三、欧洲37家机构盘口与去水态度：体彩官方SP开出主胜2.09、平局3.45、客胜2.78，去水折算主胜概率42.4%、客胜31.9%、平局25.7%；欧赔主流初盘主让平半低水，后市平局顶高至3.45形成分流，机构对东京FC主场微弱优势给予合理防范，客胜高企缺乏硬核赔付支撑。",
-        "decision_guide": "【实战选号指引】：综合机构去水与多因子胜率（主胜+平局达81.3%），首选【主胜/防平】；黄金比分防范锁定【1-0】、【2-1】、【1-1】。"
+        "decision_guide": "【实战选号指引】：综合机构去水与多因子胜率，首选【让负】；黄金比分防范锁定【1-1】、【0-1】、【1-2】。"
       },
       "sale_closed": false,
       "prediction_snapshot": {
@@ -19928,19 +19903,19 @@
       },
       "stats_ts": "2026-10-21 11:17:28",
       "quant_factors": {
-        "samples": 3165,
-        "win_rate": 57.9,
-        "draw_rate": 23.4,
-        "loss_rate": 18.7,
-        "ev_home": -0.085,
-        "ev_draw": -0.082,
-        "ev_away": -0.225,
-        "lambda_h": 1.94,
-        "lambda_a": 1.09,
+        "samples": 3103,
+        "win_rate": 56.8,
+        "draw_rate": 23.9,
+        "loss_rate": 19.3,
+        "ev_home": -0.086,
+        "ev_draw": -0.079,
+        "ev_away": -0.223,
+        "lambda_h": 1.88,
+        "lambda_a": 1.1,
         "golden_scores": [
-          "1-0",
           "2-1",
-          "1-1"
+          "1-0",
+          "2-0"
         ],
         "trap_level": "NORMAL",
         "trap_warning": "盘面处于正常期望区间",
@@ -19998,11 +19973,11 @@
         "tipster_score": 76.0,
         "math_score": 76.0
       },
-      "tip": "让负/防让平",
+      "tip": "让负",
       "predicted_scores": [
         "1-1",
         "0-1",
-        "2-1"
+        "1-2"
       ],
       "score": "--",
       "result": "PENDING",
@@ -20203,6 +20178,7 @@
         "quant_detail_note": "【8万场让球利刃 · 极简让球直打】：8万场历史大数据同赔率下最高胜率仅为 42.3%，客队具备极强反客为主抗衡力。实战果断单挑【让胜】，一注通吃客队不败！"
       },
       "predicted_goals": [
+        "1",
         "2",
         "3"
       ]
@@ -20250,8 +20226,10 @@
         "tipster_score": 72.0,
         "math_score": 76.0
       },
-      "tip": "让负",
+      "tip": "主胜/防平",
       "predicted_scores": [
+        "1-0",
+        "2-1",
         "1-1"
       ],
       "score": "--",
@@ -20416,7 +20394,11 @@
         "smart_pick": "让负",
         "smart_type": "SINGLE",
         "quant_detail_note": "【8万场让球利刃 · 极简让球直打】：8万场历史大数据同赔率下最高胜率仅为 45.3%，客队具备极强反客为主抗衡力。实战果断单挑【让负】，一注通吃客队不败！"
-      }
+      },
+      "predicted_goals": [
+        "2",
+        "3"
+      ]
     },
     {
       "code": "周三004",
@@ -20463,7 +20445,9 @@
       },
       "tip": "让负",
       "predicted_scores": [
-        "1-1"
+        "1-1",
+        "0-1",
+        "1-2"
       ],
       "score": "--",
       "result": "PENDING",
@@ -20638,7 +20622,12 @@
         "smart_pick": "让负",
         "smart_type": "SINGLE",
         "quant_detail_note": "【8万场让球利刃 · 极简让球直打】：8万场历史大数据同赔率下最高胜率仅为 42.1%，客队具备极强反客为主抗衡力。实战果断单挑【让负】，一注通吃客队不败！"
-      }
+      },
+      "predicted_goals": [
+        "1",
+        "2",
+        "3"
+      ]
     },
     {
       "code": "周三005",
@@ -20683,11 +20672,11 @@
         "tipster_score": 68.9,
         "math_score": 68.2
       },
-      "tip": "胜平双选",
+      "tip": "主胜/防平",
       "predicted_scores": [
+        "1-0",
         "2-1",
-        "1-1",
-        "2-0"
+        "1-1"
       ],
       "score": "--",
       "result": "PENDING",
@@ -20862,7 +20851,11 @@
         "smart_pick": "主胜/防平",
         "smart_type": "DOUBLE",
         "quant_detail_note": ""
-      }
+      },
+      "predicted_goals": [
+        "2",
+        "3"
+      ]
     },
     {
       "code": "周三006",
@@ -20909,9 +20902,9 @@
       },
       "tip": "客胜/防平",
       "predicted_scores": [
+        "0-1",
         "1-2",
-        "1-1",
-        "0-1"
+        "1-1"
       ],
       "score": "--",
       "result": "PENDING",
@@ -21110,7 +21103,11 @@
         "smart_pick": "客胜/防平",
         "smart_type": "DOUBLE",
         "quant_detail_note": ""
-      }
+      },
+      "predicted_goals": [
+        "2",
+        "3"
+      ]
     },
     {
       "code": "周三007",
@@ -21159,7 +21156,7 @@
       "predicted_scores": [
         "2-0",
         "2-1",
-        "3-0"
+        "3-1"
       ],
       "score": "--",
       "result": "PENDING",
@@ -21358,7 +21355,11 @@
         "smart_pick": "主胜",
         "smart_type": "SINGLE",
         "quant_detail_note": ""
-      }
+      },
+      "predicted_goals": [
+        "2",
+        "3"
+      ]
     },
     {
       "code": "周三008",
@@ -21405,8 +21406,8 @@
       },
       "tip": "主胜",
       "predicted_scores": [
-        "3-0",
-        "4-0",
+        "2-0",
+        "2-1",
         "3-1"
       ],
       "score": "--",
@@ -21582,7 +21583,11 @@
         "smart_pick": "主胜",
         "smart_type": "SINGLE",
         "quant_detail_note": ""
-      }
+      },
+      "predicted_goals": [
+        "2",
+        "3"
+      ]
     },
     {
       "code": "周三009",
@@ -21629,9 +21634,9 @@
       },
       "tip": "主胜/防平",
       "predicted_scores": [
-        "2-0",
+        "1-0",
         "2-1",
-        "3-1"
+        "1-1"
       ],
       "score": "--",
       "result": "PENDING",
@@ -21806,7 +21811,11 @@
         "smart_pick": "主胜/防平",
         "smart_type": "DOUBLE",
         "quant_detail_note": ""
-      }
+      },
+      "predicted_goals": [
+        "2",
+        "3"
+      ]
     },
     {
       "code": "周三010",
@@ -21851,11 +21860,11 @@
         "tipster_score": 68.9,
         "math_score": 68.2
       },
-      "tip": "胜平双选",
+      "tip": "主胜/防平",
       "predicted_scores": [
+        "1-0",
         "2-1",
-        "1-1",
-        "2-0"
+        "1-1"
       ],
       "score": "--",
       "result": "PENDING",
@@ -22054,7 +22063,11 @@
         "smart_pick": "胜平双选",
         "smart_type": "DOUBLE",
         "quant_detail_note": ""
-      }
+      },
+      "predicted_goals": [
+        "2",
+        "3"
+      ]
     },
     {
       "code": "周三011",
@@ -22099,10 +22112,11 @@
         "tipster_score": 68.0,
         "math_score": 67.3
       },
-      "tip": "让胜",
+      "tip": "让负",
       "predicted_scores": [
-        "3-0",
-        "4-1"
+        "1-1",
+        "0-1",
+        "1-2"
       ],
       "score": "--",
       "result": "PENDING",
@@ -22293,9 +22307,9 @@
         "quant_detail_note": "【8万场让球利刃 · 83%防守破局】：8万场历史大数据同赔率下最高胜率仅为 41.9%，双方攻防死缠烂打（历史险胜占比高达 55%）。因此实战放弃胜平负单挑，果断打出【让负/防让平】，用 83% 超高概率封死冷门并防让平吃高赔大肉！"
       },
       "predicted_goals": [
-        "3",
-        "4",
-        "5"
+        "1",
+        "2",
+        "3"
       ]
     },
     {
@@ -22343,8 +22357,8 @@
       },
       "tip": "主胜/防平",
       "predicted_scores": [
-        "2-1",
         "1-0",
+        "2-1",
         "1-1"
       ],
       "score": "--",
@@ -22520,7 +22534,11 @@
         "smart_pick": "主胜/防平",
         "smart_type": "DOUBLE",
         "quant_detail_note": ""
-      }
+      },
+      "predicted_goals": [
+        "2",
+        "3"
+      ]
     },
     {
       "code": "周三013",
@@ -22567,8 +22585,8 @@
       },
       "tip": "主胜/防平",
       "predicted_scores": [
-        "2-0",
         "1-0",
+        "2-1",
         "1-1"
       ],
       "score": "--",
@@ -22768,7 +22786,11 @@
         "smart_pick": "主胜/防平",
         "smart_type": "DOUBLE",
         "quant_detail_note": ""
-      }
+      },
+      "predicted_goals": [
+        "2",
+        "3"
+      ]
     },
     {
       "code": "周四001",
@@ -22815,8 +22837,8 @@
       },
       "tip": "客胜/防平",
       "predicted_scores": [
+        "0-1",
         "1-2",
-        "0-2",
         "1-1"
       ],
       "score": "--",
@@ -23040,11 +23062,11 @@
         "tipster_score": 77.0,
         "math_score": 77.0
       },
-      "tip": "客胜",
+      "tip": "客胜/防平",
       "predicted_scores": [
-        "0-2",
+        "0-1",
         "1-2",
-        "0-1"
+        "1-1"
       ],
       "score": "--",
       "result": "PENDING",
@@ -23218,7 +23240,11 @@
         "h2h": null,
         "source": "本地竞彩历史库"
       },
-      "stats_ts": "2026-10-21 11:06:45"
+      "stats_ts": "2026-10-21 11:06:45",
+      "predicted_goals": [
+        "2",
+        "3"
+      ]
     },
     {
       "code": "周四003",
@@ -23263,10 +23289,10 @@
         "tipster_score": 76.0,
         "math_score": 76.0
       },
-      "tip": "客不败/双选平负",
+      "tip": "主胜/防平",
       "predicted_scores": [
-        "1-2",
-        "0-2",
+        "1-0",
+        "2-1",
         "1-1"
       ],
       "score": "--",
@@ -23442,7 +23468,11 @@
         "h2h": null,
         "source": "本地竞彩历史库"
       },
-      "stats_ts": "2026-10-21 11:06:45"
+      "stats_ts": "2026-10-21 11:06:45",
+      "predicted_goals": [
+        "2",
+        "3"
+      ]
     },
     {
       "code": "周四004",
@@ -23487,11 +23517,11 @@
         "tipster_score": 83.0,
         "math_score": 81.0
       },
-      "tip": "客不败/双选平负",
+      "tip": "主胜/防平",
       "predicted_scores": [
-        "1-2",
-        "1-1",
-        "0-2"
+        "1-0",
+        "2-1",
+        "1-1"
       ],
       "score": "--",
       "result": "PENDING",
@@ -23665,7 +23695,11 @@
         "h2h": null,
         "source": "本地竞彩历史库"
       },
-      "stats_ts": "2026-10-21 11:06:45"
+      "stats_ts": "2026-10-21 11:06:45",
+      "predicted_goals": [
+        "2",
+        "3"
+      ]
     },
     {
       "code": "周四005",
@@ -23710,10 +23744,10 @@
         "tipster_score": 92.0,
         "math_score": 75.0
       },
-      "tip": "让胜/防让平",
+      "tip": "主胜/防平",
       "predicted_scores": [
-        "1-2",
-        "0-2",
+        "1-0",
+        "2-1",
         "1-1"
       ],
       "score": "--",
@@ -23888,11 +23922,11 @@
         "tipster_score": 76.0,
         "math_score": 79.5
       },
-      "tip": "客胜",
+      "tip": "主胜/防平",
       "predicted_scores": [
-        "0-2",
-        "1-2",
-        "0-1"
+        "1-0",
+        "2-1",
+        "1-1"
       ],
       "score": "--",
       "result": "PENDING",
@@ -24066,7 +24100,11 @@
         "h2h": null,
         "source": "本地竞彩历史库"
       },
-      "stats_ts": "2026-10-21 11:06:45"
+      "stats_ts": "2026-10-21 11:06:45",
+      "predicted_goals": [
+        "2",
+        "3"
+      ]
     },
     {
       "code": "周四007",
@@ -24111,11 +24149,11 @@
         "tipster_score": 82.0,
         "math_score": 77.0
       },
-      "tip": "客胜/防平",
+      "tip": "让负",
       "predicted_scores": [
-        "1-2",
         "0-2",
-        "1-1"
+        "1-3",
+        "0-3"
       ],
       "score": "--",
       "result": "PENDING",
@@ -24293,7 +24331,8 @@
       "stats_ts": "2026-10-21 11:06:45",
       "predicted_goals": [
         "2",
-        "3"
+        "3",
+        "4"
       ]
     },
     {
@@ -24339,10 +24378,11 @@
         "tipster_score": 76.0,
         "math_score": 80.0
       },
-      "tip": "客胜",
+      "tip": "让负",
       "predicted_scores": [
-        "1-2",
-        "0-2"
+        "1-1",
+        "0-1",
+        "1-2"
       ],
       "score": "--",
       "result": "PENDING",
@@ -24516,7 +24556,12 @@
         "h2h": null,
         "source": "本地竞彩历史库"
       },
-      "stats_ts": "2026-10-21 11:06:45"
+      "stats_ts": "2026-10-21 11:06:45",
+      "predicted_goals": [
+        "1",
+        "2",
+        "3"
+      ]
     },
     {
       "code": "周四009",
@@ -24561,10 +24606,11 @@
         "tipster_score": 86.0,
         "math_score": 77.0
       },
-      "tip": "客胜",
+      "tip": "主胜/防平",
       "predicted_scores": [
-        "1-2",
-        "0-2"
+        "1-0",
+        "2-1",
+        "1-1"
       ],
       "score": "--",
       "result": "PENDING",
@@ -24762,7 +24808,11 @@
         },
         "source": "本地竞彩历史库"
       },
-      "stats_ts": "2026-10-21 11:06:45"
+      "stats_ts": "2026-10-21 11:06:45",
+      "predicted_goals": [
+        "2",
+        "3"
+      ]
     },
     {
       "code": "周四010",
@@ -24807,11 +24857,11 @@
         "tipster_score": 77.0,
         "math_score": 77.0
       },
-      "tip": "客胜",
+      "tip": "客胜/防平",
       "predicted_scores": [
         "0-1",
-        "0-2",
-        "1-2"
+        "1-2",
+        "1-1"
       ],
       "score": "--",
       "result": "PENDING",
@@ -24986,7 +25036,11 @@
         "h2h": null,
         "source": "本地竞彩历史库"
       },
-      "stats_ts": "2026-10-21 11:06:45"
+      "stats_ts": "2026-10-21 11:06:45",
+      "predicted_goals": [
+        "2",
+        "3"
+      ]
     },
     {
       "code": "周四013",
@@ -25031,11 +25085,11 @@
         "tipster_score": 78.0,
         "math_score": 82.0
       },
-      "tip": "客胜",
+      "tip": "主胜",
       "predicted_scores": [
-        "0-2",
-        "1-2",
-        "0-1"
+        "2-0",
+        "2-1",
+        "3-1"
       ],
       "score": "--",
       "result": "PENDING",
@@ -25209,7 +25263,11 @@
         "h2h": null,
         "source": "本地竞彩历史库"
       },
-      "stats_ts": "2026-10-21 11:06:45"
+      "stats_ts": "2026-10-21 11:06:45",
+      "predicted_goals": [
+        "2",
+        "3"
+      ]
     }
   ]
 }
