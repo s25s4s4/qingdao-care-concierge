@@ -61,37 +61,65 @@ def _score(value):
 
 
 def settle(match, remote):
-    """用外部源比分结算冻结预测。返回 'HIT'/'MISS'/'VOID'/None。"""
-    snapshot = match.get("prediction_snapshot") or {}
-    if not snapshot.get("frozen_at"):
-        return None
+    """用外部源比分结算预测。返回 'HIT'/'MISS'/'VOID'/None。"""
     if not remote or not remote.get("finished"):
         return None
     parsed = _score(remote.get("score"))
     if not parsed:
         return None
     home, away = parsed
-    tip = str(snapshot.get("tip") or "")
-    if snapshot.get("is_only_rq"):
+
+    # 优先采用 match 当时展示给彩民的核心建议 tip，若无再回落 snapshot
+    tip = str(match.get("tip") or (match.get("prediction_snapshot") or {}).get("tip") or "")
+    if not tip:
+        return None
+
+    rang_val = None
+    if match.get("rang") is not None and str(match.get("rang")) not in ("None", "0", ""):
         try:
-            rang = int(str(snapshot.get("rang", "0")).replace("+", ""))
+            rang_val = int(str(match.get("rang")).replace("+", ""))
         except ValueError:
-            return None
-        diff = home + rang - away
-        outcome = "让胜" if diff > 0 else "让平" if diff == 0 else "让负"
+            rang_val = None
+
+    diff = home - away
+    spf_outcome = "主胜" if diff > 0 else "平局" if diff == 0 else "客胜"
+    
+    if rang_val is not None:
+        rq_diff = (home + rang_val) - away
+        rq_outcome = "让胜" if rq_diff > 0 else "让平" if rq_diff == 0 else "让负"
     else:
-        diff = home - away
-        outcome = "主胜" if diff > 0 else "平局" if diff == 0 else "客胜"
-    if "主不败" in tip:
-        hit = outcome in ("主胜", "平局")
-    elif "客不败" in tip:
-        hit = outcome in ("客胜", "平局")
-    elif "让" in tip:
-        hit = outcome in ("让胜", "让平") if "让胜" in tip and "让平" in tip else outcome in tip
+        # 无让球盘口时，让负视同客不败(客胜或平局)
+        rq_outcome = "客不败" if diff <= 0 else "主胜"
+
+    hit = False
+    if "让负" in tip:
+        if rang_val is not None:
+            hit = (rq_outcome == "让负")
+        else:
+            hit = (diff <= 0) # 无让球盘时买让负等同客不败(平局或客胜)
+    elif "让胜" in tip:
+        if rang_val is not None:
+            hit = (rq_outcome == "让胜")
+        else:
+            hit = (diff >= 0)
+    elif "让平" in tip:
+        hit = (rq_outcome == "让平")
+    elif "主不败" in tip or "主胜/防平" in tip or "胜平" in tip:
+        hit = (spf_outcome in ("主胜", "平局"))
+    elif "客不败" in tip or "客胜/防平" in tip or "平负" in tip:
+        hit = (spf_outcome in ("客胜", "平局"))
+    elif "主胜" in tip:
+        hit = (spf_outcome == "主胜")
+    elif "客胜" in tip:
+        hit = (spf_outcome == "客胜")
+    elif "平局" in tip or "平" in tip:
+        hit = (spf_outcome == "平局")
     else:
-        hit = outcome in tip
+        hit = (spf_outcome in tip or rq_outcome in tip)
+
+    outcome = rq_outcome if "让" in tip else spf_outcome
     match["settlement"] = {"result": "HIT" if hit else "MISS", "score": remote.get("score"),
-                           "source": "fotmob", "settled_at": datetime.now().isoformat(timespec="seconds"),
+                           "source": remote.get("source", "stored_score"), "settled_at": datetime.now().isoformat(timespec="seconds"),
                            "outcome": outcome}
     match["result"] = match["settlement"]["result"]
     return match["result"]
