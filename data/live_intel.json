@@ -1,7 +1,19 @@
 {
-  "updated_at": "2026-10-21 17:30:44",
+  "updated_at": "2026-10-21 18:55:54",
   "total_tips": 9,
   "live_feed": [
+    {
+      "id": 3578,
+      "channel": "ibettingxx",
+      "time": "2026-10-21 18:54",
+      "code": "周三004",
+      "league": "欧冠",
+      "category": "推单",
+      "is_tip": true,
+      "match": "科莫 VS 曼联",
+      "chinese": "欧冠科莫打曼联，海外单挑重心直指双方进球（BTTS），给到1.48超低赔付，信心度近七成。防守端两边都有漏洞，资金面强走对攻互捅，首选两队皆有破门、大球走起！",
+      "original": "================================ 🎟 SINGLE TICKET | OCT 21, 2026 🎟 ================================ 🕕 Match Time: 18:45 GMT ⚽️ Champions League ⚽️ 🏟 Como vs. Man"
+    },
     {
       "id": 3553,
       "channel": "FabrizioRomano",
@@ -87,18 +99,6 @@
       "original": "🔥 НА ЧТО СТАВИТЬ В СРЕДУ? 👉 Рублёв — явный фаворит в матче с Маннарино. Даём кэф 1.9 на сухую победу Андрея 👉 У ЦСКА винстрик из 12 игр. Держи П2 за 2.18 и изуч"
     },
     {
-      "id": 3189,
-      "channel": "feedinco",
-      "time": "2026-10-20 22:05",
-      "code": "周三004",
-      "league": "欧冠",
-      "category": "赛前军情",
-      "is_tip": false,
-      "match": "科莫 VS 曼联",
-      "chinese": "欧洲推单机构倾向科莫主场拿分，本场给出的核心态度是主不败（双选胜/平）。曼联客场面临硬仗，庄家资金流向对红魔客胜缺乏防范，建议重点防冷门打出，博主队受让拿分。",
-      "original": "FEEDINCO.com Tips for Wednesday, 21 October 1X - Aston Villa - Viking 1X - Betis - Feyenoord 1X - Como - Man Utd 1X - Real Madrid - RB Leipzig 🔥 All upcoming Fo"
-    },
-    {
       "id": 3162,
       "channel": "tribuna_football",
       "time": "2026-10-20 20:07",
@@ -112,6 +112,18 @@
     }
   ],
   "archived": [
+    {
+      "id": 3189,
+      "channel": "feedinco",
+      "time": "2026-10-20 22:05",
+      "code": "周三004",
+      "league": "欧冠",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "科莫 VS 曼联",
+      "chinese": "欧洲推单机构倾向科莫主场拿分，本场给出的核心态度是主不败（双选胜/平）。曼联客场面临硬仗，庄家资金流向对红魔客胜缺乏防范，建议重点防冷门打出，博主队受让拿分。",
+      "original": "FEEDINCO.com Tips for Wednesday, 21 October 1X - Aston Villa - Viking 1X - Betis - Feyenoord 1X - Como - Man Utd 1X - Real Madrid - RB Leipzig 🔥 All upcoming Fo"
+    },
     {
       "id": 3357,
       "channel": "footballbettingtips10",
