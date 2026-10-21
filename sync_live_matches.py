@@ -152,31 +152,56 @@ def generate_tactical_dossier(home, away, league, odds, is_only_rq=False, rang='
 
     # 如果官方不开普通胜平负，只开让球胜平负：所有推荐、数据、分析全部严格转向让球！
     if is_only_rq:
-        rang_desc = f"主让{abs(int(rang))}球" if int(rang) < 0 else f"主受让{abs(int(rang))}球"
-        if sp_h < 2.0:
-            tip = "让胜/博穿盘"
-            consensus = f"让胜优势 ({int(82 - sp_h*4)}%)"
-            ratio = int(82 - sp_h*4)
-            status = "穿盘稳胆"
-            odds_logic = f"本场中国体彩官方不开普通胜平负，单开【让球胜平负 ({rang_desc})】。官方让胜SP仅给在{sp_h}防范区间，欧洲主流指数对主队至少净胜{abs(int(rang))+1}球以上的穿盘深度给予极高信心，下盘防线承受巨大压迫。"
-            score_preds = "3-0、4-1、3-1" if int(rang) <= -2 else "2-0、3-1、3-0"
-            tactics = f"{home}进攻火力凶猛，面对{away}后防深度大巴具备立体破密防手段；客队客战抗压能力欠缺，极易在开场前30分钟失球崩盘，看好主队跨越{rang_desc}门槛穿盘大胜。"
-        elif sp_a < 2.2:
-            tip = "让负/首选客不败"
-            consensus = f"让负防冷 ({int(80 - sp_a*4)}%)"
-            ratio = int(80 - sp_a*4)
-            status = "下盘防冷"
-            odds_logic = f"官方单开【让球胜平负 ({rang_desc})】。初盘让负SP处于{sp_a}敏感防御带，欧洲机构模型测算主队虽有名气溢价但净胜{abs(int(rang))}球以上门槛过高，机构对让负打出防范意图极其坚决。"
-            score_preds = "1-1、2-1、1-2"
-            tactics = f"{home}虽阵容牌面占优但赛程密集体能折损严重；{away}客战立足严密反击，中后场防守韧性极强，本场极难出现惨案，主队即便小胜也很难打穿{rang_desc}盘口，让负极具实战性价比。"
+        try:
+            rang_int = int(rang)
+        except:
+            rang_int = -1
+        rang_desc = f"主让{abs(rang_int)}球" if rang_int < 0 else f"主受让{abs(rang_int)}球"
+        
+        # 客让球（主受让，rang > 0，如克里特 vs 勒沃库森 +2）
+        if rang_int > 0:
+            if sp_h <= 2.50: # 让胜赔率合理（受让方优势）
+                tip = "让胜/防让平"
+                consensus = f"让胜优势 ({int(82 - sp_h*4)}%)"
+                ratio = int(82 - sp_h*4)
+                status = "受让利刃"
+                odds_logic = f"体彩官方单开【让球胜平负 ({rang_desc})】。客队深让{rang_int}球门槛过高，机构对让胜({sp_h})与让平({sp_d})防范意图坚决，客队难打穿。"
+                score_preds = "1-2、0-2、1-1" if rang_int == 2 else "1-1、0-1、1-2"
+                tactics = f"{home}虽阵容受制但坐拥主场地利与{rang_desc}巨幅安全垫；{away}客战客让{rang_int}球穿盘极其吃力，大概率小胜或被逼平，看好主队守住让球盘。"
+            else:
+                tip = "让负"
+                consensus = f"穿盘优势 ({int(80 - sp_a*4)}%)"
+                ratio = int(80 - sp_a*4)
+                status = "穿盘稳胆"
+                odds_logic = f"体彩官方单开【让球胜平负 ({rang_desc})】。客队净胜{rang_int+1}球以上赔率({sp_a})获机构强力防范。"
+                score_preds = "0-3、1-4、0-4" if rang_int == 2 else "0-2、0-3、1-3"
+                tactics = f"{away}攻击火力呈现降维打击，{home}后防线极易崩盘，看好客队净胜{rang_int+1}球以上打穿让球盘。"
         else:
-            tip = "让平/防让胜"
-            consensus = f"胶着防让平 (68.0%)"
-            ratio = 68.0
-            status = "深盘博弈"
-            odds_logic = f"官方单开【让球胜平负 ({rang_desc})】。让平SP高达{sp_d}，让胜与让负赔率处于均势胶着带。机构严密防范主队恰好净胜{abs(int(rang))}球的卡盘让平格局。"
-            score_preds = "2-0、3-1、2-1"
-            tactics = f"双方技战术博弈极具针对性，主队强攻但客队顽强抵挡，极易出现主队刚好净胜{abs(int(rang))}球的卡盘比分，首选【让平】求高回报。"
+            # 主让球（rang < 0，如罗马 -2）
+            if sp_h < 2.0:
+                tip = "让胜"
+                consensus = f"让胜优势 ({int(82 - sp_h*4)}%)"
+                ratio = int(82 - sp_h*4)
+                status = "穿盘稳胆"
+                odds_logic = f"本场中国体彩官方不开普通胜平负，单开【让球胜平负 ({rang_desc})】。官方让胜SP仅给在{sp_h}防范区间，欧洲主流指数对主队至少净胜{abs(rang_int)+1}球以上的穿盘深度给予极高信心，下盘防线承受巨大压迫。"
+                score_preds = "3-0、4-1、3-1" if rang_int <= -2 else "2-0、3-1、3-0"
+                tactics = f"{home}进攻火力凶猛，面对{away}后防深度大巴具备立体破密防手段；客队客战抗压能力欠缺，极易在开场前30分钟失球崩盘，看好主队跨越{rang_desc}门槛穿盘大胜。"
+            elif sp_a < 2.2:
+                tip = "让负"
+                consensus = f"让负防冷 ({int(80 - sp_a*4)}%)"
+                ratio = int(80 - sp_a*4)
+                status = "下盘防冷"
+                odds_logic = f"官方单开【让球胜平负 ({rang_desc})】。初盘让负SP处于{sp_a}敏感防御带，欧洲机构模型测算主队虽有名气溢价但净胜{abs(rang_int)}球以上门槛过高，机构对让负打出防范意图极其坚决。"
+                score_preds = "2-1、1-0、1-1" if rang_int <= -2 else "1-1、0-1、1-2"
+                tactics = f"{home}虽阵容牌面占优但赛程密集体能折损严重；{away}客战立足严密反击，中后场防守韧性极强，本场极难出现惨案，主队即便小胜也很难打穿{rang_desc}盘口，让负极具实战性价比。"
+            else:
+                tip = "让平/防让胜"
+                consensus = f"胶着防让平 (68.0%)"
+                ratio = 68.0
+                status = "深盘博弈"
+                odds_logic = f"官方单开【让球胜平负 ({rang_desc})】。让平SP高达{sp_d}，让胜与让负赔率处于均势胶着带。机构严密防范主队恰好净胜{abs(rang_int)}球的卡盘让平格局。"
+                score_preds = "2-0、3-1、2-1"
+                tactics = f"双方技战术博弈极具针对性，主队强攻但客队顽强抵挡，极易出现主队刚好净胜{abs(rang_int)}球的卡盘比分，首选【让平】求高回报。"
 
         fund = f"本场为体彩官方焦点深盘赛事，官方未开普通胜平负，全部实盘交易均汇聚在【让球胜平负 ({rang_desc})】。两队战术阵眼在于主队攻坚撕裂效率与客队反击抓失误能力。"
         decision = f"【赛前让球专项研判】：官方单开让球盘（{rang_desc}），综合欧洲去水模型，本场首选【{tip}】。实战比分区间重点防范：【{score_preds}】，柜台直打让球选项。"
@@ -724,6 +749,94 @@ def full_pipeline_sync(auto_push=True):
                 log_messages.append(f"TeamStats: +{_n} matches")
         except Exception as _exc:
             log_messages.append(f"TeamStats skipped: {type(_exc).__name__}")
+
+        # 【核心铁壁守门员】：全自动自洽门控 (Enforce Match Consistency & Zero Conflict)
+        # 绝不允许任何新一天的比赛出现“建议让负却给出主胜比分”或“让球盘口与比分打架”！
+        for m in existing_matches:
+            try:
+                tip = m.get('tip', '')
+                rang_str = str(m.get('rang', '-1'))
+                rang_val = int(rang_str) if rang_str.lstrip('-+').isdigit() else -1
+                scores = m.get('predicted_scores', [])
+                
+                # 1. 净化赛前建议 (直给干脆答案，拒绝长篇大论)
+                if '让负/防让平' in tip or ('让负' in tip and '防让平' in tip):
+                    m['tip'] = '让负/防让平'
+                elif '让胜/防让平' in tip or ('让胜' in tip and '防让平' in tip):
+                    m['tip'] = '让胜/防让平'
+                elif '让负' in tip and '让胜' not in tip:
+                    m['tip'] = '让负'
+                elif '让胜' in tip and '让负' not in tip:
+                    m['tip'] = '让胜'
+
+                cur_tip = m['tip']
+                # 2. 严格核验并纠偏比分，确保与 tip 和 让球数 100% 自洽
+                if cur_tip == '让负':
+                    if rang_val < 0: # 主让球买让负，结果必须是客不败 (平局或客胜)
+                        valid_scores = [sc for sc in scores if '-' in sc and int(sc.split('-')[0]) <= int(sc.split('-')[1])]
+                        if not valid_scores:
+                            m['predicted_scores'] = ['1-1', '0-1', '1-2']
+                            m['predicted_goals'] = ['1', '2', '3']
+                        else:
+                            m['predicted_scores'] = valid_scores[:3]
+                    elif rang_val > 0: # 客让球买让负，客队必须大胜净胜 rang_val + 1 球以上
+                        valid_scores = [sc for sc in scores if '-' in sc and int(sc.split('-')[1]) - int(sc.split('-')[0]) > rang_val]
+                        if not valid_scores:
+                            m['predicted_scores'] = ['0-3', '1-4', '0-4'] if rang_val >= 2 else ['0-2', '1-3', '0-3']
+                            m['predicted_goals'] = ['3', '4', '5']
+                        else:
+                            m['predicted_scores'] = valid_scores[:3]
+
+                elif cur_tip == '让胜':
+                    if rang_val < 0: # 主让球买让胜，主队必须净胜 abs(rang_val) + 1 球以上
+                        valid_scores = [sc for sc in scores if '-' in sc and int(sc.split('-')[0]) - int(sc.split('-')[1]) > abs(rang_val)]
+                        if not valid_scores:
+                            m['predicted_scores'] = ['3-0', '4-1', '3-1'] if abs(rang_val) >= 2 else ['2-0', '3-1', '3-0']
+                            m['predicted_goals'] = ['3', '4', '5']
+                        else:
+                            m['predicted_scores'] = valid_scores[:3]
+                    elif rang_val > 0: # 客让球买让胜，主队受让安全，客队净胜不能超过 rang_val
+                        valid_scores = [sc for sc in scores if '-' in sc and int(sc.split('-')[1]) - int(sc.split('-')[0]) < rang_val]
+                        if not valid_scores:
+                            m['predicted_scores'] = ['1-1', '1-2', '0-1']
+                            m['predicted_goals'] = ['2', '3']
+                        else:
+                            m['predicted_scores'] = valid_scores[:3]
+
+                elif cur_tip == '让负/防让平':
+                    if rang_val < 0: # 主让球，让负+让平覆盖：客不败 + 主净胜刚好 abs(rang) 球
+                        # 比如主让1球，比分应覆盖平局、客胜、以及主胜刚好1球(2-1, 1-0)
+                        m['predicted_scores'] = ['1-1', '0-1', '2-1']
+                        m['predicted_goals'] = ['2', '3']
+                    elif rang_val > 0: # 客让球
+                        m['predicted_scores'] = ['1-2', '0-2', '1-1']
+                        m['predicted_goals'] = ['2', '3']
+
+                elif cur_tip == '让胜/防让平':
+                    if rang_val > 0: # 客让球(主受让)，让胜+让平覆盖：主不败 + 客胜刚好在让球数以内
+                        m['predicted_scores'] = ['1-2', '0-2', '1-1']
+                        m['predicted_goals'] = ['2', '3']
+                    elif rang_val < 0: # 主让球
+                        m['predicted_scores'] = ['2-0', '2-1', '3-1']
+                        m['predicted_goals'] = ['2', '3', '4']
+
+                elif cur_tip == '主胜':
+                    valid_scores = [sc for sc in scores if '-' in sc and int(sc.split('-')[0]) > int(sc.split('-')[1])]
+                    if not valid_scores:
+                        m['predicted_scores'] = ['2-0', '2-1', '3-1']
+                        m['predicted_goals'] = ['2', '3', '4']
+                    else:
+                        m['predicted_scores'] = valid_scores[:3]
+
+                elif cur_tip == '客胜':
+                    valid_scores = [sc for sc in scores if '-' in sc and int(sc.split('-')[1]) > int(sc.split('-')[0])]
+                    if not valid_scores:
+                        m['predicted_scores'] = ['0-2', '1-2', '0-1']
+                        m['predicted_goals'] = ['2', '3']
+                    else:
+                        m['predicted_scores'] = valid_scores[:3]
+            except Exception:
+                continue
 
         with open(MATCHES_FILE, 'w', encoding='utf-8') as f:
             json.dump(data, f, ensure_ascii=False, indent=2)
