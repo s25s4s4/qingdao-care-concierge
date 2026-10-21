@@ -198,7 +198,14 @@ def _touch_lock():
 def stale(hours=6):
     if not os.path.exists(OUT):
         return True
-    return (time.time() - os.path.getmtime(OUT)) > hours * 3600
+    if (time.time() - os.path.getmtime(OUT)) > hours * 3600:
+        return True
+    # 抓空了也算过期：2026-10-21 那次刷新 5 个联赛全失败，写进一个 leagues:{} 的空文件，
+    # mtime 是新的，于是被判定"不 stale"，白等 6 小时——期间所有场次的当季 xG 全没了。
+    d = load()
+    if not d or not d.get("leagues"):
+        return True
+    return False
 
 
 def team_season(cn_name, league_cn, data=None):

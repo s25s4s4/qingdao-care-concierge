@@ -28,8 +28,13 @@ def _parse_score(s):
         return None
 
 
-def load_codes(path=ARCHIVE):
-    """已归档的 code 集合，用于去重"""
+def load_keys(path=ARCHIVE):
+    """已归档的 (code, date) 集合，用于去重。
+
+    为什么不能只按 code 去重：竞彩场次编号每周复用（周一001 / 周二001 …），
+    14 年数据里「周一001」出现过 518 次。只按 code 判重会让下周同编号的比赛
+    全部被当成「已归档」静默跳过——归档从第 8 天起就停止增长。
+    """
     seen = set()
     if not os.path.exists(path):
         return seen
@@ -40,7 +45,8 @@ def load_codes(path=ARCHIVE):
                 if not line:
                     continue
                 try:
-                    seen.add(json.loads(line).get("code"))
+                    r = json.loads(line)
+                    seen.add((r.get("code"), r.get("date")))
                 except Exception:
                     continue
     except Exception:
@@ -48,21 +54,28 @@ def load_codes(path=ARCHIVE):
     return seen
 
 
+def load_codes(path=ARCHIVE):
+    """已归档的 code 集合（仅用于展示统计，不要用它判重）"""
+    return {c for c, _ in load_keys(path)}
+
+
 def append(matches, path=ARCHIVE, date_of=None):
     """matches: 已完成、且带 score 的比赛对象列表。返回新写入条数。"""
     if not matches:
         return 0
-    seen = load_codes(path)
+    seen = load_keys(path)
     rows = []
     for m in matches:
         code = m.get("code")
-        if not code or code in seen:
+        if not code:
             continue
         sc = _parse_score(m.get("score"))
         if not sc:
             continue
         day = date_of(m) if date_of else None
         if not day:
+            continue
+        if (code, day) in seen:
             continue
         hg, ag = sc
         rows.append({
@@ -76,7 +89,7 @@ def append(matches, path=ARCHIVE, date_of=None):
             "res": "胜" if hg > ag else ("平" if hg == ag else "负"),
             "src": "live500",
         })
-        seen.add(code)
+        seen.add((code, day))
     if not rows:
         return 0
     os.makedirs(os.path.dirname(path), exist_ok=True)
