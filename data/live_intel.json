@@ -1,7 +1,19 @@
 {
-  "updated_at": "2026-10-21 15:05:40",
-  "total_tips": 3,
+  "updated_at": "2026-10-21 16:00:47",
+  "total_tips": 4,
   "live_feed": [
+    {
+      "id": 3524,
+      "channel": "victorspredict",
+      "time": "2026-10-21 16:00",
+      "code": "周三004",
+      "league": "欧冠",
+      "category": "推单",
+      "is_tip": true,
+      "match": "科莫 VS 曼联",
+      "chinese": "欧前线最新风向：客队曼联热度不减，主力框架齐整，外界资金防一手冷平，倾向曼联客场不败（双平/让平让负）。客胜及平局回报适中，本场防守反击是关键，看好红魔客场保平争胜。",
+      "original": "⭐ SUPER SINGLE TIP - 21-10-2026 Como vs Manchester United World: UEFA Champions League Prediction: Away Win or Draw (1.74) 🔗 View Details ⚠️ All predictions are"
+    },
     {
       "id": 3511,
       "channel": "olimpbet",
