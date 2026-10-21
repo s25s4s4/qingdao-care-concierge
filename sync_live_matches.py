@@ -759,74 +759,69 @@ def full_pipeline_sync(auto_push=True):
             log_messages.append(f"LiveTeamForm skipped: {type(_exc).__name__}")
 
         # 【核心铁壁守门员】：全自动自洽门控 (Enforce Match Consistency & Zero Conflict)
-        # 绝不允许任何新一天的比赛出现“建议让负却给出主胜比分”或“让球盘口与比分打架”！
+        # 严格执行常识铁律：概率决定研判！
+        # 1. 主胜+平局 >= 70% 时，必须推【主胜】或【主胜/防平】，绝对严禁推让负！
+        # 2. 客胜+平局 >= 70% 时，必须推【客胜】或【客胜/防平】！
+        # 3. 只有当让球方胜率低（<=48%）且冷门几率大时，才允许推让负！
         for m in existing_matches:
             try:
-                tip = m.get('tip', '')
+                # 优先采用 quant_factors 物理概率硬门控对齐
+                qf = m.get('quant_factors') or {}
+                pw = float(qf.get('win_rate', 0)) / 100.0
+                pd = float(qf.get('draw_rate', 0)) / 100.0
+                pl = float(qf.get('loss_rate', 0)) / 100.0
+                
+                # 若无 qf，从赔率反推
+                if pw == 0 and m.get('odds') and len(m['odds']) >= 3:
+                    try:
+                        inv = [1.0/float(x) for x in m['odds']]
+                        s = sum(inv)
+                        pw, pd, pl = inv[0]/s, inv[1]/s, inv[2]/s
+                    except: pass
+
                 rang_str = str(m.get('rang', '-1'))
                 rang_val = int(rang_str) if rang_str.lstrip('-+').isdigit() else -1
-                scores = m.get('predicted_scores', [])
-                
-                # 1. 净化赛前建议 (直给干脆答案，拒绝长篇大论)
-                if '让负/防让平' in tip or ('让负' in tip and '防让平' in tip):
-                    m['tip'] = '让负/防让平'
-                elif '让胜/防让平' in tip or ('让胜' in tip and '防让平' in tip):
-                    m['tip'] = '让胜/防让平'
-                elif '让负' in tip and '让胜' not in tip:
+
+                # 【铁律裁决】：依据物理概率矫正 tip
+                if pw + pd >= 0.72:
+                    if pw >= 0.65:
+                        m['tip'] = '主胜'
+                    else:
+                        m['tip'] = '主胜/防平'
+                elif pl + pd >= 0.72:
+                    if pl >= 0.65:
+                        m['tip'] = '客胜'
+                    else:
+                        m['tip'] = '客胜/防平'
+                elif pw <= 0.48 and pl >= 0.28:
                     m['tip'] = '让负'
-                elif '让胜' in tip and '让负' not in tip:
+                elif pl <= 0.48 and pw >= 0.28:
                     m['tip'] = '让胜'
 
-                cur_tip = m['tip']
-                # 2. 严格核验并纠偏比分，确保与 tip 和 让球数 100% 自洽
-                if cur_tip == '让负':
+                cur_tip = m.get('tip', '主胜/防平')
+
+                # 2. 严格核验并纠偏比分，确保与 tip 100% 同向自洽
+                if cur_tip in ('主胜', '主胜/防平'):
+                    # 必须主胜或平局，绝对不可出现客胜比分！
+                    m['predicted_scores'] = ['1-0', '2-1', '1-1'] if cur_tip == '主胜/防平' else ['2-0', '2-1', '3-1']
+                    m['predicted_goals'] = ['2', '3']
+                elif cur_tip in ('客胜', '客胜/防平'):
+                    m['predicted_scores'] = ['0-1', '1-2', '1-1'] if cur_tip == '客胜/防平' else ['0-2', '1-2', '0-3']
+                    m['predicted_goals'] = ['2', '3']
+                elif cur_tip == '让负':
                     if rang_val < 0: # 主让球买让负，结果必须是客不败 (平局或客胜)
-                        valid_scores = [sc for sc in scores if '-' in sc and int(sc.split('-')[0]) <= int(sc.split('-')[1])]
-                        if not valid_scores:
-                            m['predicted_scores'] = ['1-1', '0-1', '1-2']
-                            m['predicted_goals'] = ['1', '2', '3']
-                        else:
-                            m['predicted_scores'] = valid_scores[:3]
-                    elif rang_val > 0: # 客让球买让负，客队必须大胜净胜 rang_val + 1 球以上
-                        valid_scores = [sc for sc in scores if '-' in sc and int(sc.split('-')[1]) - int(sc.split('-')[0]) > rang_val]
-                        if not valid_scores:
-                            m['predicted_scores'] = ['0-3', '1-4', '0-4'] if rang_val >= 2 else ['0-2', '1-3', '0-3']
-                            m['predicted_goals'] = ['3', '4', '5']
-                        else:
-                            m['predicted_scores'] = valid_scores[:3]
-
-                elif cur_tip == '让胜':
-                    if rang_val < 0: # 主让球买让胜，主队必须净胜 abs(rang_val) + 1 球以上
-                        valid_scores = [sc for sc in scores if '-' in sc and int(sc.split('-')[0]) - int(sc.split('-')[1]) > abs(rang_val)]
-                        if not valid_scores:
-                            m['predicted_scores'] = ['3-0', '4-1', '3-1'] if abs(rang_val) >= 2 else ['2-0', '3-1', '3-0']
-                            m['predicted_goals'] = ['3', '4', '5']
-                        else:
-                            m['predicted_scores'] = valid_scores[:3]
-                    elif rang_val > 0: # 客让球买让胜，主队受让安全，客队净胜不能超过 rang_val
-                        valid_scores = [sc for sc in scores if '-' in sc and int(sc.split('-')[1]) - int(sc.split('-')[0]) < rang_val]
-                        if not valid_scores:
-                            m['predicted_scores'] = ['1-1', '1-2', '0-1']
-                            m['predicted_goals'] = ['2', '3']
-                        else:
-                            m['predicted_scores'] = valid_scores[:3]
-
-                elif cur_tip == '让负/防让平':
-                    if rang_val < 0: # 主让球，让负+让平覆盖：客不败 + 主净胜刚好 abs(rang) 球
-                        # 比如主让1球，比分应覆盖平局、客胜、以及主胜刚好1球(2-1, 1-0)
-                        m['predicted_scores'] = ['1-1', '0-1', '2-1']
-                        m['predicted_goals'] = ['2', '3']
-                    elif rang_val > 0: # 客让球
-                        m['predicted_scores'] = ['1-2', '0-2', '1-1']
-                        m['predicted_goals'] = ['2', '3']
-
-                elif cur_tip == '让胜/防让平':
-                    if rang_val > 0: # 客让球(主受让)，让胜+让平覆盖：主不败 + 客胜刚好在让球数以内
-                        m['predicted_scores'] = ['1-2', '0-2', '1-1']
-                        m['predicted_goals'] = ['2', '3']
-                    elif rang_val < 0: # 主让球
-                        m['predicted_scores'] = ['2-0', '2-1', '3-1']
+                        m['predicted_scores'] = ['1-1', '0-1', '1-2']
+                        m['predicted_goals'] = ['1', '2', '3']
+                    else:
+                        m['predicted_scores'] = ['0-2', '1-3', '0-3']
                         m['predicted_goals'] = ['2', '3', '4']
+                elif cur_tip == '让胜':
+                    if rang_val < 0:
+                        m['predicted_scores'] = ['2-0', '3-1', '3-0']
+                        m['predicted_goals'] = ['2', '3', '4']
+                    else:
+                        m['predicted_scores'] = ['1-1', '1-0', '0-0']
+                        m['predicted_goals'] = ['1', '2']
 
                 elif cur_tip == '主胜':
                     valid_scores = [sc for sc in scores if '-' in sc and int(sc.split('-')[0]) > int(sc.split('-')[1])]

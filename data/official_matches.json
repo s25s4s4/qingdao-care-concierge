@@ -19746,11 +19746,11 @@
         "tipster_score": 72.0,
         "math_score": 76.0
       },
-      "tip": "让负",
+      "tip": "主胜/防平",
       "predicted_scores": [
-        "1-1",
-        "0-1",
-        "1-2"
+        "1-0",
+        "2-1",
+        "1-1"
       ],
       "score": "--",
       "result": "PENDING",
@@ -19951,7 +19951,6 @@
         "quant_detail_note": ""
       },
       "predicted_goals": [
-        "1",
         "2",
         "3"
       ]
@@ -19999,7 +19998,7 @@
         "tipster_score": 76.0,
         "math_score": 76.0
       },
-      "tip": "让负/防让平",
+      "tip": "让负",
       "predicted_scores": [
         "1-1",
         "0-1",
@@ -20251,8 +20250,10 @@
         "tipster_score": 72.0,
         "math_score": 76.0
       },
-      "tip": "让负",
+      "tip": "主胜/防平",
       "predicted_scores": [
+        "1-0",
+        "2-1",
         "1-1"
       ],
       "score": "--",
@@ -20417,7 +20418,11 @@
         "smart_pick": "让负",
         "smart_type": "SINGLE",
         "quant_detail_note": "【8万场让球利刃 · 极简让球直打】：8万场历史大数据同赔率下最高胜率仅为 45.3%，客队具备极强反客为主抗衡力。实战果断单挑【让负】，一注通吃客队不败！"
-      }
+      },
+      "predicted_goals": [
+        "2",
+        "3"
+      ]
     },
     {
       "code": "周三004",
@@ -20684,11 +20689,11 @@
         "tipster_score": 68.9,
         "math_score": 68.2
       },
-      "tip": "胜平双选",
+      "tip": "主胜/防平",
       "predicted_scores": [
+        "1-0",
         "2-1",
-        "1-1",
-        "2-0"
+        "1-1"
       ],
       "score": "--",
       "result": "PENDING",
@@ -20863,7 +20868,11 @@
         "smart_pick": "主胜/防平",
         "smart_type": "DOUBLE",
         "quant_detail_note": ""
-      }
+      },
+      "predicted_goals": [
+        "2",
+        "3"
+      ]
     },
     {
       "code": "周三006",
@@ -21160,7 +21169,7 @@
       "predicted_scores": [
         "2-0",
         "2-1",
-        "3-0"
+        "3-1"
       ],
       "score": "--",
       "result": "PENDING",
@@ -21359,7 +21368,11 @@
         "smart_pick": "主胜",
         "smart_type": "SINGLE",
         "quant_detail_note": ""
-      }
+      },
+      "predicted_goals": [
+        "2",
+        "3"
+      ]
     },
     {
       "code": "周三008",
@@ -21406,8 +21419,8 @@
       },
       "tip": "主胜",
       "predicted_scores": [
-        "3-0",
-        "4-0",
+        "2-0",
+        "2-1",
         "3-1"
       ],
       "score": "--",
@@ -21583,7 +21596,11 @@
         "smart_pick": "主胜",
         "smart_type": "SINGLE",
         "quant_detail_note": ""
-      }
+      },
+      "predicted_goals": [
+        "2",
+        "3"
+      ]
     },
     {
       "code": "周三009",
@@ -21630,9 +21647,9 @@
       },
       "tip": "主胜/防平",
       "predicted_scores": [
-        "2-0",
+        "1-0",
         "2-1",
-        "3-1"
+        "1-1"
       ],
       "score": "--",
       "result": "PENDING",
@@ -21807,7 +21824,11 @@
         "smart_pick": "主胜/防平",
         "smart_type": "DOUBLE",
         "quant_detail_note": ""
-      }
+      },
+      "predicted_goals": [
+        "2",
+        "3"
+      ]
     },
     {
       "code": "周三010",
@@ -21852,11 +21873,11 @@
         "tipster_score": 68.9,
         "math_score": 68.2
       },
-      "tip": "胜平双选",
+      "tip": "主胜/防平",
       "predicted_scores": [
+        "1-0",
         "2-1",
-        "1-1",
-        "2-0"
+        "1-1"
       ],
       "score": "--",
       "result": "PENDING",
@@ -22055,7 +22076,11 @@
         "smart_pick": "胜平双选",
         "smart_type": "DOUBLE",
         "quant_detail_note": ""
-      }
+      },
+      "predicted_goals": [
+        "2",
+        "3"
+      ]
     },
     {
       "code": "周三011",
@@ -22100,7 +22125,7 @@
         "tipster_score": 68.0,
         "math_score": 67.3
       },
-      "tip": "让胜",
+      "tip": "让负",
       "predicted_scores": [
         "3-0",
         "4-1"
@@ -22344,8 +22369,8 @@
       },
       "tip": "主胜/防平",
       "predicted_scores": [
-        "2-1",
         "1-0",
+        "2-1",
         "1-1"
       ],
       "score": "--",
@@ -22521,7 +22546,11 @@
         "smart_pick": "主胜/防平",
         "smart_type": "DOUBLE",
         "quant_detail_note": ""
-      }
+      },
+      "predicted_goals": [
+        "2",
+        "3"
+      ]
     },
     {
       "code": "周三013",
@@ -22568,8 +22597,8 @@
       },
       "tip": "主胜/防平",
       "predicted_scores": [
-        "2-0",
         "1-0",
+        "2-1",
         "1-1"
       ],
       "score": "--",
@@ -22769,7 +22798,11 @@
         "smart_pick": "主胜/防平",
         "smart_type": "DOUBLE",
         "quant_detail_note": ""
-      }
+      },
+      "predicted_goals": [
+        "2",
+        "3"
+      ]
     },
     {
       "code": "周四001",
@@ -23041,7 +23074,7 @@
         "tipster_score": 77.0,
         "math_score": 77.0
       },
-      "tip": "客胜",
+      "tip": "客胜/防平",
       "predicted_scores": [
         "0-2",
         "1-2",
@@ -23264,10 +23297,10 @@
         "tipster_score": 76.0,
         "math_score": 76.0
       },
-      "tip": "客不败/双选平负",
+      "tip": "主胜/防平",
       "predicted_scores": [
-        "1-2",
-        "0-2",
+        "1-0",
+        "2-1",
         "1-1"
       ],
       "score": "--",
@@ -23443,7 +23476,11 @@
         "h2h": null,
         "source": "本地竞彩历史库"
       },
-      "stats_ts": "2026-10-21 11:06:45"
+      "stats_ts": "2026-10-21 11:06:45",
+      "predicted_goals": [
+        "2",
+        "3"
+      ]
     },
     {
       "code": "周四004",
@@ -23488,11 +23525,11 @@
         "tipster_score": 83.0,
         "math_score": 81.0
       },
-      "tip": "客不败/双选平负",
+      "tip": "主胜/防平",
       "predicted_scores": [
-        "1-2",
-        "1-1",
-        "0-2"
+        "1-0",
+        "2-1",
+        "1-1"
       ],
       "score": "--",
       "result": "PENDING",
@@ -23666,7 +23703,11 @@
         "h2h": null,
         "source": "本地竞彩历史库"
       },
-      "stats_ts": "2026-10-21 11:06:45"
+      "stats_ts": "2026-10-21 11:06:45",
+      "predicted_goals": [
+        "2",
+        "3"
+      ]
     },
     {
       "code": "周四005",
@@ -23711,10 +23752,10 @@
         "tipster_score": 92.0,
         "math_score": 75.0
       },
-      "tip": "让胜/防让平",
+      "tip": "主胜/防平",
       "predicted_scores": [
-        "1-2",
-        "0-2",
+        "1-0",
+        "2-1",
         "1-1"
       ],
       "score": "--",
@@ -23889,11 +23930,11 @@
         "tipster_score": 76.0,
         "math_score": 79.5
       },
-      "tip": "客胜",
+      "tip": "主胜/防平",
       "predicted_scores": [
-        "0-2",
-        "1-2",
-        "0-1"
+        "1-0",
+        "2-1",
+        "1-1"
       ],
       "score": "--",
       "result": "PENDING",
@@ -24067,7 +24108,11 @@
         "h2h": null,
         "source": "本地竞彩历史库"
       },
-      "stats_ts": "2026-10-21 11:06:45"
+      "stats_ts": "2026-10-21 11:06:45",
+      "predicted_goals": [
+        "2",
+        "3"
+      ]
     },
     {
       "code": "周四007",
@@ -24112,7 +24157,7 @@
         "tipster_score": 82.0,
         "math_score": 77.0
       },
-      "tip": "客胜/防平",
+      "tip": "让负",
       "predicted_scores": [
         "1-2",
         "0-2",
@@ -24340,7 +24385,7 @@
         "tipster_score": 76.0,
         "math_score": 80.0
       },
-      "tip": "客胜",
+      "tip": "让负",
       "predicted_scores": [
         "1-2",
         "0-2"
@@ -24562,10 +24607,11 @@
         "tipster_score": 86.0,
         "math_score": 77.0
       },
-      "tip": "客胜",
+      "tip": "主胜/防平",
       "predicted_scores": [
-        "1-2",
-        "0-2"
+        "1-0",
+        "2-1",
+        "1-1"
       ],
       "score": "--",
       "result": "PENDING",
@@ -24763,7 +24809,11 @@
         },
         "source": "本地竞彩历史库"
       },
-      "stats_ts": "2026-10-21 11:06:45"
+      "stats_ts": "2026-10-21 11:06:45",
+      "predicted_goals": [
+        "2",
+        "3"
+      ]
     },
     {
       "code": "周四010",
@@ -24808,7 +24858,7 @@
         "tipster_score": 77.0,
         "math_score": 77.0
       },
-      "tip": "客胜",
+      "tip": "客胜/防平",
       "predicted_scores": [
         "0-1",
         "0-2",
@@ -25032,11 +25082,11 @@
         "tipster_score": 78.0,
         "math_score": 82.0
       },
-      "tip": "客胜",
+      "tip": "主胜",
       "predicted_scores": [
-        "0-2",
-        "1-2",
-        "0-1"
+        "2-0",
+        "2-1",
+        "3-1"
       ],
       "score": "--",
       "result": "PENDING",
@@ -25210,7 +25260,11 @@
         "h2h": null,
         "source": "本地竞彩历史库"
       },
-      "stats_ts": "2026-10-21 11:06:45"
+      "stats_ts": "2026-10-21 11:06:45",
+      "predicted_goals": [
+        "2",
+        "3"
+      ]
     }
   ]
 }
