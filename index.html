@@ -2960,16 +2960,43 @@
 
             const lg = match.league || '';
             let base = 1.35;
-            if (['荷甲', '德甲', '美职足', '瑞士超'].indexOf(lg) >= 0) base = 1.65;
-            else if (['意甲', '西甲', '法乙', '西乙'].indexOf(lg) >= 0) base = 1.15;
+            if (['荷甲', '德甲', '美职足', '瑞士超', '日职', '日乙'].indexOf(lg) >= 0) base = 1.45;
+            else if (['意甲', '西甲', '法乙', '西乙', '阿甲'].indexOf(lg) >= 0) base = 1.15;
 
-            let lh, ma;
-            if (match.is_only_rq && parseInt(match.rang) <= -2) { lh = 2.65; ma = 0.95; }
-            else {
+            // 1. 第一锚点 (50%): 机构去水即时赔率倒推隐含进球期望
+            let lh_odds, la_odds;
+            if (match.is_only_rq && parseInt(match.rang) <= -2) { 
+                lh_odds = 2.65; la_odds = 0.95; 
+            } else {
                 const r = inv[0] / (inv[0] + inv[2] + 1e-5);
-                lh = Math.max(0.6, Math.min(3.8, base * (r / 0.5)));
-                ma = Math.max(0.4, Math.min(3.5, (base - 0.1) * ((1 - r) / 0.5)));
+                lh_odds = Math.max(0.6, Math.min(3.8, base * (r / 0.5)));
+                la_odds = Math.max(0.4, Math.min(3.5, (base - 0.1) * ((1 - r) / 0.5)));
             }
+
+            // 2. 第二锚点 (30%): 8.4万场同赔率真实比赛提取的进球期望
+            let lh_hist = lh_odds, la_hist = la_odds;
+            const qf = match.quant_factors;
+            if (qf && qf.lambda_h && qf.lambda_a) {
+                lh_hist = parseFloat(qf.lambda_h);
+                la_hist = parseFloat(qf.lambda_a);
+            }
+
+            // 3. 第三锚点 (20%): 当季主客场攻防相对效率动态修正
+            let lh_form = lh_odds, la_form = la_odds;
+            const st = match.stats;
+            if (st && st.home && st.away && st.home.recent && st.away.recent) {
+                const h_gf = st.home.recent.gf || 1.3;
+                const h_ga = st.home.recent.ga || 1.1;
+                const a_gf = st.away.recent.gf || 1.1;
+                const a_ga = st.away.recent.ga || 1.3;
+                // Dixon-Coles 相对攻防强度融合
+                lh_form = Math.max(0.6, Math.min(3.8, (h_gf * 0.6 + a_ga * 0.4)));
+                la_form = Math.max(0.4, Math.min(3.5, (a_gf * 0.6 + h_ga * 0.4)));
+            }
+
+            // 【三元锚定多源加权融合】：50% 机构即时 + 30% 历史同赔 + 20% 当季攻防
+            const lh = Math.round((lh_odds * 0.50 + lh_hist * 0.30 + lh_form * 0.20) * 100) / 100;
+            const ma = Math.round((la_odds * 0.50 + la_hist * 0.30 + la_form * 0.20) * 100) / 100;
 
             const N = 9;
             const ph = [], pa = [];
