@@ -1,7 +1,19 @@
 {
-  "updated_at": "2026-10-21 16:45:50",
-  "total_tips": 5,
+  "updated_at": "2026-10-21 16:50:48",
+  "total_tips": 6,
   "live_feed": [
+    {
+      "id": 3521,
+      "channel": "bulletbetpredictions",
+      "time": "2026-10-21 15:48",
+      "code": "周三009",
+      "league": "欧冠",
+      "category": "推单",
+      "is_tip": true,
+      "match": "贝蒂斯 VS 费耶诺德",
+      "chinese": "费耶诺德客场后防直接漏成筛子，上个客场被狂灌5球，防守端完全不设防。贝蒂斯主场战力向来凶猛，本场盘口利好主队进攻，防线隐患直指大球，看好贝蒂斯主胜打底，进球数至少3球起步。",
+      "original": "2/2 🤯 Viking away games with over 2.5 and both teams scoring. At Villa. Champions League 21 Oct: THE NUMBERS 📊 👉 Swipe through all 9 matches before kick-off. 🔥 "
+    },
     {
       "id": 3545,
       "channel": "matchplug",
