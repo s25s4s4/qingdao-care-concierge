@@ -2909,6 +2909,8 @@
             `;
 
             modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            document.body.style.touchAction = 'none';
         }
 
         // 异步获取纯体彩情报流 (HTTPS混合内容防御：优先相对路径同源，彻底解决手机端HTTPS混合内容拦截)
@@ -3172,7 +3174,7 @@
                   <span>↓ 主队进球</span><span>客队进球 →</span>
                 </div>
                 ${rows}
-                <div style="font-size:9px; color:var(--text-tertiary); margin-top:6px; font-family:var(--font-mono);">理论前三：${topTxt}</div>
+                <div style="font-size:9px; color:var(--text-tertiary); margin-top:6px; font-family:var(--font-mono);">全盘概率最高：${topTxt} <span style="color:#38bdf8;">(蓝框已按主荐方向精选过滤)</span></div>
               </div>`;
         }
 
@@ -3280,7 +3282,7 @@
             return `
               <div style="background:rgba(255,255,255,0.03); border:1px solid var(--border-color); border-radius:8px; padding:9px 10px; margin-bottom:10px;">
                 <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
-                  <span style="font-size:11.5px; font-weight:800; color:#fff;">近期战绩 <span style="font-size:9px; font-weight:400; color:var(--text-tertiary);">近10场 · 胜-平-负 · 场均进:失</span></span>
+                  <span style="font-size:11.5px; font-weight:800; color:#fff;">全赛事近期手感 <span style="font-size:9px; font-weight:400; color:var(--text-tertiary);">含杯赛/欧战 · 胜-平-负 · 场均进:失</span></span>
                   <span style="font-size:9px; color:var(--text-tertiary);">左=最近</span>
                 </div>
                 ${row(st.home, '主')}
@@ -3495,11 +3497,28 @@
         // 复制微信号
 function copyWechat() {
             const wx = document.getElementById('wx-id').innerText;
-            navigator.clipboard.writeText(wx).then(() => {
+            const showSuccess = () => {
                 const msg = document.getElementById('copy-msg');
-                msg.style.display = 'block';
-                setTimeout(() => { msg.style.display = 'none'; }, 3000);
-            });
+                if (msg) {
+                    msg.style.display = 'block';
+                    setTimeout(() => { msg.style.display = 'none'; }, 3000);
+                }
+            };
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(wx).then(showSuccess).catch(() => fallbackCopy(wx, showSuccess));
+            } else {
+                fallbackCopy(wx, showSuccess);
+            }
+        }
+        function fallbackCopy(text, cb) {
+            const ta = document.createElement('textarea');
+            ta.value = text;
+            ta.style.position = 'fixed';
+            ta.style.opacity = '0';
+            document.body.appendChild(ta);
+            ta.select();
+            try { document.execCommand('copy'); if (cb) cb(); } catch (e) {}
+            document.body.removeChild(ta);
         }
 
         function refreshAllData() {
