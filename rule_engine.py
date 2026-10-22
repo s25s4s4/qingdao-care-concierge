@@ -74,7 +74,9 @@ def decide_tip(ph, pd, pa, is_only_rq=False, rang="0"):
     names = ("让胜", "让平", "让负") if is_only_rq else ("主胜", "平局", "客胜")
     probs = [ph, pd, pa]
     high = max(range(3), key=lambda i: probs[i])
-    if probs[high] >= .65:
+    # 调整单选门槛：由原来的 0.65 降为 0.52（对应去水赔率约 <= 1.70）
+    # 大幅释放稳胆价值，杜绝 1.39~1.65 强胆被无脑刷成“双选防平”导致实投严重负收益
+    if probs[high] >= .52:
         tip = names[high]
     elif high == 1:
         tip = names[1]
@@ -158,6 +160,39 @@ def pick_goals(bands_lam, scores):
     return sorted({str(min(sum(parse_score(s)), 7)) for s in scores if parse_score(s)}, key=int)
 
 
+def derive_bqc(tip, scores, odds=None, is_only_rq=False, rang="0"):
+    """基于四维咬合原则推演半全场优选（严格杜绝与预测比分/赛果相冲突的假选项）。"""
+    if not scores:
+        return "胜胜/平胜"
+    final_results = set()
+    for s in scores:
+        p = parse_score(s)
+        if p:
+            diff = p[0] - p[1]
+            final_results.add("胜" if diff > 0 else "平" if diff == 0 else "负")
+    if not final_results:
+        if "主胜" in tip: final_results.add("胜")
+        elif "客胜" in tip: final_results.add("负")
+        elif "平" in tip: final_results.add("平")
+        else: final_results.add("胜")
+
+    options = []
+    if "胜" in final_results:
+        options.append("【胜胜】(稳)")
+        options.append("【平胜】(博)")
+    if "负" in final_results:
+        options.append("【负负】(稳)")
+        options.append("【平负】(博)")
+    if "平" in final_results:
+        options.append("【平平】(防平)")
+
+    if "客胜" in tip or ("让负" in tip and "负" in final_results):
+        options.sort(key=lambda x: 0 if "负" in x else (1 if "平" in x else 2))
+    elif "主胜" in tip or ("让胜" in tip and "胜" in final_results):
+        options.sort(key=lambda x: 0 if "胜" in x else (1 if "平" in x else 2))
+    return " / ".join(options[:3])
+
+
 def _form_text(blk, name):
     if not blk or not blk.get("recent"): return ""
     r = blk["recent"]
@@ -199,12 +234,110 @@ def build(match_info, team_stats=None, understat=None):
         tactical = "该玩法赔率缺失，无法可靠生成比分和进球分布，暂不展示。"
         market_text = "本场所选玩法赔率缺失；不使用其他玩法赔率代替。"
     ratio = round(sum(probs[i] for i in selected) * 100, 1) if probs and selected else None
-    decision = f"选择【{tip}】。"
+    parts_tip = tip.split("/")
+    if len(parts_tip) == 2:
+        decision = f"方案指引：【首选{parts_tip[0]}】（概率最高主力项），次选【{parts_tip[1]}】（防冷容错）。"
+    else:
+        decision = f"方案指引：单选【{tip}】稳胆。"
     if market == "hhad": decision += f"按主队{r:+d}球结算，只选让球结果。"
-    if ratio is not None: decision += f"所选结果赔率隐含合计{ratio}%，非历史命中承诺。"
+    if ratio is not None: decision += f"所选组合赔率隐含合计{ratio}%，非历史命中承诺。"
     if scores: decision += f"比分示意{'、'.join(scores)}，对应总进球{'、'.join('7+' if g == '7' else g for g in goals)}。比分是参考，不算另一项已验证预测。"
+
+    # 比分梯级分层（主力/次选/对冲）
+    scores_detail = []
+    is_double = "/" in tip
+    for idx, s in enumerate(scores):
+        if idx == 0:
+            role = "主力"
+            desc = "概率基准核心比分"
+        elif idx == 1:
+            role = "次选"
+            desc = "优势延伸主力比分"
+        else:
+            role = "对冲" if is_double else "博高"
+            desc = "平局对冲防冷" if is_double else "深层大胜穿盘"
+        scores_detail.append({"score": s, "role": role, "desc": desc})
+
+    # 半全场优选（严格咬合赛果）
+    bqc_text = derive_bqc(tip, scores, odds, market == "hhad", r)
+
+    # 结构化实战策略推演（双轨制：深盘进阶 / 受让护盾 / 黄金单胆 / 双选攻防）
+    strategy = None
+    if probs and len(probs) == 3:
+        high_i = max(range(3), key=lambda i: probs[i])
+        sorted_p = sorted(probs, reverse=True)
+        odds_rq = match_info.get("odds_rq")
+        rang_val = str(match_info.get("rang") or "0")
+        try:
+            sp_high = float(odds[high_i]) if odds and odds[high_i] not in ("-", None) else 0.0
+        except (ValueError, TypeError):
+            sp_high = 0.0
+
+        if market == "had":
+            # 1. 超低赔深盘(<=1.33)：胜平负收益极低，指引让球穿盘或精选比分
+            if 0.0 < sp_high <= 1.33:
+                rq_pick = ""
+                if odds_rq and len(odds_rq) == 3:
+                    if "-" in rang_val:
+                        rq_pick = f"让球({rang_val}) 让胜 SP {odds_rq[0]}"
+                    elif "+" in rang_val:
+                        rq_pick = f"让球({rang_val}) 让负 SP {odds_rq[2]}"
+                strategy = {
+                    "type": "deep_handicap",
+                    "badge": "⚡ 深盘进阶",
+                    "badge_class": "badge-gold",
+                    "title": "主选SP偏低，首选让球或精选比分提升回报",
+                    "advance_tip": rq_pick or (f"精选比分 {scores[0]}" if scores else "精选比分提升回报")
+                }
+                decision += f" 💡进阶参考：深盘主选回报较低，可参考{strategy['advance_tip']}。"
+            # 2. 均势五五开(两队概率差<5%且高赔>=2.10)：胶着战受让方往往具备天然护盾
+            elif (sorted_p[0] - sorted_p[1]) < 0.05 and sp_high >= 2.10:
+                shield_pick = ""
+                if odds_rq and len(odds_rq) == 3:
+                    if "+" in rang_val:
+                        shield_pick = f"{home}({rang_val})受让不败 让胜 SP {odds_rq[0]}"
+                    elif "-" in rang_val:
+                        shield_pick = f"{away}受让不败 让负 SP {odds_rq[2]}"
+                strategy = {
+                    "type": "parity_shield",
+                    "badge": "🛡️ 受让护盾",
+                    "badge_class": "badge-blue",
+                    "title": "双方均势波动大，受让不败为实战最优避坑方案",
+                    "advance_tip": shield_pick or f"防冷双选【{tip}】"
+                }
+                decision += f" ⚠️均势预警：双方无明显让步优势（主客胜率相差仅{abs(probs[0]-probs[2])*100:.1f}%），属高波动深水战，防冷优先级高。"
+            # 3. 黄金单挑稳胆(去水概率>=52%，SP 1.33~1.80)
+            elif "/" not in tip and 1.33 < sp_high <= 1.80:
+                strategy = {
+                    "type": "banker_single",
+                    "badge": "💎 黄金单胆",
+                    "badge_class": "badge-green",
+                    "title": "去水概率优势显著，盈亏比极佳，实战做胆首选",
+                    "advance_tip": f"单选【{tip}】SP {sp_high:.2f}"
+                }
+            # 4. 双选防冷容错
+            elif "/" in tip:
+                strategy = {
+                    "type": "double_chance",
+                    "badge": "⚖️ 首选+防冷",
+                    "badge_class": "badge-purple",
+                    "title": "首选主力攻坚，次选对冲防冷",
+                    "advance_tip": f"首选【{parts_tip[0]}】，次选【{parts_tip[1]}】"
+                }
+        elif market == "hhad":
+            strategy = {
+                "type": "handicap_special",
+                "badge": "🎯 让球专项",
+                "badge_class": "badge-gold",
+                "title": f"按让球({rang_val})结算",
+                "advance_tip": f"主推【{tip}】"
+            }
+
     return {"tip": tip, "consensus_ratio": ratio, "consensus_breakdown": None,
             "predicted_goals": goals, "predicted_scores": scores,
+            "predicted_scores_detail": scores_detail,
+            "predicted_bqc": bqc_text,
+            "tactical_strategy": strategy,
             "fundamental": fundamental, "tactical_conflict": tactical,
             "market_attitude": market_text, "decision_guide": decision,
             "engine": "rule", "model": model, "market": market, "market_odds": odds,
@@ -287,6 +420,9 @@ def normalize_match(match):
     match["detail_model"] = rr["model"]
     match["detail_pure"] = rr["pure"]
     match["predicted_scores"], match["predicted_goals"] = rr["predicted_scores"], rr["predicted_goals"]
+    match["predicted_scores_detail"] = rr.get("predicted_scores_detail") or []
+    match["predicted_bqc"] = rr.get("predicted_bqc") or ""
+    match["tactical_strategy"] = rr.get("tactical_strategy")
     match["consensus_ratio"] = rr["consensus_ratio"]
     match["consensus_breakdown"] = None
     match["consensus"] = str(match.get("tip") or "暂不研判")

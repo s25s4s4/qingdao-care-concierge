@@ -113,5 +113,40 @@ class DetailConsistencyTests(unittest.TestCase):
                     self.assertIn('sha256', match['prediction_snapshot'])
 
 
+    def test_tactical_strategy_and_bqc_consistency(self):
+        # 1. 超深盘 (尤文图斯 SP 1.25, 让球-1)
+        m_deep = {'home': '尤文图斯', 'away': '雷恩', 'odds': ['1.25', '5.10', '7.50'],
+                  'odds_rq': ['1.98', '3.75', '2.80'], 'rang': '-1'}
+        rr_deep = r.build(m_deep)
+        strat = rr_deep['tactical_strategy']
+        self.assertIsNotNone(strat)
+        self.assertEqual(strat['type'], 'deep_handicap')
+        self.assertIn('让球(-1)', strat['advance_tip'])
+        self.assertIn('让胜', strat['advance_tip'])
+        self.assertTrue(len(rr_deep['predicted_scores_detail']) >= 3)
+        self.assertEqual(rr_deep['predicted_scores_detail'][0]['role'], '主力')
+
+        # 2. 均势战 (凯尔特人 2.60 vs 塞尔塔 2.44, 主让+1)
+        m_parity = {'home': '凯尔特人', 'away': '塞尔塔', 'odds': ['2.60', '3.00', '2.44'],
+                    'odds_rq': ['1.44', '4.10', '5.25'], 'rang': '+1'}
+        rr_parity = r.build(m_parity)
+        strat_p = rr_parity['tactical_strategy']
+        self.assertIsNotNone(strat_p)
+        self.assertEqual(strat_p['type'], 'parity_shield')
+        self.assertIn('受让不败', strat_p['advance_tip'])
+
+        # 3. 半全场与比分终场严格咬合断言：严禁让负大胜盘出现平胜/胜胜
+        bqc_away = r.derive_bqc('让负/防让平', ['0-3', '0-4', '0-2'], is_only_rq=True, rang='2')
+        self.assertNotIn('平胜', bqc_away)
+        self.assertNotIn('胜胜', bqc_away)
+        self.assertIn('负负', bqc_away)
+
+        # 4. 单选稳胆半全场咬合：主胜盘不能包含平负/负负
+        bqc_home = r.derive_bqc('主胜', ['2-0', '1-0', '2-1'])
+        self.assertNotIn('平负', bqc_home)
+        self.assertNotIn('负负', bqc_home)
+        self.assertIn('胜胜', bqc_home)
+
+
 if __name__ == '__main__':
     unittest.main()
