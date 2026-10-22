@@ -19499,7 +19499,7 @@
         "1",
         "1"
       ],
-      "consensus": "让胜优势 (75%)",
+      "consensus": "让胜/防让平 (75%)",
       "consensus_ratio": 75,
       "consensus_breakdown": {
         "odds_score": 82.0,
@@ -19507,7 +19507,7 @@
         "tipster_score": 92.0,
         "math_score": 77.0
       },
-      "tip": "主胜/防平",
+      "tip": "让胜/防让平",
       "predicted_scores": [
         "1-0",
         "2-1",
@@ -19529,7 +19529,7 @@
         "method": "odds_implied_probability",
         "evidence": "已留痕",
         "traceable": true,
-        "note": "赛前冻结，含赔率与生成方式哈希"
+        "note": "赛前冻结，含赔率与生成方式哈希｜2026-10-22 修正：单开让球场次原标「主胜/防平」为不可购选项，已改为让球口径「让胜/防让平」"
       },
       "odds_nspf": [
         "-",
@@ -19713,7 +19713,8 @@
         "source": "stored_score",
         "settled_at": "2026-10-22T13:33:28",
         "outcome": "主胜"
-      }
+      },
+      "result_text": "研判命中"
     },
     {
       "code": "周二006",
@@ -20310,7 +20311,7 @@
         "1",
         "1"
       ],
-      "consensus": "让胜优势 (75%)",
+      "consensus": "让胜/防让平 (75%)",
       "consensus_ratio": 75,
       "consensus_breakdown": {
         "odds_score": 78.0,
@@ -20318,7 +20319,7 @@
         "tipster_score": 88.0,
         "math_score": 76.0
       },
-      "tip": "主胜/防平",
+      "tip": "让胜/防让平",
       "predicted_scores": [
         "1-0",
         "2-1",
@@ -20340,7 +20341,7 @@
         "method": "odds_implied_probability",
         "evidence": "已留痕",
         "traceable": true,
-        "note": "赛前冻结，含赔率与生成方式哈希"
+        "note": "赛前冻结，含赔率与生成方式哈希｜2026-10-22 修正：单开让球场次原标「主胜/防平」为不可购选项，已改为让球口径「让胜/防让平」"
       },
       "odds_nspf": [
         "-",
@@ -20525,7 +20526,8 @@
         "source": "stored_score",
         "settled_at": "2026-10-22T13:33:28",
         "outcome": "主胜"
-      }
+      },
+      "result_text": "研判命中"
     },
     {
       "code": "周二009",

@@ -125,17 +125,18 @@ def calculate_result(tip, score, is_only_rq=False, rang='0'):
             r = -1
         diff = (h + r) - a # 加上让球后的虚拟净胜球
 
+        # 双选必须先判：否则「让胜/防让平」会被下面单选的 "让胜" 分支吃掉，
+        # 走盘（diff==0）被误判成 MISS（2026-10-22 修）
+        if "让胜" in tip and "平" in tip:
+            return "HIT" if diff >= 0 else "MISS"
+        if "让负" in tip and "平" in tip:
+            return "HIT" if diff <= 0 else "MISS"
         if "让胜" in tip:
             return "HIT" if diff > 0 else "MISS"
         if "让平" in tip:
             return "HIT" if diff == 0 else "MISS"
         if "让负" in tip:
             return "HIT" if diff < 0 else "MISS"
-        # 兼容让胜/让平、让负/让平双选
-        if "让胜" in tip and "平" in tip:
-            return "HIT" if diff >= 0 else "MISS"
-        if "让负" in tip and "平" in tip:
-            return "HIT" if diff <= 0 else "MISS"
         return "MISS"
 
     # B. 标准胜平负门控检验（第一主防线）
