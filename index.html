@@ -1761,11 +1761,11 @@
                         <span>${m.analysis}</span>
                     </div>
                     ${m.quant_factors ? `
-                    <!-- 8万场多因子历史同赔与量化推演 -->
+                    <!-- 历史同赔多因子量化推演 -->
                     <div style="margin-top: 8px; margin-bottom: 6px; padding: 7px 9px; background: rgba(56, 189, 248, 0.05); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 6px; font-size: 11px;">
                         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
                             <span style="font-weight: 800; display: flex; align-items: center; gap: 4px;">
-                                <span style="color: #3fb950; font-weight: 800;">📊 8万场相同赔率:</span>
+                                <span style="color: #3fb950; font-weight: 800;">📊 历史同赔:</span>
                                 <span style="color: ${m.quant_factors.stars.length>=4?'#3fb950':'#d29922'}; font-family: var(--font-mono);">${m.quant_factors.stars}</span>
                                 <span style="font-size: 10px; color: var(--text-secondary);">[${m.quant_factors.tier_title}]</span>
                             </span>
@@ -3386,11 +3386,11 @@
                 </details>
 
                 ${match.quant_factors && !match.is_only_rq ? `
-                <!-- 模块三点五：8万场竞彩多因子量化推演 -->
+                <!-- 模块三点五：历史同赔多因子量化推演 -->
                 <div style="background: rgba(56, 189, 248, 0.08); border: 1px solid rgba(56, 189, 248, 0.35); border-radius: 8px; padding: 12px; margin-bottom: 12px;">
                     <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
                         <div style="font-weight: 800; color: #3fb950; font-size: 13px; display: flex; align-items: center; gap: 6px;">
-                            <span>📊</span> 8万场相同赔率多因子实战推演
+                            <span>📊</span> 历史同赔区间多因子推演
                         </div>
                         <span style="font-size: 10px; background: rgba(56, 189, 248, 0.2); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.4); padding: 1px 6px; border-radius: 4px; font-weight: 700;">
                             样本 ${match.quant_factors.samples} 场
@@ -3431,7 +3431,7 @@
                     </div>
 
                     ${match.quant_factors.quant_detail_note ? `
-                    <!-- 8万场让球利刃专属深度案卷 -->
+                    <!-- 量化详情说明 -->
                     <div style="margin-top: 8px; font-size: 11.5px; color: #38bdf8; font-weight: 700; background: rgba(56, 189, 248, 0.12); padding: 8px 10px; border-radius: 6px; border-left: 3px solid #38bdf8; line-height: 1.5;">
                         ${match.quant_factors.quant_detail_note}
                     </div>
