@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-23 01:00:27",
-  "total_tips": 2,
+  "updated_at": "2026-10-23 05:00:18",
+  "total_tips": 1,
   "live_feed": [
     {
       "id": 4022,
@@ -13,7 +13,9 @@
       "match": "斯图加特 VS 门兴",
       "chinese": "海外料单把斯图加特打门兴单挑出来，机构资金高度一致防一手大球，方向直指全场至少打进2球（进球数1.5大）。两队进攻架势摆明了要互捅，防守端漏洞都不小，本场奔着有球去，2球起步稳当。",
       "original": "FEEDINCO.com Tips for Friday, 23 October 1X - Deportivo Alaves - Malaga O1.5 - Al Shamal - Qatar SC O1.5 - Stuttgart - B. Monchengladbach X2 - Bolton - Middlesb"
-    },
+    }
+  ],
+  "archived": [
     {
       "id": 4045,
       "channel": "football_predictions_ai",
@@ -25,9 +27,7 @@
       "match": "阿贾克斯 VS 亚特兰大",
       "chinese": "海外情报主推两队进球，核心抓双方都有破门。给到1.40超低赔，信心度达六成六，场面必奔着对攻去。这场别碰冷门胜负，大球和双进是资金扎堆的稳胆，直接奔着互爆走！",
       "original": "🔥 HOT PICK 🌍 UEFA Conference League 🆚 Ajax vs Atalanta 🕐 Thu, 22 Oct · 19:00 UTC 💡 Both Teams To Score: Yes 📊 Odds: 1.40 ✅ Confidence: 66% 📌 Match Facts • UEFA "
-    }
-  ],
-  "archived": [
+    },
     {
       "id": 3818,
       "channel": "matchplug",
