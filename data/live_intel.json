@@ -1,7 +1,20 @@
 {
-  "updated_at": "2026-10-22 05:00:19",
-  "total_tips": 0,
-  "live_feed": [],
+  "updated_at": "2026-10-23 00:46:48",
+  "total_tips": 1,
+  "live_feed": [
+    {
+      "id": 4045,
+      "channel": "football_predictions_ai",
+      "time": "2026-10-23 00:00",
+      "code": "周四011",
+      "league": "欧协联",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "阿贾克斯 VS 亚特兰大",
+      "chinese": "海外情报主推两队进球，核心抓双方都有破门。给到1.40超低赔，信心度达六成六，场面必奔着对攻去。这场别碰冷门胜负，大球和双进是资金扎堆的稳胆，直接奔着互爆走！",
+      "original": "🔥 HOT PICK 🌍 UEFA Conference League 🆚 Ajax vs Atalanta 🕐 Thu, 22 Oct · 19:00 UTC 💡 Both Teams To Score: Yes 📊 Odds: 1.40 ✅ Confidence: 66% 📌 Match Facts • UEFA "
+    }
+  ],
   "archived": [
     {
       "id": 3818,
