@@ -820,7 +820,18 @@ def full_pipeline_sync(auto_push=True):
                 rang_val = int(rang_str) if rang_str.lstrip('-+').isdigit() else -1
 
                 # 【铁律裁决】：依据物理概率矫正 tip
-                if pw + pd >= 0.72:
+                # 单开让球的场次，体彩只卖【让胜/让平/让负】，绝不能再给"主胜/客胜"——
+                # 那是买不到的选项（2026-10-22 用户反馈：单开让球的场次显示了"主胜"）。
+                if m.get('is_only_rq'):
+                    if pw + pd >= 0.72:
+                        m['tip'] = '让胜' if pw >= 0.65 else '让胜/防让平'
+                    elif pl + pd >= 0.72:
+                        m['tip'] = '让负' if pl >= 0.65 else '让负/防让平'
+                    elif pw >= pl:
+                        m['tip'] = '让胜/防让平'
+                    else:
+                        m['tip'] = '让负/防让平'
+                elif pw + pd >= 0.72:
                     if pw >= 0.65:
                         m['tip'] = '主胜'
                     else:
@@ -845,14 +856,14 @@ def full_pipeline_sync(auto_push=True):
                 elif cur_tip in ('客胜', '客胜/防平'):
                     m['predicted_scores'] = ['0-1', '1-2', '1-1'] if cur_tip == '客胜/防平' else ['0-2', '1-2', '0-3']
                     m['predicted_goals'] = ['2', '3']
-                elif cur_tip == '让负':
+                elif cur_tip.startswith('让负'):
                     if rang_val < 0: # 主让球买让负，结果必须是客不败 (平局或客胜)
                         m['predicted_scores'] = ['1-1', '0-1', '1-2']
                         m['predicted_goals'] = ['1', '2', '3']
                     else:
                         m['predicted_scores'] = ['0-2', '1-3', '0-3']
                         m['predicted_goals'] = ['2', '3', '4']
-                elif cur_tip == '让胜':
+                elif cur_tip.startswith('让胜'):
                     if rang_val < 0:
                         m['predicted_scores'] = ['2-0', '3-1', '3-0']
                         m['predicted_goals'] = ['2', '3', '4']
