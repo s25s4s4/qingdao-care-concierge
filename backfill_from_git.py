@@ -29,7 +29,7 @@ import verify
 BASE = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(BASE, "data", "official_matches.json")
 REL = "data/official_matches.json"
-YEAR = 2026
+YEAR = datetime.now().year
 
 _blob_cache = {}
 

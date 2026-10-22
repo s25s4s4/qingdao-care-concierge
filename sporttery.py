@@ -54,6 +54,11 @@ def apply(matches, official):
         return 0, 0
     updated = conflicts = 0
     for m in matches:
+        if m.get('locked') or m.get('result') != 'PENDING':
+            continue
+        # 赛前冻结的比赛：让球数属于结算契约，随快照锁定，不随官方盘口变动
+        snap = m.get("prediction_snapshot") or {}
+        frozen = bool(snap.get("frozen_at") and not snap.get("frozen_mid_match"))
         date = str(m.get("time", ""))[:5]
         # 竞彩 businessDate 是售卖日，凌晨开球会跨日；先按日期匹配，再按双方兜底
         rec = official.get((m.get("home"), m.get("away"), date))
@@ -62,7 +67,12 @@ def apply(matches, official):
                         if h == m.get("home") and a == m.get("away")), None)
         if not rec:
             continue
-        target = rec["had"] or rec["hhad"]
+        target = rec['hhad'] if m.get('is_only_rq') else rec['had']
+        if not target:
+            continue
+        if rec.get('hhad') and not frozen:
+            m['odds_rq'] = rec['hhad']
+            m['rang'] = rec.get('goalLine', m.get('rang'))
         local = m.get("odds")
         if rec["had"]:
             m["odds_official"] = rec["had"]

@@ -52,18 +52,19 @@ def rule_dossier(of):
 # Windows 底层彻底静默调用标志 (100% 杜绝黑框闪烁弹窗)
 CREATE_NO_WINDOW = 0x08000000
 
-def silent_subprocess_run(cmd, cwd=None):
+def silent_subprocess_run(cmd, cwd=None, capture=False):
     try:
         return subprocess.run(
             cmd,
             cwd=cwd,
             creationflags=CREATE_NO_WINDOW,
-            stdout=subprocess.DEVNULL,
-            stderr=subprocess.DEVNULL,
+            stdout=subprocess.PIPE if capture else subprocess.DEVNULL,
+            stderr=subprocess.PIPE if capture else subprocess.DEVNULL,
             check=False
         )
     except Exception as e:
-        pass
+        _log(f"subprocess failed: {cmd[:2]} {type(e).__name__}: {e}")
+        return None
 
 def is_lottery_sale_closed(match_time_str):
     """
@@ -92,220 +93,90 @@ def is_lottery_sale_closed(match_time_str):
 
     return now >= close_time or now >= m_dt
 
-MATCHES_FILE = r"E:\euro_intel_web\data\official_matches.json"
-MATCHES_34_FALLBACK = r"E:\euro_intel_web\data\matches_34.json"
-WEB_DIR = r"E:\euro_intel_web"
+WEB_DIR = CURRENT_SCRIPT_DIR
+MATCHES_FILE = os.path.join(WEB_DIR, "data", "official_matches.json")
+# matches_34.json 已废弃（2026-10-22）：前端与服务器均不读取，停止双写双提交。
+# 如确需旧版兼容副本，用官方工具从 official_matches.json 生成，不要再进版本库。
+
+# 已完赛旧场次保留天数：竞彩编号每周复用，旧赛果不清掉会（a）文件无限增长、
+# (b) 与新周期同编号比赛互相干扰。归档在清理前已写入 data/match_results.jsonl，
+# 十四年库不受影响；审计账本保留最近两周。
+PRUNE_KEEP_DAYS = 14
+
+# 主流水线日志：pythonw 无控制台，所有关键事件/异常/git 结果落文件，排查看它。
+LOG_FILE = os.path.join(WEB_DIR, "sync_live.log")
+
+
+def _log(msg):
+    line = f"[{datetime.now():%Y-%m-%d %H:%M:%S}] {msg}"
+    try:
+        if os.path.exists(LOG_FILE) and os.path.getsize(LOG_FILE) > 2 * 1024 * 1024:
+            os.replace(LOG_FILE, LOG_FILE + ".1")
+        with open(LOG_FILE, "a", encoding="utf-8") as f:
+            f.write(line + "\n")
+    except Exception:
+        pass
+
+
+def match_identity(code, time_str, date_str=None):
+    """比赛唯一身份：编号 + 完整开赛日期。
+    竞彩编号每周复用（周一001 在 14 年数据里出现 518 次），只按编号判重会把
+    新一周的同编号比赛误判为已存在而静默跳过（2026-10-22 实测挡住 25 场在售）。"""
+    if date_str:
+        return (str(code).strip(), str(date_str).strip())
+    try:
+        from enrich_team_stats import full_date
+        return (str(code).strip(), full_date(time_str) or str(time_str))
+    except Exception:
+        return (str(code).strip(), str(time_str))
+
+# 多个计划任务可同时触发；用OS文件锁保证只有一个写入者，崩溃后锁自动释放。
+_SYNC_LOCK_HANDLE = None
+
+def acquire_sync_lock():
+    global _SYNC_LOCK_HANDLE
+    handle = open(os.path.join(WEB_DIR, "data", ".live_sync.lock"), "a+b")
+    try:
+        if os.name == "nt":
+            import msvcrt
+            handle.seek(0)
+            if not handle.read(1):
+                handle.write(b"0")
+                handle.flush()
+            handle.seek(0)
+            msvcrt.locking(handle.fileno(), msvcrt.LK_NBLCK, 1)
+        else:
+            import fcntl
+            fcntl.flock(handle, fcntl.LOCK_EX | fcntl.LOCK_NB)
+    except (OSError, IOError):
+        handle.close()
+        return False
+    _SYNC_LOCK_HANDLE = handle
+    return True
+
+def write_validated_data(path, data):
+    import rule_engine
+    issues = rule_engine.validate_matches(data.get('matches', []))
+    if issues:
+        raise ValueError('发布检查失败: ' + str(issues[:10]))
+    tmp = path + '.tmp'
+    with open(tmp, 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+        f.flush()
+        os.fsync(f.fileno())
+    os.replace(tmp, path)
 
 def calculate_result(tip, score, is_only_rq=False, rang='0'):
-    """
-    实体彩店最高严苛度客观判定引擎：
-    1. 针对【单开让球胜平负】（is_only_rq=True）的比赛：
-       必须按真实净胜球加上让球数计算（例如 h + int(rang) vs a）：
-       - 让胜：h + int(rang) > a
-       - 让平：h + int(rang) == a
-       - 让负：h + int(rang) < a
-    2. 针对【标准胜平负】：按全场物理真实比分判定胜平负。
-    3. 错就是错，对就是对，绝不搞模糊擦边球。
-    """
-    if not score or "-" not in score:
-        return "PENDING"
-    try:
-        parts = score.replace(" ", "").split("-")
-        h, a = int(parts[0]), int(parts[1])
-    except:
-        return "PENDING"
-        
-    total = h + a
-
-    # A. 单开让球胜平负比赛：全链路按官方让球盘口计算！
-    if is_only_rq:
-        try:
-            r = int(rang)
-        except:
-            r = -1
-        diff = (h + r) - a # 加上让球后的虚拟净胜球
-
-        # 双选必须先判：否则「让胜/防让平」会被下面单选的 "让胜" 分支吃掉，
-        # 走盘（diff==0）被误判成 MISS（2026-10-22 修）
-        if "让胜" in tip and "平" in tip:
-            return "HIT" if diff >= 0 else "MISS"
-        if "让负" in tip and "平" in tip:
-            return "HIT" if diff <= 0 else "MISS"
-        if "让胜" in tip:
-            return "HIT" if diff > 0 else "MISS"
-        if "让平" in tip:
-            return "HIT" if diff == 0 else "MISS"
-        if "让负" in tip:
-            return "HIT" if diff < 0 else "MISS"
-        return "MISS"
-
-    # B. 标准胜平负门控检验（第一主防线）
-    if "客不败" in tip:
-        return "HIT" if (a >= h) else "MISS"
-        
-    if "主不败" in tip:
-        return "HIT" if (h >= a) else "MISS"
-        
-    if "客胜" in tip:
-        return "HIT" if (a > h) else "MISS"
-        
-    if "主胜" in tip:
-        return "HIT" if (h > a) else "MISS"
-        
-    if "让胜" in tip:
-        try:
-            r = int(rang) if rang and rang != '0' else -1
-        except:
-            r = -1
-        return "HIT" if (h + r > a) else "MISS"
-        
-    if "让负" in tip:
-        try:
-            r = int(rang) if rang and rang != '0' else 1
-        except:
-            r = 1
-        return "HIT" if (h + r < a) else "MISS"
-        
-    if "平" in tip:
-        return "HIT" if (h == a) else "MISS"
-        
-    if "进球数3+" in tip or "大球" in tip:
-        return "HIT" if total >= 3 else "MISS"
-        
-    return "MISS"
+    from rule_engine import calculate_result as settle_result
+    return settle_result(tip, score, is_only_rq, rang)
 
 def generate_tactical_dossier(home, away, league, odds, is_only_rq=False, rang='-1'):
-    try:
-        sp_h = float(odds[0]) if odds[0] != '-' else 2.5
-        sp_d = float(odds[1]) if odds[1] != '-' else 3.2
-        sp_a = float(odds[2]) if odds[2] != '-' else 2.8
-    except:
-        sp_h, sp_d, sp_a = 2.0, 3.2, 3.0
-
-    # 如果官方不开普通胜平负，只开让球胜平负：所有推荐、数据、分析全部严格转向让球！
-    if is_only_rq:
-        try:
-            rang_int = int(rang)
-        except:
-            rang_int = -1
-        rang_desc = f"主让{abs(rang_int)}球" if rang_int < 0 else f"主受让{abs(rang_int)}球"
-        
-        # 客让球（主受让，rang > 0，如克里特 vs 勒沃库森 +2）
-        if rang_int > 0:
-            if sp_h <= 2.50: # 让胜赔率合理（受让方优势）
-                tip = "让胜/防让平"
-                consensus = f"让胜优势 ({int(82 - sp_h*4)}%)"
-                ratio = int(82 - sp_h*4)
-                status = "受让利刃"
-                odds_logic = f"体彩官方单开【让球胜平负 ({rang_desc})】。客队深让{rang_int}球门槛过高，机构对让胜({sp_h})与让平({sp_d})防范意图坚决，客队难打穿。"
-                score_preds = "1-2、0-2、1-1" if rang_int == 2 else "1-1、0-1、1-2"
-                tactics = f"{home}虽阵容受制但坐拥主场地利与{rang_desc}巨幅安全垫；{away}客战客让{rang_int}球穿盘极其吃力，大概率小胜或被逼平，看好主队守住让球盘。"
-            else:
-                tip = "让负"
-                consensus = f"穿盘优势 ({int(80 - sp_a*4)}%)"
-                ratio = int(80 - sp_a*4)
-                status = "穿盘稳胆"
-                odds_logic = f"体彩官方单开【让球胜平负 ({rang_desc})】。客队净胜{rang_int+1}球以上赔率({sp_a})获机构强力防范。"
-                score_preds = "0-3、1-4、0-4" if rang_int == 2 else "0-2、0-3、1-3"
-                tactics = f"{away}攻击火力呈现降维打击，{home}后防线极易崩盘，看好客队净胜{rang_int+1}球以上打穿让球盘。"
-        else:
-            # 主让球（rang < 0，如罗马 -2）
-            if sp_h < 2.0:
-                tip = "让胜"
-                consensus = f"让胜优势 ({int(82 - sp_h*4)}%)"
-                ratio = int(82 - sp_h*4)
-                status = "穿盘稳胆"
-                odds_logic = f"本场中国体彩官方不开普通胜平负，单开【让球胜平负 ({rang_desc})】。官方让胜SP仅给在{sp_h}防范区间，欧洲主流指数对主队至少净胜{abs(rang_int)+1}球以上的穿盘深度给予极高信心，下盘防线承受巨大压迫。"
-                score_preds = "3-0、4-1、3-1" if rang_int <= -2 else "2-0、3-1、3-0"
-                tactics = f"{home}进攻火力凶猛，面对{away}后防深度大巴具备立体破密防手段；客队客战抗压能力欠缺，极易在开场前30分钟失球崩盘，看好主队跨越{rang_desc}门槛穿盘大胜。"
-            elif sp_a < 2.2:
-                tip = "让负"
-                consensus = f"让负防冷 ({int(80 - sp_a*4)}%)"
-                ratio = int(80 - sp_a*4)
-                status = "下盘防冷"
-                odds_logic = f"官方单开【让球胜平负 ({rang_desc})】。初盘让负SP处于{sp_a}敏感防御带，欧洲机构模型测算主队虽有名气溢价但净胜{abs(rang_int)}球以上门槛过高，机构对让负打出防范意图极其坚决。"
-                score_preds = "2-1、1-0、1-1" if rang_int <= -2 else "1-1、0-1、1-2"
-                tactics = f"{home}虽阵容牌面占优但赛程密集体能折损严重；{away}客战立足严密反击，中后场防守韧性极强，本场极难出现惨案，主队即便小胜也很难打穿{rang_desc}盘口，让负极具实战性价比。"
-            else:
-                tip = "让平/防让胜"
-                consensus = f"胶着防让平 (68.0%)"
-                ratio = 68.0
-                status = "深盘博弈"
-                odds_logic = f"官方单开【让球胜平负 ({rang_desc})】。让平SP高达{sp_d}，让胜与让负赔率处于均势胶着带。机构严密防范主队恰好净胜{abs(rang_int)}球的卡盘让平格局。"
-                score_preds = "2-0、3-1、2-1"
-                tactics = f"双方技战术博弈极具针对性，主队强攻但客队顽强抵挡，极易出现主队刚好净胜{abs(rang_int)}球的卡盘比分，首选【让平】求高回报。"
-
-        fund = f"本场为体彩官方焦点深盘赛事，官方未开普通胜平负，全部实盘交易均汇聚在【让球胜平负 ({rang_desc})】。两队战术阵眼在于主队攻坚撕裂效率与客队反击抓失误能力。"
-        decision = f"【赛前让球专项研判】：官方单开让球盘（{rang_desc}），综合欧洲去水模型，本场首选【{tip}】。实战比分区间重点防范：【{score_preds}】，柜台直打让球选项。"
-        dossier = {
-            "summary": f"{home}对阵{away}，官方单开让球胜平负({rang})，战术首选【{tip}】。",
-            "fundamental": fund,
-            "tactical_conflict": tactics,
-            "market_attitude": odds_logic,
-            "decision_guide": decision
-        }
-        return status, tip, consensus, ratio, dossier
-
-    if sp_h < 1.6:
-        fund = f"{home}本赛季在{league}主场展现出统治级控球与攻坚效率，场均主场净胜球达到1.6球以上；而{away}客场打法偏向保守，客战面对积分榜上半区队伍失球率高达75%。两队在战术执行力与攻防转换速率上存在档次梯度。"
-        tip = "主胜"
-        consensus = f"主胜优势 ({int(85 - sp_h*5)}%)"
-        ratio = int(85 - sp_h*5)
-        status = "稳胆候选"
-        odds_logic = f"体彩官方主胜给在{sp_h}较低区间，欧洲主流机构早盘普遍将主胜赔率压制在防范水位，去水后机构模型测算主队胜率高达65%~70%。机构在让球盘面上给予主队坚实门槛，阻上意图明显，整体盘面态度高度向主队倾斜。"
-    elif sp_a < 1.7:
-        fund = f"{away}作为{league}豪强，阵容身价与板凳深度具备压倒性优势，客战抢分动力极强；{home}受限于阵容单薄，近期赛程密集导致主力体能承压，本场虽坐镇主场但防守端面临持续高压渗透。"
-        tip = "客胜"
-        consensus = f"客胜优势 ({int(84 - sp_a*5)}%)"
-        ratio = int(84 - sp_a*5)
-        status = "客战正路"
-        odds_logic = f"官方初赔客胜开在{sp_a}，客让阻力位设置合理。欧洲各权威机构对客胜的态度极度坚决，返还率测算表明客不败概率超过80%。主流盘口对主队爆冷空间未做实质防范，正路客胜获得数据面强有力支撑。"
-    elif sp_h < sp_a:
-        fund = f"{home}坐拥主场地利优势，主场近5战保持较高不败率，善于利用场地宽度实施两翼边路起球；{away}近期客战战绩呈现起伏，客场反击虽有纵深但锋线门前把握机会效率略显不稳定。"
-        tip = "主不败/首选主胜"
-        consensus = f"主不败 ({int(75 - sp_h*3)}%)"
-        ratio = int(75 - sp_h*3)
-        status = "焦点对决"
-        odds_logic = f"本场初赔给出{sp_h} / {sp_d} / {sp_a}的胶着组合，平局SP处于3.10~3.45敏感安全带，欧洲机构分歧度较大。多方模型去水后显示两队胜率极为接近，机构通过微调水位平衡双边筹码，平局与冷门防范系数显著抬升。"
-    else:
-        fund = f"双方目前在{league}积分榜位列中游，战术风格均偏重中场缠斗与防守反击。{away}防守纪律性更为严密，丢球数控制在联赛上游；{home}主场求胜欲望强烈但后防空档容易被对手快速反击针对。"
-        tip = "客不败/双选平负"
-        consensus = f"客不败 ({int(74 - sp_a*3)}%)"
-        ratio = int(74 - sp_a*3)
-        status = "焦点对决"
-        odds_logic = f"本场初赔给出{sp_h} / {sp_d} / {sp_a}的胶着组合，欧洲机构分歧度较大，多方模型去水后显示两队胜率极为接近，平局与冷门防范系数显著抬升。"
-
-    tactics = f"本场核心矛盾聚焦于中场控制权争夺与反击速度差。{home}预计将延续高位逼抢战术，通过双后腰前压切断客队地面出球路线，依靠边锋单兵爆破制造禁区混乱；{away}则立足于深度大巴防线，重兵布防禁区肋部，依赖前锋的速度与个人纵深能力打身后反击。关键阵眼在于下半场60分钟后的体能拐点与板凳奇兵轮换。"
-    if tip == "主胜":
-        score_preds = "2-0、2-1、3-1" if sp_h > 1.4 else "3-0、4-0、3-1"
-        tactics = f"{home}在主场进攻端具备极强的局部纵深打击能力，前场就地反抢效率高；{away}客战中后场受压容易忙中出错，两队在攻防速率上存在实质档次梯度，看好主胜正路打出。"
-    elif tip == "客胜":
-        score_preds = "0-2、1-2、1-3" if sp_a > 1.4 else "0-3、0-4、1-3"
-        tactics = f"{away}客战争胜战意坚决，前锋线单兵撕裂能力极强；{home}虽坐镇主场但防线回撤过深且缺乏防反支点，客队牢牢掌控场面主动，客胜正路打出。"
-    elif "不败" in tip or "平" in tip:
-        if "主" in tip:
-            # 严格业务铁律：主不败只能推荐主胜或平局，绝对禁止出现客胜比分(如1-2)！
-            score_preds = "2-1、1-1、2-0"
-        elif "客" in tip:
-            # 严格业务铁律：客不败只能推荐客胜或平局，绝对禁止出现主胜比分(如1-0)！
-            score_preds = "1-2、1-1、0-1"
-        else:
-            score_preds = "1-1、0-0、2-2"
-        tactics = f"双方技战术风格相生相克，攻防转换频繁在中场形成僵持拉锯。{home}防守硬度足够但攻坚手段单一，{away}客战打法偏于求稳，胜负手在于定位球乱战与替补轮换，谨防握手言和。"
-    else:
-        score_preds = "2-1、1-1、1-2"
-        tactics = f"双方实力极其接近，战术博弈聚焦于第二落点争夺与肋部协防。节奏拉锯互有攻守，场面极易呈现胶着态势。"
-
-    decision = f"【赛前综合研判】：结合基本面梯度、更衣室军情与机构防范态度，本场首选【{tip}】。实战比分区间重点防范：【{score_preds}】，建议结合让球防平双选求稳。"
-
-    dossier = {
-        "summary": f"{home}对阵{away}，攻防节奏对抗激烈，战术建议【{tip}】。",
-        "fundamental": fund,
-        "tactical_conflict": tactics,
-        "market_attitude": odds_logic,
-        "decision_guide": decision
-    }
-    return status, tip, consensus, ratio, dossier
+    import rule_engine
+    rr = rule_engine.build({'home': home, 'away': away, 'league': league, 'odds': odds,
+                            'is_only_rq': is_only_rq, 'rang': rang})
+    dossier = {k: rr[k] for k in ('fundamental', 'tactical_conflict', 'market_attitude', 'decision_guide')}
+    dossier['summary'] = f"{home}对阵{away}，选择【{rr['tip']}】。"
+    return '未开赛', rr['tip'], rr['tip'], rr['consensus_ratio'], dossier
 
 def fetch_official_lottery_pool():
     url = "https://trade.500.com/jczq/"
@@ -341,6 +212,7 @@ def fetch_official_lottery_pool():
 
                 pool_fixtures.append({
                     "code": code.strip(),
+                    "fid": fid.strip(),
                     "league": league.strip(),
                     "home": home.strip(),
                     "away": away.strip(),
@@ -358,60 +230,78 @@ def fetch_official_lottery_pool():
     return pool_fixtures
 
 def fetch_live_scores_and_status():
-    """从官方比分网获取真实三态状态：未开赛 / 进行中实时比分 / 完场比分"""
+    """从官方比分网获取真实三态状态：未开赛 / 进行中实时比分 / 完场比分。
+
+    竞彩编号每周复用，live_map 以 fixtureid 为键，并带上队名/编号/开赛时间，
+    供同编号多场次消歧（2026-10-22 修复：此前只按编号匹配，新旧同编号比赛
+    会互相污染比分与状态）。
+    """
     url = "https://live.500.com/"
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"})
     live_map = {}
     try:
         with urllib.request.urlopen(req, timeout=8) as resp:
             html = resp.read().decode('gbk', errors='ignore')
-            rows = re.findall(r'<tr[^>]*order="([^"]+)"[^>]*status="([^"]+)"[^>]*>.*?</tr>', html, re.DOTALL)
-            for order, status_code in rows:
-                pos = html.find(f'order="{order}"')
-                end_pos = html.find('</tr>', pos)
-                tr = html[pos:end_pos]
-                
-                code_m = re.search(r'(周[一二三四五六日]\d{3})', tr)
-                if not code_m: continue
-                code = code_m.group(1)
-                
-                # 真实全场物理比分 (提取自 pk 区域，绝对不要误取半场比分 td_red)
-                pk_m = re.findall(r'<a[^>]*class="clt[13]"[^>]*>([^<]*)</a>', tr)
-                live_score = f"{pk_m[0].strip()}-{pk_m[1].strip()}" if len(pk_m) >= 2 and pk_m[0].strip() != '' else "--"
-                
-                # 状态映射: 0=未开赛, 1=上半场, 2=中场, 3=下半场, 4=已完赛, -1=延期
-                is_fin = (status_code == '4')
-                is_live = (status_code in ['1', '2', '3'])
-                
-                status_text = "未开赛"
-                if status_code == '1': status_text = "进行中 · 上半场"
-                elif status_code == '2': status_text = "进行中 · 中场"
-                elif status_code == '3': status_text = "进行中 · 下半场"
-                elif status_code == '4': status_text = "已完赛"
-                elif status_code == '-1': status_text = "比赛延期"
-                
-                # 关键修复：live_score 始终保持从 pk_m 提取的全场比分，杜绝被半场红字覆盖！
-                        
-                live_map[code] = {
-                    'status_code': status_code,
-                    'status_text': status_text,
-                    'is_live': is_live,
-                    'is_fin': is_fin,
-                    'score': live_score
-                }
+        for m in re.finditer(r"<tr([^>]*)>(.*?)</tr>", html, re.DOTALL):
+            attrs, body = m.group(1), m.group(2)
+            st_m = re.search(r'status="([^"]*)"', attrs)
+            if not st_m:
+                continue
+            status_code = st_m.group(1)
+            fid_m = re.search(r'id="a(\d+)"', attrs) or re.search(r'fid="(\d+)"', attrs)
+            gy_m = re.search(r'gy="([^"]*)"', attrs)
+            code_m = re.search(r'(周[一二三四五六日]\d{3})', body)
+            if not code_m:
+                continue
+            code = code_m.group(1)
+            fid = fid_m.group(1) if fid_m else None
+            home = away = ""
+            if gy_m:
+                parts = [p.strip() for p in gy_m.group(1).split(",")]
+                if len(parts) >= 3:
+                    home, away = parts[1], parts[2]
+            pk_m = re.findall(r'<a[^>]*class="clt[13]"[^>]*>([^<]*)</a>', body)
+            live_score = f"{pk_m[0].strip()}-{pk_m[1].strip()}" if len(pk_m) >= 2 and pk_m[0].strip() != '' else "--"
+            time_m = re.search(r'<td align="center">(\d{2}-\d{2} \d{2}:\d{2})</td>', body)
+            kickoff = time_m.group(1) if time_m else ""
+
+            is_fin = (status_code == '4')
+            is_live = (status_code in ['1', '2', '3'])
+            status_text = "未开赛"
+            if status_code == '1': status_text = "进行中 · 上半场"
+            elif status_code == '2': status_text = "进行中 · 中场"
+            elif status_code == '3': status_text = "进行中 · 下半场"
+            elif status_code == '4': status_text = "已完赛"
+            elif status_code == '-1': status_text = "比赛延期"
+
+            key = fid or code
+            live_map[key] = {
+                'fid': fid, 'code': code, 'home': home, 'away': away, 'kickoff': kickoff,
+                'status_code': status_code,
+                'status_text': status_text,
+                'is_live': is_live,
+                'is_fin': is_fin,
+                'score': live_score
+            }
     except Exception as e:
         print(f"[{datetime.now()}] Error fetching live scores: {e}")
     return live_map
 
 def full_pipeline_sync(auto_push=True):
+    _log("=== Pipeline run start ===")
     if not os.path.exists(MATCHES_FILE):
+        _log("MATCHES_FILE missing, abort")
         return
 
-    with open(MATCHES_FILE, 'r', encoding='utf-8') as f:
-        data = json.load(f)
+    try:
+        with open(MATCHES_FILE, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+    except Exception as exc:
+        _log(f"FATAL: official_matches.json unreadable: {type(exc).__name__}: {exc}")
+        raise
 
     existing_matches = data.get('matches', [])
-    existing_map = {m['code']: m for m in existing_matches}
+    existing_map = {match_identity(m.get('code'), m.get('time')): m for m in existing_matches}
 
     changes_made = False
     log_messages = []
@@ -421,7 +311,8 @@ def full_pipeline_sync(auto_push=True):
     newly_added = 0
     for of in official_pool:
         code = of['code']
-        if code not in existing_map:
+        ident = match_identity(code, of['time'], of.get('date'))
+        if ident not in existing_map:
             # 优先尝试最高难度三模型交叉推演引擎
             deep_res = None
             if USE_LLM_DOSSIER and run_tri_model_deep_reasoning:
@@ -438,9 +329,7 @@ def full_pipeline_sync(auto_push=True):
                 cons = f"{tip} ({deep_res['consensus_ratio']}%)"
                 ratio = deep_res["consensus_ratio"]
                 score_list = deep_res.get("predicted_scores", ["1-1", "2-1", "1-2"])
-                bd = deep_res.get("consensus_breakdown", {
-                    "odds_score": 75.0, "intel_score": 75.0, "tipster_score": 75.0, "math_score": 75.0
-                })
+                bd = deep_res.get("consensus_breakdown")
                 _eng = "量化" if deep_res.get("engine") == "rule" else "三模型对抗"
                 dossier = {
                     "summary": f"{of['home']}对阵{of['away']}，{_eng}研判首选【{tip}】。",
@@ -470,6 +359,7 @@ def full_pipeline_sync(auto_push=True):
                 }
             new_item = {
                 "code": code,
+                "fid": of.get('fid'),
                 "league": of['league'],
                 "time": of['time'],
                 "home": of['home'],
@@ -477,8 +367,8 @@ def full_pipeline_sync(auto_push=True):
                 "home_rank": "-",
                 "away_rank": "-",
                 "status": st,
-                "form_home": ["W","D","W","L","D"],
-                "form_away": ["D","W","L","W","W"],
+                "form_home": [],
+                "form_away": [],
                 "odds": of['odds'],
                 "is_only_rq": of.get('is_only_rq', False),
                 "rang": of.get('rang', '0'),
@@ -494,24 +384,35 @@ def full_pipeline_sync(auto_push=True):
                 "dossier": dossier
             }
             existing_matches.append(new_item)
-            existing_map[code] = new_item
+            existing_map[ident] = new_item
             changes_made = True
             newly_added += 1
-            log_messages.append(f"Auto-Added newly opened match: {code} {of['home']} vs {of['away']}")
+            log_messages.append(f"Auto-Added newly opened match: {code} {of['home']} vs {of['away']} ({of['time']})")
         else:
             # 关键：现有比赛如果处于【在售未停售阶段】，动态同步最新即时赔率，并动态更新机构去水共识度！
-            curr_match = existing_map[code]
+            curr_match = existing_map[ident]
+            # 赛前冻结的比赛：契约字段（玩法/让球数）随快照锁定，只更新展示用赔率
+            _frozen = bool((curr_match.get('prediction_snapshot') or {}).get('frozen_at')
+                           and not (curr_match.get('prediction_snapshot') or {}).get('frozen_mid_match'))
             # 同步让球属性
-            if of.get('is_only_rq'):
-                curr_match['is_only_rq'] = True
+            if curr_match.get('result') == 'PENDING' and not curr_match.get('locked') and not _frozen:
+                curr_match['is_only_rq'] = bool(of.get('is_only_rq'))
+            if of.get('is_only_rq') and curr_match.get('result') == 'PENDING' and not curr_match.get('locked') and not _frozen:
                 curr_match['rang'] = of.get('rang', '-1')
                 curr_match['odds_rq'] = of.get('odds_rq')
+            if of.get('fid') and not curr_match.get('fid'):
+                curr_match['fid'] = of.get('fid')
             if curr_match.get('result') == 'PENDING' and not curr_match.get('locked', False):
                 new_odds = of['odds']
                 if new_odds != ["-", "-", "-"] and new_odds != curr_match.get('odds'):
                     curr_match['odds'] = new_odds
-                    # 如果单开让球，重新生成专属于让球盘的研判、推荐与案卷
-                    if curr_match.get('is_only_rq'):
+                    # 已赛前冻结的比赛：赔率只更新 odds 字段，tip/案卷/共识度一律不动
+                    # （冻结即承诺，2026-10-22 修复：此前这里会给单开让球场次重造 tip，
+                    #   与快照口径打架导致发布检查失败、流水线崩溃）。
+                    _frozen = bool((curr_match.get('prediction_snapshot') or {}).get('frozen_at')
+                                   and not (curr_match.get('prediction_snapshot') or {}).get('frozen_mid_match'))
+                    if curr_match.get('is_only_rq') and not _frozen:
+                        # 如果单开让球，重新生成专属于让球盘的研判、推荐与案卷
                         st, tip, cons, ratio, dossier = generate_tactical_dossier(
                             curr_match['home'], curr_match['away'], curr_match['league'], new_odds,
                             is_only_rq=True, rang=curr_match.get('rang', '-1')
@@ -566,22 +467,42 @@ def full_pipeline_sync(auto_push=True):
 
     # 2. 扫描实时比分与状态（三态同步 + 物理开赛时间双重守门人）
     live_map = fetch_live_scores_and_status()
+    live_by_code = {}
+    for _k, _v in live_map.items():
+        live_by_code.setdefault(_v.get('code'), []).append(_v)
+
+    def resolve_live(m):
+        """按 fid 优先、队名消歧的原则找直播信息；同编号多场次对不上就返回 None
+        （宁可不更新，也绝不用另一场同编号比赛的比分污染本场）。"""
+        fid = m.get('fid')
+        if fid and str(fid) in live_map:
+            return live_map[str(fid)]
+        cands = live_by_code.get(m.get('code')) or []
+        if len(cands) == 1:
+            return cands[0]
+        for c in cands:
+            if c.get('home') == m.get('home') and c.get('away') == m.get('away'):
+                return c
+        return None
+
     now_dt = datetime.now()
     now_month_day_time = now_dt.strftime('%m-%d %H:%M')
 
     for m in existing_matches:
         code = m['code']
         m_time = m.get('time', '') # 如 "10-17 02:30"
-        
+
         # 官方停售绝对防篡改门控
         sale_closed = is_lottery_sale_closed(m_time)
         m['sale_closed'] = sale_closed
         if sale_closed:
             m['locked'] = True # 绝对物理锁死：严禁修改赛前研判、战术案卷和比分
-        
+
         # 守门人 A：外部比分网已有明确状态更新
-        if code in live_map:
-            info = live_map[code]
+        # 已结算（HIT/MISS/POSTPONED）的场次一律不碰直播同步：
+        # 竞彩编号每周复用，同编号新场次的直播状态绝不允许倒写已完赛旧场次。
+        info = resolve_live(m) if m.get('result') == 'PENDING' else None
+        if info:
             status_code = info.get('status_code', '')
             status_text = info.get('status_text', '')
 
@@ -596,7 +517,9 @@ def full_pipeline_sync(auto_push=True):
             elif info['is_fin'] and info['score'] != '--':
                 if m['result'] == 'PENDING':
                     score = info['score']
-                    res = calculate_result(m['tip'], score, is_only_rq=m.get('is_only_rq', False), rang=m.get('rang', '0'))
+                    from rule_engine import settle_identity
+                    _tip, _rq, _rang = settle_identity(m)
+                    res = calculate_result(_tip, score, is_only_rq=_rq, rang=_rang)
                     m['score'] = score
                     m['status'] = '已完赛'
                     m['result'] = res
@@ -637,9 +560,9 @@ def full_pipeline_sync(auto_push=True):
                     changes_made = True
                     log_messages.append(f"Status synced: {code} -> {new_status}")
 
-    # 状态自愈：已结算的比赛不得继续显示「进行中」；未开赛不得带 0-0 占位比分
+    # 状态自愈：已结算终场不得被比分列表的未开赛标志倒写。
     for m in existing_matches:
-        if m.get('result') in ('HIT', 'MISS') and '进行中' in str(m.get('status', '')):
+        if m.get('result') in ('HIT', 'MISS') and m.get('status') != '已完赛':
             m['status'] = '已完赛'
             changes_made = True
             log_messages.append(f"Status self-heal: {m.get('code')} -> 已完赛")
@@ -665,6 +588,12 @@ def full_pipeline_sync(auto_push=True):
             log_messages.append(f"Crosscheck conflicts: {len(cc['conflicts'])}")
     except Exception as exc:
         log_messages.append(f"Crosscheck skipped: {type(exc).__name__}")
+    # 冻结之前先生成最终选择与派生详情，快照不能先冻旧推荐再改显示。
+    import rule_engine as _rules
+    for m in existing_matches:
+        if _rules.normalize_match(m):
+            changes_made = True
+
     # 赛前冻结：仅对未开赛且有方向/赔率的比赛建立不可变快照
     try:
         import verify as _verify
@@ -743,7 +672,31 @@ def full_pipeline_sync(auto_push=True):
     except Exception as _exc:
         log_messages.append(f"Archive skipped: {type(_exc).__name__}")
 
-    # 动态量化推演：每当官方SP变动或有新情报时，自动重算 8 万场相同赔率、EV值与爆冷预警
+    # 旧赛果清理：归档已完成（上面刚写入 match_results.jsonl），这里按保留天数裁剪，
+    # 防止编号复用互相干扰 + 文件无限增长。只清理 HIT/MISS 的旧场次，
+    # PENDING（含完赛待核验）/ POSTPONED 一律保留。
+    try:
+        from enrich_team_stats import full_date as _full_date
+        _today = datetime.now().date()
+        _kept, _pruned = [], 0
+        for m in existing_matches:
+            if m.get('result') in ('HIT', 'MISS'):
+                try:
+                    _md = datetime.strptime(_full_date(m.get('time')), '%Y-%m-%d').date()
+                except Exception:
+                    _md = None
+                if _md and (_today - _md).days > PRUNE_KEEP_DAYS:
+                    _pruned += 1
+                    continue
+            _kept.append(m)
+        if _pruned:
+            existing_matches = _kept
+            changes_made = True
+            log_messages.append(f'Pruned {_pruned} settled matches older than {PRUNE_KEEP_DAYS} days')
+    except Exception as _exc:
+        log_messages.append(f'Prune skipped: {type(_exc).__name__}')
+
+    # 动态量化推演：每当官方SP变动或有新情报时，自动重算历史同赔样本、EV值与爆冷预警
     try:
         import quant_engine
         for m in existing_matches:
@@ -771,6 +724,14 @@ def full_pipeline_sync(auto_push=True):
     except Exception as _exc:
         log_messages.append(f"QuantEngine live sync skipped: {type(_exc).__name__}")
 
+    # 每轮都执行最终检查，与是否有赔率变化无关；所有写入路径统一派生口径。
+    for m in existing_matches:
+        if _rules.normalize_match(m):
+            changes_made = True
+    issues = _rules.validate_matches(existing_matches)
+    if issues:
+        raise ValueError('本轮数据未通过发布检查: ' + str(issues[:10]))
+
     if changes_made:
         data['updated_at'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         data['total'] = len(existing_matches)
@@ -788,148 +749,32 @@ def full_pipeline_sync(auto_push=True):
         # 实时连线 500.com 刷新球队当周最新战绩（彻底消灭400多天旧数据）
         try:
             import live_team_form
-            live_team_form.update_all_live_stats(MATCHES_FILE)
+            live_team_form.update_all_live_stats(MATCHES_FILE, matches=existing_matches)
             log_messages.append("LiveTeamForm updated successfully")
         except Exception as _exc:
             log_messages.append(f"LiveTeamForm skipped: {type(_exc).__name__}")
 
-        # 【核心铁壁守门员】：全自动自洽门控 (Enforce Match Consistency & Zero Conflict)
-        # 严格执行常识铁律：概率决定研判！
-        # 1. 主胜+平局 >= 70% 时，必须推【主胜】或【主胜/防平】，绝对严禁推让负！
-        # 2. 客胜+平局 >= 70% 时，必须推【客胜】或【客胜/防平】！
-        # 3. 只有当让球方胜率低（<=48%）且冷门几率大时，才允许推让负！
+        # 旧「铁壁守门员」多套裁决循环已停用；推荐方向、比分、概率、结算统一由
+        # rule_engine.normalize_match / calculate_result 在冻结前与发布前各做一次，杜绝重复口径打架。
         for m in existing_matches:
-            # 关键：已完赛比赛绝对物理锁死，严禁被每分钟轮询覆写或重设 tip！
-            if m.get('status') == '已完赛' or m.get('result') != 'PENDING' or m.get('locked'):
-                continue
-            try:
-                # 优先采用 quant_factors 物理概率硬门控对齐
-                # 但单开让球的场次例外：quant_factors 是用【标准胜平负】的历史赔率桶统计出来的，
-                # 拿它去套【让球赔率】等于拿苹果比橘子（实测 77 样本给出 84% 让胜，
-                # 而盘口隐含只有 36.5%）。这类场次直接用让球赔率反推。
-                qf = m.get('quant_factors') or {}
-                if m.get('is_only_rq'):
-                    pw = pd = pl = 0.0
-                else:
-                    pw = float(qf.get('win_rate', 0)) / 100.0
-                    pd = float(qf.get('draw_rate', 0)) / 100.0
-                    pl = float(qf.get('loss_rate', 0)) / 100.0
-                
-                # 若无 qf，从赔率反推
-                if pw == 0 and m.get('odds') and len(m['odds']) >= 3:
-                    try:
-                        inv = [1.0/float(x) for x in m['odds']]
-                        s = sum(inv)
-                        pw, pd, pl = inv[0]/s, inv[1]/s, inv[2]/s
-                    except: pass
-
-                rang_str = str(m.get('rang', '-1'))
-                rang_val = int(rang_str) if rang_str.lstrip('-+').isdigit() else -1
-
-                # 【铁律裁决】：依据物理概率矫正 tip
-                # 单开让球的场次，体彩只卖【让胜/让平/让负】，绝不能再给"主胜/客胜"——
-                # 那是买不到的选项（2026-10-22 用户反馈：单开让球的场次显示了"主胜"）。
-                if m.get('is_only_rq'):
-                    if pw + pd >= 0.72:
-                        m['tip'] = '让胜' if pw >= 0.65 else '让胜/防让平'
-                    elif pl + pd >= 0.72:
-                        m['tip'] = '让负' if pl >= 0.65 else '让负/防让平'
-                    elif pw >= pl:
-                        m['tip'] = '让胜/防让平'
-                    else:
-                        m['tip'] = '让负/防让平'
-                elif pw + pd >= 0.72:
-                    if pw >= 0.65:
-                        m['tip'] = '主胜'
-                    else:
-                        m['tip'] = '主胜/防平'
-                elif pl + pd >= 0.72:
-                    if pl >= 0.65:
-                        m['tip'] = '客胜'
-                    else:
-                        m['tip'] = '客胜/防平'
-                elif pd >= 0.30 and abs(pw - pl) <= 0.06:
-                    # 三向接近、平局权重最高
-                    m['tip'] = '平局/防冷'
-                elif pw >= pl:
-                    # 标准胜平负场次只能推胜/平/负，绝不能推「让胜/让负」（那是另一个玩法，买不到）
-                    m['tip'] = '主不败/首选主胜'
-                else:
-                    m['tip'] = '客不败/首选客胜'
-
-                cur_tip = m.get('tip', '主胜/防平')
-
-                # 2. 严格核验并纠偏比分，确保与 tip 100% 同向自洽
-                if cur_tip in ('主胜', '主胜/防平'):
-                    # 必须主胜或平局，绝对不可出现客胜比分！
-                    m['predicted_scores'] = ['1-0', '2-1', '1-1'] if cur_tip == '主胜/防平' else ['2-0', '2-1', '3-1']
-                    m['predicted_goals'] = ['2', '3']
-                elif cur_tip in ('客胜', '客胜/防平'):
-                    m['predicted_scores'] = ['0-1', '1-2', '1-1'] if cur_tip == '客胜/防平' else ['0-2', '1-2', '0-3']
-                    m['predicted_goals'] = ['2', '3']
-                elif cur_tip.startswith('让负'):
-                    if rang_val < 0:   # 主让 |rang| 球，买让负 = 客队覆盖 → 客不败
-                        m['predicted_scores'] = ['1-1', '0-1', '1-2']
-                        m['predicted_goals'] = ['1', '2', '3']
-                    else:              # 主受让 rang 球，买让负 = 客队净胜 (rang+1) 球以上
-                        need = rang_val + 1
-                        m['predicted_scores'] = [f'0-{need}', f'1-{need+1}', f'0-{need+1}']
-                        m['predicted_goals'] = [str(need), str(need + 1), str(need + 2)]
-                        if '防让平' in cur_tip:      # 补一个刚好走盘（让平）的比分
-                            m['predicted_scores'][-1] = f'0-{rang_val}'
-                            m['predicted_goals'] = [str(rang_val), str(need), str(need + 1)]
-                elif cur_tip.startswith('让胜'):
-                    if rang_val < 0:   # 主让 |rang| 球，买让胜 = 主队净胜 (|rang|+1) 球以上
-                        need = abs(rang_val) + 1
-                        m['predicted_scores'] = [f'{need}-0', f'{need+1}-1', f'{need}-1']
-                        m['predicted_goals'] = [str(need), str(need + 1), str(need + 2)]
-                        if '防让平' in cur_tip:
-                            m['predicted_scores'][-1] = f'{abs(rang_val)}-0'
-                            m['predicted_goals'] = [str(abs(rang_val)), str(need), str(need + 1)]
-                    else:              # 主受让 rang 球，买让胜 = 主队不输 rang 球以上
-                        m['predicted_scores'] = ['1-1', '1-0', '0-0']
-                        m['predicted_goals'] = ['1', '2']
-
-                elif cur_tip == '主胜':
-                    valid_scores = [sc for sc in scores if '-' in sc and int(sc.split('-')[0]) > int(sc.split('-')[1])]
-                    if not valid_scores:
-                        m['predicted_scores'] = ['2-0', '2-1', '3-1']
-                        m['predicted_goals'] = ['2', '3', '4']
-                    else:
-                        m['predicted_scores'] = valid_scores[:3]
-
-                elif cur_tip == '客胜':
-                    valid_scores = [sc for sc in scores if '-' in sc and int(sc.split('-')[1]) > int(sc.split('-')[0])]
-                    if not valid_scores:
-                        m['predicted_scores'] = ['0-2', '1-2', '0-1']
-                        m['predicted_goals'] = ['2', '3']
-                    else:
-                        m['predicted_scores'] = valid_scores[:3]
-
-                # 共识文案必须跟着 tip 走：否则卡片会出现「共识:客胜」而「推荐:让负」的自相矛盾
-                _r = m.get('consensus_ratio')
-                m['consensus'] = f"{m.get('tip')} ({_r}%)" if _r else str(m.get('tip'))
-            except Exception:
-                continue
-
-        with open(MATCHES_FILE, 'w', encoding='utf-8') as f:
-            json.dump(data, f, ensure_ascii=False, indent=2)
-
-        with open(MATCHES_34_FALLBACK, 'w', encoding='utf-8') as f:
-            json.dump(data, f, ensure_ascii=False, indent=2)
+            _rules.normalize_match(m)
+        write_validated_data(MATCHES_FILE, data)
 
         print(f"[{datetime.now()}] Pipeline update: {len(log_messages)} changes logged.")
         for msg in log_messages:
             print(f"  -> {msg}")
+        _log(f"Pipeline update: {len(log_messages)} changes | " + " | ".join(log_messages))
 
         if auto_push:
             os.chdir(WEB_DIR)
-            silent_subprocess_run(["git", "add", "data/official_matches.json", "data/matches_34.json", "data/match_results.jsonl", "data/archive_stats.json", "data/understat_teams.json", "data/team_aliases.json", "index.html"], cwd=WEB_DIR)
+            silent_subprocess_run(["git", "add", "data/official_matches.json", "data/match_results.jsonl", "data/archive_stats.json", "data/understat_teams.json", "data/team_aliases.json", "index.html"], cwd=WEB_DIR)
             commit_title = f"Live-Pulse: {len(log_messages)} match status/score updates ({datetime.now().strftime('%H:%M:%S')})"
             silent_subprocess_run(["git", "commit", "-m", commit_title], cwd=WEB_DIR)
-            res = silent_subprocess_run(["git", "push", "origin", "main"], cwd=WEB_DIR)
-            print("Git push result:", res.stdout or res.stderr)
-            
+            _push = silent_subprocess_run(["git", "push", "origin", "main"], cwd=WEB_DIR, capture=True)
+            _rc = getattr(_push, 'returncode', '?')
+            _out = ((getattr(_push, 'stdout', '') or b'') + (getattr(_push, 'stderr', '') or b'')).decode('utf-8', 'ignore').strip()[:300]
+            _log(f"git push rc={_rc} {_out}")
+
             # 【终极提速】：毫秒级异步直推国内阿里云高速节点 (彻底跳过境外 CDN 与移动运营商缓存死锁！)
             try:
                 subprocess.Popen(
@@ -938,16 +783,27 @@ def full_pipeline_sync(auto_push=True):
                     stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
                     creationflags=CREATE_NO_WINDOW
                 )
+                _log("scp to aliyun spawned")
             except Exception as e:
-                pass
+                _log(f"scp spawn failed: {type(e).__name__}")
 
             # 关键：一旦比分有变动并推送成功，立即秒级清除全球 CDN 缓存！
             try:
                 urllib.request.urlopen("https://purge.jsdelivr.net/gh/s25s4s4/qingdao-care-concierge@main/data/official_matches.json", timeout=4)
             except Exception as e:
-                pass
+                _log(f"jsdelivr purge failed: {type(e).__name__}")
     else:
         print(f"[{datetime.now()}] Pipeline scan: Everything up-to-date.")
+        _log("Pipeline scan: everything up-to-date")
 
 if __name__ == '__main__':
-    full_pipeline_sync(auto_push=True)
+    if acquire_sync_lock():
+        try:
+            full_pipeline_sync(auto_push=True)
+        except Exception:
+            import traceback
+            _log("FATAL unhandled exception:\n" + traceback.format_exc())
+            raise
+    else:
+        _log('已有同步运行，跳过重复实例。')
+        print('已有同步运行，跳过重复实例。')

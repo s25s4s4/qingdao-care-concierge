@@ -1,271 +1,343 @@
 # -*- coding: utf-8 -*-
-"""不用大模型的研判引擎：全部结论由赔率 + 本地历史库 + xG 现算。
-
-为什么要有它
-------------
-原来的 `deep_reasoning_engine.run_tri_model_deep_reasoning()` 每加一场新比赛就要
-调一次 LLM（gemini-3.8-flash-low），token 顶不住。而实际上：
-
-* **推荐方向**本来就被 `sync_live_matches.py` 里的「铁壁守门员」按去水概率覆盖了；
-* **比分 / 进球数**也是按 tip 方向从泊松分布里挑的；
-* LLM 真正只贡献了四段文案 + 一个共识分。
-
-所以只要能用数字把四段文案写出来，LLM 就可以整条拿掉。
-
-原则
-----
-1. **只陈述能算出来的东西**：近况、交锋、泊松分布、去水概率、抽水率、xG 偏差。
-   不编"战术阵眼""更衣室暗流"这种没有数据支撑的话。
-2. 数字必须和详情页展示的一致，避免"文案说 57%、卡片说 69%"的自相矛盾。
-3. 任何一项数据缺失就不写那一句，不硬凑。
-"""
+"""统一的玩法、结算、比分与详情契约。缺失数据不编造；历史快照不覆盖。"""
+import copy
 import json
+import math
 import os
 import re
+from datetime import datetime
+from functools import lru_cache
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-CALIB = os.path.join(HERE, "data", "calibration.json")
+DETAIL_SCHEMA = 2
 
 
-# --------------------------------------------------------------------------
-# 数学层：复用 deep_reasoning_engine 里的纯计算（不涉及任何网络调用）
-# --------------------------------------------------------------------------
-def _poisson(odds, league="", is_only_rq=False, rang="0"):
-    from deep_reasoning_engine import compute_poisson_and_kelly
-    return compute_poisson_and_kelly(odds, league=league, is_only_rq=is_only_rq, rang=rang)
+def parse_score(value):
+    m = re.fullmatch(r"\s*(\d+)\s*[-:]\s*(\d+)\s*", str(value or ""))
+    return tuple(map(int, m.groups())) if m else None
 
 
-def _goal_bands(lambda_h, mu_a):
-    """按总进球分布切成 0-1 / 2-3 / 4+ 三档，并给出期望总进球"""
-    import math
-    ph = [math.exp(-lambda_h) * lambda_h ** k / math.factorial(k) for k in range(11)]
-    pa = [math.exp(-mu_a) * mu_a ** k / math.factorial(k) for k in range(11)]
-    bands = [0.0, 0.0, 0.0]
-    for x in range(11):
-        for y in range(11):
-            g = x + y
-            p = ph[x] * pa[y]
-            bands[0 if g <= 1 else (1 if g <= 3 else 2)] += p
-    return [round(b * 100, 1) for b in bands], round(lambda_h + mu_a, 2)
+def parse_rang(value):
+    if not re.fullmatch(r"[+-]?\d+", str(value).strip()):
+        raise ValueError("让球数缺失或无效")
+    return int(str(value).strip())
 
 
-def _score_probs(lambda_h, mu_a, upto=5):
-    import math
-    ph = [math.exp(-lambda_h) * lambda_h ** k / math.factorial(k) for k in range(upto + 1)]
-    pa = [math.exp(-mu_a) * mu_a ** k / math.factorial(k) for k in range(upto + 1)]
-    out = []
-    for x in range(upto + 1):
-        for y in range(upto + 1):
-            out.append((f"{x}-{y}", ph[x] * pa[y]))
-    out.sort(key=lambda kv: -kv[1])
-    return out
+def selected_outcomes(tip):
+    """返回本场明确选择的结果；防冷不是任何结果皆可命中的通配符。"""
+    tip = str(tip or "")
+    if "让" in tip:
+        return "hhad", {i for i, text in enumerate(("让胜", "让平", "让负")) if text in tip}
+    if "主不败" in tip:
+        return "had", {0, 1}
+    if "客不败" in tip:
+        return "had", {1, 2}
+    out = set()
+    if "主胜" in tip: out.add(0)
+    if "客胜" in tip: out.add(2)
+    if "平" in tip: out.add(1)
+    if "胜平" in tip: out.update((0, 1))
+    if "平负" in tip: out.update((1, 2))
+    return "had", out
 
 
-# --------------------------------------------------------------------------
-# 决策层：和 sync_live_matches 的「铁壁守门员」同一套阈值，保证文案与卡片不打架
-# --------------------------------------------------------------------------
-def decide_tip(ph, pd, pa, is_only_rq=False, rang="0"):
-    """返回 (tip, 方向说明)。ph/pd/pa 为 0-1 的去水概率。"""
+def calculate_result(tip, score, is_only_rq=False, rang=None):
+    parsed = parse_score(score)
+    if parsed is None:
+        return "PENDING"
+    market, selected = selected_outcomes(tip)
+    if not selected or (is_only_rq and market != "hhad"):
+        return "PENDING"
+    diff = parsed[0] - parsed[1]
+    if market == "hhad":
+        try:
+            diff += parse_rang(rang)
+        except ValueError:
+            return "PENDING"  # 绝不能猜让球数，也不能把让负默认当成客不败
+    outcome = 0 if diff > 0 else 1 if diff == 0 else 2
+    return "HIT" if outcome in selected else "MISS"
+
+
+def implied(odds):
     try:
-        r = int(str(rang))
-    except (TypeError, ValueError):
-        r = 0
-
-    if is_only_rq:
-        # 单开让球：看让球盘口的胜平负
-        if ph + pd >= 0.72:
-            return ("让胜" if ph >= 0.65 else "让胜/防让平",
-                    f"让球盘去水后主侧合计 {round((ph + pd) * 100, 1)}%，门槛虽在但主队覆盖概率占优")
-        if pa + pd >= 0.72:
-            return ("让负" if pa >= 0.65 else "让负/防让平",
-                    f"让球盘去水后客侧合计 {round((pa + pd) * 100, 1)}%，主队打穿难度偏高")
-        return ("让负" if pa >= ph else "让胜",
-                f"让球盘去水主 {round(ph * 100, 1)}% / 客 {round(pa * 100, 1)}%，两侧接近，按高侧取")
-
-    if ph + pd >= 0.72:
-        return ("主胜" if ph >= 0.65 else "主胜/防平",
-                f"去水后主胜 {round(ph * 100, 1)}%、平局 {round(pd * 100, 1)}%，主侧合计 {round((ph + pd) * 100, 1)}%")
-    if pa + pd >= 0.72:
-        return ("客胜" if pa >= 0.65 else "客胜/防平",
-                f"去水后客胜 {round(pa * 100, 1)}%、平局 {round(pd * 100, 1)}%，客侧合计 {round((pa + pd) * 100, 1)}%")
-    if pd >= 0.30 and abs(ph - pa) <= 0.06:
-        return ("平局/防冷",
-                f"去水后主 {round(ph * 100, 1)}% / 平 {round(pd * 100, 1)}% / 客 {round(pa * 100, 1)}%，三向接近，平局权重最高")
-    return ("主不败/首选主胜" if ph >= pa else "客不败/首选客胜",
-            f"去水后主 {round(ph * 100, 1)}% vs 客 {round(pa * 100, 1)}%，无明显强弱，取不败一侧")
+        raw = list(map(float, odds))
+        if len(raw) != 3 or any(not math.isfinite(v) or v <= 1 for v in raw):
+            return None
+        inv = [1 / v for v in raw]
+        total = sum(inv)
+        return [v / total for v in inv]
+    except (ValueError, TypeError):
+        return None
 
 
-def pick_scores(tip, scores):
-    """按 tip 方向从泊松高频比分里挑 3 个，方向必须自洽"""
-    win_h = [s for s, _ in scores if int(s.split("-")[0]) > int(s.split("-")[1])]
-    win_a = [s for s, _ in scores if int(s.split("-")[1]) > int(s.split("-")[0])]
-    draw = [s for s, _ in scores if int(s.split("-")[0]) == int(s.split("-")[1])]
-
-    if tip.startswith("主胜"):
-        picks = win_h[:2] + (draw[:1] if "防平" in tip else win_h[2:3])
-    elif tip.startswith("客胜"):
-        picks = win_a[:2] + (draw[:1] if "防平" in tip else win_a[2:3])
-    elif tip.startswith("平局"):
-        picks = draw[:2] + (win_h[:1] or win_a[:1])
-    elif tip.startswith("主不败"):
-        picks = win_h[:2] + draw[:1]
-    elif tip.startswith("客不败"):
-        picks = win_a[:2] + draw[:1]
-    elif tip.startswith("让胜"):
-        picks = win_h[:3]
+def decide_tip(ph, pd, pa, is_only_rq=False, rang="0"):
+    names = ("让胜", "让平", "让负") if is_only_rq else ("主胜", "平局", "客胜")
+    probs = [ph, pd, pa]
+    high = max(range(3), key=lambda i: probs[i])
+    if probs[high] >= .65:
+        tip = names[high]
+    elif high == 1:
+        tip = names[1]
     else:
-        picks = (win_a[:2] + draw[:1])
-    seen, out = set(), []
-    for s in picks:
-        if s and s not in seen:
-            seen.add(s)
-            out.append(s)
-    return out[:3] or ["1-0", "1-1", "0-1"]
+        tip = names[high] + ("/防让平" if is_only_rq else "/防平")
+    why = "赔率去水隐含概率 " + " / ".join(f"{n} {v * 100:.1f}%" for n, v in zip(names, probs))
+    return tip, why
+
+
+def _score_probs(lambda_h, mu_a, upto=12):
+    def ps(lam):
+        values = [math.exp(-lam)]
+        for k in range(1, upto + 1): values.append(values[-1] * lam / k)
+        return values
+    ph, pa = ps(lambda_h), ps(mu_a)
+    return sorted(((f"{x}-{y}", ph[x] * pa[y]) for x in range(upto + 1)
+                   for y in range(upto + 1)), key=lambda kv: -kv[1])
+
+
+@lru_cache(maxsize=512)
+def fit_model(probs, rang=0):
+    """拟合独立泊松参数；按实际让球数聚合，不使用固定深盘模板或臆造xG。"""
+    best = (float("inf"), 1.3, 1.1)
+    def loss(h, a):
+        ph, pa = [math.exp(-h)], [math.exp(-a)]
+        for k in range(1, 16):
+            ph.append(ph[-1] * h / k)
+            pa.append(pa[-1] * a / k)
+        agg = [0., 0., 0.]
+        for x, px in enumerate(ph):
+            for y, py in enumerate(pa):
+                diff = x + rang - y
+                agg[0 if diff > 0 else 1 if diff == 0 else 2] += px * py
+        return sum((v - target) ** 2 for v, target in zip(agg, probs)), agg
+    # 粗网格 + 局部细化；记录误差，拟合值不是实际比赛xG。
+    for h in [0.15 + i * .35 for i in range(20)]:
+        for a in [0.15 + i * .35 for i in range(20)]:
+            err, _ = loss(h, a)
+            if err < best[0]: best = (err, h, a)
+    for step in (.1, .03):
+        center_h, center_a = best[1:]
+        for dh in range(-4, 5):
+            for da in range(-4, 5):
+                h, a = max(.03, center_h + dh * step), max(.03, center_a + da * step)
+                err, _ = loss(h, a)
+                if err < best[0]: best = (err, h, a)
+    h, a = round(best[1], 2), round(best[2], 2)
+    _, fitted = loss(h, a)
+    return {"lambda_h": h, "lambda_a": a,
+            "fit_error_pp": round(max(abs(v - t) for v, t in zip(fitted, probs)) * 100, 2),
+            "method": "independent_poisson_odds_fit", "rang": rang}
+
+
+def pick_scores(tip, scores, rang="0"):
+    market, selected = selected_outcomes(tip)
+    try:
+        r = parse_rang(rang) if market == "hhad" else 0
+    except ValueError:
+        return []
+    groups = {i: [] for i in selected}
+    for s, p in scores:
+        parsed = parse_score(s)
+        if parsed is None: continue
+        diff = parsed[0] + r - parsed[1]
+        i = 0 if diff > 0 else 1 if diff == 0 else 2
+        if i in groups: groups[i].append((s, p))
+    # 首选两个比分 + 防选一个；双选各结果均有参考比分，不把让平当走盘退款。
+    primary = next((i for i, text in enumerate(("让胜", "让平", "让负") if market == "hhad"
+                   else ("主胜", "平局", "客胜")) if tip.startswith(text)), None)
+    if primary is None: primary = 0 if "主不败" in tip else 2
+    result = groups.get(primary, [])[:2]
+    for i in sorted(selected - {primary}): result += groups[i][:1]
+    candidates = sorted((item for group in groups.values() for item in group), key=lambda kv: -kv[1])
+    for item in candidates:
+        if len(result) >= 3: break
+        if item not in result: result.append(item)
+    return [s for s, _ in result[:3]]
 
 
 def pick_goals(bands_lam, scores):
-    """进球区间取泊松里概率最高的两档（0-7 展开后取 top2 相邻）"""
-    import math
-    lam_h, mu_a = bands_lam
-    ph = [math.exp(-lam_h) * lam_h ** k / math.factorial(k) for k in range(9)]
-    pa = [math.exp(-mu_a) * mu_a ** k / math.factorial(k) for k in range(9)]
-    goals = [0.0] * 8
-    for x in range(9):
-        for y in range(9):
-            goals[min(x + y, 7)] += ph[x] * pa[y]
-    top = sorted(range(8), key=lambda i: -goals[i])[:2]
-    top.sort()
-    return [str(i) for i in top]
+    return sorted({str(min(sum(parse_score(s)), 7)) for s in scores if parse_score(s)}, key=int)
 
 
-# --------------------------------------------------------------------------
-# 文案层
-# --------------------------------------------------------------------------
 def _form_text(blk, name):
-    if not blk or not blk.get("recent"):
-        return ""
+    if not blk or not blk.get("recent"): return ""
     r = blk["recent"]
-    txt = f"{name}近{r['n']}场 {r['w']}胜{r['d']}平{r['l']}负、场均 {r['gf']:.2f}:{r['ga']:.2f}"
-    if blk.get("stale_days") and blk["stale_days"] > 60:
-        txt += f"（数据截至 {blk.get('last_date')}）"
-    return txt
-
-
-def _season_text(t):
-    if not t or not t.get("gp"):
-        return ""
-    gap = t.get("gf", 0) - (t.get("xg") or 0)
-    txt = f"本季 {t['gp']} 轮 {t['w']}-{t['d']}-{t['l']}、进 {t['gf']} 失 {t['ga']}"
-    if t.get("xg") is not None:
-        txt += f"，xG {t['xg']:.1f}"
-        if abs(gap) >= 3:
-            txt += f"（实际进球{'高出' if gap > 0 else '低于'}期望 {abs(gap):.1f}）"
-    return txt
-
-
-def _calib_text():
-    try:
-        with open(CALIB, encoding="utf-8") as f:
-            c = json.load(f)
-        o = c.get("overall") or {}
-        if o.get("n", 0) >= 30:
-            return f"本站赛前冻结样本 {o['n']} 场，实际命中率 {o['hit_rate']}%"
-    except Exception:
-        pass
-    return ""
+    required = ("n", "w", "d", "l", "gf", "ga")
+    if any(k not in r for k in required): return ""
+    return (f"{name}近{r['n']}场 {r['w']}胜{r['d']}平{r['l']}负，场均进{r['gf']:.2f}失{r['ga']:.2f}"
+            f"（截至{blk.get('last_date') or '日期未提供'}）")
 
 
 def build(match_info, team_stats=None, understat=None):
-    """生成与 LLM 版本同契约的 dict。team_stats/understat 可传可不传。"""
-    home = match_info.get("home", "主队")
-    away = match_info.get("away", "客队")
-    league = match_info.get("league", "")
-    odds = match_info.get("odds") or ["2.50", "3.20", "2.80"]
-    is_only_rq = bool(match_info.get("is_only_rq"))
-    rang = str(match_info.get("rang") or "0")
-
-    st = _poisson(odds, league=league, is_only_rq=is_only_rq, rang=rang)
-    ph, pd, pa = st["pure_h"] / 100.0, st["pure_d"] / 100.0, st["pure_a"] / 100.0
-    lam_h, mu_a = st["lambda_h"], st["mu_a"]
-
-    tip, why = decide_tip(ph, pd, pa, is_only_rq, rang)
-    sp = _score_probs(lam_h, mu_a)
-    scores = pick_scores(tip, sp)
-    goals = pick_goals((lam_h, mu_a), sp)
-    bands, total_goals = _goal_bands(lam_h, mu_a)
-
-    # ---- 一、基本面：只用真实近况/交锋/当季数据 ----
+    home, away = match_info.get("home", "主队"), match_info.get("away", "客队")
+    override = match_info.get("detail_tip")
+    market = selected_outcomes(override)[0] if override else ("hhad" if match_info.get("is_only_rq") else "had")
+    r = parse_rang(match_info.get("rang")) if market == "hhad" else 0
+    odds = match_info.get("odds")
+    if market == "hhad" and not match_info.get("is_only_rq"):
+        odds = match_info.get("odds_rq")  # 双开比赛的让球建议必须取让球SP，不能禁止合法让球玩法
+    probs = implied(odds)
+    names = ("让胜", "让平", "让负") if market == "hhad" else ("主胜", "平局", "客胜")
+    tip = override or (decide_tip(*probs, market == "hhad", r)[0] if probs else "暂不研判")
+    _, selected = selected_outcomes(tip)
+    model = dict(fit_model(tuple(probs), r)) if probs else None
+    scores = pick_scores(tip, _score_probs(model['lambda_h'], model['lambda_a']), r) if model else []
+    goals = pick_goals(None, scores)
     parts = []
-    if team_stats:
-        for side, nm in (("home", home), ("away", away)):
-            t = _form_text(team_stats.get(side), nm)
-            if t:
-                parts.append(t)
-        h2h = team_stats.get("h2h") or {}
-        if h2h.get("n"):
-            parts.append(f"两队近{h2h['n']}次交锋 {home} {h2h['a_win']}胜{h2h['draw']}平{h2h['b_win']}负、"
-                         f"总进球 {h2h['a_goals']}:{h2h['b_goals']}")
-    if understat:
-        for side, nm in (("home", home), ("away", away)):
-            t = _season_text(understat.get(side))
-            if t:
-                parts.append(f"{nm}{t}")
-    fundamental = "；".join(parts) + "。" if parts else \
-        f"{home} 与 {away} 暂无可用近期数据，本场仅按官方赔率结构研判。"
-
-    # ---- 二、进球格局：泊松分布，纯数学 ----
-    tactical = (f"泊松期望 {home} {lam_h} 球、{away} {mu_a} 球，合计 {total_goals} 球。"
-                f"总进球分布：0-1 球 {bands[0]}%、2-3 球 {bands[1]}%、4 球以上 {bands[2]}%。"
-                f"理论高频比分 {'、'.join(s for s, _ in sp[:3])}。")
-
-    # ---- 三、机构态度：真实 SP 与去水 ----
-    market = (f"官方 SP {st['sp_h']} / {st['sp_d']} / {st['sp_a']}，"
-              f"去水后主胜 {st['pure_h']}%、平局 {st['pure_d']}%、客胜 {st['pure_a']}%，"
-              f"机构抽水 {st['margin']}%。")
-    cal = _calib_text()
-    if cal:
-        market += cal + "。"
-
-    # ---- 四、决策：把 tip / 进球 / 比分讲清楚 ----
-    decision = (f"{why}。首选【{tip}】，进球区间 {'、'.join(g + '球' for g in goals)}，"
-                f"比分参考 {'、'.join(scores)}。")
-    if is_only_rq:
-        decision += f"本场为单开让球（主让/受让 {rang} 球），只看让球盘口，不涉及普通胜平负。"
-
-    # ---- 共识分：全部由可复算的量构成 ----
-    odds_score = st["odds_score"]
-    concentration = sp[0][1] * 100                      # 最高频比分的概率
-    math_score = round(min(max(50 + concentration * 1.6, 55), 88), 1)
-    intel_score = 60.0
-    if team_stats and (team_stats.get("home") or team_stats.get("away")):
-        intel_score += 8
-    if understat and (understat.get("home") or understat.get("away")):
-        intel_score += 7
-    tipster_score = 60.0
-    ratio = round(odds_score * 0.45 + math_score * 0.25 + intel_score * 0.15 + tipster_score * 0.15, 1)
-
-    return {
-        "tip": tip,
-        "consensus_ratio": ratio,
-        "consensus_breakdown": {
-            "odds_score": odds_score,
-            "intel_score": round(intel_score, 1),
-            "tipster_score": round(tipster_score, 1),
-            "math_score": math_score,
-        },
-        "predicted_goals": goals,
-        "predicted_scores": scores,
-        "fundamental": fundamental,
-        "tactical_conflict": tactical,
-        "market_attitude": market,
-        "decision_guide": decision,
-        "engine": "rule",
-    }
+    stats = team_stats or match_info.get("stats") or {}
+    for side, nm in (("home", home), ("away", away)):
+        text = _form_text(stats.get(side), nm)
+        if text: parts.append(text)
+    fundamental = "；".join(parts) + "。" if parts else "暂无可核验近期战绩；不据此编写伤停、战意或战术结论。"
+    if model:
+        tactical = (f"独立泊松示意参数：主{model['lambda_h']}、客{model['lambda_a']}。"
+                    f"按本场{'让球' if market == 'hhad' else '胜平负'}赔率拟合，最大误差{model['fit_error_pp']}个百分点；"
+                    "这是赔率结构的近似示意，不是实测xG，也不是独立预测。")
+        market_text = (f"{'让球('+str(r)+')' if market == 'hhad' else '胜平负'} SP " + " / ".join(map(str, odds))
+                       + "，去水隐含概率 " + " / ".join(f"{n} {p*100:.1f}%" for n, p in zip(names, probs))
+                       + "。隐含概率不代表实际命中率。")
+    else:
+        tactical = "该玩法赔率缺失，无法可靠生成比分和进球分布，暂不展示。"
+        market_text = "本场所选玩法赔率缺失；不使用其他玩法赔率代替。"
+    ratio = round(sum(probs[i] for i in selected) * 100, 1) if probs and selected else None
+    decision = f"选择【{tip}】。"
+    if market == "hhad": decision += f"按主队{r:+d}球结算，只选让球结果。"
+    if ratio is not None: decision += f"所选结果赔率隐含合计{ratio}%，非历史命中承诺。"
+    if scores: decision += f"比分示意{'、'.join(scores)}，对应总进球{'、'.join('7+' if g == '7' else g for g in goals)}。比分是参考，不算另一项已验证预测。"
+    return {"tip": tip, "consensus_ratio": ratio, "consensus_breakdown": None,
+            "predicted_goals": goals, "predicted_scores": scores,
+            "fundamental": fundamental, "tactical_conflict": tactical,
+            "market_attitude": market_text, "decision_guide": decision,
+            "engine": "rule", "model": model, "market": market, "market_odds": odds,
+            "pure": [round(p*100, 4) for p in probs] if probs else None}
 
 
-if __name__ == "__main__":
-    demo = {"code": "周三004", "league": "欧冠", "home": "科莫", "away": "曼联",
-            "odds": ["2.10", "3.40", "3.20"], "rang": "0"}
-    r = build(demo)
-    for k, v in r.items():
-        print(f"{k}: {v}")
+def normalize_match(match):
+    """发布前统一派生字段；已锁定比赛不重选方向，不修改prediction_snapshot。
+
+    history 判定包含「已有赛前冻结快照」：冻结即承诺，此后的赔率漂移只更新
+    展示用 odds，不得覆盖 tip（2026-10-22 修复：此前冻结后、停售前 tip 会被
+    最新赔率反复重算，导致展示/结算与冻结快照三方不一致）。
+    """
+    before = json.dumps(match, sort_keys=True, ensure_ascii=False)
+    history = bool(match.get("locked") or match.get("result") != "PENDING"
+                   or (match.get("prediction_snapshot") or {}).get("frozen_at"))
+    if match.get("detail_schema") != DETAIL_SCHEMA:
+        fields = ("tip", "predicted_scores", "predicted_goals", "consensus", "consensus_ratio", "dossier", "quant_factors", "result")
+        match.setdefault("detail_original", {k: copy.deepcopy(match.get(k)) for k in fields})
+        match["detail_correction"] = {"at": datetime.now().isoformat(timespec="seconds"),
+            "reason": "统一玩法与详情展示；保留原始快照及原文，派生说明不是新赛前预测"}
+    # 历史无盘口的“让负”旧结算器按客不败处理：显式标注兼容口径，
+    # 不由赛果反推选择，不编造缺失的让球数，原标签/原快照保留可审计。
+    if history and not match.get('is_only_rq') and '让' in str(match.get('tip')):
+        try:
+            parse_rang(match.get('rang'))
+        except ValueError:
+            if match.get('tip') == '让负':
+                match['tip'] = '客不败/首选客胜'
+                match['legacy_market_correction'] = {
+                    'from': '让负', 'to': match['tip'],
+                    'reason': '历史未记录让球数，原结算器按客不败核验；仅修正标注，不证明原玩法可购'}
+                prov = match.setdefault('provenance', {})
+                note = '历史缺少让球盘口，按原系统客不败结算口径修正标注；原始标签留存。'
+                if note not in str(prov.get('note') or ''):
+                    prov['note'] = str(prov.get('note') or '') + '｜' + note
+    info = dict(match)
+    if history: info["detail_tip"] = str(match.get("tip") or "暂不研判")
+    stats = copy.deepcopy(match.get("stats") or {})
+    # 历史详情不能注入开赛后的最新近况；不冒充当时可用数据。
+    if history:
+        kickoff = str(match.get("time") or "")[:5]
+        for side in ("home", "away"):
+            last = str((stats.get(side) or {}).get("last_date") or "")
+            if not last or last[5:10] >= kickoff: stats.pop(side, None)
+        stats.pop("season", None)
+    try:
+        rr = build(info, team_stats=stats)
+    except ValueError:
+        # 盘口未知时停止推演，不能猜-1或0。
+        match["detail_error"] = "让球数缺失，待核验"
+        match["predicted_scores"], match["predicted_goals"] = [], []
+        match["detail_model"], match["detail_pure"] = None, None
+        match["consensus"] = str(match.get("tip") or "暂不研判")
+        match["dossier"] = {k: "让球数缺失，待核验；暂不展示此项分析。" for k in
+                            ("summary", "fundamental", "tactical_conflict", "market_attitude", "decision_guide")}
+        match["detail_schema"] = DETAIL_SCHEMA
+        return before != json.dumps(match, sort_keys=True, ensure_ascii=False)
+    if not history: match["tip"] = rr["tip"]
+    # 比分统一 'H-A' 无空格格式（FotMob 回带空格的 '4 - 3'，显示与比对要一致）
+    if match.get("score") and str(match["score"]) not in ("--", "延期"):
+        match["score"] = str(match["score"]).replace(" ", "")
+    match["prediction_market"] = rr["market"]
+    match["detail_market_odds"] = rr["market_odds"]
+    match["detail_model"] = rr["model"]
+    match["detail_pure"] = rr["pure"]
+    match["predicted_scores"], match["predicted_goals"] = rr["predicted_scores"], rr["predicted_goals"]
+    match["consensus_ratio"] = rr["consensus_ratio"]
+    match["consensus_breakdown"] = None
+    match["consensus"] = str(match.get("tip") or "暂不研判")
+    match["dossier"] = {k: rr[k] for k in ("fundamental", "tactical_conflict", "market_attitude", "decision_guide")}
+    match["dossier"]["summary"] = f"{match.get('home')}对阵{match.get('away')}，{match['consensus']}。"
+    match["analysis"] = match["dossier"]["summary"]
+    match["stats"] = stats
+    if history and not stats.get('home') and not stats.get('away'):
+        match['form_home'] = []
+        match['form_away'] = []
+    q = match.get("quant_factors")
+    if match.get("is_only_rq"):
+        match["quant_factors"] = None  # 无让球历史样本库，不能从标准赔率桶伪造概率
+    elif q:
+        q["market"] = "had"
+        q["smart_pick"] = None
+        q["quant_detail_note"] = "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
+    if match.get("result") in ("HIT", "MISS") and parse_score(match.get("score")):
+        result = calculate_result(match.get("tip"), match["score"], match.get("is_only_rq"), match.get("rang"))
+        if result in ("HIT", "MISS"):
+            match["result"] = result
+            match["result_text"] = "研判命中" if result == "HIT" else "研判未中"
+            match["status"] = "已完赛"
+            if match.get("settlement"):
+                match["settlement"]["result"] = result
+    match["detail_schema"] = DETAIL_SCHEMA
+    match.pop("detail_error", None)
+    return before != json.dumps(match, sort_keys=True, ensure_ascii=False)
+
+
+def settle_identity(match):
+    """结算与校验的统一口径：有【赛前】冻结快照时，tip / 玩法 / 让球数一律取快照。
+
+    冻结即承诺。停售前赔率漂移可以更新展示用 odds，但不得改变被评判的预测；
+    已结算场次按快照重算，不用冻结后漂移出来的当前 tip（2026-10-22 修复）。
+    开赛中冻结的快照（frozen_mid_match）不是赛前承诺，按当前 tip 结算，
+    与校准统计「开赛后冻结不进主口径」保持一致。
+    """
+    snap = match.get("prediction_snapshot") or {}
+    pre_match = (snap.get("frozen_at")
+                 and not snap.get("frozen_mid_match")
+                 and snap.get("verified_pre_match") is not False)
+    if pre_match:
+        return (str(snap.get("tip") or match.get("tip") or ""),
+                bool(snap.get("is_only_rq")),
+                snap.get("rang", "0"))
+    return (str(match.get("tip") or ""), bool(match.get("is_only_rq")), match.get("rang"))
+
+
+def validate_matches(matches):
+    issues, identities = [], set()
+    for m in matches:
+        ident = (m.get("code"), m.get("time"), m.get("home"), m.get("away"))
+        if ident in identities: issues.append((m.get("code"), "重复赛事"))
+        identities.add(ident)
+        tip, is_only_rq, rang = settle_identity(m)
+        market, selected = selected_outcomes(tip)
+        if is_only_rq and market != "hhad": issues.append((m.get("code"), "单开让球却选择普通胜平负"))
+        if not str(m.get("consensus") or "").startswith(tip): issues.append((m.get("code"), "推荐与摘要冲突"))
+        for s in m.get("predicted_scores") or []:
+            if calculate_result(tip, s, is_only_rq, rang) != "HIT":
+                issues.append((m.get("code"), "比分未覆盖所选玩法: " + s))
+            parsed = parse_score(s)
+            if parsed and str(min(sum(parsed), 7)) not in (m.get("predicted_goals") or []):
+                issues.append((m.get("code"), "进球区间未覆盖比分: " + s))
+        if m.get("result") in ("HIT", "MISS") and calculate_result(tip, m.get("score"), is_only_rq, rang) != m.get("result"):
+            issues.append((m.get("code"), "结算与选择冲突"))
+        if m.get("detail_schema") != DETAIL_SCHEMA: issues.append((m.get("code"), "详情未经过校验"))
+    return issues

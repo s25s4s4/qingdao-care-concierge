@@ -49,17 +49,33 @@ def fetch_results(day):
     return out
 
 
+def _year_for(md):
+    """'MM-DD' -> 所属年份。跨年时取距今天最近的一年（12 月 vs 1 月不搞错）。"""
+    now = datetime.now()
+    try:
+        dt = datetime.strptime(f"{now.year}-{md}", "%Y-%m-%d").date()
+    except ValueError:
+        return now.year
+    if (dt - now.date()).days > 200:
+        return now.year - 1
+    if (now.date() - dt).days > 200:
+        return now.year + 1
+    return now.year
+
+
+def _prev(day):
+    """'MM-DD' -> 前一天的 'MM-DD'（北京时间凌晨开球对应欧洲前一天）。"""
+    from datetime import timedelta
+    try:
+        dt = datetime.strptime(f"{_year_for(day)}-{day}", "%Y-%m-%d").date() - timedelta(days=1)
+        return dt.strftime("%m-%d")
+    except ValueError:
+        return day
+
+
 def crosscheck(matches, now=None):
     """对已完赛/进行中的比赛做双源比对，冲突写入 source_health.json。"""
     aliases = _aliases()
-    def _prev(day):
-        from datetime import date, timedelta
-        y, md = 2026, day
-        try:
-            dt = datetime.strptime("2026-" + md, "%Y-%m-%d").date() - timedelta(days=1)
-            return dt.strftime("%m-%d")
-        except ValueError:
-            return day
     base_days = {str(m.get("time", ""))[:5] for m in matches if m.get("time")}
     # 北京时间凌晨开球对应欧洲前一天，需同时查前一天
     days = sorted(base_days | {_prev(d) for d in base_days})
@@ -67,7 +83,7 @@ def crosscheck(matches, now=None):
               "days": {}, "conflicts": [], "unmatched": 0, "matched": 0, "errors": []}
     cache = {}
     for day in days:
-        full = "2026-" + day
+        full = f"{_year_for(day)}-{day}"
         try:
             cache[day] = fetch_results(full)
             report["days"][day] = len(cache[day])
@@ -89,8 +105,10 @@ def crosscheck(matches, now=None):
             report["unmatched"] += 1
             continue
         report["matched"] += 1
-        local = str(m.get("score") or "").replace("-", " - ").strip()
-        remote = str(hit.get("score") or "").strip()
+        # 两边都去掉所有空格再比：live.500 存 '2-1'，FotMob 回 '2 - 1'，
+        # 早年直接 replace('-',' - ') 导致两边永远不相等、场场假冲突（2026-10-22 修复）。
+        local = str(m.get("score") or "").replace(" ", "")
+        remote = str(hit.get("score") or "").replace(" ", "")
         m["crosscheck"] = {"source": "fotmob", "score": remote, "finished": hit.get("finished")}
         if hit.get("finished") and remote and local and remote != local:
             report["conflicts"].append({"code": m.get("code"), "home": m.get("home"), "away": m.get("away"),

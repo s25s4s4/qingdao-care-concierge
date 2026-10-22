@@ -6,8 +6,10 @@ import os
 import re
 from datetime import datetime
 
-LLM_URL = "http://127.0.0.1:3000/gemini-antigravity/v1/chat/completions"
-LLM_KEY = "53e0d5891509e56011159ca4461516728379da7377e07118"
+# 网关密钥从环境变量读取，不再硬编码（该文件曾把明文 key 推进了公开仓库，
+# 2026-10-22 修复）。本地网关密钥如有泄露疑虑，请在 aiclient2api 侧重生成一个。
+LLM_URL = os.environ.get("LLM_URL", "http://127.0.0.1:3000/gemini-antigravity/v1/chat/completions")
+LLM_KEY = os.environ.get("LLM_KEY", "")
 DB_PATH = r"E:\telegram_football_monitor\predictions.db"
 
 # 欧洲主流多语言队名别名对照

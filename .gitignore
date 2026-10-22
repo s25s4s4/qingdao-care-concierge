@@ -18,7 +18,15 @@ _*.json
 
 # ---- 运行时状态 / 生成物 ----
 data/source_health.json
+data/team_live_form_cache.json
+data/history_indexed_cache.json
+data/team_stats_index.pkl
+data/.live_sync.lock
+data/.understat.lock
 ticket_table.html
+
+# ---- 一次性订正脚本的备份产物 ----
+data/*.bak-reconcile-*
 
 # ---- 系统杂物 ----
 .DS_Store

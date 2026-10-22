@@ -61,72 +61,41 @@ def _score(value):
 
 
 def settle(match, remote):
-    """用外部源比分结算预测。返回 'HIT'/'MISS'/'VOID'/None。"""
+    """用外部源比分结算预测。返回 'HIT'/'MISS'/'VOID'/None。
+
+    结算口径以赛前冻结快照为准：快照存在时，tip / 让球数 / 玩法全部取快照，
+    绝不用冻结后漂移的当前 tip 结算（2026-10-22 修复：此前 85/111 场快照 tip 与
+    当前 tip 不一致，结算用的却是当前 tip，与站点"以赛前冻结记录为准"的承诺矛盾）。
+    """
     if not remote or not remote.get("finished"):
         return None
     parsed = _score(remote.get("score"))
     if not parsed:
         return None
     home, away = parsed
-
-    # 优先采用 match 当时展示给彩民的核心建议 tip，若无再回落 snapshot
-    tip = str(match.get("tip") or (match.get("prediction_snapshot") or {}).get("tip") or "")
-    if not tip:
+    from rule_engine import calculate_result, selected_outcomes, parse_rang, settle_identity
+    snap = match.get("prediction_snapshot") or {}
+    tip, is_only_rq, rang = settle_identity(match)
+    result = calculate_result(tip, remote.get('score'), is_only_rq, rang)
+    if result not in ('HIT', 'MISS'):
         return None
-
-    rang_val = None
-    if match.get("rang") is not None and str(match.get("rang")) not in ("None", "0", ""):
-        try:
-            rang_val = int(str(match.get("rang")).replace("+", ""))
-        except ValueError:
-            rang_val = None
-
-    diff = home - away
-    spf_outcome = "主胜" if diff > 0 else "平局" if diff == 0 else "客胜"
-    
-    if rang_val is not None:
-        rq_diff = (home + rang_val) - away
-        rq_outcome = "让胜" if rq_diff > 0 else "让平" if rq_diff == 0 else "让负"
-    else:
-        # 无让球盘口时，让负视同客不败(客胜或平局)
-        rq_outcome = "客不败" if diff <= 0 else "主胜"
-
-    hit = False
-    if "让负/防让平" in tip or ("让负" in tip and "让平" in tip):
-        hit = (rq_outcome in ("让负", "让平"))
-    elif "让胜/防让平" in tip or ("让胜" in tip and "让平" in tip):
-        hit = (rq_outcome in ("让胜", "让平"))
-    elif "让负" in tip:
-        if rang_val is not None:
-            hit = (rq_outcome == "让负")
-        else:
-            hit = (diff <= 0) # 无让球盘时买让负等同客不败(平局或客胜)
-    elif "让胜" in tip:
-        if rang_val is not None:
-            hit = (rq_outcome == "让胜")
-        else:
-            hit = (diff >= 0)
-    elif "让平" in tip:
-        hit = (rq_outcome == "让平")
-    elif "主不败" in tip or "主胜/防平" in tip or "胜平" in tip:
-        hit = (spf_outcome in ("主胜", "平局"))
-    elif "客不败" in tip or "客胜/防平" in tip or "平负" in tip:
-        hit = (spf_outcome in ("客胜", "平局"))
-    elif "主胜" in tip:
-        hit = (spf_outcome == "主胜")
-    elif "客胜" in tip:
-        hit = (spf_outcome == "客胜")
-    elif "平局" in tip or "平" in tip:
-        hit = (spf_outcome == "平局")
-    else:
-        hit = (spf_outcome in tip or rq_outcome in tip)
-
-    outcome = rq_outcome if "让" in tip else spf_outcome
-    match["settlement"] = {"result": "HIT" if hit else "MISS", "score": remote.get("score"),
-                           "source": remote.get("source", "stored_score"), "settled_at": datetime.now().isoformat(timespec="seconds"),
-                           "outcome": outcome}
-    match["result"] = match["settlement"]["result"]
-    return match["result"]
+    market = selected_outcomes(tip)[0]
+    try:
+        _rang = parse_rang(rang) if market == 'hhad' else 0
+    except ValueError:
+        _rang = 0
+    diff = home - away + _rang
+    names = ('让胜', '让平', '让负') if market == 'hhad' else ('主胜', '平局', '客胜')
+    match['settlement'] = {'result': result, 'score': remote.get('score'),
+                           'source': remote.get('source', 'stored_score'),
+                           'settled_at': datetime.now().isoformat(timespec='seconds'),
+                           'outcome': names[0 if diff > 0 else 1 if diff == 0 else 2],
+                           'tip': tip, 'market': market}
+    match['result'] = result
+    match['score'] = str(remote.get('score')).replace(" ", "")  # 统一 'H-A' 无空格格式
+    match['status'] = '已完赛'
+    match['result_text'] = '研判命中' if result == 'HIT' else '研判未中'
+    return result
 
 
 def settle_all(matches):
@@ -134,7 +103,7 @@ def settle_all(matches):
     cache = {}
     for day in days:
         try:
-            cache[day] = crosscheck.fetch_results("2026-" + day)
+            cache[day] = crosscheck.fetch_results(f"{datetime.now().year}-{day}")
         except Exception:
             continue
     aliases = crosscheck._aliases()

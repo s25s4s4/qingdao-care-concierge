@@ -354,6 +354,14 @@ def main(force=False):
     # 赔率开出来了却永远不更新（2026-10-22 的 bug）。
     same = same_round(matches, existing)
 
+    # 已完成期提前跳过：必须放在欧赔补抓之前，否则每轮都白抓 14 个赔率页
+    # （2026-10-22 修复：实测每 10 分钟 14 个请求，纯浪费还有封禁风险）。
+    if same and not force:
+        _ex = existing.get("matches") or []
+        if _ex and all((m.get("quant_factors") and m.get("pick_primary")) for m in _ex):
+            _log(f"{period} 期已完成，跳过")
+            return 0
+
     # 胜负彩页赔率恒为 "-"：逐场去欧赔页补（已有赔率的场次不重复抓）
     if not odds_ready:
         old_odds = {}
@@ -389,11 +397,6 @@ def main(force=False):
             _log(f"上一期 {existing.get('period')} 已归档：{_s['hit']} 中 / {_s['miss']} 失")
     elif not odds_ready and not force:
         _log(f"{period} 期赔率尚未开出，保持现状")
-        return 0
-    elif odds_ready and not force and all(
-            (m.get("quant_factors") and m.get("pick_primary")) for m in existing.get("matches", [])):
-        # 同期、赔率已开、且每场都已算出选号 → 不用重算
-        _log(f"{period} 期已完成，跳过")
         return 0
 
     data = build(period, matches, existing if same else {})

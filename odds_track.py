@@ -62,12 +62,23 @@ def history_for(match):
 
 
 def closing_odds(match):
-    """收盘赔率 = 开赛前最后一条记录。"""
+    """收盘赔率 = 开赛前最后一条记录。
+
+    时间戳是 ISO 格式（'2026-10-22T20:59:30'），与 'MM-DD HH:MM' 的开赛时间
+    比较前必须统一分隔符和长度，否则字符串比较恒为 False，pre 永远为空，
+    拿到的会是赛后赔率（2026-10-22 修复）。
+    """
     rows = history_for(match)
     if not rows:
         return None
     kickoff = str(match.get("time", ""))
-    pre = [r for r in rows if str(r.get("ts", ""))[:16] < "2026-" + kickoff[:10] + " " + kickoff[11:16]]
+    try:
+        ko = datetime.strptime(f"{datetime.now().year}-{kickoff}", "%Y-%m-%d %H:%M")
+    except ValueError:
+        return rows[-1]
+    cutoff = ko.strftime("%Y-%m-%d %H:%M")
+    pre = [r for r in rows
+           if str(r.get("ts", ""))[:16].replace("T", " ") < cutoff]
     return (pre or rows)[-1]
 
 

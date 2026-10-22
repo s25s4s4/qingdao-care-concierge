@@ -21,13 +21,29 @@ CACHE_FILE = r"E:/euro_intel_web/data/history_indexed_cache.json"
 _CACHED_ROWS = None
 
 def get_history_rows():
-    """高效加载与缓存历史8万场竞彩结构化记录"""
+    """高效加载与缓存历史8万场竞彩结构化记录。
+
+    44MB CSV 每次全新解析约 5-8 秒，而流水线每分钟跑一次。这里按 CSV mtime
+    做磁盘缓存（pickle），命中时约 0.5 秒；缓存损坏/不匹配自动回退重新解析。
+    """
     global _CACHED_ROWS
     if _CACHED_ROWS is not None:
         return _CACHED_ROWS
 
     if not os.path.exists(CSV_PATH):
         return []
+
+    csv_mtime = os.path.getmtime(CSV_PATH)
+    if os.path.exists(CACHE_FILE):
+        try:
+            import pickle
+            with open(CACHE_FILE, "rb") as f:
+                cache = pickle.load(f)
+            if cache.get("csv_mtime") == csv_mtime and cache.get("rows"):
+                _CACHED_ROWS = cache["rows"]
+                return _CACHED_ROWS
+        except Exception:
+            pass  # 缓存损坏：静默重新解析
 
     rows = []
     with open(CSV_PATH, "r", encoding="utf-8-sig", errors="ignore") as f:
@@ -68,6 +84,13 @@ def get_history_rows():
                 continue
 
     _CACHED_ROWS = rows
+    try:
+        import pickle
+        os.makedirs(os.path.dirname(CACHE_FILE), exist_ok=True)
+        with open(CACHE_FILE, "wb") as f:
+            pickle.dump({"csv_mtime": csv_mtime, "rows": rows}, f, protocol=4)
+    except Exception:
+        pass  # 缓存写失败不影响主流程
     return rows
 
 
@@ -107,6 +130,10 @@ def analyze_match_factors(sh, sd, sa, league="", home="", away="", is_only_rq=Fa
     - golden_scores: 黄金三角比分 (按泊松及历史聚类)
     - smart_pick: 量化推荐
     """
+    if is_only_rq:
+        return None  # 标准胜平负历史库无法校准让球SP，禁止跨玩法统计
+    if any(not math.isfinite(float(v)) or float(v) <= 1 for v in (sh, sd, sa)):
+        return None
     all_rows = get_history_rows()
     
     # 1. 动态设定赔率容差网格
@@ -213,48 +240,14 @@ def analyze_match_factors(sh, sd, sa, league="", home="", away="", is_only_rq=Fa
         stars = "★★☆☆☆"
         tier_title = "深水博冷区间"
 
-    # 6. 提炼出号建议与让球量化利刃 (同赔率 <= 45% 触发高级让球转换)
-    # 计算历史同赔中，让球方赢球时“净胜刚好1球”的险胜占比
-    tight_win_ratio = 0.0
-    if p_w > p_l and p_w > 0:
-        tight_win_cnt = sum(1 for r in matched if '-' in r.get('sc','') and (lambda parts: len(parts)>=2 and int(parts[0])-int(parts[1])==1)(r['sc'].split('-')[:2]))
-        tight_win_ratio = tight_win_cnt / max(1, w_cnt)
-    elif p_l > p_w and p_l > 0:
-        tight_win_cnt = sum(1 for r in matched if '-' in r.get('sc','') and (lambda parts: len(parts)>=2 and int(parts[1])-int(parts[0])==1)(r['sc'].split('-')[:2]))
-        tight_win_ratio = tight_win_cnt / max(1, l_cnt)
-
-    # 门控：小球死缠烂打(进球期望<=2.2) 且 险胜占比>=55% ➔ 加【让平】
-    is_small_ball = (lh + la) <= 2.25
-    should_add_rp = (is_small_ball or tight_win_ratio >= 0.55)
-
-    if p_w >= 0.68:
-        smart_pick = "主胜"
-        smart_type = "SINGLE"
-    elif p_w >= 0.50:
-        smart_pick = "主胜/防平"
-        smart_type = "DOUBLE"
-    elif p_w <= 0.49 and p_w >= p_l:
-        # 主让1球但主胜率不足49%（主队极弱微让）：触发让球量化利刃，坚决不推胜平双选，直接上让负！
-        if should_add_rp:
-            smart_pick = "让负/防让平"
-            smart_type = "DOUBLE"
-        else:
-            smart_pick = "让负"
-            smart_type = "SINGLE"
-    elif p_l <= 0.49 and p_l > p_w:
-        # 客让1球但客胜率不足49%：触发让球量化利刃！
-        if should_add_rp:
-            smart_pick = "让胜/防让平"
-            smart_type = "DOUBLE"
-        else:
-            smart_pick = "让胜"
-            smart_type = "SINGLE"
-    elif p_l > p_w:
-        smart_pick = "客胜/防平"
-        smart_type = "DOUBLE"
-    else:
-        smart_pick = "主胜/防平"
-        smart_type = "DOUBLE"
+    # 6. 提炼出号建议：直接采用与结算契约同口径的 decide_tip（历史同赔去水概率 argmax）。
+    # 说明（2026-10-22 清理）：此处曾有一整套「让球量化利刃 + 玩法口径归一化」分支，
+    # 但紧接着就被下面的 decide_tip 整体覆盖——是死代码；且其中的 lambda 遇异常比分
+    # 会抛未捕获异常，把整个量化阶段静默跳过。is_only_rq 场次已在函数开头返回 None，
+    # decide_tip 只会产出胜/平/负方向，不会出现买不到的让球选项。
+    from rule_engine import decide_tip
+    smart_pick = decide_tip(p_w, p_d, p_l)[0]
+    smart_type = 'DOUBLE' if '/' in smart_pick else 'SINGLE'
 
     # 黄金比分融合：在确定 smart_pick 之后，严格根据其方向进行定向聚类！
     # 彻底杜绝“建议让负(看好客不败)，但泊松比分却给出主胜(1-0, 2-1)”的撕裂打架！
@@ -289,6 +282,18 @@ def analyze_match_factors(sh, sd, sa, league="", home="", away="", is_only_rq=Fa
         elif "客胜" in cur_pick:
             if ga <= gh: weight_mult = 0.0
             else: weight_mult = 1.8
+        elif "客不败" in cur_pick:
+            # 客不败：主胜归零，平局与客胜加权（含「首选客胜」的稳妥双选）
+            if gh > ga: weight_mult = 0.0
+            else: weight_mult = 1.6
+        elif "主不败" in cur_pick:
+            # 主不败：客胜归零，平局与主胜加权
+            if ga > gh: weight_mult = 0.0
+            else: weight_mult = 1.6
+        elif "平局" in cur_pick:
+            # 平局/防冷：只保留平局
+            if gh != ga: weight_mult = 0.0
+            else: weight_mult = 2.0
 
         if weight_mult > 0:
             filtered_score_weights[sc] = w * weight_mult
@@ -296,15 +301,47 @@ def analyze_match_factors(sh, sd, sa, league="", home="", away="", is_only_rq=Fa
     ranked_scores = sorted(filtered_score_weights.items(), key=lambda x: x[1], reverse=True)
     top_3_scores = [sc for sc, _ in ranked_scores[:3]] if ranked_scores else [sc for sc, _ in sorted(score_weights.items(), key=lambda x: x[1], reverse=True)[:3]]
 
-    # 7. 注入量化利刃详情说明 (用于点击详情抽屉弹窗展示)
+    # 7. 注入量化详情说明 (用于点击详情抽屉弹窗展示)
+    # 注意：所有数字都必须来自本场真实统计。之前写死的「8万场」「83%」没有任何
+    # 数据来源（实际样本只有几十到一万多场），属于编造，已全部改为真实值。
     quant_detail_note = ""
+    _cov = 0.0
+    if "让负" in smart_pick or "客不败" in smart_pick or "客胜" in smart_pick:
+        _cov = (l_cnt + d_cnt) / max(1, total_samples)
+    elif "让胜" in smart_pick or "主不败" in smart_pick or "主胜" in smart_pick:
+        _cov = (w_cnt + d_cnt) / max(1, total_samples)
+    elif "平局" in smart_pick:
+        _cov = d_cnt / max(1, total_samples)
+    _cov_pct = round(_cov * 100, 1)
+
     if "让负" in smart_pick or "让胜" in smart_pick:
         if "防让平" in smart_pick:
-            quant_detail_note = f"【8万场让球利刃 · 83%防守破局】：8万场历史大数据同赔率下最高胜率仅为 {round(max(p_w, p_l)*100, 1)}%，双方攻防死缠烂打（历史险胜占比高达 {int(tight_win_ratio*100)}%）。因此实战放弃胜平负单挑，果断打出【{smart_pick}】，用 83% 超高概率封死冷门并防让平吃高赔大肉！"
+            quant_detail_note = (
+                f"【让球口径推演】：本场为单开让球场次，只售卖 让胜/让平/让负。"
+                f"历史同赔样本 {total_samples} 场中，胜/平/负打出 "
+                f"{round(p_w*100,1)}% / {round(p_d*100,1)}% / {round(p_l*100,1)}%，"
+                f"单一路口最高仅 {round(max(p_w, p_l)*100, 1)}%，"
+                f"其中净胜刚好 1 球的险胜占比 {int(tight_win_ratio*100)}%。"
+                f"因此按让球口径给出【{smart_pick}】，历史覆盖 {_cov_pct}%。"
+            )
         else:
-            quant_detail_note = f"【8万场让球利刃 · 极简让球直打】：8万场历史大数据同赔率下最高胜率仅为 {round(max(p_w, p_l)*100, 1)}%，客队具备极强反客为主抗衡力。实战果断单挑【{smart_pick}】，一注通吃客队不败！"
+            quant_detail_note = (
+                f"【让球口径推演】：本场为单开让球场次，只售卖 让胜/让平/让负。"
+                f"历史同赔样本 {total_samples} 场中，单一路口最高胜率仅 "
+                f"{round(max(p_w, p_l)*100, 1)}%，故不取胜平负单挑，"
+                f"改按让球口径给出【{smart_pick}】，历史覆盖 {_cov_pct}%。"
+            )
+    elif "客不败" in smart_pick or "主不败" in smart_pick or "平局/防冷" in smart_pick:
+        quant_detail_note = (
+            f"【同赔样本 {total_samples} 场】：胜/平/负打出 "
+            f"{round(p_w*100,1)}% / {round(p_d*100,1)}% / {round(p_l*100,1)}%，"
+            f"单一路口均未过半，故取双选【{smart_pick}】，历史覆盖 {_cov_pct}%。"
+        )
 
+    quant_detail_note = ('历史赔率邻域样本频率仅供参考；样本并非完全同赔，'
+                         '不表示本场命中率，不构成获利保证。')
     return {
+        "market": "had",
         "samples": total_samples,
         "win_rate": round(p_w * 100, 1),
         "draw_rate": round(p_d * 100, 1),
@@ -337,8 +374,8 @@ def run_full_pipeline_on_matches(official_json_path="E:/euro_intel_web/data/offi
     results = []
 
     for m in matches:
-        # 推演未开赛或今日场次
-        if m.get("status") == "已完赛" and m.get("result") in ["HIT", "MISS"]:
+        # 不修改冻结或已结算记录。
+        if m.get('locked') or m.get('result') != 'PENDING':
             continue
 
         odds = m.get("odds", [])
@@ -380,15 +417,16 @@ def run_full_pipeline_on_matches(official_json_path="E:/euro_intel_web/data/offi
             if spk and ("让负" in spk or "让胜" in spk):
                 m["tip"] = spk
 
-    # 保存增强后的官方比赛数据
-    with open(official_json_path, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
+    from rule_engine import normalize_match
+    from sync_live_matches import write_validated_data
+    for m in matches: normalize_match(m)
+    write_validated_data(official_json_path, data)
 
     return results
 
 
 def run_pipeline_on_sfc(sfc_json_path="E:/euro_intel_web/data/sfc_matches.json"):
-    """对传足 14 场 (sfc_matches.json) 完整运行 8 万场多因子量化推演，自动驱动选号与爆冷标记"""
+    """对传足 14 场 (sfc_matches.json) 完整运行历史同赔多因子量化推演，自动驱动选号与爆冷标记"""
     if not os.path.exists(sfc_json_path):
         return []
 

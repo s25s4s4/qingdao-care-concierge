@@ -33,7 +33,9 @@ LEAGUES = [
     ("Serie_A", "意甲"),
     ("Ligue_1", "法甲"),
 ]
-SEASON = str(datetime.now().year)      # understat 用赛季起始年，2026 表示 2026/27
+# understat 用赛季起始年（2026 = 2026/27 赛季）。每年 8 月前当前赛季仍是上一年
+# 起始的，直接用日历年会抓到不存在/空数据的赛季（2026-10-22 修复）。
+SEASON = str(datetime.now().year if datetime.now().month >= 8 else datetime.now().year - 1)
 
 
 # 别名表里用的是带重音/意译的官方名（Atlético Madrid / Bayern München），

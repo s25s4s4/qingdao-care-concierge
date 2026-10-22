@@ -18,6 +18,7 @@ from datetime import datetime
 from collections import defaultdict
 
 CSV = os.environ.get("JC_CSV", r"C:/Users/Administrator/Desktop/竞彩历史数据/竞彩数据14年至今.csv")
+CACHE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "team_stats_index.pkl")
 KEYS = ("胜", "平", "负")
 
 
@@ -30,38 +31,64 @@ def _f(s):
 
 
 def load(path=CSV):
-    """返回按球队索引的比赛列表：{team: [ {date, lg, home, away, hg, ag, res, ...} ]}"""
-    with open(path, encoding="utf-8-sig", newline="") as f:
-        rd = csv.reader(f)
-        hdr = next(rd)
-        rows = [r for r in rd if len(r) >= 22]
-    H = {h: i for i, h in enumerate(hdr)}
+    """返回按球队索引的比赛列表：{team: [ {date, lg, home, away, hg, ag, res, ...} ]}
 
-    def g(r, k):
-        return r[H[k]].strip()
+    44MB CSV 按 mtime 做 pickle 磁盘缓存（每次全新解析约 5-8 秒，流水线每分钟
+    跑一次，不能忍）。赛果归档（match_results.jsonl）每次现合——它一直在长。
+    """
+    import pickle
 
-    idx = defaultdict(list)
-    for r in rows:
-        res = g(r, "赛果")
-        if res not in KEYS:
-            continue
-        vs = g(r, "主客场")
-        if " VS " not in vs:
-            continue
-        home, away = [x.strip() for x in vs.split(" VS ", 1)]
-        sc = g(r, "全场比分").replace(":", "-")
-        if "-" not in sc:
-            continue
+    idx = None
+    try:
+        csv_mtime = os.path.getmtime(path)
+        if os.path.exists(CACHE):
+            with open(CACHE, "rb") as f:
+                cache = pickle.load(f)
+            if cache.get("csv_mtime") == csv_mtime and cache.get("idx"):
+                idx = cache["idx"]
+    except Exception:
+        idx = None  # 缓存损坏：重新解析
+
+    if idx is None:
+        with open(path, encoding="utf-8-sig", newline="") as f:
+            rd = csv.reader(f)
+            hdr = next(rd)
+            rows = [r for r in rd if len(r) >= 22]
+        H = {h: i for i, h in enumerate(hdr)}
+
+        def g(r, k):
+            return r[H[k]].strip()
+
+        from collections import defaultdict
+        idx = defaultdict(list)
+        for r in rows:
+            res = g(r, "赛果")
+            if res not in KEYS:
+                continue
+            vs = g(r, "主客场")
+            if " VS " not in vs:
+                continue
+            home, away = [x.strip() for x in vs.split(" VS ", 1)]
+            sc = g(r, "全场比分").replace(":", "-")
+            if "-" not in sc:
+                continue
+            try:
+                hg, ag = [int(x) for x in sc.split("-")[:2]]
+            except Exception:
+                continue
+            dt = g(r, "比赛时间")[:10]
+            item = {"date": dt, "lg": g(r, "联赛"), "home": home, "away": away,
+                    "hg": hg, "ag": ag, "res": res,
+                    "oh": _f(g(r, "胜")), "od": _f(g(r, "平")), "oa": _f(g(r, "负"))}
+            idx[home].append(item)
+            idx[away].append(item)
         try:
-            hg, ag = [int(x) for x in sc.split("-")[:2]]
+            os.makedirs(os.path.dirname(CACHE), exist_ok=True)
+            with open(CACHE, "wb") as f:
+                pickle.dump({"csv_mtime": csv_mtime, "idx": dict(idx)}, f, protocol=4)
         except Exception:
-            continue
-        dt = g(r, "比赛时间")[:10]
-        item = {"date": dt, "lg": g(r, "联赛"), "home": home, "away": away,
-                "hg": hg, "ag": ag, "res": res,
-                "oh": _f(g(r, "胜")), "od": _f(g(r, "平")), "oa": _f(g(r, "负"))}
-        idx[home].append(item)
-        idx[away].append(item)
+            pass
+
     # 合并赛果归档（data/match_results.jsonl），让库随着流水线不断变长
     try:
         import result_archive
@@ -72,8 +99,8 @@ def load(path=CSV):
             if key in seen:
                 continue
             seen.add(key)
-            idx[it["home"]].append(it)
-            idx[it["away"]].append(it)
+            idx.setdefault(it["home"], []).append(it)
+            idx.setdefault(it["away"], []).append(it)
             added += 1
         if added:
             pass  # 归档合并完成
