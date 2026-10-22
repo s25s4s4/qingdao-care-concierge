@@ -803,10 +803,16 @@ def full_pipeline_sync(auto_push=True):
                 continue
             try:
                 # 优先采用 quant_factors 物理概率硬门控对齐
+                # 但单开让球的场次例外：quant_factors 是用【标准胜平负】的历史赔率桶统计出来的，
+                # 拿它去套【让球赔率】等于拿苹果比橘子（实测 77 样本给出 84% 让胜，
+                # 而盘口隐含只有 36.5%）。这类场次直接用让球赔率反推。
                 qf = m.get('quant_factors') or {}
-                pw = float(qf.get('win_rate', 0)) / 100.0
-                pd = float(qf.get('draw_rate', 0)) / 100.0
-                pl = float(qf.get('loss_rate', 0)) / 100.0
+                if m.get('is_only_rq'):
+                    pw = pd = pl = 0.0
+                else:
+                    pw = float(qf.get('win_rate', 0)) / 100.0
+                    pd = float(qf.get('draw_rate', 0)) / 100.0
+                    pl = float(qf.get('loss_rate', 0)) / 100.0
                 
                 # 若无 qf，从赔率反推
                 if pw == 0 and m.get('odds') and len(m['odds']) >= 3:
@@ -857,17 +863,25 @@ def full_pipeline_sync(auto_push=True):
                     m['predicted_scores'] = ['0-1', '1-2', '1-1'] if cur_tip == '客胜/防平' else ['0-2', '1-2', '0-3']
                     m['predicted_goals'] = ['2', '3']
                 elif cur_tip.startswith('让负'):
-                    if rang_val < 0: # 主让球买让负，结果必须是客不败 (平局或客胜)
+                    if rang_val < 0:   # 主让 |rang| 球，买让负 = 客队覆盖 → 客不败
                         m['predicted_scores'] = ['1-1', '0-1', '1-2']
                         m['predicted_goals'] = ['1', '2', '3']
-                    else:
-                        m['predicted_scores'] = ['0-2', '1-3', '0-3']
-                        m['predicted_goals'] = ['2', '3', '4']
+                    else:              # 主受让 rang 球，买让负 = 客队净胜 (rang+1) 球以上
+                        need = rang_val + 1
+                        m['predicted_scores'] = [f'0-{need}', f'1-{need+1}', f'0-{need+1}']
+                        m['predicted_goals'] = [str(need), str(need + 1), str(need + 2)]
+                        if '防让平' in cur_tip:      # 补一个刚好走盘（让平）的比分
+                            m['predicted_scores'][-1] = f'0-{rang_val}'
+                            m['predicted_goals'] = [str(rang_val), str(need), str(need + 1)]
                 elif cur_tip.startswith('让胜'):
-                    if rang_val < 0:
-                        m['predicted_scores'] = ['2-0', '3-1', '3-0']
-                        m['predicted_goals'] = ['2', '3', '4']
-                    else:
+                    if rang_val < 0:   # 主让 |rang| 球，买让胜 = 主队净胜 (|rang|+1) 球以上
+                        need = abs(rang_val) + 1
+                        m['predicted_scores'] = [f'{need}-0', f'{need+1}-1', f'{need}-1']
+                        m['predicted_goals'] = [str(need), str(need + 1), str(need + 2)]
+                        if '防让平' in cur_tip:
+                            m['predicted_scores'][-1] = f'{abs(rang_val)}-0'
+                            m['predicted_goals'] = [str(abs(rang_val)), str(need), str(need + 1)]
+                    else:              # 主受让 rang 球，买让胜 = 主队不输 rang 球以上
                         m['predicted_scores'] = ['1-1', '1-0', '0-0']
                         m['predicted_goals'] = ['1', '2']
 
