@@ -30,96 +30,130 @@ def _save_cache(cache):
         pass
 
 def get_today_team_id_map():
-    url = "https://trade.500.com/jczq/"
-    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"})
+    urls = ["http://trade.500.com/jczq/", "https://trade.500.com/jczq/"]
     team_id_map = {}
-    try:
-        with urllib.request.urlopen(req, timeout=8) as r:
-            html = r.read().decode("gbk", errors="ignore")
-        teams = re.findall(r'<a href="https://liansai\.500\.com/team/(\d+)/"[^>]*>([^<]+)</a>', html)
-        for tid, name in teams:
-            tname = name.strip()
-            if tname not in team_id_map:
-                team_id_map[tname] = tid
-    except Exception as e:
-        print(f"[LiveForm] Failed to fetch team id map: {e}")
+    for url in urls:
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"})
+            with urllib.request.urlopen(req, timeout=12) as r:
+                html = r.read().decode("gbk", errors="ignore")
+            teams = re.findall(r'<a href="https?://liansai\.500\.com/team/(\d+)/"[^>]*>([^<]+)</a>', html)
+            for tid, name in teams:
+                tname = name.strip()
+                if tname not in team_id_map:
+                    team_id_map[tname] = tid
+            if len(team_id_map) > 0:
+                break
+        except Exception as e:
+            print(f"[LiveForm] Failed {url}: {e}")
     return team_id_map
 
 def fetch_single_team_form(team_id, team_name):
-    url = f"https://liansai.500.com/team/{team_id}/"
-    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"})
-    try:
-        with urllib.request.urlopen(req, timeout=5) as r:
-            html = r.read().decode("gbk", errors="ignore")
-    except Exception:
+    urls = [f"http://liansai.500.com/team/{team_id}/", f"https://liansai.500.com/team/{team_id}/"]
+    html = None
+    for url in urls:
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"})
+            with urllib.request.urlopen(req, timeout=8) as r:
+                html = r.read().decode("gbk", errors="ignore")
+            if html:
+                break
+        except Exception:
+            continue
+    if not html:
         return None
 
-    rows = re.findall(
-        r'<td class="td_time">(\d{4}-\d{2}-\d{2})</td>\s*<td class="td_lteam"><a[^>]*>([^<]+)</a></td>\s*<td>\s*<span[^>]*>(\d+)</span>:(\d+).*?<td class="td_rteam"><a[^>]*>([^<]+)</a>',
-        html,
-        re.DOTALL
-    )
+    # 行级结构化解析：杜绝原正则写死<span class='red'>导致客胜与平局全部漏算的重大缺陷
+    trs = re.findall(r'<tr[^>]*>(.*?)</tr>', html, re.DOTALL)
+    if not trs:
+        return None
+
+    rows = []
+    tid_str = str(team_id)
+    core_name = team_name.replace("FC", "").replace("RB", "").strip()
+
+    for tr in trs:
+        if "td_time" not in tr:
+            continue
+        m_dt = re.search(r'<td class="td_time">(\d{4}-\d{2}-\d{2})</td>', tr)
+        if not m_dt:
+            continue
+        dt = m_dt.group(1)
+
+        m_lteam = re.search(r'<td class="td_lteam"><a href="[^"]*team/(\d+)/"[^>]*>([^<]+)</a></td>', tr)
+        m_rteam = re.search(r'<td class="td_rteam"><a href="[^"]*team/(\d+)/"[^>]*>([^<]+)</a></td>', tr)
+        if not m_lteam or not m_rteam:
+            continue
+
+        l_tid, l_name = m_lteam.group(1), m_lteam.group(2).strip()
+        r_tid, r_name = m_rteam.group(1), m_rteam.group(2).strip()
+
+        # 匹配任何比分标签（兼容<span class="lred">在冒号左侧、右侧或无span平局格式）
+        m_score = re.search(r'<td>\s*(?:<[^>]+>)*\s*(\d+)\s*(?:<[^>]+>)*\s*:\s*(?:<[^>]+>)*\s*(\d+)', tr)
+        if not m_score:
+            continue
+        try:
+            hg, ag = int(m_score.group(1)), int(m_score.group(2))
+        except (ValueError, TypeError):
+            continue
+
+        # 基于team_id绝对精准判定主客场（彻底消除队名简称互不包含导致全负的严重BUG）
+        if l_tid == tid_str:
+            is_home = True
+        elif r_tid == tid_str:
+            is_home = False
+        else:
+            is_home = (core_name in l_name or l_name in core_name)
+
+        my_g = hg if is_home else ag
+        op_g = ag if is_home else hg
+        my_res = "W" if my_g > op_g else ("D" if my_g == op_g else "L")
+
+        rows.append({
+            "date": dt,
+            "is_home": is_home,
+            "my_g": my_g,
+            "op_g": op_g,
+            "res": my_res,
+            "hg": hg,
+            "ag": ag,
+            "lt": l_name,
+            "rt": r_name
+        })
+
     if not rows:
         return None
 
-    w, d, l = 0, 0, 0
-    gf, ga = 0, 0
-    form = []
-    
-    # 归一化队名简称匹配
-    core_name = team_name.replace("FC", "").replace("RB", "").strip()
+    # 截取最近最多 10 场完赛赛事
+    recent_10 = rows[:10]
+    n = len(recent_10)
+    w = sum(1 for r in recent_10 if r["res"] == "W")
+    d = sum(1 for r in recent_10 if r["res"] == "D")
+    l = sum(1 for r in recent_10 if r["res"] == "L")
+    gf = sum(r["my_g"] for r in recent_10)
+    ga = sum(r["op_g"] for r in recent_10)
+    form = [r["res"] for r in recent_10]
 
-    for dt, lt, hg, ag, rt in rows[:10]:
-        try:
-            hg, ag = int(hg), int(ag)
-        except:
-            continue
-        is_home = (core_name in lt or lt in core_name)
-        my_g = hg if is_home else ag
-        op_g = ag if is_home else hg
-        gf += my_g
-        ga += op_g
-        if my_g > op_g:
-            w += 1
-            form.append("W")
-        elif my_g == op_g:
-            d += 1
-            form.append("D")
-        else:
-            l += 1
-            form.append("L")
-
-    n = len(rows[:10])
-    home_games, away_games = [], []
-    for dt, lt, hg, ag, rt in rows[:10]:
-        if (core_name in lt or lt in core_name):
-            home_games.append((dt, lt, hg, ag, rt))
-        else:
-            away_games.append((dt, lt, hg, ag, rt))
+    home_games = [r for r in recent_10 if r["is_home"]]
+    away_games = [r for r in recent_10 if not r["is_home"]]
 
     def _split(games):
-        w = d = l = gf = ga = 0
-        form = []
-        for dt, lt, hg, ag, rt in games:
-            try:
-                hg, ag = int(hg), int(ag)
-            except (ValueError, TypeError):
-                continue
-            is_home = (core_name in lt or lt in core_name)
-            my_g, op_g = (hg, ag) if is_home else (ag, hg)
-            gf += my_g
-            ga += op_g
-            if my_g > op_g:
-                w += 1; form.append("W")
-            elif my_g == op_g:
-                d += 1; form.append("D")
-            else:
-                l += 1; form.append("L")
-        m = len(games)
-        if m == 0:
+        if not games:
             return None
-        return {"n": m, "w": w, "d": d, "l": l,
-                "gf": round(gf / m, 2), "ga": round(ga / m, 2), "form": form[:5]}
+        m = len(games)
+        gw = sum(1 for r in games if r["res"] == "W")
+        gd = sum(1 for r in games if r["res"] == "D")
+        gl = sum(1 for r in games if r["res"] == "L")
+        ggf = sum(r["my_g"] for r in games)
+        gga = sum(r["op_g"] for r in games)
+        return {"n": m, "w": gw, "d": gd, "l": gl,
+                "gf": round(ggf / m, 2), "ga": round(gga / m, 2), "form": [r["res"] for r in games[:5]]}
+
+    last_dt_str = recent_10[0]["date"]
+    try:
+        stale_days = max(0, (datetime.now() - datetime.strptime(last_dt_str, "%Y-%m-%d")).days)
+    except Exception:
+        stale_days = 0
 
     return {
         "name": team_name,
@@ -132,15 +166,14 @@ def fetch_single_team_form(team_id, team_name):
             "ga": round(ga / max(1, n), 2),
             "form": form[:5]
         },
-        # 真实主/客场拆分（2026-10-22 修复：此前是整体近10场复制三份，数据造假）
         "home": _split(home_games),
         "away": _split(away_games),
         "total": n,
-        "last_date": rows[0][0],
-        "stale_days": max(0, (datetime.now() - datetime.strptime(rows[0][0], "%Y-%m-%d")).days)
+        "last_date": last_dt_str,
+        "stale_days": stale_days
     }
 
-def update_all_live_stats(official_matches_path="E:/euro_intel_web/data/official_matches.json", matches=None):
+def update_all_live_stats(official_matches_path="E:/euro_intel_web/data/official_matches.json", matches=None, force=False):
     if not os.path.exists(official_matches_path):
         return
         
@@ -152,8 +185,8 @@ def update_all_live_stats(official_matches_path="E:/euro_intel_web/data/official
     team_ids = get_today_team_id_map()
     print(f"[LiveForm] Fetched {len(team_ids)} online team IDs.")
 
-    # 跨轮缓存：6 小时内的球队近况直接复用，不再每轮重打 500.com
-    cache = _load_cache()
+    # 跨轮缓存：6 小时内且新鲜的球队近况复用；若 force=True 或记录 >7 天则强制重抓
+    cache = {} if force else _load_cache()
     now_ts = datetime.now().timestamp()
     updated_teams = {}
     stale_teams = []
@@ -165,7 +198,8 @@ def update_all_live_stats(official_matches_path="E:/euro_intel_web/data/official
                 continue
             cached = (cache.get(tname) or {}).get("data")
             cached_ts = (cache.get(tname) or {}).get("ts", 0)
-            if cached and (now_ts - cached_ts) < CACHE_TTL_HOURS * 3600:
+            is_stale = (cached or {}).get("stale_days", 0) > 7
+            if not force and cached and not is_stale and (now_ts - cached_ts) < CACHE_TTL_HOURS * 3600:
                 updated_teams[tname] = cached
             else:
                 stale_teams.append(tname)
