@@ -3286,7 +3286,7 @@
                 ${row(st.home, '主')}
                 ${row(st.away, '客')}
                 ${(!row(st.home, '主') && !row(st.away, '客')) ? '<div style="font-size:10px; color:var(--text-tertiary);">两队近期数据均超过两年，已隐藏</div>' : ''}
-                ${seasonHtml}
+                ${seasonHtml ? seasonHtml : '<div style="border-top:1px dashed rgba(255,255,255,0.08); margin-top:6px; padding-top:6px; font-size:9.5px; color:var(--text-tertiary); display:flex; align-items:center; gap:4px;"><span>📌</span> 本赛事暂无五大联赛高频 xG 追踪，基于 14 年历史库对战及近期真实战绩推演</div>'}
                 ${h2h}
                 ${warn}
               </div>`;
@@ -3349,7 +3349,7 @@
             document.getElementById('modalContent').innerHTML = startedNotice + oddsShiftBadge + `
                 <div style="display: flex; gap: 6px; margin-bottom: 10px; flex-wrap: wrap;">
                     <span style="background: var(--bg-card-elevated); color: var(--accent-gold); padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: 800; font-family: var(--font-mono);">${code} · ${league}</span>
-                    <span style="background: rgba(56, 189, 248, 0.15); color: var(--accent-blue); padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: 700;">${isRq ? '让球 ('+match.rang+'): 让胜 ' + ((match.detail_market_odds || match.odds || [])[0] || '-') + ' | 让平 ' + ((match.detail_market_odds || match.odds || [])[1] || '-') + ' | 让负 ' + ((match.detail_market_odds || match.odds || [])[2] || '-') : '胜平负SP: 胜 ' + ((match.odds || [])[0] || '-') + ' | 平 ' + ((match.odds || [])[1] || '-') + ' | 负 ' + ((match.odds || [])[2] || '-')}</span>
+                    <span style="background: rgba(56, 189, 248, 0.15); color: var(--accent-blue); padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: 700;">${isRq ? '让球 ('+match.rang+'): 让胜 ' + ((match.detail_market_odds || match.odds_rq || match.odds || [])[0] || '-') + ' | 让平 ' + ((match.detail_market_odds || match.odds_rq || match.odds || [])[1] || '-') + ' | 让负 ' + ((match.detail_market_odds || match.odds_rq || match.odds || [])[2] || '-') : '胜平负SP: 胜 ' + ((match.odds || [])[0] || '-') + ' | 平 ' + ((match.odds || [])[1] || '-') + ' | 负 ' + ((match.odds || [])[2] || '-')}</span>
                     <span style="background: rgba(46, 160, 67, 0.15); color: #3fb950; padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: 700;">选择: ${escapeHtml(match.tip || '暂不研判')}</span>
                 </div>
 
