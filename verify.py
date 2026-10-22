@@ -100,8 +100,15 @@ def settle(match, remote):
 
 def settle_all(matches):
     days = sorted({str(m.get("time", ""))[:5] for m in matches if m.get("time")})
+    # 凌晨开球（北京时间）对应欧洲/UTC 前一天，回查的日期也必须进缓存，
+    # 否则 cache.get(前一天) 永远是 None，跨零点的场次全部漏结算（2026-10-22 修复）。
+    wanted = set(days)
+    for d in days:
+        prev = crosscheck._prev(d) if hasattr(crosscheck, "_prev") else None
+        if prev:
+            wanted.add(prev)
     cache = {}
-    for day in days:
+    for day in sorted(wanted):
         try:
             cache[day] = crosscheck.fetch_results(f"{datetime.now().year}-{day}")
         except Exception:

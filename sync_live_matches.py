@@ -453,16 +453,17 @@ def full_pipeline_sync(auto_push=True):
                         except Exception as e:
                             pass
 
-    # 比赛列表全局自然排序：按体彩周期时间流逝排序（周五 -> 周六 -> 周日 -> 周一）
-    week_map = {'周五': 1, '周六': 2, '周日': 3, '周一': 4, '周二': 5, '周三': 6, '周四': 7}
+    # 比赛列表全局排序：按开赛时间正序（ chronological，跨年按最近年份解释）。
+    # 旧实现按「周五→周六→…→周四」的体彩周期周排序，导致当晚周四的比賽排到
+    # 周五下面、凌晨场次排到深夜场次后面（2026-10-22 用户反馈，已改时间正序）。
     def match_sort_key(m):
-        c = m.get('code', '')
-        w = week_map.get(c[:2], 9)
         try:
-            n = int(c[2:])
-        except:
-            n = 999
-        return (w, n)
+            from enrich_team_stats import full_date
+            day = full_date(m.get('time')) or '9999-12-31'
+        except Exception:
+            day = '9999-12-31'
+        hm = str(m.get('time', ''))[6:] or '99:99'
+        return (day, hm, str(m.get('code', '')))
     existing_matches.sort(key=match_sort_key)
 
     # 2. 扫描实时比分与状态（三态同步 + 物理开赛时间双重守门人）
