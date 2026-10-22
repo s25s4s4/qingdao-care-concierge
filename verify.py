@@ -3,9 +3,15 @@
 """
 import hashlib
 import json
-from datetime import datetime
+from datetime import datetime, timedelta
 
 import crosscheck
+
+# 冻结时机：只在【最后可售时刻】冻结——竞彩关机停售（平日 22:00 / 周末 23:00），
+# 或临近开赛（早场开赛即停售的场次，按开赛前 VERGE_MINUTES 分钟计）。
+# 停售之前推荐跟随市场实时演化、不冻结（2026-10-22 用户要求：停售才冻结，
+# 有变动才合理）。旧实现是「入清单即冻」，等于拿几天前的市场观点赌到底。
+VERGE_MINUTES = 10
 
 
 def _hash(payload):
@@ -13,19 +19,35 @@ def _hash(payload):
 
 
 def freeze(match, now=None):
-    """开赛前冻结预测；已有快照绝不覆盖。返回 True 表示本次新建。"""
-    if match.get("prediction_snapshot"):
-        return False
+    """停售/临开赛的最后一刻冻结预测。返回 True 表示本次新建或重冻。
+
+    规则：
+      * 停售前（未关机且未临开赛）一律不冻——推荐此时应跟随市场；
+      * 停售那一刻若发现旧快照是停售前抢跑的（无 frozen_at_last_sellable 戳），
+        作废重冻，让冻结值反映停售那一刻的市场；
+      * 正常快照（last-sellable 时刻冻的）绝不覆盖；
+      * 冻结即承诺：同时置 locked，此后 tip 不再跟随赔率漂移。
+    """
+    now = now or datetime.now()
+    snap = match.get("prediction_snapshot") or {}
     kickoff = str(match.get("time", ""))
     try:
         dt = datetime.strptime(f"{datetime.now().year}-{kickoff}", "%Y-%m-%d %H:%M")
     except (ValueError, TypeError):
         return False
-    now = now or datetime.now()
     if dt <= now:
         return False  # 已开赛，不补冻结
     if not match.get("tip") or not match.get("odds"):
         return False
+    sale_closed = bool(match.get("sale_closed"))
+    verge = (dt - now) <= timedelta(minutes=VERGE_MINUTES)
+    if not sale_closed and not verge:
+        return False  # 停售前：跟随市场，不冻结
+    if snap.get("frozen_at"):
+        if sale_closed and not snap.get("frozen_at_last_sellable"):
+            pass  # 停售前抢跑的旧快照，停售这一刻作废重冻
+        else:
+            return False
     evidence = {
         "odds": match.get("odds"),
         "odds_source": match.get("source_name", "500.com"),
@@ -42,13 +64,16 @@ def freeze(match, now=None):
         "rang": match.get("rang", "0"),
         "frozen_at": now.isoformat(timespec="seconds"),
         "kickoff": dt.isoformat(timespec="seconds"),
+        "frozen_at_last_sellable": True,
         "evidence": evidence,
     }
     snapshot["sha256"] = _hash(snapshot)
     match["prediction_snapshot"] = snapshot
     match["prediction_verified"] = True
-    match["provenance"] = {"method": evidence["method"], "evidence": "已留痕", "traceable": True,
-                           "note": "赛前冻结，含赔率与生成方式哈希"}
+    match["provenance"] = {"method": evidence["method"], "evidence": "停售冻结，含赔率与生成方式哈希",
+                           "traceable": True,
+                           "note": "停售时刻冻结（含临开赛早场），此后不随盘口变动"}
+    match["locked"] = True  # 冻结即承诺
     return True
 
 

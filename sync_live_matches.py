@@ -391,13 +391,10 @@ def full_pipeline_sync(auto_push=True):
         else:
             # 关键：现有比赛如果处于【在售未停售阶段】，动态同步最新即时赔率，并动态更新机构去水共识度！
             curr_match = existing_map[ident]
-            # 赛前冻结的比赛：契约字段（玩法/让球数）随快照锁定，只更新展示用赔率
-            _frozen = bool((curr_match.get('prediction_snapshot') or {}).get('frozen_at')
-                           and not (curr_match.get('prediction_snapshot') or {}).get('frozen_mid_match'))
-            # 同步让球属性
-            if curr_match.get('result') == 'PENDING' and not curr_match.get('locked') and not _frozen:
+            # 同步让球属性（停售锁定后不再改动契约字段；停售前跟随市场）
+            if curr_match.get('result') == 'PENDING' and not curr_match.get('locked'):
                 curr_match['is_only_rq'] = bool(of.get('is_only_rq'))
-            if of.get('is_only_rq') and curr_match.get('result') == 'PENDING' and not curr_match.get('locked') and not _frozen:
+            if of.get('is_only_rq') and curr_match.get('result') == 'PENDING' and not curr_match.get('locked'):
                 curr_match['rang'] = of.get('rang', '-1')
                 curr_match['odds_rq'] = of.get('odds_rq')
             if of.get('fid') and not curr_match.get('fid'):
@@ -406,12 +403,9 @@ def full_pipeline_sync(auto_push=True):
                 new_odds = of['odds']
                 if new_odds != ["-", "-", "-"] and new_odds != curr_match.get('odds'):
                     curr_match['odds'] = new_odds
-                    # 已赛前冻结的比赛：赔率只更新 odds 字段，tip/案卷/共识度一律不动
-                    # （冻结即承诺，2026-10-22 修复：此前这里会给单开让球场次重造 tip，
-                    #   与快照口径打架导致发布检查失败、流水线崩溃）。
-                    _frozen = bool((curr_match.get('prediction_snapshot') or {}).get('frozen_at')
-                                   and not (curr_match.get('prediction_snapshot') or {}).get('frozen_mid_match'))
-                    if curr_match.get('is_only_rq') and not _frozen:
+                    # 单开让球且未锁定：按让球盘重新生成研判/推荐/案卷
+                    # （停售未锁定前 tip 跟随市场；停售那一刻由 freeze 落锁）
+                    if curr_match.get('is_only_rq'):
                         # 如果单开让球，重新生成专属于让球盘的研判、推荐与案卷
                         st, tip, cons, ratio, dossier = generate_tactical_dossier(
                             curr_match['home'], curr_match['away'], curr_match['league'], new_odds,
@@ -595,13 +589,27 @@ def full_pipeline_sync(auto_push=True):
         if _rules.normalize_match(m):
             changes_made = True
 
-    # 赛前冻结：仅对未开赛且有方向/赔率的比赛建立不可变快照
+    # 停售前的抢跑快照一律清除：推荐跟随市场演化，停售/临开售那一刻才由 freeze 落锁。
+    # （2026-10-22 冻结时机改版；旧快照在 git 历史里仍可查。已结算场次不动——
+    #   它们的历史结论保留原快照作为凭据。）
+    for m in existing_matches:
+        snap = m.get("prediction_snapshot") or {}
+        if (snap.get("frozen_at") and not snap.get("frozen_at_last_sellable")
+                and not snap.get("frozen_mid_match")
+                and m.get("result") == "PENDING" and not m.get("sale_closed")):
+            m.pop("prediction_snapshot", None)
+            m.pop("prediction_verified", None)
+            m.pop("provenance", None)
+            changes_made = True
+            log_messages.append(f"Unfrozen premature snapshot: {m.get('code')}（跟随市场直至停售）")
+
+    # 赛前冻结：仅在停售/临开赛的最后可售时刻冻结（verify.freeze 内部控制时机）
     try:
         import verify as _verify
         for m in existing_matches:
             if _verify.freeze(m):
                 changes_made = True
-                log_messages.append(f"Frozen prediction: {m.get('code')}")
+                log_messages.append(f"Frozen at sale close: {m.get('code')} -> {m.get('tip')}")
     except Exception as exc:
         log_messages.append(f"Freeze skipped: {type(exc).__name__}")
     # 历史回填：已完赛但没来得及冻结的场次，从 kickoff 前的 git 提交里还原快照

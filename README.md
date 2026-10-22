@@ -159,11 +159,19 @@ python -c "import sync_live_matches as S; S.full_pipeline_sync(auto_push=False)"
 原因：14 年 80,284 场回测，在 11.7% 抽水下 2串1 不存在正期望（最优组合 −17.0%）。
 代码留着是为了随时能重开，但导航里点不到。
 
-**3. 冻结即承诺，口径以快照为准。**
-停售前 tip 不再被最新赔率重算（`normalize_match` 把有快照的场次按 history 处理）；
-`verify.settle` / `validate_matches` / `settle_identity` 全部优先取快照的
-tip / rang / is_only_rq。开赛中冻结的快照（frozen_mid_match）不是赛前承诺，
-按当前 tip 结算，且不进校准主口径。
+**3. 冻结时机：停售那一刻，不是入清单那一刻。**
+停售前（未到平日 22:00 / 周末 23:00 关机线、也未临近开赛）推荐**跟随市场实时
+演化**，不冻结、徽章显示「未验证」；停售/临开赛的最后可售时刻才由
+`verify.freeze` 落锁（`frozen_at_last_sellable` 戳 + 同时置 locked），
+此后 tip 不再随盘口漂移。停售时若发现旧快照是停售前抢跑的，作废重冻。
+早场（开赛即停售，如 17:00 开球）按开赛前 10 分钟冻。
+（2026-10-22 前是「入清单即冻」，等于拿几天前的市场观点赌到底，已废弃。）
+
+**4. 冻结即承诺，口径以快照为准。**
+`verify.settle` / `validate_matches` / `settle_identity` 全部以停售快照的
+tip / rang / is_only_rq 为准；案卷文字按冻结时赔率重建，与 tip 同源，
+冻结后赔率若变动会在案卷里显式提示。开赛中冻结的快照（frozen_mid_match）
+不是赛前承诺，按当前 tip 结算，且不进校准主口径。
 
 **4. 旧赛果 14 天清理。**
 归档先写 `match_results.jsonl`（14 年库的来源），再按保留天数裁剪

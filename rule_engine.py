@@ -212,15 +212,14 @@ def build(match_info, team_stats=None, understat=None):
 
 
 def normalize_match(match):
-    """发布前统一派生字段；已锁定比赛不重选方向，不修改prediction_snapshot。
+    """发布前统一派生字段；已锁定/已结算比赛不重选方向，不修改prediction_snapshot。
 
-    history 判定包含「已有赛前冻结快照」：冻结即承诺，此后的赔率漂移只更新
-    展示用 odds，不得覆盖 tip（2026-10-22 修复：此前冻结后、停售前 tip 会被
-    最新赔率反复重算，导致展示/结算与冻结快照三方不一致）。
+    history 判定只认 locked / 已结算：冻结发生在停售那一刻，且 freeze() 会同时
+    置 locked，因此「停售前跟随市场、停售后锁定」由 locked 一个开关表达
+    （2026-10-22 冻结时机改为停售才冻后，不再需要快照存在即 history）。
     """
     before = json.dumps(match, sort_keys=True, ensure_ascii=False)
-    history = bool(match.get("locked") or match.get("result") != "PENDING"
-                   or (match.get("prediction_snapshot") or {}).get("frozen_at"))
+    history = bool(match.get("locked") or match.get("result") != "PENDING")
     if match.get("detail_schema") != DETAIL_SCHEMA:
         fields = ("tip", "predicted_scores", "predicted_goals", "consensus", "consensus_ratio", "dossier", "quant_factors", "result")
         match.setdefault("detail_original", {k: copy.deepcopy(match.get(k)) for k in fields})
@@ -243,8 +242,7 @@ def normalize_match(match):
                     prov['note'] = str(prov.get('note') or '') + '｜' + note
     info = dict(match)
     snap = match.get("prediction_snapshot") or {}
-    frozen_pre = (snap.get("frozen_at") and not snap.get("frozen_mid_match")
-                  and snap.get("verified_pre_match") is not False)
+    frozen_pre = _is_last_sellable_snapshot(match)
     if history: info["detail_tip"] = str(match.get("tip") or "暂不研判")
     if frozen_pre:
         # 案卷按【冻结时】的赔率/让球数重建：tip 是冻结时承诺的，周边数字也必须
@@ -329,19 +327,30 @@ def normalize_match(match):
     return before != json.dumps(match, sort_keys=True, ensure_ascii=False)
 
 
-def settle_identity(match):
-    """结算与校验的统一口径：有【赛前】冻结快照时，tip / 玩法 / 让球数一律取快照。
+def _is_last_sellable_snapshot(match):
+    """快照是否为【最后可售时刻】的有效冻结（停售/临开赛），而非停售前抢跑的。
 
-    冻结即承诺。停售前赔率漂移可以更新展示用 odds，但不得改变被评判的预测；
-    已结算场次按快照重算，不用冻结后漂移出来的当前 tip（2026-10-22 修复）。
+    2026-10-22 起冻结时机改为停售那一刻；停售前的抢跑快照在停售时会被作废
+    重冻，重冻前它不定义任何结算/展示口径（推荐此时跟随市场）。
+    """
+    snap = match.get("prediction_snapshot") or {}
+    if not snap.get("frozen_at") or snap.get("frozen_mid_match"):
+        return False
+    if snap.get("verified_pre_match") is False:
+        return False
+    return bool(snap.get("frozen_at_last_sellable") or match.get("locked"))
+
+
+def settle_identity(match):
+    """结算与校验的统一口径：有【最后可售时刻】冻结快照时，tip / 玩法 / 让球数一律取快照。
+
+    冻结即承诺。停售前 tip 跟随市场实时演化；停售/临开赛冻结后不再改变
+    （2026-10-22 修复：冻结时机从「入清单即冻」改为「停售才冻」）。
     开赛中冻结的快照（frozen_mid_match）不是赛前承诺，按当前 tip 结算，
     与校准统计「开赛后冻结不进主口径」保持一致。
     """
     snap = match.get("prediction_snapshot") or {}
-    pre_match = (snap.get("frozen_at")
-                 and not snap.get("frozen_mid_match")
-                 and snap.get("verified_pre_match") is not False)
-    if pre_match:
+    if _is_last_sellable_snapshot(match):
         return (str(snap.get("tip") or match.get("tip") or ""),
                 bool(snap.get("is_only_rq")),
                 snap.get("rang", "0"))
