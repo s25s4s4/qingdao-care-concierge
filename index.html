@@ -3370,7 +3370,7 @@
                     <p>${dossier.market_attitude}</p>
                 </details>
 
-                ${match.quant_factors ? `
+                ${match.quant_factors && !match.is_only_rq ? `
                 <!-- 模块三点五：8万场竞彩多因子量化推演 -->
                 <div style="background: rgba(56, 189, 248, 0.08); border: 1px solid rgba(56, 189, 248, 0.35); border-radius: 8px; padding: 12px; margin-bottom: 12px;">
                     <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
