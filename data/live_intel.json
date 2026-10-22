@@ -1,7 +1,19 @@
 {
-  "updated_at": "2026-10-23 00:46:48",
-  "total_tips": 1,
+  "updated_at": "2026-10-23 01:00:27",
+  "total_tips": 2,
   "live_feed": [
+    {
+      "id": 4022,
+      "channel": "feedinco",
+      "time": "2026-10-22 22:05",
+      "code": "周五006",
+      "league": "德甲",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "斯图加特 VS 门兴",
+      "chinese": "海外料单把斯图加特打门兴单挑出来，机构资金高度一致防一手大球，方向直指全场至少打进2球（进球数1.5大）。两队进攻架势摆明了要互捅，防守端漏洞都不小，本场奔着有球去，2球起步稳当。",
+      "original": "FEEDINCO.com Tips for Friday, 23 October 1X - Deportivo Alaves - Malaga O1.5 - Al Shamal - Qatar SC O1.5 - Stuttgart - B. Monchengladbach X2 - Bolton - Middlesb"
+    },
     {
       "id": 4045,
       "channel": "football_predictions_ai",
