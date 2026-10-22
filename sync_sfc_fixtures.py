@@ -104,6 +104,31 @@ def parse_fixtures(html):
     return out, odds_ready
 
 
+def fetch_avg_odds(fid):
+    """胜负彩页的「平均欧赔」是前端 JS 填的（td-pei 恒为 "-"），
+    真正有数的是 odds.500.com 的欧赔页，取三个 id：avwinc2（主胜）/ avdrawc2（平）/ avlostc2（客胜）。
+    注意必须带 Referer，否则返回空壳。"""
+    if not fid:
+        return []
+    url = f"https://odds.500.com/fenxi/ouzhi-{fid}.shtml"
+    try:
+        req = urllib.request.Request(url, headers={
+            "User-Agent": UA,
+            "Referer": "https://trade.500.com/sfc/",
+        })
+        with urllib.request.urlopen(req, timeout=12) as r:
+            h = r.read().decode("gbk", errors="ignore")
+    except Exception:
+        return []
+    out = []
+    for key in ("avwinc2", "avdrawc2", "avlostc2"):
+        m = re.search(rf'id="{key}"[^>]*>\s*([0-9]+\.[0-9]+)', h)
+        if not m:
+            return []
+        out.append(m.group(1))
+    return out if len(out) == 3 else []
+
+
 def load_existing():
     if not os.path.exists(OUT):
         return {}
@@ -174,7 +199,7 @@ def update_scores():
             continue
 
     if not by_fid:
-        _log("比分页没有可用数据")
+        _log("比分页暂无在售场次（非错误）")
         return 0
 
     data = load_existing()
@@ -324,27 +349,52 @@ def main(force=False):
     update_scores()          # 先把比分刷新（按 fid 精确匹配）
     existing = load_existing()
 
-    # 换期闸门：上一期没打完就不动
-    if not all_finished(existing) and not force:
+    # 先判断是不是同一期，再决定要不要走换期闸门。
+    # 之前的顺序错了：闸门写在前面，导致「同期还没打完」也被拦下 ——
+    # 赔率开出来了却永远不更新（2026-10-22 的 bug）。
+    same = same_round(matches, existing)
+
+    # 胜负彩页赔率恒为 "-"：逐场去欧赔页补（已有赔率的场次不重复抓）
+    if not odds_ready:
+        old_odds = {}
+        if same:
+            for m in existing.get("matches", []):
+                if m.get("odds") and len(m["odds"]) == 3:
+                    old_odds[(m.get("home"), m.get("away"))] = m["odds"]
+        got = 0
+        for m in matches:
+            cached = old_odds.get((m["home"], m["away"]))
+            if cached:
+                m["odds"] = cached
+                got += 1
+                continue
+            o = fetch_avg_odds(m.get("fid"))
+            if o:
+                m["odds"] = o
+                got += 1
+        # 不必等 14 场全齐：有多少算多少，quant_engine 会跳过没赔率的场次
+        odds_ready = got > 0
+        _log(f"欧赔补抓：{got}/{len(matches)} 场")
+
+    # 换期闸门：只有要换到「另一期」时才检查上一期是否打完
+    if not same and not all_finished(existing) and not force:
         left = sum(1 for m in existing.get("matches", [])
                    if "已完赛" not in str(m.get("status") or ""))
         _log(f"上一期（{existing.get('period')}）还有 {left} 场未结束，暂不换到 {period} 期")
         return 0
 
-    same = same_round(matches, existing)
     if not same:
         _s = archive_period(existing)
         if _s:
             _log(f"上一期 {existing.get('period')} 已归档：{_s['hit']} 中 / {_s['miss']} 失")
-
-    if same and not odds_ready and not force:
+    elif not odds_ready and not force:
         _log(f"{period} 期赔率尚未开出，保持现状")
         return 0
-    if same and odds_ready and not force:
-        # 同期已有完整数据且已算过，不用重算
-        if all(m.get("quant_factors") for m in existing.get("matches", [])):
-            _log(f"{period} 期已完成，跳过")
-            return 0
+    elif odds_ready and not force and all(
+            (m.get("quant_factors") and m.get("pick_primary")) for m in existing.get("matches", [])):
+        # 同期、赔率已开、且每场都已算出选号 → 不用重算
+        _log(f"{period} 期已完成，跳过")
+        return 0
 
     data = build(period, matches, existing if same else {})
 
@@ -356,6 +406,12 @@ def main(force=False):
         try:
             import quant_engine
             quant_engine.run_pipeline_on_sfc(OUT)
+            # quant 是读文件→改→写文件，picks_ready 得等它跑完再算
+            with open(OUT, encoding="utf-8") as f:
+                _d = json.load(f)
+            _d["picks_ready"] = any(m.get("pick_primary") for m in _d.get("matches", []))
+            with open(OUT, "w", encoding="utf-8") as f:
+                json.dump(_d, f, ensure_ascii=False, indent=2)
         except Exception as e:
             _log(f"量化失败: {type(e).__name__} {e}")
 
