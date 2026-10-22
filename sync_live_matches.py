@@ -848,10 +848,14 @@ def full_pipeline_sync(auto_push=True):
                         m['tip'] = '客胜'
                     else:
                         m['tip'] = '客胜/防平'
-                elif pw <= 0.48 and pl >= 0.28:
-                    m['tip'] = '让负'
-                elif pl <= 0.48 and pw >= 0.28:
-                    m['tip'] = '让胜'
+                elif pd >= 0.30 and abs(pw - pl) <= 0.06:
+                    # 三向接近、平局权重最高
+                    m['tip'] = '平局/防冷'
+                elif pw >= pl:
+                    # 标准胜平负场次只能推胜/平/负，绝不能推「让胜/让负」（那是另一个玩法，买不到）
+                    m['tip'] = '主不败/首选主胜'
+                else:
+                    m['tip'] = '客不败/首选客胜'
 
                 cur_tip = m.get('tip', '主胜/防平')
 
@@ -901,6 +905,10 @@ def full_pipeline_sync(auto_push=True):
                         m['predicted_goals'] = ['2', '3']
                     else:
                         m['predicted_scores'] = valid_scores[:3]
+
+                # 共识文案必须跟着 tip 走：否则卡片会出现「共识:客胜」而「推荐:让负」的自相矛盾
+                _r = m.get('consensus_ratio')
+                m['consensus'] = f"{m.get('tip')} ({_r}%)" if _r else str(m.get('tip'))
             except Exception:
                 continue
 

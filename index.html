@@ -3315,7 +3315,17 @@
         // 详情弹窗：全方位深度战术案卷 (4大硬核模块详解)
         function openDetail(code) {
             // 直接根据全局比赛唯一的 code 索引完整对象，杜绝传参截断或引号注入问题！
-            const match = ALL_OFFICIAL_MATCHES.find(m => m.code === code) || {};
+            const match = ALL_OFFICIAL_MATCHES.find(m => m.code === code);
+            if (!match) {
+                document.getElementById('modalTitle').innerText = code;
+                document.getElementById('modalContent').innerHTML =
+                    '<div style="padding:24px 8px;text-align:center;color:var(--text-tertiary);font-size:12px;line-height:1.8;">'
+                    + '这场比赛的数据还没加载到（可能刚开售或网络慢）。<br>请下拉刷新后重试。</div>';
+                document.getElementById('detailModal').classList.add('active');
+                document.body.style.overflow = 'hidden';
+                document.body.style.touchAction = 'none';
+                return;
+            }
             // 开赛/完赛后，赛前建议必须降级为"赛前记录"，避免被误读为赛前命中
             const startedNotice = (match.status && match.status.indexOf('未开赛') === -1)
                 ? '<div style="background:rgba(248,81,73,.12);border:1px solid rgba(248,81,73,.45);border-radius:8px;padding:10px 12px;margin:0 0 10px;font-size:12px;color:#ff9b95;line-height:1.6;">'
@@ -3452,24 +3462,6 @@
                         <div style="display: flex; align-items: center; justify-content: space-between;">
                             <span style="color: var(--text-secondary); font-size: 11px;">🎯 黄金三角比分:</span>
                             <span style="color: #38bdf8; font-weight: 800; font-size: 11.5px; font-family: var(--font-mono);">${predScores.join(' ')}</span>
-                        </div>
-                        <!-- 8万场半全场高概率进阶 (胜胜/平胜 或 负负/平负 94%覆盖率) -->
-                        <div style="display: flex; align-items: center; justify-content: space-between; border-top: 1px dashed rgba(255,255,255,0.08); padding-top: 5px;">
-                            <span style="color: var(--text-secondary); font-size: 11px;">⚡ 半全场高胜率覆盖:</span>
-                            <span style="color: #e3b341; font-weight: 800; font-size: 11.5px; font-family: var(--font-mono);">
-                                ${(() => {
-                                    const tip = match.tip || '';
-                                    if (tip.includes('让负') || tip.includes('客胜') || tip.includes('客不败')) {
-                                        return '【负负 / 平负】(92.8%客胜覆盖)';
-                                    } else if (tip.includes('让胜') || tip.includes('主胜') || tip.includes('主不败')) {
-                                        return '【胜胜 / 平胜】(94.0%主胜覆盖)';
-                                    } else if (tip.includes('平')) {
-                                        return '【平平 / 平胜】(稳健防平)';
-                                    } else {
-                                        return '【胜胜 / 平胜】';
-                                    }
-                                })()}
-                            </span>
                         </div>
                     </div>
 
