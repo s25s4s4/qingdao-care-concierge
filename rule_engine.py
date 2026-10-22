@@ -242,7 +242,24 @@ def normalize_match(match):
                 if note not in str(prov.get('note') or ''):
                     prov['note'] = str(prov.get('note') or '') + '｜' + note
     info = dict(match)
+    snap = match.get("prediction_snapshot") or {}
+    frozen_pre = (snap.get("frozen_at") and not snap.get("frozen_mid_match")
+                  and snap.get("verified_pre_match") is not False)
     if history: info["detail_tip"] = str(match.get("tip") or "暂不研判")
+    if frozen_pre:
+        # 案卷按【冻结时】的赔率/让球数重建：tip 是冻结时承诺的，周边数字也必须
+        # 同源，否则会出现「主胜45.4%…选择【客胜】」这种自相矛盾的展示
+        # （2026-10-22 周四008 实测：冻结时客胜1.81是热门，冻结后主胜1.81→1.95
+        #  变热门，tip 按承诺保持客胜，但案卷用了新赔率）。实时赔率在详情页
+        # 另有展示位，不丢信息。
+        ev = snap.get("evidence") or {}
+        ev_odds = ev.get("odds")
+        if isinstance(ev_odds, list) and len(ev_odds) == 3:
+            info["odds"] = ev_odds
+        if snap.get("is_only_rq"):
+            info["is_only_rq"] = True
+            if snap.get("rang") is not None:
+                info["rang"] = snap.get("rang")
     stats = copy.deepcopy(match.get("stats") or {})
     # 历史详情不能注入开赛后的最新近况；不冒充当时可用数据。
     if history:
@@ -276,6 +293,16 @@ def normalize_match(match):
     match["consensus_breakdown"] = None
     match["consensus"] = str(match.get("tip") or "暂不研判")
     match["dossier"] = {k: rr[k] for k in ("fundamental", "tactical_conflict", "market_attitude", "decision_guide")}
+    # 冻结后赔率若发生变动，在案卷里显式说明，避免彩民以为推荐跟着最新赔率
+    if frozen_pre:
+        ev_odds = (snap.get("evidence") or {}).get("odds")
+        live_odds = match.get("odds")
+        if (isinstance(ev_odds, list) and len(ev_odds) == 3 and isinstance(live_odds, list)
+                and len(live_odds) == 3
+                and [str(x) for x in ev_odds] != [str(x) for x in live_odds]):
+            match["dossier"]["market_attitude"] += (
+                f"（注意：此为冻结时赔率；截至当前最新即时赔率已变动为 "
+                f"{' / '.join(str(x) for x in live_odds)}，推荐以赛前冻结为准，不随盘口漂移。）")
     match["dossier"]["summary"] = f"{match.get('home')}对阵{match.get('away')}，{match['consensus']}。"
     match["analysis"] = match["dossier"]["summary"]
     match["stats"] = stats
