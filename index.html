@@ -1683,6 +1683,96 @@
                 });
         }
 
+                // 渲染梯级矩阵比分 (主力 / 次选 / 对冲)
+        function renderScoreTiers(m) {
+            const scores = m.predicted_scores || [];
+            if (!scores || !scores.length) return '<span style="color:var(--text-tertiary);">暂无模型</span>';
+            const isDouble = (m.tip || '').includes('/');
+            return `<div class="score-tier-grid">
+                ${scores[0] ? `<span class="score-tier-item score-tier-primary"><span class="score-tier-tag">主力</span>${scores[0]}</span>` : ''}
+                ${scores[1] ? `<span class="score-tier-item score-tier-secondary"><span class="score-tier-tag">次选</span>${scores[1]}</span>` : ''}
+                ${scores[2] ? `<span class="score-tier-item score-tier-hedge"><span class="score-tier-tag">${isDouble ? '对冲' : '博高'}</span>${scores[2]}</span>` : ''}
+            </div>`;
+        }
+
+        // 渲染实战双轨制策略高光条 (深盘进阶 / 受让护盾 / 黄金单胆 / 双选攻防)
+        function renderStrategyBanner(m) {
+            const strat = m.tactical_strategy;
+            if (strat && strat.badge) {
+                let cls = 'strategy-badge-gold';
+                if (strat.type === 'parity_shield') cls = 'strategy-badge-blue';
+                else if (strat.type === 'banker_single') cls = 'strategy-badge-green';
+                else if (strat.type === 'double_chance') cls = 'strategy-badge-purple';
+                return `<div class="strategy-banner ${cls}">
+                    <div style="display: flex; align-items: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                        <span class="strategy-pill" style="background: currentColor; color: #0f141c;">${strat.badge}</span>
+                        <span style="font-weight: 700;">${strat.advance_tip || strat.title}</span>
+                    </div>
+                    <span style="font-size: 10px; opacity: 0.8; margin-left: 6px; white-space: nowrap;">${strat.type === 'deep_handicap' ? '提高回报' : (strat.type === 'parity_shield' ? '稳健避坑' : '实战优选')}</span>
+                </div>`;
+            }
+            if (!m.is_only_rq && m.odds && m.odds.length === 3) {
+                const o = m.odds.map(Number);
+                const minOdd = Math.min(...o);
+                if (minOdd > 0 && minOdd <= 1.33 && m.odds_rq && m.odds_rq.length === 3) {
+                    const rqTxt = m.rang && m.rang.includes('-') ? `让胜 SP ${m.odds_rq[0]}` : (m.rang && m.rang.includes('+') ? `让负 SP ${m.odds_rq[2]}` : '');
+                    if (rqTxt) {
+                        return `<div class="strategy-banner strategy-badge-gold">
+                            <div style="display: flex; align-items: center;">
+                                <span class="strategy-pill" style="background: currentColor; color: #0f141c;">⚡ 深盘进阶</span>
+                                <span style="font-weight: 700;">让球(${m.rang}) ${rqTxt}</span>
+                            </div>
+                            <span style="font-size: 10px; opacity: 0.8;">提高回报</span>
+                        </div>`;
+                    }
+                }
+            }
+            return '';
+        }
+
+        // 推导半全场优选 (四维强咬合，杜绝选项与终场赛果/比分冲突)
+        function deriveClientBqc(m) {
+            if (m.predicted_bqc) return m.predicted_bqc;
+            const scores = m.predicted_scores || [];
+            const tip = m.tip || '';
+            if (!scores.length) {
+                if (tip.includes('主胜')) return '【胜胜】(稳) / 【平胜】(博)';
+                if (tip.includes('客胜')) return '【负负】(稳) / 【平负】(博)';
+                return '【胜胜】/【平胜】';
+            }
+            const finalSet = new Set();
+            scores.forEach(s => {
+                const parts = s.split('-').map(Number);
+                if (parts.length === 2 && !isNaN(parts[0]) && !isNaN(parts[1])) {
+                    finalSet.add(parts[0] > parts[1] ? '胜' : (parts[0] === parts[1] ? '平' : '负'));
+                }
+            });
+            if (!finalSet.size) {
+                if (tip.includes('主胜')) finalSet.add('胜');
+                else if (tip.includes('客胜')) finalSet.add('负');
+                else if (tip.includes('平')) finalSet.add('平');
+                else finalSet.add('胜');
+            }
+            const opts = [];
+            if (finalSet.has('胜')) {
+                opts.push('【胜胜】(稳)');
+                opts.push('【平胜】(博)');
+            }
+            if (finalSet.has('负')) {
+                opts.push('【负负】(稳)');
+                opts.push('【平负】(博)');
+            }
+            if (finalSet.has('平')) {
+                opts.push('【平平】(防平)');
+            }
+            if (tip.includes('客胜') || (tip.includes('让负') && finalSet.has('负'))) {
+                opts.sort((a, b) => (b.includes('负') ? 1 : 0) - (a.includes('负') ? 1 : 0));
+            } else if (tip.includes('主胜') || (tip.includes('让胜') && finalSet.has('胜'))) {
+                opts.sort((a, b) => (b.includes('胜') ? 1 : 0) - (a.includes('胜') ? 1 : 0));
+            }
+            return opts.slice(0, 3).join(' / ');
+        }
+
         // 渲染首页比赛卡片 (含实地对错核销印章与比分)
         function renderMatchesList(filterMode) {
             const container = document.getElementById('match-feed');
@@ -1862,15 +1952,18 @@
                         ` : ''}
                     </div>
                     ` : ''}
+                    <!-- 实战双轨制策略高光条 (深盘进阶 / 受让护盾 / 黄金单胆 / 双选攻防) -->
+                    ${renderStrategyBanner(m)}
+
                     <!-- 底部研判建议 & 进球数黄金带 (手机端防重叠优化) -->
-                    <div style="display: flex; flex-direction: column; gap: 5px; margin-top: 10px; margin-bottom: 6px; font-size: 11px; background: rgba(255,255,255,0.02); padding: 6px 8px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.05);">
+                    <div style="display: flex; flex-direction: column; gap: 5px; margin-top: 8px; margin-bottom: 6px; font-size: 11px; background: rgba(255,255,255,0.02); padding: 6px 8px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.05);">
                         <div style="display: flex; align-items: center; justify-content: space-between;">
                             <span style="color: var(--text-secondary);">⚽ 进球数精算:</span>
                             <span style="color: var(--accent-gold); font-weight: 800; font-family: var(--font-mono);">${(m.predicted_goals || []).map(g => (g === '7' ? '7+' : g) + '球').join('、') || '暂无模型'}</span>
                         </div>
                         <div style="display: flex; align-items: center; justify-content: space-between; border-top: 1px dashed rgba(255,255,255,0.05); padding-top: 4px;">
-                            <span style="color: var(--text-secondary);">🎯 黄金三角比分:</span>
-                            <span style="color: #38bdf8; font-weight: 800; font-family: var(--font-mono);">${(m.predicted_scores || []).join('  ') || '暂无模型'}</span>
+                            <span style="color: var(--text-secondary);">🎯 梯级矩阵比分:</span>
+                            <div>${renderScoreTiers(m)}</div>
                         </div>
                     </div>
                     <div class="card-decision-bar">
@@ -3531,23 +3624,26 @@
                             <span style="color: var(--text-secondary); font-size: 11px;">🏆 胜平负/让球:</span>
                             <span style="color: var(--accent-gold); font-weight: 800; font-size: 12.5px;">【${match.tip}】</span>
                         </div>
+                        ${match.tactical_strategy && match.tactical_strategy.advance_tip ? `
+                        <div style="display: flex; align-items: center; justify-content: space-between; font-size: 10.5px; background: rgba(255,255,255,0.03); padding: 3px 6px; border-radius: 4px; margin-top: -2px;">
+                            <span style="color: ${match.tactical_strategy.type === 'deep_handicap' ? '#f3c254' : (match.tactical_strategy.type === 'parity_shield' ? '#38bdf8' : '#3fb950')}; font-weight: 700;">${match.tactical_strategy.badge}:</span>
+                            <span style="color: #cbd5e1; font-weight: 600;">${match.tactical_strategy.advance_tip}</span>
+                        </div>
+                        ` : ''}
                         <div style="display: flex; align-items: center; justify-content: space-between;">
                             <span style="color: var(--text-secondary); font-size: 11px;">⚽ 黄金总进球:</span>
                             <span style="color: #fff; font-weight: 700; font-size: 11.5px; font-family: var(--font-mono);">${predGoals.length ? predGoals.map(g => (g === '7' ? '7+' : g) + '球').join('、') : '2、3球'}</span>
                         </div>
                         <div style="display: flex; align-items: center; justify-content: space-between;">
                             <span style="color: var(--text-secondary); font-size: 11px;">🎯 矩阵锁定比分:</span>
-                            <span style="color: #38bdf8; font-weight: 800; font-size: 11.5px; font-family: var(--font-mono);">${predScores.length ? predScores.join(' ') : '暂无模型'}</span>
+                            <div>${renderScoreTiers(match)}</div>
+                        </div>
+                        <div style="display: flex; justify-content: flex-end; font-size: 9.5px; color: var(--text-tertiary); margin-top: -3px;">
+                            资金分配指引：主力比分6成 · 次选3成 · ${(match.tip || '').includes('/') ? '对冲' : '博高'}1成
                         </div>
                         <div style="display: flex; align-items: center; justify-content: space-between; border-top: 1px dashed rgba(255,255,255,0.08); padding-top: 5px; margin-top: 2px;">
                             <span style="color: #e3b341; font-size: 11px; font-weight: 700;">🎲 半全场优选:</span>
-                            <span style="color: #e3b341; font-weight: 800; font-size: 11.5px; font-family: var(--font-mono);">${(() => {
-                                const o = (match.odds || []).map(Number);
-                                if (!o || o.length < 3 || isNaN(o[0])) return '胜胜/平胜';
-                                if (match.tip.includes('主胜') || (o[0] <= o[2] && o[0] <= 1.80)) return '【胜胜】(稳) / 【平胜】(博)';
-                                if (match.tip.includes('客胜') || (o[2] < o[0] && o[2] <= 1.80)) return '【负负】(稳) / 【平负】(博)';
-                                return '【平平】/【平胜】';
-                            })()}</span>
+                            <span style="color: #e3b341; font-weight: 800; font-size: 11.5px; font-family: var(--font-mono);">${deriveClientBqc(match)}</span>
                         </div>
                     </div>
 
