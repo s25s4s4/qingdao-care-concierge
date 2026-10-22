@@ -3094,8 +3094,13 @@
         }
 
         // 去水胜平负概率条
-        function renderProbBar(m) {
-            const segs = [
+        function renderProbBar(m, isRq) {
+            // 单开让球的场次，三条概率是【让胜/让平/让负】，不能标成主胜/平局/客胜
+            const segs = isRq ? [
+                { n: '让胜', v: m.pure[0], c: '#3fb950' },
+                { n: '让平', v: m.pure[1], c: '#8b949e' },
+                { n: '让负', v: m.pure[2], c: '#f85149' }
+            ] : [
                 { n: '主胜', v: m.pure[0], c: '#3fb950' },
                 { n: '平局', v: m.pure[1], c: '#8b949e' },
                 { n: '客胜', v: m.pure[2], c: '#f85149' }
@@ -3109,7 +3114,7 @@
             return `
               <div style="background:rgba(255,255,255,0.03); border:1px solid var(--border-color); border-radius:8px; padding:10px 12px; margin-bottom:10px;">
                 <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
-                  <span style="font-size:11.5px; font-weight:800; color:#fff;">去水胜平负概率</span>
+                  <span style="font-size:11.5px; font-weight:800; color:#fff;">去水${isRq ? '让球' : '胜平负'}概率</span>
                   <span style="font-size:9.5px; color:var(--text-tertiary); font-family:var(--font-mono);">机构抽水 ${m.margin.toFixed(1)}%</span>
                 </div>
                 <div style="display:flex; height:20px; border-radius:5px; overflow:hidden; gap:1px;">${bars}</div>
@@ -3356,7 +3361,7 @@
                     <span style="background: rgba(46, 160, 67, 0.15); color: #3fb950; padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: 700;">共识: ${match.consensus || '75%'}</span>
                 </div>
 
-                ${mdl ? renderProbBar(mdl) : ''}
+                ${mdl ? renderProbBar(mdl, match.is_only_rq) : ''}
                 ${renderFormStrip(match)}
 
                 <!-- 数据可视化：进球分布 + 比分概率矩阵（由官方 SP 反推） -->
