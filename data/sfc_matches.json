@@ -3,7 +3,7 @@
   "picks_ready": true,
   "deadline": "10-24 00:30",
   "total_matches": 14,
-  "updated_at": "2026-10-24 05:08:27",
+  "updated_at": "2026-10-24 05:48:26",
   "matches": [
     {
       "no": 1,
@@ -653,7 +653,7 @@
       "away": "马里迪",
       "away_rank": "11",
       "fid": "1438163",
-      "status": "未开赛",
+      "status": "已完赛",
       "matched_id": null,
       "odds": [
         "1.60",
@@ -667,8 +667,8 @@
         "market_depth": "百家平均欧赔开出 1.60 / 3.78 / 5.41，三项期望回报（EV）分别为主胜 -0.090、平局 -0.071、客胜 +0.004。盘面诊断：盘面处于正常期望区间。",
         "decision_guide": "传足选号方案：核心首选【主胜(3)】，次选防冷补【平局(1)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
       },
-      "live_status": "",
-      "score": "",
+      "live_status": "FIN",
+      "score": "5-0",
       "pick_primary": "3",
       "pick_secondary": "1",
       "pick_desc": "",
@@ -697,9 +697,9 @@
         "smart_type": "SINGLE",
         "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。"
       },
-      "outcome": "",
-      "result": null,
-      "result_text": ""
+      "outcome": "3",
+      "result": "HIT_PRIMARY",
+      "result_text": "首选命中"
     },
     {
       "no": 13,
