@@ -101,7 +101,7 @@ MATCHES_FILE = os.path.join(WEB_DIR, "data", "official_matches.json")
 # 已完赛旧场次保留天数：竞彩编号每周复用，旧赛果不清掉会（a）文件无限增长、
 # (b) 与新周期同编号比赛互相干扰。归档在清理前已写入 data/match_results.jsonl，
 # 十四年库不受影响；审计账本保留最近两周。
-PRUNE_KEEP_DAYS = 14
+PRUNE_KEEP_DAYS = 4
 
 # 主流水线日志：pythonw 无控制台，所有关键事件/异常/git 结果落文件，排查看它。
 LOG_FILE = os.path.join(WEB_DIR, "sync_live.log")
@@ -688,13 +688,22 @@ def full_pipeline_sync(auto_push=True):
         from enrich_team_stats import full_date as _full_date
         _today = datetime.now().date()
         _kept, _pruned = [], 0
+        # 收集当前在售未完赛（PENDING）场次的周几前缀（如 '周五'、'周六'），
+        # 凡是距今 >= 3 天且与当前在售新周期同周几前缀的上一周完赛旧场次一律清理，彻底杜绝同编号撞车！
+        _active_weekdays = {
+            str(m.get('code', ''))[:2]
+            for m in existing_matches
+            if m.get('result') == 'PENDING' and len(str(m.get('code', ''))) >= 2
+        }
         for m in existing_matches:
-            if m.get('result') in ('HIT', 'MISS'):
+            if m.get('result') in ('HIT', 'MISS', 'POSTPONED'):
                 try:
                     _md = datetime.strptime(_full_date(m.get('time')), '%Y-%m-%d').date()
                 except Exception:
                     _md = None
-                if _md and (_today - _md).days > PRUNE_KEEP_DAYS:
+                _days_ago = (_today - _md).days if _md else 0
+                _wk = str(m.get('code', ''))[:2]
+                if _md and (_days_ago > PRUNE_KEEP_DAYS or (_days_ago >= 3 and _wk in _active_weekdays)):
                     _pruned += 1
                     continue
             _kept.append(m)
