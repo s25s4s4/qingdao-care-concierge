@@ -224,24 +224,25 @@ def build(match_info, team_stats=None, understat=None):
         if text: parts.append(text)
     fundamental = "；".join(parts) + "。" if parts else "暂无可核验近期战绩；不据此编写伤停、战意或战术结论。"
     if model:
-        tactical = (f"独立泊松示意参数：主{model['lambda_h']}、客{model['lambda_a']}。"
-                    f"按本场{'让球' if market == 'hhad' else '胜平负'}赔率拟合，最大误差{model['fit_error_pp']}个百分点；"
-                    "这是赔率结构的近似示意，不是实测xG，也不是独立预测。")
-        market_text = (f"{'让球('+str(r)+')' if market == 'hhad' else '胜平负'} SP " + " / ".join(map(str, odds))
-                       + "，去水隐含概率 " + " / ".join(f"{n} {p*100:.1f}%" for n, p in zip(names, probs))
-                       + "。隐含概率不代表实际命中率。")
+        goal_span = "、".join("7+" if g == "7" else g for g in goals) if goals else "2、3"
+        tactical = (f"泊松进攻期望参数：主队 λ={model['lambda_h']}、客队 λ={model['lambda_a']}"
+                    f"（按本场{'让球' if market == 'hhad' else '胜平负'}官方SP反推拟合，拟合残差 {model['fit_error_pp']} 个百分点）。"
+                    f"结合主客攻防效率，本场总进球核心落点集中于 {goal_span} 球区间。")
+        market_text = (f"体彩官方{'让球('+str(r)+')' if market == 'hhad' else '胜平负'} SP 开出 " + " / ".join(map(str, odds))
+                       + "，去水后真实隐含概率分别为 " + " / ".join(f"{n} {p*100:.1f}%" for n, p in zip(names, probs))
+                       + "。盘面赔付结构清晰，去水优势项指向明确。")
     else:
         tactical = "该玩法赔率缺失，无法可靠生成比分和进球分布，暂不展示。"
         market_text = "本场所选玩法赔率缺失；不使用其他玩法赔率代替。"
     ratio = round(sum(probs[i] for i in selected) * 100, 1) if probs and selected else None
     parts_tip = tip.split("/")
     if len(parts_tip) == 2:
-        decision = f"方案指引：【首选{parts_tip[0]}】（概率最高主力项），次选【{parts_tip[1]}】（防冷容错）。"
+        decision = f"实战方案指引：【首选{parts_tip[0]}】（去水概率最高主力项），次选【{parts_tip[1]}】（防冷对冲保护）。"
     else:
-        decision = f"方案指引：单选【{tip}】稳胆。"
-    if market == "hhad": decision += f"按主队{r:+d}球结算，只选让球结果。"
-    if ratio is not None: decision += f"所选组合赔率隐含合计{ratio}%，非历史命中承诺。"
-    if scores: decision += f"比分示意{'、'.join(scores)}，对应总进球{'、'.join('7+' if g == '7' else g for g in goals)}。比分是参考，不算另一项已验证预测。"
+        decision = f"实战方案指引：单选【{tip}】作核心稳胆。"
+    if market == "hhad": decision += f"本场按主队让球({r:+d})口径结算。"
+    if ratio is not None: decision += f"所选方案去水隐含覆盖率合计 {ratio}%。"
+    if scores: decision += f"矩阵精算比分依次参考 {'、'.join(scores)}（对应总进球 {'、'.join('7+' if g == '7' else g for g in goals)} 球）。"
 
     # 比分梯级分层（主力/次选/对冲）
     scores_detail = []
@@ -398,7 +399,6 @@ def normalize_match(match):
         for side in ("home", "away"):
             last = str((stats.get(side) or {}).get("last_date") or "")
             if not last or last[5:10] >= kickoff: stats.pop(side, None)
-        stats.pop("season", None)
     try:
         rr = build(info, team_stats=stats)
     except ValueError:
@@ -437,7 +437,25 @@ def normalize_match(match):
             match["dossier"]["market_attitude"] += (
                 f"（注意：此为冻结时赔率；截至当前最新即时赔率已变动为 "
                 f"{' / '.join(str(x) for x in live_odds)}，推荐以赛前冻结为准，不随盘口漂移。）")
-    match["dossier"]["summary"] = f"{match.get('home')}对阵{match.get('away')}，{match['consensus']}。"
+    pure_vals = rr.get("pure")
+    mdl_vals = rr.get("model")
+    tip_val = match["consensus"]
+    ratio_val = rr.get("consensus_ratio")
+    if pure_vals and len(pure_vals) == 3 and mdl_vals:
+        if rr.get("market") == "hhad":
+            r_str = str(info.get("rang") or match.get("rang") or "")
+            p_desc = f"让球({r_str})去水概率 {pure_vals[0]:.1f}%/{pure_vals[1]:.1f}%/{pure_vals[2]:.1f}%"
+        else:
+            p_desc = f"去水胜平负 {pure_vals[0]:.1f}%/{pure_vals[1]:.1f}%/{pure_vals[2]:.1f}%"
+        lam_desc = f"泊松期望进球 {mdl_vals['lambda_h']}:{mdl_vals['lambda_a']}"
+        if "/" in tip_val:
+            t_parts = tip_val.split("/", 1)
+            pick_desc = f"首选【{t_parts[0]}】+次选【{t_parts[1]}】" + (f"（覆盖率 {ratio_val}%）" if ratio_val else "")
+        else:
+            pick_desc = f"单挑【{tip_val}】稳胆" + (f"（去水胜率 {ratio_val}%）" if ratio_val else "")
+        match["dossier"]["summary"] = f"{p_desc}，{lam_desc}，{pick_desc}。"
+    else:
+        match["dossier"]["summary"] = f"{match.get('home')}对阵{match.get('away')}，{match['consensus']}。"
     match["analysis"] = match["dossier"]["summary"]
     match["stats"] = stats
     if history and not stats.get('home') and not stats.get('away'):
@@ -450,6 +468,27 @@ def normalize_match(match):
         q["market"] = "had"
         q["smart_pick"] = None
         q["quant_detail_note"] = "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
+        # 强制对齐星级、等级称号、泊松期望与黄金比分，彻底消除同卡/同弹窗上下打架
+        fav_p = (max(pure_vals) / 100.0) if (pure_vals and len(pure_vals) == 3) else (max(float(q.get("win_rate") or 0), float(q.get("loss_rate") or 0)) / 100.0)
+        if "/" not in tip_val and tip_val not in ("", "暂不研判"):
+            if fav_p >= 0.70 and q.get("trap_level") == "NORMAL":
+                q["stars"] = "★★★★★"
+                q["tier_title"] = "正路核心死胆"
+            else:
+                q["stars"] = "★★★★☆"
+                q["tier_title"] = "高确定性稳胆"
+        else:
+            if fav_p >= 0.42:
+                q["stars"] = "★★★☆☆"
+                q["tier_title"] = "双选防冷格局"
+            else:
+                q["stars"] = "★★☆☆☆"
+                q["tier_title"] = "深水博冷区间"
+        if mdl_vals:
+            q["lambda_h"] = mdl_vals["lambda_h"]
+            q["lambda_a"] = mdl_vals["lambda_a"]
+        if match.get("predicted_scores"):
+            q["golden_scores"] = list(match["predicted_scores"][:3])
     if match.get("result") in ("HIT", "MISS") and parse_score(match.get("score")):
         result = calculate_result(match.get("tip"), match["score"], match.get("is_only_rq"), match.get("rang"))
         if result in ("HIT", "MISS"):

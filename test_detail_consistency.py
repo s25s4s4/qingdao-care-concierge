@@ -147,6 +147,43 @@ class DetailConsistencyTests(unittest.TestCase):
         self.assertNotIn('负负', bqc_home)
         self.assertIn('胜胜', bqc_home)
 
+    def test_quant_factors_aligned_with_tip(self):
+        """单选稳胆不得标双选/深水博冷，双选防冷不得标高确定性稳胆/死胆。"""
+        with open(DATA, encoding='utf-8') as f:
+            matches = json.load(f)['matches']
+        for m in matches:
+            qf = m.get('quant_factors')
+            if not qf or m.get('is_only_rq'):
+                continue
+            tip = str(m.get('tip') or '')
+            tier = str(qf.get('tier_title') or '')
+            with self.subTest(code=m.get('code'), tip=tip, tier=tier):
+                if '/' in tip:
+                    self.assertIn(tier, ('双选防冷格局', '深水博冷区间'))
+                elif tip not in ('', '暂不研判'):
+                    self.assertIn(tier, ('正路核心死胆', '高确定性稳胆'))
+
+    def test_frontend_js_syntax(self):
+        """校验 index.html 中所有 <script> 块无任何语法错误或重复标识符声明。"""
+        import re
+        import subprocess
+        import tempfile
+        html_path = os.path.join(os.path.dirname(__file__), 'index.html')
+        with open(html_path, encoding='utf-8') as f:
+            html = f.read()
+        scripts = re.findall(r'<script[^>]*>([\s\S]*?)</script>', html)
+        self.assertGreaterEqual(len(scripts), 1)
+        for sc in scripts:
+            with tempfile.NamedTemporaryFile('w', suffix='.js', delete=False, encoding='utf-8') as tf:
+                tf.write(sc)
+                tmp_path = tf.name
+            try:
+                res = subprocess.run(['node', '--check', tmp_path], capture_output=True, text=True)
+                self.assertEqual(res.returncode, 0, msg=res.stderr)
+            finally:
+                if os.path.exists(tmp_path):
+                    os.remove(tmp_path)
+
 
 if __name__ == '__main__':
     unittest.main()

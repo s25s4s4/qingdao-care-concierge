@@ -222,32 +222,33 @@ def analyze_match_factors(sh, sd, sa, league="", home="", away="", is_only_rq=Fa
     elif sh <= 1.75 and (p_d + p_l) >= 0.45:
         trap_level = "CAUTION"
         trap_warning = f"⚠️ 胶着震荡预警：历史胜率仅 {int(p_w*100)}%，防平局闷平打出"
+    elif sa <= 1.45 and (p_w + p_d) >= 0.38:
+        trap_level = "HIGH_TRAP"
+        trap_warning = f"🚨 客热诱盘预警：历史同赔下主不败打出率高达 {int((p_w+p_d)*100)}%，谨防客队大热不胜"
     elif p_l >= 0.45 and sa > 2.0:
         trap_level = "HIGH_TRAP"
         trap_warning = f"🎯 高赔杀庄大冷：客胜历史打出率 {int(p_l*100)}%，具备极佳正EV回报"
 
-    # 5. 稳胆星级判定
-    if p_w >= 0.72 and sh < 1.45 and trap_level == "NORMAL":
-        stars = "★★★★★"
-        tier_title = "正路核心死胆"
-    elif p_w >= 0.62 and sh < 1.65:
-        stars = "★★★★☆"
-        tier_title = "高确定性稳胆"
-    elif p_w >= 0.50:
-        stars = "★★★☆☆"
-        tier_title = "双选防冷格局"
-    else:
-        stars = "★★☆☆☆"
-        tier_title = "深水博冷区间"
-
-    # 6. 提炼出号建议：直接采用与结算契约同口径的 decide_tip（历史同赔去水概率 argmax）。
-    # 说明（2026-10-22 清理）：此处曾有一整套「让球量化利刃 + 玩法口径归一化」分支，
-    # 但紧接着就被下面的 decide_tip 整体覆盖——是死代码；且其中的 lambda 遇异常比分
-    # 会抛未捕获异常，把整个量化阶段静默跳过。is_only_rq 场次已在函数开头返回 None，
-    # decide_tip 只会产出胜/平/负方向，不会出现买不到的让球选项。
+    # 5 & 6. 提炼出号建议与稳胆星级判定：与 decide_tip 严格对齐，兼顾主胆与客胆，彻底杜绝单选稳胆与星级标签打架
     from rule_engine import decide_tip
     smart_pick = decide_tip(p_w, p_d, p_l)[0]
     smart_type = 'DOUBLE' if '/' in smart_pick else 'SINGLE'
+    fav_p = max(p_w, p_l)
+    fav_sp = sh if p_w >= p_l else sa
+    if smart_type == 'SINGLE':
+        if fav_p >= 0.70 and fav_sp <= 1.45 and trap_level == "NORMAL":
+            stars = "★★★★★"
+            tier_title = "正路核心死胆"
+        else:
+            stars = "★★★★☆"
+            tier_title = "高确定性稳胆"
+    else:
+        if fav_p >= 0.42:
+            stars = "★★★☆☆"
+            tier_title = "双选防冷格局"
+        else:
+            stars = "★★☆☆☆"
+            tier_title = "深水博冷区间"
 
     # 黄金比分融合：在确定 smart_pick 之后，严格根据其方向进行定向聚类！
     # 彻底杜绝“建议让负(看好客不败)，但泊松比分却给出主胜(1-0, 2-1)”的撕裂打架！
@@ -425,22 +426,45 @@ def run_full_pipeline_on_matches(official_json_path="E:/euro_intel_web/data/offi
     return results
 
 
-def run_pipeline_on_sfc(sfc_json_path="E:/euro_intel_web/data/sfc_matches.json"):
-    """对传足 14 场 (sfc_matches.json) 完整运行历史同赔多因子量化推演，自动驱动选号与爆冷标记"""
-    if not os.path.exists(sfc_json_path):
-        return []
+def _build_sfc_dossier(m, factor_res, sh, sd, sa):
+    """为传足 14 场每场比赛生成完整四段式深度战术案卷（供点击卡片弹窗展示）"""
+    pick_map = {"3": "主胜(3)", "1": "平局(1)", "0": "客胜(0)"}
+    p_code = str(m.get("pick_primary") or "")
+    s_code = str(m.get("pick_secondary") or "")
+    u_code = str(m.get("pick_upset") or "")
+    p_txt = pick_map.get(p_code, "待定")
+    s_txt = f"，次选防冷补【{pick_map[s_code]}】" if s_code in pick_map else "（单挑作胆）"
+    u_txt = f"，🚨大冷预警留意【{pick_map[u_code]}】" if u_code in pick_map else ""
+    scores_str = " / ".join(factor_res.get("golden_scores") or ["1-0", "1-1", "2-1"])
+    return {
+        "league_rank": (
+            f"本场为传统足彩14场赛事（{m.get('league', '焦点战')}）：{m.get('home', '主队')}坐镇主场迎战{m.get('away', '客队')}。"
+            f"14年历史同赔库共匹配到 {factor_res['samples']} 场相似欧赔结构样本，"
+            f"历史真实打出分布为主胜 {factor_res['win_rate']}% · 平局 {factor_res['draw_rate']}% · 客胜 {factor_res['loss_rate']}%。"
+        ),
+        "conflict": (
+            f"泊松进攻期望参数：主队 λ={factor_res['lambda_h']} vs 客队 λ={factor_res['lambda_a']}。"
+            f"历史同赔高频比分依次聚焦 {scores_str}，整体盘面归属【{factor_res['tier_title']}】（{factor_res['stars']}）。"
+        ),
+        "market_depth": (
+            f"百家平均欧赔开出 {sh:.2f} / {sd:.2f} / {sa:.2f}，"
+            f"三项期望回报（EV）分别为主胜 {factor_res['ev_home']:+.3f}、平局 {factor_res['ev_draw']:+.3f}、客胜 {factor_res['ev_away']:+.3f}。"
+            f"盘面诊断：{factor_res['trap_warning']}。"
+        ),
+        "decision_guide": (
+            f"传足选号方案：核心首选【{p_txt}】{s_txt}{u_txt}。"
+            f"任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
+        ),
+    }
 
-    with open(sfc_json_path, "r", encoding="utf-8") as f:
-        data = json.load(f)
 
-    matches = data.get("matches", [])
+def _enrich_sfc_match_list(matches, allow_pick_update=True):
+    """对传足比赛列表执行同赔量化与案卷生成；已完赛场次严格锁定既有选号与赛果不重算。"""
     results = []
-
     for m in matches:
         odds = m.get("odds", [])
         if not odds or len(odds) < 3:
             continue
-
         try:
             sh = float(odds[0])
             sd = float(odds[1])
@@ -456,12 +480,13 @@ def run_pipeline_on_sfc(sfc_json_path="E:/euro_intel_web/data/sfc_matches.json")
             home=m.get("home", ""),
             away=m.get("away", "")
         )
+        if not factor_res:
+            continue
 
-        if factor_res:
-            m["quant_factors"] = factor_res
-            
-            # 【实体店老彩民黄金做单法则】：
-            # 1. 核心首选 (pick_primary): 真实胜率最高的方向
+        m["quant_factors"] = factor_res
+        is_settled = (m.get("status") == "已完赛") or (m.get("result") not in (None, "", "PENDING"))
+
+        if allow_pick_update and not is_settled:
             if factor_res["win_rate"] >= 50.0:
                 m["pick_primary"] = "3"
             elif factor_res["loss_rate"] >= 45.0:
@@ -469,29 +494,72 @@ def run_pipeline_on_sfc(sfc_json_path="E:/euro_intel_web/data/sfc_matches.json")
             else:
                 m["pick_primary"] = "3" if factor_res["win_rate"] >= factor_res["loss_rate"] else "0"
 
-            # 2. 次选防冷 (pick_secondary): 严禁全盘泛滥点亮！
-            # 只有当胜率介于 48%~65% 之间且平局率高企(>=22%)的真正胶着战才允许双选防平！
-            # 高确定性稳胆(>=65%)与死胆必须单挑，严禁画蛇添足补平！
-            if 48.0 <= factor_res["win_rate"] < 65.0 and factor_res["draw_rate"] >= 22.0:
+            fav_rate = max(factor_res["win_rate"], factor_res["loss_rate"])
+            if 45.0 <= fav_rate < 65.0 and factor_res["draw_rate"] >= 22.0:
                 m["pick_secondary"] = "1"
             else:
                 m["pick_secondary"] = None
 
-            # 3. 🚨 爆冷预警 (pick_upset): 严苛门槛，全期只抓 2~4 场真正的机构异常杀庄冷门！
-            # 只有当触发 HIGH_TRAP 严重诱盘、或强弱两头对冲战客胜率明显倒挂时才允许标记！
             if factor_res["trap_level"] == "HIGH_TRAP":
                 m["pick_upset"] = "0" if m["pick_primary"] == "3" else "3"
             elif factor_res["win_rate"] < 40.0 and factor_res["loss_rate"] >= 32.0 and sa >= 2.0:
-                # 豪门势均力敌巅峰战（如巴黎vs巴萨）
                 m["pick_upset"] = "0" if m["pick_primary"] == "3" else "3"
             else:
                 m["pick_upset"] = None
 
-            results.append(m)
+        # 修正星级与实际传足单/双选严格一致
+        has_sec = bool(m.get("pick_secondary"))
+        fav_p = max(factor_res["win_rate"], factor_res["loss_rate"]) / 100.0
+        if not has_sec:
+            if fav_p >= 0.70 and factor_res.get("trap_level") == "NORMAL":
+                factor_res["stars"] = "★★★★★"
+                factor_res["tier_title"] = "正路核心死胆"
+            else:
+                factor_res["stars"] = "★★★★☆"
+                factor_res["tier_title"] = "高确定性稳胆"
+        else:
+            if fav_p >= 0.42:
+                factor_res["stars"] = "★★★☆☆"
+                factor_res["tier_title"] = "双选防冷格局"
+            else:
+                factor_res["stars"] = "★★☆☆☆"
+                factor_res["tier_title"] = "深水博冷区间"
 
-    # 保存传足数据
+        m["dossier"] = _build_sfc_dossier(m, factor_res, sh, sd, sa)
+        results.append(m)
+    return results
+
+
+def run_pipeline_on_sfc(sfc_json_path="E:/euro_intel_web/data/sfc_matches.json"):
+    """对传足 14 场 (sfc_matches.json 及历史归档) 完整运行历史同赔多因子量化推演，驱动选号与案卷生成"""
+    if not os.path.exists(sfc_json_path):
+        return []
+
+    with open(sfc_json_path, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    matches = data.get("matches", [])
+    results = _enrich_sfc_match_list(matches, allow_pick_update=True)
+
+    prev = data.get("previous_period")
+    if isinstance(prev, dict) and prev.get("matches"):
+        _enrich_sfc_match_list(prev["matches"], allow_pick_update=False)
+
     with open(sfc_json_path, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
+
+    hist_path = os.path.join(os.path.dirname(sfc_json_path), "sfc_history.json")
+    if os.path.exists(hist_path):
+        try:
+            with open(hist_path, "r", encoding="utf-8") as hf:
+                hdata = json.load(hf)
+            for p in hdata.get("periods", []):
+                if p.get("matches"):
+                    _enrich_sfc_match_list(p["matches"], allow_pick_update=False)
+            with open(hist_path, "w", encoding="utf-8") as hf:
+                json.dump(hdata, hf, ensure_ascii=False, indent=2)
+        except Exception:
+            pass
 
     return results
 
