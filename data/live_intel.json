@@ -1,7 +1,19 @@
 {
-  "updated_at": "2026-10-23 15:31:02",
-  "total_tips": 3,
+  "updated_at": "2026-10-23 19:30:45",
+  "total_tips": 4,
   "live_feed": [
+    {
+      "id": 4297,
+      "channel": "matchplug",
+      "time": "2026-10-23 19:16",
+      "code": "周五009",
+      "league": "英超",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "伊普斯 VS 诺丁汉",
+      "chinese": "欧料核心直指两队皆有进球。伊普斯主场向来敢打敢冲，但后防漏洞大；诺丁汉反击犀利，客场必抓机会。机构开出1.60低赔严防互破大门，本场看好对攻成局，走双飞、进球数2球起步。",
+      "original": "FOOTBALL ENGLAND IPSWICH VS NOTTINGHAM BOTH TEAMS TO SCORE ODDS : 1.60"
+    },
     {
       "id": 4230,
       "channel": "bulletbetpredictions",
