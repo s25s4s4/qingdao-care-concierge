@@ -1,7 +1,19 @@
 {
-  "updated_at": "2026-10-23 19:30:45",
-  "total_tips": 4,
+  "updated_at": "2026-10-23 20:30:51",
+  "total_tips": 5,
   "live_feed": [
+    {
+      "id": 4320,
+      "channel": "TipstrrTips",
+      "time": "2026-10-23 20:13",
+      "code": "周五009",
+      "league": "英超",
+      "category": "推单",
+      "is_tip": true,
+      "match": "伊普斯 VS 诺丁汉",
+      "chinese": "欧洲前线暗流倾向主队爆冷！外界严重低估伊普斯，资金正逆向抄底主胜。机构平局退款（平局退本）给到2.20超高回报，博主队不败拿分，求稳直接防手让胜或走平手盘。",
+      "original": "Our first free football tip of the weekend comes from The Cerces Service , who is backing Ipswich Town as over-priced underdogs to beat Nottingham Forest in Fri"
+    },
     {
       "id": 4297,
       "channel": "matchplug",
