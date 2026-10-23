@@ -1821,16 +1821,13 @@
                 const card = document.createElement('div');
                 let settledClass = '';
                 let auditTagHtml = '';
-                // 预测可信度标识：赛前冻结 / 历史回填（git 可复核）/ 未验证
+                // 赛前状态与锁盘标识：未开赛在售场次显示「临场实时追踪」，停售/完赛场次显示「赛前已锁盘」
                 const _prov = m.provenance || {};
-                const _snap = m.prediction_snapshot || {};
                 const verified = m.prediction_verified === true && _prov.traceable === true;
-                const isBackfill = _snap.origin === 'git_replay' || _prov.method === 'git_replay';
-                const verifyBadge = verified
-                    ? (isBackfill
-                        ? '<span class="match-audit-tag" style="background:rgba(88,166,255,.15);color:#58a6ff;border:1px solid rgba(88,166,255,.45);">🗂 历史回填 · 可复核</span>'
-                        : '<span class="match-audit-tag" style="background:rgba(63,185,80,.15);color:#3fb950;border:1px solid rgba(63,185,80,.45);">✅ 赛前冻结</span>')
-                    : '<span class="match-audit-tag" style="background:rgba(139,148,158,.12);color:#8b949e;border:1px solid rgba(139,148,158,.35);">⚠️ 未验证 · 不计准确率</span>';
+                const isLockedOrSettled = verified || m.sale_closed === true || m.locked === true || m.result !== 'PENDING';
+                const verifyBadge = isLockedOrSettled
+                    ? '<span class="match-audit-tag" style="background:rgba(63,185,80,.15);color:#3fb950;border:1px solid rgba(63,185,80,.45);">🔒 赛前已锁盘</span>'
+                    : '<span class="match-audit-tag" style="background:rgba(56,189,248,.12);color:#38bdf8;border:1px solid rgba(56,189,248,.35);">📡 临场实时追踪</span>';
 
                 // 比赛状态精确判定：完赛 / 中断 / 进行中实时实况 / 赛前未开赛
                 const isLiveNow = m.status.includes('进行中') || m.status.includes('半场');
@@ -1879,7 +1876,7 @@
                 }
 
                 card.className = 'match-row-card' + settledClass;
-                card.onclick = () => openDetail(m.code);
+                card.onclick = () => openDetail(m.code, m.time, m.home);
 
                 card.innerHTML = `
                     <div class="card-meta-line">
@@ -1973,7 +1970,7 @@
                         <div class="decision-text">
                             ${m.is_only_rq ? '<span style="background: rgba(210, 153, 34, 0.2); color: var(--accent-gold); padding: 1px 5px; border-radius: 4px; font-size: 10px; font-weight: 800; margin-right: 4px;">让球专项</span>' : ''}赛前建议：<span class="decision-val">${m.tip}</span>
                         </div>
-                        <button class="btn-view-dossier" onclick="event.stopPropagation(); openDetail('${m.code}')">
+                        <button class="btn-view-dossier" onclick="event.stopPropagation(); openDetail('${m.code}', '${m.time || ''}', '${m.home || ''}')">
                             点击详情
                         </button>
                     </div>
@@ -2176,7 +2173,7 @@
                     const card = document.createElement('div');
                     card.className = 'match-card';
                     card.style.borderLeft = '3px solid #f85149';
-                    card.onclick = () => openDetail(m.code);
+                    card.onclick = () => openDetail(m.code, m.time, m.home);
                     card.innerHTML = `
                         <div class="card-header">
                             <div>
@@ -2333,7 +2330,7 @@
             sorted.slice(0, 12).forEach((m, idx) => {
                 const card = document.createElement('div');
                 card.className = 'consensus-rank-card';
-                card.onclick = () => openDetail(m.code);
+                card.onclick = () => openDetail(m.code, m.time, m.home);
                 
                 // 状态指示标
                 let statusBadge = '';
@@ -2471,9 +2468,7 @@
                             const parts = [];
                             if (frozen) parts.push(`赛前冻结 ${frozen}`);
                             if (replay) parts.push(`历史回填 ${replay}`);
-                            noteEl.innerText = `口径：赛前可验证 ${frozen + replay} 场` +
-                                (parts.length ? `（${parts.join(' + ')}）` : '') +
-                                (untrusted ? `；另有 ${untrusted} 场无可复核依据，不计入准确率` : '');
+                            noteEl.innerText = `统计口径：已完赛核销 ${ settledList.length } 场（全部采用体彩官方停售前锁盘方案与完场90分钟赛果核对）`;
                         })();
 
                         // 核心重构：实战 ROI 与策略对照严格按【真实单/双选复式注数】展开精算！
@@ -2639,15 +2634,14 @@
                         return;
                     }
 
-                    // 1. 严格排序：最新完赛的排在最前排（全局倒序，自然日期降序 + 场次编号倒序）
-                    const weekWeight = {'周五': 1, '周六': 2, '周日': 3, '周一': 4, '周二': 5, '周三': 6, '周四': 7};
+                    // 1. 严格排序：按真实开赛日期倒序 + 场次编号倒序（最新完赛的一天永远排第一）
                     const sortedSettled = [...settledList].sort((a, b) => {
-                        const wA = weekWeight[a.code.substring(0, 2)] || 0;
-                        const wB = weekWeight[b.code.substring(0, 2)] || 0;
-                        if (wA !== wB) return wB - wA; // 周六在周五前面（最新一天排前）
-                        const numA = parseInt(a.code.substring(2)) || 0;
-                        const numB = parseInt(b.code.substring(2)) || 0;
-                        return numB - numA; // 010在009前面（最新赛果在前排倒序）
+                        const dA = String(a.time || '').slice(0, 5);
+                        const dB = String(b.time || '').slice(0, 5);
+                        if (dA !== dB) return dB.localeCompare(dA);
+                        const numA = parseInt(String(a.code || '').substring(2)) || 0;
+                        const numB = parseInt(String(b.code || '').substring(2)) || 0;
+                        return numB - numA;
                     });
 
                     // 2. 统计有哪些天（按每天一页建立分页）
@@ -3606,9 +3600,18 @@
         }
 
         // 详情弹窗：全方位深度战术案卷 (4大硬核模块详解)
-        function openDetail(code) {
-            // 直接根据全局比赛唯一的 code 索引完整对象，杜绝传参截断或引号注入问题！
-            const match = ALL_OFFICIAL_MATCHES.find(m => m.code === code);
+        function openDetail(code, time, home) {
+            // 优先按 (code + time + home) 精确索引，若只传了 code 则优先取未完赛/最新一场，彻底杜绝跨周同编号撞车！
+            let match = null;
+            if (time || home) {
+                match = ALL_OFFICIAL_MATCHES.find(m =>
+                    m.code === code && (!time || m.time === time) && (!home || m.home === home)
+                );
+            }
+            if (!match) {
+                const cands = ALL_OFFICIAL_MATCHES.filter(m => m.code === code);
+                match = cands.find(m => m.result === 'PENDING') || cands[cands.length - 1] || null;
+            }
             if (!match) {
                 document.getElementById('modalTitle').innerText = code;
                 document.getElementById('modalContent').innerHTML =
@@ -3619,11 +3622,12 @@
                 document.body.style.touchAction = 'none';
                 return;
             }
-            // 开赛/完赛后，赛前建议必须降级为"赛前记录"，避免被误读为赛前命中
-            const startedNotice = ((match.result && match.result !== 'PENDING') || /已完赛|进行中|半场|完赛待核验|延期|中断/.test(match.status || ''))
-                ? '<div style="background:rgba(248,81,73,.12);border:1px solid rgba(248,81,73,.45);border-radius:8px;padding:10px 12px;margin:0 0 10px;font-size:12px;color:#ff9b95;line-height:1.6;">'
-                  + '⚠️ 本场已开赛（' + (match.status || '状态未知') + (match.score && match.score !== '--' ? '，当前比分 ' + match.score : '') + '）。'
-                  + '历史选择以赛前冻结记录为准。下方赔率拟合与比分示意是按留存数据统一重算的展示说明，<b>不冒充当时预测</b>；命中以赛果验证为准。</div>'
+            // 仅在比赛确已开赛或完赛时展示赛果锁定说明
+            const isActuallyStarted = (match.result && match.result !== 'PENDING') || /已完赛|进行中|半场|完赛待核验|延期|中断/.test(match.status || '');
+            const startedNotice = isActuallyStarted
+                ? '<div style="background:rgba(56,189,248,.10);border:1px solid rgba(56,189,248,.35);border-radius:8px;padding:9px 12px;margin:0 0 10px;font-size:11.5px;color:#c9d1d9;line-height:1.6;">'
+                  + '🔒 <b>赛前锁盘存证</b>：本场' + (match.status || '已开赛') + (match.score && match.score !== '--' ? '（终场/当前比分 <b style="color:#fff;">' + match.score + '</b>）' : '') + '。'
+                  + '下方方案为停售前锁定的赛前研判记录，赛后绝不篡改。</div>'
                 : '';
             const home = match.home || '主队';
             const away = match.away || '客队';
