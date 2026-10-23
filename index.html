@@ -1207,6 +1207,9 @@
             <span style="font-size: 10px; color: var(--text-tertiary);">一眼识破选号 · 拒绝繁杂信息</span>
         </div>
 
+        <!-- 期次快速切换栏（支持一键切换「上期完场打戳复盘」与「最新在售选号」） -->
+        <div id="sfc-period-switcher" style="margin: 0 16px 10px; display: none;"></div>
+
         <!-- 14场比赛独立流式列表 -->
         <div id="sfc-matches-feed" style="margin-bottom: 16px;">
             <!-- 动态注入 14 场对阵 -->
@@ -2764,12 +2767,124 @@
                     });
                 }
 
-        // 异步获取传足14场比赛数据（以线上 sfc_matches.json 为准，失败仅提示，不回退到编造的内嵌数据）
+        // 异步获取传足14场比赛数据（支持当期在售与上期完场打戳一键切换复盘）
         let SFC_MATCHES_CACHE = null;
-        function loadSfcData() {
-            const feed = document.getElementById('sfc-matches-feed');
+        let SFC_PERIODS_MAP = {};
+        let SFC_LATEST_PERIOD = null;
+        let SFC_SELECTED_PERIOD = null;
+        let SFC_USER_SWITCHED = false;
+
+        function computeSfcStats(periodObj) {
+            const ms = (periodObj && periodObj.matches) || [];
+            let fin = 0, hit = 0, miss = 0;
+            ms.forEach(m => {
+                const isFin = (m.status === '已完赛' || m.live_status === 'FIN') && m.score && m.score !== '--';
+                if (isFin) fin++;
+                if (m.result && String(m.result).indexOf('HIT') === 0) hit++;
+                else if (m.result === 'MISS') miss++;
+            });
+            return { total: ms.length || 14, fin, hit, miss };
+        }
+
+        function registerSfcPeriod(p) {
+            if (!p || !p.period || !p.matches || !p.matches.length) return;
+            const key = String(p.period);
+            const existing = SFC_PERIODS_MAP[key];
+            if (!existing) {
+                SFC_PERIODS_MAP[key] = p;
+                return;
+            }
+            // 若新传入的数据完场数更多，或带完整 odds/quant_factors，则合并升级
+            const oldStats = computeSfcStats(existing);
+            const newStats = computeSfcStats(p);
+            const hasFullOdds = p.matches.some(m => m.odds && m.odds.length >= 3);
+            if (newStats.fin > oldStats.fin || hasFullOdds) {
+                SFC_PERIODS_MAP[key] = Object.assign({}, existing, p);
+            }
+        }
+
+        function renderSfcPeriodSwitcher() {
+            const bar = document.getElementById('sfc-period-switcher');
+            if (!bar) return;
+            const keys = Object.keys(SFC_PERIODS_MAP).sort((a, b) => Number(b) - Number(a));
+            if (keys.length <= 1) {
+                bar.style.display = 'none';
+                return;
+            }
+            bar.style.display = 'flex';
+            bar.style.gap = '8px';
+            bar.style.overflowX = 'auto';
+            bar.style.padding = '2px 0 4px';
+
+            bar.innerHTML = keys.slice(0, 4).map(k => {
+                const p = SFC_PERIODS_MAP[k];
+                const st = computeSfcStats(p);
+                const isActive = String(SFC_SELECTED_PERIOD) === k;
+                const isLatest = String(SFC_LATEST_PERIOD) === k;
+                let tagText = '';
+                if (st.fin >= st.total && st.total > 0) {
+                    const rate = Math.round(st.hit / st.total * 100);
+                    tagText = `💮 ${k}期 · 已完赛打戳 (${st.hit}中 · ${rate}%)`;
+                } else if (st.fin > 0) {
+                    tagText = `🔴 ${k}期 · 进行中 (已完${st.fin}场)`;
+                } else if (isLatest) {
+                    tagText = `🔥 ${k}期 · 最新在售 (${p.deadline || '待开赛'})`;
+                } else {
+                    tagText = `${k}期`;
+                }
+                const activeStyle = isActive
+                    ? 'background: linear-gradient(135deg, rgba(16, 185, 129, 0.25) 0%, rgba(56, 189, 248, 0.22) 100%); border: 1.5px solid #34d399; color: #fff; box-shadow: 0 0 12px rgba(16, 185, 129, 0.28);'
+                    : 'background: rgba(22, 27, 34, 0.9); border: 1px solid rgba(255, 255, 255, 0.12); color: #8b949e;';
+                return `<button onclick="switchSfcPeriod('${k}', true)" style="flex: 1; min-width: 155px; padding: 8px 10px; border-radius: 8px; font-size: 11px; font-weight: 800; cursor: pointer; white-space: nowrap; transition: all 0.2s; ${activeStyle}">
+                    ${tagText}
+                </button>`;
+            }).join('');
+        }
+
+        function switchSfcPeriod(periodKey, byUser) {
+            const key = String(periodKey);
+            const target = SFC_PERIODS_MAP[key];
+            if (!target) return;
+            if (byUser) SFC_USER_SWITCHED = true;
+            SFC_SELECTED_PERIOD = key;
+            SFC_MATCHES_CACHE = target;
+
             const periodNum = document.getElementById('sfc-period-num');
             const deadlineTime = document.getElementById('sfc-deadline-time');
+            if (periodNum && target.period) periodNum.innerText = target.period + '期';
+            if (deadlineTime && target.deadline) deadlineTime.innerText = target.deadline;
+
+            renderSfcPeriodSwitcher();
+            renderSfcList(target);
+        }
+
+        function pickDefaultSfcPeriod() {
+            const keys = Object.keys(SFC_PERIODS_MAP).sort((a, b) => Number(b) - Number(a));
+            if (!keys.length) return null;
+            const latestKey = keys[0];
+            const latest = SFC_PERIODS_MAP[latestKey];
+            const latestStats = computeSfcStats(latest);
+
+            // 如果最新一期尚未开赛（fin === 0），且紧邻的上一期全部完赛且开赛日期就是今天（如今天凌晨完赛的 26147 期），
+            // 在白天复盘时段优先展示刚刚打完戳的上一期，方便彩民第一时间核对 14 场红黑印章！
+            if (keys.length >= 2 && latestStats.fin === 0) {
+                const prevKey = keys[1];
+                const prev = SFC_PERIODS_MAP[prevKey];
+                const prevStats = computeSfcStats(prev);
+                const now = new Date();
+                const mm = String(now.getMonth() + 1).padStart(2, '0');
+                const dd = String(now.getDate()).padStart(2, '0');
+                const todayPrefix = `${mm}-${dd}`;
+                const prevHasTodayMatch = (prev.matches || []).some(m => String(m.time || '').indexOf(todayPrefix) === 0);
+                if (prevStats.fin > 0 && (prevHasTodayMatch || now.getHours() < 18)) {
+                    return prevKey;
+                }
+            }
+            return latestKey;
+        }
+
+        function loadSfcData() {
+            const feed = document.getElementById('sfc-matches-feed');
             if (!feed) return;
 
             const isHttps = location.protocol === 'https:';
@@ -2786,10 +2901,17 @@
                     return res.json();
                 })
                 .then(data => {
-                    SFC_MATCHES_CACHE = data;
-                    if (periodNum && data.period) periodNum.innerText = data.period + '期';
-                    if (deadlineTime && data.deadline) deadlineTime.innerText = data.deadline;
-                    renderSfcList(data);
+                    if (data && data.period) {
+                        SFC_LATEST_PERIOD = String(data.period);
+                        registerSfcPeriod(data);
+                    }
+                    if (data && data.previous_period && data.previous_period.period) {
+                        registerSfcPeriod(data.previous_period);
+                    }
+                    const targetKey = (SFC_USER_SWITCHED && SFC_SELECTED_PERIOD && SFC_PERIODS_MAP[SFC_SELECTED_PERIOD])
+                        ? SFC_SELECTED_PERIOD
+                        : (pickDefaultSfcPeriod() || String(data.period));
+                    switchSfcPeriod(targetKey, false);
                     loadSfcHistory();
                 })
                 .catch(err => {
@@ -2810,7 +2932,21 @@
                 .catch(() => fetch('./data/sfc_history.json?' + bust, { cache: 'no-store' })
                     .then(r => (r.ok ? r.json() : null))
                     .catch(() => null))
-                .then(d => renderSfcHistory(d))
+                .then(d => {
+                    const periods = (d && d.periods) || [];
+                    periods.forEach(p => registerSfcPeriod(p));
+                    if (!SFC_USER_SWITCHED) {
+                        const bestKey = pickDefaultSfcPeriod();
+                        if (bestKey && bestKey !== SFC_SELECTED_PERIOD) {
+                            switchSfcPeriod(bestKey, false);
+                        } else {
+                            renderSfcPeriodSwitcher();
+                        }
+                    } else {
+                        renderSfcPeriodSwitcher();
+                    }
+                    renderSfcHistory(d);
+                })
                 .catch(() => {});
         }
 
@@ -2851,6 +2987,11 @@
                         <span style="font-size:10px; color:var(--text-tertiary);">▾</span>
                     </summary>
                     <div style="padding:0 12px 10px;">
+                        <div style="margin: 4px 0 8px; text-align: right;">
+                            <button onclick="switchSfcPeriod('${p.period}', true); window.scrollTo({top: 0, behavior: 'smooth'});" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8; border-radius: 5px; padding: 3px 8px; font-size: 10px; font-weight: 700; cursor: pointer;">
+                                💮 在上方展开本期 14 场完整盖章卡片 ↗
+                            </button>
+                        </div>
                         ${(p.matches || []).map(rowHtml).join('')}
                         <div style="font-size:9px; color:var(--text-tertiary); margin-top:6px;">归档于 ${p.archived_at || ''}</div>
                     </div>
