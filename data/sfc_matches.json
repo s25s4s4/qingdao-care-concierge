@@ -3,7 +3,7 @@
   "picks_ready": true,
   "deadline": "10-24 00:30",
   "total_matches": 14,
-  "updated_at": "2026-10-24 02:58:27",
+  "updated_at": "2026-10-24 03:58:27",
   "matches": [
     {
       "no": 1,
@@ -479,7 +479,7 @@
       "away": "梅斯",
       "away_rank": "7",
       "fid": "1416936",
-      "status": "未开赛",
+      "status": "已完赛",
       "matched_id": null,
       "odds": [
         "2.69",
@@ -493,8 +493,8 @@
         "market_depth": "百家平均欧赔开出 2.69 / 3.47 / 2.31，三项期望回报（EV）分别为主胜 -0.126、平局 -0.100、客胜 -0.040。盘面诊断：盘面处于正常期望区间。",
         "decision_guide": "传足选号方案：核心首选【客胜(0)】（单挑作胆），🚨大冷预警留意【主胜(3)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
       },
-      "live_status": "",
-      "score": "",
+      "live_status": "FIN",
+      "score": "1-1",
       "pick_primary": "0",
       "pick_secondary": null,
       "pick_desc": "",
@@ -523,9 +523,9 @@
         "smart_type": "DOUBLE",
         "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。"
       },
-      "outcome": "",
-      "result": null,
-      "result_text": ""
+      "outcome": "1",
+      "result": "MISS",
+      "result_text": "未中"
     },
     {
       "no": 10,
@@ -537,7 +537,7 @@
       "away": "格勒诺",
       "away_rank": "15",
       "fid": "1416939",
-      "status": "未开赛",
+      "status": "已完赛",
       "matched_id": null,
       "odds": [
         "1.75",
@@ -551,8 +551,8 @@
         "market_depth": "百家平均欧赔开出 1.75 / 3.45 / 4.33，三项期望回报（EV）分别为主胜 -0.107、平局 -0.073、客胜 -0.042。盘面诊断：⚠️ 胶着震荡预警：历史胜率仅 51%，防平局闷平打出。",
         "decision_guide": "传足选号方案：核心首选【主胜(3)】，次选防冷补【平局(1)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
       },
-      "live_status": "",
-      "score": "",
+      "live_status": "FIN",
+      "score": "2-1",
       "pick_primary": "3",
       "pick_secondary": "1",
       "pick_desc": "",
@@ -581,9 +581,9 @@
         "smart_type": "DOUBLE",
         "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。"
       },
-      "outcome": "",
-      "result": null,
-      "result_text": ""
+      "outcome": "3",
+      "result": "HIT_PRIMARY",
+      "result_text": "首选命中"
     },
     {
       "no": 11,
@@ -595,7 +595,7 @@
       "away": "特尔斯",
       "away_rank": "16",
       "fid": "1415995",
-      "status": "未开赛",
+      "status": "已完赛",
       "matched_id": null,
       "odds": [
         "1.52",
@@ -609,8 +609,8 @@
         "market_depth": "百家平均欧赔开出 1.52 / 4.43 / 4.98，三项期望回报（EV）分别为主胜 -0.031、平局 -0.121、客胜 -0.183。盘面诊断：盘面处于正常期望区间。",
         "decision_guide": "传足选号方案：核心首选【主胜(3)】（单挑作胆）。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
       },
-      "live_status": "",
-      "score": "",
+      "live_status": "FIN",
+      "score": "3-2",
       "pick_primary": "3",
       "pick_secondary": null,
       "pick_desc": "",
@@ -639,9 +639,9 @@
         "smart_type": "SINGLE",
         "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。"
       },
-      "outcome": "",
-      "result": null,
-      "result_text": ""
+      "outcome": "3",
+      "result": "HIT_PRIMARY",
+      "result_text": "首选命中"
     },
     {
       "no": 12,
