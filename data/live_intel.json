@@ -1,7 +1,19 @@
 {
-  "updated_at": "2026-10-23 22:30:52",
+  "updated_at": "2026-10-24 02:00:56",
   "total_tips": 7,
   "live_feed": [
+    {
+      "id": 4405,
+      "channel": "Free365Tips",
+      "time": "2026-10-24 01:05",
+      "code": "周五009",
+      "league": "英超",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "伊普斯 VS 诺丁汉",
+      "chinese": "这料纯走两队互破门路子。伊普斯近10战8场双方进球，后防漏水进攻有韧劲；诺丁汉客场防守同样稀烂，交锋向来大开大合。欧赔BTTS压到1.57低位，资金直奔对攻，首选双双破门、进球数3球起步。",
+      "original": "⚽️ Premier League 🏴 🏴 ⠀ 🏴 Ipswich 🆚 Nottingham Forest 🏴 ⠀ • Nottingham Forest won the last meeting between the teams 4-2. • Ipswich are coming off a 3-2 defeat "
+    },
     {
       "id": 4345,
       "channel": "feedinco",
@@ -51,18 +63,6 @@
       "original": "FOOTBALL ENGLAND IPSWICH VS NOTTINGHAM BOTH TEAMS TO SCORE ODDS : 1.60"
     },
     {
-      "id": 4230,
-      "channel": "bulletbetpredictions",
-      "time": "2026-10-23 15:07",
-      "code": "周五009",
-      "league": "英超",
-      "category": "推单",
-      "is_tip": true,
-      "match": "伊普斯 VS 诺丁汉",
-      "chinese": "诺丁汉客场极度大开大合，客战100%打出大球且双方进球；伊普斯主场也有近七成进球概率。防守端全是大漏勺，资金死怼对攻局，进球数直接看好3球及以上，双破稳如狗。",
-      "original": "100% 🤯 Nottingham Forest away games with Over 2.5 and BTTS. At Ipswich. Top Matches 23 Oct: THE NUMBERS 📊 👉 Swipe through all 14 matches before kick-off. 🗓 Frid"
-    },
-    {
       "id": 4044,
       "channel": "football_predictions_ai",
       "time": "2026-10-23 00:00",
@@ -88,6 +88,18 @@
     }
   ],
   "archived": [
+    {
+      "id": 4230,
+      "channel": "bulletbetpredictions",
+      "time": "2026-10-23 15:07",
+      "code": "周五009",
+      "league": "英超",
+      "category": "推单",
+      "is_tip": true,
+      "match": "伊普斯 VS 诺丁汉",
+      "chinese": "诺丁汉客场极度大开大合，客战100%打出大球且双方进球；伊普斯主场也有近七成进球概率。防守端全是大漏勺，资金死怼对攻局，进球数直接看好3球及以上，双破稳如狗。",
+      "original": "100% 🤯 Nottingham Forest away games with Over 2.5 and BTTS. At Ipswich. Top Matches 23 Oct: THE NUMBERS 📊 👉 Swipe through all 14 matches before kick-off. 🗓 Frid"
+    },
     {
       "id": 4045,
       "channel": "football_predictions_ai",
