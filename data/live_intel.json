@@ -1,7 +1,33 @@
 {
-  "updated_at": "2026-10-24 04:31:00",
-  "total_tips": 6,
+  "updated_at": "2026-10-24 05:00:55",
+  "total_tips": 2,
   "live_feed": [
+    {
+      "id": 4345,
+      "channel": "feedinco",
+      "time": "2026-10-23 22:05",
+      "code": "周六009",
+      "league": "意甲",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "科莫 VS 萨索洛",
+      "chinese": "老弟看过来，欧媒这波推单主打科莫主场不败（1X）。资金面明显防着科莫主场拿分，萨索洛客战硬度有限，双选胜平稳妥，首选主胜防平。首发防线没大伤病，主队坐和望赢格局。",
+      "original": "FEEDINCO.com Tips for Saturday, 24 October 1X - Borussia Dortmund - Eintracht Frankfurt 1X - Como - Sassuolo O1.5 - FC Shakhtar Donetsk - FC Zorya Lugansk O1.5 "
+    },
+    {
+      "id": 4044,
+      "channel": "football_predictions_ai",
+      "time": "2026-10-23 00:00",
+      "code": "周日006",
+      "league": "意甲",
+      "category": "推单",
+      "is_tip": true,
+      "match": "国际米兰 VS 佛罗伦萨",
+      "chinese": "国米主场打紫百合，欧指核心资金直奔大球去，大2.5开到1.41超低位、机构看好度超六成六。国米本季点球百分百命中、状态正盛，本场奔着对攻开火，首选进球数3球起步！",
+      "original": "🏆 WEEKEND PREVIEW 🇮🇹 Serie A 📊 Season Trends (70 matches) ⚽ Avg goals/match: 2.96 · Over 2.5 in 60% 🏠 Home win 47% · Draw 17% · Away win 36% 🎯 BTTS Yes in 57% ·"
+    }
+  ],
+  "archived": [
     {
       "id": 4443,
       "channel": "footballbettingtips10",
@@ -27,18 +53,6 @@
       "original": "⚽️ Premier League 🏴 🏴 ⠀ 🏴 Ipswich 🆚 Nottingham Forest 🏴 ⠀ • Nottingham Forest won the last meeting between the teams 4-2. • Ipswich are coming off a 3-2 defeat "
     },
     {
-      "id": 4345,
-      "channel": "feedinco",
-      "time": "2026-10-23 22:05",
-      "code": "周六009",
-      "league": "意甲",
-      "category": "赛前军情",
-      "is_tip": false,
-      "match": "科莫 VS 萨索洛",
-      "chinese": "老弟看过来，欧媒这波推单主打科莫主场不败（1X）。资金面明显防着科莫主场拿分，萨索洛客战硬度有限，双选胜平稳妥，首选主胜防平。首发防线没大伤病，主队坐和望赢格局。",
-      "original": "FEEDINCO.com Tips for Saturday, 24 October 1X - Borussia Dortmund - Eintracht Frankfurt 1X - Como - Sassuolo O1.5 - FC Shakhtar Donetsk - FC Zorya Lugansk O1.5 "
-    },
-    {
       "id": 4316,
       "channel": "football_predictions_ai",
       "time": "2026-10-23 20:00",
@@ -62,20 +76,6 @@
       "chinese": "欧洲前线暗流倾向主队爆冷！外界严重低估伊普斯，资金正逆向抄底主胜。机构平局退款（平局退本）给到2.20超高回报，博主队不败拿分，求稳直接防手让胜或走平手盘。",
       "original": "Our first free football tip of the weekend comes from The Cerces Service , who is backing Ipswich Town as over-priced underdogs to beat Nottingham Forest in Fri"
     },
-    {
-      "id": 4044,
-      "channel": "football_predictions_ai",
-      "time": "2026-10-23 00:00",
-      "code": "周日006",
-      "league": "意甲",
-      "category": "推单",
-      "is_tip": true,
-      "match": "国际米兰 VS 佛罗伦萨",
-      "chinese": "国米主场打紫百合，欧指核心资金直奔大球去，大2.5开到1.41超低位、机构看好度超六成六。国米本季点球百分百命中、状态正盛，本场奔着对攻开火，首选进球数3球起步！",
-      "original": "🏆 WEEKEND PREVIEW 🇮🇹 Serie A 📊 Season Trends (70 matches) ⚽ Avg goals/match: 2.96 · Over 2.5 in 60% 🏠 Home win 47% · Draw 17% · Away win 36% 🎯 BTTS Yes in 57% ·"
-    }
-  ],
-  "archived": [
     {
       "id": 4437,
       "channel": "matchplug",
