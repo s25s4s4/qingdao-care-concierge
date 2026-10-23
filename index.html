@@ -1255,6 +1255,70 @@
             opacity: 0.85;
             font-weight: 600;
         }
+
+        /* 传足与单关卡片专属样式补齐（解决移动端未定义类导致队名竖排、联赛标签无圆角内边距） */
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 10px;
+        }
+        .league-tag {
+            display: inline-flex;
+            align-items: center;
+            padding: 2.5px 8px;
+            border-radius: 5px;
+            font-size: 11px;
+            font-weight: 800;
+            color: #fff;
+            font-family: var(--font-mono);
+            letter-spacing: 0.2px;
+            white-space: nowrap;
+        }
+        .kickoff-time {
+            font-size: 11px;
+            font-family: var(--font-mono);
+            color: var(--text-secondary);
+            white-space: nowrap;
+        }
+        .match-teams, .teams-box {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+        .team-side {
+            min-width: 0;
+        }
+        .team-side.home { text-align: left; }
+        .team-side.away { text-align: right; }
+        .team-name {
+            font-size: 14.5px;
+            font-weight: 800;
+            color: var(--text-primary);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .vs-badge, .badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2px 7px;
+            border-radius: 5px;
+            font-size: 10.5px;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+        .section-title {
+            font-size: 13px;
+            font-weight: 800;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
     </style>
 </head>
 <body>
@@ -1554,8 +1618,8 @@
 
                 <div style="font-size: 13px; font-weight: 700; color: #3fb950; margin-bottom: 4px;">🤝 添加店主小杨个人微信 · 免费进VIP交流群</div>
                 <div style="font-size: 11px; color: var(--text-secondary); margin-bottom: 12px;">每日开售第一时间同步【四维深度案卷 · 内部稳胆组合 · 进球数精算】</div>
-                <div class="wechat-btn" onclick="copyWechat()" style="background: #238636; color: #fff; font-size: 15px; font-weight: 800; padding: 12px 18px; border-radius: 10px; box-shadow: 0 4px 16px rgba(35, 134, 54, 0.4); display: flex; align-items: center; justify-content: center; gap: 8px;">
-                    <span style="font-size: 18px;">💬</span> 一键复制微信号：<b id="wx-id" style="color: #fff; font-family: var(--font-mono); letter-spacing: 0.5px;">haomenjingcai-123</b>
+                <div class="wechat-btn" onclick="copyWechat()" style="width: 100%; background: #238636; color: #fff; font-size: 13.5px; font-weight: 800; padding: 11px 12px; border-radius: 10px; box-shadow: 0 4px 16px rgba(35, 134, 54, 0.4); display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 6px;">
+                    <span style="font-size: 16px;">💬</span> <span>一键复制微信号：<b id="wx-id" style="color: #fff; font-family: var(--font-mono); letter-spacing: 0.3px;">haomenjingcai-123</b></span>
                 </div>
                 <div id="copy-msg" style="font-size: 12px; color: #3fb950; margin-top: 8px; font-weight: 700; display: none;">
                     ✓ 微信号已复制成功！打开微信搜索即可直接添加好友
@@ -3327,35 +3391,35 @@
                 `;
 
                 card.innerHTML = `
-                    <div class=\"card-header\" style=\"display: flex; justify-content: space-between; align-items: center;\">
-                        <div style=\"display: flex; align-items: center; gap: 8px;\">
-                            <div class=\"league-tag\" style=\"background: ${m.league_color || '#F75000'}; font-weight: 800; font-family: var(--font-mono);\">
+                    <div class="card-header">
+                        <div style="display: flex; align-items: center; gap: 6px; flex-wrap: wrap;">
+                            <div class="league-tag" style="background: ${m.league_color || '#F75000'};">
                                 第 ${m.no} 场 · ${m.league || '传足'}
                             </div>
                             ${sfcAuditBadge}
                         </div>
-                        <div class=\"kickoff-time\">
-                            ⏰ ${m.time} 鸣哨
+                        <div class="kickoff-time">
+                            ⏰ ${m.time}
                         </div>
                     </div>
 
-                    <div class=\"match-teams\" style=\"margin-bottom: 6px;\">
-                        <div class=\"team-block home\" style=\"flex: 1;\">
-                            <div class=\"team-title\">${m.home} ${m.home_rank ? `<span style=\"font-size: 10px; color: var(--text-tertiary);\">[${m.home_rank}]</span>` : ''}</div>
+                    <div class="match-teams" style="margin-bottom: 8px;">
+                        <div class="team-block home">
+                            <div class="team-title">${m.home}${m.home_rank ? `<span style="font-size: 10px; color: var(--text-tertiary); margin-left: 2px;">[${m.home_rank}]</span>` : ''}</div>
                         </div>
-                        <div class=\"vs-box\" style=\"min-width: 68px; text-align: center;\">
+                        <div class="vs-box" style="min-width: 56px; text-align: center;">
                             ${midScoreHtml}
                         </div>
-                        <div class=\"team-block away\" style=\"flex: 1; text-align: right;\">
-                            <div class=\"team-title\">${m.away_rank ? `<span style=\"font-size: 10px; color: var(--text-tertiary);\">[${m.away_rank}]</span>` : ''} ${m.away}</div>
+                        <div class="team-block away">
+                            <div class="team-title">${m.away_rank ? `<span style="font-size: 10px; color: var(--text-tertiary); margin-right: 2px;">[${m.away_rank}]</span>` : ''}${m.away}</div>
                         </div>
                     </div>
 
                     ${oddsHtml}
                     ${m.quant_factors ? `
-                    <div style="margin-top: 8px; padding-top: 6px; border-top: 1px dashed rgba(255,255,255,0.06); display: flex; justify-content: space-between; align-items: center; font-size: 10.5px; color: var(--text-secondary);">
-                        <span>📊 同赔样本 ${m.quant_factors.samples}场：<b style="color:#3fb950;">胜${m.quant_factors.win_rate}%</b> · <b style="color:#d29922;">平${m.quant_factors.draw_rate}%</b> · <b style="color:#ff7b72;">负${m.quant_factors.loss_rate}%</b></span>
-                        <span style="color: #38bdf8; font-weight: 700;">${m.quant_factors.stars} 详情 ↗</span>
+                    <div style="margin-top: 8px; padding-top: 6px; border-top: 1px dashed rgba(255,255,255,0.07); display: flex; justify-content: space-between; align-items: center; gap: 6px; font-size: 10.5px; color: var(--text-secondary); flex-wrap: wrap;">
+                        <span style="font-family: var(--font-mono);">📊 同赔${m.quant_factors.samples}场：<b style="color:#3fb950;">胜${m.quant_factors.win_rate}%</b> · <b style="color:#d29922;">平${m.quant_factors.draw_rate}%</b> · <b style="color:#ff7b72;">负${m.quant_factors.loss_rate}%</b></span>
+                        <span style="color: #38bdf8; font-weight: 800; white-space: nowrap; margin-left: auto;">${m.quant_factors.stars} 案卷 ↗</span>
                     </div>
                     ` : ''}
                 `;
