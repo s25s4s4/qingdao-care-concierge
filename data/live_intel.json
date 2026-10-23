@@ -1,7 +1,19 @@
 {
-  "updated_at": "2026-10-23 11:31:10",
-  "total_tips": 2,
+  "updated_at": "2026-10-23 15:31:02",
+  "total_tips": 3,
   "live_feed": [
+    {
+      "id": 4230,
+      "channel": "bulletbetpredictions",
+      "time": "2026-10-23 15:07",
+      "code": "周五009",
+      "league": "英超",
+      "category": "推单",
+      "is_tip": true,
+      "match": "伊普斯 VS 诺丁汉",
+      "chinese": "诺丁汉客场极度大开大合，客战100%打出大球且双方进球；伊普斯主场也有近七成进球概率。防守端全是大漏勺，资金死怼对攻局，进球数直接看好3球及以上，双破稳如狗。",
+      "original": "100% 🤯 Nottingham Forest away games with Over 2.5 and BTTS. At Ipswich. Top Matches 23 Oct: THE NUMBERS 📊 👉 Swipe through all 14 matches before kick-off. 🗓 Frid"
+    },
     {
       "id": 4044,
       "channel": "football_predictions_ai",
