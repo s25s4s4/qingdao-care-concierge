@@ -1,23 +1,21 @@
 # -*- coding: utf-8 -*-
-"""传足（胜负彩 14 场）赛程刷新。
+"""传足（胜负彩 14 场）赛程刷新与完场自动打戳引擎。
 
-背景：原来只有服务器上一个 cron 在跑 `sync_sfc.py`，而那个脚本**只更新已有对阵的比分**，
-不会拉新一期。结果 10-19 那期的 14 场一直挂着，页签展示的是两天前的比赛。
-
-本脚本负责「换期」：从 500.com 抓当前期号与 14 场对阵，交给 quant_engine 算因子与选号，
-写回 data/sfc_matches.json，然后推 GitHub + scp 阿里云。
-
-设计要点：
-  * **赔率没出来就不覆盖**。新一期刚开售时 500 的「平均欧赔」是 "-"，此时不能算量化，
-    如果强行写入会把上一期已经算好的选号冲掉。所以：同期且无赔率 → 原样不动。
-  * 同期已存在时，保留原 dossier（LLM 生成，重算一次要 14 次调用）。
-  * 全流程 try/except，失败不影响别的流水线。
+核心职责：
+  1. 从 500.com 抓取传足 14 场赛程与官方平均欧赔，交由 quant_engine 推演首选/次选/防冷选号；
+  2. 从 `live.500.com/zucai.php?e=<期号>` + `live.500.com/` 按 fid 精确同步实时比分与完场赛果，
+     自动计算 HIT_PRIMARY / HIT_SECONDARY / HIT_UPSET / MISS 命中印章；
+  3. 任何比分或状态变更均立即同步至 GitHub 与阿里云服务器（含 sfc_matches.json 与 sfc_history.json）；
+  4. 换期时完整归档上一期全量卡片字段（并附带于 previous_period），确保前端可随时切换查看上期打戳复盘与新期选号。
 """
+import copy
 import json
 import os
 import re
+import ssl
 import subprocess
 import sys
+import time
 import urllib.request
 from datetime import datetime
 
@@ -27,11 +25,30 @@ HISTORY = os.path.join(HERE, "data", "sfc_history.json")
 HISTORY_KEEP = 30        # 最多留 30 期
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0 Safari/537.36"
 
+# 直连 opener（绕过本机系统代理，防止国内 500.com 走海外代理节点触发 SSL 证书错误或断流）
+_DIRECT_OPENER = urllib.request.build_opener(urllib.request.ProxyHandler({}))
+_UNVERIFIED_SSL = ssl._create_unverified_context()
 
-def _get(url, timeout=15):
-    req = urllib.request.Request(url, headers={"User-Agent": UA, "Referer": "https://trade.500.com/"})
-    with urllib.request.urlopen(req, timeout=timeout) as r:
-        return r.read().decode("gbk", errors="ignore")
+
+def _get(url, timeout=15, referer="https://trade.500.com/"):
+    headers = {"User-Agent": UA, "Referer": referer}
+    last_err = None
+    candidates = [url]
+    if url.startswith("https://"):
+        candidates.append(url.replace("https://", "http://", 1))
+    for candidate_url in candidates:
+        for use_direct in (True, False):
+            try:
+                req = urllib.request.Request(candidate_url, headers=headers)
+                if use_direct:
+                    with _DIRECT_OPENER.open(req, timeout=timeout) as r:
+                        return r.read().decode("gbk", errors="ignore")
+                else:
+                    with urllib.request.urlopen(req, timeout=timeout, context=_UNVERIFIED_SSL) as r:
+                        return r.read().decode("gbk", errors="ignore")
+            except Exception as e:
+                last_err = e
+    raise last_err
 
 
 def fetch_current_period():
@@ -105,28 +122,29 @@ def parse_fixtures(html):
 
 
 def fetch_avg_odds(fid):
-    """胜负彩页的「平均欧赔」是前端 JS 填的（td-pei 恒为 "-"），
-    真正有数的是 odds.500.com 的欧赔页，取三个 id：avwinc2（主胜）/ avdrawc2（平）/ avlostc2（客胜）。
-    注意必须带 Referer，否则返回空壳。"""
+    """从 odds.500.com 欧赔页提取平均欧赔（avwinc2 / avdrawc2 / avlostc2）。
+    加入重试与短暂间隔，防止连续抓 14 场时被 500.com 限流断连。"""
     if not fid:
         return []
     url = f"https://odds.500.com/fenxi/ouzhi-{fid}.shtml"
-    try:
-        req = urllib.request.Request(url, headers={
-            "User-Agent": UA,
-            "Referer": "https://trade.500.com/sfc/",
-        })
-        with urllib.request.urlopen(req, timeout=12) as r:
-            h = r.read().decode("gbk", errors="ignore")
-    except Exception:
-        return []
-    out = []
-    for key in ("avwinc2", "avdrawc2", "avlostc2"):
-        m = re.search(rf'id="{key}"[^>]*>\s*([0-9]+\.[0-9]+)', h)
-        if not m:
-            return []
-        out.append(m.group(1))
-    return out if len(out) == 3 else []
+    for attempt in range(3):
+        try:
+            if attempt > 0:
+                time.sleep(0.4 * attempt)
+            h = _get(url, timeout=12, referer="https://trade.500.com/sfc/")
+            out = []
+            for key in ("avwinc2", "avdrawc2", "avlostc2"):
+                m = re.search(rf'id="{key}"[^>]*>\s*([0-9]+\.[0-9]+)', h)
+                if not m:
+                    out = []
+                    break
+                out.append(m.group(1))
+            if len(out) == 3:
+                time.sleep(0.15)
+                return out
+        except Exception:
+            continue
+    return []
 
 
 def load_existing():
@@ -153,7 +171,7 @@ def build(period, matches, existing):
             if o.get(k):
                 m[k] = o[k]
     deadline = min((m["time"] for m in matches if m["time"]), default="")
-    return {
+    res = {
         "period": str(period),
         "picks_ready": any(m.get("pick_primary") for m in matches),
         "deadline": deadline,
@@ -161,28 +179,13 @@ def build(period, matches, existing):
         "updated_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         "matches": matches,
     }
+    if existing.get("previous_period"):
+        res["previous_period"] = existing["previous_period"]
+    return res
 
 
-def update_scores():
-    """从 live.500.com 首页按 **fid** 精确取比分。
-
-    两个坑都踩过：
-    1. 服务器上原来那套用 `home[:2]` 去 `html.find()`，「利物」先命中
-       **利物浦U19 vs 比利亚雷亚尔U19**（欧青联 0-0），把成年队 4-3 覆盖成 0-0。
-    2. `wanchang.php`（完场页）**不是实时**：2026-10-22 06:20 抓它，最新只到 10-21 09:30，
-       当天凌晨的 7 场全不在里面，所以命中戳一直打不上。
-
-    现在统一走 `live.500.com/` 首页：每行带 `id="a<fid>" gy="赛事,主队,客队" status="N"`，
-    status 4=完场，1/2/3=进行中，比分在 `class="clt1/clt3"`。
-    """
-    try:
-        html = _get("https://live.500.com/")
-    except Exception as e:
-        _log(f"比分页抓取失败: {type(e).__name__}")
-        return 0
-
-    # 属性顺序不固定（实测是 id → order → status → gy），所以先取开标签再逐个抽
-    by_fid = {}
+def _parse_live_rows(html, by_fid):
+    """从 500 比分页 HTML 中提取 id="a<fid>" status="N" 与主客场比分"""
     for m in re.finditer(r"<tr([^>]*)>(.*?)</tr>", html, re.S):
         attrs, body = m.group(1), m.group(2)
         f = re.search(r'id="a(\d+)"', attrs)
@@ -194,20 +197,20 @@ def update_scores():
         if len(pk) < 2 or not pk[0].strip() or not pk[1].strip():
             continue
         try:
-            by_fid[fid] = (int(pk[0]), int(pk[1]), status)
+            hg, ag = int(pk[0].strip()), int(pk[1].strip())
         except ValueError:
             continue
+        # 若已有完场状态 "4"，不被旧状态覆盖
+        prev = by_fid.get(fid)
+        if prev and prev[2] == "4" and status != "4":
+            continue
+        by_fid[fid] = (hg, ag, status)
 
-    if not by_fid:
-        _log("比分页暂无在售场次（非错误）")
-        return 0
 
-    data = load_existing()
-    if not data.get("matches"):
-        return 0
-
+def _apply_scores_to_matches(matches, by_fid):
+    """将 by_fid 中的比分与完场状态应用到 matches 列表，并自动盖上命中印章"""
     changed = 0
-    for m in data["matches"]:
+    for m in matches:
         got = by_fid.get(str(m.get("fid") or ""))
         if not got:
             continue
@@ -220,36 +223,113 @@ def update_scores():
             new_status, new_live = "进行中", "LIVE"
         else:
             continue          # 0=未开赛，不覆盖
-        if m.get("score") == score and m.get("status") == new_status:
+
+        outcome = ""
+        new_res, new_res_text = m.get("result"), m.get("result_text", "")
+        if fin:
+            outcome = "3" if hg > ag else ("1" if hg == ag else "0")
+            if outcome == str(m.get("pick_primary") or ""):
+                new_res, new_res_text = "HIT_PRIMARY", "首选命中"
+            elif outcome == str(m.get("pick_secondary") or ""):
+                new_res, new_res_text = "HIT_SECONDARY", "次选命中"
+            elif outcome == str(m.get("pick_upset") or ""):
+                new_res, new_res_text = "HIT_UPSET", "防冷命中"
+            else:
+                new_res, new_res_text = "MISS", "未中"
+
+        if (m.get("score") == score and m.get("status") == new_status
+                and m.get("result") == new_res and m.get("outcome") == outcome):
             continue
+
         m["score"] = score
         m["status"] = new_status
         m["live_status"] = new_live
         if fin:
-            outcome = "3" if hg > ag else ("1" if hg == ag else "0")
             m["outcome"] = outcome
-            if outcome == str(m.get("pick_primary") or ""):
-                m["result"], m["result_text"] = "HIT_PRIMARY", "首选命中"
-            elif outcome == str(m.get("pick_secondary") or ""):
-                m["result"], m["result_text"] = "HIT_SECONDARY", "次选命中"
-            elif outcome == str(m.get("pick_upset") or ""):
-                m["result"], m["result_text"] = "HIT_UPSET", "防冷命中"
-            else:
-                m["result"], m["result_text"] = "MISS", "未中"
+            m["result"] = new_res
+            m["result_text"] = new_res_text
         changed += 1
-
-    if changed:
-        with open(OUT, "w", encoding="utf-8") as f:
-            json.dump(data, f, ensure_ascii=False, indent=2)
-        _log(f"比分更新 {changed} 场")
     return changed
 
 
-def archive_period(old):
-    """换期前把上一期存进历史，否则一切期就永久丢了。
+def update_scores():
+    """从 500 足彩专属比分页 (`zucai.php?e=<期号>`) + 竞彩首页 (`live.500.com/`) 按 fid 精确取比分。
 
-    只留精简字段——案卷(dossier)体积大且只在当期有用。
+    为什么必须优先抓 `zucai.php?e=<期号>`：
+      1. `live.500.com/` 默认只展示竞彩赛事，而传足 14 场经常包含竞彩未开售的欧协联/意乙/法乙等场次
+         （例如 26147 期第 1、11、13、14 场），只抓首页会导致这几场永远卡在“未开赛”；
+      2. 次日早上 10:00 后 `live.500.com/` 会切到新一天赛程，昨晚完场赛事全部滚出首页；
+      3. `zucai.php?e=<期号>` 按期号永久保留该期全部 14 场传足对阵的实时与完场比分，HTML 结构完全一致。
     """
+    data = load_existing()
+    if not data.get("matches"):
+        return 0
+
+    existing_period = str(data.get("period") or "")
+    prev_period = str((data.get("previous_period") or {}).get("period") or "")
+
+    urls = []
+    if existing_period:
+        urls.append(f"https://live.500.com/zucai.php?e={existing_period}")
+    if prev_period and prev_period != existing_period:
+        urls.append(f"https://live.500.com/zucai.php?e={prev_period}")
+    urls.extend([
+        "https://live.500.com/zucai.php",
+        "https://live.500.com/",
+    ])
+
+    by_fid = {}
+    for u in urls:
+        try:
+            html = _get(u, referer="https://live.500.com/")
+            _parse_live_rows(html, by_fid)
+        except Exception as e:
+            _log(f"比分页抓取异常 ({u}): {type(e).__name__}")
+
+    if not by_fid:
+        _log("比分页暂无在售场次（非错误）")
+        return 0
+
+    changed = _apply_scores_to_matches(data["matches"], by_fid)
+    if data.get("previous_period") and data["previous_period"].get("matches"):
+        changed += _apply_scores_to_matches(data["previous_period"]["matches"], by_fid)
+
+    if changed:
+        data["updated_at"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        with open(OUT, "w", encoding="utf-8") as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
+        _log(f"比分更新 {changed} 场")
+
+    # 若当期或上一期已全部完赛，同步写入/更新 sfc_history.json，确保历史复盘与打戳实时就绪
+    if all_finished(data):
+        archive_period(data)
+    if data.get("previous_period") and all_finished(data["previous_period"]):
+        archive_period(data["previous_period"])
+
+    return changed
+
+
+def _summarize_matches(matches):
+    s = {"total": 0, "hit_primary": 0, "hit_secondary": 0, "hit_upset": 0, "miss": 0, "pending": 0}
+    for m in matches:
+        r = str(m.get("result") or "")
+        s["total"] += 1
+        if r == "HIT_PRIMARY":
+            s["hit_primary"] += 1
+        elif r == "HIT_SECONDARY":
+            s["hit_secondary"] += 1
+        elif r == "HIT_UPSET":
+            s["hit_upset"] += 1
+        elif r == "MISS":
+            s["miss"] += 1
+        else:
+            s["pending"] += 1
+    s["hit"] = s["hit_primary"] + s["hit_secondary"] + s["hit_upset"]
+    return s
+
+
+def archive_period(old):
+    """将已完成（或换期前）的期次存入 sfc_history.json，完整保留卡片渲染所需字段与打戳结果。"""
     if not old or not old.get("matches"):
         return None
     period = str(old.get("period") or "")
@@ -265,34 +345,40 @@ def archive_period(old):
             pass
     periods = [p for p in hist.get("periods", []) if str(p.get("period")) != period]
 
-    s = {"total": 0, "hit_primary": 0, "hit_secondary": 0, "hit_upset": 0, "miss": 0, "pending": 0}
+    s = _summarize_matches(old["matches"])
     ms = []
     for m in old["matches"]:
-        r = str(m.get("result") or "")
-        s["total"] += 1
-        if r == "HIT_PRIMARY":
-            s["hit_primary"] += 1
-        elif r == "HIT_SECONDARY":
-            s["hit_secondary"] += 1
-        elif r == "HIT_UPSET":
-            s["hit_upset"] += 1
-        elif r == "MISS":
-            s["miss"] += 1
-        else:
-            s["pending"] += 1
         ms.append({
-            "no": m.get("no"), "league": m.get("league"), "time": m.get("time"),
-            "home": m.get("home"), "away": m.get("away"),
-            "score": m.get("score", ""), "outcome": m.get("outcome", ""),
-            "pick_primary": m.get("pick_primary"), "pick_secondary": m.get("pick_secondary"),
-            "pick_upset": m.get("pick_upset"), "result": r,
+            "no": m.get("no"),
+            "league": m.get("league"),
+            "league_color": m.get("league_color", "#6F00DD"),
+            "time": m.get("time"),
+            "home": m.get("home"),
+            "home_rank": m.get("home_rank", ""),
+            "away": m.get("away"),
+            "away_rank": m.get("away_rank", ""),
+            "fid": m.get("fid", ""),
+            "status": m.get("status", "已完赛"),
+            "live_status": m.get("live_status", "FIN"),
+            "odds": m.get("odds", []),
+            "score": m.get("score", ""),
+            "outcome": m.get("outcome", ""),
+            "pick_primary": m.get("pick_primary"),
+            "pick_secondary": m.get("pick_secondary"),
+            "pick_upset": m.get("pick_upset"),
+            "pick_desc": m.get("pick_desc", ""),
+            "result": m.get("result"),
             "result_text": m.get("result_text", ""),
+            "quant_factors": m.get("quant_factors", {}),
+            "consensus": m.get("consensus", ""),
+            "dossier": m.get("dossier", {}),
         })
-    s["hit"] = s["hit_primary"] + s["hit_secondary"] + s["hit_upset"]
 
     periods.append({
         "period": period,
+        "picks_ready": old.get("picks_ready", True),
         "deadline": old.get("deadline", ""),
+        "total_matches": len(ms),
         "archived_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         "summary": s,
         "matches": ms,
@@ -307,12 +393,7 @@ def archive_period(old):
 
 
 def all_finished(existing):
-    """上一期是否已经全部打完。
-
-    竞彩一期 14 场会跨两天（例如 26146 是 10-21 03:00 到 10-22 03:00）。
-    只要还有一场没结束就不能换期——否则会把正在进行的这期连同已算好的选号一起冲掉，
-    用户看到的就是「上一期还没打完，页面已经跳到下一期」。
-    """
+    """上一期是否已经全部打完。"""
     ms = existing.get("matches") or []
     if not ms:
         return True
@@ -325,44 +406,56 @@ def all_finished(existing):
 
 
 def same_round(matches, existing):
-    """按对阵判断是不是同一期。
-
-    不能只比 period 字段——2026-10-22 发现线上数据标着 26147，装的却是 26146 的 10-21 欧冠场次，
-    标签本身就是错的。对阵比标签可靠。
-    """
+    """按对阵判断是不是同一期。"""
     old = {(m.get("home"), m.get("away")) for m in existing.get("matches", [])}
     new = {(m["home"], m["away"]) for m in matches}
     return bool(old) and old == new
 
 
 def main(force=False):
+    # 1. 无论是否换期，先把已有期次的实时比分与完场命中戳刷新
+    score_changed = update_scores()
+    existing = load_existing()
+
     period = fetch_current_period()
     if not period:
+        if score_changed:
+            publish()
         _log("拿不到当前期号，放弃")
         return 1
+
     html = _get(f"https://trade.500.com/sfc/?expect={period}")
     matches, odds_ready = parse_fixtures(html)
     if len(matches) < 14:
+        if score_changed:
+            publish()
         _log(f"只解析到 {len(matches)} 场（应为 14），放弃")
         return 1
 
-    update_scores()          # 先把比分刷新（按 fid 精确匹配）
-    existing = load_existing()
-
-    # 先判断是不是同一期，再决定要不要走换期闸门。
-    # 之前的顺序错了：闸门写在前面，导致「同期还没打完」也被拦下 ——
-    # 赔率开出来了却永远不更新（2026-10-22 的 bug）。
     same = same_round(matches, existing)
 
-    # 已完成期提前跳过：必须放在欧赔补抓之前，否则每轮都白抓 14 个赔率页
-    # （2026-10-22 修复：实测每 10 分钟 14 个请求，纯浪费还有封禁风险）。
+    # 2. 同期且选号已完成：若刚才 update_scores() 有新比分/新盖章，必须立即 publish() 推送线上！
     if same and not force:
         _ex = existing.get("matches") or []
         if _ex and all((m.get("quant_factors") and m.get("pick_primary")) for m in _ex):
-            _log(f"{period} 期已完成，跳过")
+            if score_changed:
+                publish()
+                _log(f"{period} 期比分/命中戳已同步发布（更新 {score_changed} 场）")
+            else:
+                _log(f"{period} 期已完成，跳过")
             return 0
 
-    # 胜负彩页赔率恒为 "-"：逐场去欧赔页补（已有赔率的场次不重复抓）
+    # 3. 换期闸门：只有当上一期 14 场全部完赛后才允许切换到下一期
+    if not same and not all_finished(existing) and not force:
+        if score_changed:
+            publish()
+            _log(f"上一期（{existing.get('period')}）比分已同步发布（更新 {score_changed} 场）")
+        left = sum(1 for m in existing.get("matches", [])
+                   if "已完赛" not in str(m.get("status") or ""))
+        _log(f"上一期（{existing.get('period')}）还有 {left} 场未结束，暂不换到 {period} 期")
+        return 0
+
+    # 4. 补抓平均欧赔（已有赔率的场次不重复抓）
     if not odds_ready:
         old_odds = {}
         if same:
@@ -380,28 +473,33 @@ def main(force=False):
             if o:
                 m["odds"] = o
                 got += 1
-        # 不必等 14 场全齐：有多少算多少，quant_engine 会跳过没赔率的场次
-        odds_ready = got > 0
+        # 换期时要求新一期全部 14 场欧赔齐全才覆盖（避免半成品无选号冲掉上一期完赛红单榜）
+        odds_ready = (got == len(matches)) if not same else (got > 0)
         _log(f"欧赔补抓：{got}/{len(matches)} 场")
 
-    # 换期闸门：只有要换到「另一期」时才检查上一期是否打完
-    if not same and not all_finished(existing) and not force:
-        left = sum(1 for m in existing.get("matches", [])
-                   if "已完赛" not in str(m.get("status") or ""))
-        _log(f"上一期（{existing.get('period')}）还有 {left} 场未结束，暂不换到 {period} 期")
+    if not odds_ready and not force:
+        if score_changed:
+            publish()
+            _log(f"上一期（{existing.get('period')}）完场打戳已同步发布；新一期 {period} 欧赔未齐暂缓换期")
+        else:
+            _log(f"{period} 期赔率尚未全齐，保持现状")
         return 0
 
-    if not same:
+    prev_snapshot = None
+    if not same and existing.get("matches"):
         _s = archive_period(existing)
         if _s:
             _log(f"上一期 {existing.get('period')} 已归档：{_s['hit']} 中 / {_s['miss']} 失")
-    elif not odds_ready and not force:
-        _log(f"{period} 期赔率尚未开出，保持现状")
-        return 0
+        prev_snapshot = copy.deepcopy(existing)
+        prev_snapshot.pop("previous_period", None)
+        prev_snapshot["summary"] = _s or _summarize_matches(existing.get("matches", []))
 
+    before_str = json.dumps(existing, ensure_ascii=False, indent=2).strip()
     data = build(period, matches, existing if same else {})
+    if prev_snapshot:
+        data["previous_period"] = prev_snapshot
 
-    # 先落盘，再让 quant_engine 读文件算因子并回写（它的接口就是读路径→改→写路径）
+    # 先落盘，再让 quant_engine 读文件算因子并回写
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
@@ -409,30 +507,33 @@ def main(force=False):
         try:
             import quant_engine
             quant_engine.run_pipeline_on_sfc(OUT)
-            # quant 是读文件→改→写文件，picks_ready 得等它跑完再算
             with open(OUT, encoding="utf-8") as f:
                 _d = json.load(f)
             _d["picks_ready"] = any(m.get("pick_primary") for m in _d.get("matches", []))
+            if prev_snapshot:
+                _d["previous_period"] = prev_snapshot
             with open(OUT, "w", encoding="utf-8") as f:
                 json.dump(_d, f, ensure_ascii=False, indent=2)
         except Exception as e:
             _log(f"量化失败: {type(e).__name__} {e}")
 
+    # 换期或重算后，再跑一次 update_scores 以防新期已有开赛/完场场次
+    update_scores()
+
     with open(OUT, encoding="utf-8") as f:
         final = f.read()
 
-    # 内容没变就不推，避免每半小时一次空提交
-    if final.strip() == json.dumps(existing, ensure_ascii=False, indent=2).strip():
+    if not score_changed and final.strip() == before_str:
         _log(f"{period} 期内容无变化，跳过发布")
         return 0
 
     publish()
-    _log(f"{period} 期已更新：{len(matches)} 场，赔率{'就绪' if odds_ready else '未开'}")
+    _log(f"{period} 期已更新并发布：{len(matches)} 场，赔率{'就绪' if odds_ready else '未开'}")
     return 0
 
 
 def publish():
-    """推 GitHub Pages + 直传阿里云（失败只告警，不影响本地文件）"""
+    """推 GitHub Pages + 直传阿里云（同时同步 sfc_matches.json 与 sfc_history.json）"""
     def run(cmd, **kw):
         try:
             r = subprocess.run(cmd, cwd=HERE, capture_output=True, text=True, timeout=60, **kw)
@@ -443,12 +544,17 @@ def publish():
 
     run(["git", "add", "data/sfc_matches.json", "data/sfc_history.json"])
     run(["git", "-c", "user.name=owner", "-c", "user.email=owner@local",
-         "commit", "-m", "Auto-Update: 传足赛程刷新"])
+         "commit", "-m", "Auto-Update: 传足赛程与完场打戳刷新"])
     run(["git", "push", "origin", "main"])
     run(["scp", "-o", "StrictHostKeyChecking=no", OUT,
          "aliyun:/var/www/football_live/data/sfc_matches.json"])
     run(["scp", "-o", "StrictHostKeyChecking=no", OUT,
          "aliyun:/var/www/football_live/sfc_matches.json"])
+    if os.path.exists(HISTORY):
+        run(["scp", "-o", "StrictHostKeyChecking=no", HISTORY,
+             "aliyun:/var/www/football_live/data/sfc_history.json"])
+        run(["scp", "-o", "StrictHostKeyChecking=no", HISTORY,
+             "aliyun:/var/www/football_live/sfc_history.json"])
 
 
 def _log(msg):
@@ -456,7 +562,7 @@ def _log(msg):
     try:
         with open(os.path.join(HERE, "sfc_sync.log"), "a", encoding="utf-8") as f:
             f.write(f"[{datetime.now():%Y-%m-%d %H:%M:%S}] {msg}\n")
-    except Exception:
+    except Exception as e:
         pass
     print(msg)
 
