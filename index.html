@@ -2361,7 +2361,7 @@
             const settledDayMaxDate = {};
             settledMatches.forEach(m => {
                 const dk = m.code ? m.code.substring(0, 2) : '';
-                const dt = String(m.time || '').slice(0, 5);
+                const dt = String(m.time || '').trim();
                 if (dk && (!settledDayMaxDate[dk] || dt > settledDayMaxDate[dk])) {
                     settledDayMaxDate[dk] = dt;
                 }
@@ -2434,7 +2434,7 @@
             const pendingDayMinDate = {};
             pendingMatches.forEach(m => {
                 const dk = m.code ? m.code.substring(0, 2) : '';
-                const dt = String(m.time || '').slice(0, 5);
+                const dt = String(m.time || '').trim();
                 if (dk && (!pendingDayMinDate[dk] || dt < pendingDayMinDate[dk])) {
                     pendingDayMinDate[dk] = dt;
                 }
@@ -2660,7 +2660,7 @@
                         const settledDayMaxDate = {};
                         settledList.forEach(m => {
                             const dk = m.code ? m.code.substring(0, 2) : '';
-                            const dt = String(m.time || '').slice(0, 5);
+                            const dt = String(m.time || '').trim();
                             if (dk && (!settledDayMaxDate[dk] || dt > settledDayMaxDate[dk])) {
                                 settledDayMaxDate[dk] = dt;
                             }
@@ -2878,11 +2878,23 @@
                         return;
                     }
 
-                    // 1. 严格排序：按真实开赛日期倒序 + 场次编号倒序（最新完赛的一天永远排第一）
+                    // 1. 严格排序：先按各体彩比赛日(周X)的最新开赛时刻('MM-DD HH:MM')倒序，同日内按场次编号倒序
+                    const dayMaxTimeMap = {};
+                    settledList.forEach(m => {
+                        const dk = m.code ? m.code.substring(0, 2) : '';
+                        const tStr = String(m.time || '').trim();
+                        if (dk && (!dayMaxTimeMap[dk] || tStr > dayMaxTimeMap[dk])) {
+                            dayMaxTimeMap[dk] = tStr;
+                        }
+                    });
                     const sortedSettled = [...settledList].sort((a, b) => {
-                        const dA = String(a.time || '').slice(0, 5);
-                        const dB = String(b.time || '').slice(0, 5);
-                        if (dA !== dB) return dB.localeCompare(dA);
+                        const dkA = a.code ? a.code.substring(0, 2) : '';
+                        const dkB = b.code ? b.code.substring(0, 2) : '';
+                        if (dkA !== dkB) {
+                            const maxA = dayMaxTimeMap[dkA] || '';
+                            const maxB = dayMaxTimeMap[dkB] || '';
+                            if (maxA !== maxB) return maxB.localeCompare(maxA);
+                        }
                         const numA = parseInt(String(a.code || '').substring(2)) || 0;
                         const numB = parseInt(String(b.code || '').substring(2)) || 0;
                         return numB - numA;
