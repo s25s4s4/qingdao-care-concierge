@@ -1159,8 +1159,8 @@
         <div class="category-scroller">
             <div class="pill-btn active" id="pill-all-tab" onclick="filterMatches(this, 'all')">全部在售/进行中</div>
             <div class="pill-btn" id="pill-pending-tab" onclick="filterMatches(this, 'pending_only')">待鸣哨开赛</div>
-            <div class="pill-btn" onclick="filterMatches(this, 'top5')">五大联赛焦点</div>
-            <div class="pill-btn" onclick="filterMatches(this, 'banker')">核心稳胆专区</div>
+            <div class="pill-btn" id="pill-top5-tab" onclick="filterMatches(this, 'top5')">五大联赛焦点</div>
+            <div class="pill-btn" id="pill-banker-tab" onclick="filterMatches(this, 'banker')">核心稳胆专区</div>
             <div class="pill-btn" onclick="switchNav('audit')">已完赛移入验证大账本 →</div>
         </div>
 
@@ -1703,12 +1703,13 @@
             const strat = m.tactical_strategy;
             if (strat && strat.badge) {
                 let cls = 'strategy-badge-gold';
-                if (strat.type === 'parity_shield') cls = 'strategy-badge-blue';
-                else if (strat.type === 'banker_single') cls = 'strategy-badge-green';
-                else if (strat.type === 'double_chance') cls = 'strategy-badge-purple';
+                let pillBg = '#f3c254';
+                if (strat.type === 'parity_shield') { cls = 'strategy-badge-blue'; pillBg = '#38bdf8'; }
+                else if (strat.type === 'banker_single') { cls = 'strategy-badge-green'; pillBg = '#3fb950'; }
+                else if (strat.type === 'double_chance') { cls = 'strategy-badge-purple'; pillBg = '#c084fc'; }
                 return `<div class="strategy-banner ${cls}">
                     <div style="display: flex; align-items: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-                        <span class="strategy-pill" style="background: currentColor; color: #0f141c;">${strat.badge}</span>
+                        <span class="strategy-pill" style="background: ${pillBg}; color: #0d1117;">${strat.badge}</span>
                         <span style="font-weight: 700;">${strat.advance_tip || strat.title}</span>
                     </div>
                     <span style="font-size: 10px; opacity: 0.8; margin-left: 6px; white-space: nowrap;">${strat.type === 'deep_handicap' ? '提高回报' : (strat.type === 'parity_shield' ? '稳健避坑' : '实战优选')}</span>
@@ -1722,7 +1723,7 @@
                     if (rqTxt) {
                         return `<div class="strategy-banner strategy-badge-gold">
                             <div style="display: flex; align-items: center;">
-                                <span class="strategy-pill" style="background: currentColor; color: #0f141c;">⚡ 深盘进阶</span>
+                                <span class="strategy-pill" style="background: #f3c254; color: #0d1117;">⚡ 深盘进阶</span>
                                 <span style="font-weight: 700;">让球(${m.rang}) ${rqTxt}</span>
                             </div>
                             <span style="font-size: 10px; opacity: 0.8;">提高回报</span>
@@ -1784,11 +1785,13 @@
             // 严格业务铁律：首页赛事中心只显示【未完赛】的在售与进行中比赛！
             // 只要比赛吹终场哨出赛果，立即自动从首页剥离消失，转入底部【赛果验证】大账本归档！
             let activeList = ALL_OFFICIAL_MATCHES.filter(m => m.result === 'PENDING' && m.status !== '已完赛');
+            const isTop5Match = (m) => ['英超', '德甲', '西甲', '意甲', '法甲'].includes(m.league);
+            const isBankerMatch = (m) => (m.tactical_strategy && ['banker_single', 'deep_handicap'].includes(m.tactical_strategy.type)) || (m.tip && !String(m.tip).includes('/') && m.tip !== '暂不研判') || (m.quant_factors && m.quant_factors.stars && m.quant_factors.stars.indexOf('★★★★') === 0);
 
             let list = activeList.filter(m => {
                 if (filterMode === 'pending_only') return !m.status.includes('进行中') && !m.status.includes('半场') && !m.status.includes('中断');
-                if (filterMode === 'top5') return ['英超', '德甲', '西甲', '意甲', '法甲'].includes(m.league);
-                if (filterMode === 'banker') return m.status.includes('稳胆') || m.status.includes('天王山') || m.status.includes('死胆');
+                if (filterMode === 'top5') return isTop5Match(m);
+                if (filterMode === 'banker') return isBankerMatch(m);
                 return true;
             });
 
@@ -1798,15 +1801,13 @@
             const liveList = ALL_OFFICIAL_MATCHES.filter(m => m.result === 'PENDING' && (m.status.includes('进行中') || m.status.includes('半场') || m.status.includes('中断')));
             // 真正尚未鸣哨开赛的纯赛前场次：
             const truePendingList = ALL_OFFICIAL_MATCHES.filter(m => m.result === 'PENDING' && !m.status.includes('进行中') && !m.status.includes('半场') && !m.status.includes('中断'));
+            const top5Count = activeList.filter(isTop5Match).length;
+            const bankerCount = activeList.filter(isBankerMatch).length;
             
             const totalCount = ALL_OFFICIAL_MATCHES.length;
             const settledCount = settledList.length;
             const pendingCount = truePendingList.length;
             
-            // 严格对齐数据看板语义：
-            // 1. 全量收录赛事 = totalCount
-            // 2. 已完赛大账本 = settledCount
-            // 3. 待鸣哨开赛 = pendingCount (纯赛前未鸣哨场次，开赛的不算在内！)
             document.getElementById('total-matches-num').innerText = totalCount;
             document.getElementById('settled-hit-num').innerText = settledCount;
             document.getElementById('pending-matches-num').innerText = pendingCount;
@@ -1816,6 +1817,17 @@
             
             const pendingPill = document.getElementById('pill-pending-tab');
             if (pendingPill) pendingPill.innerText = `待鸣哨开赛 (${pendingCount})`;
+
+            const top5Pill = document.getElementById('pill-top5-tab');
+            if (top5Pill) top5Pill.innerText = `五大联赛焦点 (${top5Count})`;
+
+            const bankerPill = document.getElementById('pill-banker-tab');
+            if (bankerPill) bankerPill.innerText = `核心稳胆专区 (${bankerCount})`;
+
+            if (list.length === 0) {
+                container.innerHTML = `<div style="text-align:center; padding:36px 16px; color:var(--text-tertiary); font-size:12.5px; background:rgba(22,27,34,0.6); border:1px dashed var(--border-color); border-radius:10px; margin:8px 0;">当前筛选分类下暂无在售场次，请切换至【全部在售/进行中】查看完整赛程。</div>`;
+                return;
+            }
 
             list.forEach(m => {
                 const card = document.createElement('div');
@@ -2130,13 +2142,17 @@
             const settledMatches = ALL_OFFICIAL_MATCHES.filter(m => m.result !== 'PENDING');
 
             // 动态判定已完赛日期
-            const distinctSettledDays = [];
+            const settledDayMaxDate = {};
             settledMatches.forEach(m => {
                 const dk = m.code ? m.code.substring(0, 2) : '';
-                if (dk && !distinctSettledDays.includes(dk)) distinctSettledDays.push(dk);
+                const dt = String(m.time || '').slice(0, 5);
+                if (dk && (!settledDayMaxDate[dk] || dt > settledDayMaxDate[dk])) {
+                    settledDayMaxDate[dk] = dt;
+                }
             });
-            const weekWeight = {'周五': 1, '周六': 2, '周日': 3, '周一': 4, '周二': 5, '周三': 6, '周四': 7};
-            distinctSettledDays.sort((a, b) => (weekWeight[b] || 0) - (weekWeight[a] || 0));
+            const distinctSettledDays = Object.keys(settledDayMaxDate).sort((a, b) =>
+                (settledDayMaxDate[b] || '').localeCompare(settledDayMaxDate[a] || '')
+            );
             const latestSettledDay = distinctSettledDays[0] || '昨日';
 
             if (hitRateElem && hitRateElem.nextElementSibling) hitRateElem.nextElementSibling.innerText = `${latestSettledDay}串关命中率`;
@@ -2199,12 +2215,17 @@
             }
 
             // 3. 构建全息柜台打票专用卡片
-            const distinctPendingDays = [];
+            const pendingDayMinDate = {};
             pendingMatches.forEach(m => {
                 const dk = m.code ? m.code.substring(0, 2) : '';
-                if (dk && !distinctPendingDays.includes(dk)) distinctPendingDays.push(dk);
+                const dt = String(m.time || '').slice(0, 5);
+                if (dk && (!pendingDayMinDate[dk] || dt < pendingDayMinDate[dk])) {
+                    pendingDayMinDate[dk] = dt;
+                }
             });
-            distinctPendingDays.sort((a, b) => (weekWeight[a] || 0) - (weekWeight[b] || 0));
+            const distinctPendingDays = Object.keys(pendingDayMinDate).sort((a, b) =>
+                (pendingDayMinDate[a] || '').localeCompare(pendingDayMinDate[b] || '')
+            );
             const currentTargetDay = distinctPendingDays[0] || '今日';
 
             let activeDayMatches = pendingMatches.filter(m => m.code && m.code.startsWith(currentTargetDay));
@@ -2417,13 +2438,17 @@
                     // 2. 如果处于全部或初次进入，自动绑定最新有完赛比赛的当天档期（如周日第一场打完出赛果后，立即自动切换计算周日当天的！）
                     let activeDayKey = (CURRENT_AUDIT_DAY !== 'ALL' && CURRENT_AUDIT_DAY !== 'ALL_PAGES') ? CURRENT_AUDIT_DAY : null;
                     if (!activeDayKey) {
-                        const distinctSettledDays = [];
+                        const settledDayMaxDate = {};
                         settledList.forEach(m => {
                             const dk = m.code ? m.code.substring(0, 2) : '';
-                            if (dk && !distinctSettledDays.includes(dk)) distinctSettledDays.push(dk);
+                            const dt = String(m.time || '').slice(0, 5);
+                            if (dk && (!settledDayMaxDate[dk] || dt > settledDayMaxDate[dk])) {
+                                settledDayMaxDate[dk] = dt;
+                            }
                         });
-                        const weekWeight = {'周五': 1, '周六': 2, '周日': 3, '周一': 4, '周二': 5, '周三': 6, '周四': 7};
-                        distinctSettledDays.sort((a, b) => (weekWeight[b] || 0) - (weekWeight[a] || 0));
+                        const distinctSettledDays = Object.keys(settledDayMaxDate).sort((a, b) =>
+                            (settledDayMaxDate[b] || '').localeCompare(settledDayMaxDate[a] || '')
+                        );
                         activeDayKey = distinctSettledDays[0] || '周六';
                     }
 
@@ -2692,6 +2717,9 @@
 
                     displayList.forEach(m => {
                         const tr = document.createElement('tr');
+                        tr.style.cursor = 'pointer';
+                        tr.title = '点击查看本场赛前锁盘案卷';
+                        tr.onclick = () => openDetail(m.code, m.time, m.home);
                         const isHit = m.result === 'HIT';
                         const isPostponed = m.result === 'POSTPONED';
                         let tagClass = isHit ? 'tag-hit' : 'tag-miss';
@@ -3159,7 +3187,15 @@
                     </div>
 
                     ${oddsHtml}
+                    ${m.quant_factors ? `
+                    <div style="margin-top: 8px; padding-top: 6px; border-top: 1px dashed rgba(255,255,255,0.06); display: flex; justify-content: space-between; align-items: center; font-size: 10.5px; color: var(--text-secondary);">
+                        <span>📊 同赔样本 ${m.quant_factors.samples}场：<b style="color:#3fb950;">胜${m.quant_factors.win_rate}%</b> · <b style="color:#d29922;">平${m.quant_factors.draw_rate}%</b> · <b style="color:#ff7b72;">负${m.quant_factors.loss_rate}%</b></span>
+                        <span style="color: #38bdf8; font-weight: 700;">${m.quant_factors.stars} 详情 ↗</span>
+                    </div>
+                    ` : ''}
                 `;
+                card.style.cursor = 'pointer';
+                card.onclick = () => openSfcDetail(m.no);
 
                 feed.appendChild(card);
             });
@@ -3168,7 +3204,7 @@
         // 打开传足专属案卷弹窗
         function openSfcDetail(matchNo) {
             if (!SFC_MATCHES_CACHE || !SFC_MATCHES_CACHE.matches) return;
-            const m = SFC_MATCHES_CACHE.matches.find(item => item.no === matchNo);
+            const m = SFC_MATCHES_CACHE.matches.find(item => Number(item.no) === Number(matchNo));
             if (!m) return;
 
             const modal = document.getElementById('detailModal');
@@ -3176,41 +3212,82 @@
             const content = document.getElementById('modalContent');
             if (!modal || !title || !content) return;
 
-            title.innerText = `传足第 ${m.no} 场 · ${m.home} vs ${m.away}`;
+            const periodStr = SFC_MATCHES_CACHE.period || '';
+            title.innerText = `传足${periodStr}期 第 ${m.no} 场 · ${m.home} vs ${m.away}`;
 
             const d = m.dossier || {};
+            const q = m.quant_factors || null;
+            const pickMap = { '3': '主胜(3)', '1': '平局(1)', '0': '客胜(0)' };
+            const pTxt = pickMap[String(m.pick_primary)] || '待定';
+            const sTxt = m.pick_secondary ? ` + 次选【${pickMap[String(m.pick_secondary)]}】` : '（单挑作胆）';
+            const uTxt = m.pick_upset ? ` + 🚨防大冷【${pickMap[String(m.pick_upset)]}】` : '';
+            const isFin = (m.status === '已完赛' || m.live_status === 'FIN') && m.score && m.score !== '--';
+
             content.innerHTML = `
-                <div style="margin-bottom: 14px; padding: 10px 12px; background: rgba(56, 189, 248, 0.08); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 8px;">
-                    <div style="font-size: 12px; font-weight: 700; color: #38bdf8; margin-bottom: 4px;">🏆 赛事基本面与排期</div>
-                    <div><b>比赛编号</b>：胜负彩第 ${SFC_MATCHES_CACHE.period} 期 · 第 ${m.no} 场</div>
-                    <div><b>开赛时间</b>：${m.time}（${m.league}）</div>
+                ${isFin ? `
+                <div style="background: rgba(63, 185, 80, 0.12); border: 1px solid rgba(63, 185, 80, 0.35); border-radius: 8px; padding: 9px 12px; margin-bottom: 10px; font-size: 11.5px; color: #c9d1d9;">
+                    🏁 <b>完赛核销存证</b>：终场比分 <b style="color:#fff; font-family:var(--font-mono);">${m.score}</b>（彩果 <b style="color:var(--accent-gold);">${m.outcome || '--'}</b>）· ${m.result && m.result.indexOf('HIT') === 0 ? '<b style="color:#3fb950;">✔ 方案命中</b>' : '<b style="color:#f85149;">✖ 选号未中</b>'}
+                </div>
+                ` : ''}
+                <div style="margin-bottom: 12px; padding: 10px 12px; background: rgba(56, 189, 248, 0.08); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 8px; font-size: 12px; line-height: 1.7;">
+                    <div style="font-size: 12.5px; font-weight: 800; color: #38bdf8; margin-bottom: 4px;">🏆 传足赛事档案与选号方案</div>
+                    <div><b>比赛期次</b>：传统足彩14场/任九 第 ${periodStr} 期 · 第 ${m.no} 场</div>
+                    <div><b>开赛时间</b>：${m.time}（${m.league || '传足'}）</div>
                     <div><b>对阵双方</b>：${m.home} vs ${m.away}</div>
-                    ${m.odds ? `<div style="margin-top: 4px; font-family: var(--font-mono);"><b>500网平均欧赔（非体彩投注SP）</b>：主胜 ${m.odds[0]} | 平 ${m.odds[1]} | 客胜 ${m.odds[2]}</div>` : ''}
+                    ${m.odds ? `<div style="font-family: var(--font-mono);"><b>百家平均欧赔</b>：胜 ${m.odds[0]} | 平 ${m.odds[1]} | 负 ${m.odds[2]}</div>` : ''}
+                    <div style="margin-top: 4px;"><b>本期选号</b>：<span style="color:#3fb950; font-weight:800;">首选【${pTxt}】</span><span style="color:#fbbf24; font-weight:700;">${sTxt}</span><span style="color:#fb7185; font-weight:700;">${uTxt}</span></div>
                 </div>
 
+                ${q ? `
+                <div style="background: rgba(56, 189, 248, 0.06); border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 8px; padding: 10px 12px; margin-bottom: 12px;">
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+                        <span style="font-weight:800; color:#3fb950; font-size:12.5px;">📊 14年历史同赔分布（样本 ${q.samples} 场）</span>
+                        <span style="font-size:10.5px; color:#e3b341; font-weight:800;">${q.stars} [${q.tier_title}]</span>
+                    </div>
+                    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:6px; text-align:center; margin-bottom:8px;">
+                        <div style="background:rgba(35,134,54,0.15); border:1px solid rgba(63,185,80,0.3); border-radius:6px; padding:5px 2px;">
+                            <div style="font-size:10px; color:var(--text-tertiary);">历史主胜 (3)</div>
+                            <div style="font-size:14px; font-weight:800; color:#3fb950; font-family:var(--font-mono);">${q.win_rate}%</div>
+                        </div>
+                        <div style="background:rgba(210,153,34,0.15); border:1px solid rgba(210,153,34,0.3); border-radius:6px; padding:5px 2px;">
+                            <div style="font-size:10px; color:var(--text-tertiary);">历史平局 (1)</div>
+                            <div style="font-size:14px; font-weight:800; color:#d29922; font-family:var(--font-mono);">${q.draw_rate}%</div>
+                        </div>
+                        <div style="background:rgba(248,81,73,0.12); border:1px solid rgba(248,81,73,0.3); border-radius:6px; padding:5px 2px;">
+                            <div style="font-size:10px; color:var(--text-tertiary);">历史客胜 (0)</div>
+                            <div style="font-size:14px; font-weight:800; color:#ff7b72; font-family:var(--font-mono);">${q.loss_rate}%</div>
+                        </div>
+                    </div>
+                    <div style="font-size:11px; color:var(--text-secondary); display:flex; justify-content:space-between;">
+                        <span>📐 泊松进球期望：主 ${q.lambda_h} : 客 ${q.lambda_a}</span>
+                        <span>🎯 高频比分：${(q.golden_scores || []).join(' / ')}</span>
+                    </div>
+                </div>
+                ` : ''}
+
                 ${d.league_rank ? `
-                <div style="margin-bottom: 12px;">
-                    <b style="color: var(--text-primary);">一、积分排名与核心战意：</b><br>
-                    ${d.league_rank}
-                </div>` : ''}
+                <details class="dossier-fold" open>
+                    <summary><span>📊</span> 一、样本基本面与赛果分布</summary>
+                    <p>${escapeHtml(d.league_rank)}</p>
+                </details>` : ''}
 
                 ${d.conflict ? `
-                <div style="margin-bottom: 12px;">
-                    <b style="color: var(--text-primary);">二、战术矛盾与人员阵眼：</b><br>
-                    ${d.conflict}
-                </div>` : ''}
+                <details class="dossier-fold" open>
+                    <summary><span>⚔️</span> 二、泊松期望与比分格局</summary>
+                    <p>${escapeHtml(d.conflict)}</p>
+                </details>` : ''}
 
                 ${d.market_depth ? `
-                <div style="margin-bottom: 12px;">
-                    <b style="color: var(--text-primary);">三、欧洲机构盘口与去水态度：</b><br>
-                    ${d.market_depth}
-                </div>` : ''}
+                <details class="dossier-fold" open>
+                    <summary><span>📈</span> 三、百家欧赔与冷门诊断</summary>
+                    <p>${escapeHtml(d.market_depth)}</p>
+                </details>` : ''}
 
                 ${d.decision_guide ? `
-                <div style="margin-bottom: 12px;">
-                    <b style="color: var(--text-primary);">四、深度研判与选号指引：</b><br>
-                    ${d.decision_guide}
-                </div>` : ''}
+                <details class="dossier-fold" open>
+                    <summary><span>🎯</span> 四、传足14场/任九选号指引</summary>
+                    <p>${escapeHtml(d.decision_guide)}</p>
+                </details>` : ''}
             `;
 
             modal.classList.add('active');
@@ -3600,12 +3677,12 @@
         }
 
         // 详情弹窗：全方位深度战术案卷 (4大硬核模块详解)
-        function openDetail(code, time, home) {
-            // 优先按 (code + time + home) 精确索引，若只传了 code 则优先取未完赛/最新一场，彻底杜绝跨周同编号撞车！
+        function openDetail(code, timeArg, homeArg) {
+            // 优先按 (code + timeArg + homeArg) 精确索引，若只传了 code 则优先取未完赛/最新一场，彻底杜绝跨周同编号撞车！
             let match = null;
-            if (time || home) {
+            if (timeArg || homeArg) {
                 match = ALL_OFFICIAL_MATCHES.find(m =>
-                    m.code === code && (!time || m.time === time) && (!home || m.home === home)
+                    m.code === code && (!timeArg || m.time === timeArg) && (!homeArg || m.home === homeArg)
                 );
             }
             if (!match) {
