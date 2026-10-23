@@ -1,7 +1,19 @@
 {
-  "updated_at": "2026-10-24 05:00:55",
-  "total_tips": 2,
+  "updated_at": "2026-10-24 07:00:58",
+  "total_tips": 3,
   "live_feed": [
+    {
+      "id": 4512,
+      "channel": "ibettingxx",
+      "time": "2026-10-24 06:59",
+      "code": "周六024",
+      "league": "德甲",
+      "category": "推单",
+      "is_tip": true,
+      "match": "多特蒙德 VS 法兰克福",
+      "chinese": "海外料直指多特主胜！欧指主胜1.55水位设防极深，机构给出65%信心指数。大黄蜂主场威慑力拉满，资金面强力倾斜主队，法兰克福客战承压，正路看多特全取三分过关。",
+      "original": "================================ 🎟 SINGLE TICKET | OCT 24, 2026 🎟 ================================ 🕡 Match Time: 18:45 GMT ⚽️ Ligue 1 ⚽️ 🏟 Lens vs. Paris FC 🏟 🔮"
+    },
     {
       "id": 4345,
       "channel": "feedinco",
