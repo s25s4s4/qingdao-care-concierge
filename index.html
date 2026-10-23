@@ -1391,7 +1391,7 @@
         <!-- 传足期号与基本信息看板 -->
         <div class="hero-banner" style="background: linear-gradient(135deg, rgba(56, 189, 248, 0.15) 0%, rgba(13, 17, 23, 0.95) 100%); border-bottom: 1px solid rgba(56, 189, 248, 0.3);">
             <div class="hero-col">
-                <div class="hero-num" style="color: #38bdf8;" id="sfc-period-num">26147期</div>
+                <div class="hero-num" style="color: #38bdf8;" id="sfc-period-num">26148期</div>
                 <div class="hero-label">当前传足期号</div>
             </div>
             <div class="hero-col">
@@ -1399,7 +1399,7 @@
                 <div class="hero-label">胜负彩 / 任九</div>
             </div>
             <div class="hero-col">
-                <div class="hero-num" style="color: var(--accent-gold);" id="sfc-deadline-time">10-21 03:00</div>
+                <div class="hero-num" style="color: var(--accent-gold);" id="sfc-deadline-time">10-24 22:00</div>
                 <div class="hero-label">全国停售截止</div>
             </div>
         </div>
@@ -3122,26 +3122,8 @@
         function pickDefaultSfcPeriod() {
             const keys = Object.keys(SFC_PERIODS_MAP).sort((a, b) => Number(b) - Number(a));
             if (!keys.length) return null;
-            const latestKey = keys[0];
-            const latest = SFC_PERIODS_MAP[latestKey];
-            const latestStats = computeSfcStats(latest);
-
-            // 如果最新一期尚未开赛（fin === 0），且紧邻的上一期全部完赛且开赛日期就是今天（如今天凌晨完赛的 26147 期），
-            // 在白天复盘时段优先展示刚刚打完戳的上一期，方便彩民第一时间核对 14 场红黑印章！
-            if (keys.length >= 2 && latestStats.fin === 0) {
-                const prevKey = keys[1];
-                const prev = SFC_PERIODS_MAP[prevKey];
-                const prevStats = computeSfcStats(prev);
-                const now = new Date();
-                const mm = String(now.getMonth() + 1).padStart(2, '0');
-                const dd = String(now.getDate()).padStart(2, '0');
-                const todayPrefix = `${mm}-${dd}`;
-                const prevHasTodayMatch = (prev.matches || []).some(m => String(m.time || '').indexOf(todayPrefix) === 0);
-                if (prevStats.fin > 0 && (prevHasTodayMatch || now.getHours() < 18)) {
-                    return prevKey;
-                }
-            }
-            return latestKey;
+            // 默认永远优先展示最新在售期次（如 26148 期）；上一期完场打戳可通过期次切换栏一键查看
+            return keys[0];
         }
 
         function loadSfcData() {
