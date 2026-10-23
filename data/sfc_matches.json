@@ -3,7 +3,7 @@
   "picks_ready": true,
   "deadline": "10-24 00:30",
   "total_matches": 14,
-  "updated_at": "2026-10-23 11:38:36",
+  "updated_at": "2026-10-24 02:38:27",
   "matches": [
     {
       "no": 1,
@@ -189,7 +189,7 @@
       "away": "沃尔夫",
       "away_rank": "3",
       "fid": "1430753",
-      "status": "未开赛",
+      "status": "已完赛",
       "matched_id": null,
       "odds": [
         "2.75",
@@ -203,8 +203,8 @@
         "market_depth": "百家平均欧赔开出 2.75 / 3.67 / 2.24，三项期望回报（EV）分别为主胜 -0.140、平局 -0.085、客胜 -0.019。盘面诊断：盘面处于正常期望区间。",
         "decision_guide": "传足选号方案：核心首选【客胜(0)】（单挑作胆），🚨大冷预警留意【主胜(3)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
       },
-      "live_status": "",
-      "score": "",
+      "live_status": "FIN",
+      "score": "1-1",
       "pick_primary": "0",
       "pick_secondary": null,
       "pick_desc": "",
@@ -233,9 +233,9 @@
         "smart_type": "DOUBLE",
         "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。"
       },
-      "outcome": "",
-      "result": null,
-      "result_text": ""
+      "outcome": "1",
+      "result": "MISS",
+      "result_text": "未中"
     },
     {
       "no": 5,
@@ -247,7 +247,7 @@
       "away": "圣保利",
       "away_rank": "7",
       "fid": "1430193",
-      "status": "未开赛",
+      "status": "已完赛",
       "matched_id": null,
       "odds": [
         "2.83",
@@ -261,8 +261,8 @@
         "market_depth": "百家平均欧赔开出 2.83 / 3.56 / 2.21，三项期望回报（EV）分别为主胜 -0.094、平局 -0.118、客胜 -0.046。盘面诊断：盘面处于正常期望区间。",
         "decision_guide": "传足选号方案：核心首选【客胜(0)】（单挑作胆），🚨大冷预警留意【主胜(3)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
       },
-      "live_status": "",
-      "score": "",
+      "live_status": "FIN",
+      "score": "0-0",
       "pick_primary": "0",
       "pick_secondary": null,
       "pick_desc": "",
@@ -291,9 +291,9 @@
         "smart_type": "DOUBLE",
         "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。"
       },
-      "outcome": "",
-      "result": null,
-      "result_text": ""
+      "outcome": "1",
+      "result": "MISS",
+      "result_text": "未中"
     },
     {
       "no": 6,
