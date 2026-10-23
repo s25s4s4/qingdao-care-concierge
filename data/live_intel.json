@@ -1,7 +1,31 @@
 {
-  "updated_at": "2026-10-23 20:30:51",
-  "total_tips": 5,
+  "updated_at": "2026-10-23 22:30:52",
+  "total_tips": 7,
   "live_feed": [
+    {
+      "id": 4345,
+      "channel": "feedinco",
+      "time": "2026-10-23 22:05",
+      "code": "周六009",
+      "league": "意甲",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "科莫 VS 萨索洛",
+      "chinese": "老弟看过来，欧媒这波推单主打科莫主场不败（1X）。资金面明显防着科莫主场拿分，萨索洛客战硬度有限，双选胜平稳妥，首选主胜防平。首发防线没大伤病，主队坐和望赢格局。",
+      "original": "FEEDINCO.com Tips for Saturday, 24 October 1X - Borussia Dortmund - Eintracht Frankfurt 1X - Como - Sassuolo O1.5 - FC Shakhtar Donetsk - FC Zorya Lugansk O1.5 "
+    },
+    {
+      "id": 4316,
+      "channel": "football_predictions_ai",
+      "time": "2026-10-23 20:00",
+      "code": "周五009",
+      "league": "英超",
+      "category": "推单·已开赛",
+      "is_tip": true,
+      "match": "伊普斯 VS 诺丁汉",
+      "chinese": "海外推单死磕诺丁汉客让平半（-0.25），胜率给到近七成。伊普斯这季全靠点球续命，诺丁汉近况虽四连败但底蕴仍在，机构暗流明显偏客队低水下盘，防一手客胜过关。",
+      "original": "🔥 HOT PICK 🏴󠁧󠁢󠁥󠁮󠁧󠁿 Premier League 🆚 Ipswich vs Nottingham Forest 🕐 Fri, 23 Oct · 19:00 UTC 💡 Asian Handicap: Away -0.25 📊 Odds: 1.44 ✅ Confidence: 69% 📌 Match F"
+    },
     {
       "id": 4320,
       "channel": "TipstrrTips",
