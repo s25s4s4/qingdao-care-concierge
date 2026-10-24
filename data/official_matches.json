@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-24 15:25:24",
+  "updated_at": "2026-10-24 15:26:24",
   "total": 111,
   "matches": [
     {
@@ -246,7 +246,7 @@
         "result": "MISS",
         "score": "2 - 2",
         "source": "stored_score",
-        "settled_at": "2026-10-24T15:25:21",
+        "settled_at": "2026-10-24T15:26:20",
         "outcome": "平局",
         "tip": "主胜",
         "market": "had"
@@ -542,7 +542,7 @@
         "result": "HIT",
         "score": "1 - 2",
         "source": "stored_score",
-        "settled_at": "2026-10-24T15:25:21",
+        "settled_at": "2026-10-24T15:26:20",
         "outcome": "客胜",
         "tip": "客胜",
         "market": "had"
@@ -848,7 +848,7 @@
         "result": "MISS",
         "score": "1 - 1",
         "source": "stored_score",
-        "settled_at": "2026-10-24T15:25:21",
+        "settled_at": "2026-10-24T15:26:20",
         "outcome": "平局",
         "tip": "主胜",
         "market": "had"
@@ -1215,7 +1215,7 @@
         "result": "HIT",
         "score": "4 - 3",
         "source": "stored_score",
-        "settled_at": "2026-10-24T15:25:21",
+        "settled_at": "2026-10-24T15:26:20",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -1540,7 +1540,7 @@
         "result": "HIT",
         "score": "4 - 0",
         "source": "stored_score",
-        "settled_at": "2026-10-24T15:25:21",
+        "settled_at": "2026-10-24T15:26:20",
         "outcome": "让胜",
         "tip": "让胜/博穿盘",
         "market": "hhad"
@@ -1922,7 +1922,7 @@
         "result": "HIT",
         "score": "4 - 2",
         "source": "stored_score",
-        "settled_at": "2026-10-24T15:25:21",
+        "settled_at": "2026-10-24T15:26:20",
         "outcome": "主胜",
         "tip": "主不败/首选主胜",
         "market": "had"
@@ -2304,7 +2304,7 @@
         "result": "HIT",
         "score": "4 - 3",
         "source": "stored_score",
-        "settled_at": "2026-10-24T15:25:21",
+        "settled_at": "2026-10-24T15:26:20",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -2631,7 +2631,7 @@
         "result": "HIT",
         "score": "5 - 1",
         "source": "stored_score",
-        "settled_at": "2026-10-24T15:25:21",
+        "settled_at": "2026-10-24T15:26:20",
         "outcome": "让胜",
         "tip": "让胜/博穿盘",
         "market": "hhad"
@@ -2984,7 +2984,7 @@
         "result": "MISS",
         "score": "1 - 1",
         "source": "stored_score",
-        "settled_at": "2026-10-24T15:25:21",
+        "settled_at": "2026-10-24T15:26:20",
         "outcome": "平局",
         "tip": "客胜",
         "market": "had"
@@ -3344,7 +3344,7 @@
         "result": "MISS",
         "score": "0 - 1",
         "source": "stored_score",
-        "settled_at": "2026-10-24T15:25:21",
+        "settled_at": "2026-10-24T15:26:20",
         "outcome": "客胜",
         "tip": "主胜",
         "market": "had"
@@ -3701,7 +3701,7 @@
         "result": "HIT",
         "score": "0 - 0",
         "source": "stored_score",
-        "settled_at": "2026-10-24T15:25:21",
+        "settled_at": "2026-10-24T15:26:20",
         "outcome": "平局",
         "tip": "主不败/首选主胜",
         "market": "had"
@@ -4062,7 +4062,7 @@
         "result": "HIT",
         "score": "2 - 1",
         "source": "stored_score",
-        "settled_at": "2026-10-24T15:25:21",
+        "settled_at": "2026-10-24T15:26:20",
         "outcome": "让平",
         "tip": "让负/防让平",
         "market": "hhad"
@@ -4282,7 +4282,7 @@
         "result": "MISS",
         "score": "0 - 3",
         "source": "stored_score",
-        "settled_at": "2026-10-24T15:25:21",
+        "settled_at": "2026-10-24T15:26:20",
         "outcome": "客胜",
         "tip": "主不败/首选主胜",
         "market": "had"
@@ -4626,7 +4626,7 @@
         "result": "HIT",
         "score": "4 - 1",
         "source": "stored_score",
-        "settled_at": "2026-10-24T15:25:21",
+        "settled_at": "2026-10-24T15:26:20",
         "outcome": "主胜",
         "tip": "主不败/首选主胜",
         "market": "had"
@@ -4914,7 +4914,7 @@
         "result": "MISS",
         "score": "2 - 4",
         "source": "stored_score",
-        "settled_at": "2026-10-24T15:25:21",
+        "settled_at": "2026-10-24T15:26:20",
         "outcome": "客胜",
         "tip": "主不败/首选主胜",
         "market": "had"
@@ -5307,7 +5307,7 @@
         "result": "MISS",
         "score": "3 - 1",
         "source": "stored_score",
-        "settled_at": "2026-10-24T15:25:21",
+        "settled_at": "2026-10-24T15:26:20",
         "outcome": "主胜",
         "tip": "客不败/双选平负",
         "market": "had"
@@ -5674,7 +5674,7 @@
         "result": "HIT",
         "score": "4 - 1",
         "source": "stored_score",
-        "settled_at": "2026-10-24T15:25:21",
+        "settled_at": "2026-10-24T15:26:20",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -6007,7 +6007,7 @@
         "result": "HIT",
         "score": "3 - 1",
         "source": "stored_score",
-        "settled_at": "2026-10-24T15:25:21",
+        "settled_at": "2026-10-24T15:26:20",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -6346,7 +6346,7 @@
         "result": "HIT",
         "score": "1 - 0",
         "source": "stored_score",
-        "settled_at": "2026-10-24T15:25:21",
+        "settled_at": "2026-10-24T15:26:20",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -6713,7 +6713,7 @@
         "result": "HIT",
         "score": "2 - 2",
         "source": "stored_score",
-        "settled_at": "2026-10-24T15:25:21",
+        "settled_at": "2026-10-24T15:26:20",
         "outcome": "平局",
         "tip": "主不败/首选主胜",
         "market": "had"
@@ -7043,7 +7043,7 @@
         "result": "MISS",
         "score": "2 - 3",
         "source": "stored_score",
-        "settled_at": "2026-10-24T15:25:21",
+        "settled_at": "2026-10-24T15:26:20",
         "outcome": "让负",
         "tip": "让平/防让胜",
         "market": "hhad"
@@ -7382,7 +7382,7 @@
         "result": "HIT",
         "score": "3 - 0",
         "source": "stored_score",
-        "settled_at": "2026-10-24T15:25:21",
+        "settled_at": "2026-10-24T15:26:20",
         "outcome": "主胜",
         "tip": "主不败/首选主胜",
         "market": "had"
@@ -7832,7 +7832,7 @@
         "result": "MISS",
         "score": "0 - 1",
         "source": "stored_score",
-        "settled_at": "2026-10-24T15:25:21",
+        "settled_at": "2026-10-24T15:26:20",
         "outcome": "客胜",
         "tip": "主不败/首选主胜",
         "market": "had"
@@ -8208,7 +8208,7 @@
         "result": "MISS",
         "score": "1 - 0",
         "source": "stored_score",
-        "settled_at": "2026-10-24T15:25:21",
+        "settled_at": "2026-10-24T15:26:20",
         "outcome": "主胜",
         "tip": "客胜/防平",
         "market": "had"
@@ -8556,7 +8556,7 @@
         "result": "HIT",
         "score": "1 - 1",
         "source": "stored_score",
-        "settled_at": "2026-10-24T15:25:21",
+        "settled_at": "2026-10-24T15:26:20",
         "outcome": "平局",
         "tip": "客胜/防平",
         "market": "had"
@@ -8906,7 +8906,7 @@
         "result": "MISS",
         "score": "2 - 4",
         "source": "stored_score",
-        "settled_at": "2026-10-24T15:25:21",
+        "settled_at": "2026-10-24T15:26:20",
         "outcome": "客胜",
         "tip": "主胜",
         "market": "had"
@@ -9255,7 +9255,7 @@
         "result": "MISS",
         "score": "2 - 2",
         "source": "stored_score",
-        "settled_at": "2026-10-24T15:25:21",
+        "settled_at": "2026-10-24T15:26:20",
         "outcome": "平局",
         "tip": "主胜",
         "market": "had"
@@ -9583,7 +9583,7 @@
         "result": "HIT",
         "score": "0 - 2",
         "source": "stored_score",
-        "settled_at": "2026-10-24T15:25:21",
+        "settled_at": "2026-10-24T15:26:20",
         "outcome": "让平",
         "tip": "让负/防让平",
         "market": "hhad"
@@ -9932,7 +9932,7 @@
         "result": "HIT",
         "score": "3 - 0",
         "source": "stored_score",
-        "settled_at": "2026-10-24T15:25:21",
+        "settled_at": "2026-10-24T15:26:20",
         "outcome": "主胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -10283,7 +10283,7 @@
         "result": "HIT",
         "score": "1 - 2",
         "source": "stored_score",
-        "settled_at": "2026-10-24T15:25:21",
+        "settled_at": "2026-10-24T15:26:20",
         "outcome": "客胜",
         "tip": "客胜/防平",
         "market": "had"
@@ -10633,7 +10633,7 @@
         "result": "HIT",
         "score": "2 - 2",
         "source": "stored_score",
-        "settled_at": "2026-10-24T15:25:21",
+        "settled_at": "2026-10-24T15:26:20",
         "outcome": "平局",
         "tip": "主胜/防平",
         "market": "had"
@@ -11021,7 +11021,7 @@
         "result": "HIT",
         "score": "3 - 0",
         "source": "stored_score",
-        "settled_at": "2026-10-24T15:25:21",
+        "settled_at": "2026-10-24T15:26:20",
         "outcome": "主胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -11365,7 +11365,7 @@
         "result": "HIT",
         "score": "0 - 6",
         "source": "stored_score",
-        "settled_at": "2026-10-24T15:25:21",
+        "settled_at": "2026-10-24T15:26:20",
         "outcome": "客胜",
         "tip": "客胜",
         "market": "had"
@@ -11730,7 +11730,7 @@
         "result": "HIT",
         "score": "2 - 0",
         "source": "stored_score",
-        "settled_at": "2026-10-24T15:25:21",
+        "settled_at": "2026-10-24T15:26:20",
         "outcome": "主胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -12082,7 +12082,7 @@
         "result": "HIT",
         "score": "3 - 0",
         "source": "stored_score",
-        "settled_at": "2026-10-24T15:25:21",
+        "settled_at": "2026-10-24T15:26:20",
         "outcome": "主胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -12428,7 +12428,7 @@
         "result": "MISS",
         "score": "0 - 0",
         "source": "stored_score",
-        "settled_at": "2026-10-24T15:25:21",
+        "settled_at": "2026-10-24T15:26:20",
         "outcome": "平局",
         "tip": "主胜",
         "market": "had"
@@ -12765,7 +12765,7 @@
         "result": "HIT",
         "score": "2 - 1",
         "source": "stored_score",
-        "settled_at": "2026-10-24T15:25:21",
+        "settled_at": "2026-10-24T15:26:20",
         "outcome": "主胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -13099,7 +13099,7 @@
         "result": "MISS",
         "score": "1 - 1",
         "source": "stored_score",
-        "settled_at": "2026-10-24T15:25:21",
+        "settled_at": "2026-10-24T15:26:20",
         "outcome": "平局",
         "tip": "客胜",
         "market": "had"
@@ -13437,7 +13437,7 @@
         "result": "HIT",
         "score": "0 - 0",
         "source": "stored_score",
-        "settled_at": "2026-10-24T15:25:21",
+        "settled_at": "2026-10-24T15:26:20",
         "outcome": "平局",
         "tip": "主胜/防平",
         "market": "had"
@@ -13775,7 +13775,7 @@
         "result": "HIT",
         "score": "3 - 2",
         "source": "stored_score",
-        "settled_at": "2026-10-24T15:25:21",
+        "settled_at": "2026-10-24T15:26:20",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -14114,7 +14114,7 @@
         "result": "HIT",
         "score": "1 - 1",
         "source": "stored_score",
-        "settled_at": "2026-10-24T15:25:21",
+        "settled_at": "2026-10-24T15:26:20",
         "outcome": "平局",
         "tip": "客胜/防平",
         "market": "had"
@@ -14483,7 +14483,7 @@
         "result": "MISS",
         "score": "2 - 3",
         "source": "stored_score",
-        "settled_at": "2026-10-24T15:25:21",
+        "settled_at": "2026-10-24T15:26:20",
         "outcome": "客胜",
         "tip": "主胜",
         "market": "had"
@@ -14847,7 +14847,7 @@
         "result": "HIT",
         "score": "3 - 2",
         "source": "stored_score",
-        "settled_at": "2026-10-24T15:25:21",
+        "settled_at": "2026-10-24T15:26:20",
         "outcome": "主胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -15217,7 +15217,7 @@
         "result": "MISS",
         "score": "1 - 2",
         "source": "stored_score",
-        "settled_at": "2026-10-24T15:25:21",
+        "settled_at": "2026-10-24T15:26:20",
         "outcome": "客胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -15586,7 +15586,7 @@
         "result": "HIT",
         "score": "1 - 1",
         "source": "stored_score",
-        "settled_at": "2026-10-24T15:25:21",
+        "settled_at": "2026-10-24T15:26:20",
         "outcome": "平局",
         "tip": "客胜/防平",
         "market": "had"
@@ -15924,7 +15924,7 @@
         "result": "HIT",
         "score": "1 - 5",
         "source": "stored_score",
-        "settled_at": "2026-10-24T15:25:21",
+        "settled_at": "2026-10-24T15:26:20",
         "outcome": "客胜",
         "tip": "客胜",
         "market": "had"
@@ -16290,7 +16290,7 @@
         "result": "MISS",
         "score": "1-1",
         "source": "stored_score",
-        "settled_at": "2026-10-24T15:25:21",
+        "settled_at": "2026-10-24T15:26:20",
         "outcome": "平局",
         "tip": "主胜",
         "market": "had"
@@ -16655,7 +16655,7 @@
         "result": "HIT",
         "score": "5-0",
         "source": "stored_score",
-        "settled_at": "2026-10-24T15:25:21",
+        "settled_at": "2026-10-24T15:26:20",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -16991,7 +16991,7 @@
         "result": "MISS",
         "score": "1 - 1",
         "source": "stored_score",
-        "settled_at": "2026-10-24T15:25:21",
+        "settled_at": "2026-10-24T15:26:20",
         "outcome": "平局",
         "tip": "主胜",
         "market": "had"
@@ -17300,7 +17300,7 @@
         "result": "HIT",
         "score": "3-1",
         "source": "stored_score",
-        "settled_at": "2026-10-24T15:25:21",
+        "settled_at": "2026-10-24T15:26:20",
         "outcome": "主胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -17586,7 +17586,7 @@
         "smart_type": "DOUBLE",
         "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
       },
-      "stats_ts": "2026-10-24 15:25:47",
+      "stats_ts": "2026-10-24 15:26:34",
       "crosscheck": {
         "source": "fotmob",
         "score": "0-0",
@@ -17913,7 +17913,7 @@
         "smart_type": "DOUBLE",
         "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
       },
-      "stats_ts": "2026-10-24 15:25:47",
+      "stats_ts": "2026-10-24 15:26:34",
       "crosscheck": {
         "source": "fotmob",
         "score": "1-3",
@@ -18238,7 +18238,7 @@
         "smart_type": "DOUBLE",
         "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
       },
-      "stats_ts": "2026-10-24 15:25:47"
+      "stats_ts": "2026-10-24 15:26:34"
     },
     {
       "code": "周六006",
@@ -18540,7 +18540,7 @@
         "smart_type": "SINGLE",
         "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
       },
-      "stats_ts": "2026-10-24 15:25:47",
+      "stats_ts": "2026-10-24 15:26:34",
       "crosscheck": {
         "source": "fotmob",
         "score": "",
@@ -18828,7 +18828,7 @@
         "smart_type": "DOUBLE",
         "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
       },
-      "stats_ts": "2026-10-24 15:25:47"
+      "stats_ts": "2026-10-24 15:26:34"
     },
     {
       "code": "周六008",
@@ -19143,7 +19143,7 @@
         "smart_type": "SINGLE",
         "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
       },
-      "stats_ts": "2026-10-24 15:25:47",
+      "stats_ts": "2026-10-24 15:26:34",
       "crosscheck": {
         "source": "fotmob",
         "score": "",
@@ -19464,7 +19464,7 @@
         "smart_type": "SINGLE",
         "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
       },
-      "stats_ts": "2026-10-24 15:25:47",
+      "stats_ts": "2026-10-24 15:26:34",
       "crosscheck": {
         "source": "fotmob",
         "score": "",
@@ -19784,7 +19784,7 @@
         "smart_type": "DOUBLE",
         "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
       },
-      "stats_ts": "2026-10-24 15:25:47",
+      "stats_ts": "2026-10-24 15:26:34",
       "crosscheck": {
         "source": "fotmob",
         "score": "",
@@ -20080,7 +20080,7 @@
         "smart_type": "SINGLE",
         "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
       },
-      "stats_ts": "2026-10-24 15:25:47",
+      "stats_ts": "2026-10-24 15:26:34",
       "crosscheck": {
         "source": "fotmob",
         "score": "",
@@ -20402,7 +20402,7 @@
         "smart_type": "SINGLE",
         "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
       },
-      "stats_ts": "2026-10-24 15:25:47",
+      "stats_ts": "2026-10-24 15:26:34",
       "crosscheck": {
         "source": "fotmob",
         "score": "",
@@ -20722,7 +20722,7 @@
         "smart_type": "DOUBLE",
         "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
       },
-      "stats_ts": "2026-10-24 15:25:47",
+      "stats_ts": "2026-10-24 15:26:34",
       "crosscheck": {
         "source": "fotmob",
         "score": "",
@@ -21043,7 +21043,7 @@
         "smart_type": "DOUBLE",
         "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
       },
-      "stats_ts": "2026-10-24 15:25:47"
+      "stats_ts": "2026-10-24 15:26:34"
     },
     {
       "code": "周六015",
@@ -21359,7 +21359,7 @@
         "smart_type": "SINGLE",
         "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
       },
-      "stats_ts": "2026-10-24 15:25:47",
+      "stats_ts": "2026-10-24 15:26:34",
       "crosscheck": {
         "source": "fotmob",
         "score": "",
@@ -21678,7 +21678,7 @@
         "smart_type": "SINGLE",
         "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
       },
-      "stats_ts": "2026-10-24 15:25:47",
+      "stats_ts": "2026-10-24 15:26:34",
       "crosscheck": {
         "source": "fotmob",
         "score": "",
@@ -21975,7 +21975,7 @@
         "smart_type": "DOUBLE",
         "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
       },
-      "stats_ts": "2026-10-24 15:25:47",
+      "stats_ts": "2026-10-24 15:26:34",
       "crosscheck": {
         "source": "fotmob",
         "score": "",
@@ -22240,7 +22240,7 @@
       },
       "detail_schema": 2,
       "quant_factors": null,
-      "stats_ts": "2026-10-24 15:25:47"
+      "stats_ts": "2026-10-24 15:26:34"
     },
     {
       "code": "周六019",
@@ -22533,7 +22533,7 @@
         "smart_type": "DOUBLE",
         "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
       },
-      "stats_ts": "2026-10-24 15:25:47",
+      "stats_ts": "2026-10-24 15:26:34",
       "crosscheck": {
         "source": "fotmob",
         "score": "",
@@ -22565,9 +22565,9 @@
         "D"
       ],
       "odds": [
-        "1.50",
-        "4.10",
-        "4.57"
+        "1.47",
+        "4.27",
+        "4.65"
       ],
       "is_only_rq": false,
       "rang": "-1",
@@ -22577,23 +22577,23 @@
         "2.22"
       ],
       "consensus": "主胜",
-      "consensus_ratio": 59.0,
+      "consensus_ratio": 60.2,
       "consensus_breakdown": null,
       "tip": "主胜",
       "predicted_scores": [
         "2-1",
-        "1-0",
-        "2-0"
+        "2-0",
+        "1-0"
       ],
       "score": "--",
       "result": "PENDING",
-      "analysis": "去水胜平负 59.0%/21.6%/19.4%，泊松期望进球 1.95:1.03，单挑【主胜】稳胆（去水胜率 59.0%）。",
+      "analysis": "去水胜平负 60.2%/20.7%/19.0%，泊松期望进球 2.04:1.06，单挑【主胜】稳胆（去水胜率 60.2%）。",
       "dossier": {
         "fundamental": "乌德勒支近10场 3胜2平5负，场均进1.60失2.70（截至2026-10-19）；兹沃勒近10场 2胜1平7负，场均进1.00失2.50（截至2026-10-18）。",
-        "tactical_conflict": "泊松进攻期望参数：主队 λ=1.95、客队 λ=1.03（按本场胜平负官方SP反推拟合，拟合残差 0.25 个百分点）。结合主客攻防效率，本场总进球核心落点集中于 1、2、3 球区间。",
-        "market_attitude": "体彩官方胜平负 SP 开出 1.50 / 4.10 / 4.57，去水后真实隐含概率分别为 主胜 59.0% / 平局 21.6% / 客胜 19.4%。盘面赔付结构清晰，去水优势项指向明确。",
-        "decision_guide": "实战方案指引：单选【主胜】作核心稳胆。所选方案去水隐含覆盖率合计 59.0%。矩阵精算比分依次参考 2-1、1-0、2-0（对应总进球 1、2、3 球）。",
-        "summary": "去水胜平负 59.0%/21.6%/19.4%，泊松期望进球 1.95:1.03，单挑【主胜】稳胆（去水胜率 59.0%）。"
+        "tactical_conflict": "泊松进攻期望参数：主队 λ=2.04、客队 λ=1.06（按本场胜平负官方SP反推拟合，拟合残差 0.23 个百分点）。结合主客攻防效率，本场总进球核心落点集中于 1、2、3 球区间。",
+        "market_attitude": "体彩官方胜平负 SP 开出 1.47 / 4.27 / 4.65，去水后真实隐含概率分别为 主胜 60.2% / 平局 20.7% / 客胜 19.0%。盘面赔付结构清晰，去水优势项指向明确。",
+        "decision_guide": "实战方案指引：单选【主胜】作核心稳胆。所选方案去水隐含覆盖率合计 60.2%。矩阵精算比分依次参考 2-1、2-0、1-0（对应总进球 1、2、3 球）。",
+        "summary": "去水胜平负 60.2%/20.7%/19.0%，泊松期望进球 2.04:1.06，单挑【主胜】稳胆（去水胜率 60.2%）。"
       },
       "sale_closed": false,
       "detail_original": {
@@ -22622,21 +22622,21 @@
       },
       "prediction_market": "had",
       "detail_market_odds": [
-        "1.50",
-        "4.10",
-        "4.57"
+        "1.47",
+        "4.27",
+        "4.65"
       ],
       "detail_model": {
-        "lambda_h": 1.95,
-        "lambda_a": 1.03,
-        "fit_error_pp": 0.25,
+        "lambda_h": 2.04,
+        "lambda_a": 1.06,
+        "fit_error_pp": 0.23,
         "method": "independent_poisson_odds_fit",
         "rang": 0
       },
       "detail_pure": [
-        59.029,
-        21.596,
-        19.375
+        60.2268,
+        20.7338,
+        19.0394
       ],
       "predicted_goals": [
         "1",
@@ -22650,12 +22650,12 @@
           "desc": "概率基准核心比分"
         },
         {
-          "score": "1-0",
+          "score": "2-0",
           "role": "次选",
           "desc": "优势延伸主力比分"
         },
         {
-          "score": "2-0",
+          "score": "1-0",
           "role": "博高",
           "desc": "深层大胜穿盘"
         }
@@ -22666,7 +22666,7 @@
         "badge": "💎 黄金单胆",
         "badge_class": "badge-green",
         "title": "去水概率优势显著，盈亏比极佳，实战做胆首选",
-        "advance_tip": "单选【主胜】SP 1.50"
+        "advance_tip": "单选【主胜】SP 1.47"
       },
       "stats": {
         "home": {
@@ -22801,19 +22801,19 @@
       "detail_schema": 2,
       "quant_factors": {
         "market": "had",
-        "samples": 2737,
-        "win_rate": 60.7,
-        "draw_rate": 22.9,
-        "loss_rate": 16.4,
-        "ev_home": -0.09,
-        "ev_draw": -0.059,
-        "ev_away": -0.25,
-        "lambda_h": 1.95,
-        "lambda_a": 1.03,
+        "samples": 1711,
+        "win_rate": 60.8,
+        "draw_rate": 21.0,
+        "loss_rate": 18.2,
+        "ev_home": -0.106,
+        "ev_draw": -0.104,
+        "ev_away": -0.152,
+        "lambda_h": 2.04,
+        "lambda_a": 1.06,
         "golden_scores": [
           "2-1",
-          "1-0",
-          "2-0"
+          "2-0",
+          "1-0"
         ],
         "trap_level": "NORMAL",
         "trap_warning": "盘面处于正常期望区间",
@@ -22823,7 +22823,7 @@
         "smart_type": "SINGLE",
         "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
       },
-      "stats_ts": "2026-10-24 15:25:47"
+      "stats_ts": "2026-10-24 15:26:34"
     },
     {
       "code": "周六021",
@@ -23097,7 +23097,7 @@
         "smart_type": "SINGLE",
         "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
       },
-      "stats_ts": "2026-10-24 15:25:47"
+      "stats_ts": "2026-10-24 15:26:34"
     },
     {
       "code": "周六022",
@@ -23413,7 +23413,7 @@
         "smart_type": "DOUBLE",
         "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
       },
-      "stats_ts": "2026-10-24 15:25:47"
+      "stats_ts": "2026-10-24 15:26:34"
     },
     {
       "code": "周六023",
@@ -23728,7 +23728,7 @@
         "smart_type": "SINGLE",
         "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
       },
-      "stats_ts": "2026-10-24 15:25:47"
+      "stats_ts": "2026-10-24 15:26:34"
     },
     {
       "code": "周六024",
@@ -24043,7 +24043,7 @@
         "smart_type": "DOUBLE",
         "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
       },
-      "stats_ts": "2026-10-24 15:25:47"
+      "stats_ts": "2026-10-24 15:26:34"
     },
     {
       "code": "周六025",
@@ -24360,7 +24360,7 @@
         "smart_type": "DOUBLE",
         "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
       },
-      "stats_ts": "2026-10-24 15:25:47"
+      "stats_ts": "2026-10-24 15:26:34"
     },
     {
       "code": "周六026",
@@ -24674,7 +24674,7 @@
         "smart_type": "SINGLE",
         "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
       },
-      "stats_ts": "2026-10-24 15:25:47"
+      "stats_ts": "2026-10-24 15:26:34"
     },
     {
       "code": "周六027",
@@ -24976,7 +24976,7 @@
         "smart_type": "DOUBLE",
         "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
       },
-      "stats_ts": "2026-10-24 15:25:47"
+      "stats_ts": "2026-10-24 15:26:34"
     },
     {
       "code": "周六028",
@@ -25291,7 +25291,7 @@
         "smart_type": "SINGLE",
         "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
       },
-      "stats_ts": "2026-10-24 15:25:47"
+      "stats_ts": "2026-10-24 15:26:34"
     },
     {
       "code": "周六029",
@@ -25575,7 +25575,7 @@
         "smart_type": "SINGLE",
         "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
       },
-      "stats_ts": "2026-10-24 15:25:47"
+      "stats_ts": "2026-10-24 15:26:34"
     },
     {
       "code": "周六030",
@@ -25859,7 +25859,7 @@
         "smart_type": "DOUBLE",
         "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
       },
-      "stats_ts": "2026-10-24 15:25:47"
+      "stats_ts": "2026-10-24 15:26:34"
     },
     {
       "code": "周日001",
@@ -26140,7 +26140,7 @@
         "smart_type": "DOUBLE",
         "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
       },
-      "stats_ts": "2026-10-24 15:25:47"
+      "stats_ts": "2026-10-24 15:26:34"
     },
     {
       "code": "周日002",
@@ -26400,7 +26400,7 @@
         "smart_type": "SINGLE",
         "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
       },
-      "stats_ts": "2026-10-24 15:25:47"
+      "stats_ts": "2026-10-24 15:26:34"
     },
     {
       "code": "周日003",
@@ -26675,7 +26675,7 @@
         "smart_type": "SINGLE",
         "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
       },
-      "stats_ts": "2026-10-24 15:25:47"
+      "stats_ts": "2026-10-24 15:26:34"
     },
     {
       "code": "周日004",
@@ -26955,7 +26955,7 @@
         "smart_type": "DOUBLE",
         "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
       },
-      "stats_ts": "2026-10-24 15:25:47"
+      "stats_ts": "2026-10-24 15:26:34"
     },
     {
       "code": "周日005",
@@ -27228,7 +27228,7 @@
         "smart_type": "DOUBLE",
         "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
       },
-      "stats_ts": "2026-10-24 15:25:47"
+      "stats_ts": "2026-10-24 15:26:34"
     },
     {
       "code": "周日006",
@@ -27542,7 +27542,7 @@
         "smart_type": "SINGLE",
         "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
       },
-      "stats_ts": "2026-10-24 15:25:47"
+      "stats_ts": "2026-10-24 15:26:34"
     },
     {
       "code": "周日007",
@@ -27858,7 +27858,7 @@
         "smart_type": "SINGLE",
         "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
       },
-      "stats_ts": "2026-10-24 15:25:47"
+      "stats_ts": "2026-10-24 15:26:34"
     },
     {
       "code": "周日008",
@@ -28141,7 +28141,7 @@
         "smart_type": "DOUBLE",
         "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
       },
-      "stats_ts": "2026-10-24 15:25:47"
+      "stats_ts": "2026-10-24 15:26:34"
     },
     {
       "code": "周日009",
@@ -28402,7 +28402,7 @@
         "smart_type": "DOUBLE",
         "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
       },
-      "stats_ts": "2026-10-24 15:25:47"
+      "stats_ts": "2026-10-24 15:26:34"
     },
     {
       "code": "周日010",
@@ -28685,7 +28685,7 @@
         "smart_type": "DOUBLE",
         "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
       },
-      "stats_ts": "2026-10-24 15:25:47"
+      "stats_ts": "2026-10-24 15:26:34"
     },
     {
       "code": "周日011",
@@ -28968,7 +28968,7 @@
         "smart_type": "SINGLE",
         "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
       },
-      "stats_ts": "2026-10-24 15:25:47"
+      "stats_ts": "2026-10-24 15:26:34"
     },
     {
       "code": "周日012",
@@ -29284,7 +29284,7 @@
         "smart_type": "SINGLE",
         "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
       },
-      "stats_ts": "2026-10-24 15:25:47"
+      "stats_ts": "2026-10-24 15:26:34"
     },
     {
       "code": "周日013",
@@ -29600,7 +29600,7 @@
         "smart_type": "DOUBLE",
         "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
       },
-      "stats_ts": "2026-10-24 15:25:47"
+      "stats_ts": "2026-10-24 15:26:34"
     },
     {
       "code": "周日014",
@@ -29915,7 +29915,7 @@
         "smart_type": "DOUBLE",
         "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
       },
-      "stats_ts": "2026-10-24 15:25:47"
+      "stats_ts": "2026-10-24 15:26:34"
     },
     {
       "code": "周日015",
@@ -30225,7 +30225,7 @@
         "smart_type": "DOUBLE",
         "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
       },
-      "stats_ts": "2026-10-24 15:25:47"
+      "stats_ts": "2026-10-24 15:26:34"
     },
     {
       "code": "周日016",
@@ -30541,7 +30541,7 @@
         "smart_type": "SINGLE",
         "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
       },
-      "stats_ts": "2026-10-24 15:25:47"
+      "stats_ts": "2026-10-24 15:26:34"
     },
     {
       "code": "周日017",
@@ -30854,7 +30854,7 @@
         "smart_type": "DOUBLE",
         "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
       },
-      "stats_ts": "2026-10-24 15:25:47"
+      "stats_ts": "2026-10-24 15:26:34"
     },
     {
       "code": "周日018",
@@ -31170,7 +31170,7 @@
         "smart_type": "DOUBLE",
         "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
       },
-      "stats_ts": "2026-10-24 15:25:47"
+      "stats_ts": "2026-10-24 15:26:34"
     },
     {
       "code": "周日019",
@@ -31486,7 +31486,7 @@
         "smart_type": "DOUBLE",
         "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
       },
-      "stats_ts": "2026-10-24 15:25:47"
+      "stats_ts": "2026-10-24 15:26:34"
     },
     {
       "code": "周日020",
@@ -31800,7 +31800,7 @@
         "smart_type": "SINGLE",
         "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
       },
-      "stats_ts": "2026-10-24 15:25:47"
+      "stats_ts": "2026-10-24 15:26:34"
     },
     {
       "code": "周日021",
@@ -32116,7 +32116,7 @@
         "smart_type": "DOUBLE",
         "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
       },
-      "stats_ts": "2026-10-24 15:25:47"
+      "stats_ts": "2026-10-24 15:26:34"
     },
     {
       "code": "周日022",
@@ -32432,7 +32432,7 @@
         "smart_type": "SINGLE",
         "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
       },
-      "stats_ts": "2026-10-24 15:25:47"
+      "stats_ts": "2026-10-24 15:26:34"
     },
     {
       "code": "周日023",
@@ -32747,7 +32747,7 @@
         "smart_type": "SINGLE",
         "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
       },
-      "stats_ts": "2026-10-24 15:25:47"
+      "stats_ts": "2026-10-24 15:26:34"
     },
     {
       "code": "周日024",
@@ -33063,7 +33063,7 @@
         "smart_type": "SINGLE",
         "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
       },
-      "stats_ts": "2026-10-24 15:25:47"
+      "stats_ts": "2026-10-24 15:26:34"
     },
     {
       "code": "周日025",
@@ -33346,7 +33346,7 @@
         "smart_type": "DOUBLE",
         "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
       },
-      "stats_ts": "2026-10-24 15:25:47"
+      "stats_ts": "2026-10-24 15:26:34"
     },
     {
       "code": "周日026",
@@ -33661,7 +33661,7 @@
         "smart_type": "SINGLE",
         "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
       },
-      "stats_ts": "2026-10-24 15:25:47"
+      "stats_ts": "2026-10-24 15:26:34"
     },
     {
       "code": "周日027",
@@ -33976,7 +33976,7 @@
         "smart_type": "SINGLE",
         "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
       },
-      "stats_ts": "2026-10-24 15:25:47"
+      "stats_ts": "2026-10-24 15:26:34"
     },
     {
       "code": "周日028",
@@ -34212,7 +34212,7 @@
       },
       "quant_factors": null,
       "detail_schema": 2,
-      "stats_ts": "2026-10-24 15:25:47"
+      "stats_ts": "2026-10-24 15:26:34"
     },
     {
       "code": "周日029",
@@ -34496,7 +34496,7 @@
         "smart_type": "SINGLE",
         "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
       },
-      "stats_ts": "2026-10-24 15:25:47"
+      "stats_ts": "2026-10-24 15:26:34"
     },
     {
       "code": "周一001",
@@ -34780,7 +34780,7 @@
         "smart_type": "SINGLE",
         "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
       },
-      "stats_ts": "2026-10-24 15:25:47"
+      "stats_ts": "2026-10-24 15:26:34"
     },
     {
       "code": "周一002",
@@ -35039,7 +35039,7 @@
         "smart_type": "DOUBLE",
         "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
       },
-      "stats_ts": "2026-10-24 15:25:47"
+      "stats_ts": "2026-10-24 15:26:34"
     },
     {
       "code": "周一003",
@@ -35355,7 +35355,7 @@
         "smart_type": "DOUBLE",
         "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
       },
-      "stats_ts": "2026-10-24 15:25:47"
+      "stats_ts": "2026-10-24 15:26:34"
     },
     {
       "code": "周一004",
@@ -35638,7 +35638,7 @@
         "smart_type": "SINGLE",
         "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
       },
-      "stats_ts": "2026-10-24 15:25:47"
+      "stats_ts": "2026-10-24 15:26:34"
     }
   ]
 }
