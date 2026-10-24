@@ -1,7 +1,19 @@
 {
-  "updated_at": "2026-10-24 16:01:20",
-  "total_tips": 6,
+  "updated_at": "2026-10-24 16:31:38",
+  "total_tips": 7,
   "live_feed": [
+    {
+      "id": 4579,
+      "channel": "focuspredict",
+      "time": "2026-10-24 16:00",
+      "code": "周六022",
+      "league": "意甲",
+      "category": "推单",
+      "is_tip": true,
+      "match": "那不勒斯 VS 罗马",
+      "chinese": "欧料串关流出：本场意甲焦点战主推全场至少进2球（大1.5超低水）。机构对两队防线稳定性均持怀疑态度，倾向互攻格局，资金面看好出球走大，可做稳胆防身。",
+      "original": "🎯 ACCA TIPS - 24-10-2026 Napoli vs AS Roma Italy: Serie A Prediction: Over 1.5 (1.27) 🔗 View Details GAP Connah S Quay FC vs Llandudno Wales: Premier League Pre"
+    },
     {
       "id": 4576,
       "channel": "victorspredict",
