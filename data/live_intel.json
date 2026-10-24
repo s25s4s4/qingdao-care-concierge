@@ -1,7 +1,43 @@
 {
-  "updated_at": "2026-10-24 16:31:38",
-  "total_tips": 7,
+  "updated_at": "2026-10-24 17:32:28",
+  "total_tips": 10,
   "live_feed": [
+    {
+      "id": 4611,
+      "channel": "bulletbetpredictions",
+      "time": "2026-10-24 17:00",
+      "code": "周六006",
+      "league": "英超",
+      "category": "推单",
+      "is_tip": true,
+      "match": "维拉 VS 曼城",
+      "chinese": "曼城本季客场3战全胜且仅失0.3球，防线堪称铜墙铁壁。维拉主场硬碰毫无优势，客队基本面全面压制，资金暗流正持续涌向客胜。这盘力挺蓝月亮反客为主，稳博客胜，兼看小球。",
+      "original": "4.7 🤯 RB Leipzig goals per home game, 0 conceded. Elversberg visit. Top Matches 24 Oct: THE NUMBERS 📊 👉 Swipe through all 18 matches before kick-off. 🔥 Chelsea "
+    },
+    {
+      "id": 4608,
+      "channel": "betminesfootballpredictions",
+      "time": "2026-10-24 17:22",
+      "code": "周六009",
+      "league": "意甲",
+      "category": "推单",
+      "is_tip": true,
+      "match": "科莫 VS 萨索洛",
+      "chinese": "欧线情报看好大开大合！两边后防都漏，前场进攻核心埃斯波西托和多维卡斯状态火热，机构盘口力顶双方进球与点球判罚，看好对攻成局，总进球直奔2到5球，防大球稳妥！",
+      "original": "WEEKEND PREDICTIONS 🫶🏻 Another exciting football weekend is coming, with plenty of interesting options across goals, assists, cards and goalscorer markets. Here"
+    },
+    {
+      "id": 4607,
+      "channel": "TipstrrTips",
+      "time": "2026-10-24 17:19",
+      "code": "周六017",
+      "league": "英超",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "考文垂 VS 富勒姆",
+      "chinese": "英伦前线小道看好主队拿分。外盘资金正博考文垂平局退款（受让/平保），折合竞彩直接走主不败。富勒姆客场恐遭阻击，重点防平，实单建议双选让胜，搏冷可敲平局。",
+      "original": "Saturday's free football tip comes from the Premier League, where Makenzy1 is expecting Coventry City to get the better of Fulham, with the Draw No Bet option o"
+    },
     {
       "id": 4579,
       "channel": "focuspredict",
