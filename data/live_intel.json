@@ -1,7 +1,19 @@
 {
-  "updated_at": "2026-10-24 11:31:02",
-  "total_tips": 5,
+  "updated_at": "2026-10-24 16:01:20",
+  "total_tips": 6,
   "live_feed": [
+    {
+      "id": 4576,
+      "channel": "victorspredict",
+      "time": "2026-10-24 16:00",
+      "code": "周六006",
+      "league": "英超",
+      "category": "推单",
+      "is_tip": true,
+      "match": "维拉 VS 曼城",
+      "chinese": "海外暗盘硬推曼城客胜，欧洲主流初指压在1.66超低位，防范意图明显。虽然没给具体伤停，但资金面已形成一边倒压制，本场毫无悬念，正路直接跟庄走，单挑客胜打出。",
+      "original": "⭐ SUPER SINGLE TIP - 24-10-2026 Aston Villa vs Manchester City England: Premier League Prediction: Away (1.66) 🔗 View Details ⚠️ All predictions are informative"
+    },
     {
       "id": 4400,
       "channel": "FabrizioRomano",
