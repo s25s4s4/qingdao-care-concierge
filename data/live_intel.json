@@ -1,7 +1,19 @@
 {
-  "updated_at": "2026-10-24 07:00:58",
-  "total_tips": 3,
+  "updated_at": "2026-10-24 08:30:58",
+  "total_tips": 4,
   "live_feed": [
+    {
+      "id": 4495,
+      "channel": "betiper_official",
+      "time": "2026-10-24 05:10",
+      "code": "周六010",
+      "league": "意甲",
+      "category": "推单",
+      "is_tip": true,
+      "match": "卡利亚里 VS 博洛尼亚",
+      "chinese": "欧洲料子只带了一嘴黄牌大3.5，赔付给到2.19。没有阵容伤停和胜负资金干货，纯属引流推单。抓肉搏牌局可以防一手，竞彩核心胜负和进球数参考价值不大，别盲跟。",
+      "original": "📊 Betiper Elite Picks — Recent Results: 🔹 Saburtalo vs Mjällby AIF (Under 2.5) — ✅ Won @ 1.95 🔹 Inter Club d'Escaldes vs Universitatea Craiova (Under 2.5) — ❌ L"
+    },
     {
       "id": 4512,
       "channel": "ibettingxx",
