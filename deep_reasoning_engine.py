@@ -416,7 +416,7 @@ ALIAS_MAP = {
 }
 
 def query_telegram_tips_for_match(home, away):
-    """从 predictions.db 真实调取海外 22 个推单频道的实盘方案与情报"""
+    """从 predictions.db 真实调取海外多个推单频道的实盘方案与情报"""
     if not os.path.exists(DB_PATH):
         return []
 
@@ -427,100 +427,58 @@ def query_telegram_tips_for_match(home, away):
             _TEAM_ALIAS = json.load(_f)
     except Exception:
         _TEAM_ALIAS = {}
-    
-    # 扩充中文队名归一化与别名，确保无论官方怎么写都能 100% 匹配到库中的英文/多语言推单！
-    COMMON_ALIASES = {
-                "町田泽维": ["machida", "zelvia"],
-        "福冈黄蜂": ["fukuoka", "avispa"],
-        "江原FC": ["gangwon"],
-        "仁川联": ["incheon"],
-        "首尔FC": ["seoul", "fc seoul"],
-        "金泉尚武": ["gimcheon", "sangmu"],
-        "兹沃勒": ["zwolle"],
-        "前进之鹰": ["go ahead eagles", "eagles"],
-        "天狼星": ["sirius"],
-        "埃夫斯堡": ["elfsborg"],
-        "库奥皮奥": ["kups", "kuopio"],
-        "瓦萨": ["vps", "vaasa"],
-        "萨普斯堡": ["sarpsborg"],
-        "罗森博格": ["rosenborg"],
-        "伯恩茅斯": ["bournemouth"],
-        "桑德兰": ["sunderland"],
-        "昂热": ["angers"],
-        "马赛": ["marseille", "om"],
-        "塞尔塔": ["celta", "celta vigo"],
-        "阿拉维斯": ["alaves"],
-        "洛里昂": ["lorient"],
-        "摩纳哥": ["monaco", "as monaco"],
-        "门兴": ["gladbach", "moenchengladbach", "monchengladbach"],
-        "霍芬海姆": ["hoffenheim"],
-        "马拉加": ["malaga"],
-        "皇家社会": ["sociedad", "real sociedad"],
-        "里昂": ["lyon", "olympique lyonnais"],
-        "尼斯": ["nice", "ogc nice"],
-        "弗鲁米嫩": ["fluminense"],
-        "桑托斯": ["santos"],
-        "皇马": ["real madrid", "madrid", "real"],
-        "塞维利亚": ["sevilla"],
-        "AC米兰": ["ac milan", "milan"],
-        "米兰": ["ac milan", "milan"],
-        "亚特兰大": ["atalanta"],
-        "尤文图斯": ["juventus", "juve"],
-        "拉齐奥": ["lazio"],
-        "热刺": ["tottenham", "spurs"],
-        "考文垂": ["coventry"],
-        "佛罗伦萨": ["fiorentina"],
-        "科莫": ["como"],
-        "阿森纳": ["arsenal", "gunners"],
-        "诺丁汉": ["nottingham", "forest"],
-        "曼联": ["manchester united", "man utd", "man united"],
-        "利兹联": ["leeds", "leeds united"],
-        "勒沃库森": ["leverkusen", "bayer"],
-        "弗赖堡": ["freiburg"],
-        "巴萨": ["barcelona", "barca"],
-        "马竞": ["atletico", "atletico madrid"],
-        "国米": ["inter", "inter milan"],
-        "国际米兰": ["inter", "inter milan"],
-        "巴黎圣日耳曼": ["psg", "paris"],
-        "巴黎圣曼": ["psg", "paris"],
-        "拜仁": ["bayern", "munich"],
-        "多特蒙德": ["dortmund", "bvb"],
-        "阿贾克斯": ["ajax"],
-        "布拉加": ["braga"],
-        "科林蒂安": ["corinthians"],
-        "蒙扎": ["monza"],
-        "都灵": ["torino"],
-        "帕尔马": ["parma"],
-        "罗德兹": ["rodez"],
-        "蒙彼利埃": ["montpellier"],
-        "赫塔费": ["getafe"],
-        "巴列卡诺": ["rayo", "vallecano"],
-        "仙台七夕": ["sapporo", "consadole"],
-        "兰斯": ["lens", "rc lens"],
-        "冈山绿雉": ["okayama", "fagiano"],
-        "哥德堡": ["göteborg", "gais", "ifk göteborg"],
-        "圣克拉拉": ["santa clara"],
-        "布洛涅": ["boulogne"],
-        "新潟天鹅": ["niigata", "albirex"],
-        "本菲卡": ["benfica"],
-        "水户蜀葵": ["mito", "hollyhock"],
-        "洛城银河": ["la galaxy", "galaxy", "lag"],
-        "洛杉矶FC": ["lafc", "la fc"],
-        "济州SK": ["jeju", "jeju united"],
-        "特温特": ["twente"],
-        "特罗姆瑟": ["tromsø", "tromso"],
-        "盖斯": ["gais"],
-        "福图纳": ["fortuna sittard", "fortuna"],
-        "米竞技": ["atletico mineiro", "atletico-mg"],
-        "维塞乌": ["farense"],
-        "阿尔克马": ["az alkmaar", "az"],
-        "阿德莱德": ["adelaide", "adelaide united"]
+
+    # 联赛关键词映射：用于过滤和加权不同联赛的情报
+    LEAGUE_KEYWORDS = {
+        "英超": ["premier", "epl", "england", "manchester", "liverpool", "chelsea", "arsenal", "tottenham", "united"],
+        "西甲": ["laliga", "la liga", "spain", "real madrid", "barcelona", "atletico", "sevilla", "valencia"],
+        "意甲": ["seriea", "serie a", "italia", "juventus", "milan", "inter", "napoli", "roma", "lazio"],
+        "德甲": ["bundesliga", "germany", "bayern", "dortmund", "leverkusen", "leipzig", "frankfurt"],
+        "法甲": ["ligue1", "ligue 1", "france", "psg", "paris", "marseille", "lyon", "monaco"],
+        "欧冠": ["champions league", "ucl", "champions", "欧冠"],
+        "欧联": ["europa league", "uel", "欧联"],
+        "欧协联": ["conference league", "uecl", "欧协联"],
+        "日职": ["j league", "j1", "j2", "japan", "fc tokyo", "kashima", "vissel", "kawasaki"],
+        "日乙": ["j2 league", "japan j2"],
+        "韩职": ["k league", "korea", "seoul", "ulsan", "jeonbuk", "pohang"],
+        "巴甲": ["brasileirao", "brasileir", "brazil", "palmeiras", "flamengo", "sao paulo"],
+        "澳超": ["a-league", "australia", "sydney", "melbourne", "adelaide"],
+        "挪超": ["eliteserien", "norway", "bodø", "molde", "roasenborg", "tromsø"],
+        "瑞超": ["allsvenskan", "sweden", "malmo", "djurgården", "elfsborg", "sirius"],
+        "芬超": ["veikkaus", "finland", "hjk", "kuopio", "tps"],
+        "荷甲": ["eredivisie", "netherlands", "ajax", "feyenoord", "psv", "alkmaar"],
+        "荷乙": ["eerste divisie", "netherlands second"],
+        "葡超": ["primeira liga", "portugal", "benfica", "porto", "braga"],
+        "英冠": ["championship", "england championship"],
+        "德甲2": ["2.bundesliga", "germany second"],
+        "意甲2": ["serie b", "italy second"],
+        "法乙": ["ligue 2", "france second"],
+        "解放者杯": ["libertadores", "copa libertadores", "南美解放者杯"],
     }
-    
+
+    # 根据主队或客队名推断比赛所属联赛
+    def infer_league(home, away):
+        home_lower = home.lower()
+        away_lower = away.lower()
+        combined = f"{home_lower} {away_lower}"
+        detected = []
+        for league, keywords in LEAGUE_KEYWORDS.items():
+            if any(kw in combined for kw in keywords):
+                detected.append(league)
+        return detected if detected else ["综合"]
+
+    detected_leagues = infer_league(home, away)
+
     h_keys = [home.lower()] + ALIAS_MAP.get(home, []) + _TEAM_ALIAS.get(home, [])
     a_keys = [away.lower()] + ALIAS_MAP.get(away, []) + _TEAM_ALIAS.get(away, [])
-    
+
     conn = sqlite3.connect(DB_PATH)
+    c = conn.cursor()
+    c.execute("""
+        SELECT channel, raw_text, post_time 
+        FROM telegram_tips 
+        ORDER BY id DESC LIMIT 2000
+    """)
     c = conn.cursor()
     c.execute("""
         SELECT channel, raw_text, post_time 
