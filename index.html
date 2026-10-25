@@ -1347,16 +1347,16 @@
         .then(data => {
             const serverVersion = data.version || 0;
             const lastVersion = localStorage.getItem(STORAGE_KEY);
-            // 只要有新版本就刷新，不管缓存
+            // 有新版本就调用 loadMatchesData 无感更新，绝不粗暴刷新整页
             if (!lastVersion || parseInt(lastVersion) < serverVersion) {
-                console.log('[版本检查] 强制刷新:', lastVersion, '->', serverVersion);
+                console.log('[版本检查] 检测到新版本，无感拉取:', lastVersion, '->', serverVersion);
                 localStorage.setItem(STORAGE_KEY, serverVersion);
-                location.reload();
+                loadMatchesData(window.currentFilterMode || 'all');
             } else if (lastVersion !== String(serverVersion)) {
-                // 版本不一致也刷新
-                console.log('[版本检查] 版本不一致，刷新:', lastVersion, '->', serverVersion);
+                // 版本不一致也拉一次（由 Version Guard 自行丢弃陈旧响应）
+                console.log('[版本检查] 版本不一致，拉取:', lastVersion, '->', serverVersion);
                 localStorage.setItem(STORAGE_KEY, String(serverVersion));
-                location.reload();
+                loadMatchesData(window.currentFilterMode || 'all');
             }
         })
         .catch(e => console.warn('[版本检查] 失败:', e));
@@ -1839,6 +1839,17 @@
         // 不再内嵌历史快照：数据只来自接口，避免把旧比分当实时数据展示
         let ALL_OFFICIAL_MATCHES = [];
 
+        // 防旧数据倒灌门禁 (Version Guard)：内存中当前持有的数据版本号，
+        // 所有数据通路（轮询 / SSE / 版本定时器）写入前必须先过这道门。
+        window._currentMatchesVersion = window._currentMatchesVersion || 0;
+        function shouldAcceptData(data) {
+            const v = data && data.version;
+            if (v === undefined || v === null) return true; // 无版本信息无法判旧，放行
+            if (Number(v) < window._currentMatchesVersion) return false; // 陈旧数据，丢弃
+            window._currentMatchesVersion = Number(v);
+            return true;
+        }
+
         // Tab 切换逻辑
         function switchNav(tabId) {
             // ROI 产品线下架期间，任何指向串关的跳转都回落到赛事中心
@@ -1948,12 +1959,14 @@
                 }))
                 .catch(() => fetch(localUrl, { cache: 'no-store' }).then(r => r.json()))
                 .then(data => {
-                    if (data && data.matches) {
+                    if (data && data.matches && shouldAcceptData(data)) {
                         ALL_OFFICIAL_MATCHES = data.matches;
                         updateMatchStamp(data.updated_at);
                         renderMatchesList(filterMode);
                         renderConsensusList();
                         renderAuditLedger();
+                    } else if (data && data.matches) {
+                        console.warn('[VersionGuard] 丢弃陈旧数据:', data.version, '<', window._currentMatchesVersion);
                     }
                 })
                 .catch(err => {
@@ -4238,9 +4251,12 @@ function copyWechat() {
                     try {
                         const data = JSON.parse(e.data);
                         if (!data || !data.matches) return;
+                        // Version Guard：网络延迟/缓存返回的旧数据直接丢弃，绝不让旧数据倒灌覆盖当前内存
+                        if (data.version && Number(data.version) < window._currentMatchesVersion) return;
                         const revision = String(data.updated_at || '');
                         if (revision && revision === lastRevision) return; // 无变化不重绘
                         lastRevision = revision;
+                        window._currentMatchesVersion = Number(data.version || window._currentMatchesVersion);
                         ALL_OFFICIAL_MATCHES = data.matches;
                         updateMatchStamp(data.updated_at);
                         renderMatchesList(window.currentFilterMode || 'all');
@@ -4277,67 +4293,5 @@ function copyWechat() {
             }
         });
     </script>
-
-    <!-- SSE实时推送连接 -->
-    <script>
-// SSE实时推送连接
-(function initSSE() {
-    const isHttps = location.protocol === 'https:';
-    // HTTPS用阿里云直连，HTTP用本地或阿里云
-    const sseUrl = isHttps 
-        ? location.protocol + '//' + location.hostname + '/football_stream'
-        : 'http://47.121.185.16/football_stream';
-    
-    let eventSource = null;
-    let reconnectDelay = 1000;
-    
-    function connect() {
-        if (eventSource) {
-            eventSource.close();
-        }
-        
-        eventSource = new EventSource(sseUrl);
-        
-        eventSource.onopen = function() {
-            console.log('[SSE] 连接成功');
-            reconnectDelay = 1000;
-        };
-        
-        eventSource.onmessage = function(e) {
-            if (e.data === 'heartbeat') return;
-
-            try {
-                const data = JSON.parse(e.data);
-                if (data.matches && data.version) {
-                    // 版本比对，有新数据才刷新
-                    const lastVersion = localStorage.getItem('jc_matches_version');
-                    if (!lastVersion || parseInt(lastVersion) < data.version) {
-                        localStorage.setItem('jc_matches_version', data.version);
-                        // 直接调用loadMatchesData更新数据
-                        loadMatchesData(window.currentFilterMode || 'all');
-                    }
-                }
-            } catch(err) {
-                console.warn('[SSE] 解析失败:', err);
-            }
-        };
-        
-        eventSource.onerror = function(err) {
-            console.warn('[SSE] 连接断开，' + Math.round(reconnectDelay/1000) + '秒后重试...');
-            reconnectDelay = Math.min(reconnectDelay * 2, 30000);
-            setTimeout(connect, reconnectDelay);
-        };
-    }
-    
-    connect();
-
-    // 页面可见性变化时重连
-    document.addEventListener('visibilitychange', function() {
-        if (!document.hidden) {
-            connect();
-        }
-    });
-})();
-</script>
 </body>
 </html>
