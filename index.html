@@ -1321,11 +1321,11 @@
             margin-bottom: 8px;
         }
     </style>
-</head>
-<body
-<script>
-// 版本检查：每5分钟检查一次，有新数据时自动刷新
-(function checkDataVersion() {
+    </head>
+    <body>
+        <script>
+    // 版本检查：每5分钟检查一次，有新数据时自动刷新
+    (function checkDataVersion() {
     try {
         const STORAGE_KEY = 'jc_matches_version';
         const cached = localStorage.getItem(STORAGE_KEY);
