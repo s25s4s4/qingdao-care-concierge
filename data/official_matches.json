@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25 10:59:04",
+  "updated_at": "2026-10-25 11:00:05",
   "total": 111,
   "matches": [
     {
@@ -246,7 +246,7 @@
         "result": "MISS",
         "score": "2-2",
         "source": "stored_score",
-        "settled_at": "2026-10-25T10:59:03",
+        "settled_at": "2026-10-25T11:00:03",
         "outcome": "平局",
         "tip": "主胜",
         "market": "had"
@@ -542,7 +542,7 @@
         "result": "HIT",
         "score": "1-2",
         "source": "stored_score",
-        "settled_at": "2026-10-25T10:59:03",
+        "settled_at": "2026-10-25T11:00:03",
         "outcome": "客胜",
         "tip": "客胜",
         "market": "had"
@@ -848,7 +848,7 @@
         "result": "MISS",
         "score": "1-1",
         "source": "stored_score",
-        "settled_at": "2026-10-25T10:59:03",
+        "settled_at": "2026-10-25T11:00:03",
         "outcome": "平局",
         "tip": "主胜",
         "market": "had"
@@ -1215,7 +1215,7 @@
         "result": "HIT",
         "score": "4-3",
         "source": "stored_score",
-        "settled_at": "2026-10-25T10:59:03",
+        "settled_at": "2026-10-25T11:00:03",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -1540,7 +1540,7 @@
         "result": "HIT",
         "score": "4-0",
         "source": "stored_score",
-        "settled_at": "2026-10-25T10:59:03",
+        "settled_at": "2026-10-25T11:00:03",
         "outcome": "让胜",
         "tip": "让胜/博穿盘",
         "market": "hhad"
@@ -1922,7 +1922,7 @@
         "result": "HIT",
         "score": "4-2",
         "source": "stored_score",
-        "settled_at": "2026-10-25T10:59:03",
+        "settled_at": "2026-10-25T11:00:03",
         "outcome": "主胜",
         "tip": "主不败/首选主胜",
         "market": "had"
@@ -2304,7 +2304,7 @@
         "result": "HIT",
         "score": "4-3",
         "source": "stored_score",
-        "settled_at": "2026-10-25T10:59:03",
+        "settled_at": "2026-10-25T11:00:03",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -2631,7 +2631,7 @@
         "result": "HIT",
         "score": "5-1",
         "source": "stored_score",
-        "settled_at": "2026-10-25T10:59:03",
+        "settled_at": "2026-10-25T11:00:03",
         "outcome": "让胜",
         "tip": "让胜/博穿盘",
         "market": "hhad"
@@ -2984,7 +2984,7 @@
         "result": "MISS",
         "score": "1-1",
         "source": "stored_score",
-        "settled_at": "2026-10-25T10:59:03",
+        "settled_at": "2026-10-25T11:00:03",
         "outcome": "平局",
         "tip": "客胜",
         "market": "had"
@@ -3344,7 +3344,7 @@
         "result": "MISS",
         "score": "0-1",
         "source": "stored_score",
-        "settled_at": "2026-10-25T10:59:03",
+        "settled_at": "2026-10-25T11:00:03",
         "outcome": "客胜",
         "tip": "主胜",
         "market": "had"
@@ -3701,7 +3701,7 @@
         "result": "HIT",
         "score": "0-0",
         "source": "stored_score",
-        "settled_at": "2026-10-25T10:59:03",
+        "settled_at": "2026-10-25T11:00:03",
         "outcome": "平局",
         "tip": "主不败/首选主胜",
         "market": "had"
@@ -4062,7 +4062,7 @@
         "result": "HIT",
         "score": "2-1",
         "source": "stored_score",
-        "settled_at": "2026-10-25T10:59:03",
+        "settled_at": "2026-10-25T11:00:03",
         "outcome": "让平",
         "tip": "让负/防让平",
         "market": "hhad"
@@ -4282,7 +4282,7 @@
         "result": "MISS",
         "score": "0-3",
         "source": "stored_score",
-        "settled_at": "2026-10-25T10:59:03",
+        "settled_at": "2026-10-25T11:00:03",
         "outcome": "客胜",
         "tip": "主不败/首选主胜",
         "market": "had"
@@ -4626,7 +4626,7 @@
         "result": "HIT",
         "score": "4-1",
         "source": "stored_score",
-        "settled_at": "2026-10-25T10:59:03",
+        "settled_at": "2026-10-25T11:00:03",
         "outcome": "主胜",
         "tip": "主不败/首选主胜",
         "market": "had"
@@ -4914,7 +4914,7 @@
         "result": "MISS",
         "score": "2-4",
         "source": "stored_score",
-        "settled_at": "2026-10-25T10:59:03",
+        "settled_at": "2026-10-25T11:00:03",
         "outcome": "客胜",
         "tip": "主不败/首选主胜",
         "market": "had"
@@ -5307,7 +5307,7 @@
         "result": "MISS",
         "score": "3-1",
         "source": "stored_score",
-        "settled_at": "2026-10-25T10:59:03",
+        "settled_at": "2026-10-25T11:00:03",
         "outcome": "主胜",
         "tip": "客不败/双选平负",
         "market": "had"
@@ -5674,7 +5674,7 @@
         "result": "HIT",
         "score": "4-1",
         "source": "stored_score",
-        "settled_at": "2026-10-25T10:59:03",
+        "settled_at": "2026-10-25T11:00:03",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -6007,7 +6007,7 @@
         "result": "HIT",
         "score": "3-1",
         "source": "stored_score",
-        "settled_at": "2026-10-25T10:59:03",
+        "settled_at": "2026-10-25T11:00:03",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -6346,7 +6346,7 @@
         "result": "HIT",
         "score": "1-0",
         "source": "stored_score",
-        "settled_at": "2026-10-25T10:59:03",
+        "settled_at": "2026-10-25T11:00:03",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -6713,7 +6713,7 @@
         "result": "HIT",
         "score": "2-2",
         "source": "stored_score",
-        "settled_at": "2026-10-25T10:59:03",
+        "settled_at": "2026-10-25T11:00:03",
         "outcome": "平局",
         "tip": "主不败/首选主胜",
         "market": "had"
@@ -7043,7 +7043,7 @@
         "result": "MISS",
         "score": "2-3",
         "source": "stored_score",
-        "settled_at": "2026-10-25T10:59:03",
+        "settled_at": "2026-10-25T11:00:03",
         "outcome": "让负",
         "tip": "让平/防让胜",
         "market": "hhad"
@@ -7382,7 +7382,7 @@
         "result": "HIT",
         "score": "3-0",
         "source": "stored_score",
-        "settled_at": "2026-10-25T10:59:03",
+        "settled_at": "2026-10-25T11:00:03",
         "outcome": "主胜",
         "tip": "主不败/首选主胜",
         "market": "had"
@@ -7832,7 +7832,7 @@
         "result": "MISS",
         "score": "0-1",
         "source": "stored_score",
-        "settled_at": "2026-10-25T10:59:03",
+        "settled_at": "2026-10-25T11:00:03",
         "outcome": "客胜",
         "tip": "主不败/首选主胜",
         "market": "had"
@@ -8208,7 +8208,7 @@
         "result": "MISS",
         "score": "1-0",
         "source": "stored_score",
-        "settled_at": "2026-10-25T10:59:03",
+        "settled_at": "2026-10-25T11:00:03",
         "outcome": "主胜",
         "tip": "客胜/防平",
         "market": "had"
@@ -8556,7 +8556,7 @@
         "result": "HIT",
         "score": "1-1",
         "source": "stored_score",
-        "settled_at": "2026-10-25T10:59:03",
+        "settled_at": "2026-10-25T11:00:03",
         "outcome": "平局",
         "tip": "客胜/防平",
         "market": "had"
@@ -8906,7 +8906,7 @@
         "result": "MISS",
         "score": "2-4",
         "source": "stored_score",
-        "settled_at": "2026-10-25T10:59:03",
+        "settled_at": "2026-10-25T11:00:03",
         "outcome": "客胜",
         "tip": "主胜",
         "market": "had"
@@ -9255,7 +9255,7 @@
         "result": "MISS",
         "score": "2-2",
         "source": "stored_score",
-        "settled_at": "2026-10-25T10:59:03",
+        "settled_at": "2026-10-25T11:00:03",
         "outcome": "平局",
         "tip": "主胜",
         "market": "had"
@@ -9583,7 +9583,7 @@
         "result": "HIT",
         "score": "0-2",
         "source": "stored_score",
-        "settled_at": "2026-10-25T10:59:03",
+        "settled_at": "2026-10-25T11:00:03",
         "outcome": "让平",
         "tip": "让负/防让平",
         "market": "hhad"
@@ -9932,7 +9932,7 @@
         "result": "HIT",
         "score": "3-0",
         "source": "stored_score",
-        "settled_at": "2026-10-25T10:59:03",
+        "settled_at": "2026-10-25T11:00:03",
         "outcome": "主胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -10283,7 +10283,7 @@
         "result": "HIT",
         "score": "1-2",
         "source": "stored_score",
-        "settled_at": "2026-10-25T10:59:03",
+        "settled_at": "2026-10-25T11:00:03",
         "outcome": "客胜",
         "tip": "客胜/防平",
         "market": "had"
@@ -10633,7 +10633,7 @@
         "result": "HIT",
         "score": "2-2",
         "source": "stored_score",
-        "settled_at": "2026-10-25T10:59:03",
+        "settled_at": "2026-10-25T11:00:03",
         "outcome": "平局",
         "tip": "主胜/防平",
         "market": "had"
@@ -11021,7 +11021,7 @@
         "result": "HIT",
         "score": "3-0",
         "source": "stored_score",
-        "settled_at": "2026-10-25T10:59:03",
+        "settled_at": "2026-10-25T11:00:03",
         "outcome": "主胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -11365,7 +11365,7 @@
         "result": "HIT",
         "score": "0-6",
         "source": "stored_score",
-        "settled_at": "2026-10-25T10:59:03",
+        "settled_at": "2026-10-25T11:00:03",
         "outcome": "客胜",
         "tip": "客胜",
         "market": "had"
@@ -11730,7 +11730,7 @@
         "result": "HIT",
         "score": "2-0",
         "source": "stored_score",
-        "settled_at": "2026-10-25T10:59:03",
+        "settled_at": "2026-10-25T11:00:03",
         "outcome": "主胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -12082,7 +12082,7 @@
         "result": "HIT",
         "score": "3-0",
         "source": "stored_score",
-        "settled_at": "2026-10-25T10:59:03",
+        "settled_at": "2026-10-25T11:00:03",
         "outcome": "主胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -12428,7 +12428,7 @@
         "result": "MISS",
         "score": "0-0",
         "source": "stored_score",
-        "settled_at": "2026-10-25T10:59:03",
+        "settled_at": "2026-10-25T11:00:03",
         "outcome": "平局",
         "tip": "主胜",
         "market": "had"
@@ -12765,7 +12765,7 @@
         "result": "HIT",
         "score": "2-1",
         "source": "stored_score",
-        "settled_at": "2026-10-25T10:59:03",
+        "settled_at": "2026-10-25T11:00:03",
         "outcome": "主胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -13099,7 +13099,7 @@
         "result": "MISS",
         "score": "1-1",
         "source": "stored_score",
-        "settled_at": "2026-10-25T10:59:03",
+        "settled_at": "2026-10-25T11:00:03",
         "outcome": "平局",
         "tip": "客胜",
         "market": "had"
@@ -13437,7 +13437,7 @@
         "result": "HIT",
         "score": "0-0",
         "source": "stored_score",
-        "settled_at": "2026-10-25T10:59:03",
+        "settled_at": "2026-10-25T11:00:03",
         "outcome": "平局",
         "tip": "主胜/防平",
         "market": "had"
@@ -13775,7 +13775,7 @@
         "result": "HIT",
         "score": "3-2",
         "source": "stored_score",
-        "settled_at": "2026-10-25T10:59:03",
+        "settled_at": "2026-10-25T11:00:03",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -14114,7 +14114,7 @@
         "result": "HIT",
         "score": "1-1",
         "source": "stored_score",
-        "settled_at": "2026-10-25T10:59:03",
+        "settled_at": "2026-10-25T11:00:03",
         "outcome": "平局",
         "tip": "客胜/防平",
         "market": "had"
@@ -14483,7 +14483,7 @@
         "result": "MISS",
         "score": "2-3",
         "source": "stored_score",
-        "settled_at": "2026-10-25T10:59:03",
+        "settled_at": "2026-10-25T11:00:03",
         "outcome": "客胜",
         "tip": "主胜",
         "market": "had"
@@ -14847,7 +14847,7 @@
         "result": "HIT",
         "score": "3-2",
         "source": "stored_score",
-        "settled_at": "2026-10-25T10:59:03",
+        "settled_at": "2026-10-25T11:00:03",
         "outcome": "主胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -15217,7 +15217,7 @@
         "result": "MISS",
         "score": "1-2",
         "source": "stored_score",
-        "settled_at": "2026-10-25T10:59:03",
+        "settled_at": "2026-10-25T11:00:03",
         "outcome": "客胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -15586,7 +15586,7 @@
         "result": "HIT",
         "score": "1-1",
         "source": "stored_score",
-        "settled_at": "2026-10-25T10:59:03",
+        "settled_at": "2026-10-25T11:00:03",
         "outcome": "平局",
         "tip": "客胜/防平",
         "market": "had"
@@ -15924,7 +15924,7 @@
         "result": "HIT",
         "score": "1-5",
         "source": "stored_score",
-        "settled_at": "2026-10-25T10:59:03",
+        "settled_at": "2026-10-25T11:00:03",
         "outcome": "客胜",
         "tip": "客胜",
         "market": "had"
@@ -16290,7 +16290,7 @@
         "result": "MISS",
         "score": "1-1",
         "source": "stored_score",
-        "settled_at": "2026-10-25T10:59:03",
+        "settled_at": "2026-10-25T11:00:03",
         "outcome": "平局",
         "tip": "主胜",
         "market": "had"
@@ -16655,7 +16655,7 @@
         "result": "HIT",
         "score": "5-0",
         "source": "stored_score",
-        "settled_at": "2026-10-25T10:59:03",
+        "settled_at": "2026-10-25T11:00:03",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -16991,7 +16991,7 @@
         "result": "MISS",
         "score": "1-1",
         "source": "stored_score",
-        "settled_at": "2026-10-25T10:59:03",
+        "settled_at": "2026-10-25T11:00:03",
         "outcome": "平局",
         "tip": "主胜",
         "market": "had"
@@ -17300,7 +17300,7 @@
         "result": "HIT",
         "score": "3-1",
         "source": "stored_score",
-        "settled_at": "2026-10-25T10:59:03",
+        "settled_at": "2026-10-25T11:00:03",
         "outcome": "主胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -17634,7 +17634,7 @@
         "result": "HIT",
         "score": "0-0",
         "source": "stored_score",
-        "settled_at": "2026-10-25T10:59:03",
+        "settled_at": "2026-10-25T11:00:03",
         "outcome": "平局",
         "tip": "客胜/防平",
         "market": "had"
@@ -17973,7 +17973,7 @@
         "result": "MISS",
         "score": "2-3",
         "source": "stored_score",
-        "settled_at": "2026-10-25T10:59:03",
+        "settled_at": "2026-10-25T11:00:03",
         "outcome": "客胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -18302,7 +18302,7 @@
         "result": "HIT",
         "score": "1-1",
         "source": "stored_score",
-        "settled_at": "2026-10-25T10:59:03",
+        "settled_at": "2026-10-25T11:00:03",
         "outcome": "平局",
         "tip": "主胜/防平",
         "market": "had"
@@ -18318,7 +18318,7 @@
       "away": "曼城",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "完赛待核验",
+      "status": "已完赛",
       "form_home": [
         "W",
         "W",
@@ -18354,8 +18354,8 @@
         "0-2",
         "0-1"
       ],
-      "score": "--",
-      "result": "PENDING",
+      "score": "2-1",
+      "result": "MISS",
       "analysis": "去水胜平负 19.7%/20.4%/59.9%，泊松期望进球 1.13:2.11，单挑【客胜】稳胆（去水胜率 59.9%）。",
       "dossier": {
         "fundamental": "维拉近10场 7胜2平1负，场均进2.50失1.10（截至2026-10-22）；曼城近10场 9胜0平1负，场均进3.10失1.10（截至2026-10-21）。",
@@ -18653,7 +18653,17 @@
         "traceable": true,
         "note": "停售时刻冻结（含临开赛早场），此后不随盘口变动"
       },
-      "locked": true
+      "locked": true,
+      "settlement": {
+        "result": "MISS",
+        "score": "2-1",
+        "source": "stored_score",
+        "settled_at": "2026-10-25T11:00:03",
+        "outcome": "主胜",
+        "tip": "客胜",
+        "market": "had"
+      },
+      "result_text": "研判未中"
     },
     {
       "code": "周六007",
@@ -18664,7 +18674,7 @@
       "away": "诺维奇",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "完赛待核验",
+      "status": "已完赛",
       "form_home": [
         "L",
         "D",
@@ -18700,8 +18710,8 @@
         "0-2",
         "1-1"
       ],
-      "score": "--",
-      "result": "PENDING",
+      "score": "1-3",
+      "result": "HIT",
       "analysis": "去水胜平负 26.0%/26.8%/47.1%，泊松期望进球 0.98:1.43，首选【客胜】+次选【防平】（覆盖率 74.0%）。",
       "dossier": {
         "fundamental": "查尔顿近10场 1胜5平4负，场均进0.70失1.80（截至2026-10-17）；诺维奇近10场 3胜0平7负，场均进1.60失2.10（截至2026-10-17）。",
@@ -18974,7 +18984,17 @@
         "traceable": true,
         "note": "停售时刻冻结（含临开赛早场），此后不随盘口变动"
       },
-      "locked": true
+      "locked": true,
+      "settlement": {
+        "result": "HIT",
+        "score": "1-3",
+        "source": "stored_score",
+        "settled_at": "2026-10-25T11:00:03",
+        "outcome": "客胜",
+        "tip": "客胜/防平",
+        "market": "had"
+      },
+      "result_text": "研判命中"
     },
     {
       "code": "周六008",
@@ -18985,7 +19005,7 @@
       "away": "埃尔切",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "完赛待核验",
+      "status": "已完赛",
       "form_home": [
         "D",
         "D",
@@ -19021,8 +19041,8 @@
         "2-0",
         "2-1"
       ],
-      "score": "--",
-      "result": "PENDING",
+      "score": "0-3",
+      "result": "MISS",
       "analysis": "去水胜平负 56.7%/23.6%/19.7%，泊松期望进球 1.75:0.92，单挑【主胜】稳胆（去水胜率 56.7%）。",
       "dossier": {
         "fundamental": "巴列卡诺近10场 3胜3平4负，场均进1.50失2.20（截至2026-10-20）；埃尔切近10场 2胜4平4负，场均进1.40失1.70（截至2026-10-17）。",
@@ -19333,7 +19353,17 @@
         "traceable": true,
         "note": "停售时刻冻结（含临开赛早场），此后不随盘口变动"
       },
-      "locked": true
+      "locked": true,
+      "settlement": {
+        "result": "MISS",
+        "score": "0-3",
+        "source": "stored_score",
+        "settled_at": "2026-10-25T11:00:03",
+        "outcome": "客胜",
+        "tip": "主胜",
+        "market": "had"
+      },
+      "result_text": "研判未中"
     },
     {
       "code": "周六009",
@@ -19344,7 +19374,7 @@
       "away": "萨索洛",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "完赛待核验",
+      "status": "已完赛",
       "form_home": [
         "W",
         "W",
@@ -19380,8 +19410,8 @@
         "2-1",
         "1-0"
       ],
-      "score": "--",
-      "result": "PENDING",
+      "score": "2-0",
+      "result": "HIT",
       "analysis": "去水胜平负 68.1%/18.1%/13.8%，泊松期望进球 2.32:0.95，单挑【主胜】稳胆（去水胜率 68.1%）。",
       "dossier": {
         "fundamental": "科莫近10场 6胜2平2负，场均进2.20失1.20（截至2026-10-22）；萨索洛近10场 3胜3平4负，场均进1.80失1.80（截至2026-10-17）。",
@@ -19693,7 +19723,17 @@
         "traceable": true,
         "note": "停售时刻冻结（含临开赛早场），此后不随盘口变动"
       },
-      "locked": true
+      "locked": true,
+      "settlement": {
+        "result": "HIT",
+        "score": "2-0",
+        "source": "stored_score",
+        "settled_at": "2026-10-25T11:00:03",
+        "outcome": "主胜",
+        "tip": "主胜",
+        "market": "had"
+      },
+      "result_text": "研判命中"
     },
     {
       "code": "周六010",
@@ -19704,7 +19744,7 @@
       "away": "博洛尼亚",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "完赛待核验",
+      "status": "已完赛",
       "form_home": [
         "L",
         "D",
@@ -19740,8 +19780,8 @@
         "0-2",
         "0-0"
       ],
-      "score": "--",
-      "result": "PENDING",
+      "score": "0-2",
+      "result": "HIT",
       "analysis": "去水胜平负 29.5%/32.8%/37.7%，泊松期望进球 0.82:0.98，首选【客胜】+次选【防平】（覆盖率 70.5%）。",
       "dossier": {
         "fundamental": "卡利亚里近10场 5胜2平3负，场均进0.80失0.90（截至2026-10-20）；博洛尼亚近10场 2胜2平6负，场均进1.00失1.60（截至2026-10-18）。",
@@ -20052,7 +20092,17 @@
         "traceable": true,
         "note": "停售时刻冻结（含临开赛早场），此后不随盘口变动"
       },
-      "locked": true
+      "locked": true,
+      "settlement": {
+        "result": "HIT",
+        "score": "0-2",
+        "source": "stored_score",
+        "settled_at": "2026-10-25T11:00:03",
+        "outcome": "客胜",
+        "tip": "客胜/防平",
+        "market": "had"
+      },
+      "result_text": "研判命中"
     },
     {
       "code": "周六011",
@@ -20063,7 +20113,7 @@
       "away": "埃沃斯堡",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "完赛待核验",
+      "status": "已完赛",
       "form_home": [
         "L",
         "L",
@@ -20099,8 +20149,8 @@
         "2-0",
         "3-1"
       ],
-      "score": "--",
-      "result": "PENDING",
+      "score": "4-0",
+      "result": "HIT",
       "analysis": "去水胜平负 70.9%/16.1%/13.0%，泊松期望进球 2.67:1.09，单挑【主胜】稳胆（去水胜率 70.9%）。",
       "dossier": {
         "fundamental": "莱红牛近10场 5胜0平5负，场均进2.50失1.90（截至2026-10-22）；埃沃斯堡近10场 6胜2平2负，场均进2.50失1.60（截至2026-10-17）。",
@@ -20387,7 +20437,17 @@
         "traceable": true,
         "note": "停售时刻冻结（含临开赛早场），此后不随盘口变动"
       },
-      "locked": true
+      "locked": true,
+      "settlement": {
+        "result": "HIT",
+        "score": "4-0",
+        "source": "stored_score",
+        "settled_at": "2026-10-25T11:00:03",
+        "outcome": "主胜",
+        "tip": "主胜",
+        "market": "had"
+      },
+      "result_text": "研判命中"
     },
     {
       "code": "周六012",
@@ -20398,7 +20458,7 @@
       "away": "不来梅",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "完赛待核验",
+      "status": "已完赛",
       "form_home": [
         "W",
         "L",
@@ -20434,8 +20494,8 @@
         "2-1",
         "2-0"
       ],
-      "score": "--",
-      "result": "PENDING",
+      "score": "2-3",
+      "result": "MISS",
       "analysis": "去水胜平负 55.7%/23.0%/21.3%，泊松期望进球 1.79:1.02，单挑【主胜】稳胆（去水胜率 55.7%）。",
       "dossier": {
         "fundamental": "美因茨近10场 7胜1平2负，场均进3.20失1.10（截至2026-10-17）；不来梅近10场 3胜4平3负，场均进1.70失2.20（截至2026-10-17）。",
@@ -20748,7 +20808,17 @@
         "traceable": true,
         "note": "停售时刻冻结（含临开赛早场），此后不随盘口变动"
       },
-      "locked": true
+      "locked": true,
+      "settlement": {
+        "result": "MISS",
+        "score": "2-3",
+        "source": "stored_score",
+        "settled_at": "2026-10-25T11:00:03",
+        "outcome": "客胜",
+        "tip": "主胜",
+        "market": "had"
+      },
+      "result_text": "研判未中"
     },
     {
       "code": "周六013",
@@ -20759,7 +20829,7 @@
       "away": "汉堡",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "完赛待核验",
+      "status": "已完赛",
       "form_home": [
         "D",
         "L",
@@ -20795,8 +20865,8 @@
         "2-1",
         "1-1"
       ],
-      "score": "--",
-      "result": "PENDING",
+      "score": "1-0",
+      "result": "HIT",
       "analysis": "去水胜平负 39.9%/25.3%/34.8%，泊松期望进球 1.45:1.35，首选【主胜】+次选【防平】（覆盖率 65.2%）。",
       "dossier": {
         "fundamental": "帕德博恩近10场 4胜3平3负，场均进1.40失1.30（截至2026-10-17）；汉堡近10场 6胜1平3负，场均进1.50失1.80（截至2026-10-17）。",
@@ -21107,7 +21177,17 @@
         "traceable": true,
         "note": "停售时刻冻结（含临开赛早场），此后不随盘口变动"
       },
-      "locked": true
+      "locked": true,
+      "settlement": {
+        "result": "HIT",
+        "score": "1-0",
+        "source": "stored_score",
+        "settled_at": "2026-10-25T11:00:03",
+        "outcome": "主胜",
+        "tip": "主胜/防平",
+        "market": "had"
+      },
+      "result_text": "研判命中"
     },
     {
       "code": "周六014",
@@ -21118,7 +21198,7 @@
       "away": "沙尔克04",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "完赛待核验",
+      "status": "已完赛",
       "form_home": [
         "L",
         "W",
@@ -21154,8 +21234,8 @@
         "2-1",
         "1-1"
       ],
-      "score": "--",
-      "result": "PENDING",
+      "score": "0-0",
+      "result": "HIT",
       "analysis": "去水胜平负 49.2%/24.8%/26.0%，泊松期望进球 1.62:1.1，首选【主胜】+次选【防平】（覆盖率 74.0%）。",
       "dossier": {
         "fundamental": "科隆近10场 4胜3平3负，场均进1.60失1.70（截至2026-10-17）；沙尔克04近10场 3胜3平4负，场均进1.20失1.40（截至2026-10-17）。",
@@ -21462,7 +21542,17 @@
         "traceable": true,
         "note": "停售时刻冻结（含临开赛早场），此后不随盘口变动"
       },
-      "locked": true
+      "locked": true,
+      "settlement": {
+        "result": "HIT",
+        "score": "0-0",
+        "source": "stored_score",
+        "settled_at": "2026-10-25T11:00:03",
+        "outcome": "平局",
+        "tip": "主胜/防平",
+        "market": "had"
+      },
+      "result_text": "研判命中"
     },
     {
       "code": "周六015",
@@ -21473,7 +21563,7 @@
       "away": "柏林联合",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "完赛待核验",
+      "status": "已完赛",
       "form_home": [
         "L",
         "D",
@@ -21509,8 +21599,8 @@
         "1-0",
         "2-0"
       ],
-      "score": "--",
-      "result": "PENDING",
+      "score": "1-1",
+      "result": "MISS",
       "analysis": "去水胜平负 56.0%/22.1%/21.9%，泊松期望进球 1.93:1.13，单挑【主胜】稳胆（去水胜率 56.0%）。",
       "dossier": {
         "fundamental": "奥格斯堡近10场 4胜3平3负，场均进2.30失2.00（截至2026-10-17）；柏林联合近10场 4胜2平4负，场均进1.50失2.50（截至2026-10-17）。",
@@ -21822,7 +21912,17 @@
         "traceable": true,
         "note": "停售时刻冻结（含临开赛早场），此后不随盘口变动"
       },
-      "locked": true
+      "locked": true,
+      "settlement": {
+        "result": "MISS",
+        "score": "1-1",
+        "source": "stored_score",
+        "settled_at": "2026-10-25T11:00:03",
+        "outcome": "平局",
+        "tip": "主胜",
+        "market": "had"
+      },
+      "result_text": "研判未中"
     },
     {
       "code": "周六016",
@@ -21833,7 +21933,7 @@
       "away": "埃弗顿",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "完赛待核验",
+      "status": "已完赛",
       "form_home": [
         "D",
         "W",
@@ -21869,8 +21969,8 @@
         "1-0",
         "3-0"
       ],
-      "score": "--",
-      "result": "PENDING",
+      "score": "2-0",
+      "result": "HIT",
       "analysis": "去水胜平负 69.7%/19.5%/10.9%，泊松期望进球 2.02:0.65，单挑【主胜】稳胆（去水胜率 69.7%）。",
       "dossier": {
         "fundamental": "阿森纳近10场 8胜1平1负，场均进1.80失0.90（截至2026-10-22）；埃弗顿近10场 4胜5平1负，场均进1.40失0.80（截至2026-10-17）。",
@@ -22180,7 +22280,17 @@
         "traceable": true,
         "note": "停售时刻冻结（含临开赛早场），此后不随盘口变动"
       },
-      "locked": true
+      "locked": true,
+      "settlement": {
+        "result": "HIT",
+        "score": "2-0",
+        "source": "stored_score",
+        "settled_at": "2026-10-25T11:00:03",
+        "outcome": "主胜",
+        "tip": "主胜",
+        "market": "had"
+      },
+      "result_text": "研判命中"
     },
     {
       "code": "周六017",
@@ -22191,7 +22301,7 @@
       "away": "富勒姆",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "完赛待核验",
+      "status": "已完赛",
       "form_home": [
         "L",
         "W",
@@ -22227,8 +22337,8 @@
         "1-2",
         "1-1"
       ],
-      "score": "--",
-      "result": "PENDING",
+      "score": "0-1",
+      "result": "HIT",
       "analysis": "去水胜平负 30.6%/26.8%/42.6%，泊松期望进球 1.13:1.38，首选【客胜】+次选【防平】（覆盖率 69.4%）。",
       "dossier": {
         "fundamental": "考文垂近10场 4胜0平6负，场均进1.30失1.90（截至2026-10-20）；富勒姆近10场 4胜2平4负，场均进1.40失1.20（截至2026-10-17）。",
@@ -22516,7 +22626,17 @@
         "traceable": true,
         "note": "停售时刻冻结（含临开赛早场），此后不随盘口变动"
       },
-      "locked": true
+      "locked": true,
+      "settlement": {
+        "result": "HIT",
+        "score": "0-1",
+        "source": "stored_score",
+        "settled_at": "2026-10-25T11:00:03",
+        "outcome": "客胜",
+        "tip": "客胜/防平",
+        "market": "had"
+      },
+      "result_text": "研判命中"
     },
     {
       "code": "周六018",
@@ -22527,7 +22647,7 @@
       "away": "瓦勒伦加",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "完赛待核验",
+      "status": "已完赛",
       "form_home": [
         "L",
         "W",
@@ -22563,8 +22683,8 @@
         "4-0",
         "3-1"
       ],
-      "score": "--",
-      "result": "PENDING",
+      "score": "0-1",
+      "result": "MISS",
       "analysis": "让球(-2)去水概率 51.8%/18.7%/29.5%，泊松期望进球 3.67:0.97，首选【让胜】+次选【防让平】（覆盖率 70.5%）。",
       "dossier": {
         "fundamental": "博德闪耀近10场 7胜0平3负，场均进2.50失1.90（截至2026-10-21）；瓦勒伦加近10场 3胜3平4负，场均进2.70失2.20（截至2026-10-18）。",
@@ -22813,7 +22933,17 @@
         "traceable": true,
         "note": "停售时刻冻结（含临开赛早场），此后不随盘口变动"
       },
-      "locked": true
+      "locked": true,
+      "settlement": {
+        "result": "MISS",
+        "score": "0-1",
+        "source": "stored_score",
+        "settled_at": "2026-10-25T11:00:03",
+        "outcome": "让负",
+        "tip": "让胜/防让平",
+        "market": "hhad"
+      },
+      "result_text": "研判未中"
     },
     {
       "code": "周六019",
@@ -22824,7 +22954,7 @@
       "away": "西班牙人",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "完赛待核验",
+      "status": "已完赛",
       "form_home": [
         "L",
         "D",
@@ -22860,8 +22990,8 @@
         "2-1",
         "1-1"
       ],
-      "score": "--",
-      "result": "PENDING",
+      "score": "2-1",
+      "result": "HIT",
       "analysis": "去水胜平负 38.8%/27.2%/33.9%，泊松期望进球 1.27:1.17，首选【主胜】+次选【防平】（覆盖率 66.1%）。",
       "dossier": {
         "fundamental": "桑坦德近10场 2胜3平5负，场均进1.40失2.60（截至2026-10-18）；西班牙人近10场 2胜2平6负，场均进1.20失1.50（截至2026-10-17）。",
@@ -23150,7 +23280,17 @@
         "traceable": true,
         "note": "停售时刻冻结（含临开赛早场），此后不随盘口变动"
       },
-      "locked": true
+      "locked": true,
+      "settlement": {
+        "result": "HIT",
+        "score": "2-1",
+        "source": "stored_score",
+        "settled_at": "2026-10-25T11:00:03",
+        "outcome": "主胜",
+        "tip": "主胜/防平",
+        "market": "had"
+      },
+      "result_text": "研判命中"
     },
     {
       "code": "周六020",
@@ -23161,7 +23301,7 @@
       "away": "兹沃勒",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "完赛待核验",
+      "status": "已完赛",
       "form_home": [
         "W",
         "W",
@@ -23197,8 +23337,8 @@
         "2-0",
         "1-0"
       ],
-      "score": "--",
-      "result": "PENDING",
+      "score": "1-1",
+      "result": "MISS",
       "analysis": "去水胜平负 60.2%/20.7%/19.0%，泊松期望进球 2.04:1.06，单挑【主胜】稳胆（去水胜率 60.2%）。",
       "dossier": {
         "fundamental": "乌德勒支近10场 3胜2平5负，场均进1.60失2.70（截至2026-10-19）；兹沃勒近10场 2胜1平7负，场均进1.00失2.50（截至2026-10-18）。",
@@ -23474,7 +23614,17 @@
         "traceable": true,
         "note": "停售时刻冻结（含临开赛早场），此后不随盘口变动"
       },
-      "locked": true
+      "locked": true,
+      "settlement": {
+        "result": "MISS",
+        "score": "1-1",
+        "source": "stored_score",
+        "settled_at": "2026-10-25T11:00:03",
+        "outcome": "平局",
+        "tip": "主胜",
+        "market": "had"
+      },
+      "result_text": "研判未中"
     },
     {
       "code": "周六021",
@@ -23485,7 +23635,7 @@
       "away": "卡萨皮亚",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "完赛待核验",
+      "status": "已完赛",
       "form_home": [
         "W",
         "L",
@@ -23521,8 +23671,8 @@
         "2-0",
         "2-1"
       ],
-      "score": "--",
-      "result": "PENDING",
+      "score": "0-2",
+      "result": "MISS",
       "analysis": "去水胜平负 55.4%/25.0%/19.7%，泊松期望进球 1.62:0.85，单挑【主胜】稳胆（去水胜率 55.4%）。",
       "dossier": {
         "fundamental": "阿马多拉近10场 4胜4平2负，场均进2.00失1.80（截至2026-10-17）；卡萨皮亚近10场 2胜1平7负，场均进0.60失2.30（截至2026-10-18）。",
@@ -23787,7 +23937,17 @@
         "traceable": true,
         "note": "停售时刻冻结（含临开赛早场），此后不随盘口变动"
       },
-      "locked": true
+      "locked": true,
+      "settlement": {
+        "result": "MISS",
+        "score": "0-2",
+        "source": "stored_score",
+        "settled_at": "2026-10-25T11:00:03",
+        "outcome": "客胜",
+        "tip": "主胜",
+        "market": "had"
+      },
+      "result_text": "研判未中"
     },
     {
       "code": "周六022",
@@ -23798,7 +23958,7 @@
       "away": "罗马",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "完赛待核验",
+      "status": "已完赛",
       "form_home": [
         "W",
         "L",
@@ -23834,8 +23994,8 @@
         "0-2",
         "0-0"
       ],
-      "score": "--",
-      "result": "PENDING",
+      "score": "3-3",
+      "result": "HIT",
       "analysis": "去水胜平负 32.2%/30.9%/36.9%，泊松期望进球 0.95:1.05，首选【客胜】+次选【防平】（覆盖率 67.8%）。",
       "dossier": {
         "fundamental": "那不勒斯近10场 4胜1平5负，场均进1.50失1.40（截至2026-10-21）；罗马近10场 6胜3平1负，场均进2.40失0.80（截至2026-10-21）。",
@@ -24142,7 +24302,17 @@
         "evidence": "停售冻结，含赔率与生成方式哈希",
         "traceable": true,
         "note": "停售时刻冻结（含临开赛早场），此后不随盘口变动"
-      }
+      },
+      "settlement": {
+        "result": "HIT",
+        "score": "3-3",
+        "source": "stored_score",
+        "settled_at": "2026-10-25T11:00:03",
+        "outcome": "平局",
+        "tip": "客胜/防平",
+        "market": "had"
+      },
+      "result_text": "研判命中"
     },
     {
       "code": "周六023",
@@ -24153,7 +24323,7 @@
       "away": "热刺",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "完赛待核验",
+      "status": "已完赛",
       "form_home": [
         "W",
         "W",
@@ -24189,8 +24359,8 @@
         "2-1",
         "1-1"
       ],
-      "score": "--",
-      "result": "PENDING",
+      "score": "0-2",
+      "result": "MISS",
       "analysis": "去水胜平负 51.8%/23.6%/24.6%，泊松期望进球 1.76:1.13，首选【主胜】+次选【防平】（覆盖率 75.4%）。",
       "dossier": {
         "fundamental": "切尔西近10场 7胜1平2负，场均进2.80失1.70（截至2026-10-17）；热刺近10场 2胜4平4负，场均进1.40失1.60（截至2026-10-20）。",
@@ -24496,7 +24666,17 @@
         "evidence": "停售冻结，含赔率与生成方式哈希",
         "traceable": true,
         "note": "停售时刻冻结（含临开赛早场），此后不随盘口变动"
-      }
+      },
+      "settlement": {
+        "result": "MISS",
+        "score": "0-2",
+        "source": "stored_score",
+        "settled_at": "2026-10-25T11:00:03",
+        "outcome": "客胜",
+        "tip": "主胜/防平",
+        "market": "had"
+      },
+      "result_text": "研判未中"
     },
     {
       "code": "周六024",
@@ -24507,7 +24687,7 @@
       "away": "法兰克福",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "完赛待核验",
+      "status": "已完赛",
       "form_home": [
         "W",
         "D",
@@ -24543,8 +24723,8 @@
         "2-0",
         "3-1"
       ],
-      "score": "--",
-      "result": "PENDING",
+      "score": "1-0",
+      "result": "HIT",
       "analysis": "去水胜平负 66.6%/17.9%/15.5%，泊松期望进球 2.43:1.1，单挑【主胜】稳胆（去水胜率 66.6%）。",
       "dossier": {
         "fundamental": "多特蒙德近10场 7胜2平1负，场均进2.10失0.80（截至2026-10-21）；法兰克福近10场 5胜2平3负，场均进3.00失2.40（截至2026-10-17）。",
@@ -24850,7 +25030,17 @@
         "evidence": "停售冻结，含赔率与生成方式哈希",
         "traceable": true,
         "note": "停售时刻冻结（含临开赛早场），此后不随盘口变动"
-      }
+      },
+      "settlement": {
+        "result": "HIT",
+        "score": "1-0",
+        "source": "stored_score",
+        "settled_at": "2026-10-25T11:00:03",
+        "outcome": "主胜",
+        "tip": "主胜",
+        "market": "had"
+      },
+      "result_text": "研判命中"
     },
     {
       "code": "周六025",
@@ -24861,7 +25051,7 @@
       "away": "比利亚雷",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "完赛待核验",
+      "status": "已完赛",
       "form_home": [
         "D",
         "D",
@@ -24897,8 +25087,8 @@
         "1-2",
         "1-1"
       ],
-      "score": "--",
-      "result": "PENDING",
+      "score": "1-2",
+      "result": "HIT",
       "analysis": "去水胜平负 27.0%/24.6%/48.4%，泊松期望进球 1.14:1.62，首选【客胜】+次选【防平】（覆盖率 73.0%）。",
       "dossier": {
         "fundamental": "巴伦西亚近10场 2胜3平5负，场均进0.80失1.50（截至2026-10-18）；比利亚雷近10场 3胜1平6负，场均进1.70失1.70（截至2026-10-21）。",
@@ -25206,7 +25396,17 @@
         "evidence": "停售冻结，含赔率与生成方式哈希",
         "traceable": true,
         "note": "停售时刻冻结（含临开赛早场），此后不随盘口变动"
-      }
+      },
+      "settlement": {
+        "result": "HIT",
+        "score": "1-2",
+        "source": "stored_score",
+        "settled_at": "2026-10-25T11:00:03",
+        "outcome": "客胜",
+        "tip": "客胜/防平",
+        "market": "had"
+      },
+      "result_text": "研判命中"
     },
     {
       "code": "周六026",
@@ -25217,7 +25417,7 @@
       "away": "帕尔马",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "完赛待核验",
+      "status": "已完赛",
       "form_home": [
         "W",
         "W",
@@ -25253,8 +25453,8 @@
         "1-0",
         "2-1"
       ],
-      "score": "--",
-      "result": "PENDING",
+      "score": "2-1",
+      "result": "HIT",
       "analysis": "去水胜平负 68.6%/19.9%/11.5%，泊松期望进球 2.01:0.68，单挑【主胜】稳胆（去水胜率 68.6%）。",
       "dossier": {
         "fundamental": "拉齐奥近10场 7胜2平1负，场均进1.90失0.90（截至2026-10-19）；帕尔马近10场 2胜1平7负，场均进0.60失1.70（截至2026-10-20）。",
@@ -25559,7 +25759,17 @@
         "evidence": "停售冻结，含赔率与生成方式哈希",
         "traceable": true,
         "note": "停售时刻冻结（含临开赛早场），此后不随盘口变动"
-      }
+      },
+      "settlement": {
+        "result": "HIT",
+        "score": "2-1",
+        "source": "stored_score",
+        "settled_at": "2026-10-25T11:00:03",
+        "outcome": "主胜",
+        "tip": "主胜",
+        "market": "had"
+      },
+      "result_text": "研判命中"
     },
     {
       "code": "周六027",
@@ -25570,7 +25780,7 @@
       "away": "巴黎FC",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "完赛待核验",
+      "status": "已完赛",
       "form_home": [
         "L",
         "W",
@@ -25606,8 +25816,8 @@
         "2-1",
         "1-1"
       ],
-      "score": "--",
-      "result": "PENDING",
+      "score": "2-1",
+      "result": "HIT",
       "analysis": "去水胜平负 39.7%/26.8%/33.4%，泊松期望进球 1.33:1.2，首选【主胜】+次选【防平】（覆盖率 66.6%）。",
       "dossier": {
         "fundamental": "朗斯近10场 4胜1平5负，场均进1.40失1.60（截至2026-10-22）；巴黎FC近10场 4胜3平3负，场均进1.60失1.60（截至2026-10-18）。",
@@ -25900,7 +26110,17 @@
         "evidence": "停售冻结，含赔率与生成方式哈希",
         "traceable": true,
         "note": "停售时刻冻结（含临开赛早场），此后不随盘口变动"
-      }
+      },
+      "settlement": {
+        "result": "HIT",
+        "score": "2-1",
+        "source": "stored_score",
+        "settled_at": "2026-10-25T11:00:03",
+        "outcome": "主胜",
+        "tip": "主胜/防平",
+        "market": "had"
+      },
+      "result_text": "研判命中"
     },
     {
       "code": "周六028",
@@ -25911,7 +26131,7 @@
       "away": "拉科",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "完赛待核验",
+      "status": "已完赛",
       "form_home": [
         "D",
         "W",
@@ -25947,8 +26167,8 @@
         "1-0",
         "3-0"
       ],
-      "score": "--",
-      "result": "PENDING",
+      "score": "1-0",
+      "result": "HIT",
       "analysis": "去水胜平负 76.4%/15.5%/8.1%，泊松期望进球 2.38:0.63，单挑【主胜】稳胆（去水胜率 76.4%）。",
       "dossier": {
         "fundamental": "马竞近10场 7胜1平2负，场均进1.90失0.90（截至2026-10-21）；拉科近10场 2胜5平3负，场均进1.50失1.60（截至2026-10-17）。",
@@ -26254,7 +26474,17 @@
         "evidence": "停售冻结，含赔率与生成方式哈希",
         "traceable": true,
         "note": "停售时刻冻结（含临开赛早场），此后不随盘口变动"
-      }
+      },
+      "settlement": {
+        "result": "HIT",
+        "score": "1-0",
+        "source": "stored_score",
+        "settled_at": "2026-10-25T11:00:03",
+        "outcome": "主胜",
+        "tip": "主胜",
+        "market": "had"
+      },
+      "result_text": "研判命中"
     },
     {
       "code": "周六029",
@@ -26265,7 +26495,7 @@
       "away": "波尔图",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "完赛待核验",
+      "status": "已完赛",
       "form_home": [
         "W",
         "D",
@@ -26301,8 +26531,8 @@
         "0-1",
         "0-3"
       ],
-      "score": "--",
-      "result": "PENDING",
+      "score": "0-1",
+      "result": "HIT",
       "analysis": "去水胜平负 10.7%/19.5%/69.8%，泊松期望进球 0.64:2.01，单挑【客胜】稳胆（去水胜率 69.8%）。",
       "dossier": {
         "fundamental": "吉维森特近10场 5胜3平2负，场均进1.20失0.80（截至2026-10-20）；波尔图近10场 7胜0平3负，场均进2.10失1.10（截至2026-10-21）。",
@@ -26577,7 +26807,17 @@
         "evidence": "停售冻结，含赔率与生成方式哈希",
         "traceable": true,
         "note": "停售时刻冻结（含临开赛早场），此后不随盘口变动"
-      }
+      },
+      "settlement": {
+        "result": "HIT",
+        "score": "0-1",
+        "source": "stored_score",
+        "settled_at": "2026-10-25T11:00:03",
+        "outcome": "客胜",
+        "tip": "客胜",
+        "market": "had"
+      },
+      "result_text": "研判命中"
     },
     {
       "code": "周六030",
@@ -26588,7 +26828,7 @@
       "away": "巴伊亚",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "进行中",
+      "status": "已完赛",
       "form_home": [
         "W",
         "L",
@@ -26624,8 +26864,8 @@
         "2-0",
         "1-1"
       ],
-      "score": "--",
-      "result": "PENDING",
+      "score": "1-1",
+      "result": "HIT",
       "analysis": "去水胜平负 50.6%/25.3%/24.1%，泊松期望进球 1.57:1.0，首选【主胜】+次选【防平】（覆盖率 75.9%）。",
       "dossier": {
         "fundamental": "桑托斯近10场 6胜2平2负，场均进1.80失1.40（截至2026-10-19）；巴伊亚近10场 5胜2平3负，场均进1.50失1.40（截至2026-10-19）。",
@@ -26898,7 +27138,17 @@
         "evidence": "停售冻结，含赔率与生成方式哈希",
         "traceable": true,
         "note": "停售时刻冻结（含临开赛早场），此后不随盘口变动"
-      }
+      },
+      "settlement": {
+        "result": "HIT",
+        "score": "1-1",
+        "source": "stored_score",
+        "settled_at": "2026-10-25T11:00:03",
+        "outcome": "平局",
+        "tip": "主胜/防平",
+        "market": "had"
+      },
+      "result_text": "研判命中"
     },
     {
       "code": "周日001",

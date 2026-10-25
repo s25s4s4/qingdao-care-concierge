@@ -3,6 +3,7 @@
 """
 import hashlib
 import json
+import sys
 from datetime import datetime, timedelta
 
 import crosscheck
@@ -136,8 +137,9 @@ def settle_all(matches):
     for day in sorted(wanted):
         try:
             cache[day] = crosscheck.fetch_results(f"{datetime.now().year}-{day}")
-        except Exception:
-            continue
+        except Exception as exc:
+            print(f"[settle_all] fetch_results({day}) failed: {type(exc).__name__}: {exc}", file=sys.stderr)
+            cache[day] = None
     aliases = crosscheck._aliases()
     stats = {"hit": 0, "miss": 0, "skipped": 0}
     for m in matches:
@@ -155,9 +157,9 @@ def settle_all(matches):
                     break
         outcome = settle(m, remote)
         if outcome is None:
-            # 只有当比赛明确为【已完赛】且有真实终场比分时，才允许退回 stored_score 结算！
+            # 只有当比赛明确为【已完赛】或【完赛待核验】且有真实终场比分时，才允许退回 stored_score 结算！
             # 绝不能对【正在进行中 (is_live / PENDING)】的半场 0-0 误判为完赛！
-            if m.get("status") == "已完赛" and m.get("result") != "PENDING" and m.get("score") and m.get("score") not in ("--", "延期"):
+            if m.get("status") in ("已完赛", "完赛待核验") and m.get("score") not in (None, "", "--", "延期"):
                 outcome = settle(m, {"finished": True, "score": m.get("score")})
                 if outcome and m.get("settlement"):
                     m["settlement"]["source"] = "stored_score"

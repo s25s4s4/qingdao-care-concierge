@@ -809,7 +809,7 @@ def full_pipeline_sync(auto_push=True):
             try:
                 urllib.request.urlopen("https://purge.jsdelivr.net/gh/s25s4s4/qingdao-care-concierge@main/data/official_matches.json", timeout=4)
             except Exception as e:
-                _log(f"jsdelivr purge failed: {type(e).__name__}")
+                _log(f"jsdelivr purge failed: {type(e).__name__}: {e}")
     else:
         print(f"[{datetime.now()}] Pipeline scan: Everything up-to-date.")
         _log("Pipeline scan: everything up-to-date")
