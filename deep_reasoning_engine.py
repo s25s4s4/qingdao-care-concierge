@@ -1580,9 +1580,6 @@ ALIAS_MAP = {
     "哈卡": [
                 "['HK Honka']",
     ],
-    "INTERFOTO": [
-                ,
-    ],
     "流浪者": [
                 "['Rangers']",
     ],
