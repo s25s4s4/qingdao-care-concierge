@@ -1,7 +1,19 @@
 {
-  "updated_at": "2026-10-25 11:00:53",
-  "total_tips": 2,
+  "updated_at": "2026-10-25 13:01:01",
+  "total_tips": 3,
   "live_feed": [
+    {
+      "id": 4894,
+      "channel": "betiper_official",
+      "time": "2026-10-25 05:08",
+      "code": "周日021",
+      "league": "英超",
+      "category": "推单",
+      "is_tip": true,
+      "match": "桑德兰 VS 利兹联",
+      "chinese": "海外高手榜单单挑出这场，重点锁死“双方都有进球”（BTTS Yes，折合进球数2球起步）。两队球风激进防线有漏洞，外盘资金咬死互攻格局，防平不如直接防互破大门，博双飞稳妥。",
+      "original": "📊 Betiper Elite Picks — Recent Results: 🔹 Shamrock Rovers vs Sligo Rovers (Both Teams To Score - No) — ✅ Won @ 1.80 🔹 Widzew Łódź vs Gornik Zabrze (Draw) — ✅ Wo"
+    },
     {
       "id": 4400,
       "channel": "FabrizioRomano",
