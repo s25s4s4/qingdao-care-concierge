@@ -150,3 +150,4 @@
 {"code": "周六028", "date": "2026-10-25", "league": "西甲", "home": "马竞", "away": "拉科", "hg": 1, "ag": 0, "res": "胜", "src": "live500"}
 {"code": "周六029", "date": "2026-10-25", "league": "葡超", "home": "吉维森特", "away": "波尔图", "hg": 0, "ag": 1, "res": "负", "src": "live500"}
 {"code": "周六030", "date": "2026-10-25", "league": "巴甲", "home": "桑托斯", "away": "巴伊亚", "hg": 1, "ag": 1, "res": "平", "src": "live500"}
+{"code": "周日001", "date": "2026-10-25", "league": "澳超", "home": "悉尼FC", "away": "阿德莱德", "hg": 2, "ag": 1, "res": "胜", "src": "live500"}
