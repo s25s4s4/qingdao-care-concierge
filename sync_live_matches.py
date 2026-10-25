@@ -805,11 +805,32 @@ def full_pipeline_sync(auto_push=True):
             except Exception as e:
                 _log(f"scp spawn failed: {type(e).__name__}")
 
-            # 关键：一旦比分有变动并推送成功，立即秒级清除全球 CDN 缓存！
+            # 关键：一旦比分有变动并推送成功，立即秒级清除全球CDN缓存！
+            # 多种方式并行，确保各CDN层都能刷新
             try:
-                urllib.request.urlopen("https://purge.jsdelivr.net/gh/s25s4s4/qingdao-care-concierge@main/data/official_matches.json", timeout=4)
+                # 方式1: jsdelivr purge (GET方法)
+                urllib.request.urlopen(
+                    "https://purge.jsdelivr.net/gh/s25s4s4/qingdao-care-concierge@main/data/official_matches.json",
+                    timeout=4
+                )
             except Exception as e:
                 _log(f"jsdelivr purge failed: {type(e).__name__}: {e}")
+            
+            try:
+                # 方式2: Cloudflare Cache Purge (如果配置了CF API)
+                import os
+                cf_token = os.environ.get("CLOUDFLARE_API_TOKEN", "")
+                if cf_token:
+                    urllib.request.urlopen(
+                        "https://api.cloudflare.com/client/v4/zones/{zone_id}/purge_cache",
+                        data=json.dumps({"purge_everything": True}).encode(),
+                        headers={"Authorization": f"Bearer {cf_token}", "Content-Type": "application/json"},
+                        timeout=4
+                    )
+            except Exception as e:
+                _log(f"Cloudflare purge failed: {type(e).__name__}: {e}")
+            
+            _log("CDN cache purge triggered")
     else:
         print(f"[{datetime.now()}] Pipeline scan: Everything up-to-date.")
         _log("Pipeline scan: everything up-to-date")
