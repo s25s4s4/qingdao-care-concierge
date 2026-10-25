@@ -4250,8 +4250,8 @@ function copyWechat() {
     const isHttps = location.protocol === 'https:';
     // HTTPS用阿里云直连，HTTP用本地或阿里云
     const sseUrl = isHttps 
-        ? 'https://api.qingdaocare.top/football/stream'
-        : 'http://47.121.185.16/football/stream';
+        ? location.protocol + '//' + location.hostname + '/football_stream'
+        : 'http://47.121.185.16/football_stream';
     
     let eventSource = null;
     let reconnectDelay = 1000;
