@@ -1368,6 +1368,24 @@
 })();
 </script>
 
+    <script>
+    // 强制清除所有缓存，确保加载最新代码
+    if ('caches' in window) {
+        caches.keys().then(function(names) {
+            for (var i = 0; i < names.length; i++) {
+                caches.delete(names[i]);
+            }
+        });
+    }
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.getRegistrations().then(function(registrations) {
+            for (var registration of registrations) {
+                registration.unregister();
+            }
+        });
+    }
+    </script>
+
     <!-- 顶部状态栏 -->
     <header class="navbar">
         <div class="navbar-brand">
