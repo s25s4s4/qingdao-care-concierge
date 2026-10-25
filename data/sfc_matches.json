@@ -3,7 +3,7 @@
   "picks_ready": true,
   "deadline": "10-25 22:00",
   "total_matches": 14,
-  "updated_at": "2026-10-25 08:08:35",
+  "updated_at": "2026-10-25 23:58:28",
   "matches": [
     {
       "no": 1,
@@ -73,7 +73,7 @@
       "away": "布伦特",
       "away_rank": "7",
       "fid": "1420509",
-      "status": "未开赛",
+      "status": "已完赛",
       "matched_id": null,
       "odds": [
         "4.45",
@@ -87,8 +87,8 @@
         "market_depth": "百家平均欧赔开出 4.45 / 3.89 / 1.71，三项期望回报（EV）分别为主胜 -0.041、平局 -0.066、客胜 -0.069。盘面诊断：盘面处于正常期望区间。",
         "decision_guide": "传足选号方案：核心首选【客胜(0)】，次选防冷补【平局(1)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
       },
-      "live_status": "",
-      "score": "",
+      "live_status": "FIN",
+      "score": "1-1",
       "pick_primary": "0",
       "pick_secondary": "1",
       "pick_desc": "",
@@ -117,9 +117,9 @@
         "smart_type": "SINGLE",
         "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。"
       },
-      "outcome": "",
-      "result": null,
-      "result_text": ""
+      "outcome": "1",
+      "result": "HIT_SECONDARY",
+      "result_text": "次选命中"
     },
     {
       "no": 3,
@@ -131,7 +131,7 @@
       "away": "伯恩茅",
       "away_rank": "17",
       "fid": "1420512",
-      "status": "未开赛",
+      "status": "已完赛",
       "matched_id": null,
       "odds": [
         "1.80",
@@ -145,8 +145,8 @@
         "market_depth": "百家平均欧赔开出 1.80 / 3.96 / 3.88，三项期望回报（EV）分别为主胜 -0.071、平局 -0.137、客胜 +0.032。盘面诊断：盘面处于正常期望区间。",
         "decision_guide": "传足选号方案：核心首选【主胜(3)】（单挑作胆）。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
       },
-      "live_status": "",
-      "score": "",
+      "live_status": "FIN",
+      "score": "0-3",
       "pick_primary": "3",
       "pick_secondary": null,
       "pick_desc": "",
@@ -175,9 +175,9 @@
         "smart_type": "DOUBLE",
         "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。"
       },
-      "outcome": "",
-      "result": null,
-      "result_text": ""
+      "outcome": "0",
+      "result": "MISS",
+      "result_text": "未中"
     },
     {
       "no": 4,
@@ -363,7 +363,7 @@
       "away": "弗洛西",
       "away_rank": "6",
       "fid": "1414181",
-      "status": "未开赛",
+      "status": "已完赛",
       "matched_id": null,
       "odds": [
         "1.64",
@@ -377,8 +377,8 @@
         "market_depth": "百家平均欧赔开出 1.64 / 4.19 / 4.49，三项期望回报（EV）分别为主胜 -0.047、平局 -0.099、客胜 -0.085。盘面诊断：盘面处于正常期望区间。",
         "decision_guide": "传足选号方案：核心首选【主胜(3)】（单挑作胆）。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
       },
-      "live_status": "",
-      "score": "",
+      "live_status": "FIN",
+      "score": "4-4",
       "pick_primary": "3",
       "pick_secondary": null,
       "pick_desc": "",
@@ -407,9 +407,9 @@
         "smart_type": "SINGLE",
         "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。"
       },
-      "outcome": "",
-      "result": null,
-      "result_text": ""
+      "outcome": "1",
+      "result": "MISS",
+      "result_text": "未中"
     },
     {
       "no": 8,
@@ -421,7 +421,7 @@
       "away": "威尼斯",
       "away_rank": "20",
       "fid": "1414266",
-      "status": "未开赛",
+      "status": "已完赛",
       "matched_id": null,
       "odds": [
         "2.08",
@@ -435,8 +435,8 @@
         "market_depth": "百家平均欧赔开出 2.08 / 3.32 / 3.47，三项期望回报（EV）分别为主胜 -0.138、平局 -0.071、客胜 +0.060。盘面诊断：盘面处于正常期望区间。",
         "decision_guide": "传足选号方案：核心首选【主胜(3)】（单挑作胆）。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
       },
-      "live_status": "",
-      "score": "",
+      "live_status": "FIN",
+      "score": "1-0",
       "pick_primary": "3",
       "pick_secondary": null,
       "pick_desc": "",
@@ -465,9 +465,9 @@
         "smart_type": "DOUBLE",
         "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。"
       },
-      "outcome": "",
-      "result": null,
-      "result_text": ""
+      "outcome": "3",
+      "result": "HIT_PRIMARY",
+      "result_text": "首选命中"
     },
     {
       "no": 9,
