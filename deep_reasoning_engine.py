@@ -469,8 +469,23 @@ def query_telegram_tips_for_match(home, away):
 
     detected_leagues = infer_league(home, away)
 
+    # 加载 team_aliases.json（运行时加载确保最新）
+    _alias_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "team_aliases.json")
+    try:
+        with open(_alias_path, encoding="utf-8") as _f:
+            _TEAM_ALIAS = json.load(_f)
+    except Exception:
+        _TEAM_ALIAS = {}
+
     h_keys = [home.lower()] + ALIAS_MAP.get(home, []) + _TEAM_ALIAS.get(home, [])
     a_keys = [away.lower()] + ALIAS_MAP.get(away, []) + _TEAM_ALIAS.get(away, [])
+
+    # 标准化关键词：移除特殊字符，统一格式
+    def normalize_key(k):
+        return k.replace('ø', 'o').replace('ø', 'o').replace('/', '').replace('-', ' ').lower()
+
+    h_keys_norm = [normalize_key(k) for k in h_keys]
+    a_keys_norm = [normalize_key(k) for k in a_keys]
 
     conn = sqlite3.connect(DB_PATH)
     c = conn.cursor()
@@ -496,8 +511,9 @@ def query_telegram_tips_for_match(home, away):
     for ch, raw, pt in rows:
         if not raw: continue
         low = raw.lower()
-        has_h = any(k in low for k in h_keys if len(k) >= 3)
-        has_a = any(k in low for k in a_keys if len(k) >= 3)
+        # 使用标准化关键词匹配
+        has_h = any(normalize_key(k) in low for k in h_keys if len(k) >= 3)
+        has_a = any(normalize_key(k) in low for k in a_keys if len(k) >= 3)
         if has_h or has_a:
             clean = raw.replace('\n', ' ')
             clean = re.sub(r'http\S+', '', clean).strip()
