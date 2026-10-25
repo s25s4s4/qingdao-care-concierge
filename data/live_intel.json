@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-25 13:01:01",
-  "total_tips": 3,
+  "updated_at": "2026-10-25 23:01:29",
+  "total_tips": 2,
   "live_feed": [
     {
       "id": 4894,
@@ -25,7 +25,9 @@
       "match": "弗赖堡 VS 拜仁",
       "chinese": "拜仁突发帅变！主帅孔帕尼周五二队场边突发晕厥送医，本轮由助教团火线代指挥。群龙无首，拜仁客场更衣室军心必受震荡，防盘口遇冷受阻，客胜提防难穿，小单防平。",
       "original": "🚨 Bayern club statement on Vincent Kompany health conditions. Vincent Kompany had to receive medical attention on Friday after collapsing during a training sess"
-    },
+    }
+  ],
+  "archived": [
     {
       "id": 4044,
       "channel": "football_predictions_ai",
@@ -37,9 +39,7 @@
       "match": "国际米兰 VS 佛罗伦萨",
       "chinese": "国米主场打紫百合，欧指核心资金直奔大球去，大2.5开到1.41超低位、机构看好度超六成六。国米本季点球百分百命中、状态正盛，本场奔着对攻开火，首选进球数3球起步！",
       "original": "🏆 WEEKEND PREVIEW 🇮🇹 Serie A 📊 Season Trends (70 matches) ⚽ Avg goals/match: 2.96 · Over 2.5 in 60% 🏠 Home win 47% · Draw 17% · Away win 36% 🎯 BTTS Yes in 57% ·"
-    }
-  ],
-  "archived": [
+    },
     {
       "id": 4611,
       "channel": "bulletbetpredictions",
