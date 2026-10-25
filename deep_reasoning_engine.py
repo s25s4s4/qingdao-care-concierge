@@ -392,13 +392,41 @@ ALIAS_MAP = {
                 "internacional",
                 "интернасьонал",
                 "إنترناسيونال"
-    ]
+    ],
+    "仙台七夕": ["sapporo", "consadole"],
+    "兰斯": ["lens", "rc lens"],
+    "冈山绿雉": ["okayama", "fagiano"],
+    "哥德堡": ["göteborg", "gais", "ifk göteborg"],
+    "圣克拉拉": ["santa clara"],
+    "布洛涅": ["boulogne"],
+    "新潟天鹅": ["niigata", "albirex"],
+    "本菲卡": ["benfica"],
+    "水户蜀葵": ["mito", "hollyhock"],
+    "洛城银河": ["la galaxy", "galaxy", "lag"],
+    "洛杉矶FC": ["lafc", "la fc"],
+    "济州SK": ["jeju", "jeju united"],
+    "特温特": ["twente"],
+    "特罗姆瑟": ["tromsø", "tromso"],
+    "盖斯": ["gais"],
+    "福图纳": ["fortuna sittard", "fortuna"],
+    "米竞技": ["atletico mineiro", "atletico-mg"],
+    "维塞乌": ["farense"],
+    "阿尔克马": ["az alkmaar", "az"],
+    "阿德莱德": ["adelaide", "adelaide united"]
 }
 
 def query_telegram_tips_for_match(home, away):
     """从 predictions.db 真实调取海外 22 个推单频道的实盘方案与情报"""
     if not os.path.exists(DB_PATH):
         return []
+
+    # 统一加载 team_aliases.json（覆盖所有联赛，不在代码里分散维护）
+    _alias_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "team_aliases.json")
+    try:
+        with open(_alias_path, encoding="utf-8") as _f:
+            _TEAM_ALIAS = json.load(_f)
+    except Exception:
+        _TEAM_ALIAS = {}
     
     # 扩充中文队名归一化与别名，确保无论官方怎么写都能 100% 匹配到库中的英文/多语言推单！
     COMMON_ALIASES = {
@@ -466,11 +494,31 @@ def query_telegram_tips_for_match(home, away):
         "罗德兹": ["rodez"],
         "蒙彼利埃": ["montpellier"],
         "赫塔费": ["getafe"],
-        "巴列卡诺": ["rayo", "vallecano"]
+        "巴列卡诺": ["rayo", "vallecano"],
+        "仙台七夕": ["sapporo", "consadole"],
+        "兰斯": ["lens", "rc lens"],
+        "冈山绿雉": ["okayama", "fagiano"],
+        "哥德堡": ["göteborg", "gais", "ifk göteborg"],
+        "圣克拉拉": ["santa clara"],
+        "布洛涅": ["boulogne"],
+        "新潟天鹅": ["niigata", "albirex"],
+        "本菲卡": ["benfica"],
+        "水户蜀葵": ["mito", "hollyhock"],
+        "洛城银河": ["la galaxy", "galaxy", "lag"],
+        "洛杉矶FC": ["lafc", "la fc"],
+        "济州SK": ["jeju", "jeju united"],
+        "特温特": ["twente"],
+        "特罗姆瑟": ["tromsø", "tromso"],
+        "盖斯": ["gais"],
+        "福图纳": ["fortuna sittard", "fortuna"],
+        "米竞技": ["atletico mineiro", "atletico-mg"],
+        "维塞乌": ["farense"],
+        "阿尔克马": ["az alkmaar", "az"],
+        "阿德莱德": ["adelaide", "adelaide united"]
     }
     
-    h_keys = [home.lower()] + ALIAS_MAP.get(home, []) + COMMON_ALIASES.get(home, [])
-    a_keys = [away.lower()] + ALIAS_MAP.get(away, []) + COMMON_ALIASES.get(away, [])
+    h_keys = [home.lower()] + ALIAS_MAP.get(home, []) + _TEAM_ALIAS.get(home, [])
+    a_keys = [away.lower()] + ALIAS_MAP.get(away, []) + _TEAM_ALIAS.get(away, [])
     
     conn = sqlite3.connect(DB_PATH)
     c = conn.cursor()
