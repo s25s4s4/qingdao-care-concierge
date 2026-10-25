@@ -754,6 +754,8 @@ def full_pipeline_sync(auto_push=True):
         data['updated_at'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         data['total'] = len(existing_matches)
         data['matches'] = existing_matches
+        # 物理单调自增：每次数据变更 version 严格递增（取旧版+1 与当前时间戳的较大值）
+        data['version'] = max(int(data.get('version') or 0) + 1, int(datetime.now().timestamp()))
 
         # 补充球队近期战绩 / 历史交锋（本地 14 年库，失败不影响主流程）
         try:
@@ -818,7 +820,6 @@ def full_pipeline_sync(auto_push=True):
             
             try:
                 # 方式2: Cloudflare Cache Purge (如果配置了CF API)
-                import os
                 cf_token = os.environ.get("CLOUDFLARE_API_TOKEN", "")
                 if cf_token:
                     urllib.request.urlopen(
