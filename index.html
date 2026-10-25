@@ -1324,30 +1324,28 @@
     </head>
     <body>
         <script>
-    // 版本检查：每5分钟检查一次，有新数据时自动刷新
+    // 版本检查：每30秒检查一次，有新数据时自动刷新
     (function checkDataVersion() {
     try {
         const STORAGE_KEY = 'jc_matches_version';
         const cached = localStorage.getItem(STORAGE_KEY);
-        const nowMin = Math.floor(Date.now() / 60000);
-        
-        // 每5分钟检查一次
-        if (!cached || nowMin - parseInt(cached) > 5) {
-            fetch('https://api.qingdaocare.top/data/official_matches.json?t=' + Date.now(), {
-                cache: 'no-store',
-                headers: {'Cache-Control': 'no-cache'}
-            })
-            .then(r => r.json())
-            .then(data => {
-                const serverVersion = data.version || 0;
-                if (cached && parseInt(cached) < serverVersion) {
-                    console.log('[版本检查] 发现新版本，强制刷新页面');
-                    location.reload();
-                }
-                localStorage.setItem(STORAGE_KEY, serverVersion);
-            })
-            .catch(() => {});
-        }
+
+        fetch('https://api.qingdaocare.top/data/official_matches.json?t=' + Date.now(), {
+            cache: 'no-store',
+            headers: {'Cache-Control': 'no-cache'}
+        })
+        .then(r => r.json())
+        .then(data => {
+            const serverVersion = data.version || 0;
+            localStorage.setItem(STORAGE_KEY, serverVersion);
+            if (!cached || parseInt(cached) < serverVersion) {
+                console.log('[版本检查] 发现新版本', cached, '->', serverVersion);
+                location.reload();
+            }
+        })
+        .catch(() => {});
+
+        setTimeout(checkDataVersion, 30000);
     } catch(e) {}
 })();
 </script>
@@ -4272,14 +4270,14 @@ function copyWechat() {
         
         eventSource.onmessage = function(e) {
             if (e.data === 'heartbeat') return;
-            
+
             try {
                 const data = JSON.parse(e.data);
                 if (data.matches && data.version) {
                     // 版本比对，有新数据才刷新
-                    const lastVersion = localStorage.getItem('matches_version');
+                    const lastVersion = localStorage.getItem('jc_matches_version');
                     if (!lastVersion || parseInt(lastVersion) < data.version) {
-                        localStorage.setItem('matches_version', data.version);
+                        localStorage.setItem('jc_matches_version', data.version);
                         // 直接调用loadMatchesData更新数据
                         loadMatchesData(window.currentFilterMode || 'all');
                     }
