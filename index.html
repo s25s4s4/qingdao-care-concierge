@@ -4280,7 +4280,8 @@ function copyWechat() {
                     const lastVersion = localStorage.getItem('matches_version');
                     if (!lastVersion || parseInt(lastVersion) < data.version) {
                         localStorage.setItem('matches_version', data.version);
-                        applyData(data);
+                        // 直接调用loadMatchesData更新数据
+                        loadMatchesData(window.currentFilterMode || 'all');
                     }
                 }
             } catch(err) {
