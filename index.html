@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <title>小杨说体彩 · 豪门数据内参</title>
     <link rel="icon" type="image/jpeg" href="./favicon.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1319,7 +1322,36 @@
         }
     </style>
 </head>
-<body>
+<body
+<script>
+// 版本检查：每5分钟检查一次，有新数据时自动刷新
+(function checkDataVersion() {
+    try {
+        const STORAGE_KEY = 'jc_matches_version';
+        const cached = localStorage.getItem(STORAGE_KEY);
+        const nowMin = Math.floor(Date.now() / 60000);
+        
+        // 每5分钟检查一次
+        if (!cached || nowMin - parseInt(cached) > 5) {
+            fetch('https://api.qingdaocare.top/data/official_matches.json?t=' + Date.now(), {
+                cache: 'no-store',
+                headers: {'Cache-Control': 'no-cache'}
+            })
+            .then(r => r.json())
+            .then(data => {
+                const serverVersion = data.version || 0;
+                if (cached && parseInt(cached) < serverVersion) {
+                    console.log('[版本检查] 发现新版本，强制刷新页面');
+                    location.reload();
+                }
+                localStorage.setItem(STORAGE_KEY, serverVersion);
+            })
+            .catch(() => {});
+        }
+    } catch(e) {}
+})();
+</script>
+>
 
     <!-- 顶部状态栏 -->
     <header class="navbar">
