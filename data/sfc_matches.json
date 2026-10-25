@@ -3,7 +3,7 @@
   "picks_ready": true,
   "deadline": "10-25 22:00",
   "total_matches": 14,
-  "updated_at": "2026-10-26 03:08:26",
+  "updated_at": "2026-10-26 03:28:27",
   "matches": [
     {
       "no": 1,
@@ -653,7 +653,7 @@
       "away": "莱万特",
       "away_rank": "13",
       "fid": "1428099",
-      "status": "未开赛",
+      "status": "已完赛",
       "matched_id": null,
       "odds": [
         "1.69",
@@ -667,8 +667,8 @@
         "market_depth": "百家平均欧赔开出 1.69 / 4.00 / 4.39，三项期望回报（EV）分别为主胜 -0.123、平局 +0.065、客胜 -0.057。盘面诊断：⚠️ 胶着震荡预警：历史胜率仅 51%，防平局闷平打出。",
         "decision_guide": "传足选号方案：核心首选【主胜(3)】，次选防冷补【平局(1)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
       },
-      "live_status": "",
-      "score": "",
+      "live_status": "FIN",
+      "score": "2-1",
       "pick_primary": "3",
       "pick_secondary": "1",
       "pick_desc": "",
@@ -697,9 +697,9 @@
         "smart_type": "DOUBLE",
         "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。"
       },
-      "outcome": "",
-      "result": null,
-      "result_text": ""
+      "outcome": "3",
+      "result": "HIT_PRIMARY",
+      "result_text": "首选命中"
     },
     {
       "no": 13,
