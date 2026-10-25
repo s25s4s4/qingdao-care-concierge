@@ -4244,5 +4244,63 @@ function copyWechat() {
             }
         });
     </script>
+
+// SSE实时推送连接
+(function initSSE() {
+    const isHttps = location.protocol === 'https:';
+    // HTTPS用阿里云直连，HTTP用本地或阿里云
+    const sseUrl = isHttps 
+        ? 'https://api.qingdaocare.top/football/stream'
+        : 'http://47.121.185.16/football/stream';
+    
+    let eventSource = null;
+    let reconnectDelay = 1000;
+    
+    function connect() {
+        if (eventSource) {
+            eventSource.close();
+        }
+        
+        eventSource = new EventSource(sseUrl);
+        
+        eventSource.onopen = function() {
+            console.log('[SSE] 连接成功');
+            reconnectDelay = 1000;
+        };
+        
+        eventSource.onmessage = function(e) {
+            if (e.data === 'heartbeat') return;
+            
+            try {
+                const data = JSON.parse(e.data);
+                if (data.matches && data.version) {
+                    // 版本比对，有新数据才刷新
+                    const lastVersion = localStorage.getItem('matches_version');
+                    if (!lastVersion || parseInt(lastVersion) < data.version) {
+                        localStorage.setItem('matches_version', data.version);
+                        applyData(data);
+                    }
+                }
+            } catch(err) {
+                console.warn('[SSE] 解析失败:', err);
+            }
+        };
+        
+        eventSource.onerror = function(err) {
+            console.warn('[SSE] 连接断开，' + Math.round(reconnectDelay/1000) + '秒后重试...');
+            reconnectDelay = Math.min(reconnectDelay * 2, 30000);
+            setTimeout(connect, reconnectDelay);
+        };
+    }
+    
+    connect();
+    
+    // 页面可见性变化时重连
+    document.addEventListener('visibilitychange', function() {
+        if (!document.hidden) {
+            connect();
+        }
+    });
+})();
 </body>
 </html>
