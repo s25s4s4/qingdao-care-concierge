@@ -412,7 +412,7 @@ ALIAS_MAP = {
     "米竞技": ["atletico mineiro", "atletico-mg"],
     "维塞乌": ["farense"],
     "阿尔克马": ["az alkmaar", "az"],
-    "阿德莱德": ["adelaide", "adelaide united"]
+    "阿德莱德": ["adelaide", "adelaide united"],
     "AC米兰": [
                 "['AC Milan']",
     ],
