@@ -1335,20 +1335,20 @@
     // 【强制版本控制】页面级JS代码版本 - 解决浏览器缓存旧代码问题
     // 每次修改index.html后，递增此版本号
     // ========================================================================
-    const APP_JS_VERSION = '20251026-v2';  // ← 修改这里递增版本
+    const APP_JS_VERSION = '20251026-v3';  // ← 修改这里递增版本
     const LAST_JS_VERSION = localStorage.getItem('jc_js_version');
 
-    // 版本不匹配 → 强制清除所有缓存并刷新
+    // 版本不匹配 → 强制清除所有缓存并刷新（只刷新一次）
     if (LAST_JS_VERSION !== APP_JS_VERSION) {
         console.log('[版本控制] JS版本变更:', LAST_JS_VERSION, '→', APP_JS_VERSION);
-        try { localStorage.clear(); } catch(e) {}
+        // 先写入新版本，再清除缓存，最后刷新
+        try { localStorage.setItem('jc_js_version', APP_JS_VERSION); } catch(e) {}
         try { sessionStorage.clear(); } catch(e) {}
         if ('caches' in window) {
             caches.keys().then(names => Promise.all(names.map(n => caches.delete(n))));
         }
-        location.reload();
-    } else {
-        localStorage.setItem('jc_js_version', APP_JS_VERSION);
+        // 使用 replaceState 避免刷新按钮重复执行
+        window.location.replace(window.location.href.split('?')[0] + '?v=' + Date.now());
     }
         </script>
         <script>
