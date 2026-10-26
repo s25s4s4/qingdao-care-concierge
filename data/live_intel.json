@@ -1,7 +1,8 @@
 {
-  "updated_at": "2026-10-25 23:01:29",
-  "total_tips": 2,
-  "live_feed": [
+  "updated_at": "2026-10-26 11:30:29",
+  "total_tips": 0,
+  "live_feed": [],
+  "archived": [
     {
       "id": 4894,
       "channel": "betiper_official",
@@ -25,9 +26,7 @@
       "match": "弗赖堡 VS 拜仁",
       "chinese": "拜仁突发帅变！主帅孔帕尼周五二队场边突发晕厥送医，本轮由助教团火线代指挥。群龙无首，拜仁客场更衣室军心必受震荡，防盘口遇冷受阻，客胜提防难穿，小单防平。",
       "original": "🚨 Bayern club statement on Vincent Kompany health conditions. Vincent Kompany had to receive medical attention on Friday after collapsing during a training sess"
-    }
-  ],
-  "archived": [
+    },
     {
       "id": 4044,
       "channel": "football_predictions_ai",
