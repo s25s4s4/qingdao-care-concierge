@@ -1354,6 +1354,7 @@
         <script>
     // 版本检查：每10��强制检查，清除旧缓存确保数据最新
     (function checkDataVersion() {
+        try {
         const STORAGE_KEY = 'jc_matches_version';
         const cached = localStorage.getItem(STORAGE_KEY);
 
