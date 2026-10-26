@@ -167,3 +167,11 @@
 {"code": "周日015", "date": "2026-10-25", "league": "意甲", "home": "热那亚", "away": "威尼斯", "hg": 1, "ag": 0, "res": "胜", "src": "live500"}
 {"code": "周日016", "date": "2026-10-25", "league": "意甲", "home": "亚特兰大", "away": "弗洛西诺", "hg": 4, "ag": 4, "res": "平", "src": "live500"}
 {"code": "周日017", "date": "2026-10-25", "league": "法甲", "home": "摩纳哥", "away": "里尔", "hg": 1, "ag": 1, "res": "平", "src": "live500"}
+{"code": "周日021", "date": "2026-10-26", "league": "英超", "home": "桑德兰", "away": "利兹联", "hg": 0, "ag": 0, "res": "平", "src": "live500"}
+{"code": "周日022", "date": "2026-10-26", "league": "德甲", "home": "弗赖堡", "away": "拜仁", "hg": 1, "ag": 3, "res": "负", "src": "live500"}
+{"code": "周日023", "date": "2026-10-26", "league": "意甲", "home": "莱切", "away": "尤文图斯", "hg": 0, "ag": 2, "res": "负", "src": "live500"}
+{"code": "周日024", "date": "2026-10-26", "league": "西甲", "home": "皇家社会", "away": "莱万特", "hg": 2, "ag": 1, "res": "胜", "src": "live500"}
+{"code": "周日025", "date": "2026-10-26", "league": "荷甲", "home": "阿尔克马", "away": "特温特", "hg": 0, "ag": 2, "res": "负", "src": "live500"}
+{"code": "周日026", "date": "2026-10-26", "league": "意甲", "home": "乌迪内斯", "away": "AC米兰", "hg": 0, "ag": 2, "res": "负", "src": "live500"}
+{"code": "周日027", "date": "2026-10-26", "league": "西甲", "home": "巴萨", "away": "皇马", "hg": 1, "ag": 2, "res": "负", "src": "live500"}
+{"code": "周日028", "date": "2026-10-26", "league": "葡超", "home": "里斯本", "away": "维塞乌", "hg": 1, "ag": 2, "res": "负", "src": "live500"}
