@@ -2078,7 +2078,7 @@
 
             // 严格业务铁律：首页赛事中心只显示【未完赛】的在售与进行中比赛！
             // 只要比赛吹终场哨出赛果，立即自动从首页剥离消失，转入底部【赛果验证】大账本归档！
-            let activeList = ALL_OFFICIAL_MATCHES.filter(m => m.result === 'PENDING' && m.status !== '已完赛');
+            let activeList = ALL_OFFICIAL_MATCHES.filter(m => m.result === 'PENDING' && !m.status.includes('已完赛') && !m.status.includes('完赛待核验'));
             const isTop5Match = (m) => ['英超', '德甲', '西甲', '意甲', '法甲'].includes(m.league);
             const isBankerMatch = (m) => (m.tactical_strategy && ['banker_single', 'deep_handicap'].includes(m.tactical_strategy.type)) || (m.tip && !String(m.tip).includes('/') && m.tip !== '暂不研判') || (m.quant_factors && m.quant_factors.stars && m.quant_factors.stars.indexOf('★★★★') === 0);
 
