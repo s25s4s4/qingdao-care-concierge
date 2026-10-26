@@ -1337,7 +1337,7 @@
     // ========================================================================
     const APP_JS_VERSION = '20251026-v2';  // ← 修改这里递增版本
     const LAST_JS_VERSION = localStorage.getItem('jc_js_version');
-    
+
     // 版本不匹配 → 强制清除所有缓存并刷新
     if (LAST_JS_VERSION !== APP_JS_VERSION) {
         console.log('[版本控制] JS版本变更:', LAST_JS_VERSION, '→', APP_JS_VERSION);
@@ -1351,7 +1351,9 @@
         localStorage.setItem('jc_js_version', APP_JS_VERSION);
     }
         </script>
-    try {
+        <script>
+    // 版本检查：每10��强制检查，清除旧缓存确保数据最新
+    (function checkDataVersion() {
         const STORAGE_KEY = 'jc_matches_version';
         const cached = localStorage.getItem(STORAGE_KEY);
 
