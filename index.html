@@ -2111,7 +2111,7 @@
 
             // 统计计数：全量 vs 已完赛 vs 待鸣哨开赛
             // 严格业务铁律：开赛的（进行中/半场/中断）绝不能算入“待鸣哨开赛”！
-            const settledList = ALL_OFFICIAL_MATCHES.filter(m => m.result !== 'PENDING');
+            const settledList = ALL_OFFICIAL_MATCHES.filter(m => m.result !== 'PENDING' || m.status.includes('完赛'));
             const liveList = ALL_OFFICIAL_MATCHES.filter(m => m.result === 'PENDING' && (m.status.includes('进行中') || m.status.includes('半场') || m.status.includes('中断')));
             // 真正尚未鸣哨开赛的纯赛前场次：
             const truePendingList = ALL_OFFICIAL_MATCHES.filter(m => m.result === 'PENDING' && !m.status.includes('进行中') && !m.status.includes('半场') && !m.status.includes('中断'));
@@ -2453,7 +2453,7 @@
 
             // 1. 寻找当前在售待开赛与已完赛批次
             const pendingMatches = ALL_OFFICIAL_MATCHES.filter(m => m.result === 'PENDING');
-            const settledMatches = ALL_OFFICIAL_MATCHES.filter(m => m.result !== 'PENDING');
+            const settledMatches = ALL_OFFICIAL_MATCHES.filter(m => m.result !== 'PENDING' || m.status.includes('完赛'));
 
             // 动态判定已完赛日期
             const settledDayMaxDate = {};
@@ -2734,7 +2734,7 @@
                     tbody.innerHTML = '';
 
                     // 严格只筛选全量官方比赛中已打完、有真实物理赛果的比赛！
-                    const settledList = ALL_OFFICIAL_MATCHES.filter(m => m.result !== 'PENDING');
+                    const settledList = ALL_OFFICIAL_MATCHES.filter(m => m.result !== 'PENDING' || m.status.includes('完赛'));
             
                     const hitCount = settledList.filter(m => m.result === 'HIT').length;
                     const missCount = settledList.filter(m => m.result === 'MISS').length;
