@@ -787,7 +787,7 @@ def full_pipeline_sync(auto_push=True):
 
         if auto_push:
             os.chdir(WEB_DIR)
-            silent_subprocess_run(["git", "add", "data/official_matches.json", "data/match_results.jsonl", "data/archive_stats.json", "data/understat_teams.json", "data/team_aliases.json", "index.html"], cwd=WEB_DIR)
+            silent_subprocess_run(["git", "add", "data/official_matches.json", "data/match_results.jsonl", "data/archive_stats.json", "data/understat_teams.json", "data/team_aliases.json"], cwd=WEB_DIR)
             commit_title = f"Live-Pulse: {len(log_messages)} match status/score updates ({datetime.now().strftime('%H:%M:%S')})"
             silent_subprocess_run(["git", "commit", "-m", commit_title], cwd=WEB_DIR)
             _push = silent_subprocess_run(["git", "push", "origin", "main"], cwd=WEB_DIR, capture=True)
