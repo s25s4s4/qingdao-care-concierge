@@ -3050,9 +3050,11 @@
                         tr.title = '点击查看本场赛前锁盘案卷';
                         tr.onclick = () => openDetail(m.code, m.time, m.home);
                         const isHit = m.result === 'HIT';
+                        const isMiss = m.result === 'MISS';
+                        const isPending = m.result === 'PENDING';
                         const isPostponed = m.result === 'POSTPONED';
-                        let tagClass = isHit ? 'tag-hit' : 'tag-miss';
-                        let tagText = isHit ? '✔ 研判命中' : '✖ 研判失误';
+                        let tagClass = isHit ? 'tag-hit' : (isMiss ? 'tag-miss' : 'tag-pending');
+                        let tagText = isHit ? '✔ 研判命中' : (isMiss ? '✖ 研判失误' : '⏳ 待核验');
                         let scoreColor = isHit ? '#3fb950' : (isPostponed ? 'var(--accent-gold)' : '#f85149');
                         let scoreText = m.score || '--';
                         if (isPostponed) {
