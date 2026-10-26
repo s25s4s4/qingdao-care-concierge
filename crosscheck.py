@@ -34,6 +34,7 @@ def _aliases():
 def fetch_results(day):
     """day: 'YYYY-MM-DD'。返回 {(home_norm, away_norm): {'score','finished','started'}}"""
     stamp = day.replace("-", "")
+    # FotMob API 要求日期格式 YYYYMMDD
     req = urllib.request.Request(
         "https://www.fotmob.com/api/data/matches?date=" + stamp,
         headers={"User-Agent": "Mozilla/5.0", "Accept": "application/json"})
