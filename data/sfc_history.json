@@ -1,12 +1,926 @@
 {
-  "updated_at": "2026-10-27 05:28:37",
+  "updated_at": "2026-10-27 18:08:37",
   "periods": [
+    {
+      "period": "26151",
+      "picks_ready": true,
+      "deadline": "10-27 00:00",
+      "total_matches": 14,
+      "archived_at": "2026-10-27 18:08:37",
+      "summary": {
+        "total": 14,
+        "hit_primary": 0,
+        "hit_secondary": 0,
+        "hit_upset": 0,
+        "miss": 0,
+        "pending": 14,
+        "hit": 0
+      },
+      "matches": [
+        {
+          "no": 1,
+          "league": "亚冠杯",
+          "league_color": "#00A78D",
+          "time": "10-27 18:00",
+          "home": "大田",
+          "home_rank": "7",
+          "away": "神户",
+          "away_rank": "3",
+          "fid": "1473992",
+          "status": "已延期",
+          "live_status": "POST",
+          "odds": [
+            "2.66",
+            "3.30",
+            "2.43"
+          ],
+          "score": "",
+          "outcome": "",
+          "pick_primary": "0",
+          "pick_secondary": null,
+          "pick_upset": "3",
+          "pick_desc": "",
+          "result": null,
+          "result_text": "",
+          "quant_factors": {
+            "market": "had",
+            "samples": 4280,
+            "win_rate": 32.1,
+            "draw_rate": 27.3,
+            "loss_rate": 40.6,
+            "ev_home": -0.146,
+            "ev_draw": -0.098,
+            "ev_away": -0.014,
+            "lambda_h": 1.26,
+            "lambda_a": 1.43,
+            "golden_scores": [
+              "0-1",
+              "1-2",
+              "0-2"
+            ],
+            "trap_level": "NORMAL",
+            "trap_warning": "盘面处于正常期望区间",
+            "stars": "★★★★☆",
+            "tier_title": "高确定性稳胆",
+            "smart_pick": "客胜/防平",
+            "smart_type": "DOUBLE",
+            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。",
+            "params_source": "adaptive",
+            "active_params": {
+              "odds_tol_scale": 1.05,
+              "trap_high_upset": 0.43,
+              "trap_tight_upset": 0.45,
+              "single_threshold": 0.54
+            }
+          },
+          "consensus": "",
+          "dossier": {
+            "league_rank": "本场为传统足彩14场赛事（亚冠杯）：大田坐镇主场迎战神户。14年历史同赔库共匹配到 4280 场相似欧赔结构样本，历史真实打出分布为主胜 32.1% · 平局 27.3% · 客胜 40.6%。",
+            "conflict": "泊松进攻期望参数：主队 λ=1.26 vs 客队 λ=1.43。历史同赔高频比分依次聚焦 0-1 / 1-2 / 0-2，整体盘面归属【高确定性稳胆】（★★★★☆）。",
+            "market_depth": "百家平均欧赔开出 2.66 / 3.30 / 2.43，三项期望回报（EV）分别为主胜 -0.146、平局 -0.098、客胜 -0.014。盘面诊断：盘面处于正常期望区间。",
+            "decision_guide": "传足选号方案：核心首选【客胜(0)】（单挑作胆），🚨大冷预警留意【主胜(3)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
+          }
+        },
+        {
+          "no": 2,
+          "league": "亚冠杯",
+          "league_color": "#00A78D",
+          "time": "10-27 18:00",
+          "home": "京都",
+          "home_rank": "9",
+          "away": "喷气机",
+          "away_rank": "16",
+          "fid": "1474025",
+          "status": "已延期",
+          "live_status": "POST",
+          "odds": [
+            "1.43",
+            "4.69",
+            "5.50"
+          ],
+          "score": "",
+          "outcome": "",
+          "pick_primary": "3",
+          "pick_secondary": null,
+          "pick_upset": null,
+          "pick_desc": "",
+          "result": null,
+          "result_text": "",
+          "quant_factors": {
+            "market": "had",
+            "samples": 379,
+            "win_rate": 65.4,
+            "draw_rate": 17.4,
+            "loss_rate": 17.2,
+            "ev_home": -0.064,
+            "ev_draw": -0.183,
+            "ev_away": -0.057,
+            "lambda_h": 2.27,
+            "lambda_a": 1.1,
+            "golden_scores": [
+              "2-0",
+              "1-0",
+              "2-1"
+            ],
+            "trap_level": "NORMAL",
+            "trap_warning": "盘面处于正常期望区间",
+            "stars": "★★★★☆",
+            "tier_title": "高确定性稳胆",
+            "smart_pick": "主胜",
+            "smart_type": "SINGLE",
+            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。",
+            "params_source": "adaptive",
+            "active_params": {
+              "odds_tol_scale": 1.05,
+              "trap_high_upset": 0.43,
+              "trap_tight_upset": 0.45,
+              "single_threshold": 0.54
+            }
+          },
+          "consensus": "",
+          "dossier": {
+            "league_rank": "本场为传统足彩14场赛事（亚冠杯）：京都坐镇主场迎战喷气机。14年历史同赔库共匹配到 379 场相似欧赔结构样本，历史真实打出分布为主胜 65.4% · 平局 17.4% · 客胜 17.2%。",
+            "conflict": "泊松进攻期望参数：主队 λ=2.27 vs 客队 λ=1.1。历史同赔高频比分依次聚焦 2-0 / 1-0 / 2-1，整体盘面归属【高确定性稳胆】（★★★★☆）。",
+            "market_depth": "百家平均欧赔开出 1.43 / 4.69 / 5.50，三项期望回报（EV）分别为主胜 -0.064、平局 -0.183、客胜 -0.057。盘面诊断：盘面处于正常期望区间。",
+            "decision_guide": "传足选号方案：核心首选【主胜(3)】（单挑作胆）。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
+          }
+        },
+        {
+          "no": 3,
+          "league": "亚冠杯",
+          "league_color": "#00A78D",
+          "time": "10-27 20:15",
+          "home": "国安",
+          "home_rank": "4",
+          "away": "全北现代",
+          "away_rank": "10",
+          "fid": "1473897",
+          "status": "已延期",
+          "live_status": "POST",
+          "odds": [
+            "2.22",
+            "3.46",
+            "2.81"
+          ],
+          "score": "",
+          "outcome": "",
+          "pick_primary": "3",
+          "pick_secondary": null,
+          "pick_upset": "0",
+          "pick_desc": "",
+          "result": null,
+          "result_text": "",
+          "quant_factors": {
+            "market": "had",
+            "samples": 4048,
+            "win_rate": 38.2,
+            "draw_rate": 27.9,
+            "loss_rate": 33.9,
+            "ev_home": -0.153,
+            "ev_draw": -0.034,
+            "ev_away": -0.047,
+            "lambda_h": 1.45,
+            "lambda_a": 1.32,
+            "golden_scores": [
+              "1-0",
+              "2-1",
+              "2-0"
+            ],
+            "trap_level": "NORMAL",
+            "trap_warning": "盘面处于正常期望区间",
+            "stars": "★★★★☆",
+            "tier_title": "高确定性稳胆",
+            "smart_pick": "主胜/防平",
+            "smart_type": "DOUBLE",
+            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。",
+            "params_source": "adaptive",
+            "active_params": {
+              "odds_tol_scale": 1.05,
+              "trap_high_upset": 0.43,
+              "trap_tight_upset": 0.45,
+              "single_threshold": 0.54
+            }
+          },
+          "consensus": "",
+          "dossier": {
+            "league_rank": "本场为传统足彩14场赛事（亚冠杯）：国安坐镇主场迎战全北现代。14年历史同赔库共匹配到 4048 场相似欧赔结构样本，历史真实打出分布为主胜 38.2% · 平局 27.9% · 客胜 33.9%。",
+            "conflict": "泊松进攻期望参数：主队 λ=1.45 vs 客队 λ=1.32。历史同赔高频比分依次聚焦 1-0 / 2-1 / 2-0，整体盘面归属【高确定性稳胆】（★★★★☆）。",
+            "market_depth": "百家平均欧赔开出 2.22 / 3.46 / 2.81，三项期望回报（EV）分别为主胜 -0.153、平局 -0.034、客胜 -0.047。盘面诊断：盘面处于正常期望区间。",
+            "decision_guide": "传足选号方案：核心首选【主胜(3)】（单挑作胆），🚨大冷预警留意【客胜(0)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
+          }
+        },
+        {
+          "no": 4,
+          "league": "亚冠杯",
+          "league_color": "#00A78D",
+          "time": "10-27 00:00",
+          "home": "叻武里",
+          "home_rank": "12",
+          "away": "太阳神",
+          "away_rank": "8",
+          "fid": "1474052",
+          "status": "已延期",
+          "live_status": "POST",
+          "odds": [
+            "5.74",
+            "4.72",
+            "1.41"
+          ],
+          "score": "",
+          "outcome": "",
+          "pick_primary": "0",
+          "pick_secondary": "1",
+          "pick_upset": "3",
+          "pick_desc": "",
+          "result": null,
+          "result_text": "",
+          "quant_factors": {
+            "market": "had",
+            "samples": 52,
+            "win_rate": 19.2,
+            "draw_rate": 23.1,
+            "loss_rate": 57.7,
+            "ev_home": 0.104,
+            "ev_draw": 0.089,
+            "ev_away": -0.187,
+            "lambda_h": 1.31,
+            "lambda_a": 2.0,
+            "golden_scores": [
+              "1-2",
+              "0-1",
+              "1-3"
+            ],
+            "trap_level": "NORMAL",
+            "trap_warning": "盘面处于正常期望区间",
+            "stars": "★★★☆☆",
+            "tier_title": "双选防冷格局",
+            "smart_pick": "客胜",
+            "smart_type": "SINGLE",
+            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。",
+            "params_source": "adaptive",
+            "active_params": {
+              "odds_tol_scale": 1.05,
+              "trap_high_upset": 0.43,
+              "trap_tight_upset": 0.45,
+              "single_threshold": 0.54
+            }
+          },
+          "consensus": "",
+          "dossier": {
+            "league_rank": "本场为传统足彩14场赛事（亚冠杯）：叻武里坐镇主场迎战太阳神。14年历史同赔库共匹配到 52 场相似欧赔结构样本，历史真实打出分布为主胜 19.2% · 平局 23.1% · 客胜 57.7%。",
+            "conflict": "泊松进攻期望参数：主队 λ=1.31 vs 客队 λ=2.0。历史同赔高频比分依次聚焦 1-2 / 0-1 / 1-3，整体盘面归属【双选防冷格局】（★★★☆☆）。",
+            "market_depth": "百家平均欧赔开出 5.74 / 4.72 / 1.41，三项期望回报（EV）分别为主胜 +0.104、平局 +0.089、客胜 -0.187。盘面诊断：盘面处于正常期望区间。",
+            "decision_guide": "传足选号方案：核心首选【客胜(0)】，次选防冷补【平局(1)】，🚨大冷预警留意【主胜(3)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
+          }
+        },
+        {
+          "no": 5,
+          "league": "德国杯",
+          "league_color": "#55055C",
+          "time": "10-28 01:00",
+          "home": "波鸿",
+          "home_rank": "0",
+          "away": "美因茨",
+          "away_rank": "0",
+          "fid": "1490696",
+          "status": "已延期",
+          "live_status": "POST",
+          "odds": [
+            "4.41",
+            "3.89",
+            "1.66"
+          ],
+          "score": "",
+          "outcome": "",
+          "pick_primary": "0",
+          "pick_secondary": "1",
+          "pick_upset": null,
+          "pick_desc": "",
+          "result": null,
+          "result_text": "",
+          "quant_factors": {
+            "market": "had",
+            "samples": 453,
+            "win_rate": 21.4,
+            "draw_rate": 23.4,
+            "loss_rate": 55.2,
+            "ev_home": -0.056,
+            "ev_draw": -0.09,
+            "ev_away": -0.084,
+            "lambda_h": 1.06,
+            "lambda_a": 1.87,
+            "golden_scores": [
+              "1-2",
+              "0-1",
+              "0-2"
+            ],
+            "trap_level": "NORMAL",
+            "trap_warning": "盘面处于正常期望区间",
+            "stars": "★★★☆☆",
+            "tier_title": "双选防冷格局",
+            "smart_pick": "客胜",
+            "smart_type": "SINGLE",
+            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。",
+            "params_source": "adaptive",
+            "active_params": {
+              "odds_tol_scale": 1.05,
+              "trap_high_upset": 0.43,
+              "trap_tight_upset": 0.45,
+              "single_threshold": 0.54
+            }
+          },
+          "consensus": "",
+          "dossier": {
+            "league_rank": "本场为传统足彩14场赛事（德国杯）：波鸿坐镇主场迎战美因茨。14年历史同赔库共匹配到 453 场相似欧赔结构样本，历史真实打出分布为主胜 21.4% · 平局 23.4% · 客胜 55.2%。",
+            "conflict": "泊松进攻期望参数：主队 λ=1.06 vs 客队 λ=1.87。历史同赔高频比分依次聚焦 1-2 / 0-1 / 0-2，整体盘面归属【双选防冷格局】（★★★☆☆）。",
+            "market_depth": "百家平均欧赔开出 4.41 / 3.89 / 1.66，三项期望回报（EV）分别为主胜 -0.056、平局 -0.090、客胜 -0.084。盘面诊断：盘面处于正常期望区间。",
+            "decision_guide": "传足选号方案：核心首选【客胜(0)】，次选防冷补【平局(1)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
+          }
+        },
+        {
+          "no": 6,
+          "league": "德国杯",
+          "league_color": "#55055C",
+          "time": "10-28 01:00",
+          "home": "汉堡",
+          "home_rank": "0",
+          "away": "法兰克福",
+          "away_rank": "0",
+          "fid": "1490697",
+          "status": "已延期",
+          "live_status": "POST",
+          "odds": [
+            "2.59",
+            "3.57",
+            "2.36"
+          ],
+          "score": "",
+          "outcome": "",
+          "pick_primary": "0",
+          "pick_secondary": null,
+          "pick_upset": "3",
+          "pick_desc": "",
+          "result": null,
+          "result_text": "",
+          "quant_factors": {
+            "market": "had",
+            "samples": 1825,
+            "win_rate": 33.9,
+            "draw_rate": 26.2,
+            "loss_rate": 39.8,
+            "ev_home": -0.122,
+            "ev_draw": -0.063,
+            "ev_away": -0.06,
+            "lambda_h": 1.41,
+            "lambda_a": 1.53,
+            "golden_scores": [
+              "1-2",
+              "0-1",
+              "0-2"
+            ],
+            "trap_level": "NORMAL",
+            "trap_warning": "盘面处于正常期望区间",
+            "stars": "★★★★☆",
+            "tier_title": "高确定性稳胆",
+            "smart_pick": "客胜/防平",
+            "smart_type": "DOUBLE",
+            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。",
+            "params_source": "adaptive",
+            "active_params": {
+              "odds_tol_scale": 1.05,
+              "trap_high_upset": 0.43,
+              "trap_tight_upset": 0.45,
+              "single_threshold": 0.54
+            }
+          },
+          "consensus": "",
+          "dossier": {
+            "league_rank": "本场为传统足彩14场赛事（德国杯）：汉堡坐镇主场迎战法兰克福。14年历史同赔库共匹配到 1825 场相似欧赔结构样本，历史真实打出分布为主胜 33.9% · 平局 26.2% · 客胜 39.8%。",
+            "conflict": "泊松进攻期望参数：主队 λ=1.41 vs 客队 λ=1.53。历史同赔高频比分依次聚焦 1-2 / 0-1 / 0-2，整体盘面归属【高确定性稳胆】（★★★★☆）。",
+            "market_depth": "百家平均欧赔开出 2.59 / 3.57 / 2.36，三项期望回报（EV）分别为主胜 -0.122、平局 -0.063、客胜 -0.060。盘面诊断：盘面处于正常期望区间。",
+            "decision_guide": "传足选号方案：核心首选【客胜(0)】（单挑作胆），🚨大冷预警留意【主胜(3)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
+          }
+        },
+        {
+          "no": 7,
+          "league": "德国杯",
+          "league_color": "#55055C",
+          "time": "10-28 03:45",
+          "home": "科隆",
+          "home_rank": "0",
+          "away": "柏林联",
+          "away_rank": "0",
+          "fid": "1490693",
+          "status": "已延期",
+          "live_status": "POST",
+          "odds": [
+            "1.84",
+            "3.66",
+            "3.75"
+          ],
+          "score": "",
+          "outcome": "",
+          "pick_primary": "3",
+          "pick_secondary": "1",
+          "pick_upset": null,
+          "pick_desc": "",
+          "result": null,
+          "result_text": "",
+          "quant_factors": {
+            "market": "had",
+            "samples": 4382,
+            "win_rate": 47.8,
+            "draw_rate": 25.6,
+            "loss_rate": 26.6,
+            "ev_home": -0.12,
+            "ev_draw": -0.064,
+            "ev_away": -0.002,
+            "lambda_h": 1.68,
+            "lambda_a": 1.2,
+            "golden_scores": [
+              "2-1",
+              "1-0",
+              "2-0"
+            ],
+            "trap_level": "NORMAL",
+            "trap_warning": "盘面处于正常期望区间",
+            "stars": "★★★☆☆",
+            "tier_title": "双选防冷格局",
+            "smart_pick": "主胜/防平",
+            "smart_type": "DOUBLE",
+            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。",
+            "params_source": "adaptive",
+            "active_params": {
+              "odds_tol_scale": 1.05,
+              "trap_high_upset": 0.43,
+              "trap_tight_upset": 0.45,
+              "single_threshold": 0.54
+            }
+          },
+          "consensus": "",
+          "dossier": {
+            "league_rank": "本场为传统足彩14场赛事（德国杯）：科隆坐镇主场迎战柏林联。14年历史同赔库共匹配到 4382 场相似欧赔结构样本，历史真实打出分布为主胜 47.8% · 平局 25.6% · 客胜 26.6%。",
+            "conflict": "泊松进攻期望参数：主队 λ=1.68 vs 客队 λ=1.2。历史同赔高频比分依次聚焦 2-1 / 1-0 / 2-0，整体盘面归属【双选防冷格局】（★★★☆☆）。",
+            "market_depth": "百家平均欧赔开出 1.84 / 3.66 / 3.75，三项期望回报（EV）分别为主胜 -0.120、平局 -0.064、客胜 -0.002。盘面诊断：盘面处于正常期望区间。",
+            "decision_guide": "传足选号方案：核心首选【主胜(3)】，次选防冷补【平局(1)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
+          }
+        },
+        {
+          "no": 8,
+          "league": "德国杯",
+          "league_color": "#55055C",
+          "time": "10-28 03:45",
+          "home": "多特",
+          "home_rank": "0",
+          "away": "不来梅",
+          "away_rank": "0",
+          "fid": "1490695",
+          "status": "已延期",
+          "live_status": "POST",
+          "odds": [
+            "1.33",
+            "5.05",
+            "7.11"
+          ],
+          "score": "",
+          "outcome": "",
+          "pick_primary": "3",
+          "pick_secondary": "1",
+          "pick_upset": "0",
+          "pick_desc": "",
+          "result": null,
+          "result_text": "",
+          "quant_factors": {
+            "market": "had",
+            "samples": 582,
+            "win_rate": 56.5,
+            "draw_rate": 23.7,
+            "loss_rate": 19.8,
+            "ev_home": -0.248,
+            "ev_draw": 0.197,
+            "ev_away": 0.405,
+            "lambda_h": 2.13,
+            "lambda_a": 1.1,
+            "golden_scores": [
+              "2-1",
+              "1-0",
+              "2-0"
+            ],
+            "trap_level": "HIGH_TRAP",
+            "trap_warning": "🚨 大热诱盘预警：历史同赔下冷门打出率高达 43%，谨防豪门翻车",
+            "stars": "★★★☆☆",
+            "tier_title": "双选防冷格局",
+            "smart_pick": "主胜",
+            "smart_type": "SINGLE",
+            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。",
+            "params_source": "adaptive",
+            "active_params": {
+              "odds_tol_scale": 1.05,
+              "trap_high_upset": 0.43,
+              "trap_tight_upset": 0.45,
+              "single_threshold": 0.54
+            }
+          },
+          "consensus": "",
+          "dossier": {
+            "league_rank": "本场为传统足彩14场赛事（德国杯）：多特坐镇主场迎战不来梅。14年历史同赔库共匹配到 582 场相似欧赔结构样本，历史真实打出分布为主胜 56.5% · 平局 23.7% · 客胜 19.8%。",
+            "conflict": "泊松进攻期望参数：主队 λ=2.13 vs 客队 λ=1.1。历史同赔高频比分依次聚焦 2-1 / 1-0 / 2-0，整体盘面归属【双选防冷格局】（★★★☆☆）。",
+            "market_depth": "百家平均欧赔开出 1.33 / 5.05 / 7.11，三项期望回报（EV）分别为主胜 -0.248、平局 +0.197、客胜 +0.405。盘面诊断：🚨 大热诱盘预警：历史同赔下冷门打出率高达 43%，谨防豪门翻车。",
+            "decision_guide": "传足选号方案：核心首选【主胜(3)】，次选防冷补【平局(1)】，🚨大冷预警留意【客胜(0)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
+          }
+        },
+        {
+          "no": 9,
+          "league": "德国杯",
+          "league_color": "#55055C",
+          "time": "10-28 03:45",
+          "home": "埃沃斯",
+          "home_rank": "0",
+          "away": "达姆施",
+          "away_rank": "0",
+          "fid": "1490702",
+          "status": "已延期",
+          "live_status": "POST",
+          "odds": [
+            "1.45",
+            "4.55",
+            "5.56"
+          ],
+          "score": "",
+          "outcome": "",
+          "pick_primary": "3",
+          "pick_secondary": null,
+          "pick_upset": "0",
+          "pick_desc": "",
+          "result": null,
+          "result_text": "",
+          "quant_factors": {
+            "market": "had",
+            "samples": 836,
+            "win_rate": 58.0,
+            "draw_rate": 26.1,
+            "loss_rate": 15.9,
+            "ev_home": -0.159,
+            "ev_draw": 0.186,
+            "ev_away": -0.115,
+            "lambda_h": 2.04,
+            "lambda_a": 1.08,
+            "golden_scores": [
+              "1-0",
+              "2-1",
+              "2-0"
+            ],
+            "trap_level": "NORMAL",
+            "trap_warning": "盘面处于正常期望区间",
+            "stars": "★★★★☆",
+            "tier_title": "高确定性稳胆",
+            "smart_pick": "主胜",
+            "smart_type": "SINGLE",
+            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。",
+            "params_source": "adaptive",
+            "active_params": {
+              "odds_tol_scale": 1.05,
+              "trap_high_upset": 0.43,
+              "trap_tight_upset": 0.45,
+              "single_threshold": 0.54
+            }
+          },
+          "consensus": "",
+          "dossier": {
+            "league_rank": "本场为传统足彩14场赛事（德国杯）：埃沃斯坐镇主场迎战达姆施。14年历史同赔库共匹配到 836 场相似欧赔结构样本，历史真实打出分布为主胜 58.0% · 平局 26.1% · 客胜 15.9%。",
+            "conflict": "泊松进攻期望参数：主队 λ=2.04 vs 客队 λ=1.08。历史同赔高频比分依次聚焦 1-0 / 2-1 / 2-0，整体盘面归属【高确定性稳胆】（★★★★☆）。",
+            "market_depth": "百家平均欧赔开出 1.45 / 4.55 / 5.56，三项期望回报（EV）分别为主胜 -0.159、平局 +0.186、客胜 -0.115。盘面诊断：盘面处于正常期望区间。",
+            "decision_guide": "传足选号方案：核心首选【主胜(3)】（单挑作胆），🚨大冷预警留意【客胜(0)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
+          }
+        },
+        {
+          "no": 10,
+          "league": "德国杯",
+          "league_color": "#55055C",
+          "time": "10-28 03:45",
+          "home": "门兴",
+          "home_rank": "0",
+          "away": "卡尔斯",
+          "away_rank": "0",
+          "fid": "1490698",
+          "status": "已延期",
+          "live_status": "POST",
+          "odds": [
+            "1.34",
+            "5.05",
+            "7.06"
+          ],
+          "score": "",
+          "outcome": "",
+          "pick_primary": "3",
+          "pick_secondary": "1",
+          "pick_upset": "0",
+          "pick_desc": "",
+          "result": null,
+          "result_text": "",
+          "quant_factors": {
+            "market": "had",
+            "samples": 467,
+            "win_rate": 53.3,
+            "draw_rate": 24.2,
+            "loss_rate": 22.5,
+            "ev_home": -0.286,
+            "ev_draw": 0.222,
+            "ev_away": 0.587,
+            "lambda_h": 2.03,
+            "lambda_a": 1.13,
+            "golden_scores": [
+              "2-1",
+              "1-0",
+              "2-0"
+            ],
+            "trap_level": "HIGH_TRAP",
+            "trap_warning": "🚨 大热诱盘预警：历史同赔下冷门打出率高达 46%，谨防豪门翻车",
+            "stars": "★★★☆☆",
+            "tier_title": "双选防冷格局",
+            "smart_pick": "主胜/防平",
+            "smart_type": "DOUBLE",
+            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。",
+            "params_source": "adaptive",
+            "active_params": {
+              "odds_tol_scale": 1.05,
+              "trap_high_upset": 0.43,
+              "trap_tight_upset": 0.45,
+              "single_threshold": 0.54
+            }
+          },
+          "consensus": "",
+          "dossier": {
+            "league_rank": "本场为传统足彩14场赛事（德国杯）：门兴坐镇主场迎战卡尔斯。14年历史同赔库共匹配到 467 场相似欧赔结构样本，历史真实打出分布为主胜 53.3% · 平局 24.2% · 客胜 22.5%。",
+            "conflict": "泊松进攻期望参数：主队 λ=2.03 vs 客队 λ=1.13。历史同赔高频比分依次聚焦 2-1 / 1-0 / 2-0，整体盘面归属【双选防冷格局】（★★★☆☆）。",
+            "market_depth": "百家平均欧赔开出 1.34 / 5.05 / 7.06，三项期望回报（EV）分别为主胜 -0.286、平局 +0.222、客胜 +0.587。盘面诊断：🚨 大热诱盘预警：历史同赔下冷门打出率高达 46%，谨防豪门翻车。",
+            "decision_guide": "传足选号方案：核心首选【主胜(3)】，次选防冷补【平局(1)】，🚨大冷预警留意【客胜(0)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
+          }
+        },
+        {
+          "no": 11,
+          "league": "意甲",
+          "league_color": "#0066FF",
+          "time": "10-28 01:30",
+          "home": "萨索洛",
+          "home_rank": "14",
+          "away": "拉齐奥",
+          "away_rank": "2",
+          "fid": "1414253",
+          "status": "已延期",
+          "live_status": "POST",
+          "odds": [
+            "2.86",
+            "3.41",
+            "2.35"
+          ],
+          "score": "",
+          "outcome": "",
+          "pick_primary": "0",
+          "pick_secondary": null,
+          "pick_upset": "3",
+          "pick_desc": "",
+          "result": null,
+          "result_text": "",
+          "quant_factors": {
+            "market": "had",
+            "samples": 2988,
+            "win_rate": 31.2,
+            "draw_rate": 26.6,
+            "loss_rate": 42.2,
+            "ev_home": -0.107,
+            "ev_draw": -0.093,
+            "ev_away": -0.009,
+            "lambda_h": 1.27,
+            "lambda_a": 1.5,
+            "golden_scores": [
+              "1-2",
+              "0-1",
+              "0-2"
+            ],
+            "trap_level": "NORMAL",
+            "trap_warning": "盘面处于正常期望区间",
+            "stars": "★★★★☆",
+            "tier_title": "高确定性稳胆",
+            "smart_pick": "客胜/防平",
+            "smart_type": "DOUBLE",
+            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。",
+            "params_source": "adaptive",
+            "active_params": {
+              "odds_tol_scale": 1.05,
+              "trap_high_upset": 0.43,
+              "trap_tight_upset": 0.45,
+              "single_threshold": 0.54
+            }
+          },
+          "consensus": "",
+          "dossier": {
+            "league_rank": "本场为传统足彩14场赛事（意甲）：萨索洛坐镇主场迎战拉齐奥。14年历史同赔库共匹配到 2988 场相似欧赔结构样本，历史真实打出分布为主胜 31.2% · 平局 26.6% · 客胜 42.2%。",
+            "conflict": "泊松进攻期望参数：主队 λ=1.27 vs 客队 λ=1.5。历史同赔高频比分依次聚焦 1-2 / 0-1 / 0-2，整体盘面归属【高确定性稳胆】（★★★★☆）。",
+            "market_depth": "百家平均欧赔开出 2.86 / 3.41 / 2.35，三项期望回报（EV）分别为主胜 -0.107、平局 -0.093、客胜 -0.009。盘面诊断：盘面处于正常期望区间。",
+            "decision_guide": "传足选号方案：核心首选【客胜(0)】（单挑作胆），🚨大冷预警留意【主胜(3)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
+          }
+        },
+        {
+          "no": 12,
+          "league": "意甲",
+          "league_color": "#0066FF",
+          "time": "10-28 03:45",
+          "home": "都灵",
+          "home_rank": "8",
+          "away": "科莫",
+          "away_rank": "5",
+          "fid": "1414221",
+          "status": "已延期",
+          "live_status": "POST",
+          "odds": [
+            "4.43",
+            "3.71",
+            "1.75"
+          ],
+          "score": "",
+          "outcome": "",
+          "pick_primary": "0",
+          "pick_secondary": "1",
+          "pick_upset": null,
+          "pick_desc": "",
+          "result": null,
+          "result_text": "",
+          "quant_factors": {
+            "market": "had",
+            "samples": 624,
+            "win_rate": 20.2,
+            "draw_rate": 23.4,
+            "loss_rate": 56.4,
+            "ev_home": -0.105,
+            "ev_draw": -0.132,
+            "ev_away": -0.013,
+            "lambda_h": 1.0,
+            "lambda_a": 1.83,
+            "golden_scores": [
+              "0-1",
+              "1-2",
+              "0-2"
+            ],
+            "trap_level": "NORMAL",
+            "trap_warning": "盘面处于正常期望区间",
+            "stars": "★★★☆☆",
+            "tier_title": "双选防冷格局",
+            "smart_pick": "客胜",
+            "smart_type": "SINGLE",
+            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。",
+            "params_source": "adaptive",
+            "active_params": {
+              "odds_tol_scale": 1.05,
+              "trap_high_upset": 0.43,
+              "trap_tight_upset": 0.45,
+              "single_threshold": 0.54
+            }
+          },
+          "consensus": "",
+          "dossier": {
+            "league_rank": "本场为传统足彩14场赛事（意甲）：都灵坐镇主场迎战科莫。14年历史同赔库共匹配到 624 场相似欧赔结构样本，历史真实打出分布为主胜 20.2% · 平局 23.4% · 客胜 56.4%。",
+            "conflict": "泊松进攻期望参数：主队 λ=1.0 vs 客队 λ=1.83。历史同赔高频比分依次聚焦 0-1 / 1-2 / 0-2，整体盘面归属【双选防冷格局】（★★★☆☆）。",
+            "market_depth": "百家平均欧赔开出 4.43 / 3.71 / 1.75，三项期望回报（EV）分别为主胜 -0.105、平局 -0.132、客胜 -0.013。盘面诊断：盘面处于正常期望区间。",
+            "decision_guide": "传足选号方案：核心首选【客胜(0)】，次选防冷补【平局(1)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
+          }
+        },
+        {
+          "no": 13,
+          "league": "意甲",
+          "league_color": "#0066FF",
+          "time": "10-28 03:45",
+          "home": "罗马",
+          "home_rank": "3",
+          "away": "卡利亚",
+          "away_rank": "9",
+          "fid": "1414173",
+          "status": "已延期",
+          "live_status": "POST",
+          "odds": [
+            "1.34",
+            "4.88",
+            "8.62"
+          ],
+          "score": "",
+          "outcome": "",
+          "pick_primary": "3",
+          "pick_secondary": null,
+          "pick_upset": "0",
+          "pick_desc": "",
+          "result": null,
+          "result_text": "",
+          "quant_factors": {
+            "market": "had",
+            "samples": 1012,
+            "win_rate": 62.4,
+            "draw_rate": 20.8,
+            "loss_rate": 16.9,
+            "ev_home": -0.164,
+            "ev_draw": 0.013,
+            "ev_away": 0.457,
+            "lambda_h": 2.23,
+            "lambda_a": 1.15,
+            "golden_scores": [
+              "2-1",
+              "2-0",
+              "1-0"
+            ],
+            "trap_level": "NORMAL",
+            "trap_warning": "盘面处于正常期望区间",
+            "stars": "★★★★☆",
+            "tier_title": "高确定性稳胆",
+            "smart_pick": "主胜",
+            "smart_type": "SINGLE",
+            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。",
+            "params_source": "adaptive",
+            "active_params": {
+              "odds_tol_scale": 1.05,
+              "trap_high_upset": 0.43,
+              "trap_tight_upset": 0.45,
+              "single_threshold": 0.54
+            }
+          },
+          "consensus": "",
+          "dossier": {
+            "league_rank": "本场为传统足彩14场赛事（意甲）：罗马坐镇主场迎战卡利亚。14年历史同赔库共匹配到 1012 场相似欧赔结构样本，历史真实打出分布为主胜 62.4% · 平局 20.8% · 客胜 16.9%。",
+            "conflict": "泊松进攻期望参数：主队 λ=2.23 vs 客队 λ=1.15。历史同赔高频比分依次聚焦 2-1 / 2-0 / 1-0，整体盘面归属【高确定性稳胆】（★★★★☆）。",
+            "market_depth": "百家平均欧赔开出 1.34 / 4.88 / 8.62，三项期望回报（EV）分别为主胜 -0.164、平局 +0.013、客胜 +0.457。盘面诊断：盘面处于正常期望区间。",
+            "decision_guide": "传足选号方案：核心首选【主胜(3)】（单挑作胆），🚨大冷预警留意【客胜(0)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
+          }
+        },
+        {
+          "no": 14,
+          "league": "瑞典超",
+          "league_color": "#004488",
+          "time": "10-28 02:00",
+          "home": "索尔纳",
+          "home_rank": "8",
+          "away": "埃尔夫",
+          "away_rank": "5",
+          "fid": "1362815",
+          "status": "已延期",
+          "live_status": "POST",
+          "odds": [
+            "3.00",
+            "3.46",
+            "2.14"
+          ],
+          "score": "",
+          "outcome": "",
+          "pick_primary": "0",
+          "pick_secondary": null,
+          "pick_upset": "3",
+          "pick_desc": "",
+          "result": null,
+          "result_text": "",
+          "quant_factors": {
+            "market": "had",
+            "samples": 2531,
+            "win_rate": 30.1,
+            "draw_rate": 26.5,
+            "loss_rate": 43.4,
+            "ev_home": -0.097,
+            "ev_draw": -0.084,
+            "ev_away": -0.071,
+            "lambda_h": 1.25,
+            "lambda_a": 1.56,
+            "golden_scores": [
+              "1-2",
+              "0-1",
+              "0-2"
+            ],
+            "trap_level": "NORMAL",
+            "trap_warning": "盘面处于正常期望区间",
+            "stars": "★★★★☆",
+            "tier_title": "高确定性稳胆",
+            "smart_pick": "客胜/防平",
+            "smart_type": "DOUBLE",
+            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。",
+            "params_source": "adaptive",
+            "active_params": {
+              "odds_tol_scale": 1.05,
+              "trap_high_upset": 0.43,
+              "trap_tight_upset": 0.45,
+              "single_threshold": 0.54
+            }
+          },
+          "consensus": "",
+          "dossier": {
+            "league_rank": "本场为传统足彩14场赛事（瑞典超）：索尔纳坐镇主场迎战埃尔夫。14年历史同赔库共匹配到 2531 场相似欧赔结构样本，历史真实打出分布为主胜 30.1% · 平局 26.5% · 客胜 43.4%。",
+            "conflict": "泊松进攻期望参数：主队 λ=1.25 vs 客队 λ=1.56。历史同赔高频比分依次聚焦 1-2 / 0-1 / 0-2，整体盘面归属【高确定性稳胆】（★★★★☆）。",
+            "market_depth": "百家平均欧赔开出 3.00 / 3.46 / 2.14，三项期望回报（EV）分别为主胜 -0.097、平局 -0.084、客胜 -0.071。盘面诊断：盘面处于正常期望区间。",
+            "decision_guide": "传足选号方案：核心首选【客胜(0)】（单挑作胆），🚨大冷预警留意【主胜(3)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
+          }
+        }
+      ]
+    },
     {
       "period": "26150",
       "picks_ready": true,
       "deadline": "10-25 22:00",
       "total_matches": 14,
-      "archived_at": "2026-10-27 05:28:37",
+      "archived_at": "2026-10-27 18:08:27",
       "summary": {
         "total": 14,
         "hit_primary": 7,
@@ -44,15 +958,15 @@
           "result_text": "首选命中",
           "quant_factors": {
             "market": "had",
-            "samples": 2219,
+            "samples": 2231,
             "win_rate": 33.2,
-            "draw_rate": 26.1,
-            "loss_rate": 40.7,
+            "draw_rate": 26.0,
+            "loss_rate": 40.8,
             "ev_home": -0.126,
-            "ev_draw": -0.074,
-            "ev_away": 0.001,
+            "ev_draw": -0.079,
+            "ev_away": 0.005,
             "lambda_h": 1.39,
-            "lambda_a": 1.54,
+            "lambda_a": 1.55,
             "golden_scores": [
               "1-2",
               "0-1",
@@ -64,13 +978,20 @@
             "tier_title": "高确定性稳胆",
             "smart_pick": "客胜/防平",
             "smart_type": "DOUBLE",
-            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。"
+            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。",
+            "params_source": "adaptive",
+            "active_params": {
+              "odds_tol_scale": 1.05,
+              "trap_high_upset": 0.43,
+              "trap_tight_upset": 0.45,
+              "single_threshold": 0.54
+            }
           },
           "consensus": "",
           "dossier": {
-            "league_rank": "本场为传统足彩14场赛事（英超）：水晶宫坐镇主场迎战纽卡斯。14年历史同赔库共匹配到 2219 场相似欧赔结构样本，历史真实打出分布为主胜 33.2% · 平局 26.1% · 客胜 40.7%。",
-            "conflict": "泊松进攻期望参数：主队 λ=1.39 vs 客队 λ=1.54。历史同赔高频比分依次聚焦 1-2 / 0-1 / 0-2，整体盘面归属【高确定性稳胆】（★★★★☆）。",
-            "market_depth": "百家平均欧赔开出 2.63 / 3.55 / 2.46，三项期望回报（EV）分别为主胜 -0.126、平局 -0.074、客胜 +0.001。盘面诊断：盘面处于正常期望区间。",
+            "league_rank": "本场为传统足彩14场赛事（英超）：水晶宫坐镇主场迎战纽卡斯。14年历史同赔库共匹配到 2231 场相似欧赔结构样本，历史真实打出分布为主胜 33.2% · 平局 26.0% · 客胜 40.8%。",
+            "conflict": "泊松进攻期望参数：主队 λ=1.39 vs 客队 λ=1.55。历史同赔高频比分依次聚焦 1-2 / 0-1 / 0-2，整体盘面归属【高确定性稳胆】（★★★★☆）。",
+            "market_depth": "百家平均欧赔开出 2.63 / 3.55 / 2.46，三项期望回报（EV）分别为主胜 -0.126、平局 -0.079、客胜 +0.005。盘面诊断：盘面处于正常期望区间。",
             "decision_guide": "传足选号方案：核心首选【客胜(0)】（单挑作胆），🚨大冷预警留意【主胜(3)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
           }
         },
@@ -101,15 +1022,15 @@
           "result_text": "次选命中",
           "quant_factors": {
             "market": "had",
-            "samples": 450,
-            "win_rate": 21.6,
-            "draw_rate": 24.0,
-            "loss_rate": 54.4,
-            "ev_home": -0.041,
-            "ev_draw": -0.066,
-            "ev_away": -0.069,
-            "lambda_h": 1.03,
-            "lambda_a": 1.82,
+            "samples": 553,
+            "win_rate": 20.4,
+            "draw_rate": 24.1,
+            "loss_rate": 55.5,
+            "ev_home": -0.091,
+            "ev_draw": -0.064,
+            "ev_away": -0.051,
+            "lambda_h": 1.04,
+            "lambda_a": 1.85,
             "golden_scores": [
               "1-2",
               "0-1",
@@ -121,13 +1042,20 @@
             "tier_title": "双选防冷格局",
             "smart_pick": "客胜",
             "smart_type": "SINGLE",
-            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。"
+            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。",
+            "params_source": "adaptive",
+            "active_params": {
+              "odds_tol_scale": 1.05,
+              "trap_high_upset": 0.43,
+              "trap_tight_upset": 0.45,
+              "single_threshold": 0.54
+            }
           },
           "consensus": "",
           "dossier": {
-            "league_rank": "本场为传统足彩14场赛事（英超）：赫尔城坐镇主场迎战布伦特。14年历史同赔库共匹配到 450 场相似欧赔结构样本，历史真实打出分布为主胜 21.6% · 平局 24.0% · 客胜 54.4%。",
-            "conflict": "泊松进攻期望参数：主队 λ=1.03 vs 客队 λ=1.82。历史同赔高频比分依次聚焦 1-2 / 0-1 / 0-2，整体盘面归属【双选防冷格局】（★★★☆☆）。",
-            "market_depth": "百家平均欧赔开出 4.45 / 3.89 / 1.71，三项期望回报（EV）分别为主胜 -0.041、平局 -0.066、客胜 -0.069。盘面诊断：盘面处于正常期望区间。",
+            "league_rank": "本场为传统足彩14场赛事（英超）：赫尔城坐镇主场迎战布伦特。14年历史同赔库共匹配到 553 场相似欧赔结构样本，历史真实打出分布为主胜 20.4% · 平局 24.1% · 客胜 55.5%。",
+            "conflict": "泊松进攻期望参数：主队 λ=1.04 vs 客队 λ=1.85。历史同赔高频比分依次聚焦 1-2 / 0-1 / 0-2，整体盘面归属【双选防冷格局】（★★★☆☆）。",
+            "market_depth": "百家平均欧赔开出 4.45 / 3.89 / 1.71，三项期望回报（EV）分别为主胜 -0.091、平局 -0.064、客胜 -0.051。盘面诊断：盘面处于正常期望区间。",
             "decision_guide": "传足选号方案：核心首选【客胜(0)】，次选防冷补【平局(1)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
           }
         },
@@ -158,19 +1086,19 @@
           "result_text": "未中",
           "quant_factors": {
             "market": "had",
-            "samples": 624,
-            "win_rate": 51.6,
-            "draw_rate": 21.8,
-            "loss_rate": 26.6,
-            "ev_home": -0.071,
-            "ev_draw": -0.137,
-            "ev_away": 0.032,
-            "lambda_h": 1.97,
-            "lambda_a": 1.32,
+            "samples": 1011,
+            "win_rate": 52.1,
+            "draw_rate": 22.1,
+            "loss_rate": 25.8,
+            "ev_home": -0.062,
+            "ev_draw": -0.127,
+            "ev_away": 0.002,
+            "lambda_h": 1.91,
+            "lambda_a": 1.26,
             "golden_scores": [
               "2-1",
               "1-0",
-              "3-1"
+              "2-0"
             ],
             "trap_level": "NORMAL",
             "trap_warning": "盘面处于正常期望区间",
@@ -178,13 +1106,20 @@
             "tier_title": "高确定性稳胆",
             "smart_pick": "主胜/防平",
             "smart_type": "DOUBLE",
-            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。"
+            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。",
+            "params_source": "adaptive",
+            "active_params": {
+              "odds_tol_scale": 1.05,
+              "trap_high_upset": 0.43,
+              "trap_tight_upset": 0.45,
+              "single_threshold": 0.54
+            }
           },
           "consensus": "",
           "dossier": {
-            "league_rank": "本场为传统足彩14场赛事（英超）：曼联坐镇主场迎战伯恩茅。14年历史同赔库共匹配到 624 场相似欧赔结构样本，历史真实打出分布为主胜 51.6% · 平局 21.8% · 客胜 26.6%。",
-            "conflict": "泊松进攻期望参数：主队 λ=1.97 vs 客队 λ=1.32。历史同赔高频比分依次聚焦 2-1 / 1-0 / 3-1，整体盘面归属【高确定性稳胆】（★★★★☆）。",
-            "market_depth": "百家平均欧赔开出 1.80 / 3.96 / 3.88，三项期望回报（EV）分别为主胜 -0.071、平局 -0.137、客胜 +0.032。盘面诊断：盘面处于正常期望区间。",
+            "league_rank": "本场为传统足彩14场赛事（英超）：曼联坐镇主场迎战伯恩茅。14年历史同赔库共匹配到 1011 场相似欧赔结构样本，历史真实打出分布为主胜 52.1% · 平局 22.1% · 客胜 25.8%。",
+            "conflict": "泊松进攻期望参数：主队 λ=1.91 vs 客队 λ=1.26。历史同赔高频比分依次聚焦 2-1 / 1-0 / 2-0，整体盘面归属【高确定性稳胆】（★★★★☆）。",
+            "market_depth": "百家平均欧赔开出 1.80 / 3.96 / 3.88，三项期望回报（EV）分别为主胜 -0.062、平局 -0.127、客胜 +0.002。盘面诊断：盘面处于正常期望区间。",
             "decision_guide": "传足选号方案：核心首选【主胜(3)】（单挑作胆）。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
           }
         },
@@ -215,15 +1150,15 @@
           "result_text": "未中",
           "quant_factors": {
             "market": "had",
-            "samples": 3698,
-            "win_rate": 31.9,
+            "samples": 3847,
+            "win_rate": 31.8,
             "draw_rate": 26.8,
-            "loss_rate": 41.3,
-            "ev_home": -0.114,
+            "loss_rate": 41.4,
+            "ev_home": -0.115,
             "ev_draw": -0.116,
-            "ev_away": 0.021,
-            "lambda_h": 1.24,
-            "lambda_a": 1.42,
+            "ev_away": 0.022,
+            "lambda_h": 1.25,
+            "lambda_a": 1.43,
             "golden_scores": [
               "0-1",
               "1-2",
@@ -235,13 +1170,20 @@
             "tier_title": "高确定性稳胆",
             "smart_pick": "客胜/防平",
             "smart_type": "DOUBLE",
-            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。"
+            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。",
+            "params_source": "adaptive",
+            "active_params": {
+              "odds_tol_scale": 1.05,
+              "trap_high_upset": 0.43,
+              "trap_tight_upset": 0.45,
+              "single_threshold": 0.54
+            }
           },
           "consensus": "",
           "dossier": {
-            "league_rank": "本场为传统足彩14场赛事（英超）：桑德兰坐镇主场迎战利兹联。14年历史同赔库共匹配到 3698 场相似欧赔结构样本，历史真实打出分布为主胜 31.9% · 平局 26.8% · 客胜 41.3%。",
-            "conflict": "泊松进攻期望参数：主队 λ=1.24 vs 客队 λ=1.42。历史同赔高频比分依次聚焦 0-1 / 1-2 / 0-2，整体盘面归属【高确定性稳胆】（★★★★☆）。",
-            "market_depth": "百家平均欧赔开出 2.78 / 3.30 / 2.47，三项期望回报（EV）分别为主胜 -0.114、平局 -0.116、客胜 +0.021。盘面诊断：盘面处于正常期望区间。",
+            "league_rank": "本场为传统足彩14场赛事（英超）：桑德兰坐镇主场迎战利兹联。14年历史同赔库共匹配到 3847 场相似欧赔结构样本，历史真实打出分布为主胜 31.8% · 平局 26.8% · 客胜 41.4%。",
+            "conflict": "泊松进攻期望参数：主队 λ=1.25 vs 客队 λ=1.43。历史同赔高频比分依次聚焦 0-1 / 1-2 / 0-2，整体盘面归属【高确定性稳胆】（★★★★☆）。",
+            "market_depth": "百家平均欧赔开出 2.78 / 3.30 / 2.47，三项期望回报（EV）分别为主胜 -0.115、平局 -0.116、客胜 +0.022。盘面诊断：盘面处于正常期望区间。",
             "decision_guide": "传足选号方案：核心首选【客胜(0)】（单挑作胆），🚨大冷预警留意【主胜(3)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
           }
         },
@@ -272,33 +1214,40 @@
           "result_text": "防冷命中",
           "quant_factors": {
             "market": "had",
-            "samples": 217,
-            "win_rate": 32.7,
-            "draw_rate": 21.2,
-            "loss_rate": 46.1,
-            "ev_home": -0.1,
-            "ev_draw": -0.165,
-            "ev_away": 0.018,
+            "samples": 218,
+            "win_rate": 32.6,
+            "draw_rate": 21.6,
+            "loss_rate": 45.9,
+            "ev_home": -0.104,
+            "ev_draw": -0.151,
+            "ev_away": 0.014,
             "lambda_h": 1.6,
-            "lambda_a": 1.75,
+            "lambda_a": 1.74,
             "golden_scores": [
               "1-2",
               "0-1",
               "0-2"
             ],
             "trap_level": "HIGH_TRAP",
-            "trap_warning": "🎯 高赔杀庄大冷：客胜历史打出率 46%，具备极佳正EV回报",
+            "trap_warning": "🎯 高赔杀庄大冷：客胜历史打出率 45%，具备极佳正EV回报",
             "stars": "★★★★☆",
             "tier_title": "高确定性稳胆",
             "smart_pick": "客胜/防平",
             "smart_type": "DOUBLE",
-            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。"
+            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。",
+            "params_source": "adaptive",
+            "active_params": {
+              "odds_tol_scale": 1.05,
+              "trap_high_upset": 0.43,
+              "trap_tight_upset": 0.45,
+              "single_threshold": 0.54
+            }
           },
           "consensus": "",
           "dossier": {
-            "league_rank": "本场为传统足彩14场赛事（德甲）：霍芬海坐镇主场迎战勒沃。14年历史同赔库共匹配到 217 场相似欧赔结构样本，历史真实打出分布为主胜 32.7% · 平局 21.2% · 客胜 46.1%。",
-            "conflict": "泊松进攻期望参数：主队 λ=1.6 vs 客队 λ=1.75。历史同赔高频比分依次聚焦 1-2 / 0-1 / 0-2，整体盘面归属【高确定性稳胆】（★★★★☆）。",
-            "market_depth": "百家平均欧赔开出 2.75 / 3.94 / 2.21，三项期望回报（EV）分别为主胜 -0.100、平局 -0.165、客胜 +0.018。盘面诊断：🎯 高赔杀庄大冷：客胜历史打出率 46%，具备极佳正EV回报。",
+            "league_rank": "本场为传统足彩14场赛事（德甲）：霍芬海坐镇主场迎战勒沃。14年历史同赔库共匹配到 218 场相似欧赔结构样本，历史真实打出分布为主胜 32.6% · 平局 21.6% · 客胜 45.9%。",
+            "conflict": "泊松进攻期望参数：主队 λ=1.6 vs 客队 λ=1.74。历史同赔高频比分依次聚焦 1-2 / 0-1 / 0-2，整体盘面归属【高确定性稳胆】（★★★★☆）。",
+            "market_depth": "百家平均欧赔开出 2.75 / 3.94 / 2.21，三项期望回报（EV）分别为主胜 -0.104、平局 -0.151、客胜 +0.014。盘面诊断：🎯 高赔杀庄大冷：客胜历史打出率 45%，具备极佳正EV回报。",
             "decision_guide": "传足选号方案：核心首选【客胜(0)】（单挑作胆），🚨大冷预警留意【主胜(3)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
           }
         },
@@ -349,7 +1298,14 @@
             "tier_title": "高确定性稳胆",
             "smart_pick": "客胜",
             "smart_type": "SINGLE",
-            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。"
+            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。",
+            "params_source": "adaptive",
+            "active_params": {
+              "odds_tol_scale": 1.05,
+              "trap_high_upset": 0.43,
+              "trap_tight_upset": 0.45,
+              "single_threshold": 0.54
+            }
           },
           "consensus": "",
           "dossier": {
@@ -386,14 +1342,14 @@
           "result_text": "未中",
           "quant_factors": {
             "market": "had",
-            "samples": 535,
-            "win_rate": 58.1,
-            "draw_rate": 21.5,
-            "loss_rate": 20.4,
-            "ev_home": -0.047,
-            "ev_draw": -0.099,
-            "ev_away": -0.085,
-            "lambda_h": 2.19,
+            "samples": 557,
+            "win_rate": 58.2,
+            "draw_rate": 21.2,
+            "loss_rate": 20.6,
+            "ev_home": -0.046,
+            "ev_draw": -0.112,
+            "ev_away": -0.073,
+            "lambda_h": 2.2,
             "lambda_a": 1.45,
             "golden_scores": [
               "2-1",
@@ -406,13 +1362,20 @@
             "tier_title": "高确定性稳胆",
             "smart_pick": "主胜",
             "smart_type": "SINGLE",
-            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。"
+            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。",
+            "params_source": "adaptive",
+            "active_params": {
+              "odds_tol_scale": 1.05,
+              "trap_high_upset": 0.43,
+              "trap_tight_upset": 0.45,
+              "single_threshold": 0.54
+            }
           },
           "consensus": "",
           "dossier": {
-            "league_rank": "本场为传统足彩14场赛事（意甲）：亚特兰坐镇主场迎战弗洛西。14年历史同赔库共匹配到 535 场相似欧赔结构样本，历史真实打出分布为主胜 58.1% · 平局 21.5% · 客胜 20.4%。",
-            "conflict": "泊松进攻期望参数：主队 λ=2.19 vs 客队 λ=1.45。历史同赔高频比分依次聚焦 2-1 / 2-0 / 4-3，整体盘面归属【高确定性稳胆】（★★★★☆）。",
-            "market_depth": "百家平均欧赔开出 1.64 / 4.19 / 4.49，三项期望回报（EV）分别为主胜 -0.047、平局 -0.099、客胜 -0.085。盘面诊断：盘面处于正常期望区间。",
+            "league_rank": "本场为传统足彩14场赛事（意甲）：亚特兰坐镇主场迎战弗洛西。14年历史同赔库共匹配到 557 场相似欧赔结构样本，历史真实打出分布为主胜 58.2% · 平局 21.2% · 客胜 20.6%。",
+            "conflict": "泊松进攻期望参数：主队 λ=2.2 vs 客队 λ=1.45。历史同赔高频比分依次聚焦 2-1 / 2-0 / 4-3，整体盘面归属【高确定性稳胆】（★★★★☆）。",
+            "market_depth": "百家平均欧赔开出 1.64 / 4.19 / 4.49，三项期望回报（EV）分别为主胜 -0.046、平局 -0.112、客胜 -0.073。盘面诊断：盘面处于正常期望区间。",
             "decision_guide": "传足选号方案：核心首选【主胜(3)】（单挑作胆）。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
           }
         },
@@ -443,13 +1406,13 @@
           "result_text": "首选命中",
           "quant_factors": {
             "market": "had",
-            "samples": 5733,
-            "win_rate": 41.5,
-            "draw_rate": 28.0,
-            "loss_rate": 30.6,
-            "ev_home": -0.138,
-            "ev_draw": -0.071,
-            "ev_away": 0.06,
+            "samples": 6435,
+            "win_rate": 41.4,
+            "draw_rate": 28.3,
+            "loss_rate": 30.4,
+            "ev_home": -0.14,
+            "ev_draw": -0.062,
+            "ev_away": 0.055,
             "lambda_h": 1.43,
             "lambda_a": 1.19,
             "golden_scores": [
@@ -463,13 +1426,20 @@
             "tier_title": "高确定性稳胆",
             "smart_pick": "主胜/防平",
             "smart_type": "DOUBLE",
-            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。"
+            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。",
+            "params_source": "adaptive",
+            "active_params": {
+              "odds_tol_scale": 1.05,
+              "trap_high_upset": 0.43,
+              "trap_tight_upset": 0.45,
+              "single_threshold": 0.54
+            }
           },
           "consensus": "",
           "dossier": {
-            "league_rank": "本场为传统足彩14场赛事（意甲）：热那亚坐镇主场迎战威尼斯。14年历史同赔库共匹配到 5733 场相似欧赔结构样本，历史真实打出分布为主胜 41.5% · 平局 28.0% · 客胜 30.6%。",
+            "league_rank": "本场为传统足彩14场赛事（意甲）：热那亚坐镇主场迎战威尼斯。14年历史同赔库共匹配到 6435 场相似欧赔结构样本，历史真实打出分布为主胜 41.4% · 平局 28.3% · 客胜 30.4%。",
             "conflict": "泊松进攻期望参数：主队 λ=1.43 vs 客队 λ=1.19。历史同赔高频比分依次聚焦 1-0 / 2-1 / 2-0，整体盘面归属【高确定性稳胆】（★★★★☆）。",
-            "market_depth": "百家平均欧赔开出 2.08 / 3.32 / 3.47，三项期望回报（EV）分别为主胜 -0.138、平局 -0.071、客胜 +0.060。盘面诊断：盘面处于正常期望区间。",
+            "market_depth": "百家平均欧赔开出 2.08 / 3.32 / 3.47，三项期望回报（EV）分别为主胜 -0.140、平局 -0.062、客胜 +0.055。盘面诊断：盘面处于正常期望区间。",
             "decision_guide": "传足选号方案：核心首选【主胜(3)】（单挑作胆）。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
           }
         },
@@ -500,15 +1470,15 @@
           "result_text": "首选命中",
           "quant_factors": {
             "market": "had",
-            "samples": 60,
-            "win_rate": 10.0,
-            "draw_rate": 11.7,
-            "loss_rate": 78.3,
-            "ev_home": -0.272,
-            "ev_draw": -0.499,
-            "ev_away": 0.12,
-            "lambda_h": 0.68,
-            "lambda_a": 2.33,
+            "samples": 65,
+            "win_rate": 12.3,
+            "draw_rate": 12.3,
+            "loss_rate": 75.4,
+            "ev_home": -0.104,
+            "ev_draw": -0.472,
+            "ev_away": 0.078,
+            "lambda_h": 0.74,
+            "lambda_a": 2.25,
             "golden_scores": [
               "0-1",
               "1-2",
@@ -520,13 +1490,20 @@
             "tier_title": "正路核心死胆",
             "smart_pick": "客胜",
             "smart_type": "SINGLE",
-            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。"
+            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。",
+            "params_source": "adaptive",
+            "active_params": {
+              "odds_tol_scale": 1.05,
+              "trap_high_upset": 0.43,
+              "trap_tight_upset": 0.45,
+              "single_threshold": 0.54
+            }
           },
           "consensus": "",
           "dossier": {
-            "league_rank": "本场为传统足彩14场赛事（意甲）：莱切坐镇主场迎战尤文。14年历史同赔库共匹配到 60 场相似欧赔结构样本，历史真实打出分布为主胜 10.0% · 平局 11.7% · 客胜 78.3%。",
-            "conflict": "泊松进攻期望参数：主队 λ=0.68 vs 客队 λ=2.33。历史同赔高频比分依次聚焦 0-1 / 1-2 / 0-2，整体盘面归属【正路核心死胆】（★★★★★）。",
-            "market_depth": "百家平均欧赔开出 7.28 / 4.29 / 1.43，三项期望回报（EV）分别为主胜 -0.272、平局 -0.499、客胜 +0.120。盘面诊断：盘面处于正常期望区间。",
+            "league_rank": "本场为传统足彩14场赛事（意甲）：莱切坐镇主场迎战尤文。14年历史同赔库共匹配到 65 场相似欧赔结构样本，历史真实打出分布为主胜 12.3% · 平局 12.3% · 客胜 75.4%。",
+            "conflict": "泊松进攻期望参数：主队 λ=0.74 vs 客队 λ=2.25。历史同赔高频比分依次聚焦 0-1 / 1-2 / 0-2，整体盘面归属【正路核心死胆】（★★★★★）。",
+            "market_depth": "百家平均欧赔开出 7.28 / 4.29 / 1.43，三项期望回报（EV）分别为主胜 -0.104、平局 -0.472、客胜 +0.078。盘面诊断：盘面处于正常期望区间。",
             "decision_guide": "传足选号方案：核心首选【客胜(0)】（单挑作胆）。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
           }
         },
@@ -557,15 +1534,15 @@
           "result_text": "首选命中",
           "quant_factors": {
             "market": "had",
-            "samples": 586,
-            "win_rate": 20.6,
-            "draw_rate": 23.0,
-            "loss_rate": 56.3,
-            "ev_home": -0.079,
-            "ev_draw": -0.157,
-            "ev_away": -0.015,
+            "samples": 638,
+            "win_rate": 20.7,
+            "draw_rate": 24.1,
+            "loss_rate": 55.2,
+            "ev_home": -0.077,
+            "ev_draw": -0.117,
+            "ev_away": -0.034,
             "lambda_h": 0.98,
-            "lambda_a": 1.79,
+            "lambda_a": 1.78,
             "golden_scores": [
               "0-1",
               "1-2",
@@ -577,13 +1554,20 @@
             "tier_title": "双选防冷格局",
             "smart_pick": "客胜",
             "smart_type": "SINGLE",
-            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。"
+            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。",
+            "params_source": "adaptive",
+            "active_params": {
+              "odds_tol_scale": 1.05,
+              "trap_high_upset": 0.43,
+              "trap_tight_upset": 0.45,
+              "single_threshold": 0.54
+            }
           },
           "consensus": "",
           "dossier": {
-            "league_rank": "本场为传统足彩14场赛事（意甲）：乌迪内坐镇主场迎战AC米兰。14年历史同赔库共匹配到 586 场相似欧赔结构样本，历史真实打出分布为主胜 20.6% · 平局 23.0% · 客胜 56.3%。",
-            "conflict": "泊松进攻期望参数：主队 λ=0.98 vs 客队 λ=1.79。历史同赔高频比分依次聚焦 0-1 / 1-2 / 0-2，整体盘面归属【双选防冷格局】（★★★☆☆）。",
-            "market_depth": "百家平均欧赔开出 4.46 / 3.66 / 1.75，三项期望回报（EV）分别为主胜 -0.079、平局 -0.157、客胜 -0.015。盘面诊断：盘面处于正常期望区间。",
+            "league_rank": "本场为传统足彩14场赛事（意甲）：乌迪内坐镇主场迎战AC米兰。14年历史同赔库共匹配到 638 场相似欧赔结构样本，历史真实打出分布为主胜 20.7% · 平局 24.1% · 客胜 55.2%。",
+            "conflict": "泊松进攻期望参数：主队 λ=0.98 vs 客队 λ=1.78。历史同赔高频比分依次聚焦 0-1 / 1-2 / 0-2，整体盘面归属【双选防冷格局】（★★★☆☆）。",
+            "market_depth": "百家平均欧赔开出 4.46 / 3.66 / 1.75，三项期望回报（EV）分别为主胜 -0.077、平局 -0.117、客胜 -0.034。盘面诊断：盘面处于正常期望区间。",
             "decision_guide": "传足选号方案：核心首选【客胜(0)】，次选防冷补【平局(1)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
           }
         },
@@ -614,13 +1598,13 @@
           "result_text": "未中",
           "quant_factors": {
             "market": "had",
-            "samples": 3660,
-            "win_rate": 33.0,
-            "draw_rate": 27.9,
+            "samples": 3692,
+            "win_rate": 33.2,
+            "draw_rate": 27.8,
             "loss_rate": 39.1,
-            "ev_home": -0.139,
-            "ev_draw": -0.061,
-            "ev_away": 0.009,
+            "ev_home": -0.135,
+            "ev_draw": -0.063,
+            "ev_away": 0.008,
             "lambda_h": 1.3,
             "lambda_a": 1.43,
             "golden_scores": [
@@ -634,13 +1618,20 @@
             "tier_title": "高确定性稳胆",
             "smart_pick": "客胜/防平",
             "smart_type": "DOUBLE",
-            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。"
+            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。",
+            "params_source": "adaptive",
+            "active_params": {
+              "odds_tol_scale": 1.05,
+              "trap_high_upset": 0.43,
+              "trap_tight_upset": 0.45,
+              "single_threshold": 0.54
+            }
           },
           "consensus": "",
           "dossier": {
-            "league_rank": "本场为传统足彩14场赛事（西甲）：塞尔塔坐镇主场迎战贝蒂斯。14年历史同赔库共匹配到 3660 场相似欧赔结构样本，历史真实打出分布为主胜 33.0% · 平局 27.9% · 客胜 39.1%。",
+            "league_rank": "本场为传统足彩14场赛事（西甲）：塞尔塔坐镇主场迎战贝蒂斯。14年历史同赔库共匹配到 3692 场相似欧赔结构样本，历史真实打出分布为主胜 33.2% · 平局 27.8% · 客胜 39.1%。",
             "conflict": "泊松进攻期望参数：主队 λ=1.3 vs 客队 λ=1.43。历史同赔高频比分依次聚焦 0-1 / 1-2 / 0-2，整体盘面归属【高确定性稳胆】（★★★★☆）。",
-            "market_depth": "百家平均欧赔开出 2.61 / 3.37 / 2.58，三项期望回报（EV）分别为主胜 -0.139、平局 -0.061、客胜 +0.009。盘面诊断：盘面处于正常期望区间。",
+            "market_depth": "百家平均欧赔开出 2.61 / 3.37 / 2.58，三项期望回报（EV）分别为主胜 -0.135、平局 -0.063、客胜 +0.008。盘面诊断：盘面处于正常期望区间。",
             "decision_guide": "传足选号方案：核心首选【客胜(0)】（单挑作胆），🚨大冷预警留意【主胜(3)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
           }
         },
@@ -671,33 +1662,40 @@
           "result_text": "首选命中",
           "quant_factors": {
             "market": "had",
-            "samples": 759,
-            "win_rate": 51.9,
-            "draw_rate": 26.6,
-            "loss_rate": 21.5,
-            "ev_home": -0.123,
-            "ev_draw": 0.065,
-            "ev_away": -0.057,
-            "lambda_h": 1.9,
-            "lambda_a": 1.19,
+            "samples": 1239,
+            "win_rate": 52.9,
+            "draw_rate": 25.3,
+            "loss_rate": 21.7,
+            "ev_home": -0.105,
+            "ev_draw": 0.014,
+            "ev_away": -0.047,
+            "lambda_h": 1.85,
+            "lambda_a": 1.16,
             "golden_scores": [
               "2-1",
               "1-0",
               "2-0"
             ],
             "trap_level": "CAUTION",
-            "trap_warning": "⚠️ 胶着震荡预警：历史胜率仅 51%，防平局闷平打出",
+            "trap_warning": "⚠️ 胶着震荡预警：历史胜率仅 52%，防平局闷平打出",
             "stars": "★★★☆☆",
             "tier_title": "双选防冷格局",
             "smart_pick": "主胜/防平",
             "smart_type": "DOUBLE",
-            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。"
+            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。",
+            "params_source": "adaptive",
+            "active_params": {
+              "odds_tol_scale": 1.05,
+              "trap_high_upset": 0.43,
+              "trap_tight_upset": 0.45,
+              "single_threshold": 0.54
+            }
           },
           "consensus": "",
           "dossier": {
-            "league_rank": "本场为传统足彩14场赛事（西甲）：社会坐镇主场迎战莱万特。14年历史同赔库共匹配到 759 场相似欧赔结构样本，历史真实打出分布为主胜 51.9% · 平局 26.6% · 客胜 21.5%。",
-            "conflict": "泊松进攻期望参数：主队 λ=1.9 vs 客队 λ=1.19。历史同赔高频比分依次聚焦 2-1 / 1-0 / 2-0，整体盘面归属【双选防冷格局】（★★★☆☆）。",
-            "market_depth": "百家平均欧赔开出 1.69 / 4.00 / 4.39，三项期望回报（EV）分别为主胜 -0.123、平局 +0.065、客胜 -0.057。盘面诊断：⚠️ 胶着震荡预警：历史胜率仅 51%，防平局闷平打出。",
+            "league_rank": "本场为传统足彩14场赛事（西甲）：社会坐镇主场迎战莱万特。14年历史同赔库共匹配到 1239 场相似欧赔结构样本，历史真实打出分布为主胜 52.9% · 平局 25.3% · 客胜 21.7%。",
+            "conflict": "泊松进攻期望参数：主队 λ=1.85 vs 客队 λ=1.16。历史同赔高频比分依次聚焦 2-1 / 1-0 / 2-0，整体盘面归属【双选防冷格局】（★★★☆☆）。",
+            "market_depth": "百家平均欧赔开出 1.69 / 4.00 / 4.39，三项期望回报（EV）分别为主胜 -0.105、平局 +0.014、客胜 -0.047。盘面诊断：⚠️ 胶着震荡预警：历史胜率仅 52%，防平局闷平打出。",
             "decision_guide": "传足选号方案：核心首选【主胜(3)】，次选防冷补【平局(1)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
           }
         },
@@ -728,13 +1726,13 @@
           "result_text": "未中",
           "quant_factors": {
             "market": "had",
-            "samples": 10136,
-            "win_rate": 57.7,
-            "draw_rate": 24.6,
-            "loss_rate": 17.7,
-            "ev_home": -0.094,
-            "ev_draw": 0.166,
-            "ev_away": -0.196,
+            "samples": 11070,
+            "win_rate": 57.4,
+            "draw_rate": 24.8,
+            "loss_rate": 17.8,
+            "ev_home": -0.099,
+            "ev_draw": 0.176,
+            "ev_away": -0.192,
             "lambda_h": 1.79,
             "lambda_a": 0.96,
             "golden_scores": [
@@ -748,13 +1746,20 @@
             "tier_title": "双选防冷格局",
             "smart_pick": "主胜",
             "smart_type": "SINGLE",
-            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。"
+            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。",
+            "params_source": "adaptive",
+            "active_params": {
+              "odds_tol_scale": 1.05,
+              "trap_high_upset": 0.43,
+              "trap_tight_upset": 0.45,
+              "single_threshold": 0.54
+            }
           },
           "consensus": "",
           "dossier": {
-            "league_rank": "本场为传统足彩14场赛事（西甲）：巴萨坐镇主场迎战皇马。14年历史同赔库共匹配到 10136 场相似欧赔结构样本，历史真实打出分布为主胜 57.7% · 平局 24.6% · 客胜 17.7%。",
+            "league_rank": "本场为传统足彩14场赛事（西甲）：巴萨坐镇主场迎战皇马。14年历史同赔库共匹配到 11070 场相似欧赔结构样本，历史真实打出分布为主胜 57.4% · 平局 24.8% · 客胜 17.8%。",
             "conflict": "泊松进攻期望参数：主队 λ=1.79 vs 客队 λ=0.96。历史同赔高频比分依次聚焦 1-0 / 2-1 / 2-0，整体盘面归属【双选防冷格局】（★★★☆☆）。",
-            "market_depth": "百家平均欧赔开出 1.57 / 4.74 / 4.55，三项期望回报（EV）分别为主胜 -0.094、平局 +0.166、客胜 -0.196。盘面诊断：盘面处于正常期望区间。",
+            "market_depth": "百家平均欧赔开出 1.57 / 4.74 / 4.55，三项期望回报（EV）分别为主胜 -0.099、平局 +0.176、客胜 -0.192。盘面诊断：盘面处于正常期望区间。",
             "decision_guide": "传足选号方案：核心首选【主胜(3)】，次选防冷补【平局(1)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
           }
         },
@@ -785,33 +1790,39 @@
           "result_text": "首选命中",
           "quant_factors": {
             "market": "had",
-            "samples": 9086,
-            "win_rate": 62.1,
-            "draw_rate": 23.0,
-            "loss_rate": 14.9,
-            "ev_home": -0.125,
-            "ev_draw": 0.159,
-            "ev_away": -0.058,
-            "lambda_h": 1.96,
-            "lambda_a": 0.91,
+            "samples": 110,
+            "win_rate": 29.1,
+            "draw_rate": 61.8,
+            "loss_rate": 9.1,
+            "ev_home": -0.59,
+            "ev_draw": 2.116,
+            "ev_away": -0.426,
+            "lambda_h": 2.13,
+            "lambda_a": 1.65,
             "golden_scores": [
-              "1-0",
-              "2-0",
-              "2-1"
+              "2-2",
+              "1-1"
             ],
-            "trap_level": "NORMAL",
-            "trap_warning": "盘面处于正常期望区间",
-            "stars": "★★★☆☆",
-            "tier_title": "双选防冷格局",
-            "smart_pick": "主胜",
+            "trap_level": "HIGH_TRAP",
+            "trap_warning": "🚨 大热诱盘预警：历史同赔下冷门打出率高达 70%，谨防豪门翻车",
+            "stars": "★★☆☆☆",
+            "tier_title": "深水博冷区间",
+            "smart_pick": "平局",
             "smart_type": "SINGLE",
-            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。"
+            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。",
+            "params_source": "adaptive",
+            "active_params": {
+              "odds_tol_scale": 1.05,
+              "trap_high_upset": 0.43,
+              "trap_tight_upset": 0.45,
+              "single_threshold": 0.54
+            }
           },
           "consensus": "",
           "dossier": {
-            "league_rank": "本场为传统足彩14场赛事（法甲）：日尔曼坐镇主场迎战里昂。14年历史同赔库共匹配到 9086 场相似欧赔结构样本，历史真实打出分布为主胜 62.1% · 平局 23.0% · 客胜 14.9%。",
-            "conflict": "泊松进攻期望参数：主队 λ=1.96 vs 客队 λ=0.91。历史同赔高频比分依次聚焦 1-0 / 2-0 / 2-1，整体盘面归属【双选防冷格局】（★★★☆☆）。",
-            "market_depth": "百家平均欧赔开出 1.41 / 5.04 / 6.31，三项期望回报（EV）分别为主胜 -0.125、平局 +0.159、客胜 -0.058。盘面诊断：盘面处于正常期望区间。",
+            "league_rank": "本场为传统足彩14场赛事（法甲）：日尔曼坐镇主场迎战里昂。14年历史同赔库共匹配到 110 场相似欧赔结构样本，历史真实打出分布为主胜 29.1% · 平局 61.8% · 客胜 9.1%。",
+            "conflict": "泊松进攻期望参数：主队 λ=2.13 vs 客队 λ=1.65。历史同赔高频比分依次聚焦 2-2 / 1-1，整体盘面归属【深水博冷区间】（★★☆☆☆）。",
+            "market_depth": "百家平均欧赔开出 1.41 / 5.04 / 6.31，三项期望回报（EV）分别为主胜 -0.590、平局 +2.116、客胜 -0.426。盘面诊断：🚨 大热诱盘预警：历史同赔下冷门打出率高达 70%，谨防豪门翻车。",
             "decision_guide": "传足选号方案：核心首选【主胜(3)】，次选防冷补【平局(1)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
           }
         }
@@ -860,15 +1871,15 @@
           "result_text": "未中",
           "quant_factors": {
             "market": "had",
-            "samples": 2570,
+            "samples": 2898,
             "win_rate": 31.0,
-            "draw_rate": 25.9,
-            "loss_rate": 43.1,
-            "ev_home": -0.107,
-            "ev_draw": -0.116,
-            "ev_away": 0.012,
-            "lambda_h": 1.29,
-            "lambda_a": 1.55,
+            "draw_rate": 26.3,
+            "loss_rate": 42.7,
+            "ev_home": -0.108,
+            "ev_draw": -0.103,
+            "ev_away": 0.004,
+            "lambda_h": 1.27,
+            "lambda_a": 1.52,
             "golden_scores": [
               "1-2",
               "0-1",
@@ -880,13 +1891,20 @@
             "tier_title": "高确定性稳胆",
             "smart_pick": "客胜/防平",
             "smart_type": "DOUBLE",
-            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。"
+            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。",
+            "params_source": "adaptive",
+            "active_params": {
+              "odds_tol_scale": 1.05,
+              "trap_high_upset": 0.43,
+              "trap_tight_upset": 0.45,
+              "single_threshold": 0.54
+            }
           },
           "consensus": "",
           "dossier": {
-            "league_rank": "本场为传统足彩14场赛事（英超）：伊普斯坐镇主场迎战诺丁汉。14年历史同赔库共匹配到 2570 场相似欧赔结构样本，历史真实打出分布为主胜 31.0% · 平局 25.9% · 客胜 43.1%。",
-            "conflict": "泊松进攻期望参数：主队 λ=1.29 vs 客队 λ=1.55。历史同赔高频比分依次聚焦 1-2 / 0-1 / 0-2，整体盘面归属【高确定性稳胆】（★★★★☆）。",
-            "market_depth": "百家平均欧赔开出 2.88 / 3.41 / 2.35，三项期望回报（EV）分别为主胜 -0.107、平局 -0.116、客胜 +0.012。盘面诊断：盘面处于正常期望区间。",
+            "league_rank": "本场为传统足彩14场赛事（英超）：伊普斯坐镇主场迎战诺丁汉。14年历史同赔库共匹配到 2898 场相似欧赔结构样本，历史真实打出分布为主胜 31.0% · 平局 26.3% · 客胜 42.7%。",
+            "conflict": "泊松进攻期望参数：主队 λ=1.27 vs 客队 λ=1.52。历史同赔高频比分依次聚焦 1-2 / 0-1 / 0-2，整体盘面归属【高确定性稳胆】（★★★★☆）。",
+            "market_depth": "百家平均欧赔开出 2.88 / 3.41 / 2.35，三项期望回报（EV）分别为主胜 -0.108、平局 -0.103、客胜 +0.004。盘面诊断：盘面处于正常期望区间。",
             "decision_guide": "传足选号方案：核心首选【客胜(0)】（单挑作胆），🚨大冷预警留意【主胜(3)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
           }
         },
@@ -917,15 +1935,15 @@
           "result_text": "首选命中",
           "quant_factors": {
             "market": "had",
-            "samples": 196,
-            "win_rate": 22.4,
-            "draw_rate": 22.4,
-            "loss_rate": 55.1,
-            "ev_home": -0.008,
-            "ev_draw": -0.073,
-            "ev_away": -0.091,
+            "samples": 199,
+            "win_rate": 22.1,
+            "draw_rate": 23.1,
+            "loss_rate": 54.8,
+            "ev_home": -0.023,
+            "ev_draw": -0.045,
+            "ev_away": -0.096,
             "lambda_h": 1.1,
-            "lambda_a": 1.9,
+            "lambda_a": 1.89,
             "golden_scores": [
               "0-2",
               "1-2",
@@ -937,13 +1955,20 @@
             "tier_title": "双选防冷格局",
             "smart_pick": "客胜",
             "smart_type": "SINGLE",
-            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。"
+            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。",
+            "params_source": "adaptive",
+            "active_params": {
+              "odds_tol_scale": 1.05,
+              "trap_high_upset": 0.43,
+              "trap_tight_upset": 0.45,
+              "single_threshold": 0.54
+            }
           },
           "consensus": "",
           "dossier": {
-            "league_rank": "本场为传统足彩14场赛事（英冠）：博尔顿坐镇主场迎战米德尔。14年历史同赔库共匹配到 196 场相似欧赔结构样本，历史真实打出分布为主胜 22.4% · 平局 22.4% · 客胜 55.1%。",
-            "conflict": "泊松进攻期望参数：主队 λ=1.1 vs 客队 λ=1.9。历史同赔高频比分依次聚焦 0-2 / 1-2 / 0-1，整体盘面归属【双选防冷格局】（★★★☆☆）。",
-            "market_depth": "百家平均欧赔开出 4.42 / 4.13 / 1.65，三项期望回报（EV）分别为主胜 -0.008、平局 -0.073、客胜 -0.091。盘面诊断：盘面处于正常期望区间。",
+            "league_rank": "本场为传统足彩14场赛事（英冠）：博尔顿坐镇主场迎战米德尔。14年历史同赔库共匹配到 199 场相似欧赔结构样本，历史真实打出分布为主胜 22.1% · 平局 23.1% · 客胜 54.8%。",
+            "conflict": "泊松进攻期望参数：主队 λ=1.1 vs 客队 λ=1.89。历史同赔高频比分依次聚焦 0-2 / 1-2 / 0-1，整体盘面归属【双选防冷格局】（★★★☆☆）。",
+            "market_depth": "百家平均欧赔开出 4.42 / 4.13 / 1.65，三项期望回报（EV）分别为主胜 -0.023、平局 -0.045、客胜 -0.096。盘面诊断：盘面处于正常期望区间。",
             "decision_guide": "传足选号方案：核心首选【客胜(0)】，次选防冷补【平局(1)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
           }
         },
@@ -974,14 +1999,14 @@
           "result_text": "未中",
           "quant_factors": {
             "market": "had",
-            "samples": 8863,
-            "win_rate": 63.7,
-            "draw_rate": 22.5,
-            "loss_rate": 13.8,
-            "ev_home": -0.121,
-            "ev_draw": 0.188,
-            "ev_away": -0.121,
-            "lambda_h": 2.01,
+            "samples": 9563,
+            "win_rate": 64.1,
+            "draw_rate": 22.3,
+            "loss_rate": 13.6,
+            "ev_home": -0.115,
+            "ev_draw": 0.178,
+            "ev_away": -0.134,
+            "lambda_h": 2.02,
             "lambda_a": 0.88,
             "golden_scores": [
               "1-0",
@@ -994,13 +2019,20 @@
             "tier_title": "双选防冷格局",
             "smart_pick": "主胜",
             "smart_type": "SINGLE",
-            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。"
+            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。",
+            "params_source": "adaptive",
+            "active_params": {
+              "odds_tol_scale": 1.05,
+              "trap_high_upset": 0.43,
+              "trap_tight_upset": 0.45,
+              "single_threshold": 0.54
+            }
           },
           "consensus": "",
           "dossier": {
-            "league_rank": "本场为传统足彩14场赛事（德甲）：斯图加坐镇主场迎战门兴。14年历史同赔库共匹配到 8863 场相似欧赔结构样本，历史真实打出分布为主胜 63.7% · 平局 22.5% · 客胜 13.8%。",
-            "conflict": "泊松进攻期望参数：主队 λ=2.01 vs 客队 λ=0.88。历史同赔高频比分依次聚焦 1-0 / 2-0 / 2-1，整体盘面归属【双选防冷格局】（★★★☆☆）。",
-            "market_depth": "百家平均欧赔开出 1.38 / 5.29 / 6.35，三项期望回报（EV）分别为主胜 -0.121、平局 +0.188、客胜 -0.121。盘面诊断：盘面处于正常期望区间。",
+            "league_rank": "本场为传统足彩14场赛事（德甲）：斯图加坐镇主场迎战门兴。14年历史同赔库共匹配到 9563 场相似欧赔结构样本，历史真实打出分布为主胜 64.1% · 平局 22.3% · 客胜 13.6%。",
+            "conflict": "泊松进攻期望参数：主队 λ=2.02 vs 客队 λ=0.88。历史同赔高频比分依次聚焦 1-0 / 2-0 / 2-1，整体盘面归属【双选防冷格局】（★★★☆☆）。",
+            "market_depth": "百家平均欧赔开出 1.38 / 5.29 / 6.35，三项期望回报（EV）分别为主胜 -0.115、平局 +0.178、客胜 -0.134。盘面诊断：盘面处于正常期望区间。",
             "decision_guide": "传足选号方案：核心首选【主胜(3)】，次选防冷补【平局(1)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
           }
         },
@@ -1031,13 +2063,13 @@
           "result_text": "未中",
           "quant_factors": {
             "market": "had",
-            "samples": 1135,
-            "win_rate": 31.3,
+            "samples": 1137,
+            "win_rate": 31.4,
             "draw_rate": 24.9,
-            "loss_rate": 43.8,
-            "ev_home": -0.14,
-            "ev_draw": -0.085,
-            "ev_away": -0.019,
+            "loss_rate": 43.7,
+            "ev_home": -0.137,
+            "ev_draw": -0.087,
+            "ev_away": -0.021,
             "lambda_h": 1.43,
             "lambda_a": 1.7,
             "golden_scores": [
@@ -1051,13 +2083,20 @@
             "tier_title": "高确定性稳胆",
             "smart_pick": "客胜/防平",
             "smart_type": "DOUBLE",
-            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。"
+            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。",
+            "params_source": "adaptive",
+            "active_params": {
+              "odds_tol_scale": 1.05,
+              "trap_high_upset": 0.43,
+              "trap_tight_upset": 0.45,
+              "single_threshold": 0.54
+            }
           },
           "consensus": "",
           "dossier": {
-            "league_rank": "本场为传统足彩14场赛事（德乙）：波鸿坐镇主场迎战沃尔夫。14年历史同赔库共匹配到 1135 场相似欧赔结构样本，历史真实打出分布为主胜 31.3% · 平局 24.9% · 客胜 43.8%。",
+            "league_rank": "本场为传统足彩14场赛事（德乙）：波鸿坐镇主场迎战沃尔夫。14年历史同赔库共匹配到 1137 场相似欧赔结构样本，历史真实打出分布为主胜 31.4% · 平局 24.9% · 客胜 43.7%。",
             "conflict": "泊松进攻期望参数：主队 λ=1.43 vs 客队 λ=1.7。历史同赔高频比分依次聚焦 1-2 / 0-1 / 0-2，整体盘面归属【高确定性稳胆】（★★★★☆）。",
-            "market_depth": "百家平均欧赔开出 2.75 / 3.67 / 2.24，三项期望回报（EV）分别为主胜 -0.140、平局 -0.085、客胜 -0.019。盘面诊断：盘面处于正常期望区间。",
+            "market_depth": "百家平均欧赔开出 2.75 / 3.67 / 2.24，三项期望回报（EV）分别为主胜 -0.137、平局 -0.087、客胜 -0.021。盘面诊断：盘面处于正常期望区间。",
             "decision_guide": "传足选号方案：核心首选【客胜(0)】（单挑作胆），🚨大冷预警留意【主胜(3)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
           }
         },
@@ -1088,15 +2127,15 @@
           "result_text": "未中",
           "quant_factors": {
             "market": "had",
-            "samples": 1658,
-            "win_rate": 32.0,
+            "samples": 1980,
+            "win_rate": 31.7,
             "draw_rate": 24.8,
-            "loss_rate": 43.2,
-            "ev_home": -0.094,
-            "ev_draw": -0.118,
-            "ev_away": -0.046,
-            "lambda_h": 1.37,
-            "lambda_a": 1.62,
+            "loss_rate": 43.5,
+            "ev_home": -0.104,
+            "ev_draw": -0.115,
+            "ev_away": -0.039,
+            "lambda_h": 1.34,
+            "lambda_a": 1.61,
             "golden_scores": [
               "1-2",
               "0-1",
@@ -1108,13 +2147,20 @@
             "tier_title": "高确定性稳胆",
             "smart_pick": "客胜/防平",
             "smart_type": "DOUBLE",
-            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。"
+            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。",
+            "params_source": "adaptive",
+            "active_params": {
+              "odds_tol_scale": 1.05,
+              "trap_high_upset": 0.43,
+              "trap_tight_upset": 0.45,
+              "single_threshold": 0.54
+            }
           },
           "consensus": "",
           "dossier": {
-            "league_rank": "本场为传统足彩14场赛事（德乙）：达姆施坐镇主场迎战圣保利。14年历史同赔库共匹配到 1658 场相似欧赔结构样本，历史真实打出分布为主胜 32.0% · 平局 24.8% · 客胜 43.2%。",
-            "conflict": "泊松进攻期望参数：主队 λ=1.37 vs 客队 λ=1.62。历史同赔高频比分依次聚焦 1-2 / 0-1 / 0-2，整体盘面归属【高确定性稳胆】（★★★★☆）。",
-            "market_depth": "百家平均欧赔开出 2.83 / 3.56 / 2.21，三项期望回报（EV）分别为主胜 -0.094、平局 -0.118、客胜 -0.046。盘面诊断：盘面处于正常期望区间。",
+            "league_rank": "本场为传统足彩14场赛事（德乙）：达姆施坐镇主场迎战圣保利。14年历史同赔库共匹配到 1980 场相似欧赔结构样本，历史真实打出分布为主胜 31.7% · 平局 24.8% · 客胜 43.5%。",
+            "conflict": "泊松进攻期望参数：主队 λ=1.34 vs 客队 λ=1.61。历史同赔高频比分依次聚焦 1-2 / 0-1 / 0-2，整体盘面归属【高确定性稳胆】（★★★★☆）。",
+            "market_depth": "百家平均欧赔开出 2.83 / 3.56 / 2.21，三项期望回报（EV）分别为主胜 -0.104、平局 -0.115、客胜 -0.039。盘面诊断：盘面处于正常期望区间。",
             "decision_guide": "传足选号方案：核心首选【客胜(0)】（单挑作胆），🚨大冷预警留意【主胜(3)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
           }
         },
@@ -1145,13 +2191,13 @@
           "result_text": "首选命中",
           "quant_factors": {
             "market": "had",
-            "samples": 5456,
+            "samples": 5595,
             "win_rate": 41.2,
             "draw_rate": 27.8,
             "loss_rate": 31.0,
             "ev_home": -0.139,
-            "ev_draw": -0.06,
-            "ev_away": 0.05,
+            "ev_draw": -0.061,
+            "ev_away": 0.051,
             "lambda_h": 1.45,
             "lambda_a": 1.22,
             "golden_scores": [
@@ -1165,13 +2211,20 @@
             "tier_title": "高确定性稳胆",
             "smart_pick": "主胜/防平",
             "smart_type": "DOUBLE",
-            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。"
+            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。",
+            "params_source": "adaptive",
+            "active_params": {
+              "odds_tol_scale": 1.05,
+              "trap_high_upset": 0.43,
+              "trap_tight_upset": 0.45,
+              "single_threshold": 0.54
+            }
           },
           "consensus": "",
           "dossier": {
-            "league_rank": "本场为传统足彩14场赛事（意甲）：都灵坐镇主场迎战蒙扎。14年历史同赔库共匹配到 5456 场相似欧赔结构样本，历史真实打出分布为主胜 41.2% · 平局 27.8% · 客胜 31.0%。",
+            "league_rank": "本场为传统足彩14场赛事（意甲）：都灵坐镇主场迎战蒙扎。14年历史同赔库共匹配到 5595 场相似欧赔结构样本，历史真实打出分布为主胜 41.2% · 平局 27.8% · 客胜 31.0%。",
             "conflict": "泊松进攻期望参数：主队 λ=1.45 vs 客队 λ=1.22。历史同赔高频比分依次聚焦 1-0 / 2-1 / 2-0，整体盘面归属【高确定性稳胆】（★★★★☆）。",
-            "market_depth": "百家平均欧赔开出 2.09 / 3.38 / 3.39，三项期望回报（EV）分别为主胜 -0.139、平局 -0.060、客胜 +0.050。盘面诊断：盘面处于正常期望区间。",
+            "market_depth": "百家平均欧赔开出 2.09 / 3.38 / 3.39，三项期望回报（EV）分别为主胜 -0.139、平局 -0.061、客胜 +0.051。盘面诊断：盘面处于正常期望区间。",
             "decision_guide": "传足选号方案：核心首选【主胜(3)】（单挑作胆）。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
           }
         },
@@ -1202,15 +2255,15 @@
           "result_text": "次选命中",
           "quant_factors": {
             "market": "had",
-            "samples": 6379,
-            "win_rate": 50.7,
-            "draw_rate": 26.6,
-            "loss_rate": 22.7,
-            "ev_home": -0.102,
-            "ev_draw": -0.057,
-            "ev_away": 0.03,
+            "samples": 6928,
+            "win_rate": 50.5,
+            "draw_rate": 26.4,
+            "loss_rate": 23.1,
+            "ev_home": -0.106,
+            "ev_draw": -0.061,
+            "ev_away": 0.044,
             "lambda_h": 1.67,
-            "lambda_a": 1.08,
+            "lambda_a": 1.09,
             "golden_scores": [
               "1-0",
               "2-1",
@@ -1222,13 +2275,20 @@
             "tier_title": "双选防冷格局",
             "smart_pick": "主胜/防平",
             "smart_type": "DOUBLE",
-            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。"
+            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。",
+            "params_source": "adaptive",
+            "active_params": {
+              "odds_tol_scale": 1.05,
+              "trap_high_upset": 0.43,
+              "trap_tight_upset": 0.45,
+              "single_threshold": 0.54
+            }
           },
           "consensus": "",
           "dossier": {
-            "league_rank": "本场为传统足彩14场赛事（西甲）：阿拉维坐镇主场迎战马拉加。14年历史同赔库共匹配到 6379 场相似欧赔结构样本，历史真实打出分布为主胜 50.7% · 平局 26.6% · 客胜 22.7%。",
-            "conflict": "泊松进攻期望参数：主队 λ=1.67 vs 客队 λ=1.08。历史同赔高频比分依次聚焦 1-0 / 2-1 / 2-0，整体盘面归属【双选防冷格局】（★★★☆☆）。",
-            "market_depth": "百家平均欧赔开出 1.77 / 3.55 / 4.53，三项期望回报（EV）分别为主胜 -0.102、平局 -0.057、客胜 +0.030。盘面诊断：盘面处于正常期望区间。",
+            "league_rank": "本场为传统足彩14场赛事（西甲）：阿拉维坐镇主场迎战马拉加。14年历史同赔库共匹配到 6928 场相似欧赔结构样本，历史真实打出分布为主胜 50.5% · 平局 26.4% · 客胜 23.1%。",
+            "conflict": "泊松进攻期望参数：主队 λ=1.67 vs 客队 λ=1.09。历史同赔高频比分依次聚焦 1-0 / 2-1 / 2-0，整体盘面归属【双选防冷格局】（★★★☆☆）。",
+            "market_depth": "百家平均欧赔开出 1.77 / 3.55 / 4.53，三项期望回报（EV）分别为主胜 -0.106、平局 -0.061、客胜 +0.044。盘面诊断：盘面处于正常期望区间。",
             "decision_guide": "传足选号方案：核心首选【主胜(3)】，次选防冷补【平局(1)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
           }
         },
@@ -1259,13 +2319,13 @@
           "result_text": "未中",
           "quant_factors": {
             "market": "had",
-            "samples": 3453,
-            "win_rate": 40.0,
-            "draw_rate": 26.7,
-            "loss_rate": 33.3,
-            "ev_home": -0.131,
-            "ev_draw": -0.065,
-            "ev_away": 0.025,
+            "samples": 3785,
+            "win_rate": 39.8,
+            "draw_rate": 26.9,
+            "loss_rate": 33.2,
+            "ev_home": -0.136,
+            "ev_draw": -0.057,
+            "ev_away": 0.024,
             "lambda_h": 1.48,
             "lambda_a": 1.31,
             "golden_scores": [
@@ -1279,13 +2339,20 @@
             "tier_title": "高确定性稳胆",
             "smart_pick": "主胜/防平",
             "smart_type": "DOUBLE",
-            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。"
+            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。",
+            "params_source": "adaptive",
+            "active_params": {
+              "odds_tol_scale": 1.05,
+              "trap_high_upset": 0.43,
+              "trap_tight_upset": 0.45,
+              "single_threshold": 0.54
+            }
           },
           "consensus": "",
           "dossier": {
-            "league_rank": "本场为传统足彩14场赛事（法甲）：布雷斯坐镇主场迎战尼斯。14年历史同赔库共匹配到 3453 场相似欧赔结构样本，历史真实打出分布为主胜 40.0% · 平局 26.7% · 客胜 33.3%。",
+            "league_rank": "本场为传统足彩14场赛事（法甲）：布雷斯坐镇主场迎战尼斯。14年历史同赔库共匹配到 3785 场相似欧赔结构样本，历史真实打出分布为主胜 39.8% · 平局 26.9% · 客胜 33.2%。",
             "conflict": "泊松进攻期望参数：主队 λ=1.48 vs 客队 λ=1.31。历史同赔高频比分依次聚焦 1-0 / 2-1 / 2-0，整体盘面归属【高确定性稳胆】（★★★★☆）。",
-            "market_depth": "百家平均欧赔开出 2.17 / 3.50 / 3.08，三项期望回报（EV）分别为主胜 -0.131、平局 -0.065、客胜 +0.025。盘面诊断：盘面处于正常期望区间。",
+            "market_depth": "百家平均欧赔开出 2.17 / 3.50 / 3.08，三项期望回报（EV）分别为主胜 -0.136、平局 -0.057、客胜 +0.024。盘面诊断：盘面处于正常期望区间。",
             "decision_guide": "传足选号方案：核心首选【主胜(3)】（单挑作胆）。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
           }
         },
@@ -1316,13 +2383,13 @@
           "result_text": "未中",
           "quant_factors": {
             "market": "had",
-            "samples": 2560,
-            "win_rate": 32.5,
+            "samples": 2581,
+            "win_rate": 32.4,
             "draw_rate": 25.9,
-            "loss_rate": 41.6,
-            "ev_home": -0.126,
-            "ev_draw": -0.1,
-            "ev_away": -0.04,
+            "loss_rate": 41.7,
+            "ev_home": -0.13,
+            "ev_draw": -0.101,
+            "ev_away": -0.036,
             "lambda_h": 1.36,
             "lambda_a": 1.54,
             "golden_scores": [
@@ -1336,13 +2403,20 @@
             "tier_title": "高确定性稳胆",
             "smart_pick": "客胜/防平",
             "smart_type": "DOUBLE",
-            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。"
+            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。",
+            "params_source": "adaptive",
+            "active_params": {
+              "odds_tol_scale": 1.05,
+              "trap_high_upset": 0.43,
+              "trap_tight_upset": 0.45,
+              "single_threshold": 0.54
+            }
           },
           "consensus": "",
           "dossier": {
-            "league_rank": "本场为传统足彩14场赛事（法乙）：敦刻尔克坐镇主场迎战梅斯。14年历史同赔库共匹配到 2560 场相似欧赔结构样本，历史真实打出分布为主胜 32.5% · 平局 25.9% · 客胜 41.6%。",
+            "league_rank": "本场为传统足彩14场赛事（法乙）：敦刻尔克坐镇主场迎战梅斯。14年历史同赔库共匹配到 2581 场相似欧赔结构样本，历史真实打出分布为主胜 32.4% · 平局 25.9% · 客胜 41.7%。",
             "conflict": "泊松进攻期望参数：主队 λ=1.36 vs 客队 λ=1.54。历史同赔高频比分依次聚焦 1-2 / 0-1 / 0-2，整体盘面归属【高确定性稳胆】（★★★★☆）。",
-            "market_depth": "百家平均欧赔开出 2.69 / 3.47 / 2.31，三项期望回报（EV）分别为主胜 -0.126、平局 -0.100、客胜 -0.040。盘面诊断：盘面处于正常期望区间。",
+            "market_depth": "百家平均欧赔开出 2.69 / 3.47 / 2.31，三项期望回报（EV）分别为主胜 -0.130、平局 -0.101、客胜 -0.036。盘面诊断：盘面处于正常期望区间。",
             "decision_guide": "传足选号方案：核心首选【客胜(0)】（单挑作胆），🚨大冷预警留意【主胜(3)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
           }
         },
@@ -1373,33 +2447,40 @@
           "result_text": "首选命中",
           "quant_factors": {
             "market": "had",
-            "samples": 6883,
-            "win_rate": 51.0,
-            "draw_rate": 26.9,
+            "samples": 8391,
+            "win_rate": 50.8,
+            "draw_rate": 27.1,
             "loss_rate": 22.1,
-            "ev_home": -0.107,
-            "ev_draw": -0.073,
-            "ev_away": -0.042,
-            "lambda_h": 1.65,
-            "lambda_a": 1.04,
+            "ev_home": -0.11,
+            "ev_draw": -0.066,
+            "ev_away": -0.043,
+            "lambda_h": 1.62,
+            "lambda_a": 1.03,
             "golden_scores": [
               "1-0",
               "2-1",
               "2-0"
             ],
             "trap_level": "CAUTION",
-            "trap_warning": "⚠️ 胶着震荡预警：历史胜率仅 51%，防平局闷平打出",
+            "trap_warning": "⚠️ 胶着震荡预警：历史胜率仅 50%，防平局闷平打出",
             "stars": "★★★☆☆",
             "tier_title": "双选防冷格局",
             "smart_pick": "主胜/防平",
             "smart_type": "DOUBLE",
-            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。"
+            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。",
+            "params_source": "adaptive",
+            "active_params": {
+              "odds_tol_scale": 1.05,
+              "trap_high_upset": 0.43,
+              "trap_tight_upset": 0.45,
+              "single_threshold": 0.54
+            }
           },
           "consensus": "",
           "dossier": {
-            "league_rank": "本场为传统足彩14场赛事（法乙）：波城FC坐镇主场迎战格勒诺。14年历史同赔库共匹配到 6883 场相似欧赔结构样本，历史真实打出分布为主胜 51.0% · 平局 26.9% · 客胜 22.1%。",
-            "conflict": "泊松进攻期望参数：主队 λ=1.65 vs 客队 λ=1.04。历史同赔高频比分依次聚焦 1-0 / 2-1 / 2-0，整体盘面归属【双选防冷格局】（★★★☆☆）。",
-            "market_depth": "百家平均欧赔开出 1.75 / 3.45 / 4.33，三项期望回报（EV）分别为主胜 -0.107、平局 -0.073、客胜 -0.042。盘面诊断：⚠️ 胶着震荡预警：历史胜率仅 51%，防平局闷平打出。",
+            "league_rank": "本场为传统足彩14场赛事（法乙）：波城FC坐镇主场迎战格勒诺。14年历史同赔库共匹配到 8391 场相似欧赔结构样本，历史真实打出分布为主胜 50.8% · 平局 27.1% · 客胜 22.1%。",
+            "conflict": "泊松进攻期望参数：主队 λ=1.62 vs 客队 λ=1.03。历史同赔高频比分依次聚焦 1-0 / 2-1 / 2-0，整体盘面归属【双选防冷格局】（★★★☆☆）。",
+            "market_depth": "百家平均欧赔开出 1.75 / 3.45 / 4.33，三项期望回报（EV）分别为主胜 -0.110、平局 -0.066、客胜 -0.043。盘面诊断：⚠️ 胶着震荡预警：历史胜率仅 50%，防平局闷平打出。",
             "decision_guide": "传足选号方案：核心首选【主胜(3)】，次选防冷补【平局(1)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
           }
         },
@@ -1430,15 +2511,15 @@
           "result_text": "首选命中",
           "quant_factors": {
             "market": "had",
-            "samples": 378,
-            "win_rate": 63.8,
-            "draw_rate": 19.8,
-            "loss_rate": 16.4,
-            "ev_home": -0.031,
-            "ev_draw": -0.121,
-            "ev_away": -0.183,
-            "lambda_h": 2.2,
-            "lambda_a": 1.11,
+            "samples": 461,
+            "win_rate": 62.7,
+            "draw_rate": 18.4,
+            "loss_rate": 18.9,
+            "ev_home": -0.047,
+            "ev_draw": -0.183,
+            "ev_away": -0.06,
+            "lambda_h": 2.19,
+            "lambda_a": 1.16,
             "golden_scores": [
               "2-1",
               "2-0",
@@ -1450,13 +2531,20 @@
             "tier_title": "高确定性稳胆",
             "smart_pick": "主胜",
             "smart_type": "SINGLE",
-            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。"
+            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。",
+            "params_source": "adaptive",
+            "active_params": {
+              "odds_tol_scale": 1.05,
+              "trap_high_upset": 0.43,
+              "trap_tight_upset": 0.45,
+              "single_threshold": 0.54
+            }
           },
           "consensus": "",
           "dossier": {
-            "league_rank": "本场为传统足彩14场赛事（荷甲）：前进鹰坐镇主场迎战特尔斯。14年历史同赔库共匹配到 378 场相似欧赔结构样本，历史真实打出分布为主胜 63.8% · 平局 19.8% · 客胜 16.4%。",
-            "conflict": "泊松进攻期望参数：主队 λ=2.2 vs 客队 λ=1.11。历史同赔高频比分依次聚焦 2-1 / 2-0 / 1-0，整体盘面归属【高确定性稳胆】（★★★★☆）。",
-            "market_depth": "百家平均欧赔开出 1.52 / 4.43 / 4.98，三项期望回报（EV）分别为主胜 -0.031、平局 -0.121、客胜 -0.183。盘面诊断：盘面处于正常期望区间。",
+            "league_rank": "本场为传统足彩14场赛事（荷甲）：前进鹰坐镇主场迎战特尔斯。14年历史同赔库共匹配到 461 场相似欧赔结构样本，历史真实打出分布为主胜 62.7% · 平局 18.4% · 客胜 18.9%。",
+            "conflict": "泊松进攻期望参数：主队 λ=2.19 vs 客队 λ=1.16。历史同赔高频比分依次聚焦 2-1 / 2-0 / 1-0，整体盘面归属【高确定性稳胆】（★★★★☆）。",
+            "market_depth": "百家平均欧赔开出 1.52 / 4.43 / 4.98，三项期望回报（EV）分别为主胜 -0.047、平局 -0.183、客胜 -0.060。盘面诊断：盘面处于正常期望区间。",
             "decision_guide": "传足选号方案：核心首选【主胜(3)】（单挑作胆）。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
           }
         },
@@ -1487,15 +2575,15 @@
           "result_text": "首选命中",
           "quant_factors": {
             "market": "had",
-            "samples": 4309,
-            "win_rate": 56.9,
-            "draw_rate": 24.6,
-            "loss_rate": 18.6,
-            "ev_home": -0.09,
-            "ev_draw": -0.071,
-            "ev_away": 0.004,
+            "samples": 4698,
+            "win_rate": 57.2,
+            "draw_rate": 24.5,
+            "loss_rate": 18.3,
+            "ev_home": -0.085,
+            "ev_draw": -0.074,
+            "ev_away": -0.009,
             "lambda_h": 1.83,
-            "lambda_a": 1.03,
+            "lambda_a": 1.02,
             "golden_scores": [
               "1-0",
               "2-1",
@@ -1507,13 +2595,20 @@
             "tier_title": "双选防冷格局",
             "smart_pick": "主胜",
             "smart_type": "SINGLE",
-            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。"
+            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。",
+            "params_source": "adaptive",
+            "active_params": {
+              "odds_tol_scale": 1.05,
+              "trap_high_upset": 0.43,
+              "trap_tight_upset": 0.45,
+              "single_threshold": 0.54
+            }
           },
           "consensus": "",
           "dossier": {
-            "league_rank": "本场为传统足彩14场赛事（葡超）：吉马良坐镇主场迎战马里迪。14年历史同赔库共匹配到 4309 场相似欧赔结构样本，历史真实打出分布为主胜 56.9% · 平局 24.6% · 客胜 18.6%。",
-            "conflict": "泊松进攻期望参数：主队 λ=1.83 vs 客队 λ=1.03。历史同赔高频比分依次聚焦 1-0 / 2-1 / 2-0，整体盘面归属【双选防冷格局】（★★★☆☆）。",
-            "market_depth": "百家平均欧赔开出 1.60 / 3.78 / 5.41，三项期望回报（EV）分别为主胜 -0.090、平局 -0.071、客胜 +0.004。盘面诊断：盘面处于正常期望区间。",
+            "league_rank": "本场为传统足彩14场赛事（葡超）：吉马良坐镇主场迎战马里迪。14年历史同赔库共匹配到 4698 场相似欧赔结构样本，历史真实打出分布为主胜 57.2% · 平局 24.5% · 客胜 18.3%。",
+            "conflict": "泊松进攻期望参数：主队 λ=1.83 vs 客队 λ=1.02。历史同赔高频比分依次聚焦 1-0 / 2-1 / 2-0，整体盘面归属【双选防冷格局】（★★★☆☆）。",
+            "market_depth": "百家平均欧赔开出 1.60 / 3.78 / 5.41，三项期望回报（EV）分别为主胜 -0.085、平局 -0.074、客胜 -0.009。盘面诊断：盘面处于正常期望区间。",
             "decision_guide": "传足选号方案：核心首选【主胜(3)】，次选防冷补【平局(1)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
           }
         },
@@ -1544,15 +2639,15 @@
           "result_text": "未中",
           "quant_factors": {
             "market": "had",
-            "samples": 4243,
-            "win_rate": 39.6,
+            "samples": 4749,
+            "win_rate": 39.9,
             "draw_rate": 28.1,
-            "loss_rate": 32.3,
-            "ev_home": -0.157,
-            "ev_draw": -0.034,
-            "ev_away": -0.008,
+            "loss_rate": 32.0,
+            "ev_home": -0.15,
+            "ev_draw": -0.033,
+            "ev_away": -0.019,
             "lambda_h": 1.45,
-            "lambda_a": 1.27,
+            "lambda_a": 1.26,
             "golden_scores": [
               "1-0",
               "2-1",
@@ -1564,13 +2659,20 @@
             "tier_title": "高确定性稳胆",
             "smart_pick": "主胜/防平",
             "smart_type": "DOUBLE",
-            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。"
+            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。",
+            "params_source": "adaptive",
+            "active_params": {
+              "odds_tol_scale": 1.05,
+              "trap_high_upset": 0.43,
+              "trap_tight_upset": 0.45,
+              "single_threshold": 0.54
+            }
           },
           "consensus": "",
           "dossier": {
-            "league_rank": "本场为传统足彩14场赛事（瑞典超）：埃尔夫坐镇主场迎战马尔默。14年历史同赔库共匹配到 4243 场相似欧赔结构样本，历史真实打出分布为主胜 39.6% · 平局 28.1% · 客胜 32.3%。",
-            "conflict": "泊松进攻期望参数：主队 λ=1.45 vs 客队 λ=1.27。历史同赔高频比分依次聚焦 1-0 / 2-1 / 2-0，整体盘面归属【高确定性稳胆】（★★★★☆）。",
-            "market_depth": "百家平均欧赔开出 2.13 / 3.44 / 3.07，三项期望回报（EV）分别为主胜 -0.157、平局 -0.034、客胜 -0.008。盘面诊断：盘面处于正常期望区间。",
+            "league_rank": "本场为传统足彩14场赛事（瑞典超）：埃尔夫坐镇主场迎战马尔默。14年历史同赔库共匹配到 4749 场相似欧赔结构样本，历史真实打出分布为主胜 39.9% · 平局 28.1% · 客胜 32.0%。",
+            "conflict": "泊松进攻期望参数：主队 λ=1.45 vs 客队 λ=1.26。历史同赔高频比分依次聚焦 1-0 / 2-1 / 2-0，整体盘面归属【高确定性稳胆】（★★★★☆）。",
+            "market_depth": "百家平均欧赔开出 2.13 / 3.44 / 3.07，三项期望回报（EV）分别为主胜 -0.150、平局 -0.033、客胜 -0.019。盘面诊断：盘面处于正常期望区间。",
             "decision_guide": "传足选号方案：核心首选【主胜(3)】（单挑作胆），🚨大冷预警留意【客胜(0)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
           }
         },
@@ -1601,33 +2703,40 @@
           "result_text": "未中",
           "quant_factors": {
             "market": "had",
-            "samples": 2067,
-            "win_rate": 53.8,
-            "draw_rate": 24.8,
+            "samples": 2667,
+            "win_rate": 53.9,
+            "draw_rate": 24.6,
             "loss_rate": 21.4,
-            "ev_home": -0.095,
-            "ev_draw": -0.044,
-            "ev_away": -0.078,
+            "ev_home": -0.094,
+            "ev_draw": -0.049,
+            "ev_away": -0.076,
             "lambda_h": 1.8,
-            "lambda_a": 1.11,
+            "lambda_a": 1.09,
             "golden_scores": [
-              "1-0",
               "2-1",
+              "1-0",
               "2-0"
             ],
             "trap_level": "CAUTION",
             "trap_warning": "⚠️ 胶着震荡预警：历史胜率仅 53%，防平局闷平打出",
             "stars": "★★★☆☆",
             "tier_title": "双选防冷格局",
-            "smart_pick": "主胜",
-            "smart_type": "SINGLE",
-            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。"
+            "smart_pick": "主胜/防平",
+            "smart_type": "DOUBLE",
+            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。",
+            "params_source": "adaptive",
+            "active_params": {
+              "odds_tol_scale": 1.05,
+              "trap_high_upset": 0.43,
+              "trap_tight_upset": 0.45,
+              "single_threshold": 0.54
+            }
           },
           "consensus": "",
           "dossier": {
-            "league_rank": "本场为传统足彩14场赛事（瑞典超）：韦斯罗坐镇主场迎战哈尔姆。14年历史同赔库共匹配到 2067 场相似欧赔结构样本，历史真实打出分布为主胜 53.8% · 平局 24.8% · 客胜 21.4%。",
-            "conflict": "泊松进攻期望参数：主队 λ=1.8 vs 客队 λ=1.11。历史同赔高频比分依次聚焦 1-0 / 2-1 / 2-0，整体盘面归属【双选防冷格局】（★★★☆☆）。",
-            "market_depth": "百家平均欧赔开出 1.68 / 3.86 / 4.31，三项期望回报（EV）分别为主胜 -0.095、平局 -0.044、客胜 -0.078。盘面诊断：⚠️ 胶着震荡预警：历史胜率仅 53%，防平局闷平打出。",
+            "league_rank": "本场为传统足彩14场赛事（瑞典超）：韦斯罗坐镇主场迎战哈尔姆。14年历史同赔库共匹配到 2667 场相似欧赔结构样本，历史真实打出分布为主胜 53.9% · 平局 24.6% · 客胜 21.4%。",
+            "conflict": "泊松进攻期望参数：主队 λ=1.8 vs 客队 λ=1.09。历史同赔高频比分依次聚焦 2-1 / 1-0 / 2-0，整体盘面归属【双选防冷格局】（★★★☆☆）。",
+            "market_depth": "百家平均欧赔开出 1.68 / 3.86 / 4.31，三项期望回报（EV）分别为主胜 -0.094、平局 -0.049、客胜 -0.076。盘面诊断：⚠️ 胶着震荡预警：历史胜率仅 53%，防平局闷平打出。",
             "decision_guide": "传足选号方案：核心首选【主胜(3)】，次选防冷补【平局(1)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
           }
         }
@@ -1676,18 +2785,18 @@
           "result_text": "首选命中",
           "quant_factors": {
             "market": "had",
-            "samples": 205,
-            "win_rate": 15.6,
-            "draw_rate": 17.6,
-            "loss_rate": 66.8,
-            "ev_home": -0.149,
-            "ev_draw": -0.261,
-            "ev_away": 0.029,
-            "lambda_h": 0.96,
-            "lambda_a": 2.12,
+            "samples": 274,
+            "win_rate": 14.6,
+            "draw_rate": 17.2,
+            "loss_rate": 68.2,
+            "ev_home": -0.204,
+            "ev_draw": -0.278,
+            "ev_away": 0.051,
+            "lambda_h": 0.87,
+            "lambda_a": 2.06,
             "golden_scores": [
-              "1-2",
               "0-1",
+              "1-2",
               "0-3"
             ],
             "trap_level": "NORMAL",
@@ -1696,13 +2805,20 @@
             "tier_title": "高确定性稳胆",
             "smart_pick": "客胜",
             "smart_type": "SINGLE",
-            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。"
+            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。",
+            "params_source": "adaptive",
+            "active_params": {
+              "odds_tol_scale": 1.05,
+              "trap_high_upset": 0.43,
+              "trap_tight_upset": 0.45,
+              "single_threshold": 0.54
+            }
           },
           "consensus": "",
           "dossier": {
-            "league_rank": "本场为传统足彩14场赛事（欧罗巴）：亚拉腊坐镇主场迎战阿尔克。14年历史同赔库共匹配到 205 场相似欧赔结构样本，历史真实打出分布为主胜 15.6% · 平局 17.6% · 客胜 66.8%。",
-            "conflict": "泊松进攻期望参数：主队 λ=0.96 vs 客队 λ=2.12。历史同赔高频比分依次聚焦 1-2 / 0-1 / 0-3，整体盘面归属【高确定性稳胆】（★★★★☆）。",
-            "market_depth": "百家平均欧赔开出 5.45 / 4.21 / 1.54，三项期望回报（EV）分别为主胜 -0.149、平局 -0.261、客胜 +0.029。盘面诊断：盘面处于正常期望区间。",
+            "league_rank": "本场为传统足彩14场赛事（欧罗巴）：亚拉腊坐镇主场迎战阿尔克。14年历史同赔库共匹配到 274 场相似欧赔结构样本，历史真实打出分布为主胜 14.6% · 平局 17.2% · 客胜 68.2%。",
+            "conflict": "泊松进攻期望参数：主队 λ=0.87 vs 客队 λ=2.06。历史同赔高频比分依次聚焦 0-1 / 1-2 / 0-3，整体盘面归属【高确定性稳胆】（★★★★☆）。",
+            "market_depth": "百家平均欧赔开出 5.45 / 4.21 / 1.54，三项期望回报（EV）分别为主胜 -0.204、平局 -0.278、客胜 +0.051。盘面诊断：盘面处于正常期望区间。",
             "decision_guide": "传足选号方案：核心首选【客胜(0)】（单挑作胆）。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
           }
         },
@@ -1733,13 +2849,13 @@
           "result_text": "未中",
           "quant_factors": {
             "market": "had",
-            "samples": 2248,
-            "win_rate": 52.8,
+            "samples": 2295,
+            "win_rate": 52.7,
             "draw_rate": 24.1,
-            "loss_rate": 23.0,
-            "ev_home": -0.091,
-            "ev_draw": -0.06,
-            "ev_away": -0.018,
+            "loss_rate": 23.1,
+            "ev_home": -0.093,
+            "ev_draw": -0.059,
+            "ev_away": -0.014,
             "lambda_h": 1.83,
             "lambda_a": 1.17,
             "golden_scores": [
@@ -1751,15 +2867,22 @@
             "trap_warning": "⚠️ 胶着震荡预警：历史胜率仅 52%，防平局闷平打出",
             "stars": "★★★☆☆",
             "tier_title": "双选防冷格局",
-            "smart_pick": "主胜",
-            "smart_type": "SINGLE",
-            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。"
+            "smart_pick": "主胜/防平",
+            "smart_type": "DOUBLE",
+            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。",
+            "params_source": "adaptive",
+            "active_params": {
+              "odds_tol_scale": 1.05,
+              "trap_high_upset": 0.43,
+              "trap_tight_upset": 0.45,
+              "single_threshold": 0.54
+            }
           },
           "consensus": "",
           "dossier": {
-            "league_rank": "本场为传统足彩14场赛事（欧罗巴）：萨格勒坐镇主场迎战奈梅亨。14年历史同赔库共匹配到 2248 场相似欧赔结构样本，历史真实打出分布为主胜 52.8% · 平局 24.1% · 客胜 23.0%。",
+            "league_rank": "本场为传统足彩14场赛事（欧罗巴）：萨格勒坐镇主场迎战奈梅亨。14年历史同赔库共匹配到 2295 场相似欧赔结构样本，历史真实打出分布为主胜 52.7% · 平局 24.1% · 客胜 23.1%。",
             "conflict": "泊松进攻期望参数：主队 λ=1.83 vs 客队 λ=1.17。历史同赔高频比分依次聚焦 2-1 / 1-0 / 2-0，整体盘面归属【双选防冷格局】（★★★☆☆）。",
-            "market_depth": "百家平均欧赔开出 1.72 / 3.90 / 4.26，三项期望回报（EV）分别为主胜 -0.091、平局 -0.060、客胜 -0.018。盘面诊断：⚠️ 胶着震荡预警：历史胜率仅 52%，防平局闷平打出。",
+            "market_depth": "百家平均欧赔开出 1.72 / 3.90 / 4.26，三项期望回报（EV）分别为主胜 -0.093、平局 -0.059、客胜 -0.014。盘面诊断：⚠️ 胶着震荡预警：历史胜率仅 52%，防平局闷平打出。",
             "decision_guide": "传足选号方案：核心首选【主胜(3)】，次选防冷补【平局(1)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
           }
         },
@@ -1790,15 +2913,15 @@
           "result_text": "次选命中",
           "quant_factors": {
             "market": "had",
-            "samples": 1882,
+            "samples": 2279,
             "win_rate": 58.4,
-            "draw_rate": 24.3,
-            "loss_rate": 17.3,
+            "draw_rate": 24.1,
+            "loss_rate": 17.5,
             "ev_home": -0.088,
-            "ev_draw": -0.012,
-            "ev_away": -0.088,
-            "lambda_h": 2.07,
-            "lambda_a": 1.16,
+            "ev_draw": -0.02,
+            "ev_away": -0.078,
+            "lambda_h": 2.05,
+            "lambda_a": 1.14,
             "golden_scores": [
               "2-1",
               "2-0",
@@ -1810,13 +2933,20 @@
             "tier_title": "双选防冷格局",
             "smart_pick": "主胜",
             "smart_type": "SINGLE",
-            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。"
+            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。",
+            "params_source": "adaptive",
+            "active_params": {
+              "odds_tol_scale": 1.05,
+              "trap_high_upset": 0.43,
+              "trap_tight_upset": 0.45,
+              "single_threshold": 0.54
+            }
           },
           "consensus": "",
           "dossier": {
-            "league_rank": "本场为传统足彩14场赛事（欧罗巴）：尤文坐镇主场迎战雷恩。14年历史同赔库共匹配到 1882 场相似欧赔结构样本，历史真实打出分布为主胜 58.4% · 平局 24.3% · 客胜 17.3%。",
-            "conflict": "泊松进攻期望参数：主队 λ=2.07 vs 客队 λ=1.16。历史同赔高频比分依次聚焦 2-1 / 2-0 / 1-0，整体盘面归属【双选防冷格局】（★★★☆☆）。",
-            "market_depth": "百家平均欧赔开出 1.56 / 4.07 / 5.28，三项期望回报（EV）分别为主胜 -0.088、平局 -0.012、客胜 -0.088。盘面诊断：盘面处于正常期望区间。",
+            "league_rank": "本场为传统足彩14场赛事（欧罗巴）：尤文坐镇主场迎战雷恩。14年历史同赔库共匹配到 2279 场相似欧赔结构样本，历史真实打出分布为主胜 58.4% · 平局 24.1% · 客胜 17.5%。",
+            "conflict": "泊松进攻期望参数：主队 λ=2.05 vs 客队 λ=1.14。历史同赔高频比分依次聚焦 2-1 / 2-0 / 1-0，整体盘面归属【双选防冷格局】（★★★☆☆）。",
+            "market_depth": "百家平均欧赔开出 1.56 / 4.07 / 5.28，三项期望回报（EV）分别为主胜 -0.088、平局 -0.020、客胜 -0.078。盘面诊断：盘面处于正常期望区间。",
             "decision_guide": "传足选号方案：核心首选【主胜(3)】，次选防冷补【平局(1)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
           }
         },
@@ -1847,13 +2977,13 @@
           "result_text": "未中",
           "quant_factors": {
             "market": "had",
-            "samples": 517,
+            "samples": 519,
             "win_rate": 14.1,
-            "draw_rate": 25.1,
-            "loss_rate": 60.7,
-            "ev_home": -0.324,
-            "ev_draw": -0.044,
-            "ev_away": 0.008,
+            "draw_rate": 25.4,
+            "loss_rate": 60.5,
+            "ev_home": -0.326,
+            "ev_draw": -0.034,
+            "ev_away": 0.004,
             "lambda_h": 0.9,
             "lambda_a": 1.91,
             "golden_scores": [
@@ -1867,13 +2997,20 @@
             "tier_title": "高确定性稳胆",
             "smart_pick": "客胜",
             "smart_type": "SINGLE",
-            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。"
+            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。",
+            "params_source": "adaptive",
+            "active_params": {
+              "odds_tol_scale": 1.05,
+              "trap_high_upset": 0.43,
+              "trap_tight_upset": 0.45,
+              "single_threshold": 0.54
+            }
           },
           "consensus": "",
           "dossier": {
-            "league_rank": "本场为传统足彩14场赛事（欧罗巴）：波兹南坐镇主场迎战桑德兰。14年历史同赔库共匹配到 517 场相似欧赔结构样本，历史真实打出分布为主胜 14.1% · 平局 25.1% · 客胜 60.7%。",
+            "league_rank": "本场为传统足彩14场赛事（欧罗巴）：波兹南坐镇主场迎战桑德兰。14年历史同赔库共匹配到 519 场相似欧赔结构样本，历史真实打出分布为主胜 14.1% · 平局 25.4% · 客胜 60.5%。",
             "conflict": "泊松进攻期望参数：主队 λ=0.9 vs 客队 λ=1.91。历史同赔高频比分依次聚焦 0-1 / 1-2 / 0-2，整体盘面归属【高确定性稳胆】（★★★★☆）。",
-            "market_depth": "百家平均欧赔开出 4.79 / 3.80 / 1.66，三项期望回报（EV）分别为主胜 -0.324、平局 -0.044、客胜 +0.008。盘面诊断：盘面处于正常期望区间。",
+            "market_depth": "百家平均欧赔开出 4.79 / 3.80 / 1.66，三项期望回报（EV）分别为主胜 -0.326、平局 -0.034、客胜 +0.004。盘面诊断：盘面处于正常期望区间。",
             "decision_guide": "传足选号方案：核心首选【客胜(0)】（单挑作胆）。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
           }
         },
@@ -1924,7 +3061,14 @@
             "tier_title": "正路核心死胆",
             "smart_pick": "客胜",
             "smart_type": "SINGLE",
-            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。"
+            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。",
+            "params_source": "adaptive",
+            "active_params": {
+              "odds_tol_scale": 1.05,
+              "trap_high_upset": 0.43,
+              "trap_tight_upset": 0.45,
+              "single_threshold": 0.54
+            }
           },
           "consensus": "",
           "dossier": {
@@ -1961,7 +3105,7 @@
           "result_text": "防冷命中",
           "quant_factors": {
             "market": "had",
-            "samples": 1486,
+            "samples": 1490,
             "win_rate": 26.2,
             "draw_rate": 25.3,
             "loss_rate": 48.5,
@@ -1981,11 +3125,18 @@
             "tier_title": "高确定性稳胆",
             "smart_pick": "客胜/防平",
             "smart_type": "DOUBLE",
-            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。"
+            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。",
+            "params_source": "adaptive",
+            "active_params": {
+              "odds_tol_scale": 1.05,
+              "trap_high_upset": 0.43,
+              "trap_tight_upset": 0.45,
+              "single_threshold": 0.54
+            }
           },
           "consensus": "",
           "dossier": {
-            "league_rank": "本场为传统足彩14场赛事（欧罗巴）：格拉茨坐镇主场迎战马赛。14年历史同赔库共匹配到 1486 场相似欧赔结构样本，历史真实打出分布为主胜 26.2% · 平局 25.3% · 客胜 48.5%。",
+            "league_rank": "本场为传统足彩14场赛事（欧罗巴）：格拉茨坐镇主场迎战马赛。14年历史同赔库共匹配到 1490 场相似欧赔结构样本，历史真实打出分布为主胜 26.2% · 平局 25.3% · 客胜 48.5%。",
             "conflict": "泊松进攻期望参数：主队 λ=1.19 vs 客队 λ=1.69。历史同赔高频比分依次聚焦 1-2 / 0-1 / 0-2，整体盘面归属【高确定性稳胆】（★★★★☆）。",
             "market_depth": "百家平均欧赔开出 3.19 / 3.52 / 2.11，三项期望回报（EV）分别为主胜 -0.165、平局 -0.109、客胜 +0.024。盘面诊断：🎯 高赔杀庄大冷：客胜历史打出率 48%，具备极佳正EV回报。",
             "decision_guide": "传足选号方案：核心首选【客胜(0)】（单挑作胆），🚨大冷预警留意【主胜(3)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
@@ -2018,15 +3169,15 @@
           "result_text": "未中",
           "quant_factors": {
             "market": "had",
-            "samples": 3203,
-            "win_rate": 35.3,
-            "draw_rate": 27.1,
-            "loss_rate": 37.6,
-            "ev_home": -0.142,
-            "ev_draw": -0.053,
-            "ev_away": 0.018,
+            "samples": 3418,
+            "win_rate": 35.4,
+            "draw_rate": 26.7,
+            "loss_rate": 37.8,
+            "ev_home": -0.139,
+            "ev_draw": -0.067,
+            "ev_away": 0.025,
             "lambda_h": 1.37,
-            "lambda_a": 1.41,
+            "lambda_a": 1.42,
             "golden_scores": [
               "0-1",
               "1-2",
@@ -2038,13 +3189,20 @@
             "tier_title": "高确定性稳胆",
             "smart_pick": "客胜/防平",
             "smart_type": "DOUBLE",
-            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。"
+            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。",
+            "params_source": "adaptive",
+            "active_params": {
+              "odds_tol_scale": 1.05,
+              "trap_high_upset": 0.43,
+              "trap_tight_upset": 0.45,
+              "single_threshold": 0.54
+            }
           },
           "consensus": "",
           "dossier": {
-            "league_rank": "本场为传统足彩14场赛事（欧罗巴）：贝西克坐镇主场迎战水晶宫。14年历史同赔库共匹配到 3203 场相似欧赔结构样本，历史真实打出分布为主胜 35.3% · 平局 27.1% · 客胜 37.6%。",
-            "conflict": "泊松进攻期望参数：主队 λ=1.37 vs 客队 λ=1.41。历史同赔高频比分依次聚焦 0-1 / 1-2 / 0-2，整体盘面归属【高确定性稳胆】（★★★★☆）。",
-            "market_depth": "百家平均欧赔开出 2.43 / 3.49 / 2.71，三项期望回报（EV）分别为主胜 -0.142、平局 -0.053、客胜 +0.018。盘面诊断：盘面处于正常期望区间。",
+            "league_rank": "本场为传统足彩14场赛事（欧罗巴）：贝西克坐镇主场迎战水晶宫。14年历史同赔库共匹配到 3418 场相似欧赔结构样本，历史真实打出分布为主胜 35.4% · 平局 26.7% · 客胜 37.8%。",
+            "conflict": "泊松进攻期望参数：主队 λ=1.37 vs 客队 λ=1.42。历史同赔高频比分依次聚焦 0-1 / 1-2 / 0-2，整体盘面归属【高确定性稳胆】（★★★★☆）。",
+            "market_depth": "百家平均欧赔开出 2.43 / 3.49 / 2.71，三项期望回报（EV）分别为主胜 -0.139、平局 -0.067、客胜 +0.025。盘面诊断：盘面处于正常期望区间。",
             "decision_guide": "传足选号方案：核心首选【客胜(0)】（单挑作胆），🚨大冷预警留意【主胜(3)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
           }
         },
@@ -2075,15 +3233,15 @@
           "result_text": "首选命中",
           "quant_factors": {
             "market": "had",
-            "samples": 2472,
-            "win_rate": 40.3,
-            "draw_rate": 26.3,
-            "loss_rate": 33.4,
-            "ev_home": -0.138,
-            "ev_draw": -0.061,
-            "ev_away": 0.016,
-            "lambda_h": 1.53,
-            "lambda_a": 1.36,
+            "samples": 2638,
+            "win_rate": 40.0,
+            "draw_rate": 26.2,
+            "loss_rate": 33.8,
+            "ev_home": -0.144,
+            "ev_draw": -0.064,
+            "ev_away": 0.027,
+            "lambda_h": 1.52,
+            "lambda_a": 1.37,
             "golden_scores": [
               "2-1",
               "1-0",
@@ -2095,13 +3253,20 @@
             "tier_title": "高确定性稳胆",
             "smart_pick": "主胜/防平",
             "smart_type": "DOUBLE",
-            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。"
+            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。",
+            "params_source": "adaptive",
+            "active_params": {
+              "odds_tol_scale": 1.05,
+              "trap_high_upset": 0.43,
+              "trap_tight_upset": 0.45,
+              "single_threshold": 0.54
+            }
           },
           "consensus": "",
           "dossier": {
-            "league_rank": "本场为传统足彩14场赛事（欧罗巴）：伯恩茅坐镇主场迎战AC米兰。14年历史同赔库共匹配到 2472 场相似欧赔结构样本，历史真实打出分布为主胜 40.3% · 平局 26.3% · 客胜 33.4%。",
-            "conflict": "泊松进攻期望参数：主队 λ=1.53 vs 客队 λ=1.36。历史同赔高频比分依次聚焦 2-1 / 1-0 / 2-0，整体盘面归属【高确定性稳胆】（★★★★☆）。",
-            "market_depth": "百家平均欧赔开出 2.14 / 3.57 / 3.04，三项期望回报（EV）分别为主胜 -0.138、平局 -0.061、客胜 +0.016。盘面诊断：盘面处于正常期望区间。",
+            "league_rank": "本场为传统足彩14场赛事（欧罗巴）：伯恩茅坐镇主场迎战AC米兰。14年历史同赔库共匹配到 2638 场相似欧赔结构样本，历史真实打出分布为主胜 40.0% · 平局 26.2% · 客胜 33.8%。",
+            "conflict": "泊松进攻期望参数：主队 λ=1.52 vs 客队 λ=1.37。历史同赔高频比分依次聚焦 2-1 / 1-0 / 2-0，整体盘面归属【高确定性稳胆】（★★★★☆）。",
+            "market_depth": "百家平均欧赔开出 2.14 / 3.57 / 3.04，三项期望回报（EV）分别为主胜 -0.144、平局 -0.064、客胜 +0.027。盘面诊断：盘面处于正常期望区间。",
             "decision_guide": "传足选号方案：核心首选【主胜(3)】（单挑作胆）。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
           }
         },
@@ -2132,13 +3297,13 @@
           "result_text": "首选命中",
           "quant_factors": {
             "market": "had",
-            "samples": 2487,
-            "win_rate": 31.2,
-            "draw_rate": 26.1,
-            "loss_rate": 42.7,
-            "ev_home": -0.097,
-            "ev_draw": -0.106,
-            "ev_away": -0.022,
+            "samples": 2527,
+            "win_rate": 31.0,
+            "draw_rate": 25.9,
+            "loss_rate": 43.1,
+            "ev_home": -0.103,
+            "ev_draw": -0.111,
+            "ev_away": -0.014,
             "lambda_h": 1.29,
             "lambda_a": 1.55,
             "golden_scores": [
@@ -2152,13 +3317,20 @@
             "tier_title": "高确定性稳胆",
             "smart_pick": "客胜/防平",
             "smart_type": "DOUBLE",
-            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。"
+            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。",
+            "params_source": "adaptive",
+            "active_params": {
+              "odds_tol_scale": 1.05,
+              "trap_high_upset": 0.43,
+              "trap_tight_upset": 0.45,
+              "single_threshold": 0.54
+            }
           },
           "consensus": "",
           "dossier": {
-            "league_rank": "本场为传统足彩14场赛事（欧罗巴）：凯尔特坐镇主场迎战塞尔塔。14年历史同赔库共匹配到 2487 场相似欧赔结构样本，历史真实打出分布为主胜 31.2% · 平局 26.1% · 客胜 42.7%。",
+            "league_rank": "本场为传统足彩14场赛事（欧罗巴）：凯尔特坐镇主场迎战塞尔塔。14年历史同赔库共匹配到 2527 场相似欧赔结构样本，历史真实打出分布为主胜 31.0% · 平局 25.9% · 客胜 43.1%。",
             "conflict": "泊松进攻期望参数：主队 λ=1.29 vs 客队 λ=1.55。历史同赔高频比分依次聚焦 1-2 / 0-1 / 0-2，整体盘面归属【高确定性稳胆】（★★★★☆）。",
-            "market_depth": "百家平均欧赔开出 2.89 / 3.43 / 2.29，三项期望回报（EV）分别为主胜 -0.097、平局 -0.106、客胜 -0.022。盘面诊断：盘面处于正常期望区间。",
+            "market_depth": "百家平均欧赔开出 2.89 / 3.43 / 2.29，三项期望回报（EV）分别为主胜 -0.103、平局 -0.111、客胜 -0.014。盘面诊断：盘面处于正常期望区间。",
             "decision_guide": "传足选号方案：核心首选【客胜(0)】（单挑作胆），🚨大冷预警留意【主胜(3)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
           }
         },
@@ -2189,15 +3361,15 @@
           "result_text": "首选命中",
           "quant_factors": {
             "market": "had",
-            "samples": 1261,
-            "win_rate": 40.0,
-            "draw_rate": 23.8,
-            "loss_rate": 36.2,
-            "ev_home": -0.127,
-            "ev_draw": -0.125,
-            "ev_away": 0.07,
+            "samples": 1422,
+            "win_rate": 39.9,
+            "draw_rate": 24.1,
+            "loss_rate": 36.0,
+            "ev_home": -0.131,
+            "ev_draw": -0.112,
+            "ev_away": 0.066,
             "lambda_h": 1.54,
-            "lambda_a": 1.44,
+            "lambda_a": 1.45,
             "golden_scores": [
               "2-1",
               "1-0",
@@ -2209,13 +3381,20 @@
             "tier_title": "高确定性稳胆",
             "smart_pick": "主胜/防平",
             "smart_type": "DOUBLE",
-            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。"
+            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。",
+            "params_source": "adaptive",
+            "active_params": {
+              "odds_tol_scale": 1.05,
+              "trap_high_upset": 0.43,
+              "trap_tight_upset": 0.45,
+              "single_threshold": 0.54
+            }
           },
           "consensus": "",
           "dossier": {
-            "league_rank": "本场为传统足彩14场赛事（欧罗巴）：霍芬海坐镇主场迎战里昂。14年历史同赔库共匹配到 1261 场相似欧赔结构样本，历史真实打出分布为主胜 40.0% · 平局 23.8% · 客胜 36.2%。",
-            "conflict": "泊松进攻期望参数：主队 λ=1.54 vs 客队 λ=1.44。历史同赔高频比分依次聚焦 2-1 / 1-0 / 2-0，整体盘面归属【高确定性稳胆】（★★★★☆）。",
-            "market_depth": "百家平均欧赔开出 2.18 / 3.68 / 2.96，三项期望回报（EV）分别为主胜 -0.127、平局 -0.125、客胜 +0.070。盘面诊断：盘面处于正常期望区间。",
+            "league_rank": "本场为传统足彩14场赛事（欧罗巴）：霍芬海坐镇主场迎战里昂。14年历史同赔库共匹配到 1422 场相似欧赔结构样本，历史真实打出分布为主胜 39.9% · 平局 24.1% · 客胜 36.0%。",
+            "conflict": "泊松进攻期望参数：主队 λ=1.54 vs 客队 λ=1.45。历史同赔高频比分依次聚焦 2-1 / 1-0 / 2-0，整体盘面归属【高确定性稳胆】（★★★★☆）。",
+            "market_depth": "百家平均欧赔开出 2.18 / 3.68 / 2.96，三项期望回报（EV）分别为主胜 -0.131、平局 -0.112、客胜 +0.066。盘面诊断：盘面处于正常期望区间。",
             "decision_guide": "传足选号方案：核心首选【主胜(3)】（单挑作胆）。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
           }
         },
@@ -2246,15 +3425,15 @@
           "result_text": "首选命中",
           "quant_factors": {
             "market": "had",
-            "samples": 2548,
-            "win_rate": 31.9,
-            "draw_rate": 25.7,
-            "loss_rate": 42.3,
-            "ev_home": -0.09,
-            "ev_draw": -0.112,
-            "ev_away": -0.023,
-            "lambda_h": 1.3,
-            "lambda_a": 1.55,
+            "samples": 2919,
+            "win_rate": 31.3,
+            "draw_rate": 26.3,
+            "loss_rate": 42.4,
+            "ev_home": -0.109,
+            "ev_draw": -0.093,
+            "ev_away": -0.019,
+            "lambda_h": 1.29,
+            "lambda_a": 1.54,
             "golden_scores": [
               "1-2",
               "0-1",
@@ -2266,13 +3445,20 @@
             "tier_title": "高确定性稳胆",
             "smart_pick": "客胜/防平",
             "smart_type": "DOUBLE",
-            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。"
+            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。",
+            "params_source": "adaptive",
+            "active_params": {
+              "odds_tol_scale": 1.05,
+              "trap_high_upset": 0.43,
+              "trap_tight_upset": 0.45,
+              "single_threshold": 0.54
+            }
           },
           "consensus": "",
           "dossier": {
-            "league_rank": "本场为传统足彩14场赛事（欧罗巴）：比亚韦坐镇主场迎战安德莱。14年历史同赔库共匹配到 2548 场相似欧赔结构样本，历史真实打出分布为主胜 31.9% · 平局 25.7% · 客胜 42.3%。",
-            "conflict": "泊松进攻期望参数：主队 λ=1.3 vs 客队 λ=1.55。历史同赔高频比分依次聚焦 1-2 / 0-1 / 0-2，整体盘面归属【高确定性稳胆】（★★★★☆）。",
-            "market_depth": "百家平均欧赔开出 2.85 / 3.45 / 2.31，三项期望回报（EV）分别为主胜 -0.090、平局 -0.112、客胜 -0.023。盘面诊断：盘面处于正常期望区间。",
+            "league_rank": "本场为传统足彩14场赛事（欧罗巴）：比亚韦坐镇主场迎战安德莱。14年历史同赔库共匹配到 2919 场相似欧赔结构样本，历史真实打出分布为主胜 31.3% · 平局 26.3% · 客胜 42.4%。",
+            "conflict": "泊松进攻期望参数：主队 λ=1.29 vs 客队 λ=1.54。历史同赔高频比分依次聚焦 1-2 / 0-1 / 0-2，整体盘面归属【高确定性稳胆】（★★★★☆）。",
+            "market_depth": "百家平均欧赔开出 2.85 / 3.45 / 2.31，三项期望回报（EV）分别为主胜 -0.109、平局 -0.093、客胜 -0.019。盘面诊断：盘面处于正常期望区间。",
             "decision_guide": "传足选号方案：核心首选【客胜(0)】（单挑作胆），🚨大冷预警留意【主胜(3)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
           }
         },
@@ -2323,7 +3509,14 @@
             "tier_title": "高确定性稳胆",
             "smart_pick": "客胜",
             "smart_type": "SINGLE",
-            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。"
+            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。",
+            "params_source": "adaptive",
+            "active_params": {
+              "odds_tol_scale": 1.05,
+              "trap_high_upset": 0.43,
+              "trap_tight_upset": 0.45,
+              "single_threshold": 0.54
+            }
           },
           "consensus": "",
           "dossier": {
@@ -2360,15 +3553,15 @@
           "result_text": "首选命中",
           "quant_factors": {
             "market": "had",
-            "samples": 2278,
-            "win_rate": 56.4,
-            "draw_rate": 23.6,
-            "loss_rate": 20.0,
-            "ev_home": -0.076,
-            "ev_draw": -0.079,
-            "ev_away": -0.019,
-            "lambda_h": 1.91,
-            "lambda_a": 1.15,
+            "samples": 2860,
+            "win_rate": 56.3,
+            "draw_rate": 23.5,
+            "loss_rate": 20.2,
+            "ev_home": -0.077,
+            "ev_draw": -0.084,
+            "ev_away": -0.008,
+            "lambda_h": 1.88,
+            "lambda_a": 1.13,
             "golden_scores": [
               "2-1",
               "1-0",
@@ -2380,13 +3573,20 @@
             "tier_title": "双选防冷格局",
             "smart_pick": "主胜",
             "smart_type": "SINGLE",
-            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。"
+            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。",
+            "params_source": "adaptive",
+            "active_params": {
+              "odds_tol_scale": 1.05,
+              "trap_high_upset": 0.43,
+              "trap_tight_upset": 0.45,
+              "single_threshold": 0.54
+            }
           },
           "consensus": "",
           "dossier": {
-            "league_rank": "本场为传统足彩14场赛事（欧罗巴）：奥林匹坐镇主场迎战布拉格。14年历史同赔库共匹配到 2278 场相似欧赔结构样本，历史真实打出分布为主胜 56.4% · 平局 23.6% · 客胜 20.0%。",
-            "conflict": "泊松进攻期望参数：主队 λ=1.91 vs 客队 λ=1.15。历史同赔高频比分依次聚焦 2-1 / 1-0 / 2-0，整体盘面归属【双选防冷格局】（★★★☆☆）。",
-            "market_depth": "百家平均欧赔开出 1.64 / 3.90 / 4.90，三项期望回报（EV）分别为主胜 -0.076、平局 -0.079、客胜 -0.019。盘面诊断：盘面处于正常期望区间。",
+            "league_rank": "本场为传统足彩14场赛事（欧罗巴）：奥林匹坐镇主场迎战布拉格。14年历史同赔库共匹配到 2860 场相似欧赔结构样本，历史真实打出分布为主胜 56.3% · 平局 23.5% · 客胜 20.2%。",
+            "conflict": "泊松进攻期望参数：主队 λ=1.88 vs 客队 λ=1.13。历史同赔高频比分依次聚焦 2-1 / 1-0 / 2-0，整体盘面归属【双选防冷格局】（★★★☆☆）。",
+            "market_depth": "百家平均欧赔开出 1.64 / 3.90 / 4.90，三项期望回报（EV）分别为主胜 -0.077、平局 -0.084、客胜 -0.008。盘面诊断：盘面处于正常期望区间。",
             "decision_guide": "传足选号方案：核心首选【主胜(3)】，次选防冷补【平局(1)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
           }
         },
@@ -2417,14 +3617,14 @@
           "result_text": "首选命中",
           "quant_factors": {
             "market": "had",
-            "samples": 103,
-            "win_rate": 13.6,
-            "draw_rate": 24.3,
-            "loss_rate": 62.1,
-            "ev_home": -0.137,
-            "ev_draw": 0.061,
-            "ev_away": -0.087,
-            "lambda_h": 0.95,
+            "samples": 187,
+            "win_rate": 13.4,
+            "draw_rate": 22.5,
+            "loss_rate": 64.2,
+            "ev_home": -0.151,
+            "ev_draw": -0.019,
+            "ev_away": -0.057,
+            "lambda_h": 0.91,
             "lambda_a": 2.13,
             "golden_scores": [
               "0-2",
@@ -2437,13 +3637,20 @@
             "tier_title": "高确定性稳胆",
             "smart_pick": "客胜",
             "smart_type": "SINGLE",
-            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。"
+            "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。",
+            "params_source": "adaptive",
+            "active_params": {
+              "odds_tol_scale": 1.05,
+              "trap_high_upset": 0.43,
+              "trap_tight_upset": 0.45,
+              "single_threshold": 0.54
+            }
           },
           "consensus": "",
           "dossier": {
-            "league_rank": "本场为传统足彩14场赛事（欧罗巴）：奥莫尼坐镇主场迎战本菲卡。14年历史同赔库共匹配到 103 场相似欧赔结构样本，历史真实打出分布为主胜 13.6% · 平局 24.3% · 客胜 62.1%。",
-            "conflict": "泊松进攻期望参数：主队 λ=0.95 vs 客队 λ=2.13。历史同赔高频比分依次聚焦 0-2 / 0-1 / 1-2，整体盘面归属【高确定性稳胆】（★★★★☆）。",
-            "market_depth": "百家平均欧赔开出 6.35 / 4.37 / 1.47，三项期望回报（EV）分别为主胜 -0.137、平局 +0.061、客胜 -0.087。盘面诊断：盘面处于正常期望区间。",
+            "league_rank": "本场为传统足彩14场赛事（欧罗巴）：奥莫尼坐镇主场迎战本菲卡。14年历史同赔库共匹配到 187 场相似欧赔结构样本，历史真实打出分布为主胜 13.4% · 平局 22.5% · 客胜 64.2%。",
+            "conflict": "泊松进攻期望参数：主队 λ=0.91 vs 客队 λ=2.13。历史同赔高频比分依次聚焦 0-2 / 0-1 / 1-2，整体盘面归属【高确定性稳胆】（★★★★☆）。",
+            "market_depth": "百家平均欧赔开出 6.35 / 4.37 / 1.47，三项期望回报（EV）分别为主胜 -0.151、平局 -0.019、客胜 -0.057。盘面诊断：盘面处于正常期望区间。",
             "decision_guide": "传足选号方案：核心首选【客胜(0)】（单挑作胆）。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
           }
         }
