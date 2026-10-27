@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-28 02:17:47",
-  "total_tips": 12,
+  "updated_at": "2026-10-28 02:57:47",
+  "total_tips": 13,
   "live_feed": [
+    {
+      "id": 7240,
+      "channel": "forepitch_tips",
+      "time": "2026-10-28 01:17",
+      "code": "周二007",
+      "key": "20261028_周二007",
+      "league": "德国杯",
+      "category": "推单·已开赛",
+      "is_tip": true,
+      "match": "多特蒙德 VS 不来梅",
+      "chinese": "周二德国杯，多特蒙德对不来梅。主场明显占优，模型给出主胜方向，家胜看七成，主客胜平局让球都看多特蒙德。大小球偏大，双方进球有戏。伤停没接到消息，首发和轮换未明。模型预估开球前或有变动。",
+      "original": "⚽ DFBPOKAL · 27 October, 19:45 UTC Borussia Dortmund — Werder Bremen The model sees a clear edge. 🎯 Main pick: Borussia Dortmund to win · 69% Home 72% · Draw 17",
+      "translated": true,
+      "channel_weight": 0.5
+    },
     {
       "id": 7191,
       "channel": "FabrizioRomano",
@@ -1225,9 +1240,9 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-10-28 02:17:47",
-    "last_nonempty_at": "2026-10-28 02:17:47",
-    "live_count": 12,
+    "last_updated": "2026-10-28 02:57:47",
+    "last_nonempty_at": "2026-10-28 02:57:47",
+    "live_count": 13,
     "archived_count": 88,
     "active_matches": 20,
     "llm_providers": [
@@ -1235,6 +1250,6 @@
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-10-28 02:17:47"
+    "checked_at": "2026-10-28 02:57:47"
   }
 }
