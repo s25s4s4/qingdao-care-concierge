@@ -1,4915 +1,7 @@
 {
-  "updated_at": "2026-10-27 23:59:29",
-  "total": 111,
+  "updated_at": "2026-10-28 00:01:31",
+  "total": 97,
   "matches": [
-    {
-      "code": "周四001",
-      "league": "欧罗巴",
-      "time": "10-23 00:45",
-      "home": "格风暴",
-      "away": "马赛",
-      "home_rank": "-",
-      "away_rank": "-",
-      "status": "已完赛",
-      "form_home": [
-        "W",
-        "L",
-        "W",
-        "W",
-        "L"
-      ],
-      "form_away": [
-        "W",
-        "L",
-        "W",
-        "L",
-        "L"
-      ],
-      "odds": [
-        "4.05",
-        "4.08",
-        "1.57"
-      ],
-      "is_only_rq": false,
-      "rang": "+1",
-      "odds_rq": [
-        "1.89",
-        "3.65",
-        "3.06"
-      ],
-      "consensus": "客胜/防平",
-      "consensus_ratio": 78.1,
-      "consensus_breakdown": null,
-      "tip": "客胜/防平",
-      "predicted_scores": [
-        "1-2",
-        "0-1",
-        "1-1"
-      ],
-      "score": "1-0",
-      "result": "MISS",
-      "analysis": "去水胜平负 21.9%/21.7%/56.4%，泊松期望进球 1.16:1.99，首选【客胜】+次选【防平】（覆盖率 78.1%）。",
-      "dossier": {
-        "fundamental": "格风暴近10场 5胜2平3负，场均进1.90失1.40（截至2026-10-18）；马赛近10场 3胜0平7负，场均进1.60失1.70（截至2026-10-18）。",
-        "tactical_conflict": "泊松进攻期望参数：主队 λ=1.16、客队 λ=1.99（按本场胜平负官方SP反推拟合，拟合残差 0.19 个百分点）。结合主客攻防效率，本场总进球核心落点集中于 1、2、3 球区间。",
-        "market_attitude": "体彩官方胜平负 SP 开出 4.05 / 4.08 / 1.57，去水后真实隐含概率分别为 主胜 21.9% / 平局 21.7% / 客胜 56.4%。盘面赔付结构清晰，去水优势项指向明确。",
-        "decision_guide": "实战方案指引：【首选客胜】（去水概率最高主力项），次选【防平】（防冷对冲保护）。所选方案去水隐含覆盖率合计 78.1%。矩阵精算比分依次参考 1-2、0-1、1-1（对应总进球 1、2、3 球）。",
-        "summary": "去水胜平负 21.9%/21.7%/56.4%，泊松期望进球 1.16:1.99，首选【客胜】+次选【防平】（覆盖率 78.1%）。"
-      },
-      "sale_closed": true,
-      "prediction_snapshot": {
-        "tip": "客胜/防平",
-        "predicted_scores": [
-          "1-2",
-          "0-1",
-          "1-1"
-        ],
-        "predicted_goals": [
-          "1",
-          "2",
-          "3"
-        ],
-        "consensus_ratio": 78.1,
-        "is_only_rq": false,
-        "rang": "+1",
-        "frozen_at": "2026-10-22T22:48:14",
-        "kickoff": "2026-10-23T00:45:00",
-        "frozen_at_last_sellable": true,
-        "evidence": {
-          "odds": [
-            "4.05",
-            "4.08",
-            "1.57"
-          ],
-          "odds_source": "500.com",
-          "method": "odds_implied_probability",
-          "intel_used": false,
-          "intel_ids": []
-        },
-        "sha256": "3bb23d72ce8636091d669cfb59d1f2f8a34909a5561137e8fd1204b42908eca0"
-      },
-      "prediction_verified": true,
-      "provenance": {
-        "method": "odds_implied_probability",
-        "evidence": "停售冻结，含赔率与生成方式哈希",
-        "traceable": true,
-        "note": "停售时刻冻结（含临开赛早场），此后不随盘口变动"
-      },
-      "quant_factors": {
-        "market": "had",
-        "samples": 233,
-        "win_rate": 21.0,
-        "draw_rate": 24.0,
-        "loss_rate": 54.9,
-        "ev_home": -0.148,
-        "ev_draw": -0.019,
-        "ev_away": -0.138,
-        "lambda_h": 1.16,
-        "lambda_a": 1.99,
-        "golden_scores": [
-          "1-2",
-          "0-1",
-          "1-1"
-        ],
-        "trap_level": "NORMAL",
-        "trap_warning": "盘面处于正常期望区间",
-        "stars": "★★★☆☆",
-        "tier_title": "双选防冷格局",
-        "smart_pick": null,
-        "smart_type": "DOUBLE",
-        "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
-      },
-      "stats": {
-        "home": {
-          "name": "格风暴",
-          "recent": {
-            "n": 10,
-            "w": 5,
-            "d": 2,
-            "l": 3,
-            "gf": 1.9,
-            "ga": 1.4,
-            "form": [
-              "W",
-              "L",
-              "W",
-              "W",
-              "L"
-            ]
-          },
-          "home": {
-            "n": 5,
-            "w": 3,
-            "d": 2,
-            "l": 0,
-            "gf": 2.4,
-            "ga": 0.8,
-            "form": [
-              "W",
-              "W",
-              "D",
-              "W",
-              "D"
-            ]
-          },
-          "away": {
-            "n": 5,
-            "w": 2,
-            "d": 0,
-            "l": 3,
-            "gf": 1.4,
-            "ga": 2.0,
-            "form": [
-              "L",
-              "W",
-              "L",
-              "W",
-              "L"
-            ]
-          },
-          "total": 10,
-          "last_date": "2026-10-18",
-          "stale_days": 5
-        },
-        "away": {
-          "name": "马赛",
-          "recent": {
-            "n": 10,
-            "w": 3,
-            "d": 0,
-            "l": 7,
-            "gf": 1.6,
-            "ga": 1.7,
-            "form": [
-              "W",
-              "L",
-              "W",
-              "L",
-              "L"
-            ]
-          },
-          "home": {
-            "n": 5,
-            "w": 1,
-            "d": 0,
-            "l": 4,
-            "gf": 1.6,
-            "ga": 1.6,
-            "form": [
-              "L",
-              "L",
-              "L",
-              "W",
-              "L"
-            ]
-          },
-          "away": {
-            "n": 5,
-            "w": 2,
-            "d": 0,
-            "l": 3,
-            "gf": 1.6,
-            "ga": 1.8,
-            "form": [
-              "W",
-              "W",
-              "L",
-              "L",
-              "L"
-            ]
-          },
-          "total": 10,
-          "last_date": "2026-10-18",
-          "stale_days": 5
-        },
-        "h2h": null,
-        "source": "500网即时战绩直连"
-      },
-      "stats_ts": "2026-10-27 14:40:23",
-      "predicted_goals": [
-        "1",
-        "2",
-        "3"
-      ],
-      "odds_official": [
-        "3.65",
-        "3.80",
-        "1.69"
-      ],
-      "official_market": "had",
-      "odds_source": "sporttery_official",
-      "detail_original": {
-        "tip": "客胜/防平",
-        "predicted_scores": [
-          "0-1",
-          "1-2",
-          "1-1"
-        ],
-        "predicted_goals": [
-          "2",
-          "3"
-        ],
-        "consensus": "客胜/防平 (65.0%)",
-        "consensus_ratio": 65.0,
-        "dossier": {
-          "summary": "格风暴对阵马赛，多因子量化研判核心首选【客胜/防平】。",
-          "fundamental": "一、奥地利劲旅格拉茨风暴欧战经验虽足，但硬实力与五大联赛劲旅存在明显鸿沟，近期多线作战体能吃紧。客队马赛换帅后战术执行力显著提升，目前全队专注于欧战突破，阵容班底与球星个人解决比赛的能力远在主队之上，战意与客场进攻侵略性极强。",
-          "tactical_conflict": "二、格拉茨风暴主打高位压迫与身体对抗，但后防线横移偏慢，极度忌惮对手纵深穿插。马赛边路爆破与肋部反击极快，中前场持球攻坚与二点球压迫占优，一旦马赛反击打穿风暴第一道拦截线，主队防线将承受持续高压，比赛大概率由马赛主导转换节奏。",
-          "market_attitude": "三、官方初指开出主胜3.30、平局3.65、客胜1.81，数学去水后客胜真实概率达48.9%，平赔被顶高至3.65阻断平局资金流入，亚盘初盘客让半球中低水稳步推进，机构通过高挂平赔强行分流，真实意图在于构筑客胜安全防线，正路打出阻力适中。",
-          "decision_guide": "【实战选号指引】：综合机构去水与多因子胜率，首选【客胜/防平】；黄金比分防范锁定【1-2】、【0-2】、【1-1】。"
-        },
-        "quant_factors": {
-          "samples": 755,
-          "win_rate": 23.6,
-          "draw_rate": 30.9,
-          "loss_rate": 45.6,
-          "ev_home": -0.161,
-          "ev_draw": 0.142,
-          "ev_away": -0.212,
-          "lambda_h": 1.19,
-          "lambda_a": 1.66,
-          "golden_scores": [
-            "1-0",
-            "2-1",
-            "2-0"
-          ],
-          "trap_level": "NORMAL",
-          "trap_warning": "盘面处于正常期望区间",
-          "stars": "★★☆☆☆",
-          "tier_title": "深水博冷区间",
-          "smart_pick": "让胜",
-          "smart_type": "SINGLE",
-          "quant_detail_note": "【8万场让球利刃 · 极简让球直打】：8万场历史大数据同赔率下最高胜率仅为 45.6%，客队具备极强反客为主抗衡力。实战果断单挑【让胜】，一注通吃客队不败！"
-        },
-        "result": "PENDING"
-      },
-      "detail_correction": {
-        "at": "2026-10-22T14:51:55",
-        "reason": "统一玩法与详情展示；保留原始快照及原文，派生说明不是新赛前预测"
-      },
-      "prediction_market": "had",
-      "detail_market_odds": [
-        "4.05",
-        "4.08",
-        "1.57"
-      ],
-      "detail_model": {
-        "lambda_h": 1.16,
-        "lambda_a": 1.99,
-        "fit_error_pp": 0.19,
-        "method": "independent_poisson_odds_fit",
-        "rang": 0
-      },
-      "detail_pure": [
-        21.871,
-        21.7102,
-        56.4188
-      ],
-      "detail_schema": 2,
-      "tip_aligned_to_snapshot": {
-        "at": "2026-10-22T19:56:01",
-        "reason": "展示口径对齐赛前冻结快照（2026-10-22 一次性订正）"
-      },
-      "fid": "1480145",
-      "locked": true,
-      "crosscheck": {
-        "source": "fotmob",
-        "score": "1-0",
-        "finished": true
-      },
-      "predicted_scores_detail": [
-        {
-          "score": "1-2",
-          "role": "主力",
-          "desc": "概率基准核心比分"
-        },
-        {
-          "score": "0-1",
-          "role": "次选",
-          "desc": "优势延伸主力比分"
-        },
-        {
-          "score": "1-1",
-          "role": "对冲",
-          "desc": "平局对冲防冷"
-        }
-      ],
-      "predicted_bqc": "【负负】(稳) / 【平负】(博) / 【平平】(防平)",
-      "tactical_strategy": {
-        "type": "double_chance",
-        "badge": "⚖️ 首选+防冷",
-        "badge_class": "badge-purple",
-        "title": "首选主力攻坚，次选对冲防冷",
-        "advance_tip": "首选【客胜】，次选【防平】"
-      },
-      "settlement": {
-        "result": "MISS",
-        "score": "1 - 0",
-        "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
-        "outcome": "主胜",
-        "tip": "客胜/防平",
-        "market": "had"
-      },
-      "result_text": "研判未中"
-    },
-    {
-      "code": "周四002",
-      "league": "欧罗巴",
-      "time": "10-23 00:45",
-      "home": "波兹南",
-      "away": "桑德兰",
-      "home_rank": "-",
-      "away_rank": "-",
-      "status": "已完赛",
-      "form_home": [
-        "W",
-        "L",
-        "W",
-        "D",
-        "W"
-      ],
-      "form_away": [
-        "L",
-        "W",
-        "L",
-        "L",
-        "W"
-      ],
-      "odds": [
-        "4.93",
-        "3.98",
-        "1.48"
-      ],
-      "is_only_rq": false,
-      "rang": "+1",
-      "odds_rq": [
-        "2.21",
-        "3.30",
-        "2.68"
-      ],
-      "consensus": "客胜/防平",
-      "consensus_ratio": 82.0,
-      "consensus_breakdown": null,
-      "tip": "客胜/防平",
-      "predicted_scores": [
-        "0-1",
-        "0-2",
-        "1-1"
-      ],
-      "score": "1-1",
-      "result": "HIT",
-      "analysis": "去水胜平负 18.0%/22.2%/59.8%，泊松期望进球 0.92:1.87，首选【客胜】+次选【防平】（覆盖率 82.0%）。",
-      "dossier": {
-        "fundamental": "波兹南近10场 6胜1平3负，场均进2.40失1.80（截至2026-10-18）；桑德兰近10场 4胜1平5负，场均进1.00失1.50（截至2026-10-18）。",
-        "tactical_conflict": "泊松进攻期望参数：主队 λ=0.92、客队 λ=1.87（按本场胜平负官方SP反推拟合，拟合残差 0.13 个百分点）。结合主客攻防效率，本场总进球核心落点集中于 1、2 球区间。",
-        "market_attitude": "体彩官方胜平负 SP 开出 4.93 / 3.98 / 1.48，去水后真实隐含概率分别为 主胜 18.0% / 平局 22.2% / 客胜 59.8%。盘面赔付结构清晰，去水优势项指向明确。",
-        "decision_guide": "实战方案指引：【首选客胜】（去水概率最高主力项），次选【防平】（防冷对冲保护）。所选方案去水隐含覆盖率合计 82.0%。矩阵精算比分依次参考 0-1、0-2、1-1（对应总进球 1、2 球）。",
-        "summary": "去水胜平负 18.0%/22.2%/59.8%，泊松期望进球 0.92:1.87，首选【客胜】+次选【防平】（覆盖率 82.0%）。"
-      },
-      "sale_closed": true,
-      "prediction_snapshot": {
-        "tip": "客胜/防平",
-        "predicted_scores": [
-          "0-1",
-          "0-2",
-          "1-1"
-        ],
-        "predicted_goals": [
-          "1",
-          "2"
-        ],
-        "consensus_ratio": 82.0,
-        "is_only_rq": false,
-        "rang": "+1",
-        "frozen_at": "2026-10-22T22:48:14",
-        "kickoff": "2026-10-23T00:45:00",
-        "frozen_at_last_sellable": true,
-        "evidence": {
-          "odds": [
-            "4.93",
-            "3.98",
-            "1.48"
-          ],
-          "odds_source": "500.com",
-          "method": "odds_implied_probability",
-          "intel_used": false,
-          "intel_ids": []
-        },
-        "sha256": "593e5ccac0fcc533bfaf8fbaab06f93fdcb997a970a4f5eab52c60691ae65477"
-      },
-      "prediction_verified": true,
-      "provenance": {
-        "method": "odds_implied_probability",
-        "evidence": "停售冻结，含赔率与生成方式哈希",
-        "traceable": true,
-        "note": "停售时刻冻结（含临开赛早场），此后不随盘口变动"
-      },
-      "quant_factors": {
-        "market": "had",
-        "samples": 377,
-        "win_rate": 11.9,
-        "draw_rate": 21.5,
-        "loss_rate": 66.6,
-        "ev_home": -0.412,
-        "ev_draw": -0.145,
-        "ev_away": -0.015,
-        "lambda_h": 0.92,
-        "lambda_a": 1.87,
-        "golden_scores": [
-          "0-1",
-          "0-2",
-          "1-1"
-        ],
-        "trap_level": "NORMAL",
-        "trap_warning": "盘面处于正常期望区间",
-        "stars": "★★★☆☆",
-        "tier_title": "双选防冷格局",
-        "smart_pick": null,
-        "smart_type": "SINGLE",
-        "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
-      },
-      "stats": {
-        "home": {
-          "name": "波兹南",
-          "recent": {
-            "n": 10,
-            "w": 6,
-            "d": 1,
-            "l": 3,
-            "gf": 2.4,
-            "ga": 1.8,
-            "form": [
-              "W",
-              "L",
-              "W",
-              "D",
-              "W"
-            ]
-          },
-          "home": {
-            "n": 6,
-            "w": 4,
-            "d": 1,
-            "l": 1,
-            "gf": 2.67,
-            "ga": 1.5,
-            "form": [
-              "W",
-              "L",
-              "D",
-              "W",
-              "W"
-            ]
-          },
-          "away": {
-            "n": 4,
-            "w": 2,
-            "d": 0,
-            "l": 2,
-            "gf": 2.0,
-            "ga": 2.25,
-            "form": [
-              "W",
-              "L",
-              "L",
-              "W"
-            ]
-          },
-          "total": 10,
-          "last_date": "2026-10-18",
-          "stale_days": 5
-        },
-        "away": {
-          "name": "桑德兰",
-          "recent": {
-            "n": 10,
-            "w": 4,
-            "d": 1,
-            "l": 5,
-            "gf": 1.0,
-            "ga": 1.5,
-            "form": [
-              "L",
-              "W",
-              "L",
-              "L",
-              "W"
-            ]
-          },
-          "home": {
-            "n": 5,
-            "w": 3,
-            "d": 0,
-            "l": 2,
-            "gf": 0.6,
-            "ga": 0.8,
-            "form": [
-              "L",
-              "W",
-              "L",
-              "W",
-              "W"
-            ]
-          },
-          "away": {
-            "n": 5,
-            "w": 1,
-            "d": 1,
-            "l": 3,
-            "gf": 1.4,
-            "ga": 2.2,
-            "form": [
-              "L",
-              "W",
-              "L",
-              "D",
-              "L"
-            ]
-          },
-          "total": 10,
-          "last_date": "2026-10-18",
-          "stale_days": 5
-        },
-        "h2h": null,
-        "source": "500网即时战绩直连"
-      },
-      "stats_ts": "2026-10-27 14:38:30",
-      "predicted_goals": [
-        "1",
-        "2"
-      ],
-      "odds_official": [
-        "4.88",
-        "3.95",
-        "1.49"
-      ],
-      "official_market": "had",
-      "odds_source": "sporttery_official",
-      "detail_original": {
-        "tip": "客胜",
-        "predicted_scores": [
-          "0-2",
-          "1-2",
-          "0-3"
-        ],
-        "predicted_goals": [
-          "2",
-          "3"
-        ],
-        "consensus": "客胜 (68.3%)",
-        "consensus_ratio": 68.3,
-        "dossier": {
-          "summary": "波兹南对阵桑德兰，多因子量化研判核心首选【客胜】。",
-          "fundamental": "波兹南坐拥波兰魔鬼主场，但欧战多线作战阵容深度有限，高压绞杀下体能消耗极大；桑德兰英系战术素养严谨，整体节奏转换极快，客场稳扎稳打抢分欲望强烈，纸面战力与对抗强度占据明显上风。",
-          "tactical_conflict": "波兹南主打阵地渗透与边路传中，但阵眼后腰出球易受阻断；桑德兰依托双后腰的高位围抢，反击纵深推进迅猛，客场防守硬度足且反插空当效率极高，战术反制点直插主队防线身后软肋。",
-          "market_attitude": "官方SP给出主胜3.3、平局3.65、客胜1.81，机构抽水12.9%下去水客胜真实概率达48.9%，平赔高顶3.65压制分流，欧指对客胜给予实质性低赔倾斜，防范客队客场全取三分意图极为明确。",
-          "decision_guide": "【实战选号指引】：综合机构去水与多因子胜率，首选【客胜】；黄金比分防范锁定【0-2】、【1-2】、【0-1】。"
-        },
-        "quant_factors": {
-          "samples": 394,
-          "win_rate": 12.2,
-          "draw_rate": 20.8,
-          "loss_rate": 67.0,
-          "ev_home": -0.405,
-          "ev_draw": -0.178,
-          "ev_away": -0.002,
-          "lambda_h": 0.88,
-          "lambda_a": 2.08,
-          "golden_scores": [
-            "0-1",
-            "1-2",
-            "0-2"
-          ],
-          "trap_level": "NORMAL",
-          "trap_warning": "盘面处于正常期望区间",
-          "stars": "★★☆☆☆",
-          "tier_title": "深水博冷区间",
-          "smart_pick": "客胜/防平",
-          "smart_type": "DOUBLE",
-          "quant_detail_note": ""
-        },
-        "result": "PENDING"
-      },
-      "detail_correction": {
-        "at": "2026-10-22T14:51:55",
-        "reason": "统一玩法与详情展示；保留原始快照及原文，派生说明不是新赛前预测"
-      },
-      "prediction_market": "had",
-      "detail_market_odds": [
-        "4.93",
-        "3.98",
-        "1.48"
-      ],
-      "detail_model": {
-        "lambda_h": 0.92,
-        "lambda_a": 1.87,
-        "fit_error_pp": 0.13,
-        "method": "independent_poisson_odds_fit",
-        "rang": 0
-      },
-      "detail_pure": [
-        17.954,
-        22.2396,
-        59.8064
-      ],
-      "detail_schema": 2,
-      "tip_aligned_to_snapshot": {
-        "at": "2026-10-22T19:56:01",
-        "reason": "展示口径对齐赛前冻结快照（2026-10-22 一次性订正）"
-      },
-      "fid": "1480035",
-      "locked": true,
-      "crosscheck": {
-        "source": "fotmob",
-        "score": "1-1",
-        "finished": true
-      },
-      "predicted_scores_detail": [
-        {
-          "score": "0-1",
-          "role": "主力",
-          "desc": "概率基准核心比分"
-        },
-        {
-          "score": "0-2",
-          "role": "次选",
-          "desc": "优势延伸主力比分"
-        },
-        {
-          "score": "1-1",
-          "role": "对冲",
-          "desc": "平局对冲防冷"
-        }
-      ],
-      "predicted_bqc": "【负负】(稳) / 【平负】(博) / 【平平】(防平)",
-      "tactical_strategy": {
-        "type": "double_chance",
-        "badge": "⚖️ 首选+防冷",
-        "badge_class": "badge-purple",
-        "title": "首选主力攻坚，次选对冲防冷",
-        "advance_tip": "首选【客胜】，次选【防平】"
-      },
-      "settlement": {
-        "result": "HIT",
-        "score": "1 - 1",
-        "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
-        "outcome": "平局",
-        "tip": "客胜/防平",
-        "market": "had"
-      },
-      "result_text": "研判命中"
-    },
-    {
-      "code": "周四003",
-      "league": "欧罗巴",
-      "time": "10-23 00:45",
-      "home": "萨迪纳摩",
-      "away": "奈梅亨",
-      "home_rank": "-",
-      "away_rank": "-",
-      "status": "已完赛",
-      "form_home": [
-        "W",
-        "W",
-        "L",
-        "W",
-        "W"
-      ],
-      "form_away": [
-        "D",
-        "D",
-        "D",
-        "D",
-        "L"
-      ],
-      "odds": [
-        "1.32",
-        "4.75",
-        "6.20"
-      ],
-      "is_only_rq": false,
-      "rang": "-1",
-      "odds_rq": [
-        "2.18",
-        "3.70",
-        "2.50"
-      ],
-      "consensus": "主胜",
-      "consensus_ratio": 67.1,
-      "consensus_breakdown": null,
-      "tip": "主胜",
-      "predicted_scores": [
-        "2-0",
-        "2-1",
-        "1-0"
-      ],
-      "score": "2-4",
-      "result": "MISS",
-      "analysis": "去水胜平负 67.1%/18.6%/14.3%，泊松期望进球 2.29:0.96，单挑【主胜】稳胆（去水胜率 67.1%）。",
-      "dossier": {
-        "fundamental": "萨迪纳摩近10场 6胜2平2负，场均进2.30失1.10（截至2026-10-19）；奈梅亨近10场 1胜5平4负，场均进1.10失2.20（截至2026-10-19）。",
-        "tactical_conflict": "泊松进攻期望参数：主队 λ=2.29、客队 λ=0.96（按本场胜平负官方SP反推拟合，拟合残差 0.24 个百分点）。结合主客攻防效率，本场总进球核心落点集中于 1、2、3 球区间。",
-        "market_attitude": "体彩官方胜平负 SP 开出 1.32 / 4.75 / 6.20，去水后真实隐含概率分别为 主胜 67.1% / 平局 18.6% / 客胜 14.3%。盘面赔付结构清晰，去水优势项指向明确。",
-        "decision_guide": "实战方案指引：单选【主胜】作核心稳胆。所选方案去水隐含覆盖率合计 67.1%。矩阵精算比分依次参考 2-0、2-1、1-0（对应总进球 1、2、3 球）。 💡进阶参考：深盘主选回报较低，可参考让球(-1) 让胜 SP 2.18。",
-        "summary": "去水胜平负 67.1%/18.6%/14.3%，泊松期望进球 2.29:0.96，单挑【主胜】稳胆（去水胜率 67.1%）。"
-      },
-      "sale_closed": true,
-      "prediction_snapshot": {
-        "tip": "主胜",
-        "predicted_scores": [
-          "2-0",
-          "2-1",
-          "1-0"
-        ],
-        "predicted_goals": [
-          "1",
-          "2",
-          "3"
-        ],
-        "consensus_ratio": 67.1,
-        "is_only_rq": false,
-        "rang": "-1",
-        "frozen_at": "2026-10-22T22:48:14",
-        "kickoff": "2026-10-23T00:45:00",
-        "frozen_at_last_sellable": true,
-        "evidence": {
-          "odds": [
-            "1.32",
-            "4.75",
-            "6.20"
-          ],
-          "odds_source": "500.com",
-          "method": "odds_implied_probability",
-          "intel_used": false,
-          "intel_ids": []
-        },
-        "sha256": "8edc646d25a96fccbeed182c32a37cf68016bede02b591a8ffb0da31b66bc822"
-      },
-      "prediction_verified": true,
-      "provenance": {
-        "method": "odds_implied_probability",
-        "evidence": "停售冻结，含赔率与生成方式哈希",
-        "traceable": true,
-        "note": "停售时刻冻结（含临开赛早场），此后不随盘口变动"
-      },
-      "quant_factors": {
-        "market": "had",
-        "samples": 1436,
-        "win_rate": 68.7,
-        "draw_rate": 16.4,
-        "loss_rate": 14.8,
-        "ev_home": -0.093,
-        "ev_draw": -0.219,
-        "ev_away": -0.08,
-        "lambda_h": 2.29,
-        "lambda_a": 0.96,
-        "golden_scores": [
-          "2-0",
-          "2-1",
-          "1-0"
-        ],
-        "trap_level": "NORMAL",
-        "trap_warning": "盘面处于正常期望区间",
-        "stars": "★★★★☆",
-        "tier_title": "高确定性稳胆",
-        "smart_pick": null,
-        "smart_type": "SINGLE",
-        "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
-      },
-      "stats": {
-        "home": {
-          "name": "萨迪纳摩",
-          "recent": {
-            "n": 10,
-            "w": 6,
-            "d": 2,
-            "l": 2,
-            "gf": 2.3,
-            "ga": 1.1,
-            "form": [
-              "W",
-              "W",
-              "L",
-              "W",
-              "W"
-            ]
-          },
-          "home": {
-            "n": 3,
-            "w": 3,
-            "d": 0,
-            "l": 0,
-            "gf": 1.67,
-            "ga": 0.67,
-            "form": [
-              "W",
-              "W",
-              "W"
-            ]
-          },
-          "away": {
-            "n": 7,
-            "w": 3,
-            "d": 2,
-            "l": 2,
-            "gf": 2.57,
-            "ga": 1.29,
-            "form": [
-              "W",
-              "L",
-              "W",
-              "D",
-              "L"
-            ]
-          },
-          "total": 10,
-          "last_date": "2026-10-19",
-          "stale_days": 4
-        },
-        "away": {
-          "name": "奈梅亨",
-          "recent": {
-            "n": 10,
-            "w": 1,
-            "d": 5,
-            "l": 4,
-            "gf": 1.1,
-            "ga": 2.2,
-            "form": [
-              "D",
-              "D",
-              "D",
-              "D",
-              "L"
-            ]
-          },
-          "home": {
-            "n": 5,
-            "w": 0,
-            "d": 4,
-            "l": 1,
-            "gf": 1.4,
-            "ga": 1.8,
-            "form": [
-              "D",
-              "D",
-              "D",
-              "D",
-              "L"
-            ]
-          },
-          "away": {
-            "n": 5,
-            "w": 1,
-            "d": 1,
-            "l": 3,
-            "gf": 0.8,
-            "ga": 2.6,
-            "form": [
-              "D",
-              "L",
-              "L",
-              "W",
-              "L"
-            ]
-          },
-          "total": 10,
-          "last_date": "2026-10-19",
-          "stale_days": 4
-        },
-        "h2h": null,
-        "source": "500网即时战绩直连"
-      },
-      "stats_ts": "2026-10-27 14:42:21",
-      "predicted_goals": [
-        "1",
-        "2",
-        "3"
-      ],
-      "odds_official": [
-        "1.38",
-        "4.52",
-        "5.45"
-      ],
-      "official_market": "had",
-      "odds_source": "sporttery_official",
-      "detail_original": {
-        "tip": "主胜/防平",
-        "predicted_scores": [
-          "1-0",
-          "2-1",
-          "1-1"
-        ],
-        "predicted_goals": [
-          "2",
-          "3"
-        ],
-        "consensus": "主胜/防平 (75.7%)",
-        "consensus_ratio": 75.7,
-        "dossier": {
-          "summary": "萨迪纳摩对阵奈梅亨，多因子量化研判核心首选【客不败/双选平负】。",
-          "fundamental": "一、主队萨迪纳摩欧战防线承压明显，主场面对高机动性球队往往在下半场崩盘；客队奈梅亨近期联赛与欧战展现极强纵深打击能力，前场反击转换与定位球攻坚效率稳定，抢分战意高昂。",
-          "tactical_conflict": "二、主队阵地战缺乏一锤定音重炮手，攻坚效率低下且易被断球打穿身后；奈梅亨双翼突击速度极快，中场拦截硬度高，战术阵眼在于客队肋部穿插与边路传中对主队中卫转身慢的致命打击。",
-          "market_attitude": "三、官方SP开出3.30、3.65、1.81，客胜真实概率接近49%，去水客胜优势凸显。亚指初盘稳定在客让半球中水，机构对客队穿透力防范严密，平赔高挂分流，整体资金盘口坚定倾斜客队不败。",
-          "decision_guide": "【实战选号指引】：综合机构去水与多因子胜率，首选【客不败/双选平负】；黄金比分防范锁定【1-2】、【0-2】、【1-1】。"
-        },
-        "quant_factors": {
-          "samples": 2452,
-          "win_rate": 61.9,
-          "draw_rate": 23.5,
-          "loss_rate": 14.6,
-          "ev_home": -0.145,
-          "ev_draw": 0.062,
-          "ev_away": -0.207,
-          "lambda_h": 2.09,
-          "lambda_a": 1.01,
-          "golden_scores": [
-            "1-0",
-            "2-1",
-            "2-0"
-          ],
-          "trap_level": "HIGH_TRAP",
-          "trap_warning": "🚨 大热诱盘预警：历史同赔下冷门打出率高达 38%，谨防豪门翻车",
-          "stars": "★★★☆☆",
-          "tier_title": "双选防冷格局",
-          "smart_pick": "主胜/防平",
-          "smart_type": "DOUBLE",
-          "quant_detail_note": ""
-        },
-        "result": "PENDING"
-      },
-      "detail_correction": {
-        "at": "2026-10-22T14:51:55",
-        "reason": "统一玩法与详情展示；保留原始快照及原文，派生说明不是新赛前预测"
-      },
-      "prediction_market": "had",
-      "detail_market_odds": [
-        "1.32",
-        "4.75",
-        "6.20"
-      ],
-      "detail_model": {
-        "lambda_h": 2.29,
-        "lambda_a": 0.96,
-        "fit_error_pp": 0.24,
-        "method": "independent_poisson_odds_fit",
-        "rang": 0
-      },
-      "detail_pure": [
-        67.0782,
-        18.6407,
-        14.2812
-      ],
-      "detail_schema": 2,
-      "tip_aligned_to_snapshot": {
-        "at": "2026-10-22T19:56:01",
-        "reason": "展示口径对齐赛前冻结快照（2026-10-22 一次性订正）"
-      },
-      "fid": "1479989",
-      "locked": true,
-      "crosscheck": {
-        "source": "fotmob",
-        "score": "2-4",
-        "finished": true
-      },
-      "predicted_scores_detail": [
-        {
-          "score": "2-0",
-          "role": "主力",
-          "desc": "概率基准核心比分"
-        },
-        {
-          "score": "2-1",
-          "role": "次选",
-          "desc": "优势延伸主力比分"
-        },
-        {
-          "score": "1-0",
-          "role": "博高",
-          "desc": "深层大胜穿盘"
-        }
-      ],
-      "predicted_bqc": "【胜胜】(稳) / 【平胜】(博)",
-      "tactical_strategy": {
-        "type": "deep_handicap",
-        "badge": "⚡ 深盘进阶",
-        "badge_class": "badge-gold",
-        "title": "主选SP偏低，首选让球或精选比分提升回报",
-        "advance_tip": "让球(-1) 让胜 SP 2.18"
-      },
-      "result_text": "研判未中",
-      "settlement": {
-        "result": "MISS",
-        "score": "2 - 4",
-        "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
-        "outcome": "客胜",
-        "tip": "主胜",
-        "market": "had"
-      }
-    },
-    {
-      "code": "周四004",
-      "league": "欧罗巴",
-      "time": "10-23 00:45",
-      "home": "尤文图斯",
-      "away": "雷恩",
-      "home_rank": "-",
-      "away_rank": "-",
-      "status": "已完赛",
-      "form_home": [
-        "L",
-        "W",
-        "D",
-        "L",
-        "W"
-      ],
-      "form_away": [
-        "L",
-        "W",
-        "W",
-        "L",
-        "L"
-      ],
-      "odds": [
-        "1.25",
-        "5.10",
-        "7.50"
-      ],
-      "is_only_rq": false,
-      "rang": "-1",
-      "odds_rq": [
-        "1.98",
-        "3.75",
-        "2.80"
-      ],
-      "consensus": "主胜",
-      "consensus_ratio": 70.8,
-      "consensus_breakdown": null,
-      "tip": "主胜",
-      "predicted_scores": [
-        "2-0",
-        "1-0",
-        "2-1"
-      ],
-      "score": "2-2",
-      "result": "MISS",
-      "analysis": "去水胜平负 70.8%/17.4%/11.8%，泊松期望进球 2.35:0.85，单挑【主胜】稳胆（去水胜率 70.8%）。",
-      "dossier": {
-        "fundamental": "尤文图斯近10场 5胜2平3负，场均进1.60失1.00（截至2026-10-19）；雷恩近10场 5胜2平3负，场均进1.70失1.60（截至2026-10-18）。",
-        "tactical_conflict": "泊松进攻期望参数：主队 λ=2.35、客队 λ=0.85（按本场胜平负官方SP反推拟合，拟合残差 0.05 个百分点）。结合主客攻防效率，本场总进球核心落点集中于 1、2、3 球区间。",
-        "market_attitude": "体彩官方胜平负 SP 开出 1.25 / 5.10 / 7.50，去水后真实隐含概率分别为 主胜 70.8% / 平局 17.4% / 客胜 11.8%。盘面赔付结构清晰，去水优势项指向明确。",
-        "decision_guide": "实战方案指引：单选【主胜】作核心稳胆。所选方案去水隐含覆盖率合计 70.8%。矩阵精算比分依次参考 2-0、1-0、2-1（对应总进球 1、2、3 球）。 💡进阶参考：深盘主选回报较低，可参考让球(-1) 让胜 SP 1.98。",
-        "summary": "去水胜平负 70.8%/17.4%/11.8%，泊松期望进球 2.35:0.85，单挑【主胜】稳胆（去水胜率 70.8%）。"
-      },
-      "sale_closed": true,
-      "prediction_snapshot": {
-        "tip": "主胜",
-        "predicted_scores": [
-          "2-0",
-          "1-0",
-          "2-1"
-        ],
-        "predicted_goals": [
-          "1",
-          "2",
-          "3"
-        ],
-        "consensus_ratio": 70.8,
-        "is_only_rq": false,
-        "rang": "-1",
-        "frozen_at": "2026-10-22T22:48:14",
-        "kickoff": "2026-10-23T00:45:00",
-        "frozen_at_last_sellable": true,
-        "evidence": {
-          "odds": [
-            "1.25",
-            "5.10",
-            "7.50"
-          ],
-          "odds_source": "500.com",
-          "method": "odds_implied_probability",
-          "intel_used": false,
-          "intel_ids": []
-        },
-        "sha256": "c1bc145e793ce859f32cc61fc27e387c6933fca178f1a6a7c24db84eb9a53bc6"
-      },
-      "prediction_verified": true,
-      "provenance": {
-        "method": "odds_implied_probability",
-        "evidence": "停售冻结，含赔率与生成方式哈希",
-        "traceable": true,
-        "note": "停售时刻冻结（含临开赛早场），此后不随盘口变动"
-      },
-      "quant_factors": {
-        "market": "had",
-        "samples": 1310,
-        "win_rate": 72.9,
-        "draw_rate": 16.9,
-        "loss_rate": 10.2,
-        "ev_home": -0.089,
-        "ev_draw": -0.136,
-        "ev_away": -0.239,
-        "lambda_h": 2.35,
-        "lambda_a": 0.85,
-        "golden_scores": [
-          "2-0",
-          "1-0",
-          "2-1"
-        ],
-        "trap_level": "NORMAL",
-        "trap_warning": "盘面处于正常期望区间",
-        "stars": "★★★★★",
-        "tier_title": "正路核心死胆",
-        "smart_pick": null,
-        "smart_type": "SINGLE",
-        "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
-      },
-      "stats": {
-        "home": {
-          "name": "尤文图斯",
-          "recent": {
-            "n": 10,
-            "w": 5,
-            "d": 2,
-            "l": 3,
-            "gf": 1.6,
-            "ga": 1.0,
-            "form": [
-              "L",
-              "W",
-              "D",
-              "L",
-              "W"
-            ]
-          },
-          "home": {
-            "n": 6,
-            "w": 3,
-            "d": 1,
-            "l": 2,
-            "gf": 1.67,
-            "ga": 0.83,
-            "form": [
-              "L",
-              "L",
-              "W",
-              "W",
-              "D"
-            ]
-          },
-          "away": {
-            "n": 4,
-            "w": 2,
-            "d": 1,
-            "l": 1,
-            "gf": 1.5,
-            "ga": 1.25,
-            "form": [
-              "W",
-              "D",
-              "L",
-              "W"
-            ]
-          },
-          "total": 10,
-          "last_date": "2026-10-19",
-          "stale_days": 4
-        },
-        "away": {
-          "name": "雷恩",
-          "recent": {
-            "n": 10,
-            "w": 5,
-            "d": 2,
-            "l": 3,
-            "gf": 1.7,
-            "ga": 1.6,
-            "form": [
-              "L",
-              "W",
-              "W",
-              "L",
-              "L"
-            ]
-          },
-          "home": {
-            "n": 5,
-            "w": 4,
-            "d": 1,
-            "l": 0,
-            "gf": 2.4,
-            "ga": 1.2,
-            "form": [
-              "W",
-              "W",
-              "W",
-              "W",
-              "D"
-            ]
-          },
-          "away": {
-            "n": 5,
-            "w": 1,
-            "d": 1,
-            "l": 3,
-            "gf": 1.0,
-            "ga": 2.0,
-            "form": [
-              "L",
-              "L",
-              "L",
-              "D",
-              "W"
-            ]
-          },
-          "total": 10,
-          "last_date": "2026-10-18",
-          "stale_days": 5
-        },
-        "h2h": null,
-        "source": "500网即时战绩直连"
-      },
-      "stats_ts": "2026-10-27 12:22:22",
-      "predicted_goals": [
-        "1",
-        "2",
-        "3"
-      ],
-      "odds_official": [
-        "1.31",
-        "4.75",
-        "6.45"
-      ],
-      "official_market": "had",
-      "odds_source": "sporttery_official",
-      "detail_original": {
-        "tip": "主胜",
-        "predicted_scores": [
-          "2-0",
-          "2-1",
-          "3-1"
-        ],
-        "predicted_goals": [
-          "2",
-          "3"
-        ],
-        "consensus": "主胜 (79.8%)",
-        "consensus_ratio": 79.8,
-        "dossier": {
-          "summary": "尤文图斯对阵雷恩，多因子量化研判核心首选【客不败/双选平负】。",
-          "fundamental": "尤文图斯刚在联赛主场0-3惨败于拉齐奥，队长布雷默赛后公开炮轰队友隐身、更衣室矛盾彻底激化，士气与凝聚力跌入冰点；雷恩近期在欧战与法甲反击体系犀利，抢分战意高昂，客场战力处于明显上升期。",
-          "tactical_conflict": "尤文后防线阵型松散、中卫出球与肋部回追漏洞频出，攻坚端节奏滞塞难破密集；雷恩前场擅长抓攻防转换高位抓失误，其两翼纵深反击直接冲击斑马军团薄弱边卫身后，战术相克属性极其明显。",
-          "market_attitude": "官方SP开出主胜3.3、平局3.65、客胜1.81，数学去水后客胜概率高达48.9%，对豪门尤文主场毫无防护反而深度倾斜雷恩，客让优势坚挺；结合泊松模型客队xG达到1.61，机构低赔吸纳客队信心意图明确。",
-          "decision_guide": "【实战选号指引】：综合机构去水与多因子胜率，首选【客不败/双选平负】；黄金比分防范锁定【1-2】、【1-1】、【0-2】。"
-        },
-        "quant_factors": {
-          "samples": 1564,
-          "win_rate": 69.9,
-          "draw_rate": 16.6,
-          "loss_rate": 13.6,
-          "ev_home": -0.085,
-          "ev_draw": -0.213,
-          "ev_away": -0.126,
-          "lambda_h": 2.29,
-          "lambda_a": 0.95,
-          "golden_scores": [
-            "2-0",
-            "2-1",
-            "1-0"
-          ],
-          "trap_level": "NORMAL",
-          "trap_warning": "盘面处于正常期望区间",
-          "stars": "★★★★☆",
-          "tier_title": "高确定性稳胆",
-          "smart_pick": "主胜",
-          "smart_type": "SINGLE",
-          "quant_detail_note": ""
-        },
-        "result": "PENDING"
-      },
-      "detail_correction": {
-        "at": "2026-10-22T14:51:55",
-        "reason": "统一玩法与详情展示；保留原始快照及原文，派生说明不是新赛前预测"
-      },
-      "prediction_market": "had",
-      "detail_market_odds": [
-        "1.25",
-        "5.10",
-        "7.50"
-      ],
-      "detail_model": {
-        "lambda_h": 2.35,
-        "lambda_a": 0.85,
-        "fit_error_pp": 0.05,
-        "method": "independent_poisson_odds_fit",
-        "rang": 0
-      },
-      "detail_pure": [
-        70.8333,
-        17.3611,
-        11.8056
-      ],
-      "detail_schema": 2,
-      "tip_aligned_to_snapshot": {
-        "at": "2026-10-22T19:56:01",
-        "reason": "展示口径对齐赛前冻结快照（2026-10-22 一次性订正）"
-      },
-      "fid": "1480027",
-      "locked": true,
-      "crosscheck": {
-        "source": "fotmob",
-        "score": "2-2",
-        "finished": true
-      },
-      "predicted_scores_detail": [
-        {
-          "score": "2-0",
-          "role": "主力",
-          "desc": "概率基准核心比分"
-        },
-        {
-          "score": "1-0",
-          "role": "次选",
-          "desc": "优势延伸主力比分"
-        },
-        {
-          "score": "2-1",
-          "role": "博高",
-          "desc": "深层大胜穿盘"
-        }
-      ],
-      "predicted_bqc": "【胜胜】(稳) / 【平胜】(博)",
-      "tactical_strategy": {
-        "type": "deep_handicap",
-        "badge": "⚡ 深盘进阶",
-        "badge_class": "badge-gold",
-        "title": "主选SP偏低，首选让球或精选比分提升回报",
-        "advance_tip": "让球(-1) 让胜 SP 1.98"
-      },
-      "settlement": {
-        "result": "MISS",
-        "score": "2 - 2",
-        "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
-        "outcome": "平局",
-        "tip": "主胜",
-        "market": "had"
-      },
-      "result_text": "研判未中"
-    },
-    {
-      "code": "周四005",
-      "league": "欧罗巴",
-      "time": "10-23 00:45",
-      "home": "克里特",
-      "away": "勒沃库森",
-      "home_rank": "-",
-      "away_rank": "-",
-      "status": "已完赛",
-      "form_home": [
-        "L",
-        "L",
-        "L",
-        "D",
-        "W"
-      ],
-      "form_away": [
-        "W",
-        "W",
-        "W",
-        "W",
-        "W"
-      ],
-      "odds": [
-        "2.50",
-        "4.15",
-        "2.05"
-      ],
-      "is_only_rq": true,
-      "rang": "2",
-      "odds_rq": [
-        "2.50",
-        "4.15",
-        "2.05"
-      ],
-      "consensus": "让负/防让平",
-      "consensus_ratio": 64.6,
-      "consensus_breakdown": null,
-      "tip": "让负/防让平",
-      "predicted_scores": [
-        "0-3",
-        "0-4",
-        "0-2"
-      ],
-      "score": "0-2",
-      "result": "HIT",
-      "analysis": "让球(2)去水概率 35.4%/21.3%/43.2%，泊松期望进球 0.69:2.97，首选【让负】+次选【防让平】（覆盖率 64.6%）。",
-      "dossier": {
-        "fundamental": "克里特近10场 4胜2平4负，场均进1.50失1.30（截至2026-10-18）；勒沃库森近10场 8胜1平1负，场均进2.80失1.00（截至2026-10-18）。",
-        "tactical_conflict": "泊松进攻期望参数：主队 λ=0.69、客队 λ=2.97（按本场让球官方SP反推拟合，拟合残差 0.26 个百分点）。结合主客攻防效率，本场总进球核心落点集中于 2、3、4 球区间。",
-        "market_attitude": "体彩官方让球(2) SP 开出 2.50 / 4.15 / 2.05，去水后真实隐含概率分别为 让胜 35.4% / 让平 21.3% / 让负 43.2%。盘面赔付结构清晰，去水优势项指向明确。",
-        "decision_guide": "实战方案指引：【首选让负】（去水概率最高主力项），次选【防让平】（防冷对冲保护）。本场按主队让球(+2)口径结算。所选方案去水隐含覆盖率合计 64.6%。矩阵精算比分依次参考 0-3、0-4、0-2（对应总进球 2、3、4 球）。",
-        "summary": "让球(2)去水概率 35.4%/21.3%/43.2%，泊松期望进球 0.69:2.97，首选【让负】+次选【防让平】（覆盖率 64.6%）。"
-      },
-      "sale_closed": true,
-      "prediction_snapshot": {
-        "tip": "让负/防让平",
-        "predicted_scores": [
-          "0-3",
-          "0-4",
-          "0-2"
-        ],
-        "predicted_goals": [
-          "2",
-          "3",
-          "4"
-        ],
-        "consensus_ratio": 64.6,
-        "is_only_rq": true,
-        "rang": "2",
-        "frozen_at": "2026-10-22T22:48:14",
-        "kickoff": "2026-10-23T00:45:00",
-        "frozen_at_last_sellable": true,
-        "evidence": {
-          "odds": [
-            "2.50",
-            "4.15",
-            "2.05"
-          ],
-          "odds_source": "500.com",
-          "method": "odds_implied_probability",
-          "intel_used": false,
-          "intel_ids": []
-        },
-        "sha256": "1efb12218ac9e3eb30d9cbc8f7f83148aee4aaf69aa878c64a83f8478491cf82"
-      },
-      "prediction_verified": true,
-      "provenance": {
-        "method": "odds_implied_probability",
-        "evidence": "停售冻结，含赔率与生成方式哈希",
-        "traceable": true,
-        "note": "停售时刻冻结（含临开赛早场），此后不随盘口变动"
-      },
-      "quant_factors": null,
-      "stats": {
-        "home": {
-          "name": "克里特",
-          "recent": {
-            "n": 10,
-            "w": 4,
-            "d": 2,
-            "l": 4,
-            "gf": 1.5,
-            "ga": 1.3,
-            "form": [
-              "L",
-              "L",
-              "L",
-              "D",
-              "W"
-            ]
-          },
-          "home": {
-            "n": 4,
-            "w": 3,
-            "d": 1,
-            "l": 0,
-            "gf": 2.25,
-            "ga": 0.5,
-            "form": [
-              "D",
-              "W",
-              "W",
-              "W"
-            ]
-          },
-          "away": {
-            "n": 6,
-            "w": 1,
-            "d": 1,
-            "l": 4,
-            "gf": 1.0,
-            "ga": 1.83,
-            "form": [
-              "L",
-              "L",
-              "L",
-              "W",
-              "D"
-            ]
-          },
-          "total": 10,
-          "last_date": "2026-10-18",
-          "stale_days": 5
-        },
-        "away": {
-          "name": "勒沃库森",
-          "recent": {
-            "n": 10,
-            "w": 8,
-            "d": 1,
-            "l": 1,
-            "gf": 2.8,
-            "ga": 1.0,
-            "form": [
-              "W",
-              "W",
-              "W",
-              "W",
-              "W"
-            ]
-          },
-          "home": {
-            "n": 4,
-            "w": 4,
-            "d": 0,
-            "l": 0,
-            "gf": 2.5,
-            "ga": 0.25,
-            "form": [
-              "W",
-              "W",
-              "W",
-              "W"
-            ]
-          },
-          "away": {
-            "n": 6,
-            "w": 4,
-            "d": 1,
-            "l": 1,
-            "gf": 3.0,
-            "ga": 1.5,
-            "form": [
-              "W",
-              "W",
-              "D",
-              "L",
-              "W"
-            ]
-          },
-          "total": 10,
-          "last_date": "2026-10-18",
-          "stale_days": 5
-        },
-        "h2h": null,
-        "source": "500网即时战绩直连"
-      },
-      "stats_ts": "2026-10-27 14:40:23",
-      "predicted_goals": [
-        "2",
-        "3",
-        "4"
-      ],
-      "odds_official": [
-        "2.43",
-        "4.15",
-        "2.10"
-      ],
-      "official_market": "hhad",
-      "official_goal_line": "+2",
-      "odds_source": "sporttery_official",
-      "detail_original": {
-        "tip": "让负/防让平",
-        "predicted_scores": [
-          "0-3",
-          "1-4",
-          "0-2"
-        ],
-        "predicted_goals": [
-          "2",
-          "3",
-          "4"
-        ],
-        "consensus": "让负/防让平 (72%)",
-        "consensus_ratio": 72,
-        "dossier": {
-          "summary": "克里特对阵勒沃库森，官方单开让球胜平负(2)，战术首选【让胜/防让平】。",
-          "fundamental": "本场为体彩官方焦点深盘赛事，官方未开普通胜平负，全部实盘交易均汇聚在【让球胜平负 (主受让2球)】。两队战术阵眼在于主队攻坚撕裂效率与客队反击抓失误能力。",
-          "tactical_conflict": "克里特虽阵容受制但坐拥主场地利与主受让2球巨幅安全垫；勒沃库森客战客让2球穿盘极其吃力，大概率小胜或被逼平，看好主队守住让球盘。",
-          "market_attitude": "体彩官方单开【让球胜平负 (主受让2球)】。客队深让2球门槛过高，机构对让胜(2.43)与让平(4.15)防范意图坚决，客队难打穿。",
-          "decision_guide": "【赛前让球专项研判】：官方单开让球盘（主受让2球），综合欧洲去水模型，本场首选【让胜/防让平】。实战比分区间重点防范：【1-2、0-2、1-1】，柜台直打让球选项。"
-        },
-        "quant_factors": {
-          "samples": 77,
-          "win_rate": 84.4,
-          "draw_rate": 5.2,
-          "loss_rate": 10.4,
-          "ev_home": 1.051,
-          "ev_draw": -0.784,
-          "ev_away": -0.782,
-          "lambda_h": 3.48,
-          "lambda_a": 1.97,
-          "golden_scores": [
-            "4-2",
-            "2-1",
-            "3-1"
-          ],
-          "trap_level": "NORMAL",
-          "trap_warning": "盘面处于正常期望区间",
-          "stars": "★★★☆☆",
-          "tier_title": "双选防冷格局",
-          "smart_pick": "主胜",
-          "smart_type": "SINGLE",
-          "quant_detail_note": ""
-        },
-        "result": "PENDING"
-      },
-      "detail_correction": {
-        "at": "2026-10-22T14:51:55",
-        "reason": "统一玩法与详情展示；保留原始快照及原文，派生说明不是新赛前预测"
-      },
-      "prediction_market": "hhad",
-      "detail_market_odds": [
-        "2.50",
-        "4.15",
-        "2.05"
-      ],
-      "detail_model": {
-        "lambda_h": 0.69,
-        "lambda_a": 2.97,
-        "fit_error_pp": 0.26,
-        "method": "independent_poisson_odds_fit",
-        "rang": 2
-      },
-      "detail_pure": [
-        35.4368,
-        21.3475,
-        43.2157
-      ],
-      "detail_schema": 2,
-      "tip_aligned_to_snapshot": {
-        "at": "2026-10-22T19:56:01",
-        "reason": "展示口径对齐赛前冻结快照（2026-10-22 一次性订正）"
-      },
-      "fid": "1480108",
-      "locked": true,
-      "crosscheck": {
-        "source": "fotmob",
-        "score": "0-2",
-        "finished": true
-      },
-      "predicted_scores_detail": [
-        {
-          "score": "0-3",
-          "role": "主力",
-          "desc": "概率基准核心比分"
-        },
-        {
-          "score": "0-4",
-          "role": "次选",
-          "desc": "优势延伸主力比分"
-        },
-        {
-          "score": "0-2",
-          "role": "对冲",
-          "desc": "平局对冲防冷"
-        }
-      ],
-      "predicted_bqc": "【负负】(稳) / 【平负】(博)",
-      "tactical_strategy": {
-        "type": "handicap_special",
-        "badge": "🎯 让球专项",
-        "badge_class": "badge-gold",
-        "title": "按让球(2)结算",
-        "advance_tip": "主推【让负/防让平】"
-      },
-      "settlement": {
-        "result": "HIT",
-        "score": "0 - 2",
-        "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
-        "outcome": "让平",
-        "tip": "让负/防让平",
-        "market": "hhad"
-      },
-      "result_text": "研判命中"
-    },
-    {
-      "code": "周四006",
-      "league": "欧罗巴",
-      "time": "10-23 03:00",
-      "home": "伯恩茅斯",
-      "away": "AC米兰",
-      "home_rank": "-",
-      "away_rank": "-",
-      "status": "已完赛",
-      "form_home": [
-        "W",
-        "W",
-        "L",
-        "L",
-        "W"
-      ],
-      "form_away": [
-        "W",
-        "W",
-        "D",
-        "W",
-        "L"
-      ],
-      "odds": [
-        "1.85",
-        "3.50",
-        "3.30"
-      ],
-      "is_only_rq": false,
-      "rang": "-1",
-      "odds_rq": [
-        "3.88",
-        "3.72",
-        "1.66"
-      ],
-      "consensus": "主胜/防平",
-      "consensus_ratio": 73.2,
-      "consensus_breakdown": null,
-      "tip": "主胜/防平",
-      "predicted_scores": [
-        "1-0",
-        "2-1",
-        "1-1"
-      ],
-      "score": "3-0",
-      "result": "HIT",
-      "analysis": "去水胜平负 47.9%/25.3%/26.8%，泊松期望进球 1.55:1.1，首选【主胜】+次选【防平】（覆盖率 73.2%）。",
-      "dossier": {
-        "fundamental": "伯恩茅斯近10场 4胜3平3负，场均进1.80失1.40（截至2026-10-18）；AC米兰近10场 6胜3平1负，场均进2.20失1.10（截至2026-10-19）。",
-        "tactical_conflict": "泊松进攻期望参数：主队 λ=1.55、客队 λ=1.1（按本场胜平负官方SP反推拟合，拟合残差 0.16 个百分点）。结合主客攻防效率，本场总进球核心落点集中于 1、2、3 球区间。",
-        "market_attitude": "体彩官方胜平负 SP 开出 1.85 / 3.50 / 3.30，去水后真实隐含概率分别为 主胜 47.9% / 平局 25.3% / 客胜 26.8%。盘面赔付结构清晰，去水优势项指向明确。",
-        "decision_guide": "实战方案指引：【首选主胜】（去水概率最高主力项），次选【防平】（防冷对冲保护）。所选方案去水隐含覆盖率合计 73.2%。矩阵精算比分依次参考 1-0、2-1、1-1（对应总进球 1、2、3 球）。",
-        "summary": "去水胜平负 47.9%/25.3%/26.8%，泊松期望进球 1.55:1.1，首选【主胜】+次选【防平】（覆盖率 73.2%）。"
-      },
-      "sale_closed": true,
-      "prediction_snapshot": {
-        "tip": "主胜/防平",
-        "predicted_scores": [
-          "1-0",
-          "2-1",
-          "1-1"
-        ],
-        "predicted_goals": [
-          "1",
-          "2",
-          "3"
-        ],
-        "consensus_ratio": 73.2,
-        "is_only_rq": false,
-        "rang": "-1",
-        "frozen_at": "2026-10-22T22:48:14",
-        "kickoff": "2026-10-23T03:00:00",
-        "frozen_at_last_sellable": true,
-        "evidence": {
-          "odds": [
-            "1.85",
-            "3.50",
-            "3.30"
-          ],
-          "odds_source": "500.com",
-          "method": "odds_implied_probability",
-          "intel_used": false,
-          "intel_ids": []
-        },
-        "sha256": "426ee4d65c748f9e74965b7ede9e99c31385c495887f45a4cc8f24f61491cbd4"
-      },
-      "prediction_verified": true,
-      "provenance": {
-        "method": "odds_implied_probability",
-        "evidence": "停售冻结，含赔率与生成方式哈希",
-        "traceable": true,
-        "note": "停售时刻冻结（含临开赛早场），此后不随盘口变动"
-      },
-      "quant_factors": {
-        "market": "had",
-        "samples": 6480,
-        "win_rate": 47.0,
-        "draw_rate": 26.7,
-        "loss_rate": 26.3,
-        "ev_home": -0.131,
-        "ev_draw": -0.065,
-        "ev_away": -0.132,
-        "lambda_h": 1.55,
-        "lambda_a": 1.1,
-        "golden_scores": [
-          "1-0",
-          "2-1",
-          "1-1"
-        ],
-        "trap_level": "NORMAL",
-        "trap_warning": "盘面处于正常期望区间",
-        "stars": "★★★☆☆",
-        "tier_title": "双选防冷格局",
-        "smart_pick": null,
-        "smart_type": "DOUBLE",
-        "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
-      },
-      "stats": {
-        "home": {
-          "name": "伯恩茅斯",
-          "recent": {
-            "n": 10,
-            "w": 4,
-            "d": 3,
-            "l": 3,
-            "gf": 1.8,
-            "ga": 1.4,
-            "form": [
-              "W",
-              "W",
-              "L",
-              "L",
-              "W"
-            ]
-          },
-          "home": {
-            "n": 6,
-            "w": 3,
-            "d": 2,
-            "l": 1,
-            "gf": 2.0,
-            "ga": 0.67,
-            "form": [
-              "W",
-              "W",
-              "L",
-              "D",
-              "W"
-            ]
-          },
-          "away": {
-            "n": 4,
-            "w": 1,
-            "d": 1,
-            "l": 2,
-            "gf": 1.5,
-            "ga": 2.5,
-            "form": [
-              "L",
-              "W",
-              "D",
-              "L"
-            ]
-          },
-          "total": 10,
-          "last_date": "2026-10-18",
-          "stale_days": 5
-        },
-        "away": {
-          "name": "AC米兰",
-          "recent": {
-            "n": 10,
-            "w": 6,
-            "d": 3,
-            "l": 1,
-            "gf": 2.2,
-            "ga": 1.1,
-            "form": [
-              "W",
-              "W",
-              "D",
-              "W",
-              "L"
-            ]
-          },
-          "home": {
-            "n": 4,
-            "w": 3,
-            "d": 0,
-            "l": 1,
-            "gf": 2.0,
-            "ga": 1.0,
-            "form": [
-              "W",
-              "W",
-              "L",
-              "W"
-            ]
-          },
-          "away": {
-            "n": 6,
-            "w": 3,
-            "d": 3,
-            "l": 0,
-            "gf": 2.33,
-            "ga": 1.17,
-            "form": [
-              "W",
-              "D",
-              "D",
-              "D",
-              "W"
-            ]
-          },
-          "total": 10,
-          "last_date": "2026-10-19",
-          "stale_days": 4
-        },
-        "h2h": null,
-        "source": "500网即时战绩直连"
-      },
-      "stats_ts": "2026-10-27 12:22:22",
-      "predicted_goals": [
-        "1",
-        "2",
-        "3"
-      ],
-      "odds_official": [
-        "1.92",
-        "3.42",
-        "3.16"
-      ],
-      "official_market": "had",
-      "odds_source": "sporttery_official",
-      "detail_original": {
-        "tip": "主胜/防平",
-        "predicted_scores": [
-          "1-0",
-          "2-1",
-          "1-1"
-        ],
-        "predicted_goals": [
-          "2",
-          "3"
-        ],
-        "consensus": "主胜/防平 (65.0%)",
-        "consensus_ratio": 65.0,
-        "dossier": {
-          "summary": "伯恩茅斯对阵AC米兰，多因子量化研判核心首选【客胜】。",
-          "fundamental": "欧战淘汰赛阶段对决，伯恩茅斯坐镇活力球场主场冲击力强，但面对意甲顶级豪门AC米兰，欧战底蕴与阵容深度明显处于下风。米兰在阿莫林带领下战绩趋稳，客场求胜欲望强烈，战意极高。",
-          "tactical_conflict": "伯恩茅斯依赖高位逼抢与英超强度的对抗冲吊，但防线横向移动慢；米兰阵眼在于前场反击纵深与莱奥等爆点的快速推进。米兰通过边中结合极易打穿主队肋部，阵地攻坚与防反转换均占据主动。",
-          "market_attitude": "官方初开SP主胜3.3、平局3.65、客胜1.81，数学去水后客胜真实概率达48.9%，平局赔率高挂3.65阻断意图明显，机构持续压低客胜赔付防范，模型泊松xG亦看好米兰1.61期望进球值。",
-          "decision_guide": "【实战选号指引】：综合机构去水与多因子胜率，首选【客胜】；黄金比分防范锁定【0-2】、【1-2】、【0-1】。"
-        },
-        "quant_factors": {
-          "samples": 6426,
-          "win_rate": 45.2,
-          "draw_rate": 27.3,
-          "loss_rate": 27.5,
-          "ev_home": -0.133,
-          "ev_draw": -0.065,
-          "ev_away": -0.131,
-          "lambda_h": 1.54,
-          "lambda_a": 1.16,
-          "golden_scores": [
-            "1-1",
-            "0-1",
-            "0-0"
-          ],
-          "trap_level": "NORMAL",
-          "trap_warning": "盘面处于正常期望区间",
-          "stars": "★★☆☆☆",
-          "tier_title": "深水博冷区间",
-          "smart_pick": "让负",
-          "smart_type": "SINGLE",
-          "quant_detail_note": "【8万场让球利刃 · 极简让球直打】：8万场历史大数据同赔率下最高胜率仅为 45.2%，客队具备极强反客为主抗衡力。实战果断单挑【让负】，一注通吃客队不败！"
-        },
-        "result": "PENDING"
-      },
-      "detail_correction": {
-        "at": "2026-10-22T14:51:55",
-        "reason": "统一玩法与详情展示；保留原始快照及原文，派生说明不是新赛前预测"
-      },
-      "prediction_market": "had",
-      "detail_market_odds": [
-        "1.85",
-        "3.50",
-        "3.30"
-      ],
-      "detail_model": {
-        "lambda_h": 1.55,
-        "lambda_a": 1.1,
-        "fit_error_pp": 0.16,
-        "method": "independent_poisson_odds_fit",
-        "rang": 0
-      },
-      "detail_pure": [
-        47.8657,
-        25.3005,
-        26.8338
-      ],
-      "detail_schema": 2,
-      "tip_aligned_to_snapshot": {
-        "at": "2026-10-22T19:56:01",
-        "reason": "展示口径对齐赛前冻结快照（2026-10-22 一次性订正）"
-      },
-      "fid": "1479941",
-      "locked": true,
-      "crosscheck": {
-        "source": "fotmob",
-        "score": "3-0",
-        "finished": true
-      },
-      "predicted_scores_detail": [
-        {
-          "score": "1-0",
-          "role": "主力",
-          "desc": "概率基准核心比分"
-        },
-        {
-          "score": "2-1",
-          "role": "次选",
-          "desc": "优势延伸主力比分"
-        },
-        {
-          "score": "1-1",
-          "role": "对冲",
-          "desc": "平局对冲防冷"
-        }
-      ],
-      "predicted_bqc": "【胜胜】(稳) / 【平胜】(博) / 【平平】(防平)",
-      "tactical_strategy": {
-        "type": "double_chance",
-        "badge": "⚖️ 首选+防冷",
-        "badge_class": "badge-purple",
-        "title": "首选主力攻坚，次选对冲防冷",
-        "advance_tip": "首选【主胜】，次选【防平】"
-      },
-      "settlement": {
-        "result": "HIT",
-        "score": "3-0",
-        "source": "stored_score",
-        "settled_at": "2026-10-27T23:59:25",
-        "outcome": "主胜",
-        "tip": "主胜/防平",
-        "market": "had"
-      },
-      "result_text": "研判命中"
-    },
-    {
-      "code": "周四007",
-      "league": "欧罗巴",
-      "time": "10-23 03:00",
-      "home": "凯尔特人",
-      "away": "塞尔塔",
-      "home_rank": "-",
-      "away_rank": "-",
-      "status": "已完赛",
-      "form_home": [
-        "W",
-        "L",
-        "W",
-        "L",
-        "L"
-      ],
-      "form_away": [
-        "W",
-        "L",
-        "D",
-        "W",
-        "L"
-      ],
-      "odds": [
-        "2.60",
-        "3.00",
-        "2.44"
-      ],
-      "is_only_rq": false,
-      "rang": "+1",
-      "odds_rq": [
-        "1.44",
-        "4.10",
-        "5.25"
-      ],
-      "consensus": "客胜/防平",
-      "consensus_ratio": 65.9,
-      "consensus_breakdown": null,
-      "tip": "客胜/防平",
-      "predicted_scores": [
-        "0-1",
-        "1-2",
-        "1-1"
-      ],
-      "score": "1-2",
-      "result": "HIT",
-      "analysis": "去水胜平负 34.1%/29.6%/36.3%，泊松期望进球 1.07:1.1，首选【客胜】+次选【防平】（覆盖率 65.9%）。",
-      "dossier": {
-        "fundamental": "凯尔特人近10场 6胜0平4负，场均进1.90失1.40（截至2026-10-18）；塞尔塔近10场 2胜4平4负，场均进1.10失1.00（截至2026-10-18）。",
-        "tactical_conflict": "泊松进攻期望参数：主队 λ=1.07、客队 λ=1.1（按本场胜平负官方SP反推拟合，拟合残差 0.45 个百分点）。结合主客攻防效率，本场总进球核心落点集中于 1、2、3 球区间。",
-        "market_attitude": "体彩官方胜平负 SP 开出 2.60 / 3.00 / 2.44，去水后真实隐含概率分别为 主胜 34.1% / 平局 29.6% / 客胜 36.3%。盘面赔付结构清晰，去水优势项指向明确。",
-        "decision_guide": "实战方案指引：【首选客胜】（去水概率最高主力项），次选【防平】（防冷对冲保护）。所选方案去水隐含覆盖率合计 65.9%。矩阵精算比分依次参考 0-1、1-2、1-1（对应总进球 1、2、3 球）。 ⚠️均势预警：双方无明显让步优势（主客胜率相差仅2.2%），属高波动深水战，防冷优先级高。",
-        "summary": "去水胜平负 34.1%/29.6%/36.3%，泊松期望进球 1.07:1.1，首选【客胜】+次选【防平】（覆盖率 65.9%）。"
-      },
-      "sale_closed": true,
-      "prediction_snapshot": {
-        "tip": "客胜/防平",
-        "predicted_scores": [
-          "0-1",
-          "1-2",
-          "1-1"
-        ],
-        "predicted_goals": [
-          "1",
-          "2",
-          "3"
-        ],
-        "consensus_ratio": 65.9,
-        "is_only_rq": false,
-        "rang": "+1",
-        "frozen_at": "2026-10-22T22:48:14",
-        "kickoff": "2026-10-23T03:00:00",
-        "frozen_at_last_sellable": true,
-        "evidence": {
-          "odds": [
-            "2.60",
-            "3.00",
-            "2.44"
-          ],
-          "odds_source": "500.com",
-          "method": "odds_implied_probability",
-          "intel_used": false,
-          "intel_ids": []
-        },
-        "sha256": "69317bcd0ca03e99d521130fd560bcfe5fb913c0efd0cca3229ba38ce36e4f1e"
-      },
-      "prediction_verified": true,
-      "provenance": {
-        "method": "odds_implied_probability",
-        "evidence": "停售冻结，含赔率与生成方式哈希",
-        "traceable": true,
-        "note": "停售时刻冻结（含临开赛早场），此后不随盘口变动"
-      },
-      "quant_factors": {
-        "market": "had",
-        "samples": 5313,
-        "win_rate": 33.0,
-        "draw_rate": 30.4,
-        "loss_rate": 36.5,
-        "ev_home": -0.141,
-        "ev_draw": -0.087,
-        "ev_away": -0.109,
-        "lambda_h": 1.07,
-        "lambda_a": 1.1,
-        "golden_scores": [
-          "0-1",
-          "1-2",
-          "1-1"
-        ],
-        "trap_level": "NORMAL",
-        "trap_warning": "盘面处于正常期望区间",
-        "stars": "★★☆☆☆",
-        "tier_title": "深水博冷区间",
-        "smart_pick": null,
-        "smart_type": "DOUBLE",
-        "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
-      },
-      "stats": {
-        "home": {
-          "name": "凯尔特人",
-          "recent": {
-            "n": 10,
-            "w": 6,
-            "d": 0,
-            "l": 4,
-            "gf": 1.9,
-            "ga": 1.4,
-            "form": [
-              "W",
-              "L",
-              "W",
-              "L",
-              "L"
-            ]
-          },
-          "home": {
-            "n": 5,
-            "w": 3,
-            "d": 0,
-            "l": 2,
-            "gf": 2.6,
-            "ga": 1.2,
-            "form": [
-              "W",
-              "L",
-              "L",
-              "W",
-              "W"
-            ]
-          },
-          "away": {
-            "n": 5,
-            "w": 3,
-            "d": 0,
-            "l": 2,
-            "gf": 1.2,
-            "ga": 1.6,
-            "form": [
-              "L",
-              "W",
-              "L",
-              "W",
-              "W"
-            ]
-          },
-          "total": 10,
-          "last_date": "2026-10-18",
-          "stale_days": 5
-        },
-        "away": {
-          "name": "塞尔塔",
-          "recent": {
-            "n": 10,
-            "w": 2,
-            "d": 4,
-            "l": 4,
-            "gf": 1.1,
-            "ga": 1.0,
-            "form": [
-              "W",
-              "L",
-              "D",
-              "W",
-              "L"
-            ]
-          },
-          "home": {
-            "n": 6,
-            "w": 2,
-            "d": 1,
-            "l": 3,
-            "gf": 1.67,
-            "ga": 1.33,
-            "form": [
-              "W",
-              "L",
-              "W",
-              "D",
-              "L"
-            ]
-          },
-          "away": {
-            "n": 4,
-            "w": 0,
-            "d": 3,
-            "l": 1,
-            "gf": 0.25,
-            "ga": 0.5,
-            "form": [
-              "D",
-              "L",
-              "D",
-              "D"
-            ]
-          },
-          "total": 10,
-          "last_date": "2026-10-18",
-          "stale_days": 5
-        },
-        "h2h": null,
-        "source": "500网即时战绩直连"
-      },
-      "stats_ts": "2026-10-27 12:22:22",
-      "predicted_goals": [
-        "1",
-        "2",
-        "3"
-      ],
-      "odds_official": [
-        "2.46",
-        "3.30",
-        "2.38"
-      ],
-      "official_market": "had",
-      "odds_source": "sporttery_official",
-      "detail_original": {
-        "tip": "客不败/首选客胜",
-        "predicted_scores": [
-          "0-2",
-          "1-3",
-          "0-3"
-        ],
-        "predicted_goals": [
-          "2",
-          "3",
-          "4"
-        ],
-        "consensus": "客不败/首选客胜 (65.0%)",
-        "consensus_ratio": 65.0,
-        "dossier": {
-          "summary": "凯尔特人对阵塞尔塔，多因子量化研判核心首选【客胜/防平】。",
-          "fundamental": "欧罗巴淘汰资格争夺进入关键期，凯尔特人虽坐拥魔鬼主场且苏超压制力强，但在高强度欧战赛场防线转身慢、后腰覆盖不足的短板屡遭针对；塞尔塔作为西甲劲旅战术纪律严明，客战反击韧性极高，全力争分战意强烈。",
-          "tactical_conflict": "凯尔特人擅长主场高位压迫与边中结合，但攻防转换退守脱节；塞尔塔阵眼在于中场快节奏摆脱与锋线纵深穿插，利用边肋部空当打身后效率极高。主队极易在阵地战围攻中被客队高机动反击打穿身后，陷入被动局面。",
-          "market_attitude": "官方初盘开出主胜3.3、平局3.65、客胜1.81，数学去水后客胜真实概率达48.9%，折让给到客队强力半球低水保护。平赔3.65高企不设防，机构坚决规避客胜赔付风险，阻上意图显著，正路导向清晰。",
-          "decision_guide": "【实战选号指引】：综合机构去水与多因子胜率，首选【客胜/防平】；黄金比分防范锁定【1-2】、【0-2】、【1-1】。"
-        },
-        "quant_factors": {
-          "samples": 5457,
-          "win_rate": 34.8,
-          "draw_rate": 28.8,
-          "loss_rate": 36.4,
-          "ev_home": -0.143,
-          "ev_draw": -0.051,
-          "ev_away": -0.133,
-          "lambda_h": 1.3,
-          "lambda_a": 1.34,
-          "golden_scores": [
-            "1-1",
-            "0-1",
-            "1-0"
-          ],
-          "trap_level": "NORMAL",
-          "trap_warning": "盘面处于正常期望区间",
-          "stars": "★★☆☆☆",
-          "tier_title": "深水博冷区间",
-          "smart_pick": "让胜/防让平",
-          "smart_type": "DOUBLE",
-          "quant_detail_note": "【8万场让球利刃 · 83%防守破局】：8万场历史大数据同赔率下最高胜率仅为 36.4%，双方攻防死缠烂打（历史险胜占比高达 57%）。因此实战放弃胜平负单挑，果断打出【让胜/防让平】，用 83% 超高概率封死冷门并防让平吃高赔大肉！"
-        },
-        "result": "PENDING"
-      },
-      "detail_correction": {
-        "at": "2026-10-22T14:51:55",
-        "reason": "统一玩法与详情展示；保留原始快照及原文，派生说明不是新赛前预测"
-      },
-      "prediction_market": "had",
-      "detail_market_odds": [
-        "2.60",
-        "3.00",
-        "2.44"
-      ],
-      "detail_model": {
-        "lambda_h": 1.07,
-        "lambda_a": 1.1,
-        "fit_error_pp": 0.45,
-        "method": "independent_poisson_odds_fit",
-        "rang": 0
-      },
-      "detail_pure": [
-        34.1036,
-        29.5565,
-        36.3399
-      ],
-      "detail_schema": 2,
-      "tip_aligned_to_snapshot": {
-        "at": "2026-10-22T19:56:01",
-        "reason": "展示口径对齐赛前冻结快照（2026-10-22 一次性订正）"
-      },
-      "fid": "1479971",
-      "locked": true,
-      "crosscheck": {
-        "source": "fotmob",
-        "score": "1-2",
-        "finished": true
-      },
-      "predicted_scores_detail": [
-        {
-          "score": "0-1",
-          "role": "主力",
-          "desc": "概率基准核心比分"
-        },
-        {
-          "score": "1-2",
-          "role": "次选",
-          "desc": "优势延伸主力比分"
-        },
-        {
-          "score": "1-1",
-          "role": "对冲",
-          "desc": "平局对冲防冷"
-        }
-      ],
-      "predicted_bqc": "【负负】(稳) / 【平负】(博) / 【平平】(防平)",
-      "tactical_strategy": {
-        "type": "parity_shield",
-        "badge": "🛡️ 受让护盾",
-        "badge_class": "badge-blue",
-        "title": "双方均势波动大，受让不败为实战最优避坑方案",
-        "advance_tip": "凯尔特人(+1)受让不败 让胜 SP 1.44"
-      },
-      "settlement": {
-        "result": "HIT",
-        "score": "1 - 2",
-        "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
-        "outcome": "客胜",
-        "tip": "客胜/防平",
-        "market": "had"
-      },
-      "result_text": "研判命中"
-    },
-    {
-      "code": "周四008",
-      "league": "欧罗巴",
-      "time": "10-23 03:00",
-      "home": "贝西克塔",
-      "away": "水晶宫",
-      "home_rank": "-",
-      "away_rank": "-",
-      "status": "已完赛",
-      "form_home": [
-        "L",
-        "W",
-        "W",
-        "L",
-        "W"
-      ],
-      "form_away": [
-        "L",
-        "L",
-        "W",
-        "L",
-        "D"
-      ],
-      "odds": [
-        "1.95",
-        "3.75",
-        "2.86"
-      ],
-      "is_only_rq": false,
-      "rang": "-1",
-      "odds_rq": [
-        "3.65",
-        "3.75",
-        "1.70"
-      ],
-      "consensus": "主胜/防平",
-      "consensus_ratio": 69.0,
-      "consensus_breakdown": null,
-      "tip": "主胜/防平",
-      "predicted_scores": [
-        "2-1",
-        "1-0",
-        "1-1"
-      ],
-      "score": "2-2",
-      "result": "HIT",
-      "analysis": "去水胜平负 45.4%/23.6%/31.0%，泊松期望进球 1.7:1.38，首选【主胜】+次选【防平】（覆盖率 69.0%）。",
-      "dossier": {
-        "fundamental": "贝西克塔近10场 6胜0平4负，场均进2.20失1.40（截至2026-10-20）；水晶宫近10场 4胜1平5负，场均进1.80失2.00（截至2026-10-18）。",
-        "tactical_conflict": "泊松进攻期望参数：主队 λ=1.7、客队 λ=1.38（按本场胜平负官方SP反推拟合，拟合残差 0.3 个百分点）。结合主客攻防效率，本场总进球核心落点集中于 1、2、3 球区间。",
-        "market_attitude": "体彩官方胜平负 SP 开出 1.95 / 3.75 / 2.86，去水后真实隐含概率分别为 主胜 45.4% / 平局 23.6% / 客胜 31.0%。盘面赔付结构清晰，去水优势项指向明确。",
-        "decision_guide": "实战方案指引：【首选主胜】（去水概率最高主力项），次选【防平】（防冷对冲保护）。所选方案去水隐含覆盖率合计 69.0%。矩阵精算比分依次参考 2-1、1-0、1-1（对应总进球 1、2、3 球）。",
-        "summary": "去水胜平负 45.4%/23.6%/31.0%，泊松期望进球 1.7:1.38，首选【主胜】+次选【防平】（覆盖率 69.0%）。"
-      },
-      "sale_closed": true,
-      "prediction_snapshot": {
-        "tip": "主胜/防平",
-        "predicted_scores": [
-          "2-1",
-          "1-0",
-          "1-1"
-        ],
-        "predicted_goals": [
-          "1",
-          "2",
-          "3"
-        ],
-        "consensus_ratio": 69.0,
-        "is_only_rq": false,
-        "rang": "-1",
-        "frozen_at": "2026-10-22T22:48:14",
-        "kickoff": "2026-10-23T03:00:00",
-        "frozen_at_last_sellable": true,
-        "evidence": {
-          "odds": [
-            "1.95",
-            "3.75",
-            "2.86"
-          ],
-          "odds_source": "500.com",
-          "method": "odds_implied_probability",
-          "intel_used": false,
-          "intel_ids": []
-        },
-        "sha256": "8e0673a977d19af4c96572534711aaeef0b10a5a5fe3a1ef00211c4c20b15f46"
-      },
-      "prediction_verified": true,
-      "provenance": {
-        "method": "odds_implied_probability",
-        "evidence": "停售冻结，含赔率与生成方式哈希",
-        "traceable": true,
-        "note": "停售时刻冻结（含临开赛早场），此后不随盘口变动"
-      },
-      "quant_factors": {
-        "market": "had",
-        "samples": 1811,
-        "win_rate": 46.9,
-        "draw_rate": 23.6,
-        "loss_rate": 29.5,
-        "ev_home": -0.086,
-        "ev_draw": -0.116,
-        "ev_away": -0.155,
-        "lambda_h": 1.7,
-        "lambda_a": 1.38,
-        "golden_scores": [
-          "2-1",
-          "1-0",
-          "1-1"
-        ],
-        "trap_level": "NORMAL",
-        "trap_warning": "盘面处于正常期望区间",
-        "stars": "★★★☆☆",
-        "tier_title": "双选防冷格局",
-        "smart_pick": null,
-        "smart_type": "DOUBLE",
-        "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
-      },
-      "stats": {
-        "home": {
-          "name": "贝西克塔",
-          "recent": {
-            "n": 10,
-            "w": 6,
-            "d": 0,
-            "l": 4,
-            "gf": 2.2,
-            "ga": 1.4,
-            "form": [
-              "L",
-              "W",
-              "W",
-              "L",
-              "W"
-            ]
-          },
-          "home": {
-            "n": 4,
-            "w": 4,
-            "d": 0,
-            "l": 0,
-            "gf": 3.75,
-            "ga": 1.0,
-            "form": [
-              "W",
-              "W",
-              "W",
-              "W"
-            ]
-          },
-          "away": {
-            "n": 6,
-            "w": 2,
-            "d": 0,
-            "l": 4,
-            "gf": 1.17,
-            "ga": 1.67,
-            "form": [
-              "L",
-              "W",
-              "L",
-              "W",
-              "L"
-            ]
-          },
-          "total": 10,
-          "last_date": "2026-10-20",
-          "stale_days": 3
-        },
-        "away": {
-          "name": "水晶宫",
-          "recent": {
-            "n": 10,
-            "w": 4,
-            "d": 1,
-            "l": 5,
-            "gf": 1.8,
-            "ga": 2.0,
-            "form": [
-              "L",
-              "L",
-              "W",
-              "L",
-              "D"
-            ]
-          },
-          "home": {
-            "n": 6,
-            "w": 3,
-            "d": 0,
-            "l": 3,
-            "gf": 2.17,
-            "ga": 1.67,
-            "form": [
-              "W",
-              "L",
-              "W",
-              "L",
-              "W"
-            ]
-          },
-          "away": {
-            "n": 4,
-            "w": 1,
-            "d": 1,
-            "l": 2,
-            "gf": 1.25,
-            "ga": 2.5,
-            "form": [
-              "L",
-              "L",
-              "D",
-              "W"
-            ]
-          },
-          "total": 10,
-          "last_date": "2026-10-18",
-          "stale_days": 5
-        },
-        "h2h": null,
-        "source": "500网即时战绩直连"
-      },
-      "stats_ts": "2026-10-27 12:22:22",
-      "predicted_goals": [
-        "1",
-        "2",
-        "3"
-      ],
-      "odds_official": [
-        "1.87",
-        "3.75",
-        "3.05"
-      ],
-      "official_market": "had",
-      "odds_source": "sporttery_official",
-      "detail_original": {
-        "tip": "主不败/首选主胜",
-        "predicted_scores": [
-          "1-1",
-          "0-1",
-          "1-2"
-        ],
-        "predicted_goals": [
-          "1",
-          "2",
-          "3"
-        ],
-        "consensus": "主不败/首选主胜 (65.0%)",
-        "consensus_ratio": 65.0,
-        "dossier": {
-          "summary": "贝西克塔对阵水晶宫，多因子量化研判核心首选【客胜】。",
-          "fundamental": "土超豪门贝西克塔斯坐镇沃达丰魔鬼主场，战意毋庸置疑，但近期双线作战防守端屡现险情；英超劲旅水晶宫硬实力和对抗节奏明显占优，欧战客场具备充足战术容错率与战略纵深，整体战意与班底处于上风。",
-          "tactical_conflict": "贝西克塔斯擅长前场逼抢与肋部渗透，但后防回追速度慢是致命短板；水晶宫防守反击纵深极快，由守转攻具备极高转换效率，其高对抗与硬朗中场能够有效遏制土超技术型中轴，极易在反击战中刺穿主队防线。",
-          "market_attitude": "体彩开出主胜3.30、平局3.65、客胜1.81，去水后客胜真实概率接近50%。平赔高企在3.65阻断避险资金，亚指客让半球低水稳步推进，机构通过强硬态度压低客胜赔付，对英超客胜的真实杀伤力呈明确设防态势。",
-          "decision_guide": "【实战选号指引】：综合机构去水与多因子胜率，首选【客胜】；黄金比分防范锁定【1-2】、【0-2】。"
-        },
-        "quant_factors": {
-          "samples": 2045,
-          "win_rate": 48.2,
-          "draw_rate": 23.4,
-          "loss_rate": 28.4,
-          "ev_home": -0.08,
-          "ev_draw": -0.122,
-          "ev_away": -0.162,
-          "lambda_h": 1.74,
-          "lambda_a": 1.28,
-          "golden_scores": [
-            "1-2",
-            "0-1",
-            "0-2"
-          ],
-          "trap_level": "NORMAL",
-          "trap_warning": "盘面处于正常期望区间",
-          "stars": "★★☆☆☆",
-          "tier_title": "深水博冷区间",
-          "smart_pick": "客不败/首选客胜",
-          "smart_type": "SINGLE",
-          "quant_detail_note": "【同赔样本 2045 场】：胜/平/负打出 48.2% / 23.4% / 28.4%，单一路口均未过半，故取双选【客不败/首选客胜】，历史覆盖 51.8%。"
-        },
-        "result": "PENDING"
-      },
-      "detail_correction": {
-        "at": "2026-10-22T14:51:55",
-        "reason": "统一玩法与详情展示；保留原始快照及原文，派生说明不是新赛前预测"
-      },
-      "prediction_market": "had",
-      "detail_market_odds": [
-        "1.95",
-        "3.75",
-        "2.86"
-      ],
-      "detail_model": {
-        "lambda_h": 1.7,
-        "lambda_a": 1.38,
-        "fit_error_pp": 0.3,
-        "method": "independent_poisson_odds_fit",
-        "rang": 0
-      },
-      "detail_pure": [
-        45.417,
-        23.6168,
-        30.9661
-      ],
-      "detail_schema": 2,
-      "tip_aligned_to_snapshot": {
-        "at": "2026-10-22T19:56:01",
-        "reason": "展示口径对齐赛前冻结快照（2026-10-22 一次性订正）"
-      },
-      "fid": "1479939",
-      "locked": true,
-      "crosscheck": {
-        "source": "fotmob",
-        "score": "2-2",
-        "finished": true
-      },
-      "predicted_scores_detail": [
-        {
-          "score": "2-1",
-          "role": "主力",
-          "desc": "概率基准核心比分"
-        },
-        {
-          "score": "1-0",
-          "role": "次选",
-          "desc": "优势延伸主力比分"
-        },
-        {
-          "score": "1-1",
-          "role": "对冲",
-          "desc": "平局对冲防冷"
-        }
-      ],
-      "predicted_bqc": "【胜胜】(稳) / 【平胜】(博) / 【平平】(防平)",
-      "tactical_strategy": {
-        "type": "double_chance",
-        "badge": "⚖️ 首选+防冷",
-        "badge_class": "badge-purple",
-        "title": "首选主力攻坚，次选对冲防冷",
-        "advance_tip": "首选【主胜】，次选【防平】"
-      },
-      "settlement": {
-        "result": "HIT",
-        "score": "2 - 2",
-        "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
-        "outcome": "平局",
-        "tip": "主胜/防平",
-        "market": "had"
-      },
-      "result_text": "研判命中"
-    },
-    {
-      "code": "周四009",
-      "league": "欧罗巴",
-      "time": "10-23 03:00",
-      "home": "霍芬海姆",
-      "away": "里昂",
-      "home_rank": "-",
-      "away_rank": "-",
-      "status": "已完赛",
-      "form_home": [
-        "W",
-        "L",
-        "L",
-        "L",
-        "L"
-      ],
-      "form_away": [
-        "W",
-        "W",
-        "L",
-        "W",
-        "W"
-      ],
-      "odds": [
-        "1.92",
-        "3.95",
-        "2.82"
-      ],
-      "is_only_rq": false,
-      "rang": "-1",
-      "odds_rq": [
-        "3.62",
-        "4.10",
-        "1.64"
-      ],
-      "consensus": "主胜/防平",
-      "consensus_ratio": 68.6,
-      "consensus_breakdown": null,
-      "tip": "主胜/防平",
-      "predicted_scores": [
-        "2-1",
-        "1-0",
-        "1-1"
-      ],
-      "score": "3-0",
-      "result": "HIT",
-      "analysis": "去水胜平负 46.1%/22.4%/31.4%，泊松期望进球 1.84:1.49，首选【主胜】+次选【防平】（覆盖率 68.6%）。",
-      "dossier": {
-        "fundamental": "霍芬海姆近10场 3胜1平6负，场均进1.90失2.10（截至2026-10-18）；里昂近10场 6胜2平2负，场均进1.90失1.00（截至2026-10-19）。",
-        "tactical_conflict": "泊松进攻期望参数：主队 λ=1.84、客队 λ=1.49（按本场胜平负官方SP反推拟合，拟合残差 0.13 个百分点）。结合主客攻防效率，本场总进球核心落点集中于 1、2、3 球区间。",
-        "market_attitude": "体彩官方胜平负 SP 开出 1.92 / 3.95 / 2.82，去水后真实隐含概率分别为 主胜 46.1% / 平局 22.4% / 客胜 31.4%。盘面赔付结构清晰，去水优势项指向明确。",
-        "decision_guide": "实战方案指引：【首选主胜】（去水概率最高主力项），次选【防平】（防冷对冲保护）。所选方案去水隐含覆盖率合计 68.6%。矩阵精算比分依次参考 2-1、1-0、1-1（对应总进球 1、2、3 球）。",
-        "summary": "去水胜平负 46.1%/22.4%/31.4%，泊松期望进球 1.84:1.49，首选【主胜】+次选【防平】（覆盖率 68.6%）。"
-      },
-      "sale_closed": true,
-      "prediction_snapshot": {
-        "tip": "主胜/防平",
-        "predicted_scores": [
-          "2-1",
-          "1-0",
-          "1-1"
-        ],
-        "predicted_goals": [
-          "1",
-          "2",
-          "3"
-        ],
-        "consensus_ratio": 68.6,
-        "is_only_rq": false,
-        "rang": "-1",
-        "frozen_at": "2026-10-22T22:48:14",
-        "kickoff": "2026-10-23T03:00:00",
-        "frozen_at_last_sellable": true,
-        "evidence": {
-          "odds": [
-            "1.92",
-            "3.95",
-            "2.82"
-          ],
-          "odds_source": "500.com",
-          "method": "odds_implied_probability",
-          "intel_used": false,
-          "intel_ids": []
-        },
-        "sha256": "c7cf7bb8d65cac98c6504dc51a37e773894fc318aae5b0429bf836ddadcab1ba"
-      },
-      "prediction_verified": true,
-      "provenance": {
-        "method": "odds_implied_probability",
-        "evidence": "停售冻结，含赔率与生成方式哈希",
-        "traceable": true,
-        "note": "停售时刻冻结（含临开赛早场），此后不随盘口变动"
-      },
-      "quant_factors": {
-        "market": "had",
-        "samples": 320,
-        "win_rate": 50.9,
-        "draw_rate": 18.8,
-        "loss_rate": 30.3,
-        "ev_home": -0.022,
-        "ev_draw": -0.259,
-        "ev_away": -0.145,
-        "lambda_h": 1.84,
-        "lambda_a": 1.49,
-        "golden_scores": [
-          "2-1",
-          "1-0",
-          "1-1"
-        ],
-        "trap_level": "NORMAL",
-        "trap_warning": "盘面处于正常期望区间",
-        "stars": "★★★☆☆",
-        "tier_title": "双选防冷格局",
-        "smart_pick": null,
-        "smart_type": "DOUBLE",
-        "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
-      },
-      "stats": {
-        "home": {
-          "name": "霍芬海姆",
-          "recent": {
-            "n": 10,
-            "w": 3,
-            "d": 1,
-            "l": 6,
-            "gf": 1.9,
-            "ga": 2.1,
-            "form": [
-              "W",
-              "L",
-              "L",
-              "L",
-              "L"
-            ]
-          },
-          "home": {
-            "n": 4,
-            "w": 1,
-            "d": 0,
-            "l": 3,
-            "gf": 2.0,
-            "ga": 2.5,
-            "form": [
-              "L",
-              "L",
-              "W",
-              "L"
-            ]
-          },
-          "away": {
-            "n": 6,
-            "w": 2,
-            "d": 1,
-            "l": 3,
-            "gf": 1.83,
-            "ga": 1.83,
-            "form": [
-              "W",
-              "L",
-              "L",
-              "L",
-              "W"
-            ]
-          },
-          "total": 10,
-          "last_date": "2026-10-18",
-          "stale_days": 5
-        },
-        "away": {
-          "name": "里昂",
-          "recent": {
-            "n": 10,
-            "w": 6,
-            "d": 2,
-            "l": 2,
-            "gf": 1.9,
-            "ga": 1.0,
-            "form": [
-              "W",
-              "W",
-              "L",
-              "W",
-              "W"
-            ]
-          },
-          "home": {
-            "n": 6,
-            "w": 4,
-            "d": 1,
-            "l": 1,
-            "gf": 2.33,
-            "ga": 1.17,
-            "form": [
-              "W",
-              "W",
-              "W",
-              "W",
-              "D"
-            ]
-          },
-          "away": {
-            "n": 4,
-            "w": 2,
-            "d": 1,
-            "l": 1,
-            "gf": 1.25,
-            "ga": 0.75,
-            "form": [
-              "L",
-              "W",
-              "D",
-              "W"
-            ]
-          },
-          "total": 10,
-          "last_date": "2026-10-19",
-          "stale_days": 4
-        },
-        "h2h": {
-          "n": 3,
-          "a_win": 0,
-          "draw": 3,
-          "b_win": 0,
-          "a_goals": 7,
-          "b_goals": 7,
-          "last": [
-            {
-              "date": "2018-10-24",
-              "score": "3-3",
-              "home": "霍芬海姆"
-            },
-            {
-              "date": "2018-11-08",
-              "score": "2-2",
-              "home": "里昂"
-            },
-            {
-              "date": "2024-11-08",
-              "score": "2-2",
-              "home": "霍芬海姆"
-            }
-          ]
-        },
-        "source": "500网即时战绩直连"
-      },
-      "stats_ts": "2026-10-27 12:22:22",
-      "predicted_goals": [
-        "1",
-        "2",
-        "3"
-      ],
-      "odds_official": [
-        "1.95",
-        "3.90",
-        "2.78"
-      ],
-      "official_market": "had",
-      "odds_source": "sporttery_official",
-      "detail_original": {
-        "tip": "主不败/首选主胜",
-        "predicted_scores": [
-          "2-0",
-          "3-1",
-          "2-1"
-        ],
-        "predicted_goals": [
-          "2",
-          "3",
-          "4"
-        ],
-        "consensus": "主不败/首选主胜 (65.0%)",
-        "consensus_ratio": 65.0,
-        "dossier": {
-          "summary": "霍芬海姆对阵里昂，多因子量化研判核心首选【客胜】。",
-          "fundamental": "霍芬海姆本赛季双线作战体能吃紧，德甲赛场防线漏洞百出，场均失球居高不下，欧战战意受到联赛保级压力掣肘。反观里昂在欧联杯赛场反击犀利、纵深压迫极具侵略性，客场拿分战意十分坚定，体能与心理层面占据相对优势。",
-          "tactical_conflict": "霍芬海姆主打阵地攻坚但中前场回防脱节，面对高位逼抢出球失误偏多；里昂战术阵眼在于边锋由守转攻的瞬间穿透力，打霍村三中卫两肋空当极具杀伤力。若霍村盲目压上，后场纵深将成为客队锋线反击肆虐的天然走廊。",
-          "market_attitude": "官方SP初开主胜3.30、平局3.65、客胜1.81，数学去水后客胜真实概率达到48.9%，机构抽水12.9%。欧亚主流机构持续将客胜水位压制在低位吸筹，平局3.65高企不设防，机构对里昂正路打出给予了充足的赔付保护与风控阻上。",
-          "decision_guide": "【实战选号指引】：综合机构去水与多因子胜率，首选【客胜】；黄金比分防范锁定【1-2】、【0-2】。"
-        },
-        "quant_factors": {
-          "samples": 741,
-          "win_rate": 49.7,
-          "draw_rate": 21.3,
-          "loss_rate": 29.0,
-          "ev_home": -0.046,
-          "ev_draw": -0.168,
-          "ev_away": -0.176,
-          "lambda_h": 1.87,
-          "lambda_a": 1.32,
-          "golden_scores": [
-            "2-1",
-            "1-0",
-            "2-0"
-          ],
-          "trap_level": "NORMAL",
-          "trap_warning": "盘面处于正常期望区间",
-          "stars": "★★☆☆☆",
-          "tier_title": "深水博冷区间",
-          "smart_pick": "主胜/防平",
-          "smart_type": "DOUBLE",
-          "quant_detail_note": ""
-        },
-        "result": "PENDING"
-      },
-      "detail_correction": {
-        "at": "2026-10-22T14:51:56",
-        "reason": "统一玩法与详情展示；保留原始快照及原文，派生说明不是新赛前预测"
-      },
-      "prediction_market": "had",
-      "detail_market_odds": [
-        "1.92",
-        "3.95",
-        "2.82"
-      ],
-      "detail_model": {
-        "lambda_h": 1.84,
-        "lambda_a": 1.49,
-        "fit_error_pp": 0.13,
-        "method": "independent_poisson_odds_fit",
-        "rang": 0
-      },
-      "detail_pure": [
-        46.1483,
-        22.4316,
-        31.4201
-      ],
-      "detail_schema": 2,
-      "odds_conflict": {
-        "local": [
-          "1.92",
-          "3.90",
-          "2.84"
-        ],
-        "official": [
-          "1.95",
-          "3.90",
-          "2.78"
-        ],
-        "at": "2026-10-22 15:01:20"
-      },
-      "tip_aligned_to_snapshot": {
-        "at": "2026-10-22T19:56:01",
-        "reason": "展示口径对齐赛前冻结快照（2026-10-22 一次性订正）"
-      },
-      "fid": "1480007",
-      "locked": true,
-      "crosscheck": {
-        "source": "fotmob",
-        "score": "3-0",
-        "finished": true
-      },
-      "predicted_scores_detail": [
-        {
-          "score": "2-1",
-          "role": "主力",
-          "desc": "概率基准核心比分"
-        },
-        {
-          "score": "1-0",
-          "role": "次选",
-          "desc": "优势延伸主力比分"
-        },
-        {
-          "score": "1-1",
-          "role": "对冲",
-          "desc": "平局对冲防冷"
-        }
-      ],
-      "predicted_bqc": "【胜胜】(稳) / 【平胜】(博) / 【平平】(防平)",
-      "tactical_strategy": {
-        "type": "double_chance",
-        "badge": "⚖️ 首选+防冷",
-        "badge_class": "badge-purple",
-        "title": "首选主力攻坚，次选对冲防冷",
-        "advance_tip": "首选【主胜】，次选【防平】"
-      },
-      "result_text": "研判命中",
-      "settlement": {
-        "result": "HIT",
-        "score": "3 - 0",
-        "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
-        "outcome": "主胜",
-        "tip": "主胜/防平",
-        "market": "had"
-      }
-    },
-    {
-      "code": "周四010",
-      "league": "欧罗巴",
-      "time": "10-23 03:00",
-      "home": "利勒斯特",
-      "away": "皇家社会",
-      "home_rank": "-",
-      "away_rank": "-",
-      "status": "已完赛",
-      "form_home": [
-        "W",
-        "D",
-        "D",
-        "W",
-        "L"
-      ],
-      "form_away": [
-        "W",
-        "D",
-        "W",
-        "L",
-        "W"
-      ],
-      "odds": [
-        "6.95",
-        "5.05",
-        "1.27"
-      ],
-      "is_only_rq": false,
-      "rang": "+1",
-      "odds_rq": [
-        "2.91",
-        "3.82",
-        "1.91"
-      ],
-      "consensus": "客胜",
-      "consensus_ratio": 69.7,
-      "consensus_breakdown": null,
-      "tip": "客胜",
-      "predicted_scores": [
-        "0-2",
-        "1-2",
-        "0-1"
-      ],
-      "score": "0-6",
-      "result": "HIT",
-      "analysis": "去水胜平负 12.7%/17.5%/69.7%，泊松期望进球 0.89:2.33，单挑【客胜】稳胆（去水胜率 69.7%）。",
-      "dossier": {
-        "fundamental": "利勒斯特近10场 5胜2平3负，场均进1.90失1.40（截至2026-10-18）；皇家社会近10场 5胜2平3负，场均进1.80失1.60（截至2026-10-19）。",
-        "tactical_conflict": "泊松进攻期望参数：主队 λ=0.89、客队 λ=2.33（按本场胜平负官方SP反推拟合，拟合残差 0.17 个百分点）。结合主客攻防效率，本场总进球核心落点集中于 1、2、3 球区间。",
-        "market_attitude": "体彩官方胜平负 SP 开出 6.95 / 5.05 / 1.27，去水后真实隐含概率分别为 主胜 12.7% / 平局 17.5% / 客胜 69.7%。盘面赔付结构清晰，去水优势项指向明确。",
-        "decision_guide": "实战方案指引：单选【客胜】作核心稳胆。所选方案去水隐含覆盖率合计 69.7%。矩阵精算比分依次参考 0-2、1-2、0-1（对应总进球 1、2、3 球）。 💡进阶参考：深盘主选回报较低，可参考让球(+1) 让负 SP 1.91。",
-        "summary": "去水胜平负 12.7%/17.5%/69.7%，泊松期望进球 0.89:2.33，单挑【客胜】稳胆（去水胜率 69.7%）。"
-      },
-      "sale_closed": true,
-      "prediction_snapshot": {
-        "tip": "客胜",
-        "predicted_scores": [
-          "0-2",
-          "1-2",
-          "0-1"
-        ],
-        "predicted_goals": [
-          "1",
-          "2",
-          "3"
-        ],
-        "consensus_ratio": 69.7,
-        "is_only_rq": false,
-        "rang": "+1",
-        "frozen_at": "2026-10-22T22:48:14",
-        "kickoff": "2026-10-23T03:00:00",
-        "frozen_at_last_sellable": true,
-        "evidence": {
-          "odds": [
-            "6.95",
-            "5.05",
-            "1.27"
-          ],
-          "odds_source": "500.com",
-          "method": "odds_implied_probability",
-          "intel_used": false,
-          "intel_ids": []
-        },
-        "sha256": "d1b412eeef385887ec2c30732f860988722abd0d208a0edb86ecd8b0acf9b427"
-      },
-      "prediction_verified": true,
-      "provenance": {
-        "method": "odds_implied_probability",
-        "evidence": "停售冻结，含赔率与生成方式哈希",
-        "traceable": true,
-        "note": "停售时刻冻结（含临开赛早场），此后不随盘口变动"
-      },
-      "quant_factors": {
-        "market": "had",
-        "samples": 55,
-        "win_rate": 12.7,
-        "draw_rate": 10.9,
-        "loss_rate": 76.4,
-        "ev_home": -0.115,
-        "ev_draw": -0.449,
-        "ev_away": -0.03,
-        "lambda_h": 0.89,
-        "lambda_a": 2.33,
-        "golden_scores": [
-          "0-2",
-          "1-2",
-          "0-1"
-        ],
-        "trap_level": "NORMAL",
-        "trap_warning": "盘面处于正常期望区间",
-        "stars": "★★★★☆",
-        "tier_title": "高确定性稳胆",
-        "smart_pick": null,
-        "smart_type": "SINGLE",
-        "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
-      },
-      "stats": {
-        "home": {
-          "name": "利勒斯特",
-          "recent": {
-            "n": 10,
-            "w": 5,
-            "d": 2,
-            "l": 3,
-            "gf": 1.9,
-            "ga": 1.4,
-            "form": [
-              "W",
-              "D",
-              "D",
-              "W",
-              "L"
-            ]
-          },
-          "home": {
-            "n": 4,
-            "w": 1,
-            "d": 1,
-            "l": 2,
-            "gf": 1.5,
-            "ga": 2.0,
-            "form": [
-              "D",
-              "L",
-              "W",
-              "L"
-            ]
-          },
-          "away": {
-            "n": 6,
-            "w": 4,
-            "d": 1,
-            "l": 1,
-            "gf": 2.17,
-            "ga": 1.0,
-            "form": [
-              "W",
-              "D",
-              "W",
-              "L",
-              "W"
-            ]
-          },
-          "total": 10,
-          "last_date": "2026-10-18",
-          "stale_days": 5
-        },
-        "away": {
-          "name": "皇家社会",
-          "recent": {
-            "n": 10,
-            "w": 5,
-            "d": 2,
-            "l": 3,
-            "gf": 1.8,
-            "ga": 1.6,
-            "form": [
-              "W",
-              "D",
-              "W",
-              "L",
-              "W"
-            ]
-          },
-          "home": {
-            "n": 6,
-            "w": 2,
-            "d": 1,
-            "l": 3,
-            "gf": 1.0,
-            "ga": 1.5,
-            "form": [
-              "W",
-              "L",
-              "L",
-              "L",
-              "D"
-            ]
-          },
-          "away": {
-            "n": 4,
-            "w": 3,
-            "d": 1,
-            "l": 0,
-            "gf": 3.0,
-            "ga": 1.75,
-            "form": [
-              "W",
-              "D",
-              "W",
-              "W"
-            ]
-          },
-          "total": 10,
-          "last_date": "2026-10-19",
-          "stale_days": 4
-        },
-        "h2h": null,
-        "source": "500网即时战绩直连"
-      },
-      "stats_ts": "2026-10-27 12:22:22",
-      "predicted_goals": [
-        "1",
-        "2",
-        "3"
-      ],
-      "odds_official": [
-        "6.75",
-        "5.00",
-        "1.28"
-      ],
-      "official_market": "had",
-      "odds_source": "sporttery_official",
-      "detail_original": {
-        "tip": "客胜",
-        "predicted_scores": [
-          "0-2",
-          "1-2",
-          "0-3"
-        ],
-        "predicted_goals": [
-          "2",
-          "3"
-        ],
-        "consensus": "客胜 (79.6%)",
-        "consensus_ratio": 79.6,
-        "dossier": {
-          "summary": "利勒斯特对阵皇家社会，多因子量化研判核心首选【客胜】。",
-          "fundamental": "欧战赛场皇家社会整体班底硬实力与技战术素养均在利勒斯特罗姆之上。尽管客场作战存在北欧寒冷气候与人工草皮的客观考验，但皇家社会欧战向来求稳求精，阵地控制力极强。利勒斯特罗姆国内联赛防线抗压能力有限，主场若被动拉锯难挡客队渗透，客队抢分战意充沛。",
-          "tactical_conflict": "战术阵眼在于皇家社会中前场的传控压迫与局部撕裂能力对阵利勒斯特罗姆的高位身体肉搏。主队擅长高空轰炸与定位球突袭，但在阵地防守转换中肋部空档极大。皇家社会通过肋部直塞与控节奏能有效规避肉搏绞杀，一旦主队阵型前倾，客队反击纵深穿透将直接锁定胜局。",
-          "market_attitude": "官方SP给出主胜3.30、平局3.65、客胜1.81，客胜真实概率接近48.9%，平赔被大幅推高至3.65展现出强烈的两头分流意图。机构通过1.81的实盘低赔给客队树立坚实壁垒，去水后客胜模型xG达1.61且未过度升水诱盘，对皇家社会客场拿下的防范体系极其稳固。",
-          "decision_guide": "【实战选号指引】：综合机构去水与多因子胜率，首选【客胜】；黄金比分防范锁定【0-1】、【0-2】、【1-2】。"
-        },
-        "quant_factors": {
-          "samples": 541,
-          "win_rate": 13.9,
-          "draw_rate": 19.4,
-          "loss_rate": 66.7,
-          "ev_home": -0.064,
-          "ev_draw": -0.03,
-          "ev_away": -0.146,
-          "lambda_h": 0.84,
-          "lambda_a": 2.07,
-          "golden_scores": [
-            "0-1",
-            "1-2",
-            "0-2"
-          ],
-          "trap_level": "NORMAL",
-          "trap_warning": "盘面处于正常期望区间",
-          "stars": "★★☆☆☆",
-          "tier_title": "深水博冷区间",
-          "smart_pick": "客胜/防平",
-          "smart_type": "DOUBLE",
-          "quant_detail_note": ""
-        },
-        "result": "PENDING"
-      },
-      "detail_correction": {
-        "at": "2026-10-22T14:51:56",
-        "reason": "统一玩法与详情展示；保留原始快照及原文，派生说明不是新赛前预测"
-      },
-      "prediction_market": "had",
-      "detail_market_odds": [
-        "6.95",
-        "5.05",
-        "1.27"
-      ],
-      "detail_model": {
-        "lambda_h": 0.89,
-        "lambda_a": 2.33,
-        "fit_error_pp": 0.17,
-        "method": "independent_poisson_odds_fit",
-        "rang": 0
-      },
-      "detail_pure": [
-        12.741,
-        17.5346,
-        69.7244
-      ],
-      "detail_schema": 2,
-      "fid": "1480053",
-      "locked": true,
-      "crosscheck": {
-        "source": "fotmob",
-        "score": "0-6",
-        "finished": true
-      },
-      "predicted_scores_detail": [
-        {
-          "score": "0-2",
-          "role": "主力",
-          "desc": "概率基准核心比分"
-        },
-        {
-          "score": "1-2",
-          "role": "次选",
-          "desc": "优势延伸主力比分"
-        },
-        {
-          "score": "0-1",
-          "role": "博高",
-          "desc": "深层大胜穿盘"
-        }
-      ],
-      "predicted_bqc": "【负负】(稳) / 【平负】(博)",
-      "tactical_strategy": {
-        "type": "deep_handicap",
-        "badge": "⚡ 深盘进阶",
-        "badge_class": "badge-gold",
-        "title": "主选SP偏低，首选让球或精选比分提升回报",
-        "advance_tip": "让球(+1) 让负 SP 1.91"
-      },
-      "settlement": {
-        "result": "HIT",
-        "score": "0 - 6",
-        "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
-        "outcome": "客胜",
-        "tip": "客胜",
-        "market": "had"
-      },
-      "result_text": "研判命中"
-    },
-    {
-      "code": "周四011",
-      "league": "欧协联",
-      "time": "10-23 03:00",
-      "home": "阿贾克斯",
-      "away": "亚特兰大",
-      "home_rank": "-",
-      "away_rank": "-",
-      "status": "已完赛",
-      "form_home": [
-        "W",
-        "L",
-        "D",
-        "D",
-        "W"
-      ],
-      "form_away": [
-        "L",
-        "W",
-        "W",
-        "L",
-        "L"
-      ],
-      "odds": [
-        "1.95",
-        "3.68",
-        "2.90"
-      ],
-      "is_only_rq": false,
-      "rang": "-1",
-      "odds_rq": [
-        "3.52",
-        "3.70",
-        "1.74"
-      ],
-      "consensus": "主胜/防平",
-      "consensus_ratio": 69.5,
-      "consensus_breakdown": null,
-      "tip": "主胜/防平",
-      "predicted_scores": [
-        "2-1",
-        "1-0",
-        "1-1"
-      ],
-      "score": "2-0",
-      "result": "HIT",
-      "analysis": "去水胜平负 45.4%/24.1%/30.5%，泊松期望进球 1.68:1.33，首选【主胜】+次选【防平】（覆盖率 69.5%）。",
-      "dossier": {
-        "fundamental": "阿贾克斯近10场 6胜2平2负，场均进3.30失1.70（截至2026-10-18）；亚特兰大近10场 5胜1平4负，场均进1.40失1.20（截至2026-10-19）。",
-        "tactical_conflict": "泊松进攻期望参数：主队 λ=1.68、客队 λ=1.33（按本场胜平负官方SP反推拟合，拟合残差 0.31 个百分点）。结合主客攻防效率，本场总进球核心落点集中于 1、2、3 球区间。",
-        "market_attitude": "体彩官方胜平负 SP 开出 1.95 / 3.68 / 2.90，去水后真实隐含概率分别为 主胜 45.4% / 平局 24.1% / 客胜 30.5%。盘面赔付结构清晰，去水优势项指向明确。",
-        "decision_guide": "实战方案指引：【首选主胜】（去水概率最高主力项），次选【防平】（防冷对冲保护）。所选方案去水隐含覆盖率合计 69.5%。矩阵精算比分依次参考 2-1、1-0、1-1（对应总进球 1、2、3 球）。",
-        "summary": "去水胜平负 45.4%/24.1%/30.5%，泊松期望进球 1.68:1.33，首选【主胜】+次选【防平】（覆盖率 69.5%）。"
-      },
-      "sale_closed": true,
-      "prediction_snapshot": {
-        "tip": "主胜/防平",
-        "predicted_scores": [
-          "2-1",
-          "1-0",
-          "1-1"
-        ],
-        "predicted_goals": [
-          "1",
-          "2",
-          "3"
-        ],
-        "consensus_ratio": 69.5,
-        "is_only_rq": false,
-        "rang": "-1",
-        "frozen_at": "2026-10-22T22:48:14",
-        "kickoff": "2026-10-23T03:00:00",
-        "frozen_at_last_sellable": true,
-        "evidence": {
-          "odds": [
-            "1.95",
-            "3.68",
-            "2.90"
-          ],
-          "odds_source": "500.com",
-          "method": "odds_implied_probability",
-          "intel_used": false,
-          "intel_ids": []
-        },
-        "sha256": "3bf107e8dd34f3f05d1b99da7fb1e8782df2ed53a1f3f2d65307979d1f1b7e7a"
-      },
-      "prediction_verified": true,
-      "provenance": {
-        "method": "odds_implied_probability",
-        "evidence": "停售冻结，含赔率与生成方式哈希",
-        "traceable": true,
-        "note": "停售时刻冻结（含临开赛早场），此后不随盘口变动"
-      },
-      "quant_factors": {
-        "market": "had",
-        "samples": 2448,
-        "win_rate": 44.5,
-        "draw_rate": 25.5,
-        "loss_rate": 30.0,
-        "ev_home": -0.132,
-        "ev_draw": -0.062,
-        "ev_away": -0.13,
-        "lambda_h": 1.68,
-        "lambda_a": 1.33,
-        "golden_scores": [
-          "2-1",
-          "1-0",
-          "1-1"
-        ],
-        "trap_level": "NORMAL",
-        "trap_warning": "盘面处于正常期望区间",
-        "stars": "★★★☆☆",
-        "tier_title": "双选防冷格局",
-        "smart_pick": null,
-        "smart_type": "DOUBLE",
-        "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
-      },
-      "stats": {
-        "home": {
-          "name": "阿贾克斯",
-          "recent": {
-            "n": 10,
-            "w": 6,
-            "d": 2,
-            "l": 2,
-            "gf": 3.3,
-            "ga": 1.7,
-            "form": [
-              "W",
-              "L",
-              "D",
-              "D",
-              "W"
-            ]
-          },
-          "home": {
-            "n": 5,
-            "w": 2,
-            "d": 2,
-            "l": 1,
-            "gf": 2.8,
-            "ga": 2.0,
-            "form": [
-              "D",
-              "D",
-              "W",
-              "L",
-              "W"
-            ]
-          },
-          "away": {
-            "n": 5,
-            "w": 4,
-            "d": 0,
-            "l": 1,
-            "gf": 3.8,
-            "ga": 1.4,
-            "form": [
-              "W",
-              "L",
-              "W",
-              "W",
-              "W"
-            ]
-          },
-          "total": 10,
-          "last_date": "2026-10-18",
-          "stale_days": 5
-        },
-        "away": {
-          "name": "亚特兰大",
-          "recent": {
-            "n": 10,
-            "w": 5,
-            "d": 1,
-            "l": 4,
-            "gf": 1.4,
-            "ga": 1.2,
-            "form": [
-              "L",
-              "W",
-              "W",
-              "L",
-              "L"
-            ]
-          },
-          "home": {
-            "n": 6,
-            "w": 4,
-            "d": 1,
-            "l": 1,
-            "gf": 1.67,
-            "ga": 0.83,
-            "form": [
-              "W",
-              "W",
-              "L",
-              "W",
-              "W"
-            ]
-          },
-          "away": {
-            "n": 4,
-            "w": 1,
-            "d": 0,
-            "l": 3,
-            "gf": 1.0,
-            "ga": 1.75,
-            "form": [
-              "L",
-              "L",
-              "L",
-              "W"
-            ]
-          },
-          "total": 10,
-          "last_date": "2026-10-19",
-          "stale_days": 4
-        },
-        "h2h": {
-          "n": 1,
-          "a_win": 0,
-          "draw": 0,
-          "b_win": 1,
-          "a_goals": 0,
-          "b_goals": 1,
-          "last": [
-            {
-              "date": "2020-12-10",
-              "score": "0-1",
-              "home": "阿贾克斯"
-            }
-          ]
-        },
-        "source": "500网即时战绩直连"
-      },
-      "stats_ts": "2026-10-27 12:22:22",
-      "predicted_goals": [
-        "1",
-        "2",
-        "3"
-      ],
-      "odds_official": [
-        "1.82",
-        "3.68",
-        "3.25"
-      ],
-      "official_market": "had",
-      "odds_source": "sporttery_official",
-      "detail_original": {
-        "tip": "主胜/防平",
-        "predicted_scores": [
-          "1-0",
-          "2-1",
-          "1-1"
-        ],
-        "predicted_goals": [
-          "2",
-          "3"
-        ],
-        "consensus": "主胜/防平 (65.0%)",
-        "consensus_ratio": 65.0,
-        "dossier": {
-          "summary": "阿贾克斯对阵亚特兰大，量化研判首选【主胜/防平】。",
-          "fundamental": "阿贾克斯近10场 2胜6平2负、场均 1.30:1.10；亚特兰大近10场 2胜4平4负、场均 1.30:1.30；两队近1次交锋 阿贾克斯 0胜0平1负、总进球 0:1。",
-          "tactical_conflict": "泊松期望 阿贾克斯 1.74 球、亚特兰大 0.89 球，合计 2.63 球。总进球分布：0-1 球 26.2%、2-3 球 46.8%、4 球以上 27.1%。理论高频比分 1-0、1-1、2-0。",
-          "market_attitude": "官方 SP 1.82 / 3.6 / 3.32，去水后主胜 48.7%、平局 24.6%、客胜 26.7%，机构抽水 12.8%。本站赛前冻结样本 60 场，实际命中率 75.0%。",
-          "decision_guide": "去水后主胜 48.7%、平局 24.6%，主侧合计 73.3%。首选【主胜/防平】，进球区间 2球、3球，比分参考 1-0、2-0、1-1。"
-        },
-        "quant_factors": {
-          "samples": 3571,
-          "win_rate": 49.3,
-          "draw_rate": 24.8,
-          "loss_rate": 26.0,
-          "ev_home": -0.104,
-          "ev_draw": -0.089,
-          "ev_away": -0.155,
-          "lambda_h": 1.72,
-          "lambda_a": 1.2,
-          "golden_scores": [
-            "2-1",
-            "1-0",
-            "2-0"
-          ],
-          "trap_level": "NORMAL",
-          "trap_warning": "盘面处于正常期望区间",
-          "stars": "★★☆☆☆",
-          "tier_title": "深水博冷区间",
-          "smart_pick": "主胜/防平",
-          "smart_type": "DOUBLE",
-          "quant_detail_note": ""
-        },
-        "result": "PENDING"
-      },
-      "detail_correction": {
-        "at": "2026-10-22T14:51:56",
-        "reason": "统一玩法与详情展示；保留原始快照及原文，派生说明不是新赛前预测"
-      },
-      "prediction_market": "had",
-      "detail_market_odds": [
-        "1.95",
-        "3.68",
-        "2.90"
-      ],
-      "detail_model": {
-        "lambda_h": 1.68,
-        "lambda_a": 1.33,
-        "fit_error_pp": 0.31,
-        "method": "independent_poisson_odds_fit",
-        "rang": 0
-      },
-      "detail_pure": [
-        45.407,
-        24.0608,
-        30.5323
-      ],
-      "detail_schema": 2,
-      "fid": "1480158",
-      "locked": true,
-      "crosscheck": {
-        "source": "fotmob",
-        "score": "2-0",
-        "finished": true
-      },
-      "predicted_scores_detail": [
-        {
-          "score": "2-1",
-          "role": "主力",
-          "desc": "概率基准核心比分"
-        },
-        {
-          "score": "1-0",
-          "role": "次选",
-          "desc": "优势延伸主力比分"
-        },
-        {
-          "score": "1-1",
-          "role": "对冲",
-          "desc": "平局对冲防冷"
-        }
-      ],
-      "predicted_bqc": "【胜胜】(稳) / 【平胜】(博) / 【平平】(防平)",
-      "tactical_strategy": {
-        "type": "double_chance",
-        "badge": "⚖️ 首选+防冷",
-        "badge_class": "badge-purple",
-        "title": "首选主力攻坚，次选对冲防冷",
-        "advance_tip": "首选【主胜】，次选【防平】"
-      },
-      "score_conflict": {
-        "local": "1-0",
-        "fotmob": "2-0",
-        "at": "2026-10-23 04:52:05"
-      },
-      "settlement": {
-        "result": "HIT",
-        "score": "2 - 0",
-        "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
-        "outcome": "主胜",
-        "tip": "主胜/防平",
-        "market": "had"
-      },
-      "result_text": "研判命中"
-    },
-    {
-      "code": "周四012",
-      "league": "欧协联",
-      "time": "10-23 03:00",
-      "home": "摩纳哥",
-      "away": "弗赖堡",
-      "home_rank": "-",
-      "away_rank": "-",
-      "status": "已完赛",
-      "form_home": [
-        "L",
-        "W",
-        "D",
-        "W",
-        "W"
-      ],
-      "form_away": [
-        "L",
-        "W",
-        "W",
-        "W",
-        "D"
-      ],
-      "odds": [
-        "1.93",
-        "3.35",
-        "3.20"
-      ],
-      "is_only_rq": false,
-      "rang": "-1",
-      "odds_rq": [
-        "3.90",
-        "3.75",
-        "1.65"
-      ],
-      "consensus": "主胜/防平",
-      "consensus_ratio": 72.3,
-      "consensus_breakdown": null,
-      "tip": "主胜/防平",
-      "predicted_scores": [
-        "1-0",
-        "2-1",
-        "1-1"
-      ],
-      "score": "3-0",
-      "result": "HIT",
-      "analysis": "去水胜平负 45.9%/26.4%/27.7%，泊松期望进球 1.45:1.07，首选【主胜】+次选【防平】（覆盖率 72.3%）。",
-      "dossier": {
-        "fundamental": "摩纳哥近10场 7胜2平1负，场均进1.80失0.80（截至2026-10-18）；弗赖堡近10场 8胜1平1负，场均进3.10失1.20（截至2026-10-18）。",
-        "tactical_conflict": "泊松进攻期望参数：主队 λ=1.45、客队 λ=1.07（按本场胜平负官方SP反推拟合，拟合残差 0.21 个百分点）。结合主客攻防效率，本场总进球核心落点集中于 1、2、3 球区间。",
-        "market_attitude": "体彩官方胜平负 SP 开出 1.93 / 3.35 / 3.20，去水后真实隐含概率分别为 主胜 45.9% / 平局 26.4% / 客胜 27.7%。盘面赔付结构清晰，去水优势项指向明确。",
-        "decision_guide": "实战方案指引：【首选主胜】（去水概率最高主力项），次选【防平】（防冷对冲保护）。所选方案去水隐含覆盖率合计 72.3%。矩阵精算比分依次参考 1-0、2-1、1-1（对应总进球 1、2、3 球）。",
-        "summary": "去水胜平负 45.9%/26.4%/27.7%，泊松期望进球 1.45:1.07，首选【主胜】+次选【防平】（覆盖率 72.3%）。"
-      },
-      "sale_closed": true,
-      "prediction_snapshot": {
-        "tip": "主胜/防平",
-        "predicted_scores": [
-          "1-0",
-          "2-1",
-          "1-1"
-        ],
-        "predicted_goals": [
-          "1",
-          "2",
-          "3"
-        ],
-        "consensus_ratio": 72.3,
-        "is_only_rq": false,
-        "rang": "-1",
-        "frozen_at": "2026-10-22T22:48:14",
-        "kickoff": "2026-10-23T03:00:00",
-        "frozen_at_last_sellable": true,
-        "evidence": {
-          "odds": [
-            "1.93",
-            "3.35",
-            "3.20"
-          ],
-          "odds_source": "500.com",
-          "method": "odds_implied_probability",
-          "intel_used": false,
-          "intel_ids": []
-        },
-        "sha256": "17a6913fa7446ed9a2dc3bfd6ca1f207fc48bcfce6464d0bec9d4b3ef4377ae0"
-      },
-      "prediction_verified": true,
-      "provenance": {
-        "method": "odds_implied_probability",
-        "evidence": "停售冻结，含赔率与生成方式哈希",
-        "traceable": true,
-        "note": "停售时刻冻结（含临开赛早场），此后不随盘口变动"
-      },
-      "quant_factors": {
-        "market": "had",
-        "samples": 7307,
-        "win_rate": 45.0,
-        "draw_rate": 28.0,
-        "loss_rate": 27.0,
-        "ev_home": -0.132,
-        "ev_draw": -0.062,
-        "ev_away": -0.135,
-        "lambda_h": 1.45,
-        "lambda_a": 1.07,
-        "golden_scores": [
-          "1-0",
-          "2-1",
-          "1-1"
-        ],
-        "trap_level": "NORMAL",
-        "trap_warning": "盘面处于正常期望区间",
-        "stars": "★★★☆☆",
-        "tier_title": "双选防冷格局",
-        "smart_pick": null,
-        "smart_type": "DOUBLE",
-        "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
-      },
-      "stats": {
-        "home": {
-          "name": "摩纳哥",
-          "recent": {
-            "n": 10,
-            "w": 7,
-            "d": 2,
-            "l": 1,
-            "gf": 1.8,
-            "ga": 0.8,
-            "form": [
-              "L",
-              "W",
-              "D",
-              "W",
-              "W"
-            ]
-          },
-          "home": {
-            "n": 5,
-            "w": 4,
-            "d": 1,
-            "l": 0,
-            "gf": 2.4,
-            "ga": 0.8,
-            "form": [
-              "D",
-              "W",
-              "W",
-              "W",
-              "W"
-            ]
-          },
-          "away": {
-            "n": 5,
-            "w": 3,
-            "d": 1,
-            "l": 1,
-            "gf": 1.2,
-            "ga": 0.8,
-            "form": [
-              "L",
-              "W",
-              "D",
-              "W",
-              "W"
-            ]
-          },
-          "total": 10,
-          "last_date": "2026-10-18",
-          "stale_days": 5
-        },
-        "away": {
-          "name": "弗赖堡",
-          "recent": {
-            "n": 10,
-            "w": 8,
-            "d": 1,
-            "l": 1,
-            "gf": 3.1,
-            "ga": 1.2,
-            "form": [
-              "L",
-              "W",
-              "W",
-              "W",
-              "D"
-            ]
-          },
-          "home": {
-            "n": 6,
-            "w": 6,
-            "d": 0,
-            "l": 0,
-            "gf": 3.67,
-            "ga": 1.17,
-            "form": [
-              "W",
-              "W",
-              "W",
-              "W",
-              "W"
-            ]
-          },
-          "away": {
-            "n": 4,
-            "w": 2,
-            "d": 1,
-            "l": 1,
-            "gf": 2.25,
-            "ga": 1.25,
-            "form": [
-              "L",
-              "D",
-              "W",
-              "W"
-            ]
-          },
-          "total": 10,
-          "last_date": "2026-10-18",
-          "stale_days": 5
-        },
-        "h2h": null,
-        "source": "500网即时战绩直连"
-      },
-      "stats_ts": "2026-10-27 12:22:22",
-      "predicted_goals": [
-        "1",
-        "2",
-        "3"
-      ],
-      "odds_official": [
-        "1.95",
-        "3.45",
-        "3.07"
-      ],
-      "official_market": "had",
-      "odds_source": "sporttery_official",
-      "detail_original": {
-        "tip": "主不败/首选主胜",
-        "predicted_scores": [
-          "1-1",
-          "0-1",
-          "1-2"
-        ],
-        "predicted_goals": [
-          "1",
-          "2",
-          "3"
-        ],
-        "consensus": "主不败/首选主胜 (65.0%)",
-        "consensus_ratio": 65.0,
-        "dossier": {
-          "summary": "摩纳哥对阵弗赖堡，量化研判首选【主胜/防平】。",
-          "fundamental": "摩纳哥近10场 4胜2平4负、场均 1.60:1.40；弗赖堡近10场 3胜2平5负、场均 1.50:1.90。",
-          "tactical_conflict": "泊松期望 摩纳哥 1.74 球、弗赖堡 0.89 球，合计 2.63 球。总进球分布：0-1 球 26.2%、2-3 球 46.8%、4 球以上 27.1%。理论高频比分 1-0、1-1、2-0。",
-          "market_attitude": "官方 SP 1.82 / 3.6 / 3.32，去水后主胜 48.7%、平局 24.6%、客胜 26.7%，机构抽水 12.8%。本站赛前冻结样本 60 场，实际命中率 75.0%。",
-          "decision_guide": "去水后主胜 48.7%、平局 24.6%，主侧合计 73.3%。首选【主胜/防平】，进球区间 2球、3球，比分参考 1-0、2-0、1-1。"
-        },
-        "quant_factors": {
-          "samples": 5799,
-          "win_rate": 44.5,
-          "draw_rate": 27.2,
-          "loss_rate": 28.3,
-          "ev_home": -0.133,
-          "ev_draw": -0.061,
-          "ev_away": -0.131,
-          "lambda_h": 1.55,
-          "lambda_a": 1.21,
-          "golden_scores": [
-            "1-1",
-            "0-1",
-            "1-2"
-          ],
-          "trap_level": "NORMAL",
-          "trap_warning": "盘面处于正常期望区间",
-          "stars": "★★☆☆☆",
-          "tier_title": "深水博冷区间",
-          "smart_pick": "让负",
-          "smart_type": "SINGLE",
-          "quant_detail_note": "【8万场让球利刃 · 极简让球直打】：8万场历史大数据同赔率下最高胜率仅为 44.5%，客队具备极强反客为主抗衡力。实战果断单挑【让负】，一注通吃客队不败！"
-        },
-        "result": "PENDING"
-      },
-      "detail_correction": {
-        "at": "2026-10-22T14:51:56",
-        "reason": "统一玩法与详情展示；保留原始快照及原文，派生说明不是新赛前预测"
-      },
-      "prediction_market": "had",
-      "detail_market_odds": [
-        "1.93",
-        "3.35",
-        "3.20"
-      ],
-      "detail_model": {
-        "lambda_h": 1.45,
-        "lambda_a": 1.07,
-        "fit_error_pp": 0.21,
-        "method": "independent_poisson_odds_fit",
-        "rang": 0
-      },
-      "detail_pure": [
-        45.8875,
-        26.4367,
-        27.6759
-      ],
-      "detail_schema": 2,
-      "fid": "1480163",
-      "locked": true,
-      "crosscheck": {
-        "source": "fotmob",
-        "score": "3-0",
-        "finished": true
-      },
-      "predicted_scores_detail": [
-        {
-          "score": "1-0",
-          "role": "主力",
-          "desc": "概率基准核心比分"
-        },
-        {
-          "score": "2-1",
-          "role": "次选",
-          "desc": "优势延伸主力比分"
-        },
-        {
-          "score": "1-1",
-          "role": "对冲",
-          "desc": "平局对冲防冷"
-        }
-      ],
-      "predicted_bqc": "【胜胜】(稳) / 【平胜】(博) / 【平平】(防平)",
-      "tactical_strategy": {
-        "type": "double_chance",
-        "badge": "⚖️ 首选+防冷",
-        "badge_class": "badge-purple",
-        "title": "首选主力攻坚，次选对冲防冷",
-        "advance_tip": "首选【主胜】，次选【防平】"
-      },
-      "score_conflict": {
-        "local": "2-0",
-        "fotmob": "3-0",
-        "at": "2026-10-23 04:56:05"
-      },
-      "settlement": {
-        "result": "HIT",
-        "score": "3 - 0",
-        "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
-        "outcome": "主胜",
-        "tip": "主胜/防平",
-        "market": "had"
-      },
-      "result_text": "研判命中"
-    },
-    {
-      "code": "周四013",
-      "league": "解放者杯",
-      "time": "10-23 08:30",
-      "home": "弗拉门戈",
-      "away": "拉普大学",
-      "home_rank": "-",
-      "away_rank": "-",
-      "status": "已完赛",
-      "form_home": [
-        "W",
-        "D",
-        "W",
-        "D",
-        "W"
-      ],
-      "form_away": [
-        "L",
-        "D",
-        "D",
-        "W",
-        "L"
-      ],
-      "odds": [
-        "1.15",
-        "5.40",
-        "13.50"
-      ],
-      "is_only_rq": false,
-      "rang": "-1",
-      "odds_rq": [
-        "2.00",
-        "3.13",
-        "3.24"
-      ],
-      "consensus": "主胜",
-      "consensus_ratio": 77.0,
-      "consensus_breakdown": null,
-      "tip": "主胜",
-      "predicted_scores": [
-        "2-0",
-        "1-0",
-        "3-0"
-      ],
-      "score": "0-0",
-      "result": "MISS",
-      "analysis": "去水胜平负 77.0%/16.4%/6.6%，泊松期望进球 2.19:0.47，单挑【主胜】稳胆（去水胜率 77.0%）。",
-      "dossier": {
-        "fundamental": "弗拉门戈近10场 7胜3平0负，场均进1.60失0.50（截至2026-10-19）；拉普大学近10场 3胜3平4负，场均进1.20失1.20（截至2026-10-19）。",
-        "tactical_conflict": "泊松进攻期望参数：主队 λ=2.19、客队 λ=0.47（按本场胜平负官方SP反推拟合，拟合残差 0.15 个百分点）。结合主客攻防效率，本场总进球核心落点集中于 1、2、3 球区间。",
-        "market_attitude": "体彩官方胜平负 SP 开出 1.15 / 5.40 / 13.50，去水后真实隐含概率分别为 主胜 77.0% / 平局 16.4% / 客胜 6.6%。盘面赔付结构清晰，去水优势项指向明确。",
-        "decision_guide": "实战方案指引：单选【主胜】作核心稳胆。所选方案去水隐含覆盖率合计 77.0%。矩阵精算比分依次参考 2-0、1-0、3-0（对应总进球 1、2、3 球）。 💡进阶参考：深盘主选回报较低，可参考让球(-1) 让胜 SP 2.00。",
-        "summary": "去水胜平负 77.0%/16.4%/6.6%，泊松期望进球 2.19:0.47，单挑【主胜】稳胆（去水胜率 77.0%）。"
-      },
-      "sale_closed": true,
-      "prediction_snapshot": {
-        "tip": "主胜",
-        "predicted_scores": [
-          "2-0",
-          "1-0",
-          "3-0"
-        ],
-        "predicted_goals": [
-          "1",
-          "2",
-          "3"
-        ],
-        "consensus_ratio": 77.0,
-        "is_only_rq": false,
-        "rang": "-1",
-        "frozen_at": "2026-10-22T22:48:14",
-        "kickoff": "2026-10-23T08:30:00",
-        "frozen_at_last_sellable": true,
-        "evidence": {
-          "odds": [
-            "1.15",
-            "5.40",
-            "13.50"
-          ],
-          "odds_source": "500.com",
-          "method": "odds_implied_probability",
-          "intel_used": false,
-          "intel_ids": []
-        },
-        "sha256": "7a4a87c310fe1bdfc526a4cc51f4046625d58f902332e28a97b2189f033e93f9"
-      },
-      "prediction_verified": true,
-      "provenance": {
-        "method": "odds_implied_probability",
-        "evidence": "停售冻结，含赔率与生成方式哈希",
-        "traceable": true,
-        "note": "停售时刻冻结（含临开赛早场），此后不随盘口变动"
-      },
-      "odds_official": [
-        "1.24",
-        "4.45",
-        "10.25"
-      ],
-      "official_market": "had",
-      "odds_source": "sporttery_official",
-      "quant_factors": {
-        "market": "had",
-        "samples": 842,
-        "win_rate": 79.5,
-        "draw_rate": 14.0,
-        "loss_rate": 6.5,
-        "ev_home": -0.086,
-        "ev_draw": -0.243,
-        "ev_away": -0.118,
-        "lambda_h": 2.19,
-        "lambda_a": 0.47,
-        "golden_scores": [
-          "2-0",
-          "1-0",
-          "3-0"
-        ],
-        "trap_level": "NORMAL",
-        "trap_warning": "盘面处于正常期望区间",
-        "stars": "★★★★★",
-        "tier_title": "正路核心死胆",
-        "smart_pick": null,
-        "smart_type": "SINGLE",
-        "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
-      },
-      "stats": {
-        "home": {
-          "name": "弗拉门戈",
-          "recent": {
-            "n": 10,
-            "w": 7,
-            "d": 3,
-            "l": 0,
-            "gf": 1.6,
-            "ga": 0.5,
-            "form": [
-              "W",
-              "D",
-              "W",
-              "D",
-              "W"
-            ]
-          },
-          "home": {
-            "n": 5,
-            "w": 4,
-            "d": 1,
-            "l": 0,
-            "gf": 1.6,
-            "ga": 0.6,
-            "form": [
-              "W",
-              "W",
-              "D",
-              "W",
-              "W"
-            ]
-          },
-          "away": {
-            "n": 5,
-            "w": 3,
-            "d": 2,
-            "l": 0,
-            "gf": 1.6,
-            "ga": 0.4,
-            "form": [
-              "W",
-              "D",
-              "D",
-              "W",
-              "W"
-            ]
-          },
-          "total": 10,
-          "last_date": "2026-10-19",
-          "stale_days": 4
-        },
-        "away": {
-          "name": "拉普大学",
-          "recent": {
-            "n": 10,
-            "w": 3,
-            "d": 3,
-            "l": 4,
-            "gf": 1.2,
-            "ga": 1.2,
-            "form": [
-              "L",
-              "D",
-              "D",
-              "W",
-              "L"
-            ]
-          },
-          "home": {
-            "n": 6,
-            "w": 2,
-            "d": 2,
-            "l": 2,
-            "gf": 1.33,
-            "ga": 1.17,
-            "form": [
-              "L",
-              "D",
-              "W",
-              "L",
-              "W"
-            ]
-          },
-          "away": {
-            "n": 4,
-            "w": 1,
-            "d": 1,
-            "l": 2,
-            "gf": 1.0,
-            "ga": 1.25,
-            "form": [
-              "D",
-              "L",
-              "L",
-              "W"
-            ]
-          },
-          "total": 10,
-          "last_date": "2026-10-19",
-          "stale_days": 4
-        },
-        "h2h": null,
-        "source": "500网即时战绩直连"
-      },
-      "stats_ts": "2026-10-27 12:22:22",
-      "predicted_goals": [
-        "1",
-        "2",
-        "3"
-      ],
-      "detail_original": {
-        "tip": "主胜",
-        "predicted_scores": [
-          "2-0",
-          "2-1",
-          "3-1"
-        ],
-        "predicted_goals": [
-          "2",
-          "3"
-        ],
-        "consensus": "主胜 (84.3%)",
-        "consensus_ratio": 84.3,
-        "dossier": {
-          "summary": "弗拉门戈对阵拉普大学，量化研判首选【主胜】。",
-          "fundamental": "弗拉门戈近10场 5胜3平2负、场均 1.80:1.20（数据截至 2026-05-20）；拉普大学近10场 4胜3平3负、场均 1.00:0.90（数据截至 2024-06-09）。",
-          "tactical_conflict": "泊松期望 弗拉门戈 2.39 球、拉普大学 0.4 球，合计 2.79 球。总进球分布：0-1 球 23.3%、2-3 球 46.1%、4 球以上 30.6%。理论高频比分 2-0、1-0、3-0。",
-          "market_attitude": "官方 SP 1.26 / 4.28 / 9.75，去水后主胜 70.2%、平局 20.7%、客胜 9.1%，机构抽水 13.0%。本站赛前冻结样本 60 场，实际命中率 75.0%。",
-          "decision_guide": "去水后主胜 70.2%、平局 20.7%，主侧合计 90.9%。首选【主胜】，进球区间 2球、3球，比分参考 2-0、1-0、3-0。"
-        },
-        "quant_factors": {
-          "samples": 1205,
-          "win_rate": 71.5,
-          "draw_rate": 18.6,
-          "loss_rate": 9.9,
-          "ev_home": -0.113,
-          "ev_draw": -0.173,
-          "ev_away": 0.012,
-          "lambda_h": 2.15,
-          "lambda_a": 0.71,
-          "golden_scores": [
-            "2-0",
-            "1-0",
-            "2-1"
-          ],
-          "trap_level": "NORMAL",
-          "trap_warning": "盘面处于正常期望区间",
-          "stars": "★★★★☆",
-          "tier_title": "高确定性稳胆",
-          "smart_pick": "主胜",
-          "smart_type": "SINGLE",
-          "quant_detail_note": ""
-        },
-        "result": "PENDING"
-      },
-      "detail_correction": {
-        "at": "2026-10-22T14:51:56",
-        "reason": "统一玩法与详情展示；保留原始快照及原文，派生说明不是新赛前预测"
-      },
-      "prediction_market": "had",
-      "detail_market_odds": [
-        "1.15",
-        "5.40",
-        "13.50"
-      ],
-      "detail_model": {
-        "lambda_h": 2.19,
-        "lambda_a": 0.47,
-        "fit_error_pp": 0.15,
-        "method": "independent_poisson_odds_fit",
-        "rang": 0
-      },
-      "detail_pure": [
-        77.0328,
-        16.4051,
-        6.5621
-      ],
-      "detail_schema": 2,
-      "fid": "1494055",
-      "locked": true,
-      "crosscheck": {
-        "source": "fotmob",
-        "score": "0-0",
-        "finished": true
-      },
-      "predicted_scores_detail": [
-        {
-          "score": "2-0",
-          "role": "主力",
-          "desc": "概率基准核心比分"
-        },
-        {
-          "score": "1-0",
-          "role": "次选",
-          "desc": "优势延伸主力比分"
-        },
-        {
-          "score": "3-0",
-          "role": "博高",
-          "desc": "深层大胜穿盘"
-        }
-      ],
-      "predicted_bqc": "【胜胜】(稳) / 【平胜】(博)",
-      "tactical_strategy": {
-        "type": "deep_handicap",
-        "badge": "⚡ 深盘进阶",
-        "badge_class": "badge-gold",
-        "title": "主选SP偏低，首选让球或精选比分提升回报",
-        "advance_tip": "让球(-1) 让胜 SP 2.00"
-      },
-      "settlement": {
-        "result": "MISS",
-        "score": "0 - 0",
-        "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
-        "outcome": "平局",
-        "tip": "主胜",
-        "market": "had"
-      },
-      "result_text": "研判未中"
-    },
-    {
-      "code": "周五001",
-      "league": "澳超",
-      "time": "10-23 17:00",
-      "home": "布里斯班",
-      "away": "珀斯",
-      "home_rank": "-",
-      "away_rank": "-",
-      "status": "已完赛",
-      "form_home": [
-        "W",
-        "W",
-        "L",
-        "L",
-        "L"
-      ],
-      "form_away": [
-        "L",
-        "L",
-        "W",
-        "D",
-        "W"
-      ],
-      "odds": [
-        "2.10",
-        "3.32",
-        "2.84"
-      ],
-      "is_only_rq": false,
-      "rang": "-1",
-      "odds_rq": [
-        "4.10",
-        "3.60",
-        "1.65"
-      ],
-      "consensus": "主胜/防平",
-      "consensus_ratio": 68.8,
-      "consensus_breakdown": null,
-      "tip": "主胜/防平",
-      "predicted_scores": [
-        "1-0",
-        "2-1",
-        "1-1"
-      ],
-      "score": "2-1",
-      "result": "HIT",
-      "analysis": "去水胜平负 42.2%/26.7%/31.2%，泊松期望进球 1.38:1.16，首选【主胜】+次选【防平】（覆盖率 68.8%）。",
-      "dossier": {
-        "fundamental": "布里斯班近10场 5胜0平5负，场均进2.30失1.90（截至2026-10-11）；珀斯近10场 3胜4平3负，场均进1.20失1.20（截至2026-10-17）。",
-        "tactical_conflict": "泊松进攻期望参数：主队 λ=1.38、客队 λ=1.16（按本场胜平负官方SP反推拟合，拟合残差 0.35 个百分点）。结合主客攻防效率，本场总进球核心落点集中于 1、2、3 球区间。",
-        "market_attitude": "体彩官方胜平负 SP 开出 2.10 / 3.32 / 2.84，去水后真实隐含概率分别为 主胜 42.2% / 平局 26.7% / 客胜 31.2%。盘面赔付结构清晰，去水优势项指向明确。",
-        "decision_guide": "实战方案指引：【首选主胜】（去水概率最高主力项），次选【防平】（防冷对冲保护）。所选方案去水隐含覆盖率合计 68.8%。矩阵精算比分依次参考 1-0、2-1、1-1（对应总进球 1、2、3 球）。",
-        "summary": "去水胜平负 42.2%/26.7%/31.2%，泊松期望进球 1.38:1.16，首选【主胜】+次选【防平】（覆盖率 68.8%）。"
-      },
-      "sale_closed": true,
-      "detail_original": {
-        "tip": "主胜/防平",
-        "predicted_scores": [
-          "1-0",
-          "2-0",
-          "1-1"
-        ],
-        "predicted_goals": null,
-        "consensus": "主胜/防平 (72.3%)",
-        "consensus_ratio": 72.3,
-        "dossier": {
-          "summary": "布里斯班对阵珀斯，量化研判首选【主胜/防平】。",
-          "fundamental": "布里斯班近10场 1胜2平7负，场均进1.30失2.20（截至2025-01-03）；珀斯近10场 1胜1平8负，场均进1.30失3.10（截至2026-10-17）。",
-          "tactical_conflict": "独立泊松示意参数：主1.35、客1.0。按本场胜平负赔率拟合，最大误差0.22个百分点；这是赔率结构的近似示意，不是实测xG，也不是独立预测。",
-          "market_attitude": "胜平负 SP 1.97 / 3.25 / 3.20，去水隐含概率 主胜 45.0% / 平局 27.3% / 客胜 27.7%。隐含概率不代表实际命中率。",
-          "decision_guide": "选择【主胜/防平】。所选结果赔率隐含合计72.3%，非历史命中承诺。比分示意1-0、2-0、1-1，对应总进球1、2。比分是参考，不算另一项已验证预测。"
-        },
-        "quant_factors": null,
-        "result": "PENDING"
-      },
-      "detail_correction": {
-        "at": "2026-10-22T20:20:09",
-        "reason": "统一玩法与详情展示；保留原始快照及原文，派生说明不是新赛前预测"
-      },
-      "prediction_market": "had",
-      "detail_market_odds": [
-        "2.10",
-        "3.32",
-        "2.84"
-      ],
-      "detail_model": {
-        "lambda_h": 1.38,
-        "lambda_a": 1.16,
-        "fit_error_pp": 0.35,
-        "method": "independent_poisson_odds_fit",
-        "rang": 0
-      },
-      "detail_pure": [
-        42.1591,
-        26.6669,
-        31.174
-      ],
-      "predicted_goals": [
-        "1",
-        "2",
-        "3"
-      ],
-      "stats": {
-        "home": {
-          "name": "布里斯班",
-          "recent": {
-            "n": 10,
-            "w": 5,
-            "d": 0,
-            "l": 5,
-            "gf": 2.3,
-            "ga": 1.9,
-            "form": [
-              "W",
-              "W",
-              "L",
-              "L",
-              "L"
-            ]
-          },
-          "home": {
-            "n": 3,
-            "w": 1,
-            "d": 0,
-            "l": 2,
-            "gf": 2.33,
-            "ga": 2.67,
-            "form": [
-              "W",
-              "L",
-              "L"
-            ]
-          },
-          "away": {
-            "n": 7,
-            "w": 4,
-            "d": 0,
-            "l": 3,
-            "gf": 2.29,
-            "ga": 1.57,
-            "form": [
-              "W",
-              "L",
-              "L",
-              "W",
-              "W"
-            ]
-          },
-          "total": 10,
-          "last_date": "2026-10-11",
-          "stale_days": 12
-        },
-        "away": {
-          "name": "珀斯",
-          "recent": {
-            "n": 10,
-            "w": 3,
-            "d": 4,
-            "l": 3,
-            "gf": 1.2,
-            "ga": 1.2,
-            "form": [
-              "L",
-              "L",
-              "W",
-              "D",
-              "W"
-            ]
-          },
-          "home": {
-            "n": 5,
-            "w": 3,
-            "d": 1,
-            "l": 1,
-            "gf": 1.8,
-            "ga": 1.2,
-            "form": [
-              "L",
-              "W",
-              "W",
-              "W",
-              "D"
-            ]
-          },
-          "away": {
-            "n": 5,
-            "w": 0,
-            "d": 3,
-            "l": 2,
-            "gf": 0.6,
-            "ga": 1.2,
-            "form": [
-              "L",
-              "D",
-              "D",
-              "D",
-              "L"
-            ]
-          },
-          "total": 10,
-          "last_date": "2026-10-17",
-          "stale_days": 6
-        },
-        "h2h": {
-          "n": 8,
-          "a_win": 3,
-          "draw": 1,
-          "b_win": 4,
-          "a_goals": 13,
-          "b_goals": 14,
-          "last": [
-            {
-              "date": "2023-01-10",
-              "score": "2-1",
-              "home": "珀斯"
-            },
-            {
-              "date": "2023-02-26",
-              "score": "2-1",
-              "home": "布里斯班"
-            },
-            {
-              "date": "2024-12-21",
-              "score": "0-1",
-              "home": "布里斯班"
-            }
-          ]
-        },
-        "source": "500网即时战绩直连"
-      },
-      "detail_schema": 2,
-      "quant_factors": {
-        "market": "had",
-        "samples": 5502,
-        "win_rate": 40.9,
-        "draw_rate": 28.2,
-        "loss_rate": 30.9,
-        "ev_home": -0.141,
-        "ev_draw": -0.063,
-        "ev_away": -0.123,
-        "lambda_h": 1.38,
-        "lambda_a": 1.16,
-        "golden_scores": [
-          "1-0",
-          "2-1",
-          "1-1"
-        ],
-        "trap_level": "NORMAL",
-        "trap_warning": "盘面处于正常期望区间",
-        "stars": "★★★☆☆",
-        "tier_title": "双选防冷格局",
-        "smart_pick": null,
-        "smart_type": "DOUBLE",
-        "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
-      },
-      "stats_ts": "2026-10-27 12:22:22",
-      "fid": "1450899",
-      "crosscheck": {
-        "source": "fotmob",
-        "score": "2-1",
-        "finished": true
-      },
-      "predicted_scores_detail": [
-        {
-          "score": "1-0",
-          "role": "主力",
-          "desc": "概率基准核心比分"
-        },
-        {
-          "score": "2-1",
-          "role": "次选",
-          "desc": "优势延伸主力比分"
-        },
-        {
-          "score": "1-1",
-          "role": "对冲",
-          "desc": "平局对冲防冷"
-        }
-      ],
-      "predicted_bqc": "【胜胜】(稳) / 【平胜】(博) / 【平平】(防平)",
-      "tactical_strategy": {
-        "type": "double_chance",
-        "badge": "⚖️ 首选+防冷",
-        "badge_class": "badge-purple",
-        "title": "首选主力攻坚，次选对冲防冷",
-        "advance_tip": "首选【主胜】，次选【防平】"
-      },
-      "prediction_snapshot": {
-        "tip": "主胜/防平",
-        "predicted_scores": [
-          "1-0",
-          "2-1",
-          "1-1"
-        ],
-        "predicted_goals": [
-          "1",
-          "2",
-          "3"
-        ],
-        "consensus_ratio": 68.8,
-        "is_only_rq": false,
-        "rang": "-1",
-        "frozen_at": "2026-10-23T16:50:11",
-        "kickoff": "2026-10-23T17:00:00",
-        "frozen_at_last_sellable": true,
-        "evidence": {
-          "odds": [
-            "2.10",
-            "3.32",
-            "2.84"
-          ],
-          "odds_source": "500.com",
-          "method": "odds_implied_probability",
-          "intel_used": false,
-          "intel_ids": []
-        },
-        "sha256": "8b8be26e9e9012a449d423050e44d81dc05310e6bcc12c953bd43aa6ab5d812c"
-      },
-      "prediction_verified": true,
-      "provenance": {
-        "method": "odds_implied_probability",
-        "evidence": "停售冻结，含赔率与生成方式哈希",
-        "traceable": true,
-        "note": "停售时刻冻结（含临开赛早场），此后不随盘口变动"
-      },
-      "locked": true,
-      "settlement": {
-        "result": "HIT",
-        "score": "2 - 1",
-        "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
-        "outcome": "主胜",
-        "tip": "主胜/防平",
-        "market": "had"
-      },
-      "result_text": "研判命中"
-    },
     {
       "code": "周五002",
       "league": "德乙",
@@ -5237,7 +329,7 @@
         "result": "MISS",
         "score": "1 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "平局",
         "tip": "客胜",
         "market": "had"
@@ -5575,7 +667,7 @@
         "result": "HIT",
         "score": "0 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "平局",
         "tip": "主胜/防平",
         "market": "had"
@@ -5913,7 +1005,7 @@
         "result": "HIT",
         "score": "3 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -6252,7 +1344,7 @@
         "result": "HIT",
         "score": "1 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "平局",
         "tip": "客胜/防平",
         "market": "had"
@@ -6621,7 +1713,7 @@
         "result": "MISS",
         "score": "2 - 3",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "客胜",
         "tip": "主胜",
         "market": "had"
@@ -6985,7 +2077,7 @@
         "result": "HIT",
         "score": "3 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "主胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -7355,7 +2447,7 @@
         "result": "MISS",
         "score": "1 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "客胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -7724,7 +2816,7 @@
         "result": "HIT",
         "score": "1 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "平局",
         "tip": "客胜/防平",
         "market": "had"
@@ -8062,7 +3154,7 @@
         "result": "HIT",
         "score": "1 - 5",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "客胜",
         "tip": "客胜",
         "market": "had"
@@ -8428,7 +3520,7 @@
         "result": "MISS",
         "score": "1-1",
         "source": "stored_score",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "平局",
         "tip": "主胜",
         "market": "had"
@@ -8793,7 +3885,7 @@
         "result": "HIT",
         "score": "5-0",
         "source": "stored_score",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -9129,7 +4221,7 @@
         "result": "MISS",
         "score": "1 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "平局",
         "tip": "主胜",
         "market": "had"
@@ -9438,7 +4530,7 @@
         "result": "HIT",
         "score": "3-1",
         "source": "stored_score",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "主胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -9772,7 +4864,7 @@
         "result": "HIT",
         "score": "0 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "平局",
         "tip": "客胜/防平",
         "market": "had"
@@ -10111,7 +5203,7 @@
         "result": "MISS",
         "score": "2 - 3",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "客胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -10440,7 +5532,7 @@
         "result": "HIT",
         "score": "1 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "平局",
         "tip": "主胜/防平",
         "market": "had"
@@ -10796,7 +5888,7 @@
         "result": "MISS",
         "score": "2 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "主胜",
         "tip": "客胜",
         "market": "had"
@@ -11127,7 +6219,7 @@
         "result": "HIT",
         "score": "1 - 3",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "客胜",
         "tip": "客胜/防平",
         "market": "had"
@@ -11496,7 +6588,7 @@
         "result": "MISS",
         "score": "0 - 3",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "客胜",
         "tip": "主胜",
         "market": "had"
@@ -11866,7 +6958,7 @@
         "result": "HIT",
         "score": "2 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -12235,7 +7327,7 @@
         "result": "HIT",
         "score": "0 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "客胜",
         "tip": "客胜/防平",
         "market": "had"
@@ -12580,7 +7672,7 @@
         "result": "HIT",
         "score": "4 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -12951,7 +8043,7 @@
         "result": "MISS",
         "score": "2 - 3",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "客胜",
         "tip": "主胜",
         "market": "had"
@@ -13320,7 +8412,7 @@
         "result": "HIT",
         "score": "1 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "主胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -13685,7 +8777,7 @@
         "result": "HIT",
         "score": "0 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "平局",
         "tip": "主胜/防平",
         "market": "had"
@@ -14055,7 +9147,7 @@
         "result": "MISS",
         "score": "1 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "平局",
         "tip": "主胜",
         "market": "had"
@@ -14423,7 +9515,7 @@
         "result": "HIT",
         "score": "2 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -14769,7 +9861,7 @@
         "result": "HIT",
         "score": "0 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "客胜",
         "tip": "客胜/防平",
         "market": "had"
@@ -15076,7 +10168,7 @@
         "result": "MISS",
         "score": "0 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "让负",
         "tip": "让胜/防让平",
         "market": "hhad"
@@ -15423,7 +10515,7 @@
         "result": "HIT",
         "score": "2 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "主胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -15757,7 +10849,7 @@
         "result": "MISS",
         "score": "1 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "平局",
         "tip": "主胜",
         "market": "had"
@@ -16080,7 +11172,7 @@
         "result": "MISS",
         "score": "0 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "客胜",
         "tip": "主胜",
         "market": "had"
@@ -16445,7 +11537,7 @@
         "result": "HIT",
         "score": "3 - 3",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "平局",
         "tip": "客胜/防平",
         "market": "had"
@@ -16814,7 +11906,7 @@
         "result": "MISS",
         "score": "0 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "客胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -17183,7 +12275,7 @@
         "result": "HIT",
         "score": "1 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -17554,7 +12646,7 @@
         "result": "HIT",
         "score": "1 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "客胜",
         "tip": "客胜/防平",
         "market": "had"
@@ -17922,7 +13014,7 @@
         "result": "HIT",
         "score": "2 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -18278,7 +13370,7 @@
         "result": "HIT",
         "score": "2 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "主胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -18642,7 +13734,7 @@
         "result": "HIT",
         "score": "1 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -18980,7 +14072,7 @@
         "result": "HIT",
         "score": "0 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "客胜",
         "tip": "客胜",
         "market": "had"
@@ -19316,7 +14408,7 @@
         "result": "HIT",
         "score": "1 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "平局",
         "tip": "主胜/防平",
         "market": "had"
@@ -19651,7 +14743,7 @@
         "result": "HIT",
         "score": "2 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "主胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -19960,7 +15052,7 @@
         "result": "MISS",
         "score": "2 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "主胜",
         "tip": "客胜",
         "market": "had"
@@ -20250,7 +15342,7 @@
         "result": "HIT",
         "score": "6 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -20587,7 +15679,7 @@
         "result": "HIT",
         "score": "2 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "主胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -20917,7 +16009,7 @@
         "result": "HIT",
         "score": "1 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "主胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -21288,7 +16380,7 @@
         "result": "HIT",
         "score": "2 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -21699,7 +16791,7 @@
         "result": "HIT",
         "score": "4-0",
         "source": "stored_score",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -22039,7 +17131,7 @@
         "result": "HIT",
         "score": "1 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "平局",
         "tip": "主胜/防平",
         "market": "had"
@@ -22352,7 +17444,7 @@
         "result": "HIT",
         "score": "2-2",
         "source": "stored_score",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "平局",
         "tip": "主胜/防平",
         "market": "had"
@@ -22692,7 +17784,7 @@
         "result": "HIT",
         "score": "1 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "平局",
         "tip": "主胜/防平",
         "market": "had"
@@ -23032,7 +18124,7 @@
         "result": "HIT",
         "score": "3 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -23400,7 +18492,7 @@
         "result": "MISS",
         "score": "1 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "平局",
         "tip": "客胜",
         "market": "had"
@@ -23768,7 +18860,7 @@
         "result": "HIT",
         "score": "0 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "客胜",
         "tip": "客胜/防平",
         "market": "had"
@@ -24135,7 +19227,7 @@
         "result": "MISS",
         "score": "0-3",
         "source": "stored_score",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "客胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -24501,7 +19593,7 @@
         "result": "HIT",
         "score": "1 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "主胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -24874,7 +19966,7 @@
         "result": "MISS",
         "score": "4 - 4",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "平局",
         "tip": "主胜",
         "market": "had"
@@ -25243,7 +20335,7 @@
         "result": "HIT",
         "score": "1 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "平局",
         "tip": "主胜/防平",
         "market": "had"
@@ -25617,7 +20709,7 @@
         "result": "MISS",
         "score": "3 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "主胜",
         "tip": "客胜/防平",
         "market": "had"
@@ -25990,7 +21082,7 @@
         "result": "HIT",
         "score": "0 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "平局",
         "tip": "客胜/防平",
         "market": "had"
@@ -26361,7 +21453,7 @@
         "result": "HIT",
         "score": "3 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -26733,7 +21825,7 @@
         "result": "HIT",
         "score": "0 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "平局",
         "tip": "客胜/防平",
         "market": "had"
@@ -27104,7 +22196,7 @@
         "result": "HIT",
         "score": "1-3",
         "source": "stored_score",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "客胜",
         "tip": "客胜",
         "market": "had"
@@ -27474,7 +22566,7 @@
         "result": "HIT",
         "score": "0 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "客胜",
         "tip": "客胜",
         "market": "had"
@@ -27845,7 +22937,7 @@
         "result": "HIT",
         "score": "2 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -28178,7 +23270,7 @@
         "result": "MISS",
         "score": "0-2",
         "source": "stored_score",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "客胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -28543,7 +23635,7 @@
         "result": "HIT",
         "score": "0 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "客胜",
         "tip": "客胜",
         "market": "had"
@@ -28918,7 +24010,7 @@
         "result": "MISS",
         "score": "1 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "客胜",
         "tip": "主胜",
         "market": "had"
@@ -29204,7 +24296,7 @@
         "result": "HIT",
         "score": "1-2",
         "source": "stored_score",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "让负",
         "tip": "让负/防让平",
         "market": "hhad"
@@ -29538,7 +24630,7 @@
         "result": "MISS",
         "score": "2-2",
         "source": "stored_score",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "平局",
         "tip": "主胜",
         "market": "had"
@@ -29875,7 +24967,7 @@
         "result": "HIT",
         "score": "1 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "客胜",
         "tip": "客胜",
         "market": "had"
@@ -30187,7 +25279,7 @@
         "result": "HIT",
         "score": "1 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "平局",
         "tip": "客胜/防平",
         "market": "had"
@@ -30558,7 +25650,7 @@
         "result": "HIT",
         "score": "2 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -30891,7 +25983,7 @@
         "result": "HIT",
         "score": "3-2",
         "source": "stored_score",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -31210,7 +26302,7 @@
         "result": "HIT",
         "score": "5 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -31532,7 +26624,7 @@
         "result": "HIT",
         "score": "0 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "客胜",
         "tip": "客胜/防平",
         "market": "had"
@@ -31877,7 +26969,7 @@
         "result": "HIT",
         "score": "2 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-27T23:59:25",
+        "settled_at": "2026-10-28T00:01:23",
         "outcome": "平局",
         "tip": "主胜/防平",
         "market": "had"
@@ -32172,7 +27264,7 @@
           "single_threshold": 0.52
         }
       },
-      "stats_ts": "2026-10-27 23:59:34",
+      "stats_ts": "2026-10-28 00:01:37",
       "locked": true,
       "prediction_snapshot": {
         "tip": "客胜/防平",
@@ -32211,6 +27303,11 @@
         "evidence": "停售冻结，含赔率与生成方式哈希",
         "traceable": true,
         "note": "停售时刻冻结（含临开赛早场），此后不随盘口变动"
+      },
+      "crosscheck": {
+        "source": "fotmob",
+        "score": "",
+        "finished": false
       }
     },
     {
@@ -32534,7 +27631,7 @@
           "single_threshold": 0.52
         }
       },
-      "stats_ts": "2026-10-27 23:59:34",
+      "stats_ts": "2026-10-28 00:01:37",
       "locked": true,
       "prediction_snapshot": {
         "tip": "客胜",
@@ -32573,6 +27670,11 @@
         "evidence": "停售冻结，含赔率与生成方式哈希",
         "traceable": true,
         "note": "停售时刻冻结（含临开赛早场），此后不随盘口变动"
+      },
+      "crosscheck": {
+        "source": "fotmob",
+        "score": "",
+        "finished": false
       }
     },
     {
@@ -32865,7 +27967,7 @@
           "single_threshold": 0.52
         }
       },
-      "stats_ts": "2026-10-27 23:59:34",
+      "stats_ts": "2026-10-28 00:01:37",
       "locked": true,
       "prediction_snapshot": {
         "tip": "客胜/防平",
@@ -32904,6 +28006,11 @@
         "evidence": "停售冻结，含赔率与生成方式哈希",
         "traceable": true,
         "note": "停售时刻冻结（含临开赛早场），此后不随盘口变动"
+      },
+      "crosscheck": {
+        "source": "fotmob",
+        "score": "",
+        "finished": false
       }
     },
     {
@@ -33194,7 +28301,7 @@
           "single_threshold": 0.52
         }
       },
-      "stats_ts": "2026-10-27 23:59:34",
+      "stats_ts": "2026-10-28 00:01:37",
       "locked": true,
       "prediction_snapshot": {
         "tip": "主胜",
@@ -33233,6 +28340,11 @@
         "evidence": "停售冻结，含赔率与生成方式哈希",
         "traceable": true,
         "note": "停售时刻冻结（含临开赛早场），此后不随盘口变动"
+      },
+      "crosscheck": {
+        "source": "fotmob",
+        "score": "",
+        "finished": false
       }
     },
     {
@@ -33525,7 +28637,7 @@
           "single_threshold": 0.52
         }
       },
-      "stats_ts": "2026-10-27 23:59:34",
+      "stats_ts": "2026-10-28 00:01:37",
       "locked": true,
       "prediction_snapshot": {
         "tip": "主胜",
@@ -33564,6 +28676,11 @@
         "evidence": "停售冻结，含赔率与生成方式哈希",
         "traceable": true,
         "note": "停售时刻冻结（含临开赛早场），此后不随盘口变动"
+      },
+      "crosscheck": {
+        "source": "fotmob",
+        "score": "",
+        "finished": false
       }
     },
     {
@@ -33887,7 +29004,7 @@
           "single_threshold": 0.52
         }
       },
-      "stats_ts": "2026-10-27 23:59:34",
+      "stats_ts": "2026-10-28 00:01:37",
       "locked": true,
       "prediction_snapshot": {
         "tip": "主胜",
@@ -33926,6 +29043,11 @@
         "evidence": "停售冻结，含赔率与生成方式哈希",
         "traceable": true,
         "note": "停售时刻冻结（含临开赛早场），此后不随盘口变动"
+      },
+      "crosscheck": {
+        "source": "fotmob",
+        "score": "",
+        "finished": false
       }
     },
     {
@@ -34244,7 +29366,7 @@
           "single_threshold": 0.52
         }
       },
-      "stats_ts": "2026-10-27 23:59:34",
+      "stats_ts": "2026-10-28 00:01:37",
       "locked": true,
       "prediction_snapshot": {
         "tip": "客胜",
@@ -34283,6 +29405,11 @@
         "evidence": "停售冻结，含赔率与生成方式哈希",
         "traceable": true,
         "note": "停售时刻冻结（含临开赛早场），此后不随盘口变动"
+      },
+      "crosscheck": {
+        "source": "fotmob",
+        "score": "",
+        "finished": false
       }
     },
     {
@@ -34569,7 +29696,12 @@
           "single_threshold": 0.52
         }
       },
-      "stats_ts": "2026-10-27 23:59:34"
+      "stats_ts": "2026-10-28 00:01:37",
+      "crosscheck": {
+        "source": "fotmob",
+        "score": "",
+        "finished": false
+      }
     },
     {
       "code": "周三002",
@@ -34835,7 +29967,12 @@
           "single_threshold": 0.52
         }
       },
-      "stats_ts": "2026-10-27 23:59:34"
+      "stats_ts": "2026-10-28 00:01:37",
+      "crosscheck": {
+        "source": "fotmob",
+        "score": "",
+        "finished": false
+      }
     },
     {
       "code": "周三003",
@@ -35125,7 +30262,12 @@
           "single_threshold": 0.52
         }
       },
-      "stats_ts": "2026-10-27 23:59:34"
+      "stats_ts": "2026-10-28 00:01:37",
+      "crosscheck": {
+        "source": "fotmob",
+        "score": "",
+        "finished": false
+      }
     },
     {
       "code": "周三004",
@@ -35415,7 +30557,7 @@
           "single_threshold": 0.52
         }
       },
-      "stats_ts": "2026-10-27 23:59:34"
+      "stats_ts": "2026-10-28 00:01:37"
     },
     {
       "code": "周三005",
@@ -35726,7 +30868,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-27 23:59:34"
+      "stats_ts": "2026-10-28 00:01:37"
     },
     {
       "code": "周三006",
@@ -36049,7 +31191,7 @@
           "single_threshold": 0.52
         }
       },
-      "stats_ts": "2026-10-27 23:59:34"
+      "stats_ts": "2026-10-28 00:01:37"
     },
     {
       "code": "周三007",
@@ -36363,7 +31505,7 @@
         "smart_type": "DOUBLE",
         "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。"
       },
-      "stats_ts": "2026-10-27 23:59:34"
+      "stats_ts": "2026-10-28 00:01:37"
     },
     {
       "code": "周三010",
@@ -36649,7 +31791,7 @@
           "single_threshold": 0.52
         }
       },
-      "stats_ts": "2026-10-27 23:59:34"
+      "stats_ts": "2026-10-28 00:01:37"
     },
     {
       "code": "周三011",
@@ -36940,7 +32082,7 @@
           "single_threshold": 0.52
         }
       },
-      "stats_ts": "2026-10-27 23:59:34"
+      "stats_ts": "2026-10-28 00:01:37"
     },
     {
       "code": "周三012",
@@ -37231,7 +32373,7 @@
           "single_threshold": 0.52
         }
       },
-      "stats_ts": "2026-10-27 23:59:34"
+      "stats_ts": "2026-10-28 00:01:37"
     },
     {
       "code": "周三013",
@@ -37553,7 +32695,7 @@
           "single_threshold": 0.52
         }
       },
-      "stats_ts": "2026-10-27 23:59:34"
+      "stats_ts": "2026-10-28 00:01:37"
     },
     {
       "code": "周三014",
@@ -37875,7 +33017,7 @@
           "single_threshold": 0.52
         }
       },
-      "stats_ts": "2026-10-27 23:59:34"
+      "stats_ts": "2026-10-28 00:01:37"
     },
     {
       "code": "周三015",
@@ -38165,8 +33307,8 @@
           "single_threshold": 0.52
         }
       },
-      "stats_ts": "2026-10-27 23:59:34"
+      "stats_ts": "2026-10-28 00:01:37"
     }
   ],
-  "version": 1793116769
+  "version": 1793116891
 }
