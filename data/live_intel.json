@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-27 21:14:20",
-  "total_tips": 10,
+  "updated_at": "2026-10-27 23:26:13",
+  "total_tips": 11,
   "live_feed": [
+    {
+      "id": 7197,
+      "channel": "matchpreviews",
+      "time": "2026-10-27 22:11",
+      "code": "周三015",
+      "key": "20261029_周三015",
+      "league": "英联赛杯",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "利物浦 VS 切尔西",
+      "chinese": "周三，联赛杯，利物浦对切尔西。伤情：切尔西锋乔丹大腿受伤，缺阵数周，首发与轮换未明。方向、让球、大小、进球没消息，不碰。资金异动未报。老客记，别信外泄。",
+      "original": "Xabi Alonso says João Pedro will be out for \"a few weeks\" with a thigh injury 🤕 Chelsea's upcoming fixtures before and after the November international break: O",
+      "translated": true,
+      "channel_weight": 0.5
+    },
     {
       "id": 7083,
       "channel": "victorspredict",
@@ -1192,16 +1207,16 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-10-27 21:14:20",
-    "last_nonempty_at": "2026-10-27 21:14:20",
-    "live_count": 10,
+    "last_updated": "2026-10-27 23:26:13",
+    "last_nonempty_at": "2026-10-27 23:26:13",
+    "live_count": 11,
     "archived_count": 88,
-    "active_matches": 21,
+    "active_matches": 20,
     "llm_providers": [
       "local",
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-10-27 21:14:20"
+    "checked_at": "2026-10-27 23:26:13"
   }
 }
