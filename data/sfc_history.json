@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-10-27 22:18:27",
+  "updated_at": "2026-10-28 01:30:00",
   "periods": [
     {
       "period": "26151",
       "picks_ready": true,
       "deadline": "10-27 00:00",
       "total_matches": 14,
-      "archived_at": "2026-10-27 22:18:27",
+      "archived_at": "2026-10-28 01:30:00",
       "summary": {
         "total": 14,
         "hit_primary": 2,
@@ -255,8 +255,8 @@
           "away": "美因茨",
           "away_rank": "0",
           "fid": "1490696",
-          "status": "已延期",
-          "live_status": "POST",
+          "status": "进行中",
+          "live_status": "LIVE",
           "odds": [
             "4.41",
             "3.89",
@@ -312,8 +312,8 @@
           "away": "法兰克福",
           "away_rank": "0",
           "fid": "1490697",
-          "status": "已延期",
-          "live_status": "POST",
+          "status": "进行中",
+          "live_status": "LIVE",
           "odds": [
             "2.59",
             "3.57",
@@ -369,8 +369,8 @@
           "away": "柏林联",
           "away_rank": "0",
           "fid": "1490693",
-          "status": "已延期",
-          "live_status": "POST",
+          "status": "未开赛",
+          "live_status": "",
           "odds": [
             "1.84",
             "3.66",
@@ -426,8 +426,8 @@
           "away": "不来梅",
           "away_rank": "0",
           "fid": "1490695",
-          "status": "已延期",
-          "live_status": "POST",
+          "status": "未开赛",
+          "live_status": "",
           "odds": [
             "1.33",
             "5.05",
@@ -483,8 +483,8 @@
           "away": "达姆施",
           "away_rank": "0",
           "fid": "1490702",
-          "status": "已延期",
-          "live_status": "POST",
+          "status": "未开赛",
+          "live_status": "",
           "odds": [
             "1.45",
             "4.55",
@@ -540,8 +540,8 @@
           "away": "卡尔斯",
           "away_rank": "0",
           "fid": "1490698",
-          "status": "已延期",
-          "live_status": "POST",
+          "status": "未开赛",
+          "live_status": "",
           "odds": [
             "1.34",
             "5.05",
@@ -597,8 +597,8 @@
           "away": "拉齐奥",
           "away_rank": "2",
           "fid": "1414253",
-          "status": "已延期",
-          "live_status": "POST",
+          "status": "未开赛",
+          "live_status": "",
           "odds": [
             "2.86",
             "3.41",
@@ -654,8 +654,8 @@
           "away": "科莫",
           "away_rank": "5",
           "fid": "1414221",
-          "status": "已延期",
-          "live_status": "POST",
+          "status": "未开赛",
+          "live_status": "",
           "odds": [
             "4.43",
             "3.71",
@@ -711,8 +711,8 @@
           "away": "卡利亚",
           "away_rank": "9",
           "fid": "1414173",
-          "status": "已延期",
-          "live_status": "POST",
+          "status": "未开赛",
+          "live_status": "",
           "odds": [
             "1.34",
             "4.88",
@@ -768,8 +768,8 @@
           "away": "埃尔夫",
           "away_rank": "5",
           "fid": "1362815",
-          "status": "已延期",
-          "live_status": "POST",
+          "status": "未开赛",
+          "live_status": "",
           "odds": [
             "3.00",
             "3.46",

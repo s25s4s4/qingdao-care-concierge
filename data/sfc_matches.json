@@ -3,7 +3,7 @@
   "picks_ready": true,
   "deadline": "10-28 22:00",
   "total_matches": 14,
-  "updated_at": "2026-10-27 22:18:27",
+  "updated_at": "2026-10-28 01:30:00",
   "matches": [
     {
       "no": 1,
@@ -935,7 +935,7 @@
     "picks_ready": true,
     "deadline": "10-27 00:00",
     "total_matches": 14,
-    "updated_at": "2026-10-27 05:28:36",
+    "updated_at": "2026-10-28 01:30:00",
     "matches": [
       {
         "no": 1,
@@ -993,8 +993,7 @@
         },
         "outcome": "0",
         "result": "HIT_PRIMARY",
-        "result_text": "首选命中",
-        "postponed_reason": "POSTPONED"
+        "result_text": "首选命中"
       },
       {
         "no": 2,
@@ -1052,8 +1051,7 @@
         },
         "outcome": "3",
         "result": "HIT_PRIMARY",
-        "result_text": "首选命中",
-        "postponed_reason": "POSTPONED"
+        "result_text": "首选命中"
       },
       {
         "no": 3,
@@ -1111,8 +1109,7 @@
         },
         "outcome": "1",
         "result": "MISS",
-        "result_text": "未中",
-        "postponed_reason": "POSTPONED"
+        "result_text": "未中"
       },
       {
         "no": 4,
@@ -1170,8 +1167,7 @@
         },
         "outcome": "1",
         "result": "HIT_SECONDARY",
-        "result_text": "次选命中",
-        "postponed_reason": "POSTPONED"
+        "result_text": "次选命中"
       },
       {
         "no": 5,
@@ -1183,7 +1179,7 @@
         "away": "美因茨",
         "away_rank": "0",
         "fid": "1490696",
-        "status": "已延期",
+        "status": "进行中",
         "matched_id": null,
         "odds": [
           "4.41",
@@ -1197,7 +1193,7 @@
           "market_depth": "百家平均欧赔开出 4.41 / 3.89 / 1.66，三项期望回报（EV）分别为主胜 -0.066、平局 -0.087、客胜 -0.081。盘面诊断：盘面处于正常期望区间。",
           "decision_guide": "传足选号方案：核心首选【客胜(0)】，次选防冷补【平局(1)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
         },
-        "live_status": "POST",
+        "live_status": "LIVE",
         "score": "",
         "pick_primary": "0",
         "pick_secondary": "1",
@@ -1229,8 +1225,7 @@
         },
         "outcome": "",
         "result": null,
-        "result_text": "",
-        "postponed_reason": "POSTPONED"
+        "result_text": ""
       },
       {
         "no": 6,
@@ -1242,7 +1237,7 @@
         "away": "法兰克福",
         "away_rank": "0",
         "fid": "1490697",
-        "status": "已延期",
+        "status": "进行中",
         "matched_id": null,
         "odds": [
           "2.59",
@@ -1256,7 +1251,7 @@
           "market_depth": "百家平均欧赔开出 2.59 / 3.57 / 2.36，三项期望回报（EV）分别为主胜 -0.124、平局 -0.057、客胜 -0.062。盘面诊断：盘面处于正常期望区间。",
           "decision_guide": "传足选号方案：核心首选【客胜(0)】（单挑作胆），🚨大冷预警留意【主胜(3)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
         },
-        "live_status": "POST",
+        "live_status": "LIVE",
         "score": "",
         "pick_primary": "0",
         "pick_secondary": null,
@@ -1288,8 +1283,7 @@
         },
         "outcome": "",
         "result": null,
-        "result_text": "",
-        "postponed_reason": "POSTPONED"
+        "result_text": ""
       },
       {
         "no": 7,
@@ -1301,7 +1295,7 @@
         "away": "柏林联",
         "away_rank": "0",
         "fid": "1490693",
-        "status": "已延期",
+        "status": "未开赛",
         "matched_id": null,
         "odds": [
           "1.84",
@@ -1315,7 +1309,7 @@
           "market_depth": "百家平均欧赔开出 1.84 / 3.66 / 3.75，三项期望回报（EV）分别为主胜 -0.113、平局 -0.080、客胜 -0.002。盘面诊断：盘面处于正常期望区间。",
           "decision_guide": "传足选号方案：核心首选【主胜(3)】，次选防冷补【平局(1)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
         },
-        "live_status": "POST",
+        "live_status": "",
         "score": "",
         "pick_primary": "3",
         "pick_secondary": "1",
@@ -1347,8 +1341,7 @@
         },
         "outcome": "",
         "result": null,
-        "result_text": "",
-        "postponed_reason": "POSTPONED"
+        "result_text": ""
       },
       {
         "no": 8,
@@ -1360,7 +1353,7 @@
         "away": "不来梅",
         "away_rank": "0",
         "fid": "1490695",
-        "status": "已延期",
+        "status": "未开赛",
         "matched_id": null,
         "odds": [
           "1.33",
@@ -1374,7 +1367,7 @@
           "market_depth": "百家平均欧赔开出 1.33 / 5.05 / 7.11，三项期望回报（EV）分别为主胜 -0.295、平局 +0.249、客胜 +0.585。盘面诊断：🚨 大热诱盘预警：历史同赔下冷门打出率高达 47%，谨防豪门翻车。",
           "decision_guide": "传足选号方案：核心首选【主胜(3)】，次选防冷补【平局(1)】，🚨大冷预警留意【客胜(0)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
         },
-        "live_status": "POST",
+        "live_status": "",
         "score": "",
         "pick_primary": "3",
         "pick_secondary": "1",
@@ -1406,8 +1399,7 @@
         },
         "outcome": "",
         "result": null,
-        "result_text": "",
-        "postponed_reason": "POSTPONED"
+        "result_text": ""
       },
       {
         "no": 9,
@@ -1419,7 +1411,7 @@
         "away": "达姆施",
         "away_rank": "0",
         "fid": "1490702",
-        "status": "已延期",
+        "status": "未开赛",
         "matched_id": null,
         "odds": [
           "1.45",
@@ -1433,7 +1425,7 @@
           "market_depth": "百家平均欧赔开出 1.45 / 4.55 / 5.56，三项期望回报（EV）分别为主胜 -0.109、平局 -0.102、客胜 +0.045。盘面诊断：🚨 大热诱盘预警：历史同赔下冷门打出率高达 38%，谨防豪门翻车。",
           "decision_guide": "传足选号方案：核心首选【主胜(3)】（单挑作胆），🚨大冷预警留意【客胜(0)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
         },
-        "live_status": "POST",
+        "live_status": "",
         "score": "",
         "pick_primary": "3",
         "pick_secondary": null,
@@ -1465,8 +1457,7 @@
         },
         "outcome": "",
         "result": null,
-        "result_text": "",
-        "postponed_reason": "POSTPONED"
+        "result_text": ""
       },
       {
         "no": 10,
@@ -1478,7 +1469,7 @@
         "away": "卡尔斯",
         "away_rank": "0",
         "fid": "1490698",
-        "status": "已延期",
+        "status": "未开赛",
         "matched_id": null,
         "odds": [
           "1.34",
@@ -1492,7 +1483,7 @@
           "market_depth": "百家平均欧赔开出 1.34 / 5.05 / 7.06，三项期望回报（EV）分别为主胜 -0.364、平局 +0.313、客胜 +0.874。盘面诊断：🚨 大热诱盘预警：历史同赔下冷门打出率高达 52%，谨防豪门翻车。",
           "decision_guide": "传足选号方案：核心首选【主胜(3)】，次选防冷补【平局(1)】，🚨大冷预警留意【客胜(0)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
         },
-        "live_status": "POST",
+        "live_status": "",
         "score": "",
         "pick_primary": "3",
         "pick_secondary": "1",
@@ -1524,8 +1515,7 @@
         },
         "outcome": "",
         "result": null,
-        "result_text": "",
-        "postponed_reason": "POSTPONED"
+        "result_text": ""
       },
       {
         "no": 11,
@@ -1537,7 +1527,7 @@
         "away": "拉齐奥",
         "away_rank": "2",
         "fid": "1414253",
-        "status": "已延期",
+        "status": "未开赛",
         "matched_id": null,
         "odds": [
           "2.86",
@@ -1551,7 +1541,7 @@
           "market_depth": "百家平均欧赔开出 2.86 / 3.41 / 2.35，三项期望回报（EV）分别为主胜 -0.105、平局 -0.106、客胜 -0.002。盘面诊断：盘面处于正常期望区间。",
           "decision_guide": "传足选号方案：核心首选【客胜(0)】（单挑作胆），🚨大冷预警留意【主胜(3)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
         },
-        "live_status": "POST",
+        "live_status": "",
         "score": "",
         "pick_primary": "0",
         "pick_secondary": null,
@@ -1583,8 +1573,7 @@
         },
         "outcome": "",
         "result": null,
-        "result_text": "",
-        "postponed_reason": "POSTPONED"
+        "result_text": ""
       },
       {
         "no": 12,
@@ -1596,7 +1585,7 @@
         "away": "科莫",
         "away_rank": "5",
         "fid": "1414221",
-        "status": "已延期",
+        "status": "未开赛",
         "matched_id": null,
         "odds": [
           "4.43",
@@ -1610,7 +1599,7 @@
           "market_depth": "百家平均欧赔开出 4.43 / 3.71 / 1.75，三项期望回报（EV）分别为主胜 -0.102、平局 -0.171、客胜 +0.004。盘面诊断：盘面处于正常期望区间。",
           "decision_guide": "传足选号方案：核心首选【客胜(0)】，次选防冷补【平局(1)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
         },
-        "live_status": "POST",
+        "live_status": "",
         "score": "",
         "pick_primary": "0",
         "pick_secondary": "1",
@@ -1642,8 +1631,7 @@
         },
         "outcome": "",
         "result": null,
-        "result_text": "",
-        "postponed_reason": "POSTPONED"
+        "result_text": ""
       },
       {
         "no": 13,
@@ -1655,7 +1643,7 @@
         "away": "卡利亚",
         "away_rank": "9",
         "fid": "1414173",
-        "status": "已延期",
+        "status": "未开赛",
         "matched_id": null,
         "odds": [
           "1.34",
@@ -1669,7 +1657,7 @@
           "market_depth": "百家平均欧赔开出 1.34 / 4.88 / 8.62，三项期望回报（EV）分别为主胜 -0.210、平局 +0.061、客胜 +0.663。盘面诊断：🚨 大热诱盘预警：历史同赔下冷门打出率高达 41%，谨防豪门翻车。",
           "decision_guide": "传足选号方案：核心首选【主胜(3)】（单挑作胆），🚨大冷预警留意【客胜(0)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
         },
-        "live_status": "POST",
+        "live_status": "",
         "score": "",
         "pick_primary": "3",
         "pick_secondary": null,
@@ -1701,8 +1689,7 @@
         },
         "outcome": "",
         "result": null,
-        "result_text": "",
-        "postponed_reason": "POSTPONED"
+        "result_text": ""
       },
       {
         "no": 14,
@@ -1714,7 +1701,7 @@
         "away": "埃尔夫",
         "away_rank": "5",
         "fid": "1362815",
-        "status": "已延期",
+        "status": "未开赛",
         "matched_id": null,
         "odds": [
           "3.00",
@@ -1728,7 +1715,7 @@
           "market_depth": "百家平均欧赔开出 3.00 / 3.46 / 2.14，三项期望回报（EV）分别为主胜 -0.099、平局 -0.098、客胜 -0.061。盘面诊断：盘面处于正常期望区间。",
           "decision_guide": "传足选号方案：核心首选【客胜(0)】（单挑作胆），🚨大冷预警留意【主胜(3)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
         },
-        "live_status": "POST",
+        "live_status": "",
         "score": "",
         "pick_primary": "0",
         "pick_secondary": null,
@@ -1760,18 +1747,17 @@
         },
         "outcome": "",
         "result": null,
-        "result_text": "",
-        "postponed_reason": "POSTPONED"
+        "result_text": ""
       }
     ],
     "summary": {
       "total": 14,
-      "hit_primary": 0,
-      "hit_secondary": 0,
+      "hit_primary": 2,
+      "hit_secondary": 1,
       "hit_upset": 0,
-      "miss": 0,
-      "pending": 14,
-      "hit": 0
+      "miss": 1,
+      "pending": 10,
+      "hit": 3
     }
   }
 }
