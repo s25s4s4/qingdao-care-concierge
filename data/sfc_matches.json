@@ -3,7 +3,7 @@
   "picks_ready": true,
   "deadline": "10-28 22:00",
   "total_matches": 14,
-  "updated_at": "2026-10-28 03:38:28",
+  "updated_at": "2026-10-28 03:58:27",
   "matches": [
     {
       "no": 1,
@@ -1701,7 +1701,7 @@
         "away": "埃尔夫",
         "away_rank": "5",
         "fid": "1362815",
-        "status": "未开赛",
+        "status": "已完赛",
         "matched_id": null,
         "odds": [
           "3.00",
@@ -1715,8 +1715,8 @@
           "market_depth": "百家平均欧赔开出 3.00 / 3.46 / 2.14，三项期望回报（EV）分别为主胜 -0.099、平局 -0.098、客胜 -0.061。盘面诊断：盘面处于正常期望区间。",
           "decision_guide": "传足选号方案：核心首选【客胜(0)】（单挑作胆），🚨大冷预警留意【主胜(3)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
         },
-        "live_status": "",
-        "score": "",
+        "live_status": "FIN",
+        "score": "2-2",
         "pick_primary": "0",
         "pick_secondary": null,
         "pick_desc": "",
@@ -1745,9 +1745,9 @@
           "smart_type": "DOUBLE",
           "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。"
         },
-        "outcome": "",
-        "result": null,
-        "result_text": ""
+        "outcome": "1",
+        "result": "MISS",
+        "result_text": "未中"
       }
     ],
     "summary": {
