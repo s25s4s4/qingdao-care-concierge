@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-27 19:46:00",
-  "total_tips": 6,
+  "updated_at": "2026-10-27 20:12:01",
+  "total_tips": 7,
   "live_feed": [
+    {
+      "id": 7130,
+      "channel": "forepitch_tips",
+      "time": "2026-10-27 18:00",
+      "code": "周二010",
+      "key": "20261028_周二010",
+      "league": "意甲",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "都灵 VS 科莫",
+      "chinese": "来，老伙计们听好了！这场（都灵）对（科莫），模型数据反常，竟然看好客队，（科莫）胜率给到了五成五，比分倾向一比二。目前看好客胜或客队不败，进球数预计在两个到三个之间，关注（科莫）反客为主。",
+      "original": "⭐ Match of the day Torino — Como Serie A, 19:45 UTC Model: 1 17% · X 28% · 2 55% Most likely score: 1:2 Expected goals: 1.0–1.7 Form (last 5): Torino 🟢 🟢 🟢 ⚪ 🔴 ",
+      "translated": true,
+      "channel_weight": 0.5
+    },
     {
       "id": 7081,
       "channel": "focuspredict",
@@ -1132,16 +1147,16 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-10-27 19:46:00",
-    "last_nonempty_at": "2026-10-27 19:46:00",
-    "live_count": 6,
+    "last_updated": "2026-10-27 20:12:01",
+    "last_nonempty_at": "2026-10-27 20:12:01",
+    "live_count": 7,
     "archived_count": 88,
-    "active_matches": 23,
+    "active_matches": 22,
     "llm_providers": [
       "local",
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-10-27 19:46:00"
+    "checked_at": "2026-10-27 20:12:01"
   }
 }
