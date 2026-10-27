@@ -1,7 +1,37 @@
 {
-  "updated_at": "2026-10-27 23:50:45",
-  "total_tips": 11,
+  "updated_at": "2026-10-28 02:17:47",
+  "total_tips": 12,
   "live_feed": [
+    {
+      "id": 7191,
+      "channel": "FabrizioRomano",
+      "time": "2026-10-27 21:49",
+      "code": "周三015",
+      "key": "20261029_周三015",
+      "league": "英联赛杯",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "利物浦 VS 切尔西",
+      "chinese": "各位球友收好。周三英伦杯，（利物浦）对（切尔西）。开战前消息，切尔西核心前锋伤缺，教练证实要缺阵数周。伤停影响火力，首发可能调整。对阵方向不明，暂不派。老球探说，先盯伤停，再盯开球。",
+      "original": "🚨 ⚠️ Bad news for Chelsea as João Pedro will be “out for few weeks”, confirms Xabi Alonso. “João has suffered a thigh injury, he won’t be available for few week",
+      "translated": true,
+      "channel_weight": 0.5
+    },
+    {
+      "id": 7197,
+      "channel": "matchpreviews",
+      "time": "2026-10-27 22:11",
+      "code": "周三015",
+      "key": "20261029_周三015",
+      "league": "英联赛杯",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "利物浦 VS 切尔西",
+      "chinese": "周三，联赛杯，利物浦对切尔西。伤情：切尔西锋乔丹大腿受伤，缺阵数周，首发与轮换未明。方向、让球、大小、进球没消息，不碰。资金异动未报。老客记，别信外泄。",
+      "original": "Xabi Alonso says João Pedro will be out for \"a few weeks\" with a thigh injury 🤕 Chelsea's upcoming fixtures before and after the November international break: O",
+      "translated": true,
+      "channel_weight": 0.5
+    },
     {
       "id": 7081,
       "channel": "focuspredict",
@@ -60,21 +90,6 @@
       "chinese": "老兄弟们听好了！周二萨索洛碰拉齐奥，外盘顶尖操盘手刚放话：坚定看好全场大球，奔着两球半以上去，当前赔付压在1.82低位。两边防线都有漏勺属性，对攻局开打，今晚直接奔大球去！",
       "original": "📊 Betiper Elite Picks — Recent Results: 🔹 Sepsi OSK vs Universitatea Craiova (Both Teams To Score - Yes) — ❌ Lost @ 1.80 🔹 Sunderland vs Leeds (Both Teams To Sc",
       "translated": true
-    },
-    {
-      "id": 7197,
-      "channel": "matchpreviews",
-      "time": "2026-10-27 22:11",
-      "code": "周三015",
-      "key": "20261029_周三015",
-      "league": "英联赛杯",
-      "category": "赛前军情",
-      "is_tip": false,
-      "match": "利物浦 VS 切尔西",
-      "chinese": "周三，联赛杯，利物浦对切尔西。伤情：切尔西锋乔丹大腿受伤，缺阵数周，首发与轮换未明。方向、让球、大小、进球没消息，不碰。资金异动未报。老客记，别信外泄。",
-      "original": "Xabi Alonso says João Pedro will be out for \"a few weeks\" with a thigh injury 🤕 Chelsea's upcoming fixtures before and after the November international break: O",
-      "translated": true,
-      "channel_weight": 0.5
     },
     {
       "id": 7083,
@@ -1210,9 +1225,9 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-10-28 01:30:00",
-    "last_nonempty_at": "2026-10-28 01:30:00",
-    "live_count": 11,
+    "last_updated": "2026-10-28 02:17:47",
+    "last_nonempty_at": "2026-10-28 02:17:47",
+    "live_count": 12,
     "archived_count": 88,
     "active_matches": 20,
     "llm_providers": [
@@ -1220,6 +1235,6 @@
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-10-28 01:30:00"
+    "checked_at": "2026-10-28 02:17:47"
   }
 }
