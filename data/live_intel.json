@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-28 02:57:47",
-  "total_tips": 13,
+  "updated_at": "2026-10-28 04:19:03",
+  "total_tips": 9,
   "live_feed": [
     {
       "id": 7240,
@@ -46,65 +46,6 @@
       "original": "Xabi Alonso says João Pedro will be out for \"a few weeks\" with a thigh injury 🤕 Chelsea's upcoming fixtures before and after the November international break: O",
       "translated": true,
       "channel_weight": 0.5
-    },
-    {
-      "id": 7081,
-      "channel": "focuspredict",
-      "time": "2026-10-27 16:00",
-      "code": "周二005",
-      "key": "20261028_周二005",
-      "league": "意甲",
-      "category": "推单",
-      "is_tip": true,
-      "match": "萨索洛 VS 拉齐奥",
-      "chinese": "老客们听好，周二这场（萨索洛）对（拉齐奥），外盘目前倾向客队不败，方向看好客胜或平局，水位在一点三六左右。没提到伤停，但机构态度很坚决，走客队方向稳当点。",
-      "original": "🎯 ACCA TIPS - 27-10-2026 FC Levadia Tallinn vs Tammeka Estonia: Meistriliiga Prediction: Over 2.5 (1.26) 🔗 View Details Sassuolo vs Lazio Italy: Serie A Predict",
-      "translated": true,
-      "channel_weight": 1.0
-    },
-    {
-      "id": 7158,
-      "channel": "matchplug",
-      "time": "2026-10-27 20:02",
-      "code": "周二005",
-      "key": "20261028_周二005",
-      "league": "意甲",
-      "category": "赛前军情",
-      "is_tip": false,
-      "match": "萨索洛 VS 拉齐奥",
-      "chinese": "来，老伙计们听好了！周二这场（萨索洛）对（拉齐奥），情报很干脆：直接看好（拉齐奥）客胜，目前水位在二点一七左右。没那么多弯弯绕，方向明确，就走客队，稳一手！",
-      "original": "ITALY SASSUOLO VS LAZIO LAZIO TO WIN ODDS : 2.17",
-      "translated": true,
-      "channel_weight": 0.5
-    },
-    {
-      "id": 7086,
-      "channel": "betminesfootballpredictions",
-      "time": "2026-10-27 16:04",
-      "code": "周二005",
-      "key": "20261028_周二005",
-      "league": "意甲",
-      "category": "推单",
-      "is_tip": true,
-      "match": "萨索洛 VS 拉齐奥",
-      "chinese": "来，老伙计们听好了！周二这场（萨索洛）对（拉齐奥），主队状态在下滑，客队这赛季有惊喜。情报显示两边都有进球能力，重点关注“双方进球”这个方向。另外留意两队核心，进球或吃牌概率都高，这场大概率有点乱，可能会出点点球。",
-      "original": "SERIE A – MATCH PREVIEWS & PREDICTIONS ⚽ 🔥 🎯 SASSUOLO – LAZIO Sassuolo have shown signs of a slight dip in form, while Lazio could be one of the surprise packag",
-      "translated": true,
-      "channel_weight": 0.5
-    },
-    {
-      "id": 6930,
-      "channel": "betiper_official",
-      "time": "2026-10-27 05:09",
-      "code": "周二005",
-      "key": "20261028_周二005",
-      "league": "意甲",
-      "category": "推单",
-      "is_tip": true,
-      "match": "萨索洛 VS 拉齐奥",
-      "chinese": "老兄弟们听好了！周二萨索洛碰拉齐奥，外盘顶尖操盘手刚放话：坚定看好全场大球，奔着两球半以上去，当前赔付压在1.82低位。两边防线都有漏勺属性，对攻局开打，今晚直接奔大球去！",
-      "original": "📊 Betiper Elite Picks — Recent Results: 🔹 Sepsi OSK vs Universitatea Craiova (Both Teams To Score - Yes) — ❌ Lost @ 1.80 🔹 Sunderland vs Leeds (Both Teams To Sc",
-      "translated": true
     },
     {
       "id": 7083,
@@ -198,6 +139,65 @@
     }
   ],
   "archived": [
+    {
+      "id": 7081,
+      "channel": "focuspredict",
+      "time": "2026-10-27 16:00",
+      "code": "周二005",
+      "key": "20261028_周二005",
+      "league": "意甲",
+      "category": "推单",
+      "is_tip": true,
+      "match": "萨索洛 VS 拉齐奥",
+      "chinese": "老客们听好，周二这场（萨索洛）对（拉齐奥），外盘目前倾向客队不败，方向看好客胜或平局，水位在一点三六左右。没提到伤停，但机构态度很坚决，走客队方向稳当点。",
+      "original": "🎯 ACCA TIPS - 27-10-2026 FC Levadia Tallinn vs Tammeka Estonia: Meistriliiga Prediction: Over 2.5 (1.26) 🔗 View Details Sassuolo vs Lazio Italy: Serie A Predict",
+      "translated": true,
+      "channel_weight": 1.0
+    },
+    {
+      "id": 7158,
+      "channel": "matchplug",
+      "time": "2026-10-27 20:02",
+      "code": "周二005",
+      "key": "20261028_周二005",
+      "league": "意甲",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "萨索洛 VS 拉齐奥",
+      "chinese": "来，老伙计们听好了！周二这场（萨索洛）对（拉齐奥），情报很干脆：直接看好（拉齐奥）客胜，目前水位在二点一七左右。没那么多弯弯绕，方向明确，就走客队，稳一手！",
+      "original": "ITALY SASSUOLO VS LAZIO LAZIO TO WIN ODDS : 2.17",
+      "translated": true,
+      "channel_weight": 0.5
+    },
+    {
+      "id": 7086,
+      "channel": "betminesfootballpredictions",
+      "time": "2026-10-27 16:04",
+      "code": "周二005",
+      "key": "20261028_周二005",
+      "league": "意甲",
+      "category": "推单",
+      "is_tip": true,
+      "match": "萨索洛 VS 拉齐奥",
+      "chinese": "来，老伙计们听好了！周二这场（萨索洛）对（拉齐奥），主队状态在下滑，客队这赛季有惊喜。情报显示两边都有进球能力，重点关注“双方进球”这个方向。另外留意两队核心，进球或吃牌概率都高，这场大概率有点乱，可能会出点点球。",
+      "original": "SERIE A – MATCH PREVIEWS & PREDICTIONS ⚽ 🔥 🎯 SASSUOLO – LAZIO Sassuolo have shown signs of a slight dip in form, while Lazio could be one of the surprise packag",
+      "translated": true,
+      "channel_weight": 0.5
+    },
+    {
+      "id": 6930,
+      "channel": "betiper_official",
+      "time": "2026-10-27 05:09",
+      "code": "周二005",
+      "key": "20261028_周二005",
+      "league": "意甲",
+      "category": "推单",
+      "is_tip": true,
+      "match": "萨索洛 VS 拉齐奥",
+      "chinese": "老兄弟们听好了！周二萨索洛碰拉齐奥，外盘顶尖操盘手刚放话：坚定看好全场大球，奔着两球半以上去，当前赔付压在1.82低位。两边防线都有漏勺属性，对攻局开打，今晚直接奔大球去！",
+      "original": "📊 Betiper Elite Picks — Recent Results: 🔹 Sepsi OSK vs Universitatea Craiova (Both Teams To Score - Yes) — ❌ Lost @ 1.80 🔹 Sunderland vs Leeds (Both Teams To Sc",
+      "translated": true
+    },
     {
       "id": 6798,
       "channel": "feedinco",
@@ -1240,16 +1240,16 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-10-28 02:57:47",
-    "last_nonempty_at": "2026-10-28 02:57:47",
-    "live_count": 13,
-    "archived_count": 88,
-    "active_matches": 20,
+    "last_updated": "2026-10-28 04:19:03",
+    "last_nonempty_at": "2026-10-28 04:19:03",
+    "live_count": 9,
+    "archived_count": 92,
+    "active_matches": 17,
     "llm_providers": [
       "local",
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-10-28 02:57:47"
+    "checked_at": "2026-10-28 04:19:03"
   }
 }
