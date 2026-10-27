@@ -1,22 +1,7 @@
 {
-  "updated_at": "2026-10-28 04:19:03",
-  "total_tips": 9,
+  "updated_at": "2026-10-28 06:07:28",
+  "total_tips": 2,
   "live_feed": [
-    {
-      "id": 7240,
-      "channel": "forepitch_tips",
-      "time": "2026-10-28 01:17",
-      "code": "周二007",
-      "key": "20261028_周二007",
-      "league": "德国杯",
-      "category": "推单·已开赛",
-      "is_tip": true,
-      "match": "多特蒙德 VS 不来梅",
-      "chinese": "周二德国杯，多特蒙德对不来梅。主场明显占优，模型给出主胜方向，家胜看七成，主客胜平局让球都看多特蒙德。大小球偏大，双方进球有戏。伤停没接到消息，首发和轮换未明。模型预估开球前或有变动。",
-      "original": "⚽ DFBPOKAL · 27 October, 19:45 UTC Borussia Dortmund — Werder Bremen The model sees a clear edge. 🎯 Main pick: Borussia Dortmund to win · 69% Home 72% · Draw 17",
-      "translated": true,
-      "channel_weight": 0.5
-    },
     {
       "id": 7191,
       "channel": "FabrizioRomano",
@@ -44,6 +29,23 @@
       "match": "利物浦 VS 切尔西",
       "chinese": "周三，联赛杯，利物浦对切尔西。伤情：切尔西锋乔丹大腿受伤，缺阵数周，首发与轮换未明。方向、让球、大小、进球没消息，不碰。资金异动未报。老客记，别信外泄。",
       "original": "Xabi Alonso says João Pedro will be out for \"a few weeks\" with a thigh injury 🤕 Chelsea's upcoming fixtures before and after the November international break: O",
+      "translated": true,
+      "channel_weight": 0.5
+    }
+  ],
+  "archived": [
+    {
+      "id": 7240,
+      "channel": "forepitch_tips",
+      "time": "2026-10-28 01:17",
+      "code": "周二007",
+      "key": "20261028_周二007",
+      "league": "德国杯",
+      "category": "推单·已开赛",
+      "is_tip": true,
+      "match": "多特蒙德 VS 不来梅",
+      "chinese": "周二德国杯，多特蒙德对不来梅。主场明显占优，模型给出主胜方向，家胜看七成，主客胜平局让球都看多特蒙德。大小球偏大，双方进球有戏。伤停没接到消息，首发和轮换未明。模型预估开球前或有变动。",
+      "original": "⚽ DFBPOKAL · 27 October, 19:45 UTC Borussia Dortmund — Werder Bremen The model sees a clear edge. 🎯 Main pick: Borussia Dortmund to win · 69% Home 72% · Draw 17",
       "translated": true,
       "channel_weight": 0.5
     },
@@ -136,9 +138,7 @@
       "original": "⭐ Match of the day Torino — Como Serie A, 19:45 UTC Model: 1 17% · X 28% · 2 55% Most likely score: 1:2 Expected goals: 1.0–1.7 Form (last 5): Torino 🟢 🟢 🟢 ⚪ 🔴 ",
       "translated": true,
       "channel_weight": 0.5
-    }
-  ],
-  "archived": [
+    },
     {
       "id": 7081,
       "channel": "focuspredict",
@@ -1240,16 +1240,16 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-10-28 04:19:03",
-    "last_nonempty_at": "2026-10-28 04:19:03",
-    "live_count": 9,
-    "archived_count": 92,
-    "active_matches": 17,
+    "last_updated": "2026-10-28 06:07:28",
+    "last_nonempty_at": "2026-10-28 06:07:28",
+    "live_count": 2,
+    "archived_count": 99,
+    "active_matches": 13,
     "llm_providers": [
       "local",
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-10-28 04:19:03"
+    "checked_at": "2026-10-28 06:07:28"
   }
 }
