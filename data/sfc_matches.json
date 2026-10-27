@@ -3,7 +3,7 @@
   "picks_ready": true,
   "deadline": "10-28 22:00",
   "total_matches": 14,
-  "updated_at": "2026-10-27 18:08:37",
+  "updated_at": "2026-10-27 19:58:27",
   "matches": [
     {
       "no": 1,
@@ -947,7 +947,7 @@
         "away": "神户",
         "away_rank": "3",
         "fid": "1473992",
-        "status": "已延期",
+        "status": "已完赛",
         "matched_id": null,
         "odds": [
           "2.66",
@@ -961,8 +961,8 @@
           "market_depth": "百家平均欧赔开出 2.66 / 3.30 / 2.43，三项期望回报（EV）分别为主胜 -0.146、平局 -0.092、客胜 -0.018。盘面诊断：盘面处于正常期望区间。",
           "decision_guide": "传足选号方案：核心首选【客胜(0)】（单挑作胆），🚨大冷预警留意【主胜(3)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
         },
-        "live_status": "POST",
-        "score": "",
+        "live_status": "FIN",
+        "score": "0-1",
         "pick_primary": "0",
         "pick_secondary": null,
         "pick_desc": "",
@@ -991,9 +991,9 @@
           "smart_type": "DOUBLE",
           "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。"
         },
-        "outcome": "",
-        "result": null,
-        "result_text": "",
+        "outcome": "0",
+        "result": "HIT_PRIMARY",
+        "result_text": "首选命中",
         "postponed_reason": "POSTPONED"
       },
       {
