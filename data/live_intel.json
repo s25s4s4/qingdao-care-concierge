@@ -1,7 +1,37 @@
 {
-  "updated_at": "2026-10-27 15:09:28",
-  "total_tips": 2,
+  "updated_at": "2026-10-27 17:40:58",
+  "total_tips": 4,
   "live_feed": [
+    {
+      "id": 7083,
+      "channel": "victorspredict",
+      "time": "2026-10-27 16:00",
+      "code": "周二009",
+      "key": "20261028_周二009",
+      "league": "意甲",
+      "category": "推单",
+      "is_tip": true,
+      "match": "罗马 VS 卡利亚里",
+      "chinese": "周二，意甲，（罗马）对（卡利亚里）。主场方向看主胜。赔率一点三八，主强占优。店里没有伤停或首发细节，按原文只有这个建议。未提资金异动。",
+      "original": "🏆 BANKER TIPS - 27-10-2026 AS Roma vs Cagliari Italy: Serie A Prediction: Home (1.38) 🔗 View Details Mamelodi Sundowns vs Marumo Gallants South-Africa: League C",
+      "translated": true,
+      "channel_weight": 1.0
+    },
+    {
+      "id": 7081,
+      "channel": "focuspredict",
+      "time": "2026-10-27 16:00",
+      "code": "周二005",
+      "key": "20261028_周二005",
+      "league": "意甲",
+      "category": "推单",
+      "is_tip": true,
+      "match": "萨索洛 VS 拉齐奥",
+      "chinese": "老客们听好，周二这场（萨索洛）对（拉齐奥），外盘目前倾向客队不败，方向看好客胜或平局，水位在一点三六左右。没提到伤停，但机构态度很坚决，走客队方向稳当点。",
+      "original": "🎯 ACCA TIPS - 27-10-2026 FC Levadia Tallinn vs Tammeka Estonia: Meistriliiga Prediction: Over 2.5 (1.26) 🔗 View Details Sassuolo vs Lazio Italy: Serie A Predict",
+      "translated": true,
+      "channel_weight": 1.0
+    },
     {
       "id": 6930,
       "channel": "betiper_official",
@@ -1072,9 +1102,9 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-10-27 15:09:28",
-    "last_nonempty_at": "2026-10-27 15:09:28",
-    "live_count": 2,
+    "last_updated": "2026-10-27 17:40:58",
+    "last_nonempty_at": "2026-10-27 17:40:58",
+    "live_count": 4,
     "archived_count": 88,
     "active_matches": 23,
     "llm_providers": [
@@ -1082,6 +1112,6 @@
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-10-27 15:09:28"
+    "checked_at": "2026-10-27 17:40:58"
   }
 }
