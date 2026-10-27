@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-10-28 01:30:00",
+  "updated_at": "2026-10-28 01:50:00",
   "periods": [
     {
       "period": "26151",
       "picks_ready": true,
       "deadline": "10-27 00:00",
       "total_matches": 14,
-      "archived_at": "2026-10-28 01:30:00",
+      "archived_at": "2026-10-28 01:50:00",
       "summary": {
         "total": 14,
         "hit_primary": 2,
@@ -262,7 +262,7 @@
             "3.89",
             "1.66"
           ],
-          "score": "",
+          "score": "0-0",
           "outcome": "",
           "pick_primary": "0",
           "pick_secondary": "1",
@@ -319,7 +319,7 @@
             "3.57",
             "2.36"
           ],
-          "score": "",
+          "score": "0-2",
           "outcome": "",
           "pick_primary": "0",
           "pick_secondary": null,
@@ -597,14 +597,14 @@
           "away": "拉齐奥",
           "away_rank": "2",
           "fid": "1414253",
-          "status": "未开赛",
-          "live_status": "",
+          "status": "进行中",
+          "live_status": "LIVE",
           "odds": [
             "2.86",
             "3.41",
             "2.35"
           ],
-          "score": "",
+          "score": "1-2",
           "outcome": "",
           "pick_primary": "0",
           "pick_secondary": null,
