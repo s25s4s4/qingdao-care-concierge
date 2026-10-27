@@ -3,7 +3,7 @@
   "picks_ready": true,
   "deadline": "10-28 22:00",
   "total_matches": 14,
-  "updated_at": "2026-10-27 20:08:27",
+  "updated_at": "2026-10-27 22:18:27",
   "matches": [
     {
       "no": 1,
@@ -1065,7 +1065,7 @@
         "away": "全北现代",
         "away_rank": "10",
         "fid": "1473897",
-        "status": "已延期",
+        "status": "已完赛",
         "matched_id": null,
         "odds": [
           "2.22",
@@ -1079,8 +1079,8 @@
           "market_depth": "百家平均欧赔开出 2.22 / 3.46 / 2.81，三项期望回报（EV）分别为主胜 -0.160、平局 -0.039、客胜 -0.034。盘面诊断：盘面处于正常期望区间。",
           "decision_guide": "传足选号方案：核心首选【主胜(3)】（单挑作胆），🚨大冷预警留意【客胜(0)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
         },
-        "live_status": "POST",
-        "score": "",
+        "live_status": "FIN",
+        "score": "2-2",
         "pick_primary": "3",
         "pick_secondary": null,
         "pick_desc": "",
@@ -1109,9 +1109,9 @@
           "smart_type": "DOUBLE",
           "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。"
         },
-        "outcome": "",
-        "result": null,
-        "result_text": "",
+        "outcome": "1",
+        "result": "MISS",
+        "result_text": "未中",
         "postponed_reason": "POSTPONED"
       },
       {
@@ -1124,7 +1124,7 @@
         "away": "太阳神",
         "away_rank": "8",
         "fid": "1474052",
-        "status": "已延期",
+        "status": "已完赛",
         "matched_id": null,
         "odds": [
           "5.74",
@@ -1138,8 +1138,8 @@
           "market_depth": "百家平均欧赔开出 5.74 / 4.72 / 1.41，三项期望回报（EV）分别为主胜 +0.104、平局 +0.089、客胜 -0.187。盘面诊断：🚨 客热诱盘预警：历史同赔下主不败打出率高达 42%，谨防客队大热不胜。",
           "decision_guide": "传足选号方案：核心首选【客胜(0)】，次选防冷补【平局(1)】，🚨大冷预警留意【主胜(3)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
         },
-        "live_status": "POST",
-        "score": "",
+        "live_status": "FIN",
+        "score": "0-0",
         "pick_primary": "0",
         "pick_secondary": "1",
         "pick_desc": "",
@@ -1168,9 +1168,9 @@
           "smart_type": "SINGLE",
           "quant_detail_note": "历史赔率邻域样本频率仅供参考；样本并非完全同赔，不表示本场命中率，不构成获利保证。"
         },
-        "outcome": "",
-        "result": null,
-        "result_text": "",
+        "outcome": "1",
+        "result": "HIT_SECONDARY",
+        "result_text": "次选命中",
         "postponed_reason": "POSTPONED"
       },
       {

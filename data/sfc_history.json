@@ -1,20 +1,20 @@
 {
-  "updated_at": "2026-10-27 20:08:27",
+  "updated_at": "2026-10-27 22:18:27",
   "periods": [
     {
       "period": "26151",
       "picks_ready": true,
       "deadline": "10-27 00:00",
       "total_matches": 14,
-      "archived_at": "2026-10-27 20:08:27",
+      "archived_at": "2026-10-27 22:18:27",
       "summary": {
         "total": 14,
         "hit_primary": 2,
-        "hit_secondary": 0,
+        "hit_secondary": 1,
         "hit_upset": 0,
-        "miss": 0,
-        "pending": 12,
-        "hit": 2
+        "miss": 1,
+        "pending": 10,
+        "hit": 3
       },
       "matches": [
         {
@@ -141,21 +141,21 @@
           "away": "全北现代",
           "away_rank": "10",
           "fid": "1473897",
-          "status": "已延期",
-          "live_status": "POST",
+          "status": "已完赛",
+          "live_status": "FIN",
           "odds": [
             "2.22",
             "3.46",
             "2.81"
           ],
-          "score": "",
-          "outcome": "",
+          "score": "2-2",
+          "outcome": "1",
           "pick_primary": "3",
           "pick_secondary": null,
           "pick_upset": "0",
           "pick_desc": "",
-          "result": null,
-          "result_text": "",
+          "result": "MISS",
+          "result_text": "未中",
           "quant_factors": {
             "market": "had",
             "samples": 3248,
@@ -198,21 +198,21 @@
           "away": "太阳神",
           "away_rank": "8",
           "fid": "1474052",
-          "status": "已延期",
-          "live_status": "POST",
+          "status": "已完赛",
+          "live_status": "FIN",
           "odds": [
             "5.74",
             "4.72",
             "1.41"
           ],
-          "score": "",
-          "outcome": "",
+          "score": "0-0",
+          "outcome": "1",
           "pick_primary": "0",
           "pick_secondary": "1",
           "pick_upset": "3",
           "pick_desc": "",
-          "result": null,
-          "result_text": "",
+          "result": "HIT_SECONDARY",
+          "result_text": "次选命中",
           "quant_factors": {
             "market": "had",
             "samples": 52,
