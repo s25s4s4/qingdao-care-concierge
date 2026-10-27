@@ -1,7 +1,67 @@
 {
-  "updated_at": "2026-10-27 20:12:01",
-  "total_tips": 7,
+  "updated_at": "2026-10-27 20:46:22",
+  "total_tips": 9,
   "live_feed": [
+    {
+      "id": 7083,
+      "channel": "victorspredict",
+      "time": "2026-10-27 16:00",
+      "code": "周二009",
+      "key": "20261028_周二009",
+      "league": "意甲",
+      "category": "推单",
+      "is_tip": true,
+      "match": "罗马 VS 卡利亚里",
+      "chinese": "周二，意甲，（罗马）对（卡利亚里）。主场方向看主胜。赔率一点三八，主强占优。店里没有伤停或首发细节，按原文只有这个建议。未提资金异动。",
+      "original": "🏆 BANKER TIPS - 27-10-2026 AS Roma vs Cagliari Italy: Serie A Prediction: Home (1.38) 🔗 View Details Mamelodi Sundowns vs Marumo Gallants South-Africa: League C",
+      "translated": true,
+      "channel_weight": 1.0
+    },
+    {
+      "id": 7160,
+      "channel": "matchplug",
+      "time": "2026-10-27 20:07",
+      "code": "周二009",
+      "key": "20261028_周二009",
+      "league": "意甲",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "罗马 VS 卡利亚里",
+      "chinese": "周二意甲，（罗马）对（卡利亚里）。看大分，超三球方向。赔率给一九二，数据撑这盘。伤停没料，先压大球。资金也看这边，别碰小球。",
+      "original": "ITALY AS ROMA VS CAGLIARI ROMA OVER 3.0 CARDS ODDS : 1.92",
+      "translated": true,
+      "channel_weight": 0.5
+    },
+    {
+      "id": 7080,
+      "channel": "sure2scoreprediction",
+      "time": "2026-10-27 15:21",
+      "code": "周二009",
+      "key": "20261028_周二009",
+      "league": "意甲",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "罗马 VS 卡利亚里",
+      "chinese": "前线爆料主推罗马独赢。红狼主场借势抢攻，硬实力碾压客队；卡利亚里客战疲软难造威胁。盘口资金死压主胜，低赔防范意图明显，本场无冷，罗马全取三分稳如狗。",
+      "original": "FREE FOOTBALL TIPS ✅ ✅ ✅ 27/10/26 Italy - Serie A Roma vs Cagliari 🚀 🚀 🚀 Prediction: Home to win Odds .38 England - League Two Barnet FC vs York City FC 🚀 🚀 🚀 P",
+      "translated": true,
+      "channel_weight": 0.5
+    },
+    {
+      "id": 7140,
+      "channel": "matchplug",
+      "time": "2026-10-27 19:59",
+      "code": "周二010",
+      "key": "20261028_周二010",
+      "league": "意甲",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "都灵 VS 科莫",
+      "chinese": "来，老伙计们听好了！周二这场（都灵）对（科莫），外盘风向很诡异，直接看好（科莫）客胜，目前水位在一点七七左右。没提到伤停，但资金明显在往客队那边走，机构态度坚决，这球可以关注客胜！",
+      "original": "FOOTBALL ITALY TORINO VS COMO COMO TO WIN ODDS : 1.77",
+      "translated": true,
+      "channel_weight": 0.5
+    },
     {
       "id": 7130,
       "channel": "forepitch_tips",
@@ -74,36 +134,6 @@
       "chinese": "老伙计们听好了，海外今天有单子关注到这场：萨索洛碰拉齐奥，外盘资金主流倾向挂在平局和客胜上，双选双平走客队不败（即平局或客胜方向）。机构态度偏向拉齐奥能从客场全身而退，防着一手打平。",
       "original": "FEEDINCO.com Tips for Tuesday, 27 October 1X - AS Roma - Cagliari 1X - Bradford - Peterborough X2 - Fleetwood - Arsenal X2 - Sassuolo - Lazio 🔥 All upcoming Foo",
       "translated": true
-    },
-    {
-      "id": 7083,
-      "channel": "victorspredict",
-      "time": "2026-10-27 16:00",
-      "code": "周二009",
-      "key": "20261028_周二009",
-      "league": "意甲",
-      "category": "推单",
-      "is_tip": true,
-      "match": "罗马 VS 卡利亚里",
-      "chinese": "周二，意甲，（罗马）对（卡利亚里）。主场方向看主胜。赔率一点三八，主强占优。店里没有伤停或首发细节，按原文只有这个建议。未提资金异动。",
-      "original": "🏆 BANKER TIPS - 27-10-2026 AS Roma vs Cagliari Italy: Serie A Prediction: Home (1.38) 🔗 View Details Mamelodi Sundowns vs Marumo Gallants South-Africa: League C",
-      "translated": true,
-      "channel_weight": 1.0
-    },
-    {
-      "id": 7080,
-      "channel": "sure2scoreprediction",
-      "time": "2026-10-27 15:21",
-      "code": "周二009",
-      "key": "20261028_周二009",
-      "league": "意甲",
-      "category": "赛前军情",
-      "is_tip": false,
-      "match": "罗马 VS 卡利亚里",
-      "chinese": "前线爆料主推罗马独赢。红狼主场借势抢攻，硬实力碾压客队；卡利亚里客战疲软难造威胁。盘口资金死压主胜，低赔防范意图明显，本场无冷，罗马全取三分稳如狗。",
-      "original": "FREE FOOTBALL TIPS ✅ ✅ ✅ 27/10/26 Italy - Serie A Roma vs Cagliari 🚀 🚀 🚀 Prediction: Home to win Odds .38 England - League Two Barnet FC vs York City FC 🚀 🚀 🚀 P",
-      "translated": true,
-      "channel_weight": 0.5
     }
   ],
   "archived": [
@@ -1147,16 +1177,16 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-10-27 20:12:01",
-    "last_nonempty_at": "2026-10-27 20:12:01",
-    "live_count": 7,
+    "last_updated": "2026-10-27 20:46:22",
+    "last_nonempty_at": "2026-10-27 20:46:22",
+    "live_count": 9,
     "archived_count": 88,
-    "active_matches": 22,
+    "active_matches": 21,
     "llm_providers": [
       "local",
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-10-27 20:12:01"
+    "checked_at": "2026-10-27 20:46:22"
   }
 }
