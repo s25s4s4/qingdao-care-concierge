@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-27 20:46:22",
-  "total_tips": 9,
+  "updated_at": "2026-10-27 21:14:20",
+  "total_tips": 10,
   "live_feed": [
     {
       "id": 7083,
@@ -16,6 +16,21 @@
       "original": "🏆 BANKER TIPS - 27-10-2026 AS Roma vs Cagliari Italy: Serie A Prediction: Home (1.38) 🔗 View Details Mamelodi Sundowns vs Marumo Gallants South-Africa: League C",
       "translated": true,
       "channel_weight": 1.0
+    },
+    {
+      "id": 7159,
+      "channel": "matchplug",
+      "time": "2026-10-27 20:05",
+      "code": "周二009",
+      "key": "20261028_周二009",
+      "league": "意甲",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "罗马 VS 卡利亚里",
+      "chinese": "来，老伙计们听好了！周二这场（罗马）对（卡利亚里），我盯着外盘看，目前有个方向比较稳：主队（罗马）全场角球数大6.5个，水位在1.96左右。没别的废话，就盯着这个角球数走，稳健！",
+      "original": "FOOTBALL ITALY AS ROMA VS CAGLIARI ROMA OVER 6.5 CORNERS ODDS : 1.96",
+      "translated": true,
+      "channel_weight": 0.5
     },
     {
       "id": 7160,
@@ -1177,9 +1192,9 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-10-27 20:46:22",
-    "last_nonempty_at": "2026-10-27 20:46:22",
-    "live_count": 9,
+    "last_updated": "2026-10-27 21:14:20",
+    "last_nonempty_at": "2026-10-27 21:14:20",
+    "live_count": 10,
     "archived_count": 88,
     "active_matches": 21,
     "llm_providers": [
@@ -1187,6 +1202,6 @@
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-10-27 20:46:22"
+    "checked_at": "2026-10-27 21:14:20"
   }
 }
