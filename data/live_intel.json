@@ -615,18 +615,6 @@
       "original": "🚨 Joshua Kimmich, out of Bayern squad to face Arsenal tonight due to a death in his close family."
     },
     {
-      "id": 3711,
-      "channel": "FabrizioRomano",
-      "time": "2026-10-22 01:58",
-      "code": "周三004",
-      "league": "欧冠",
-      "category": "赛前军情",
-      "is_tip": false,
-      "match": "科莫 VS 曼联",
-      "chinese": "分析这条消息：原文描述的是比赛中的实时进球/赛后事件（“Nico Páz, at it again for Como against Man United with an assist for Douvikas. 4 G/A in three UCL games”），这是赛中播报/赛后统计或纯比赛事实回放，并非赛前前瞻分析、突发伤停、首发阵容或资金盘口情报，对赛前投注指导没有前瞻参考价值。\n\n根据【价值判定】：如果这条消息虽然提到本场，但只是历史回顾、球员轶事、情怀旧闻、旧赛季数据、纯广告引流，对赛前投注没有任何参考价值，请只回复三个字：无价值。\n\n因此判定为：无价值。\n无价值",
-      "original": "💙 🤍 🇦🇷 Nico Páz, at it again for Como against Man United with an assist for Douvikas. 4 G/A (3 assists, 1 goal) in three UCL games."
-    },
-    {
       "id": 3705,
       "channel": "calciomercato",
       "time": "2026-10-22 01:53",
@@ -1222,16 +1210,16 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-10-27 23:50:45",
-    "last_nonempty_at": "2026-10-27 23:50:45",
+    "last_updated": "2026-10-28 01:30:00",
+    "last_nonempty_at": "2026-10-28 01:30:00",
     "live_count": 11,
-    "archived_count": 89,
+    "archived_count": 88,
     "active_matches": 20,
     "llm_providers": [
       "local",
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-10-27 23:50:45"
+    "checked_at": "2026-10-28 01:30:00"
   }
 }
