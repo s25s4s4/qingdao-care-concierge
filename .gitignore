@@ -32,3 +32,6 @@ data/*.bak-reconcile-*
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# 情报流健康快照（monitor_engine 每轮写，本地审计用）
+data/intel_health.json
