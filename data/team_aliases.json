@@ -1,18 +1,23 @@
 {
   "AC米兰": [
-    "AC Milan"
+    "AC Milan",
+    "ac milan",
+    "milan"
   ],
   "SBV精英": [
     "Excelsior"
   ],
   "不来梅": [
-    "Werder Bremen"
+    "Werder Bremen",
+    "bremen",
+    "werder bremen"
   ],
   "中央海岸": [
     "Central Coast Mariners"
   ],
   "乌迪内斯": [
-    "Udinese"
+    "Udinese",
+    "udinese"
   ],
   "亚特兰大": [
     "Atalanta"
@@ -33,7 +38,8 @@
     "Burnley"
   ],
   "伯恩茅斯": [
-    "Bournemouth"
+    "Bournemouth",
+    "bournemouth"
   ],
   "佐加顿斯": [
     "Djurgården"
@@ -45,13 +51,17 @@
     "PEC Zwolle"
   ],
   "切尔西": [
-    "Chelsea"
+    "Chelsea",
+    "chelsea",
+    "cfc"
   ],
   "利兹联": [
     "Leeds United"
   ],
   "利物浦": [
-    "Liverpool"
+    "Liverpool",
+    "liverpool",
+    "lfc"
   ],
   "前进之鹰": [
     "Go Ahead Eagles"
@@ -66,10 +76,12 @@
     "Bodø/Glimt"
   ],
   "博洛尼亚": [
-    "Bologna"
+    "Bologna",
+    "bologna"
   ],
   "卡利亚里": [
-    "Cagliari"
+    "Cagliari",
+    "cagliari"
   ],
   "卡尔马": [
     "Kalmar FF"
@@ -81,13 +93,17 @@
     "Nagoya Grampus"
   ],
   "国际米兰": [
-    "Inter Milan"
+    "Inter Milan",
+    "inter",
+    "inter milan"
   ],
   "图卢兹": [
     "Toulouse FC"
   ],
   "埃夫斯堡": [
-    "Elfsborg"
+    "Elfsborg",
+    "efsborg",
+    "if elfsborg"
   ],
   "埃尔切": [
     "Elche"
@@ -105,7 +121,9 @@
     "Sevilla"
   ],
   "多特蒙德": [
-    "Borussia Dortmund"
+    "Borussia Dortmund",
+    "dortmund",
+    "bvb"
   ],
   "天狼星": [
     "IK Sirius"
@@ -120,19 +138,23 @@
     "Osasuna"
   ],
   "威尼斯": [
-    "Venezia"
+    "Venezia",
+    "venezia"
   ],
   "宫崎惊奇牛鸟": [
     "Tegevajaro Miyazaki"
   ],
   "富勒姆": [
-    "Fulham"
+    "Fulham",
+    "fulham"
   ],
   "富川FC": [
     "Bucheon FC 1995"
   ],
   "尤文图斯": [
-    "Juventus"
+    "Juventus",
+    "juventus",
+    "juve"
   ],
   "尼斯": [
     "Nice"
@@ -153,7 +175,8 @@
     "Paris Saint-Germain"
   ],
   "布伦特": [
-    "Brentford"
+    "Brentford",
+    "brentford"
   ],
   "布拉加": [
     "Braga"
@@ -162,10 +185,13 @@
     "Brommapojkarna"
   ],
   "帕尔马": [
-    "Parma"
+    "Parma",
+    "parma"
   ],
   "帕德博恩": [
-    "Paderborn"
+    "padborn",
+    "sc padborn",
+    "paderborn"
   ],
   "库奥皮奥": [
     "Kuopion Palloseura"
@@ -186,7 +212,9 @@
     "Deportivo A Coruña"
   ],
   "拉齐奥": [
-    "Lazio"
+    "Lazio",
+    "lazio",
+    "lazio roma"
   ],
   "拜仁": [
     "Bayern Munich"
@@ -195,7 +223,9 @@
     "Monaco"
   ],
   "斯图加特": [
-    "VfB Stuttgart"
+    "VfB Stuttgart",
+    "stuttgart",
+    "vfb stuttgart"
   ],
   "斯特拉斯": [
     "Strasbourg"
@@ -219,7 +249,8 @@
     "Kashiwa Reysol"
   ],
   "柏林联合": [
-    "Union Berlin"
+    "Union Berlin",
+    "union berlin"
   ],
   "格罗宁根": [
     "Groningen"
@@ -228,7 +259,8 @@
     "Racing Santander"
   ],
   "桑德兰": [
-    "Sunderland"
+    "Sunderland",
+    "sunderland"
   ],
   "桑托斯": [
     "Santos"
@@ -243,7 +275,9 @@
     "HamKam"
   ],
   "汉堡": [
-    "Hamburger SV"
+    "Hamburger SV",
+    "hamburg",
+    "hsv"
   ],
   "江原FC": [
     "Gangwon FC"
@@ -252,7 +286,9 @@
     "Schalke 04"
   ],
   "法兰克福": [
-    "Eintracht Frankfurt"
+    "Eintracht Frankfurt",
+    "frankfurt",
+    "eintracht frankfurt"
   ],
   "洛里昂": [
     "Lorient"
@@ -264,7 +300,8 @@
     "Tottenham Hotspur"
   ],
   "热那亚": [
-    "Genoa"
+    "Genoa",
+    "genoa"
   ],
   "特尔斯达": [
     "Telstar"
@@ -300,10 +337,14 @@
     "Energie Cottbus"
   ],
   "科莫": [
-    "Como"
+    "Como",
+    "como"
   ],
   "科隆": [
-    "1. FC Köln"
+    "1. FC Köln",
+    "cologne",
+    "koln",
+    "fc cologne"
   ],
   "米尔沃尔": [
     "Millwall"
@@ -318,13 +359,17 @@
     "Newcastle United"
   ],
   "纽喷气机": [
-    "Newcastle Jets"
+    "Newcastle Jets",
+    "newcastle jets",
+    "jets"
   ],
   "维多利亚": [
     "Victoria"
   ],
   "维拉": [
-    "Aston Villa"
+    "Aston Villa",
+    "aston villa",
+    "villa"
   ],
   "罗德兹": [
     "Rodez AF"
@@ -333,7 +378,8 @@
     "Rosenborg"
   ],
   "罗马": [
-    "Roma"
+    "Roma",
+    "roma"
   ],
   "美因茨": [
     "Mainz 05"
@@ -357,13 +403,15 @@
     "Sarpsborg 08"
   ],
   "萨索洛": [
-    "Sassuolo"
+    "Sassuolo",
+    "sassuolo"
   ],
   "蒙彼利埃": [
     "Montpellier"
   ],
   "蒙扎": [
-    "Monza"
+    "Monza",
+    "monza"
   ],
   "蔚山现代": [
     "Ulsan HD"
@@ -396,7 +444,8 @@
     "HJK Klubi 04"
   ],
   "那不勒斯": [
-    "Napoli"
+    "Napoli",
+    "napoli"
   ],
   "都灵": [
     "Torino"
@@ -438,7 +487,10 @@
     "Marseille"
   ],
   "鹿岛鹿角": [
-    "Kashima Antlers"
+    "Kashima Antlers",
+    "kashima",
+    "kashima antlers",
+    "鹿島アントラーズ"
   ],
   "麦克阿瑟FC": [
     "Macarthur FC"
@@ -447,7 +499,9 @@
     "Brighton & Hove Albion"
   ],
   "水晶宫": [
-    "Crystal Palace"
+    "Crystal Palace",
+    "crystal palace",
+    "palace"
   ],
   "里尔": [
     "Lille"
@@ -732,13 +786,17 @@
     "Clermont Foot"
   ],
   "广岛三箭": [
-    "Sanfrecge Hiroshima"
+    "sanfrecce",
+    "sanfrecce hiroshima",
+    "hiroshima"
   ],
   "浦和红钻": [
     "Urawa Red Diamonds"
   ],
   "大阪钢巴": [
-    "Gamba Osaka"
+    "Gamba Osaka",
+    "gamba osaka",
+    "gamba"
   ],
   "札幌冈萨多": [
     "Consadole Sapporo"
@@ -756,7 +814,10 @@
     "Shimizu S-Pulse"
   ],
   "横滨水手": [
-    "Yokohama F. Marinos"
+    "yokohama f marinos",
+    "yokohama fm",
+    "yokohama",
+    "marinos"
   ],
   "千叶市原": [
     "Kashiwa Reysol"
@@ -798,13 +859,22 @@
     "Blaublitz Akita"
   ],
   "全北现代": [
-    "Jeonbuk Hyundai"
+    "Jeonbuk Hyundai",
+    "jeonbuk",
+    "jeonbuk hyundai motors"
   ],
   "浦项制铁": [
-    "Pohang Steelers"
+    "Pohang Steelers",
+    "poongcheon",
+    "poong sang",
+    "poohang steel",
+    "poonghan steel"
   ],
   "大田市民": [
-    "Daejeon Hana Citizen"
+    "Daejeon Hana Citizen",
+    "daejeon",
+    "daejeon citizen",
+    "daejeon hana citizen"
   ],
   "光州FC": [
     "Gwangju FC"
@@ -828,7 +898,9 @@
     "Shandong Taishan"
   ],
   "北京国安": [
-    "Beijing Guoan"
+    "Beijing Guoan",
+    "guoan",
+    "beijing guoan"
   ],
   "广州恒大": [
     "Guangzhou FC"
@@ -1812,9 +1884,18 @@
   "京都": [
     "Kyoto",
     "Kyoto Sanga",
-    "kyoto sang"
+    "kyoto sang",
+    "kyoto",
+    "kyoto sanga fc",
+    "kyoto sanga"
   ],
   "布里兰": [
-    "burilan"
+    "burilan",
+    "buriram",
+    "buriram united"
+  ],
+  "索尔纳": [
+    "aik",
+    "aik solna"
   ]
 }
