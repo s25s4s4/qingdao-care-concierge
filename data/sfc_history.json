@@ -1,20 +1,20 @@
 {
-  "updated_at": "2026-10-27 19:58:27",
+  "updated_at": "2026-10-27 20:08:27",
   "periods": [
     {
       "period": "26151",
       "picks_ready": true,
       "deadline": "10-27 00:00",
       "total_matches": 14,
-      "archived_at": "2026-10-27 19:58:27",
+      "archived_at": "2026-10-27 20:08:27",
       "summary": {
         "total": 14,
-        "hit_primary": 1,
+        "hit_primary": 2,
         "hit_secondary": 0,
         "hit_upset": 0,
         "miss": 0,
-        "pending": 13,
-        "hit": 1
+        "pending": 12,
+        "hit": 2
       },
       "matches": [
         {
@@ -84,21 +84,21 @@
           "away": "喷气机",
           "away_rank": "16",
           "fid": "1474025",
-          "status": "已延期",
-          "live_status": "POST",
+          "status": "已完赛",
+          "live_status": "FIN",
           "odds": [
             "1.43",
             "4.69",
             "5.50"
           ],
-          "score": "",
-          "outcome": "",
+          "score": "5-2",
+          "outcome": "3",
           "pick_primary": "3",
           "pick_secondary": null,
           "pick_upset": null,
           "pick_desc": "",
-          "result": null,
-          "result_text": "",
+          "result": "HIT_PRIMARY",
+          "result_text": "首选命中",
           "quant_factors": {
             "market": "had",
             "samples": 376,
