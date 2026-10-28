@@ -1,34 +1,19 @@
 {
-  "updated_at": "2026-10-28 17:09:42",
-  "total_tips": 4,
+  "updated_at": "2026-10-28 18:42:12",
+  "total_tips": 6,
   "live_feed": [
     {
-      "id": 7413,
-      "channel": "sure2scoreprediction",
-      "time": "2026-10-28 14:59",
-      "code": "周三006",
-      "key": "20261029_周三006",
-      "league": "意甲",
-      "category": "推单",
-      "is_tip": true,
-      "match": "AC米兰 VS 博洛尼亚",
-      "chinese": "米兰(AC米兰)打博洛尼亚(博洛尼亚)，大2.5球！盘口给到.26超低水，资金热捧大球方向，热度爆表。核心缺阵情报未明，大球思路清晰，老客盯紧比分防冷！",
-      "original": "FREE FOOTBALL TIPS ✅ ✅ ✅ 28/10/26 Italy Serie A AC Milan vs Bologna 🚀 🚀 🚀 Prediction: Over 1.5 Goals Odds .26 Scotland Premiership Celtic vs Dundee Utd 🚀 🚀 🚀 Pr",
-      "translated": true,
-      "channel_weight": 0.5
-    },
-    {
-      "id": 7420,
-      "channel": "olimpbet",
-      "time": "2026-10-28 15:01",
-      "code": "周三005",
-      "key": "20261029_周三005",
-      "league": "意甲",
+      "id": 7483,
+      "channel": "forepitch_tips",
+      "time": "2026-10-28 17:02",
+      "code": "周三015",
+      "key": "20261029_周三015",
+      "league": "英联赛杯",
       "category": "赛前军情",
       "is_tip": false,
-      "match": "威尼斯 VS 国际米兰",
-      "chinese": "本场国米让一球(-1.5)，盘口1.88明确看好主胜。国米近4连胜压制威尼斯，交锋心理占优。资金暗流涌向主队，老客重点关注！",
-      "original": "🔥 ГЛАВНЫЕ СОБЫТИЯ ЭТОЙ СРЕДЫ 👉 Медведев выиграл четыре из пяти последних матчей. Сухая за 1.8 👉 «Динамо» и «Амур» не пробивали ТБ (4.5) в шести из семи последни",
+      "match": "利物浦 VS 切尔西",
+      "chinese": "周三英联赛杯，（利物浦）对（切尔西）。主胜让球一球五五开，平局两四开，两球两一开，最想三比一。预计进球一点八对一。盘口异动不大，机构看好主胜。十月二十九日凌晨四点开球。",
+      "original": "⭐ Match of the day Liverpool — Chelsea EFLCUP, 20:00 UTC Model: 1 55% · X 24% · 2 21% Most likely score: 3:1 Expected goals: 1.8–1.0 Form (last 5): Liverpool 🟢 ",
       "translated": true,
       "channel_weight": 0.5
     },
@@ -59,6 +44,51 @@
       "match": "利物浦 VS 切尔西",
       "chinese": "周三，联赛杯，利物浦对切尔西。伤情：切尔西锋乔丹大腿受伤，缺阵数周，首发与轮换未明。方向、让球、大小、进球没消息，不碰。资金异动未报。老客记，别信外泄。",
       "original": "Xabi Alonso says João Pedro will be out for \"a few weeks\" with a thigh injury 🤕 Chelsea's upcoming fixtures before and after the November international break: O",
+      "translated": true,
+      "channel_weight": 0.5
+    },
+    {
+      "id": 7424,
+      "channel": "victorspredict",
+      "time": "2026-10-28 16:00",
+      "code": "周三005",
+      "key": "20261029_周三005",
+      "league": "意甲",
+      "category": "推单",
+      "is_tip": true,
+      "match": "威尼斯 VS 国际米兰",
+      "chinese": "周三，意甲，威尼斯对国际米兰。情报方向客胜，国际米兰看稳，客场赔率一点三六，盘口偏浅。伤停名单没提核心，首发和轮换未知。资金没提异动，机构态度偏客。听我的，客胜走。",
+      "original": "🏆 BANKER TIPS - 28-10-2026 Venezia vs Inter Italy: Serie A Prediction: Away (1.36) 🔗 View Details Celtic vs Dundee Utd Scotland: Premiership Prediction: Home (1",
+      "translated": true,
+      "channel_weight": 1.0
+    },
+    {
+      "id": 7420,
+      "channel": "olimpbet",
+      "time": "2026-10-28 15:01",
+      "code": "周三005",
+      "key": "20261029_周三005",
+      "league": "意甲",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "威尼斯 VS 国际米兰",
+      "chinese": "本场国米让一球(-1.5)，盘口1.88明确看好主胜。国米近4连胜压制威尼斯，交锋心理占优。资金暗流涌向主队，老客重点关注！",
+      "original": "🔥 ГЛАВНЫЕ СОБЫТИЯ ЭТОЙ СРЕДЫ 👉 Медведев выиграл четыре из пяти последних матчей. Сухая за 1.8 👉 «Динамо» и «Амур» не пробивали ТБ (4.5) в шести из семи последни",
+      "translated": true,
+      "channel_weight": 0.5
+    },
+    {
+      "id": 7413,
+      "channel": "sure2scoreprediction",
+      "time": "2026-10-28 14:59",
+      "code": "周三006",
+      "key": "20261029_周三006",
+      "league": "意甲",
+      "category": "推单",
+      "is_tip": true,
+      "match": "AC米兰 VS 博洛尼亚",
+      "chinese": "米兰(AC米兰)打博洛尼亚(博洛尼亚)，大2.5球！盘口给到.26超低水，资金热捧大球方向，热度爆表。核心缺阵情报未明，大球思路清晰，老客盯紧比分防冷！",
+      "original": "FREE FOOTBALL TIPS ✅ ✅ ✅ 28/10/26 Italy Serie A AC Milan vs Bologna 🚀 🚀 🚀 Prediction: Over 1.5 Goals Odds .26 Scotland Premiership Celtic vs Dundee Utd 🚀 🚀 🚀 Pr",
       "translated": true,
       "channel_weight": 0.5
     }
@@ -1270,9 +1300,9 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-10-28 17:09:42",
-    "last_nonempty_at": "2026-10-28 17:09:42",
-    "live_count": 4,
+    "last_updated": "2026-10-28 18:42:12",
+    "last_nonempty_at": "2026-10-28 18:42:12",
+    "live_count": 6,
     "archived_count": 99,
     "active_matches": 17,
     "llm_providers": [
@@ -1280,6 +1310,6 @@
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-10-28 17:09:42"
+    "checked_at": "2026-10-28 18:42:12"
   }
 }
