@@ -1,7 +1,8 @@
 {
-  "updated_at": "2026-10-29 06:02:18",
-  "total_tips": 4,
-  "live_feed": [
+  "updated_at": "2026-10-29 06:34:05",
+  "total_tips": 0,
+  "live_feed": [],
+  "archived": [
     {
       "id": 7417,
       "channel": "feedinco",
@@ -61,9 +62,7 @@
       "original": "⭐ Match of the day Liverpool — Chelsea EFLCUP, 20:00 UTC Model: 1 55% · X 24% · 2 21% Most likely score: 3:1 Expected goals: 1.8–1.0 Form (last 5): Liverpool 🟢 ",
       "translated": true,
       "channel_weight": 0.5
-    }
-  ],
-  "archived": [
+    },
     {
       "id": 7553,
       "channel": "matchplug",
@@ -1465,16 +1464,16 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-10-29 06:02:18",
+    "last_updated": "2026-10-29 06:34:05",
     "last_nonempty_at": "2026-10-29 06:02:18",
-    "live_count": 4,
-    "archived_count": 112,
-    "active_matches": 3,
+    "live_count": 0,
+    "archived_count": 116,
+    "active_matches": 2,
     "llm_providers": [
       "local",
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-10-29 06:02:18"
+    "checked_at": "2026-10-29 06:34:05"
   }
 }
