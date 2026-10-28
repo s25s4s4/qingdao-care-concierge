@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-28 06:07:28",
-  "total_tips": 2,
+  "updated_at": "2026-10-28 15:37:40",
+  "total_tips": 3,
   "live_feed": [
+    {
+      "id": 7420,
+      "channel": "olimpbet",
+      "time": "2026-10-28 15:01",
+      "code": "周三005",
+      "key": "20261029_周三005",
+      "league": "意甲",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "威尼斯 VS 国际米兰",
+      "chinese": "本场国米让一球(-1.5)，盘口1.88明确看好主胜。国米近4连胜压制威尼斯，交锋心理占优。资金暗流涌向主队，老客重点关注！",
+      "original": "🔥 ГЛАВНЫЕ СОБЫТИЯ ЭТОЙ СРЕДЫ 👉 Медведев выиграл четыре из пяти последних матчей. Сухая за 1.8 👉 «Динамо» и «Амур» не пробивали ТБ (4.5) в шести из семи последни",
+      "translated": true,
+      "channel_weight": 0.5
+    },
     {
       "id": 7191,
       "channel": "FabrizioRomano",
@@ -1240,16 +1255,16 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-10-28 06:07:28",
-    "last_nonempty_at": "2026-10-28 06:07:28",
-    "live_count": 2,
+    "last_updated": "2026-10-28 15:37:40",
+    "last_nonempty_at": "2026-10-28 15:37:40",
+    "live_count": 3,
     "archived_count": 99,
-    "active_matches": 13,
+    "active_matches": 17,
     "llm_providers": [
       "local",
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-10-28 06:07:28"
+    "checked_at": "2026-10-28 15:37:40"
   }
 }
