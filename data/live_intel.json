@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-28 15:37:40",
-  "total_tips": 3,
+  "updated_at": "2026-10-28 17:09:42",
+  "total_tips": 4,
   "live_feed": [
+    {
+      "id": 7413,
+      "channel": "sure2scoreprediction",
+      "time": "2026-10-28 14:59",
+      "code": "周三006",
+      "key": "20261029_周三006",
+      "league": "意甲",
+      "category": "推单",
+      "is_tip": true,
+      "match": "AC米兰 VS 博洛尼亚",
+      "chinese": "米兰(AC米兰)打博洛尼亚(博洛尼亚)，大2.5球！盘口给到.26超低水，资金热捧大球方向，热度爆表。核心缺阵情报未明，大球思路清晰，老客盯紧比分防冷！",
+      "original": "FREE FOOTBALL TIPS ✅ ✅ ✅ 28/10/26 Italy Serie A AC Milan vs Bologna 🚀 🚀 🚀 Prediction: Over 1.5 Goals Odds .26 Scotland Premiership Celtic vs Dundee Utd 🚀 🚀 🚀 Pr",
+      "translated": true,
+      "channel_weight": 0.5
+    },
     {
       "id": 7420,
       "channel": "olimpbet",
@@ -1255,9 +1270,9 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-10-28 15:37:40",
-    "last_nonempty_at": "2026-10-28 15:37:40",
-    "live_count": 3,
+    "last_updated": "2026-10-28 17:09:42",
+    "last_nonempty_at": "2026-10-28 17:09:42",
+    "live_count": 4,
     "archived_count": 99,
     "active_matches": 17,
     "llm_providers": [
@@ -1265,6 +1280,6 @@
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-10-28 15:37:40"
+    "checked_at": "2026-10-28 17:09:42"
   }
 }
