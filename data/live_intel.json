@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-29 03:40:21",
-  "total_tips": 8,
+  "updated_at": "2026-10-29 04:45:42",
+  "total_tips": 9,
   "live_feed": [
+    {
+      "id": 7553,
+      "channel": "matchplug",
+      "time": "2026-10-28 22:33",
+      "code": "周三012",
+      "key": "20261029_周三012",
+      "league": "英联赛杯",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "富勒姆 VS 水晶宫",
+      "chinese": "各位，周三英格兰联赛杯，（富勒姆）对阵（水晶宫）。市场开出双双进球，给出双双",
+      "original": "Fulham vs Crystal Palace League Cup · 19:45 UTC Market: BTTS/GG Pick: GG Odds: 1.6",
+      "translated": true,
+      "channel_weight": 0.5
+    },
     {
       "id": 7484,
       "channel": "betminesfootballpredictions",
@@ -1450,16 +1465,16 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-10-29 03:40:21",
-    "last_nonempty_at": "2026-10-29 03:40:21",
-    "live_count": 8,
+    "last_updated": "2026-10-29 04:45:42",
+    "last_nonempty_at": "2026-10-29 04:45:42",
+    "live_count": 9,
     "archived_count": 107,
-    "active_matches": 10,
+    "active_matches": 8,
     "llm_providers": [
       "local",
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-10-29 03:40:21"
+    "checked_at": "2026-10-29 04:45:42"
   }
 }
