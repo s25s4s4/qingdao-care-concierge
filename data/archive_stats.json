@@ -74,12 +74,12 @@
     },
     {
       "date": "2026-10-29",
-      "total": 203,
-      "added": 0,
-      "teams": 233,
+      "total": 204,
+      "added": 1,
+      "teams": 234,
       "teams_ge10": 0,
       "leagues": 28
     }
   ],
-  "updated_at": "2026-10-29 03:49:23"
+  "updated_at": "2026-10-29 03:50:18"
 }
