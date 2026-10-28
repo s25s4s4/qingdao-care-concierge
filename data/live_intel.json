@@ -1,7 +1,23 @@
 {
-  "updated_at": "2026-10-29 06:34:05",
-  "total_tips": 0,
-  "live_feed": [],
+  "updated_at": "2026-10-29 07:03:50",
+  "total_tips": 1,
+  "live_feed": [
+    {
+      "id": 7448,
+      "channel": "bulletbetpredictions",
+      "time": "2026-10-28 16:59",
+      "code": "周三016",
+      "key": "20261029_周三016",
+      "league": "巴甲",
+      "category": "推单·已开赛",
+      "is_tip": true,
+      "match": "弗鲁米嫩 VS 巴西国际",
+      "chinese": "听着，弗鲁米嫩主场占优，11胜16，场均进1.8球。巴西国际无可靠数据。伤停阵容消息没透。让球、大小、盘口水位没来，不乱喊。资金也没异动。",
+      "original": "3/3 🤯 AC Milan home wins, 0.7 conceded. Bologna visit. Top Matches 28 Oct: THE NUMBERS 📊 Swipe through all 16 matches 👉 🔒 The model's pick for every one is in t",
+      "translated": true,
+      "channel_weight": 0.5
+    }
+  ],
   "archived": [
     {
       "id": 7417,
@@ -1464,9 +1480,9 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-10-29 06:34:05",
-    "last_nonempty_at": "2026-10-29 06:02:18",
-    "live_count": 0,
+    "last_updated": "2026-10-29 07:03:50",
+    "last_nonempty_at": "2026-10-29 07:03:50",
+    "live_count": 1,
     "archived_count": 116,
     "active_matches": 2,
     "llm_providers": [
@@ -1474,6 +1490,6 @@
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-10-29 06:34:05"
+    "checked_at": "2026-10-29 07:03:50"
   }
 }
