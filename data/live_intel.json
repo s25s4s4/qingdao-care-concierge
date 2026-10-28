@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-28 19:14:22",
-  "total_tips": 7,
+  "updated_at": "2026-10-28 21:15:59",
+  "total_tips": 8,
   "live_feed": [
     {
       "id": 7424,
@@ -16,6 +16,21 @@
       "original": "🏆 BANKER TIPS - 28-10-2026 Venezia vs Inter Italy: Serie A Prediction: Away (1.36) 🔗 View Details Celtic vs Dundee Utd Scotland: Premiership Prediction: Home (1",
       "translated": true,
       "channel_weight": 1.0
+    },
+    {
+      "id": 7521,
+      "channel": "TipstrrTips",
+      "time": "2026-10-28 20:51",
+      "code": "周三005",
+      "key": "20261029_周三005",
+      "league": "意甲",
+      "category": "推单",
+      "is_tip": true,
+      "match": "威尼斯 VS 国际米兰",
+      "chinese": "周三意甲，威尼斯对国际米兰。方向是国际米兰赢，最好赢过一球。让胜胜球数过一，受注一九五。伤停和首发没提，轮换未知。盘口没异动，机构偏信有余裕。",
+      "original": "Our daily free football tip features the two teams at either end of Serie A, where Alpheratz expects league leaders Inter Milan to beat rock-bottom Venezia with",
+      "translated": true,
+      "channel_weight": 0.5
     },
     {
       "id": 7482,
@@ -1315,16 +1330,16 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-10-28 19:14:22",
-    "last_nonempty_at": "2026-10-28 19:14:22",
-    "live_count": 7,
+    "last_updated": "2026-10-28 21:15:59",
+    "last_nonempty_at": "2026-10-28 21:15:59",
+    "live_count": 8,
     "archived_count": 99,
-    "active_matches": 17,
+    "active_matches": 14,
     "llm_providers": [
       "local",
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-10-28 19:14:22"
+    "checked_at": "2026-10-28 21:15:59"
   }
 }
