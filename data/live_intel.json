@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-29 03:12:52",
-  "total_tips": 13,
+  "updated_at": "2026-10-29 03:40:21",
+  "total_tips": 8,
   "live_feed": [
+    {
+      "id": 7484,
+      "channel": "betminesfootballpredictions",
+      "time": "2026-10-28 17:48",
+      "code": "周三013",
+      "key": "20261029_周三013",
+      "league": "意甲",
+      "category": "推单·已开赛",
+      "is_tip": true,
+      "match": "蒙扎 VS 那不勒斯",
+      "chinese": "周三，意大利足球甲级联赛，蒙扎对那不勒斯。方向没开，只拿那不勒斯前锋进球。伤停首发没提，不能乱信。资金异动没说，小串子只要蒙扎平或负。没给让球，别追。",
+      "original": "GOOD MORNING! 🔥 ⚽ 💥 After an incredible day yesterday, when we landed a huge number of our predictions, we’re ready to go again! 📊 Today’s schedule offers fewer",
+      "translated": true,
+      "channel_weight": 0.5
+    },
     {
       "id": 7417,
       "channel": "feedinco",
@@ -78,21 +93,6 @@
       "channel_weight": 0.5
     },
     {
-      "id": 7568,
-      "channel": "forepitch_tips",
-      "time": "2026-10-28 23:02",
-      "code": "周三007",
-      "key": "20261029_周三007",
-      "league": "意甲",
-      "category": "推单·已开赛",
-      "is_tip": true,
-      "match": "帕尔马 VS 乌迪内斯",
-      "chinese": "周三，意甲，（帕尔马）对（乌迪内斯）。模型看客胜或平局，主场三成，客场三成，平局三成。总进球四九成，双人进球五六成，",
-      "original": "⚽ Serie A · 28 October, 17:30 UTC Parma — Udinese The model sees a clear edge. 🎯 Main pick: Udinese win or draw · 68% Home 32% · Draw 32% · Away 36% Over 2.5 49",
-      "translated": true,
-      "channel_weight": 0.5
-    },
-    {
       "id": 7552,
       "channel": "matchplug",
       "time": "2026-10-28 22:30",
@@ -119,6 +119,23 @@
       "match": "热那亚 VS 尤文图斯",
       "chinese": "今夜周三，热那亚对阵尤文图斯，意甲。市场开出大两球或以上，赔二点一二。我看这场要两球进，大球方向。伤停没动静，阵容先不提。压大球，两头下注也行。",
       "original": "Genoa vs Juventus Serie A · 19:45 UTC Market: JACKPOT Pick: 2 over 1.5 gls Odds: 2.12",
+      "translated": true,
+      "channel_weight": 0.5
+    }
+  ],
+  "archived": [
+    {
+      "id": 7568,
+      "channel": "forepitch_tips",
+      "time": "2026-10-28 23:02",
+      "code": "周三007",
+      "key": "20261029_周三007",
+      "league": "意甲",
+      "category": "推单·已开赛",
+      "is_tip": true,
+      "match": "帕尔马 VS 乌迪内斯",
+      "chinese": "周三，意甲，（帕尔马）对（乌迪内斯）。模型看客胜或平局，主场三成，客场三成，平局三成。总进球四九成，双人进球五六成，",
+      "original": "⚽ Serie A · 28 October, 17:30 UTC Parma — Udinese The model sees a clear edge. 🎯 Main pick: Udinese win or draw · 68% Home 32% · Draw 32% · Away 36% Over 2.5 49",
       "translated": true,
       "channel_weight": 0.5
     },
@@ -196,9 +213,7 @@
       "original": "FREE FOOTBALL TIPS ✅ ✅ ✅ 28/10/26 Italy Serie A AC Milan vs Bologna 🚀 🚀 🚀 Prediction: Over 1.5 Goals Odds .26 Scotland Premiership Celtic vs Dundee Utd 🚀 🚀 🚀 Pr",
       "translated": true,
       "channel_weight": 0.5
-    }
-  ],
-  "archived": [
+    },
     {
       "id": 7191,
       "channel": "FabrizioRomano",
@@ -1435,16 +1450,16 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-10-29 03:12:52",
-    "last_nonempty_at": "2026-10-29 03:12:52",
-    "live_count": 13,
-    "archived_count": 101,
-    "active_matches": 14,
+    "last_updated": "2026-10-29 03:40:21",
+    "last_nonempty_at": "2026-10-29 03:40:21",
+    "live_count": 8,
+    "archived_count": 107,
+    "active_matches": 10,
     "llm_providers": [
       "local",
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-10-29 03:12:52"
+    "checked_at": "2026-10-29 03:40:21"
   }
 }
