@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-28 12:07:20",
+  "updated_at": "2026-10-28 12:08:20",
   "total": 101,
   "matches": [
     {
@@ -329,7 +329,7 @@
         "result": "MISS",
         "score": "1 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "平局",
         "tip": "客胜",
         "market": "had"
@@ -667,7 +667,7 @@
         "result": "HIT",
         "score": "0 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "平局",
         "tip": "主胜/防平",
         "market": "had"
@@ -1005,7 +1005,7 @@
         "result": "HIT",
         "score": "3 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -1344,7 +1344,7 @@
         "result": "HIT",
         "score": "1 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "平局",
         "tip": "客胜/防平",
         "market": "had"
@@ -1713,7 +1713,7 @@
         "result": "MISS",
         "score": "2 - 3",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "客胜",
         "tip": "主胜",
         "market": "had"
@@ -2077,7 +2077,7 @@
         "result": "HIT",
         "score": "3 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "主胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -2447,7 +2447,7 @@
         "result": "MISS",
         "score": "1 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "客胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -2816,7 +2816,7 @@
         "result": "HIT",
         "score": "1 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "平局",
         "tip": "客胜/防平",
         "market": "had"
@@ -3154,7 +3154,7 @@
         "result": "HIT",
         "score": "1 - 5",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "客胜",
         "tip": "客胜",
         "market": "had"
@@ -3520,7 +3520,7 @@
         "result": "MISS",
         "score": "1-1",
         "source": "stored_score",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "平局",
         "tip": "主胜",
         "market": "had"
@@ -3885,7 +3885,7 @@
         "result": "HIT",
         "score": "5-0",
         "source": "stored_score",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -4221,7 +4221,7 @@
         "result": "MISS",
         "score": "1 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "平局",
         "tip": "主胜",
         "market": "had"
@@ -4530,7 +4530,7 @@
         "result": "HIT",
         "score": "3-1",
         "source": "stored_score",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "主胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -4864,7 +4864,7 @@
         "result": "HIT",
         "score": "0 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "平局",
         "tip": "客胜/防平",
         "market": "had"
@@ -5203,7 +5203,7 @@
         "result": "MISS",
         "score": "2 - 3",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "客胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -5532,7 +5532,7 @@
         "result": "HIT",
         "score": "1 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "平局",
         "tip": "主胜/防平",
         "market": "had"
@@ -5888,7 +5888,7 @@
         "result": "MISS",
         "score": "2 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "主胜",
         "tip": "客胜",
         "market": "had"
@@ -6219,7 +6219,7 @@
         "result": "HIT",
         "score": "1 - 3",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "客胜",
         "tip": "客胜/防平",
         "market": "had"
@@ -6588,7 +6588,7 @@
         "result": "MISS",
         "score": "0 - 3",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "客胜",
         "tip": "主胜",
         "market": "had"
@@ -6958,7 +6958,7 @@
         "result": "HIT",
         "score": "2 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -7327,7 +7327,7 @@
         "result": "HIT",
         "score": "0 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "客胜",
         "tip": "客胜/防平",
         "market": "had"
@@ -7672,7 +7672,7 @@
         "result": "HIT",
         "score": "4 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -8043,7 +8043,7 @@
         "result": "MISS",
         "score": "2 - 3",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "客胜",
         "tip": "主胜",
         "market": "had"
@@ -8412,7 +8412,7 @@
         "result": "HIT",
         "score": "1 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "主胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -8777,7 +8777,7 @@
         "result": "HIT",
         "score": "0 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "平局",
         "tip": "主胜/防平",
         "market": "had"
@@ -9147,7 +9147,7 @@
         "result": "MISS",
         "score": "1 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "平局",
         "tip": "主胜",
         "market": "had"
@@ -9515,7 +9515,7 @@
         "result": "HIT",
         "score": "2 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -9861,7 +9861,7 @@
         "result": "HIT",
         "score": "0 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "客胜",
         "tip": "客胜/防平",
         "market": "had"
@@ -10168,7 +10168,7 @@
         "result": "MISS",
         "score": "0 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "让负",
         "tip": "让胜/防让平",
         "market": "hhad"
@@ -10515,7 +10515,7 @@
         "result": "HIT",
         "score": "2 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "主胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -10849,7 +10849,7 @@
         "result": "MISS",
         "score": "1 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "平局",
         "tip": "主胜",
         "market": "had"
@@ -11172,7 +11172,7 @@
         "result": "MISS",
         "score": "0 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "客胜",
         "tip": "主胜",
         "market": "had"
@@ -11537,7 +11537,7 @@
         "result": "HIT",
         "score": "3 - 3",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "平局",
         "tip": "客胜/防平",
         "market": "had"
@@ -11906,7 +11906,7 @@
         "result": "MISS",
         "score": "0 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "客胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -12275,7 +12275,7 @@
         "result": "HIT",
         "score": "1 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -12646,7 +12646,7 @@
         "result": "HIT",
         "score": "1 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "客胜",
         "tip": "客胜/防平",
         "market": "had"
@@ -13014,7 +13014,7 @@
         "result": "HIT",
         "score": "2 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -13370,7 +13370,7 @@
         "result": "HIT",
         "score": "2 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "主胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -13734,7 +13734,7 @@
         "result": "HIT",
         "score": "1 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -14072,7 +14072,7 @@
         "result": "HIT",
         "score": "0 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "客胜",
         "tip": "客胜",
         "market": "had"
@@ -14408,7 +14408,7 @@
         "result": "HIT",
         "score": "1 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "平局",
         "tip": "主胜/防平",
         "market": "had"
@@ -14743,7 +14743,7 @@
         "result": "HIT",
         "score": "2 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "主胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -15052,7 +15052,7 @@
         "result": "MISS",
         "score": "2 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "主胜",
         "tip": "客胜",
         "market": "had"
@@ -15342,7 +15342,7 @@
         "result": "HIT",
         "score": "6 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -15679,7 +15679,7 @@
         "result": "HIT",
         "score": "2 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "主胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -16009,7 +16009,7 @@
         "result": "HIT",
         "score": "1 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "主胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -16380,7 +16380,7 @@
         "result": "HIT",
         "score": "2 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -16791,7 +16791,7 @@
         "result": "HIT",
         "score": "4-0",
         "source": "stored_score",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -17131,7 +17131,7 @@
         "result": "HIT",
         "score": "1 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "平局",
         "tip": "主胜/防平",
         "market": "had"
@@ -17444,7 +17444,7 @@
         "result": "HIT",
         "score": "2-2",
         "source": "stored_score",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "平局",
         "tip": "主胜/防平",
         "market": "had"
@@ -17784,7 +17784,7 @@
         "result": "HIT",
         "score": "1 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "平局",
         "tip": "主胜/防平",
         "market": "had"
@@ -18124,7 +18124,7 @@
         "result": "HIT",
         "score": "3 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -18492,7 +18492,7 @@
         "result": "MISS",
         "score": "1 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "平局",
         "tip": "客胜",
         "market": "had"
@@ -18860,7 +18860,7 @@
         "result": "HIT",
         "score": "0 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "客胜",
         "tip": "客胜/防平",
         "market": "had"
@@ -19227,7 +19227,7 @@
         "result": "MISS",
         "score": "0-3",
         "source": "stored_score",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "客胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -19593,7 +19593,7 @@
         "result": "HIT",
         "score": "1 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "主胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -19953,7 +19953,7 @@
         "result": "MISS",
         "score": "4 - 4",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "平局",
         "tip": "主胜",
         "market": "had"
@@ -20322,7 +20322,7 @@
         "result": "HIT",
         "score": "1 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "平局",
         "tip": "主胜/防平",
         "market": "had"
@@ -20696,7 +20696,7 @@
         "result": "MISS",
         "score": "3 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "主胜",
         "tip": "客胜/防平",
         "market": "had"
@@ -21069,7 +21069,7 @@
         "result": "HIT",
         "score": "0 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "平局",
         "tip": "客胜/防平",
         "market": "had"
@@ -21440,7 +21440,7 @@
         "result": "HIT",
         "score": "3 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -21812,7 +21812,7 @@
         "result": "HIT",
         "score": "0 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "平局",
         "tip": "客胜/防平",
         "market": "had"
@@ -22183,7 +22183,7 @@
         "result": "HIT",
         "score": "1-3",
         "source": "stored_score",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "客胜",
         "tip": "客胜",
         "market": "had"
@@ -22553,7 +22553,7 @@
         "result": "HIT",
         "score": "0 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "客胜",
         "tip": "客胜",
         "market": "had"
@@ -22911,7 +22911,7 @@
         "result": "HIT",
         "score": "2 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -23244,7 +23244,7 @@
         "result": "MISS",
         "score": "0-2",
         "source": "stored_score",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "客胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -23609,7 +23609,7 @@
         "result": "HIT",
         "score": "0 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "客胜",
         "tip": "客胜",
         "market": "had"
@@ -23971,7 +23971,7 @@
         "result": "MISS",
         "score": "1 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "客胜",
         "tip": "主胜",
         "market": "had"
@@ -24257,7 +24257,7 @@
         "result": "HIT",
         "score": "1-2",
         "source": "stored_score",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "让负",
         "tip": "让负/防让平",
         "market": "hhad"
@@ -24591,7 +24591,7 @@
         "result": "MISS",
         "score": "2-2",
         "source": "stored_score",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "平局",
         "tip": "主胜",
         "market": "had"
@@ -24928,7 +24928,7 @@
         "result": "HIT",
         "score": "1 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "客胜",
         "tip": "客胜",
         "market": "had"
@@ -25240,7 +25240,7 @@
         "result": "HIT",
         "score": "1 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "平局",
         "tip": "客胜/防平",
         "market": "had"
@@ -25611,7 +25611,7 @@
         "result": "HIT",
         "score": "2 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -25944,7 +25944,7 @@
         "result": "HIT",
         "score": "3-2",
         "source": "stored_score",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -26263,7 +26263,7 @@
         "result": "HIT",
         "score": "5 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -26585,7 +26585,7 @@
         "result": "HIT",
         "score": "0 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "客胜",
         "tip": "客胜/防平",
         "market": "had"
@@ -26930,7 +26930,7 @@
         "result": "HIT",
         "score": "2 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "平局",
         "tip": "主胜/防平",
         "market": "had"
@@ -27274,7 +27274,7 @@
         "result": "HIT",
         "score": "1 - 3",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "客胜",
         "tip": "客胜/防平",
         "market": "had"
@@ -27651,7 +27651,7 @@
         "result": "HIT",
         "score": "2 - 6",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "客胜",
         "tip": "客胜",
         "market": "had"
@@ -27997,7 +27997,7 @@
         "result": "HIT",
         "score": "2 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "平局",
         "tip": "客胜/防平",
         "market": "had"
@@ -28341,7 +28341,7 @@
         "result": "HIT",
         "score": "3 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -28692,7 +28692,7 @@
         "result": "HIT",
         "score": "5 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -29074,7 +29074,7 @@
         "result": "HIT",
         "score": "4 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -29451,7 +29451,7 @@
         "result": "HIT",
         "score": "1 - 3",
         "source": "fotmob",
-        "settled_at": "2026-10-28T12:07:17",
+        "settled_at": "2026-10-28T12:08:18",
         "outcome": "客胜",
         "tip": "客胜",
         "market": "had"
@@ -29742,7 +29742,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-28 12:07:23",
+      "stats_ts": "2026-10-28 12:08:25",
       "crosscheck": {
         "source": "fotmob",
         "score": "",
@@ -30013,7 +30013,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-28 12:07:23",
+      "stats_ts": "2026-10-28 12:08:25",
       "crosscheck": {
         "source": "fotmob",
         "score": "",
@@ -30308,7 +30308,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-28 12:07:23",
+      "stats_ts": "2026-10-28 12:08:25",
       "crosscheck": {
         "source": "fotmob",
         "score": "",
@@ -30340,9 +30340,9 @@
         "W"
       ],
       "odds": [
-        "5.05",
-        "4.40",
-        "1.42"
+        "5.15",
+        "4.42",
+        "1.41"
       ],
       "is_only_rq": false,
       "rang": "1",
@@ -30352,7 +30352,7 @@
         "3.05"
       ],
       "consensus": "客胜",
-      "consensus_ratio": 62.3,
+      "consensus_ratio": 62.8,
       "consensus_breakdown": null,
       "tip": "客胜",
       "predicted_scores": [
@@ -30362,13 +30362,13 @@
       ],
       "score": "--",
       "result": "PENDING",
-      "analysis": "去水胜平负 17.5%/20.1%/62.3%，泊松期望进球 1.02:2.1，单挑【客胜】稳胆（去水胜率 62.3%）。",
+      "analysis": "去水胜平负 17.2%/20.0%/62.8%，泊松期望进球 1.02:2.14，单挑【客胜】稳胆（去水胜率 62.8%）。",
       "dossier": {
         "fundamental": "帕德博恩近10场 4胜3平3负，场均进1.30失1.30（截至2026-10-24）；斯图加特近10场 5胜1平4负，场均进2.00失0.90（截至2026-10-24）。",
-        "tactical_conflict": "泊松进攻期望参数：主队 λ=1.02、客队 λ=2.1（按本场胜平负官方SP反推拟合，拟合残差 0.2 个百分点）。结合主客攻防效率，本场总进球核心落点集中于 1、2、3 球区间。",
-        "market_attitude": "体彩官方胜平负 SP 开出 5.05 / 4.40 / 1.42，去水后真实隐含概率分别为 主胜 17.5% / 平局 20.1% / 客胜 62.3%。盘面赔付结构清晰，去水优势项指向明确。",
-        "decision_guide": "实战方案指引：单选【客胜】作核心稳胆。所选方案去水隐含覆盖率合计 62.3%。矩阵精算比分依次参考 1-2、0-2、0-1（对应总进球 1、2、3 球）。",
-        "summary": "去水胜平负 17.5%/20.1%/62.3%，泊松期望进球 1.02:2.1，单挑【客胜】稳胆（去水胜率 62.3%）。"
+        "tactical_conflict": "泊松进攻期望参数：主队 λ=1.02、客队 λ=2.14（按本场胜平负官方SP反推拟合，拟合残差 0.19 个百分点）。结合主客攻防效率，本场总进球核心落点集中于 1、2、3 球区间。",
+        "market_attitude": "体彩官方胜平负 SP 开出 5.15 / 4.42 / 1.41，去水后真实隐含概率分别为 主胜 17.2% / 平局 20.0% / 客胜 62.8%。盘面赔付结构清晰，去水优势项指向明确。",
+        "decision_guide": "实战方案指引：单选【客胜】作核心稳胆。所选方案去水隐含覆盖率合计 62.8%。矩阵精算比分依次参考 1-2、0-2、0-1（对应总进球 1、2、3 球）。",
+        "summary": "去水胜平负 17.2%/20.0%/62.8%，泊松期望进球 1.02:2.14，单挑【客胜】稳胆（去水胜率 62.8%）。"
       },
       "sale_closed": false,
       "detail_original": {
@@ -30397,21 +30397,21 @@
       },
       "prediction_market": "had",
       "detail_market_odds": [
-        "5.05",
-        "4.40",
-        "1.42"
+        "5.15",
+        "4.42",
+        "1.41"
       ],
       "detail_model": {
         "lambda_h": 1.02,
-        "lambda_a": 2.1,
-        "fit_error_pp": 0.2,
+        "lambda_a": 2.14,
+        "fit_error_pp": 0.19,
         "method": "independent_poisson_odds_fit",
         "rang": 0
       },
       "detail_pure": [
-        17.5314,
-        20.1212,
-        62.3474
+        17.1891,
+        20.028,
+        62.7829
       ],
       "predicted_goals": [
         "1",
@@ -30441,7 +30441,7 @@
         "badge": "💎 黄金单胆",
         "badge_class": "badge-green",
         "title": "去水概率优势显著，盈亏比极佳，实战做胆首选",
-        "advance_tip": "单选【客胜】SP 1.42"
+        "advance_tip": "单选【客胜】SP 1.41"
       },
       "stats": {
         "home": {
@@ -30574,22 +30574,22 @@
       "detail_schema": 2,
       "quant_factors": {
         "market": "had",
-        "samples": 152,
-        "win_rate": 16.4,
-        "draw_rate": 24.3,
-        "loss_rate": 59.2,
-        "ev_home": -0.169,
-        "ev_draw": 0.071,
-        "ev_away": -0.159,
+        "samples": 128,
+        "win_rate": 20.3,
+        "draw_rate": 23.4,
+        "loss_rate": 56.2,
+        "ev_home": 0.046,
+        "ev_draw": 0.036,
+        "ev_away": -0.207,
         "lambda_h": 1.02,
-        "lambda_a": 2.1,
+        "lambda_a": 2.14,
         "golden_scores": [
           "1-2",
           "0-2",
           "0-1"
         ],
-        "trap_level": "NORMAL",
-        "trap_warning": "盘面处于正常期望区间",
+        "trap_level": "HIGH_TRAP",
+        "trap_warning": "🚨 客热诱盘预警：历史同赔下主不败打出率高达 43%，谨防客队大热不胜",
         "stars": "★★★★☆",
         "tier_title": "高确定性稳胆",
         "smart_pick": null,
@@ -30603,7 +30603,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-28 12:07:23"
+      "stats_ts": "2026-10-28 12:08:25"
     },
     {
       "code": "周三005",
@@ -30914,7 +30914,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-28 12:07:23"
+      "stats_ts": "2026-10-28 12:08:25"
     },
     {
       "code": "周三006",
@@ -31237,7 +31237,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-28 12:07:23"
+      "stats_ts": "2026-10-28 12:08:25"
     },
     {
       "code": "周三007",
@@ -31558,7 +31558,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-28 12:07:23"
+      "stats_ts": "2026-10-28 12:08:25"
     },
     {
       "code": "周三008",
@@ -31849,7 +31849,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-28 12:07:23"
+      "stats_ts": "2026-10-28 12:08:25"
     },
     {
       "code": "周三009",
@@ -32140,7 +32140,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-28 12:07:23"
+      "stats_ts": "2026-10-28 12:08:25"
     },
     {
       "code": "周三010",
@@ -32167,9 +32167,9 @@
         "W"
       ],
       "odds": [
-        "3.15",
         "3.25",
-        "1.99"
+        "3.26",
+        "1.94"
       ],
       "is_only_rq": false,
       "rang": "1",
@@ -32179,23 +32179,23 @@
         "3.05"
       ],
       "consensus": "客胜/防平",
-      "consensus_ratio": 71.8,
+      "consensus_ratio": 72.8,
       "consensus_breakdown": null,
       "tip": "客胜/防平",
       "predicted_scores": [
         "0-1",
-        "1-2",
+        "0-2",
         "1-1"
       ],
       "score": "--",
       "result": "PENDING",
-      "analysis": "去水胜平负 28.2%/27.3%/44.6%，泊松期望进球 1.03:1.38，首选【客胜】+次选【防平】（覆盖率 71.8%）。",
+      "analysis": "去水胜平负 27.2%/27.1%/45.6%，泊松期望进球 1.0:1.38，首选【客胜】+次选【防平】（覆盖率 72.8%）。",
       "dossier": {
         "fundamental": "桑德兰近10场 3胜3平4负，场均进0.90失1.40（截至2026-10-26）；布伦特近10场 4胜5平1负，场均进2.20失1.10（截至2026-10-25）。",
-        "tactical_conflict": "泊松进攻期望参数：主队 λ=1.03、客队 λ=1.38（按本场胜平负官方SP反推拟合，拟合残差 0.33 个百分点）。结合主客攻防效率，本场总进球核心落点集中于 1、2、3 球区间。",
-        "market_attitude": "体彩官方胜平负 SP 开出 3.15 / 3.25 / 1.99，去水后真实隐含概率分别为 主胜 28.2% / 平局 27.3% / 客胜 44.6%。盘面赔付结构清晰，去水优势项指向明确。",
-        "decision_guide": "实战方案指引：【首选客胜】（去水概率最高主力项），次选【防平】（防冷对冲保护）。所选方案去水隐含覆盖率合计 71.8%。矩阵精算比分依次参考 0-1、1-2、1-1（对应总进球 1、2、3 球）。",
-        "summary": "去水胜平负 28.2%/27.3%/44.6%，泊松期望进球 1.03:1.38，首选【客胜】+次选【防平】（覆盖率 71.8%）。"
+        "tactical_conflict": "泊松进攻期望参数：主队 λ=1.0、客队 λ=1.38（按本场胜平负官方SP反推拟合，拟合残差 0.02 个百分点）。结合主客攻防效率，本场总进球核心落点集中于 1、2 球区间。",
+        "market_attitude": "体彩官方胜平负 SP 开出 3.25 / 3.26 / 1.94，去水后真实隐含概率分别为 主胜 27.2% / 平局 27.1% / 客胜 45.6%。盘面赔付结构清晰，去水优势项指向明确。",
+        "decision_guide": "实战方案指引：【首选客胜】（去水概率最高主力项），次选【防平】（防冷对冲保护）。所选方案去水隐含覆盖率合计 72.8%。矩阵精算比分依次参考 0-1、0-2、1-1（对应总进球 1、2 球）。",
+        "summary": "去水胜平负 27.2%/27.1%/45.6%，泊松期望进球 1.0:1.38，首选【客胜】+次选【防平】（覆盖率 72.8%）。"
       },
       "sale_closed": false,
       "detail_original": {
@@ -32224,26 +32224,25 @@
       },
       "prediction_market": "had",
       "detail_market_odds": [
-        "3.15",
         "3.25",
-        "1.99"
+        "3.26",
+        "1.94"
       ],
       "detail_model": {
-        "lambda_h": 1.03,
+        "lambda_h": 1.0,
         "lambda_a": 1.38,
-        "fit_error_pp": 0.33,
+        "fit_error_pp": 0.02,
         "method": "independent_poisson_odds_fit",
         "rang": 0
       },
       "detail_pure": [
-        28.152,
-        27.2858,
-        44.5622
+        27.2317,
+        27.1482,
+        45.6201
       ],
       "predicted_goals": [
         "1",
-        "2",
-        "3"
+        "2"
       ],
       "predicted_scores_detail": [
         {
@@ -32252,7 +32251,7 @@
           "desc": "概率基准核心比分"
         },
         {
-          "score": "1-2",
+          "score": "0-2",
           "role": "次选",
           "desc": "优势延伸主力比分"
         },
@@ -32397,18 +32396,18 @@
       "detail_schema": 2,
       "quant_factors": {
         "market": "had",
-        "samples": 2945,
-        "win_rate": 27.3,
-        "draw_rate": 27.8,
-        "loss_rate": 44.9,
-        "ev_home": -0.14,
-        "ev_draw": -0.095,
-        "ev_away": -0.107,
-        "lambda_h": 1.03,
+        "samples": 2608,
+        "win_rate": 25.8,
+        "draw_rate": 27.0,
+        "loss_rate": 47.2,
+        "ev_home": -0.16,
+        "ev_draw": -0.12,
+        "ev_away": -0.085,
+        "lambda_h": 1.0,
         "lambda_a": 1.38,
         "golden_scores": [
           "0-1",
-          "1-2",
+          "0-2",
           "1-1"
         ],
         "trap_level": "NORMAL",
@@ -32418,15 +32417,15 @@
         "smart_pick": null,
         "smart_type": "DOUBLE",
         "quant_detail_note": "历史赔率邻域频率仅作独立参考；非相同赔率、非本场命中率，不替代本场玩法研判。",
-        "params_source": "defaults",
+        "params_source": "adaptive",
         "active_params": {
-          "odds_tol_scale": 1.0,
-          "trap_high_upset": 0.38,
+          "odds_tol_scale": 1.05,
+          "trap_high_upset": 0.43,
           "trap_tight_upset": 0.45,
-          "single_threshold": 0.52
+          "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-28 12:07:23"
+      "stats_ts": "2026-10-28 12:08:25"
     },
     {
       "code": "周三011",
@@ -32717,7 +32716,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-28 12:07:23"
+      "stats_ts": "2026-10-28 12:08:25"
     },
     {
       "code": "周三012",
@@ -33007,7 +33006,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-28 12:07:23"
+      "stats_ts": "2026-10-28 12:08:25"
     },
     {
       "code": "周三013",
@@ -33329,7 +33328,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-28 12:07:23"
+      "stats_ts": "2026-10-28 12:08:25"
     },
     {
       "code": "周三014",
@@ -33651,7 +33650,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-28 12:07:23"
+      "stats_ts": "2026-10-28 12:08:25"
     },
     {
       "code": "周三015",
@@ -33941,7 +33940,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-28 12:07:23"
+      "stats_ts": "2026-10-28 12:08:25"
     },
     {
       "code": "周三016",
@@ -34230,7 +34229,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-28 12:07:23"
+      "stats_ts": "2026-10-28 12:08:25"
     },
     {
       "code": "周三017",
@@ -34496,8 +34495,8 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-28 12:07:23"
+      "stats_ts": "2026-10-28 12:08:25"
     }
   ],
-  "version": 1793160440
+  "version": 1793160500
 }
