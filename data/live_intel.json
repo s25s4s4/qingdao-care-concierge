@@ -1,37 +1,7 @@
 {
-  "updated_at": "2026-10-29 04:45:42",
-  "total_tips": 9,
+  "updated_at": "2026-10-29 06:02:18",
+  "total_tips": 4,
   "live_feed": [
-    {
-      "id": 7553,
-      "channel": "matchplug",
-      "time": "2026-10-28 22:33",
-      "code": "周三012",
-      "key": "20261029_周三012",
-      "league": "英联赛杯",
-      "category": "赛前军情",
-      "is_tip": false,
-      "match": "富勒姆 VS 水晶宫",
-      "chinese": "各位，周三英格兰联赛杯，（富勒姆）对阵（水晶宫）。市场开出双双进球，给出双双",
-      "original": "Fulham vs Crystal Palace League Cup · 19:45 UTC Market: BTTS/GG Pick: GG Odds: 1.6",
-      "translated": true,
-      "channel_weight": 0.5
-    },
-    {
-      "id": 7484,
-      "channel": "betminesfootballpredictions",
-      "time": "2026-10-28 17:48",
-      "code": "周三013",
-      "key": "20261029_周三013",
-      "league": "意甲",
-      "category": "推单·已开赛",
-      "is_tip": true,
-      "match": "蒙扎 VS 那不勒斯",
-      "chinese": "周三，意大利足球甲级联赛，蒙扎对那不勒斯。方向没开，只拿那不勒斯前锋进球。伤停首发没提，不能乱信。资金异动没说，小串子只要蒙扎平或负。没给让球，别追。",
-      "original": "GOOD MORNING! 🔥 ⚽ 💥 After an incredible day yesterday, when we landed a huge number of our predictions, we’re ready to go again! 📊 Today’s schedule offers fewer",
-      "translated": true,
-      "channel_weight": 0.5
-    },
     {
       "id": 7417,
       "channel": "feedinco",
@@ -91,6 +61,38 @@
       "original": "⭐ Match of the day Liverpool — Chelsea EFLCUP, 20:00 UTC Model: 1 55% · X 24% · 2 21% Most likely score: 3:1 Expected goals: 1.8–1.0 Form (last 5): Liverpool 🟢 ",
       "translated": true,
       "channel_weight": 0.5
+    }
+  ],
+  "archived": [
+    {
+      "id": 7553,
+      "channel": "matchplug",
+      "time": "2026-10-28 22:33",
+      "code": "周三012",
+      "key": "20261029_周三012",
+      "league": "英联赛杯",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "富勒姆 VS 水晶宫",
+      "chinese": "各位，周三英格兰联赛杯，（富勒姆）对阵（水晶宫）。市场开出双双进球，给出双双",
+      "original": "Fulham vs Crystal Palace League Cup · 19:45 UTC Market: BTTS/GG Pick: GG Odds: 1.6",
+      "translated": true,
+      "channel_weight": 0.5
+    },
+    {
+      "id": 7484,
+      "channel": "betminesfootballpredictions",
+      "time": "2026-10-28 17:48",
+      "code": "周三013",
+      "key": "20261029_周三013",
+      "league": "意甲",
+      "category": "推单·已开赛",
+      "is_tip": true,
+      "match": "蒙扎 VS 那不勒斯",
+      "chinese": "周三，意大利足球甲级联赛，蒙扎对那不勒斯。方向没开，只拿那不勒斯前锋进球。伤停首发没提，不能乱信。资金异动没说，小串子只要蒙扎平或负。没给让球，别追。",
+      "original": "GOOD MORNING! 🔥 ⚽ 💥 After an incredible day yesterday, when we landed a huge number of our predictions, we’re ready to go again! 📊 Today’s schedule offers fewer",
+      "translated": true,
+      "channel_weight": 0.5
     },
     {
       "id": 7602,
@@ -136,9 +138,7 @@
       "original": "Genoa vs Juventus Serie A · 19:45 UTC Market: JACKPOT Pick: 2 over 1.5 gls Odds: 2.12",
       "translated": true,
       "channel_weight": 0.5
-    }
-  ],
-  "archived": [
+    },
     {
       "id": 7568,
       "channel": "forepitch_tips",
@@ -1465,16 +1465,16 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-10-29 04:45:42",
-    "last_nonempty_at": "2026-10-29 04:45:42",
-    "live_count": 9,
-    "archived_count": 107,
-    "active_matches": 8,
+    "last_updated": "2026-10-29 06:02:18",
+    "last_nonempty_at": "2026-10-29 06:02:18",
+    "live_count": 4,
+    "archived_count": 112,
+    "active_matches": 3,
     "llm_providers": [
       "local",
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-10-29 04:45:42"
+    "checked_at": "2026-10-29 06:02:18"
   }
 }
