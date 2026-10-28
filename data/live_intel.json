@@ -1,7 +1,52 @@
 {
-  "updated_at": "2026-10-28 18:42:12",
-  "total_tips": 6,
+  "updated_at": "2026-10-28 19:14:22",
+  "total_tips": 7,
   "live_feed": [
+    {
+      "id": 7424,
+      "channel": "victorspredict",
+      "time": "2026-10-28 16:00",
+      "code": "周三005",
+      "key": "20261029_周三005",
+      "league": "意甲",
+      "category": "推单",
+      "is_tip": true,
+      "match": "威尼斯 VS 国际米兰",
+      "chinese": "周三，意甲，威尼斯对国际米兰。情报方向客胜，国际米兰看稳，客场赔率一点三六，盘口偏浅。伤停名单没提核心，首发和轮换未知。资金没提异动，机构态度偏客。听我的，客胜走。",
+      "original": "🏆 BANKER TIPS - 28-10-2026 Venezia vs Inter Italy: Serie A Prediction: Away (1.36) 🔗 View Details Celtic vs Dundee Utd Scotland: Premiership Prediction: Home (1",
+      "translated": true,
+      "channel_weight": 1.0
+    },
+    {
+      "id": 7482,
+      "channel": "todaysoccertips",
+      "time": "2026-10-28 17:26",
+      "code": "周三005",
+      "key": "20261029_周三005",
+      "league": "意甲",
+      "category": "推单",
+      "is_tip": true,
+      "match": "威尼斯 VS 国际米兰",
+      "chinese": "周三，意甲，威尼斯对国际米兰，凌晨一点半开球。我这边没拿到可靠战意，伤停名单也没消息，盘口异动不清楚。老客们，别听外盘瞎喊，今晚少信投言，咱们量力而行，先不加仓。",
+      "original": "⚽ Soccer #Tipsters selections for #today : 💲 ✅ Tipster: Mark Adams - UK analyst Kick-off: 28 10 2026, 20:30, England , Efl Cup GAME: Manchester City - Brighton ",
+      "translated": true,
+      "channel_weight": 0.5
+    },
+    {
+      "id": 7420,
+      "channel": "olimpbet",
+      "time": "2026-10-28 15:01",
+      "code": "周三005",
+      "key": "20261029_周三005",
+      "league": "意甲",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "威尼斯 VS 国际米兰",
+      "chinese": "本场国米让一球(-1.5)，盘口1.88明确看好主胜。国米近4连胜压制威尼斯，交锋心理占优。资金暗流涌向主队，老客重点关注！",
+      "original": "🔥 ГЛАВНЫЕ СОБЫТИЯ ЭТОЙ СРЕДЫ 👉 Медведев выиграл четыре из пяти последних матчей. Сухая за 1.8 👉 «Динамо» и «Амур» не пробивали ТБ (4.5) в шести из семи последни",
+      "translated": true,
+      "channel_weight": 0.5
+    },
     {
       "id": 7483,
       "channel": "forepitch_tips",
@@ -44,36 +89,6 @@
       "match": "利物浦 VS 切尔西",
       "chinese": "周三，联赛杯，利物浦对切尔西。伤情：切尔西锋乔丹大腿受伤，缺阵数周，首发与轮换未明。方向、让球、大小、进球没消息，不碰。资金异动未报。老客记，别信外泄。",
       "original": "Xabi Alonso says João Pedro will be out for \"a few weeks\" with a thigh injury 🤕 Chelsea's upcoming fixtures before and after the November international break: O",
-      "translated": true,
-      "channel_weight": 0.5
-    },
-    {
-      "id": 7424,
-      "channel": "victorspredict",
-      "time": "2026-10-28 16:00",
-      "code": "周三005",
-      "key": "20261029_周三005",
-      "league": "意甲",
-      "category": "推单",
-      "is_tip": true,
-      "match": "威尼斯 VS 国际米兰",
-      "chinese": "周三，意甲，威尼斯对国际米兰。情报方向客胜，国际米兰看稳，客场赔率一点三六，盘口偏浅。伤停名单没提核心，首发和轮换未知。资金没提异动，机构态度偏客。听我的，客胜走。",
-      "original": "🏆 BANKER TIPS - 28-10-2026 Venezia vs Inter Italy: Serie A Prediction: Away (1.36) 🔗 View Details Celtic vs Dundee Utd Scotland: Premiership Prediction: Home (1",
-      "translated": true,
-      "channel_weight": 1.0
-    },
-    {
-      "id": 7420,
-      "channel": "olimpbet",
-      "time": "2026-10-28 15:01",
-      "code": "周三005",
-      "key": "20261029_周三005",
-      "league": "意甲",
-      "category": "赛前军情",
-      "is_tip": false,
-      "match": "威尼斯 VS 国际米兰",
-      "chinese": "本场国米让一球(-1.5)，盘口1.88明确看好主胜。国米近4连胜压制威尼斯，交锋心理占优。资金暗流涌向主队，老客重点关注！",
-      "original": "🔥 ГЛАВНЫЕ СОБЫТИЯ ЭТОЙ СРЕДЫ 👉 Медведев выиграл четыре из пяти последних матчей. Сухая за 1.8 👉 «Динамо» и «Амур» не пробивали ТБ (4.5) в шести из семи последни",
       "translated": true,
       "channel_weight": 0.5
     },
@@ -1300,9 +1315,9 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-10-28 18:42:12",
-    "last_nonempty_at": "2026-10-28 18:42:12",
-    "live_count": 6,
+    "last_updated": "2026-10-28 19:14:22",
+    "last_nonempty_at": "2026-10-28 19:14:22",
+    "live_count": 7,
     "archived_count": 99,
     "active_matches": 17,
     "llm_providers": [
@@ -1310,6 +1325,6 @@
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-10-28 18:42:12"
+    "checked_at": "2026-10-28 19:14:22"
   }
 }
