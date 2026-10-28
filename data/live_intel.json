@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-28 22:14:20",
-  "total_tips": 9,
+  "updated_at": "2026-10-29 00:53:14",
+  "total_tips": 10,
   "live_feed": [
+    {
+      "id": 7537,
+      "channel": "matchplug",
+      "time": "2026-10-28 22:06",
+      "code": "周三014",
+      "key": "20261029_周三014",
+      "league": "意甲",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "热那亚 VS 尤文图斯",
+      "chinese": "今夜周三，热那亚对阵尤文图斯，意甲。市场开出大两球或以上，赔二点一二。我看这场要两球进，大球方向。伤停没动静，阵容先不提。压大球，两头下注也行。",
+      "original": "Genoa vs Juventus Serie A · 19:45 UTC Market: JACKPOT Pick: 2 over 1.5 gls Odds: 2.12",
+      "translated": true,
+      "channel_weight": 0.5
+    },
     {
       "id": 7417,
       "channel": "feedinco",
@@ -1360,9 +1375,9 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-10-28 22:14:20",
-    "last_nonempty_at": "2026-10-28 22:14:20",
-    "live_count": 9,
+    "last_updated": "2026-10-29 00:53:14",
+    "last_nonempty_at": "2026-10-29 00:53:14",
+    "live_count": 10,
     "archived_count": 100,
     "active_matches": 14,
     "llm_providers": [
@@ -1370,6 +1385,6 @@
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-10-28 22:14:20"
+    "checked_at": "2026-10-29 00:53:14"
   }
 }
