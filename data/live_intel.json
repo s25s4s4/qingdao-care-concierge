@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-29 15:36:36",
-  "total_tips": 1,
+  "updated_at": "2026-10-29 16:10:15",
+  "total_tips": 2,
   "live_feed": [
+    {
+      "id": 7807,
+      "channel": "victorspredict",
+      "time": "2026-10-29 16:00",
+      "code": "周四005",
+      "key": "20261030_周四005",
+      "league": "英联赛杯",
+      "category": "推单",
+      "is_tip": true,
+      "match": "埃弗顿 VS 纽卡斯尔",
+      "chinese": "各位看球的，周四英联赛杯，埃弗顿对纽卡斯尔。方向就一个，大球。赔率给到一.二十四，机构信心够。伤停没料，阵容先按现有轮换。资金就盯这盘，大球走势。无所谓细节，上车就冲。",
+      "original": "🏆 BANKER TIPS - 29-10-2026 Everton vs Newcastle England: League Cup Prediction: Over 1.5 (1.24) 🔗 View Details Mixco vs Xelajú Guatemala: Liga Nacional Predicti",
+      "translated": true,
+      "channel_weight": 1.0
+    },
     {
       "id": 7562,
       "channel": "feedinco",
@@ -1495,9 +1510,9 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-10-29 15:36:36",
-    "last_nonempty_at": "2026-10-29 15:36:36",
-    "live_count": 1,
+    "last_updated": "2026-10-29 16:10:15",
+    "last_nonempty_at": "2026-10-29 16:10:15",
+    "live_count": 2,
     "archived_count": 117,
     "active_matches": 19,
     "llm_providers": [
@@ -1505,6 +1520,6 @@
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-10-29 15:36:36"
+    "checked_at": "2026-10-29 16:10:15"
   }
 }
