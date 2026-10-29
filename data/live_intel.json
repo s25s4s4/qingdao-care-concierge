@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-29 18:07:59",
-  "total_tips": 5,
+  "updated_at": "2026-10-29 21:09:32",
+  "total_tips": 6,
   "live_feed": [
     {
       "id": 7807,
@@ -16,6 +16,21 @@
       "original": "🏆 BANKER TIPS - 29-10-2026 Everton vs Newcastle England: League Cup Prediction: Over 1.5 (1.24) 🔗 View Details Mixco vs Xelajú Guatemala: Liga Nacional Predicti",
       "translated": true,
       "channel_weight": 1.0
+    },
+    {
+      "id": 7877,
+      "channel": "matchplug",
+      "time": "2026-10-29 20:42",
+      "code": "周四005",
+      "key": "20261030_周四005",
+      "league": "英联赛杯",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "埃弗顿 VS 纽卡斯尔",
+      "chinese": "周四英联赛杯，埃弗顿对纽卡斯尔，开赛十月三十日凌晨三点四十五分。市场开出总进球大球，推荐总进球大球，赔率一点八五。就按大小球押大球。",
+      "original": "Everton vs Newcastle League Cup · 19:45 UTC Market: Over 2.5 Goals Pick: Over 2.5 gls Odds: 1.85",
+      "translated": true,
+      "channel_weight": 0.5
     },
     {
       "id": 7849,
@@ -1555,9 +1570,9 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-10-29 18:07:59",
-    "last_nonempty_at": "2026-10-29 18:07:59",
-    "live_count": 5,
+    "last_updated": "2026-10-29 21:09:32",
+    "last_nonempty_at": "2026-10-29 21:09:32",
+    "live_count": 6,
     "archived_count": 117,
     "active_matches": 19,
     "llm_providers": [
@@ -1565,6 +1580,6 @@
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-10-29 18:07:59"
+    "checked_at": "2026-10-29 21:09:32"
   }
 }
