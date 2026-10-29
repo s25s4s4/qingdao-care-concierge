@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-30 04:43:11",
-  "total_tips": 8,
+  "updated_at": "2026-10-30 06:02:19",
+  "total_tips": 2,
   "live_feed": [
+    {
+      "id": 8005,
+      "channel": "forepitch_tips",
+      "time": "2026-10-30 03:03",
+      "code": "周四007",
+      "key": "20261030_周四007",
+      "league": "巴甲",
+      "category": "推单·已开赛",
+      "is_tip": true,
+      "match": "格雷米奥 VS 巴竞技",
+      "chinese": "周四巴甲，（格雷米奥）对（巴竞技）。看主胜或平局，主胜四成二，平三成零，客三成零。大球超二又半，双人球进球五成八。预计进球一比三。伤停首发未放。评估可能变，开赛前盯盘口。",
+      "original": "⚽ Brasileirão Série A · 30 October, 00:30 UTC Grêmio — Athletico Paranaense The model sees a clear edge. 🎯 Main pick: Grêmio win or draw · 69% Home 42% · Draw 2",
+      "translated": true,
+      "channel_weight": 0.5
+    },
     {
       "id": 7934,
       "channel": "feedinco",
@@ -16,7 +31,9 @@
       "original": "FEEDINCO.com Tips for Friday, 30 October 1X - Villarreal - Espanyol O1.5 - FC Volendam - De Graafschap X2 - Konyaspor - Galatasaray SK X2 - Le Havre - PSG",
       "translated": true,
       "channel_weight": 0.8015
-    },
+    }
+  ],
+  "archived": [
     {
       "id": 7970,
       "channel": "forepitch_tips",
@@ -121,9 +138,7 @@
       "original": "⭐ Match of the day Everton — Newcastle United EFLCUP, 19:45 UTC Model: 1 38% · X 27% · 2 36% Most likely score: 2:1 Expected goals: 1.4–1.4 Form (last 5): Evert",
       "translated": true,
       "channel_weight": 0.5
-    }
-  ],
-  "archived": [
+    },
     {
       "id": 7562,
       "channel": "feedinco",
@@ -1720,16 +1735,16 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-10-30 04:43:11",
-    "last_nonempty_at": "2026-10-30 04:43:11",
-    "live_count": 8,
-    "archived_count": 125,
-    "active_matches": 15,
+    "last_updated": "2026-10-30 06:02:19",
+    "last_nonempty_at": "2026-10-30 06:02:19",
+    "live_count": 2,
+    "archived_count": 132,
+    "active_matches": 13,
     "llm_providers": [
       "local",
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-10-30 04:43:11"
+    "checked_at": "2026-10-30 06:02:19"
   }
 }
