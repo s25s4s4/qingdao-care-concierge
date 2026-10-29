@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-10-30 03:48:27",
+  "updated_at": "2026-10-30 03:58:27",
   "periods": [
     {
       "period": "26151",
       "picks_ready": true,
       "deadline": "10-27 00:00",
       "total_matches": 14,
-      "archived_at": "2026-10-30 03:48:27",
+      "archived_at": "2026-10-30 03:58:27",
       "summary": {
         "total": 14,
         "hit_primary": 9,

@@ -3,7 +3,7 @@
   "picks_ready": true,
   "deadline": "10-28 22:00",
   "total_matches": 14,
-  "updated_at": "2026-10-30 03:48:27",
+  "updated_at": "2026-10-30 03:58:27",
   "matches": [
     {
       "no": 1,
@@ -807,7 +807,7 @@
       "away": "盖斯",
       "away_rank": "11",
       "fid": "1362827",
-      "status": "未开赛",
+      "status": "已完赛",
       "postponed": false,
       "matched_id": null,
       "odds": [
@@ -822,8 +822,8 @@
         "market_depth": "百家平均欧赔开出 2.61 / 3.26 / 2.54，三项期望回报（EV）分别为主胜 -0.135、平局 -0.068、客胜 -0.028。盘面诊断：盘面处于正常期望区间。",
         "decision_guide": "传足选号方案：核心首选【客胜(0)】（单挑作胆），🚨大冷预警留意【主胜(3)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
       },
-      "live_status": "",
-      "score": "",
+      "live_status": "FIN",
+      "score": "0-1",
       "pick_primary": "0",
       "pick_secondary": null,
       "pick_desc": "",
@@ -859,9 +859,9 @@
           "single_threshold": 0.54
         }
       },
-      "outcome": "",
-      "result": null,
-      "result_text": ""
+      "outcome": "0",
+      "result": "HIT_PRIMARY",
+      "result_text": "首选命中"
     },
     {
       "no": 14,
@@ -873,7 +873,7 @@
       "away": "米亚尔",
       "away_rank": "12",
       "fid": "1362830",
-      "status": "未开赛",
+      "status": "已完赛",
       "postponed": false,
       "matched_id": null,
       "odds": [
@@ -888,8 +888,8 @@
         "market_depth": "百家平均欧赔开出 3.45 / 3.57 / 1.94，三项期望回报（EV）分别为主胜 -0.149、平局 -0.073、客胜 -0.042。盘面诊断：盘面处于正常期望区间。",
         "decision_guide": "传足选号方案：核心首选【客胜(0)】，次选防冷补【平局(1)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
       },
-      "live_status": "",
-      "score": "",
+      "live_status": "FIN",
+      "score": "1-2",
       "pick_primary": "0",
       "pick_secondary": "1",
       "pick_desc": "",
@@ -925,9 +925,9 @@
           "single_threshold": 0.54
         }
       },
-      "outcome": "",
-      "result": null,
-      "result_text": ""
+      "outcome": "0",
+      "result": "HIT_PRIMARY",
+      "result_text": "首选命中"
     }
   ],
   "previous_period": {
