@@ -1,7 +1,37 @@
 {
-  "updated_at": "2026-10-29 16:10:15",
-  "total_tips": 2,
+  "updated_at": "2026-10-29 16:37:19",
+  "total_tips": 4,
   "live_feed": [
+    {
+      "id": 7817,
+      "channel": "focuspredict",
+      "time": "2026-10-29 16:00",
+      "code": "周四002",
+      "key": "20261030_周四002",
+      "league": "芬兰超级联赛",
+      "category": "推单",
+      "is_tip": true,
+      "match": "国际图尔 VS 赫尔辛基",
+      "chinese": "周四，芬兰超级联赛，国际图尔对赫尔辛基。方向按给出的大球，赔率一点二二。只有这个预测，没提伤停或阵容。资金上也没异动，先按这个大球来。",
+      "original": "🎯 ACCA TIPS - 29-10-2026 Inter Turku vs HJK Helsinki Finland: Veikkausliiga Prediction: Over 1.5 (1.22) 🔗 View Details Benfica vs GIL Vicente Portugal: Taça da ",
+      "translated": true,
+      "channel_weight": 1.0
+    },
+    {
+      "id": 7816,
+      "channel": "sure2scoreprediction",
+      "time": "2026-10-29 15:37",
+      "code": "周四002",
+      "key": "20261030_周四002",
+      "league": "芬兰超级联赛",
+      "category": "推单",
+      "is_tip": true,
+      "match": "国际图尔 VS 赫尔辛基",
+      "chinese": "周四，芬兰超级联赛，（国际图尔）对（赫尔辛基）。看大球，预测双方总进球一半以上，让球没推。当场只给一个半票口，没看机构异动。伤停没料，阵容没变。资金没暗流，外盘也没异向。想进大球就压这个，没信就保守。",
+      "original": "FREE FOOTBALL TIPS ✅ ✅ ✅ 29/10/26 Finland: Veikkausliiga Inter Turku Vs HJK Helsinki 🚀 🚀 🚀 Prediction: Over 1.5 Goals Odds .25 Egypt: Premier League Pyramids FC",
+      "translated": true,
+      "channel_weight": 0.5
+    },
     {
       "id": 7807,
       "channel": "victorspredict",
@@ -1510,9 +1540,9 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-10-29 16:10:15",
-    "last_nonempty_at": "2026-10-29 16:10:15",
-    "live_count": 2,
+    "last_updated": "2026-10-29 16:37:19",
+    "last_nonempty_at": "2026-10-29 16:37:19",
+    "live_count": 4,
     "archived_count": 117,
     "active_matches": 19,
     "llm_providers": [
@@ -1520,6 +1550,6 @@
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-10-29 16:10:15"
+    "checked_at": "2026-10-29 16:37:19"
   }
 }
