@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-29 09:00:57",
+  "updated_at": "2026-10-29 14:35:11",
   "total_tips": 0,
   "live_feed": [],
   "archived": [
@@ -1478,17 +1478,17 @@
     }
   ],
   "health": {
-    "stale": false,
-    "last_updated": "2026-10-29 09:00:57",
+    "stale": true,
+    "last_updated": "2026-10-29 14:35:11",
     "last_nonempty_at": "2026-10-29 08:30:51",
     "live_count": 0,
     "archived_count": 117,
-    "active_matches": 1,
+    "active_matches": 19,
     "llm_providers": [
       "local",
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-10-29 09:00:57"
+    "checked_at": "2026-10-29 14:35:11"
   }
 }
