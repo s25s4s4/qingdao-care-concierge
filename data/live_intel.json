@@ -1,7 +1,8 @@
 {
-  "updated_at": "2026-10-29 07:03:50",
-  "total_tips": 1,
-  "live_feed": [
+  "updated_at": "2026-10-29 09:00:57",
+  "total_tips": 0,
+  "live_feed": [],
+  "archived": [
     {
       "id": 7448,
       "channel": "bulletbetpredictions",
@@ -16,9 +17,7 @@
       "original": "3/3 🤯 AC Milan home wins, 0.7 conceded. Bologna visit. Top Matches 28 Oct: THE NUMBERS 📊 Swipe through all 16 matches 👉 🔒 The model's pick for every one is in t",
       "translated": true,
       "channel_weight": 0.5
-    }
-  ],
-  "archived": [
+    },
     {
       "id": 7417,
       "channel": "feedinco",
@@ -1480,16 +1479,16 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-10-29 07:03:50",
-    "last_nonempty_at": "2026-10-29 07:03:50",
-    "live_count": 1,
-    "archived_count": 116,
-    "active_matches": 2,
+    "last_updated": "2026-10-29 09:00:57",
+    "last_nonempty_at": "2026-10-29 08:30:51",
+    "live_count": 0,
+    "archived_count": 117,
+    "active_matches": 1,
     "llm_providers": [
       "local",
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-10-29 07:03:50"
+    "checked_at": "2026-10-29 09:00:57"
   }
 }
