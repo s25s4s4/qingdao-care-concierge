@@ -1,7 +1,23 @@
 {
-  "updated_at": "2026-10-29 14:35:11",
-  "total_tips": 0,
-  "live_feed": [],
+  "updated_at": "2026-10-29 15:36:36",
+  "total_tips": 1,
+  "live_feed": [
+    {
+      "id": 7562,
+      "channel": "feedinco",
+      "time": "2026-10-28 23:05",
+      "code": "周四003",
+      "key": "20261030_周四003",
+      "league": "意甲",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "弗洛西诺 VS 莱切",
+      "chinese": "周四三，意甲。弗洛西诺对莱切。方向按老球探给的，主不败。只拿到这个，没说伤停，没说轮换，盘口水位和机构没来。老规矩，不听外电流水，收手稳。",
+      "original": "FEEDINCO.com Tips for Thursday, 29 October 1X - Chicago Fire - Orlando City 1X - Frosinone - Lecce 1X - New York City - Atlanta Utd 🔥 All upcoming Football tips",
+      "translated": true,
+      "channel_weight": 0.7873
+    }
+  ],
   "archived": [
     {
       "id": 7448,
@@ -1478,10 +1494,10 @@
     }
   ],
   "health": {
-    "stale": true,
-    "last_updated": "2026-10-29 14:35:11",
-    "last_nonempty_at": "2026-10-29 08:30:51",
-    "live_count": 0,
+    "stale": false,
+    "last_updated": "2026-10-29 15:36:36",
+    "last_nonempty_at": "2026-10-29 15:36:36",
+    "live_count": 1,
     "archived_count": 117,
     "active_matches": 19,
     "llm_providers": [
@@ -1489,6 +1505,6 @@
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-10-29 14:35:11"
+    "checked_at": "2026-10-29 15:36:36"
   }
 }
