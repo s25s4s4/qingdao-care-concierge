@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-30 02:48:47",
-  "total_tips": 11,
+  "updated_at": "2026-10-30 03:21:07",
+  "total_tips": 12,
   "live_feed": [
     {
       "id": 7562,
@@ -16,6 +16,21 @@
       "original": "FEEDINCO.com Tips for Thursday, 29 October 1X - Chicago Fire - Orlando City 1X - Frosinone - Lecce 1X - New York City - Atlanta Utd 🔥 All upcoming Football tips",
       "translated": true,
       "channel_weight": 0.7873
+    },
+    {
+      "id": 7985,
+      "channel": "freakbets",
+      "time": "2026-10-30 02:55",
+      "code": "周四003",
+      "key": "20261030_周四003",
+      "league": "意甲",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "弗洛西诺 VS 莱切",
+      "chinese": "周四意甲，弗洛西诺对莱切。强冷方向看弗洛西诺胜。只有这个建议，没给让球、大小、进球数，水位也未知。伤停和阵容没有，先按正常首发。别吹死自己，风险自己担。",
+      "original": "STRONG BET SERIA A 🇮🇹 BET ➡️ Frosinone to Win 🇮🇹",
+      "translated": true,
+      "channel_weight": 0.5
     },
     {
       "id": 7957,
@@ -1690,9 +1705,9 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-10-30 02:48:47",
-    "last_nonempty_at": "2026-10-30 02:48:47",
-    "live_count": 11,
+    "last_updated": "2026-10-30 03:21:07",
+    "last_nonempty_at": "2026-10-30 03:21:07",
+    "live_count": 12,
     "archived_count": 120,
     "active_matches": 17,
     "llm_providers": [
@@ -1700,6 +1715,6 @@
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-10-30 02:48:47"
+    "checked_at": "2026-10-30 03:21:07"
   }
 }
