@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-29 21:09:32",
-  "total_tips": 6,
+  "updated_at": "2026-10-29 21:38:00",
+  "total_tips": 7,
   "live_feed": [
+    {
+      "id": 7876,
+      "channel": "TipstrrTips",
+      "time": "2026-10-29 20:55",
+      "code": "周四006",
+      "key": "20261030_周四006",
+      "league": "意甲",
+      "category": "推单",
+      "is_tip": true,
+      "match": "佛罗伦萨 VS 亚特兰大",
+      "chinese": "周四意甲，佛罗伦萨对亚特兰大。方向上，看亚特兰大胜。让球和大小未明，平局买不赔利，赔率二点二。伤停阵容，暂无核心缺阵，首发变动未知。资金上，机构看好亚特兰大。",
+      "original": "Thursday's free football tip is provided by Chels , who believes Atalanta offer irresistible value to win their Serie A match at Fiorentina, with Draw No Bet of",
+      "translated": true,
+      "channel_weight": 0.5
+    },
     {
       "id": 7807,
       "channel": "victorspredict",
@@ -1570,9 +1585,9 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-10-29 21:09:32",
-    "last_nonempty_at": "2026-10-29 21:09:32",
-    "live_count": 6,
+    "last_updated": "2026-10-29 21:38:00",
+    "last_nonempty_at": "2026-10-29 21:38:00",
+    "live_count": 7,
     "archived_count": 117,
     "active_matches": 19,
     "llm_providers": [
@@ -1580,6 +1595,6 @@
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-10-29 21:09:32"
+    "checked_at": "2026-10-29 21:38:00"
   }
 }
