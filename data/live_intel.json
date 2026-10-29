@@ -1,67 +1,7 @@
 {
-  "updated_at": "2026-10-30 03:21:07",
-  "total_tips": 12,
+  "updated_at": "2026-10-30 04:10:00",
+  "total_tips": 7,
   "live_feed": [
-    {
-      "id": 7562,
-      "channel": "feedinco",
-      "time": "2026-10-28 23:05",
-      "code": "周四003",
-      "key": "20261030_周四003",
-      "league": "意甲",
-      "category": "赛前军情",
-      "is_tip": false,
-      "match": "弗洛西诺 VS 莱切",
-      "chinese": "周四三，意甲。弗洛西诺对莱切。方向按老球探给的，主不败。只拿到这个，没说伤停，没说轮换，盘口水位和机构没来。老规矩，不听外电流水，收手稳。",
-      "original": "FEEDINCO.com Tips for Thursday, 29 October 1X - Chicago Fire - Orlando City 1X - Frosinone - Lecce 1X - New York City - Atlanta Utd 🔥 All upcoming Football tips",
-      "translated": true,
-      "channel_weight": 0.7873
-    },
-    {
-      "id": 7985,
-      "channel": "freakbets",
-      "time": "2026-10-30 02:55",
-      "code": "周四003",
-      "key": "20261030_周四003",
-      "league": "意甲",
-      "category": "赛前军情",
-      "is_tip": false,
-      "match": "弗洛西诺 VS 莱切",
-      "chinese": "周四意甲，弗洛西诺对莱切。强冷方向看弗洛西诺胜。只有这个建议，没给让球、大小、进球数，水位也未知。伤停和阵容没有，先按正常首发。别吹死自己，风险自己担。",
-      "original": "STRONG BET SERIA A 🇮🇹 BET ➡️ Frosinone to Win 🇮🇹",
-      "translated": true,
-      "channel_weight": 0.5
-    },
-    {
-      "id": 7957,
-      "channel": "calciomercato",
-      "time": "2026-10-30 00:35",
-      "code": "周四003",
-      "key": "20261030_周四003",
-      "league": "意甲",
-      "category": "赛前军情",
-      "is_tip": false,
-      "match": "弗洛西诺 VS 莱切",
-      "chinese": "弗洛西诺对莱切，周四意甲。官宣名单没细报，阵容照看。没可靠盘口，暂不吹方向；进球数观望。外盘没动，莱切客场，弗洛西诺咬死主场，但别上头。",
-      "original": "📄 LE FORMAZIONI UFFICIALI DI 🟡 Frosinone 🆚️ Lecce 🟡 🏆 Serie A 🕒 18:30 📺 DAZN 🏟 Stadio Benito Stirpe 👮‍♂️ Rosario Abisso ⚽️",
-      "translated": true,
-      "channel_weight": 0.5
-    },
-    {
-      "id": 7924,
-      "channel": "freakbets",
-      "time": "2026-10-29 22:35",
-      "code": "周四003",
-      "key": "20261030_周四003",
-      "league": "意甲",
-      "category": "赛前军情",
-      "is_tip": false,
-      "match": "弗洛西诺 VS 莱切",
-      "chinese": "周四意甲，弗洛西诺对莱切。情报说强力注单加载，但没提方向、让球或大小。伤停阵容、首发轮换也没消息。盘口异动、机构态度不明。老规矩，不盲跟，等开盘再说。",
-      "original": "STRONG BET LOADING FOR SERIA A 🇮🇹 🔥 Frosinone 🇮🇹 - Lecce 🇮🇹 Let’s get 700 Reactions ❤️ and we are posting strong BET!",
-      "translated": true,
-      "channel_weight": 0.5
-    },
     {
       "id": 7970,
       "channel": "forepitch_tips",
@@ -123,21 +63,6 @@
       "channel_weight": 0.5
     },
     {
-      "id": 7939,
-      "channel": "forepitch_tips",
-      "time": "2026-10-29 23:05",
-      "code": "周四004",
-      "key": "20261030_周四004",
-      "league": "瑞超",
-      "category": "推单·已开赛",
-      "is_tip": true,
-      "match": "哈马比 VS 天狼星",
-      "chinese": "哈马比主场对天狼星，主场优势够，主胜上车。赔率主胜六十五，一胜多胜八十六，大球两球半六十，双方进球五九，指数二比一。阵容没动静，模型看主场赢。开赛前盯盘口。",
-      "original": "⚽ Allsvenskan · 29 October, 17:30 UTC Hammarby — Sirius An edge, but no guarantee. 🎯 Main pick: Hammarby to win · 65% Home 65% · Draw 21% · Away 14% · 1X 86% Ov",
-      "translated": true,
-      "channel_weight": 0.5
-    },
-    {
       "id": 7807,
       "channel": "victorspredict",
       "time": "2026-10-29 16:00",
@@ -184,6 +109,81 @@
     }
   ],
   "archived": [
+    {
+      "id": 7562,
+      "channel": "feedinco",
+      "time": "2026-10-28 23:05",
+      "code": "周四003",
+      "key": "20261030_周四003",
+      "league": "意甲",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "弗洛西诺 VS 莱切",
+      "chinese": "周四三，意甲。弗洛西诺对莱切。方向按老球探给的，主不败。只拿到这个，没说伤停，没说轮换，盘口水位和机构没来。老规矩，不听外电流水，收手稳。",
+      "original": "FEEDINCO.com Tips for Thursday, 29 October 1X - Chicago Fire - Orlando City 1X - Frosinone - Lecce 1X - New York City - Atlanta Utd 🔥 All upcoming Football tips",
+      "translated": true,
+      "channel_weight": 0.7873
+    },
+    {
+      "id": 7985,
+      "channel": "freakbets",
+      "time": "2026-10-30 02:55",
+      "code": "周四003",
+      "key": "20261030_周四003",
+      "league": "意甲",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "弗洛西诺 VS 莱切",
+      "chinese": "周四意甲，弗洛西诺对莱切。强冷方向看弗洛西诺胜。只有这个建议，没给让球、大小、进球数，水位也未知。伤停和阵容没有，先按正常首发。别吹死自己，风险自己担。",
+      "original": "STRONG BET SERIA A 🇮🇹 BET ➡️ Frosinone to Win 🇮🇹",
+      "translated": true,
+      "channel_weight": 0.5
+    },
+    {
+      "id": 7957,
+      "channel": "calciomercato",
+      "time": "2026-10-30 00:35",
+      "code": "周四003",
+      "key": "20261030_周四003",
+      "league": "意甲",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "弗洛西诺 VS 莱切",
+      "chinese": "弗洛西诺对莱切，周四意甲。官宣名单没细报，阵容照看。没可靠盘口，暂不吹方向；进球数观望。外盘没动，莱切客场，弗洛西诺咬死主场，但别上头。",
+      "original": "📄 LE FORMAZIONI UFFICIALI DI 🟡 Frosinone 🆚️ Lecce 🟡 🏆 Serie A 🕒 18:30 📺 DAZN 🏟 Stadio Benito Stirpe 👮‍♂️ Rosario Abisso ⚽️",
+      "translated": true,
+      "channel_weight": 0.5
+    },
+    {
+      "id": 7924,
+      "channel": "freakbets",
+      "time": "2026-10-29 22:35",
+      "code": "周四003",
+      "key": "20261030_周四003",
+      "league": "意甲",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "弗洛西诺 VS 莱切",
+      "chinese": "周四意甲，弗洛西诺对莱切。情报说强力注单加载，但没提方向、让球或大小。伤停阵容、首发轮换也没消息。盘口异动、机构态度不明。老规矩，不盲跟，等开盘再说。",
+      "original": "STRONG BET LOADING FOR SERIA A 🇮🇹 🔥 Frosinone 🇮🇹 - Lecce 🇮🇹 Let’s get 700 Reactions ❤️ and we are posting strong BET!",
+      "translated": true,
+      "channel_weight": 0.5
+    },
+    {
+      "id": 7939,
+      "channel": "forepitch_tips",
+      "time": "2026-10-29 23:05",
+      "code": "周四004",
+      "key": "20261030_周四004",
+      "league": "瑞超",
+      "category": "推单·已开赛",
+      "is_tip": true,
+      "match": "哈马比 VS 天狼星",
+      "chinese": "哈马比主场对天狼星，主场优势够，主胜上车。赔率主胜六十五，一胜多胜八十六，大球两球半六十，双方进球五九，指数二比一。阵容没动静，模型看主场赢。开赛前盯盘口。",
+      "original": "⚽ Allsvenskan · 29 October, 17:30 UTC Hammarby — Sirius An edge, but no guarantee. 🎯 Main pick: Hammarby to win · 65% Home 65% · Draw 21% · Away 14% · 1X 86% Ov",
+      "translated": true,
+      "channel_weight": 0.5
+    },
     {
       "id": 7817,
       "channel": "focuspredict",
@@ -1705,16 +1705,16 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-10-30 03:21:07",
-    "last_nonempty_at": "2026-10-30 03:21:07",
-    "live_count": 12,
-    "archived_count": 120,
-    "active_matches": 17,
+    "last_updated": "2026-10-30 04:10:00",
+    "last_nonempty_at": "2026-10-30 04:10:00",
+    "live_count": 7,
+    "archived_count": 125,
+    "active_matches": 15,
     "llm_providers": [
       "local",
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-10-30 03:21:07"
+    "checked_at": "2026-10-30 04:10:00"
   }
 }
