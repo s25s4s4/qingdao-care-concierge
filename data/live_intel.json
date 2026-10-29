@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-30 04:10:00",
-  "total_tips": 7,
+  "updated_at": "2026-10-30 04:43:11",
+  "total_tips": 8,
   "live_feed": [
+    {
+      "id": 7934,
+      "channel": "feedinco",
+      "time": "2026-10-29 23:05",
+      "code": "周五009",
+      "key": "20261031_周五009",
+      "league": "西甲",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "比利亚雷 VS 西班牙人",
+      "chinese": "周五西甲，（比利亚雷）主场对（西班牙人），十月三十一日零四点开。看一球平或主，主不败方向。但只有这条信息，水位、伤停、阵容",
+      "original": "FEEDINCO.com Tips for Friday, 30 October 1X - Villarreal - Espanyol O1.5 - FC Volendam - De Graafschap X2 - Konyaspor - Galatasaray SK X2 - Le Havre - PSG",
+      "translated": true,
+      "channel_weight": 0.8015
+    },
     {
       "id": 7970,
       "channel": "forepitch_tips",
@@ -1705,9 +1720,9 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-10-30 04:10:00",
-    "last_nonempty_at": "2026-10-30 04:10:00",
-    "live_count": 7,
+    "last_updated": "2026-10-30 04:43:11",
+    "last_nonempty_at": "2026-10-30 04:43:11",
+    "live_count": 8,
     "archived_count": 125,
     "active_matches": 15,
     "llm_providers": [
@@ -1715,6 +1730,6 @@
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-10-30 04:10:00"
+    "checked_at": "2026-10-30 04:43:11"
   }
 }
