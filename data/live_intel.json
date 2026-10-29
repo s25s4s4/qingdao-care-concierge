@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-29 21:38:00",
-  "total_tips": 7,
+  "updated_at": "2026-10-29 22:41:38",
+  "total_tips": 9,
   "live_feed": [
+    {
+      "id": 7914,
+      "channel": "bulletbetpredictions",
+      "time": "2026-10-29 22:00",
+      "code": "周四006",
+      "key": "20261030_周四006",
+      "league": "意甲",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "佛罗伦萨 VS 亚特兰大",
+      "chinese": "周四意甲，佛罗伦萨对亚特兰大，凌晨三点四五开。方向没给死盘，让球、大小球、进球数没料。伤停阵容没消息，首发轮换未知。资金没异动，机构态度模糊。老球探不吹水，随缘，不上头。",
+      "original": "⚽ Fiorentina – Atalanta Serie A · Italy · kick-off 19:45 UTC Home and away numbers for this season are on the card. Bullet's prediction for this match is in the",
+      "translated": true,
+      "channel_weight": 0.5
+    },
     {
       "id": 7876,
       "channel": "TipstrrTips",
@@ -14,6 +29,51 @@
       "match": "佛罗伦萨 VS 亚特兰大",
       "chinese": "周四意甲，佛罗伦萨对亚特兰大。方向上，看亚特兰大胜。让球和大小未明，平局买不赔利，赔率二点二。伤停阵容，暂无核心缺阵，首发变动未知。资金上，机构看好亚特兰大。",
       "original": "Thursday's free football tip is provided by Chels , who believes Atalanta offer irresistible value to win their Serie A match at Fiorentina, with Draw No Bet of",
+      "translated": true,
+      "channel_weight": 0.5
+    },
+    {
+      "id": 7817,
+      "channel": "focuspredict",
+      "time": "2026-10-29 16:00",
+      "code": "周四002",
+      "key": "20261030_周四002",
+      "league": "芬兰超级联赛",
+      "category": "推单",
+      "is_tip": true,
+      "match": "国际图尔 VS 赫尔辛基",
+      "chinese": "周四，芬兰超级联赛，国际图尔对赫尔辛基。方向按给出的大球，赔率一点二二。只有这个预测，没提伤停或阵容。资金上也没异动，先按这个大球来。",
+      "original": "🎯 ACCA TIPS - 29-10-2026 Inter Turku vs HJK Helsinki Finland: Veikkausliiga Prediction: Over 1.5 (1.22) 🔗 View Details Benfica vs GIL Vicente Portugal: Taça da ",
+      "translated": true,
+      "channel_weight": 1.0
+    },
+    {
+      "id": 7909,
+      "channel": "golazzoofficial",
+      "time": "2026-10-29 22:01",
+      "code": "周四002",
+      "key": "20261030_周四002",
+      "league": "芬兰超级联赛",
+      "category": "推单·已开赛",
+      "is_tip": true,
+      "match": "国际图尔 VS 赫尔辛基",
+      "chinese": "周四，芬兰超级联赛，（国际图尔）对（赫尔辛基）。看小球，两队首回合一比一，（国际图尔）不败但防守",
+      "original": "⚽ BET OF THE DAY — October 29, 2026 1️⃣ SC Austria Lustenau vs SK Puntigamer Sturm Graz ⚽ Bet: Match Winner: Sturm Graz Odds: ~1.53 OFB Cup | 17:00 Risk: Low Se",
+      "translated": true,
+      "channel_weight": 0.5
+    },
+    {
+      "id": 7816,
+      "channel": "sure2scoreprediction",
+      "time": "2026-10-29 15:37",
+      "code": "周四002",
+      "key": "20261030_周四002",
+      "league": "芬兰超级联赛",
+      "category": "推单",
+      "is_tip": true,
+      "match": "国际图尔 VS 赫尔辛基",
+      "chinese": "周四，芬兰超级联赛，（国际图尔）对（赫尔辛基）。看大球，预测双方总进球一半以上，让球没推。当场只给一个半票口，没看机构异动。伤停没料，阵容没变。资金没暗流，外盘也没异向。想进大球就压这个，没信就保守。",
+      "original": "FREE FOOTBALL TIPS ✅ ✅ ✅ 29/10/26 Finland: Veikkausliiga Inter Turku Vs HJK Helsinki 🚀 🚀 🚀 Prediction: Over 1.5 Goals Odds .25 Egypt: Premier League Pyramids FC",
       "translated": true,
       "channel_weight": 0.5
     },
@@ -59,36 +119,6 @@
       "match": "埃弗顿 VS 纽卡斯尔",
       "chinese": "周四英联赛杯，埃弗顿对纽卡斯尔。赔率模型给主、平、客各约三成，主胜稍热门",
       "original": "⭐ Match of the day Everton — Newcastle United EFLCUP, 19:45 UTC Model: 1 38% · X 27% · 2 36% Most likely score: 2:1 Expected goals: 1.4–1.4 Form (last 5): Evert",
-      "translated": true,
-      "channel_weight": 0.5
-    },
-    {
-      "id": 7817,
-      "channel": "focuspredict",
-      "time": "2026-10-29 16:00",
-      "code": "周四002",
-      "key": "20261030_周四002",
-      "league": "芬兰超级联赛",
-      "category": "推单",
-      "is_tip": true,
-      "match": "国际图尔 VS 赫尔辛基",
-      "chinese": "周四，芬兰超级联赛，国际图尔对赫尔辛基。方向按给出的大球，赔率一点二二。只有这个预测，没提伤停或阵容。资金上也没异动，先按这个大球来。",
-      "original": "🎯 ACCA TIPS - 29-10-2026 Inter Turku vs HJK Helsinki Finland: Veikkausliiga Prediction: Over 1.5 (1.22) 🔗 View Details Benfica vs GIL Vicente Portugal: Taça da ",
-      "translated": true,
-      "channel_weight": 1.0
-    },
-    {
-      "id": 7816,
-      "channel": "sure2scoreprediction",
-      "time": "2026-10-29 15:37",
-      "code": "周四002",
-      "key": "20261030_周四002",
-      "league": "芬兰超级联赛",
-      "category": "推单",
-      "is_tip": true,
-      "match": "国际图尔 VS 赫尔辛基",
-      "chinese": "周四，芬兰超级联赛，（国际图尔）对（赫尔辛基）。看大球，预测双方总进球一半以上，让球没推。当场只给一个半票口，没看机构异动。伤停没料，阵容没变。资金没暗流，外盘也没异向。想进大球就压这个，没信就保守。",
-      "original": "FREE FOOTBALL TIPS ✅ ✅ ✅ 29/10/26 Finland: Veikkausliiga Inter Turku Vs HJK Helsinki 🚀 🚀 🚀 Prediction: Over 1.5 Goals Odds .25 Egypt: Premier League Pyramids FC",
       "translated": true,
       "channel_weight": 0.5
     },
@@ -1585,16 +1615,16 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-10-29 21:38:00",
-    "last_nonempty_at": "2026-10-29 21:38:00",
-    "live_count": 7,
+    "last_updated": "2026-10-29 22:41:38",
+    "last_nonempty_at": "2026-10-29 22:41:38",
+    "live_count": 9,
     "archived_count": 117,
-    "active_matches": 19,
+    "active_matches": 18,
     "llm_providers": [
       "local",
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-10-29 21:38:00"
+    "checked_at": "2026-10-29 22:41:38"
   }
 }
