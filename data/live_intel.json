@@ -1,7 +1,52 @@
 {
-  "updated_at": "2026-10-30 02:12:59",
-  "total_tips": 13,
+  "updated_at": "2026-10-30 02:48:47",
+  "total_tips": 11,
   "live_feed": [
+    {
+      "id": 7562,
+      "channel": "feedinco",
+      "time": "2026-10-28 23:05",
+      "code": "周四003",
+      "key": "20261030_周四003",
+      "league": "意甲",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "弗洛西诺 VS 莱切",
+      "chinese": "周四三，意甲。弗洛西诺对莱切。方向按老球探给的，主不败。只拿到这个，没说伤停，没说轮换，盘口水位和机构没来。老规矩，不听外电流水，收手稳。",
+      "original": "FEEDINCO.com Tips for Thursday, 29 October 1X - Chicago Fire - Orlando City 1X - Frosinone - Lecce 1X - New York City - Atlanta Utd 🔥 All upcoming Football tips",
+      "translated": true,
+      "channel_weight": 0.7873
+    },
+    {
+      "id": 7957,
+      "channel": "calciomercato",
+      "time": "2026-10-30 00:35",
+      "code": "周四003",
+      "key": "20261030_周四003",
+      "league": "意甲",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "弗洛西诺 VS 莱切",
+      "chinese": "弗洛西诺对莱切，周四意甲。官宣名单没细报，阵容照看。没可靠盘口，暂不吹方向；进球数观望。外盘没动，莱切客场，弗洛西诺咬死主场，但别上头。",
+      "original": "📄 LE FORMAZIONI UFFICIALI DI 🟡 Frosinone 🆚️ Lecce 🟡 🏆 Serie A 🕒 18:30 📺 DAZN 🏟 Stadio Benito Stirpe 👮‍♂️ Rosario Abisso ⚽️",
+      "translated": true,
+      "channel_weight": 0.5
+    },
+    {
+      "id": 7924,
+      "channel": "freakbets",
+      "time": "2026-10-29 22:35",
+      "code": "周四003",
+      "key": "20261030_周四003",
+      "league": "意甲",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "弗洛西诺 VS 莱切",
+      "chinese": "周四意甲，弗洛西诺对莱切。情报说强力注单加载，但没提方向、让球或大小。伤停阵容、首发轮换也没消息。盘口异动、机构态度不明。老规矩，不盲跟，等开盘再说。",
+      "original": "STRONG BET LOADING FOR SERIA A 🇮🇹 🔥 Frosinone 🇮🇹 - Lecce 🇮🇹 Let’s get 700 Reactions ❤️ and we are posting strong BET!",
+      "translated": true,
+      "channel_weight": 0.5
+    },
     {
       "id": 7970,
       "channel": "forepitch_tips",
@@ -63,36 +108,6 @@
       "channel_weight": 0.5
     },
     {
-      "id": 7562,
-      "channel": "feedinco",
-      "time": "2026-10-28 23:05",
-      "code": "周四003",
-      "key": "20261030_周四003",
-      "league": "意甲",
-      "category": "赛前军情",
-      "is_tip": false,
-      "match": "弗洛西诺 VS 莱切",
-      "chinese": "周四三，意甲。弗洛西诺对莱切。方向按老球探给的，主不败。只拿到这个，没说伤停，没说轮换，盘口水位和机构没来。老规矩，不听外电流水，收手稳。",
-      "original": "FEEDINCO.com Tips for Thursday, 29 October 1X - Chicago Fire - Orlando City 1X - Frosinone - Lecce 1X - New York City - Atlanta Utd 🔥 All upcoming Football tips",
-      "translated": true,
-      "channel_weight": 0.7873
-    },
-    {
-      "id": 7924,
-      "channel": "freakbets",
-      "time": "2026-10-29 22:35",
-      "code": "周四003",
-      "key": "20261030_周四003",
-      "league": "意甲",
-      "category": "赛前军情",
-      "is_tip": false,
-      "match": "弗洛西诺 VS 莱切",
-      "chinese": "周四意甲，弗洛西诺对莱切。情报说强力注单加载，但没提方向、让球或大小。伤停阵容、首发轮换也没消息。盘口异动、机构态度不明。老规矩，不盲跟，等开盘再说。",
-      "original": "STRONG BET LOADING FOR SERIA A 🇮🇹 🔥 Frosinone 🇮🇹 - Lecce 🇮🇹 Let’s get 700 Reactions ❤️ and we are posting strong BET!",
-      "translated": true,
-      "channel_weight": 0.5
-    },
-    {
       "id": 7939,
       "channel": "forepitch_tips",
       "time": "2026-10-29 23:05",
@@ -104,51 +119,6 @@
       "match": "哈马比 VS 天狼星",
       "chinese": "哈马比主场对天狼星，主场优势够，主胜上车。赔率主胜六十五，一胜多胜八十六，大球两球半六十，双方进球五九，指数二比一。阵容没动静，模型看主场赢。开赛前盯盘口。",
       "original": "⚽ Allsvenskan · 29 October, 17:30 UTC Hammarby — Sirius An edge, but no guarantee. 🎯 Main pick: Hammarby to win · 65% Home 65% · Draw 21% · Away 14% · 1X 86% Ov",
-      "translated": true,
-      "channel_weight": 0.5
-    },
-    {
-      "id": 7817,
-      "channel": "focuspredict",
-      "time": "2026-10-29 16:00",
-      "code": "周四002",
-      "key": "20261030_周四002",
-      "league": "芬兰超级联赛",
-      "category": "推单",
-      "is_tip": true,
-      "match": "国际图尔 VS 赫尔辛基",
-      "chinese": "周四，芬兰超级联赛，国际图尔对赫尔辛基。方向按给出的大球，赔率一点二二。只有这个预测，没提伤停或阵容。资金上也没异动，先按这个大球来。",
-      "original": "🎯 ACCA TIPS - 29-10-2026 Inter Turku vs HJK Helsinki Finland: Veikkausliiga Prediction: Over 1.5 (1.22) 🔗 View Details Benfica vs GIL Vicente Portugal: Taça da ",
-      "translated": true,
-      "channel_weight": 1.0
-    },
-    {
-      "id": 7909,
-      "channel": "golazzoofficial",
-      "time": "2026-10-29 22:01",
-      "code": "周四002",
-      "key": "20261030_周四002",
-      "league": "芬兰超级联赛",
-      "category": "推单·已开赛",
-      "is_tip": true,
-      "match": "国际图尔 VS 赫尔辛基",
-      "chinese": "周四，芬兰超级联赛，（国际图尔）对（赫尔辛基）。看小球，两队首回合一比一，（国际图尔）不败但防守",
-      "original": "⚽ BET OF THE DAY — October 29, 2026 1️⃣ SC Austria Lustenau vs SK Puntigamer Sturm Graz ⚽ Bet: Match Winner: Sturm Graz Odds: ~1.53 OFB Cup | 17:00 Risk: Low Se",
-      "translated": true,
-      "channel_weight": 0.5
-    },
-    {
-      "id": 7816,
-      "channel": "sure2scoreprediction",
-      "time": "2026-10-29 15:37",
-      "code": "周四002",
-      "key": "20261030_周四002",
-      "league": "芬兰超级联赛",
-      "category": "推单",
-      "is_tip": true,
-      "match": "国际图尔 VS 赫尔辛基",
-      "chinese": "周四，芬兰超级联赛，（国际图尔）对（赫尔辛基）。看大球，预测双方总进球一半以上，让球没推。当场只给一个半票口，没看机构异动。伤停没料，阵容没变。资金没暗流，外盘也没异向。想进大球就压这个，没信就保守。",
-      "original": "FREE FOOTBALL TIPS ✅ ✅ ✅ 29/10/26 Finland: Veikkausliiga Inter Turku Vs HJK Helsinki 🚀 🚀 🚀 Prediction: Over 1.5 Goals Odds .25 Egypt: Premier League Pyramids FC",
       "translated": true,
       "channel_weight": 0.5
     },
@@ -199,6 +169,51 @@
     }
   ],
   "archived": [
+    {
+      "id": 7817,
+      "channel": "focuspredict",
+      "time": "2026-10-29 16:00",
+      "code": "周四002",
+      "key": "20261030_周四002",
+      "league": "芬兰超级联赛",
+      "category": "推单",
+      "is_tip": true,
+      "match": "国际图尔 VS 赫尔辛基",
+      "chinese": "周四，芬兰超级联赛，国际图尔对赫尔辛基。方向按给出的大球，赔率一点二二。只有这个预测，没提伤停或阵容。资金上也没异动，先按这个大球来。",
+      "original": "🎯 ACCA TIPS - 29-10-2026 Inter Turku vs HJK Helsinki Finland: Veikkausliiga Prediction: Over 1.5 (1.22) 🔗 View Details Benfica vs GIL Vicente Portugal: Taça da ",
+      "translated": true,
+      "channel_weight": 1.0
+    },
+    {
+      "id": 7909,
+      "channel": "golazzoofficial",
+      "time": "2026-10-29 22:01",
+      "code": "周四002",
+      "key": "20261030_周四002",
+      "league": "芬兰超级联赛",
+      "category": "推单·已开赛",
+      "is_tip": true,
+      "match": "国际图尔 VS 赫尔辛基",
+      "chinese": "周四，芬兰超级联赛，（国际图尔）对（赫尔辛基）。看小球，两队首回合一比一，（国际图尔）不败但防守",
+      "original": "⚽ BET OF THE DAY — October 29, 2026 1️⃣ SC Austria Lustenau vs SK Puntigamer Sturm Graz ⚽ Bet: Match Winner: Sturm Graz Odds: ~1.53 OFB Cup | 17:00 Risk: Low Se",
+      "translated": true,
+      "channel_weight": 0.5
+    },
+    {
+      "id": 7816,
+      "channel": "sure2scoreprediction",
+      "time": "2026-10-29 15:37",
+      "code": "周四002",
+      "key": "20261030_周四002",
+      "league": "芬兰超级联赛",
+      "category": "推单",
+      "is_tip": true,
+      "match": "国际图尔 VS 赫尔辛基",
+      "chinese": "周四，芬兰超级联赛，（国际图尔）对（赫尔辛基）。看大球，预测双方总进球一半以上，让球没推。当场只给一个半票口，没看机构异动。伤停没料，阵容没变。资金没暗流，外盘也没异向。想进大球就压这个，没信就保守。",
+      "original": "FREE FOOTBALL TIPS ✅ ✅ ✅ 29/10/26 Finland: Veikkausliiga Inter Turku Vs HJK Helsinki 🚀 🚀 🚀 Prediction: Over 1.5 Goals Odds .25 Egypt: Premier League Pyramids FC",
+      "translated": true,
+      "channel_weight": 0.5
+    },
     {
       "id": 7448,
       "channel": "bulletbetpredictions",
@@ -1675,16 +1690,16 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-10-30 02:12:59",
-    "last_nonempty_at": "2026-10-30 02:12:59",
-    "live_count": 13,
-    "archived_count": 117,
-    "active_matches": 18,
+    "last_updated": "2026-10-30 02:48:47",
+    "last_nonempty_at": "2026-10-30 02:48:47",
+    "live_count": 11,
+    "archived_count": 120,
+    "active_matches": 17,
     "llm_providers": [
       "local",
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-10-30 02:12:59"
+    "checked_at": "2026-10-30 02:48:47"
   }
 }
