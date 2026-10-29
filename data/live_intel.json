@@ -1,7 +1,37 @@
 {
-  "updated_at": "2026-10-29 22:41:38",
-  "total_tips": 9,
+  "updated_at": "2026-10-30 01:14:57",
+  "total_tips": 11,
   "live_feed": [
+    {
+      "id": 7939,
+      "channel": "forepitch_tips",
+      "time": "2026-10-29 23:05",
+      "code": "周四004",
+      "key": "20261030_周四004",
+      "league": "瑞超",
+      "category": "推单·已开赛",
+      "is_tip": true,
+      "match": "哈马比 VS 天狼星",
+      "chinese": "哈马比主场对天狼星，主场优势够，主胜上车。赔率主胜六十五，一胜多胜八十六，大球两球半六十，双方进球五九，指数二比一。阵容没动静，模型看主场赢。开赛前盯盘口。",
+      "original": "⚽ Allsvenskan · 29 October, 17:30 UTC Hammarby — Sirius An edge, but no guarantee. 🎯 Main pick: Hammarby to win · 65% Home 65% · Draw 21% · Away 14% · 1X 86% Ov",
+      "translated": true,
+      "channel_weight": 0.5
+    },
+    {
+      "id": 7886,
+      "channel": "matchplug",
+      "time": "2026-10-29 21:22",
+      "code": "周四006",
+      "key": "20261030_周四006",
+      "league": "意甲",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "佛罗伦萨 VS 亚特兰大",
+      "chinese": "周四夜场，意甲（佛罗伦萨）对（亚特兰大）。市场方向是双方球队进球，猜总进球赔一.五。伤停和首发没提，阵容消息没有。资金没异动，按这个方向去。",
+      "original": "Fiorentina vs Atalanta Serie A · 19:45 UTC Market: BTTS/GG Pick: GG Odds: 1.5",
+      "translated": true,
+      "channel_weight": 0.5
+    },
     {
       "id": 7914,
       "channel": "bulletbetpredictions",
@@ -1615,9 +1645,9 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-10-29 22:41:38",
-    "last_nonempty_at": "2026-10-29 22:41:38",
-    "live_count": 9,
+    "last_updated": "2026-10-30 01:14:57",
+    "last_nonempty_at": "2026-10-30 01:14:57",
+    "live_count": 11,
     "archived_count": 117,
     "active_matches": 18,
     "llm_providers": [
@@ -1625,6 +1655,6 @@
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-10-29 22:41:38"
+    "checked_at": "2026-10-30 01:14:57"
   }
 }
