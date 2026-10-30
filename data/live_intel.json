@@ -1,7 +1,52 @@
 {
-  "updated_at": "2026-10-31 03:20:33",
-  "total_tips": 8,
+  "updated_at": "2026-10-31 05:43:33",
+  "total_tips": 7,
   "live_feed": [
+    {
+      "id": 8277,
+      "channel": "forepitch_tips",
+      "time": "2026-10-31 01:34",
+      "code": "周五008",
+      "key": "20261031_周五008",
+      "league": "英冠",
+      "category": "推单·已开赛",
+      "is_tip": true,
+      "match": "谢菲联 VS 雷克斯",
+      "chinese": "周五谢菲联VS雷克斯，盘口主胜平局占优，大小球偏热看好小球，预测比分1:0，资金明显看主队。赛前盘口或有异动，老客留意！",
+      "original": "⚽ Championship · 30 October, 20:00 UTC Sheffield United — Wrexham The odds lean one way. 🎯 Main pick: Sheffield United win or draw · 69% Home 42% · Draw 28% · A",
+      "translated": true,
+      "channel_weight": 0.5
+    },
+    {
+      "id": 8253,
+      "channel": "FabrizioRomano",
+      "time": "2026-10-31 00:33",
+      "code": "周六006",
+      "key": "20261031_周六006",
+      "league": "英超",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "切尔西 VS 曼联",
+      "chinese": "周六006切尔西曼联，门将拉科腿筋伤缺阵多周，连国际赛也报销！机构明显看好客队，盘口倾向客让平/负，大小球偏小。资金暗流全涌向客胜！",
+      "original": "🚨 🔵 Maxence Lacroix will be out for several weeks and likely to be back only in 2027 with hamstring injury. Bad news for Chelsea as also France have ruled Lacro",
+      "translated": true,
+      "channel_weight": 0.5
+    },
+    {
+      "id": 8151,
+      "channel": "forepitch_tips",
+      "time": "2026-10-30 16:01",
+      "code": "周六006",
+      "key": "20261031_周六006",
+      "league": "英超",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "切尔西 VS 曼联",
+      "chinese": "周六(切尔西)打(曼联)，盘口主胜过半，资金明显压注主队。客胜平局不到三成，这场主胜稳。阵容伤停暂无确切情报，老球探看基本面。",
+      "original": "📋 Round preview 1 · X · 2 Premier League Chelsea — Manchester United: 50% · 26% · 24% AFC Bournemouth — Leeds United: 47% · 27% · 26% Brentford — Nottingham For",
+      "translated": true,
+      "channel_weight": 0.5
+    },
     {
       "id": 7934,
       "channel": "feedinco",
@@ -32,6 +77,38 @@
       "translated": true,
       "channel_weight": 0.5
     },
+    {
+      "id": 8163,
+      "channel": "matchplug",
+      "time": "2026-10-30 17:23",
+      "code": "周五010",
+      "key": "20261031_周五010",
+      "league": "法甲",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "里尔 VS 朗斯",
+      "chinese": "周五010，(里尔)对阵(朗斯)，盘口主赛果大2.5球，水位2。机构态度偏热，资金暗流明显涌向大球。暂无核心缺阵及首发阵容变动情报。",
+      "original": "Lille vs Lens Ligue 1 · 20:05 UTC Market: Over 2.5 Goals Pick: Over 2.5 gls Odds: 2",
+      "translated": true,
+      "channel_weight": 0.5
+    },
+    {
+      "id": 8017,
+      "channel": "tribuna_football",
+      "time": "2026-10-30 03:54",
+      "code": "周日016",
+      "key": "20261102_周日016",
+      "league": "英超",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "利物浦 VS 阿森纳",
+      "chinese": "周日英超，利物浦对阿森纳，开赛十一月零二点三十分。阿森纳小将多德曼染红，上诉失败，停三场，周末对利物浦。阵容有变，核心缺席。未提让球或大小，不乱说。老球探看着了，走水不走油。",
+      "original": "Arsenal's Max Dowman was sent off against Fleetwood Town, and the club have now failed to overturn the red card 😬 The youngster will serve a THREE-GAME ban, inc",
+      "translated": true,
+      "channel_weight": 0.5
+    }
+  ],
+  "archived": [
     {
       "id": 8131,
       "channel": "victorspredict",
@@ -77,53 +154,6 @@
       "translated": true,
       "channel_weight": 0.5
     },
-    {
-      "id": 8163,
-      "channel": "matchplug",
-      "time": "2026-10-30 17:23",
-      "code": "周五010",
-      "key": "20261031_周五010",
-      "league": "法甲",
-      "category": "赛前军情",
-      "is_tip": false,
-      "match": "里尔 VS 朗斯",
-      "chinese": "周五010，(里尔)对阵(朗斯)，盘口主赛果大2.5球，水位2。机构态度偏热，资金暗流明显涌向大球。暂无核心缺阵及首发阵容变动情报。",
-      "original": "Lille vs Lens Ligue 1 · 20:05 UTC Market: Over 2.5 Goals Pick: Over 2.5 gls Odds: 2",
-      "translated": true,
-      "channel_weight": 0.5
-    },
-    {
-      "id": 8151,
-      "channel": "forepitch_tips",
-      "time": "2026-10-30 16:01",
-      "code": "周六006",
-      "key": "20261031_周六006",
-      "league": "英超",
-      "category": "赛前军情",
-      "is_tip": false,
-      "match": "切尔西 VS 曼联",
-      "chinese": "周六(切尔西)打(曼联)，盘口主胜过半，资金明显压注主队。客胜平局不到三成，这场主胜稳。阵容伤停暂无确切情报，老球探看基本面。",
-      "original": "📋 Round preview 1 · X · 2 Premier League Chelsea — Manchester United: 50% · 26% · 24% AFC Bournemouth — Leeds United: 47% · 27% · 26% Brentford — Nottingham For",
-      "translated": true,
-      "channel_weight": 0.5
-    },
-    {
-      "id": 8017,
-      "channel": "tribuna_football",
-      "time": "2026-10-30 03:54",
-      "code": "周日016",
-      "key": "20261102_周日016",
-      "league": "英超",
-      "category": "赛前军情",
-      "is_tip": false,
-      "match": "利物浦 VS 阿森纳",
-      "chinese": "周日英超，利物浦对阿森纳，开赛十一月零二点三十分。阿森纳小将多德曼染红，上诉失败，停三场，周末对利物浦。阵容有变，核心缺席。未提让球或大小，不乱说。老球探看着了，走水不走油。",
-      "original": "Arsenal's Max Dowman was sent off against Fleetwood Town, and the club have now failed to overturn the red card 😬 The youngster will serve a THREE-GAME ban, inc",
-      "translated": true,
-      "channel_weight": 0.5
-    }
-  ],
-  "archived": [
     {
       "id": 8005,
       "channel": "forepitch_tips",
@@ -1840,16 +1870,16 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-10-31 03:20:33",
-    "last_nonempty_at": "2026-10-31 03:20:33",
-    "live_count": 8,
-    "archived_count": 133,
-    "active_matches": 54,
+    "last_updated": "2026-10-31 05:43:33",
+    "last_nonempty_at": "2026-10-31 05:43:33",
+    "live_count": 7,
+    "archived_count": 136,
+    "active_matches": 50,
     "llm_providers": [
       "local",
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-10-31 03:20:33"
+    "checked_at": "2026-10-31 05:43:33"
   }
 }
