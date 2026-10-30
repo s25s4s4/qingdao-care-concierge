@@ -3,7 +3,7 @@
   "picks_ready": true,
   "deadline": "10-30 22:00",
   "total_matches": 14,
-  "updated_at": "2026-10-31 03:38:27",
+  "updated_at": "2026-10-31 04:08:27",
   "matches": [
     {
       "no": 1,
@@ -345,7 +345,7 @@
       "away": "日尔曼",
       "away_rank": "1",
       "fid": "1415150",
-      "status": "未开赛",
+      "status": "已完赛",
       "postponed": false,
       "matched_id": null,
       "odds": [
@@ -360,8 +360,8 @@
         "market_depth": "百家平均欧赔开出 9.57 / 6.46 / 1.24，三项期望回报（EV）分别为主胜 -1.000、平局 -0.899、客胜 +0.221。盘面诊断：盘面处于正常期望区间。",
         "decision_guide": "传足选号方案：核心首选【客胜(0)】（单挑作胆）。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
       },
-      "live_status": "",
-      "score": "",
+      "live_status": "FIN",
+      "score": "1-5",
       "pick_primary": "0",
       "pick_secondary": null,
       "pick_desc": "",
@@ -397,9 +397,9 @@
           "single_threshold": 0.54
         }
       },
-      "outcome": "",
-      "result": null,
-      "result_text": ""
+      "outcome": "0",
+      "result": "HIT_PRIMARY",
+      "result_text": "首选命中"
     },
     {
       "no": 7,
@@ -873,7 +873,7 @@
       "away": "维京",
       "away_rank": "1",
       "fid": "1364254",
-      "status": "未开赛",
+      "status": "已完赛",
       "postponed": false,
       "matched_id": null,
       "odds": [
@@ -888,8 +888,8 @@
         "market_depth": "百家平均欧赔开出 1.59 / 4.39 / 4.37，三项期望回报（EV）分别为主胜 +0.069、平局 -0.252、客胜 -0.313。盘面诊断：盘面处于正常期望区间。",
         "decision_guide": "传足选号方案：核心首选【主胜(3)】（单挑作胆）。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
       },
-      "live_status": "",
-      "score": "",
+      "live_status": "FIN",
+      "score": "3-2",
       "pick_primary": "3",
       "pick_secondary": null,
       "pick_desc": "",
@@ -925,9 +925,9 @@
           "single_threshold": 0.54
         }
       },
-      "outcome": "",
-      "result": null,
-      "result_text": ""
+      "outcome": "3",
+      "result": "HIT_PRIMARY",
+      "result_text": "首选命中"
     }
   ],
   "previous_period": {
