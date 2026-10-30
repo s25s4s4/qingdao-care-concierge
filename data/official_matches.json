@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-31 05:07:20",
+  "updated_at": "2026-10-31 05:08:21",
   "total": 93,
   "matches": [
     {
@@ -333,7 +333,7 @@
         "result": "HIT",
         "score": "1 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-31T05:07:17",
+        "settled_at": "2026-10-31T05:08:18",
         "outcome": "客胜",
         "tip": "客胜",
         "market": "had"
@@ -645,7 +645,7 @@
         "result": "HIT",
         "score": "1 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-31T05:07:17",
+        "settled_at": "2026-10-31T05:08:18",
         "outcome": "平局",
         "tip": "客胜/防平",
         "market": "had"
@@ -1016,7 +1016,7 @@
         "result": "HIT",
         "score": "2 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-31T05:07:17",
+        "settled_at": "2026-10-31T05:08:18",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -1349,7 +1349,7 @@
         "result": "HIT",
         "score": "3-2",
         "source": "stored_score",
-        "settled_at": "2026-10-31T05:07:17",
+        "settled_at": "2026-10-31T05:08:18",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -1668,7 +1668,7 @@
         "result": "HIT",
         "score": "5 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-31T05:07:17",
+        "settled_at": "2026-10-31T05:08:18",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -1990,7 +1990,7 @@
         "result": "HIT",
         "score": "0 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-31T05:07:17",
+        "settled_at": "2026-10-31T05:08:18",
         "outcome": "客胜",
         "tip": "客胜/防平",
         "market": "had"
@@ -2335,7 +2335,7 @@
         "result": "HIT",
         "score": "2 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-31T05:07:17",
+        "settled_at": "2026-10-31T05:08:18",
         "outcome": "平局",
         "tip": "主胜/防平",
         "market": "had"
@@ -2679,7 +2679,7 @@
         "result": "HIT",
         "score": "1 - 3",
         "source": "fotmob",
-        "settled_at": "2026-10-31T05:07:17",
+        "settled_at": "2026-10-31T05:08:18",
         "outcome": "客胜",
         "tip": "客胜/防平",
         "market": "had"
@@ -3056,7 +3056,7 @@
         "result": "HIT",
         "score": "2 - 6",
         "source": "fotmob",
-        "settled_at": "2026-10-31T05:07:17",
+        "settled_at": "2026-10-31T05:08:18",
         "outcome": "客胜",
         "tip": "客胜",
         "market": "had"
@@ -3402,7 +3402,7 @@
         "result": "HIT",
         "score": "2 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-31T05:07:17",
+        "settled_at": "2026-10-31T05:08:18",
         "outcome": "平局",
         "tip": "客胜/防平",
         "market": "had"
@@ -3746,7 +3746,7 @@
         "result": "HIT",
         "score": "3 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-31T05:07:17",
+        "settled_at": "2026-10-31T05:08:18",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -4097,7 +4097,7 @@
         "result": "HIT",
         "score": "5 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-31T05:07:17",
+        "settled_at": "2026-10-31T05:08:18",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -4479,7 +4479,7 @@
         "result": "HIT",
         "score": "4 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-31T05:07:17",
+        "settled_at": "2026-10-31T05:08:18",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -4856,7 +4856,7 @@
         "result": "HIT",
         "score": "1 - 3",
         "source": "fotmob",
-        "settled_at": "2026-10-31T05:07:17",
+        "settled_at": "2026-10-31T05:08:18",
         "outcome": "客胜",
         "tip": "客胜",
         "market": "had"
@@ -5196,7 +5196,7 @@
         "result": "MISS",
         "score": "1 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-31T05:07:17",
+        "settled_at": "2026-10-31T05:08:18",
         "outcome": "平局",
         "tip": "主胜",
         "market": "had"
@@ -5516,7 +5516,7 @@
         "result": "HIT",
         "score": "3 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-31T05:07:17",
+        "settled_at": "2026-10-31T05:08:18",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -5860,7 +5860,7 @@
         "result": "MISS",
         "score": "4 - 3",
         "source": "fotmob",
-        "settled_at": "2026-10-31T05:07:17",
+        "settled_at": "2026-10-31T05:08:18",
         "outcome": "主胜",
         "tip": "客胜",
         "market": "had"
@@ -6209,7 +6209,7 @@
         "result": "HIT",
         "score": "0 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-31T05:07:17",
+        "settled_at": "2026-10-31T05:08:18",
         "outcome": "客胜",
         "tip": "客胜",
         "market": "had"
@@ -6573,7 +6573,7 @@
         "result": "HIT",
         "score": "0 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-31T05:07:17",
+        "settled_at": "2026-10-31T05:08:18",
         "outcome": "客胜",
         "tip": "客胜",
         "market": "had"
@@ -6950,7 +6950,7 @@
         "result": "MISS",
         "score": "2 - 4",
         "source": "fotmob",
-        "settled_at": "2026-10-31T05:07:17",
+        "settled_at": "2026-10-31T05:08:18",
         "outcome": "客胜",
         "tip": "主胜",
         "market": "had"
@@ -7326,7 +7326,7 @@
         "result": "HIT",
         "score": "0 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-31T05:07:17",
+        "settled_at": "2026-10-31T05:08:18",
         "outcome": "平局",
         "tip": "主胜/防平",
         "market": "had"
@@ -7667,7 +7667,7 @@
         "result": "HIT",
         "score": "2-2",
         "source": "stored_score",
-        "settled_at": "2026-10-31T05:07:17",
+        "settled_at": "2026-10-31T05:08:18",
         "outcome": "平局",
         "tip": "主胜/防平",
         "market": "had"
@@ -8338,7 +8338,7 @@
         "result": "MISS",
         "score": "3 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-31T05:07:17",
+        "settled_at": "2026-10-31T05:08:18",
         "outcome": "主胜",
         "tip": "客胜",
         "market": "had"
@@ -8678,7 +8678,7 @@
         "result": "HIT",
         "score": "3-0",
         "source": "stored_score",
-        "settled_at": "2026-10-31T05:07:17",
+        "settled_at": "2026-10-31T05:08:18",
         "outcome": "主胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -9020,7 +9020,7 @@
         "result": "MISS",
         "score": "0 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-31T05:07:17",
+        "settled_at": "2026-10-31T05:08:18",
         "outcome": "客胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -9396,7 +9396,7 @@
         "result": "HIT",
         "score": "1 - 4",
         "source": "fotmob",
-        "settled_at": "2026-10-31T05:07:17",
+        "settled_at": "2026-10-31T05:08:18",
         "outcome": "客胜",
         "tip": "客胜",
         "market": "had"
@@ -9773,7 +9773,7 @@
         "result": "MISS",
         "score": "2 - 0",
         "source": "fotmob",
-        "settled_at": "2026-10-31T05:07:17",
+        "settled_at": "2026-10-31T05:08:18",
         "outcome": "主胜",
         "tip": "客胜",
         "market": "had"
@@ -10116,7 +10116,7 @@
         "result": "HIT",
         "score": "1 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-31T05:07:17",
+        "settled_at": "2026-10-31T05:08:18",
         "outcome": "平局",
         "tip": "主胜/防平",
         "market": "had"
@@ -10458,7 +10458,7 @@
         "result": "HIT",
         "score": "2 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-31T05:07:17",
+        "settled_at": "2026-10-31T05:08:18",
         "outcome": "主胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -10774,7 +10774,7 @@
         "result": "MISS",
         "score": "2-2",
         "source": "stored_score",
-        "settled_at": "2026-10-31T05:07:17",
+        "settled_at": "2026-10-31T05:08:18",
         "outcome": "平局",
         "tip": "主胜",
         "market": "had"
@@ -11093,7 +11093,7 @@
         "result": "HIT",
         "score": "0 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-31T05:07:17",
+        "settled_at": "2026-10-31T05:08:18",
         "outcome": "客胜",
         "tip": "客胜",
         "market": "had"
@@ -11423,7 +11423,7 @@
         "result": "MISS",
         "score": "2-4",
         "source": "stored_score",
-        "settled_at": "2026-10-31T05:07:17",
+        "settled_at": "2026-10-31T05:08:18",
         "outcome": "客胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -11782,7 +11782,7 @@
         "result": "HIT",
         "score": "5 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-31T05:07:17",
+        "settled_at": "2026-10-31T05:08:18",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -12123,7 +12123,7 @@
         "result": "HIT",
         "score": "2-0",
         "source": "stored_score",
-        "settled_at": "2026-10-31T05:07:17",
+        "settled_at": "2026-10-31T05:08:18",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -12468,7 +12468,7 @@
         "result": "HIT",
         "score": "3 - 1",
         "source": "fotmob",
-        "settled_at": "2026-10-31T05:07:17",
+        "settled_at": "2026-10-31T05:08:18",
         "outcome": "主胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -12845,7 +12845,7 @@
         "result": "HIT",
         "score": "2 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-31T05:07:17",
+        "settled_at": "2026-10-31T05:08:18",
         "outcome": "平局",
         "tip": "主胜/防平",
         "market": "had"
@@ -13183,7 +13183,7 @@
         "result": "HIT",
         "score": "2-0",
         "source": "stored_score",
-        "settled_at": "2026-10-31T05:07:17",
+        "settled_at": "2026-10-31T05:08:18",
         "outcome": "主胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -13498,7 +13498,7 @@
         "result": "HIT",
         "score": "1-1",
         "source": "stored_score",
-        "settled_at": "2026-10-31T05:07:17",
+        "settled_at": "2026-10-31T05:08:18",
         "outcome": "平局",
         "tip": "主胜/防平",
         "market": "had"
@@ -13817,7 +13817,7 @@
         "result": "HIT",
         "score": "1 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-31T05:07:17",
+        "settled_at": "2026-10-31T05:08:18",
         "outcome": "客胜",
         "tip": "客胜/防平",
         "market": "had"
@@ -14193,7 +14193,7 @@
         "result": "MISS",
         "score": "5 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-31T05:07:17",
+        "settled_at": "2026-10-31T05:08:18",
         "outcome": "主胜",
         "tip": "客胜/防平",
         "market": "had"
@@ -14569,7 +14569,7 @@
         "result": "HIT",
         "score": "1 - 5",
         "source": "fotmob",
-        "settled_at": "2026-10-31T05:07:17",
+        "settled_at": "2026-10-31T05:08:18",
         "outcome": "客胜",
         "tip": "客胜",
         "market": "had"
@@ -14914,7 +14914,7 @@
         "result": "HIT",
         "score": "3 - 2",
         "source": "fotmob",
-        "settled_at": "2026-10-31T05:07:17",
+        "settled_at": "2026-10-31T05:08:18",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -15211,7 +15211,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-31 05:07:24",
+      "stats_ts": "2026-10-31 05:12:22",
       "locked": true,
       "prediction_snapshot": {
         "tip": "主胜",
@@ -15549,7 +15549,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-31 05:07:24",
+      "stats_ts": "2026-10-31 05:12:22",
       "locked": true,
       "prediction_snapshot": {
         "tip": "客胜/防平",
@@ -15860,7 +15860,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-31 05:07:24",
+      "stats_ts": "2026-10-31 05:12:22",
       "locked": true,
       "prediction_snapshot": {
         "tip": "主胜/防平",
@@ -16219,7 +16219,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-31 05:07:24",
+      "stats_ts": "2026-10-31 05:12:22",
       "locked": true,
       "prediction_snapshot": {
         "tip": "主胜",
@@ -16260,7 +16260,7 @@
       },
       "crosscheck": {
         "source": "fotmob",
-        "score": "0-1",
+        "score": "0-0",
         "finished": false
       }
     },
@@ -16585,7 +16585,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-31 05:07:24",
+      "stats_ts": "2026-10-31 05:12:22",
       "locked": true,
       "prediction_snapshot": {
         "tip": "主胜/防平",
@@ -16914,7 +16914,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-31 05:07:24",
+      "stats_ts": "2026-10-31 05:12:22",
       "locked": true,
       "prediction_snapshot": {
         "tip": "客胜",
@@ -17244,7 +17244,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-31 05:07:24",
+      "stats_ts": "2026-10-31 05:12:22",
       "locked": true,
       "prediction_snapshot": {
         "tip": "主胜/防平",
@@ -17466,7 +17466,7 @@
           },
           "total": 10,
           "last_date": "2026-10-25",
-          "stale_days": 5
+          "stale_days": 6
         },
         "away": {
           "name": "东京FC",
@@ -17516,7 +17516,7 @@
           },
           "total": 10,
           "last_date": "2026-10-25",
-          "stale_days": 5
+          "stale_days": 6
         },
         "h2h": null,
         "source": "500网即时战绩直连"
@@ -17553,7 +17553,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-31 05:07:24",
+      "stats_ts": "2026-10-31 05:12:22",
       "crosscheck": {
         "source": "fotmob",
         "score": "",
@@ -17737,7 +17737,7 @@
           },
           "total": 10,
           "last_date": "2026-10-25",
-          "stale_days": 5
+          "stale_days": 6
         },
         "away": {
           "name": "大宫松鼠RB",
@@ -17788,7 +17788,7 @@
           },
           "total": 10,
           "last_date": "2026-10-24",
-          "stale_days": 6
+          "stale_days": 7
         },
         "h2h": null,
         "source": "500网即时战绩直连"
@@ -17825,7 +17825,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-31 05:07:24"
+      "stats_ts": "2026-10-31 05:12:22"
     },
     {
       "code": "周六003",
@@ -18005,7 +18005,7 @@
           },
           "total": 10,
           "last_date": "2026-10-27",
-          "stale_days": 3
+          "stale_days": 4
         },
         "away": {
           "name": "浦和红钻",
@@ -18056,7 +18056,7 @@
           },
           "total": 10,
           "last_date": "2026-10-28",
-          "stale_days": 2
+          "stale_days": 3
         },
         "h2h": {
           "n": 8,
@@ -18117,7 +18117,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-31 05:07:24",
+      "stats_ts": "2026-10-31 05:12:22",
       "crosscheck": {
         "source": "fotmob",
         "score": "",
@@ -18302,7 +18302,7 @@
           },
           "total": 10,
           "last_date": "2026-10-24",
-          "stale_days": 6
+          "stale_days": 7
         },
         "away": {
           "name": "金泉尚武",
@@ -18353,7 +18353,7 @@
           },
           "total": 10,
           "last_date": "2026-10-24",
-          "stale_days": 6
+          "stale_days": 7
         },
         "h2h": {
           "n": 8,
@@ -18414,7 +18414,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-31 05:07:24",
+      "stats_ts": "2026-10-31 05:12:22",
       "crosscheck": {
         "source": "fotmob",
         "score": "",
@@ -18597,7 +18597,7 @@
           },
           "total": 10,
           "last_date": "2026-10-24",
-          "stale_days": 6
+          "stale_days": 7
         },
         "away": {
           "name": "西悉尼",
@@ -18648,7 +18648,7 @@
           },
           "total": 10,
           "last_date": "2026-10-24",
-          "stale_days": 6
+          "stale_days": 7
         },
         "h2h": null,
         "source": "500网即时战绩直连"
@@ -18685,7 +18685,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-31 05:07:24",
+      "stats_ts": "2026-10-31 05:12:22",
       "crosscheck": {
         "source": "fotmob",
         "score": "",
@@ -18869,7 +18869,7 @@
           },
           "total": 10,
           "last_date": "2026-10-29",
-          "stale_days": 1
+          "stale_days": 2
         },
         "away": {
           "name": "曼联",
@@ -18920,7 +18920,7 @@
           },
           "total": 10,
           "last_date": "2026-10-25",
-          "stale_days": 5
+          "stale_days": 6
         },
         "h2h": {
           "n": 8,
@@ -19013,7 +19013,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-31 05:07:24",
+      "stats_ts": "2026-10-31 05:12:22",
       "crosscheck": {
         "source": "fotmob",
         "score": "",
@@ -19197,7 +19197,7 @@
           },
           "total": 10,
           "last_date": "2026-10-26",
-          "stale_days": 4
+          "stale_days": 5
         },
         "away": {
           "name": "马竞",
@@ -19247,7 +19247,7 @@
           },
           "total": 10,
           "last_date": "2026-10-25",
-          "stale_days": 5
+          "stale_days": 6
         },
         "h2h": {
           "n": 8,
@@ -19340,7 +19340,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-31 05:07:24",
+      "stats_ts": "2026-10-31 05:12:22",
       "crosscheck": {
         "source": "fotmob",
         "score": "",
@@ -19524,7 +19524,7 @@
           },
           "total": 10,
           "last_date": "2026-10-29",
-          "stale_days": 1
+          "stale_days": 2
         },
         "away": {
           "name": "蒙扎",
@@ -19574,7 +19574,7 @@
           },
           "total": 10,
           "last_date": "2026-10-29",
-          "stale_days": 1
+          "stale_days": 2
         },
         "h2h": {
           "n": 2,
@@ -19662,7 +19662,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-31 05:07:24",
+      "stats_ts": "2026-10-31 05:12:22",
       "crosscheck": {
         "source": "fotmob",
         "score": "",
@@ -19847,7 +19847,7 @@
           },
           "total": 10,
           "last_date": "2026-10-29",
-          "stale_days": 1
+          "stale_days": 2
         },
         "away": {
           "name": "斯图加特",
@@ -19898,7 +19898,7 @@
           },
           "total": 10,
           "last_date": "2026-10-29",
-          "stale_days": 1
+          "stale_days": 2
         },
         "h2h": {
           "n": 8,
@@ -19991,7 +19991,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-31 05:07:24",
+      "stats_ts": "2026-10-31 05:12:22",
       "crosscheck": {
         "source": "fotmob",
         "score": "",
@@ -20174,7 +20174,7 @@
           },
           "total": 10,
           "last_date": "2026-10-29",
-          "stale_days": 1
+          "stale_days": 2
         },
         "away": {
           "name": "莱红牛",
@@ -20224,7 +20224,7 @@
           },
           "total": 10,
           "last_date": "2026-10-28",
-          "stale_days": 2
+          "stale_days": 3
         },
         "h2h": {
           "n": 8,
@@ -20317,7 +20317,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-31 05:07:24",
+      "stats_ts": "2026-10-31 05:12:22",
       "crosscheck": {
         "source": "fotmob",
         "score": "",
@@ -20502,7 +20502,7 @@
           },
           "total": 10,
           "last_date": "2026-10-28",
-          "stale_days": 2
+          "stale_days": 3
         },
         "away": {
           "name": "弗赖堡",
@@ -20552,7 +20552,7 @@
           },
           "total": 10,
           "last_date": "2026-10-29",
-          "stale_days": 1
+          "stale_days": 2
         },
         "h2h": {
           "n": 8,
@@ -20645,7 +20645,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-31 05:07:24",
+      "stats_ts": "2026-10-31 05:12:22",
       "crosscheck": {
         "source": "fotmob",
         "score": "",
@@ -20829,7 +20829,7 @@
           },
           "total": 10,
           "last_date": "2026-10-28",
-          "stale_days": 2
+          "stale_days": 3
         },
         "away": {
           "name": "帕德博恩",
@@ -20880,7 +20880,7 @@
           },
           "total": 10,
           "last_date": "2026-10-29",
-          "stale_days": 1
+          "stale_days": 2
         },
         "h2h": {
           "n": 3,
@@ -20973,7 +20973,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-31 05:07:24",
+      "stats_ts": "2026-10-31 05:12:22",
       "crosscheck": {
         "source": "fotmob",
         "score": "",
@@ -21156,7 +21156,7 @@
           },
           "total": 10,
           "last_date": "2026-10-28",
-          "stale_days": 2
+          "stale_days": 3
         },
         "away": {
           "name": "霍芬海姆",
@@ -21206,7 +21206,7 @@
           },
           "total": 10,
           "last_date": "2026-10-29",
-          "stale_days": 1
+          "stale_days": 2
         },
         "h2h": {
           "n": 8,
@@ -21286,7 +21286,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-31 05:07:24",
+      "stats_ts": "2026-10-31 05:12:22",
       "crosscheck": {
         "source": "fotmob",
         "score": "",
@@ -21470,7 +21470,7 @@
           },
           "total": 10,
           "last_date": "2026-10-24",
-          "stale_days": 6
+          "stale_days": 7
         },
         "away": {
           "name": "桑德兰",
@@ -21520,7 +21520,7 @@
           },
           "total": 10,
           "last_date": "2026-10-29",
-          "stale_days": 1
+          "stale_days": 2
         },
         "h2h": {
           "n": 5,
@@ -21613,7 +21613,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-31 05:07:24",
+      "stats_ts": "2026-10-31 05:12:22",
       "crosscheck": {
         "source": "fotmob",
         "score": "",
@@ -21796,7 +21796,7 @@
           },
           "total": 10,
           "last_date": "2026-10-29",
-          "stale_days": 1
+          "stale_days": 2
         },
         "away": {
           "name": "利兹联",
@@ -21846,7 +21846,7 @@
           },
           "total": 10,
           "last_date": "2026-10-26",
-          "stale_days": 4
+          "stale_days": 5
         },
         "h2h": {
           "n": 4,
@@ -21939,7 +21939,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-31 05:07:24"
+      "stats_ts": "2026-10-31 05:12:22"
     },
     {
       "code": "周六017",
@@ -22118,7 +22118,7 @@
           },
           "total": 10,
           "last_date": "2026-10-25",
-          "stale_days": 5
+          "stale_days": 6
         },
         "away": {
           "name": "伊普斯",
@@ -22168,7 +22168,7 @@
           },
           "total": 10,
           "last_date": "2026-10-24",
-          "stale_days": 6
+          "stale_days": 7
         },
         "h2h": {
           "n": 6,
@@ -22261,7 +22261,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-31 05:07:24",
+      "stats_ts": "2026-10-31 05:12:22",
       "crosscheck": {
         "source": "fotmob",
         "score": "",
@@ -22444,7 +22444,7 @@
           },
           "total": 10,
           "last_date": "2026-10-29",
-          "stale_days": 1
+          "stale_days": 2
         },
         "away": {
           "name": "诺丁汉",
@@ -22494,7 +22494,7 @@
           },
           "total": 10,
           "last_date": "2026-10-24",
-          "stale_days": 6
+          "stale_days": 7
         },
         "h2h": {
           "n": 8,
@@ -22574,7 +22574,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-31 05:07:24",
+      "stats_ts": "2026-10-31 05:12:22",
       "crosscheck": {
         "source": "fotmob",
         "score": "",
@@ -22757,7 +22757,7 @@
           },
           "total": 10,
           "last_date": "2026-10-28",
-          "stale_days": 2
+          "stale_days": 3
         },
         "away": {
           "name": "塞尔塔",
@@ -22808,7 +22808,7 @@
           },
           "total": 10,
           "last_date": "2026-10-25",
-          "stale_days": 5
+          "stale_days": 6
         },
         "h2h": {
           "n": 8,
@@ -22901,7 +22901,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-31 05:07:24",
+      "stats_ts": "2026-10-31 05:12:22",
       "crosscheck": {
         "source": "fotmob",
         "score": "",
@@ -23086,7 +23086,7 @@
           },
           "total": 10,
           "last_date": "2026-10-29",
-          "stale_days": 1
+          "stale_days": 2
         },
         "away": {
           "name": "罗马",
@@ -23136,7 +23136,7 @@
           },
           "total": 10,
           "last_date": "2026-10-28",
-          "stale_days": 2
+          "stale_days": 3
         },
         "h2h": {
           "n": 8,
@@ -23229,7 +23229,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-31 05:07:24"
+      "stats_ts": "2026-10-31 05:12:22"
     },
     {
       "code": "周六022",
@@ -23409,7 +23409,7 @@
           },
           "total": 10,
           "last_date": "2026-10-25",
-          "stale_days": 5
+          "stale_days": 6
         },
         "away": {
           "name": "水晶宫",
@@ -23460,7 +23460,7 @@
           },
           "total": 10,
           "last_date": "2026-10-29",
-          "stale_days": 1
+          "stale_days": 2
         },
         "h2h": {
           "n": 8,
@@ -23553,7 +23553,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-31 05:07:24"
+      "stats_ts": "2026-10-31 05:12:22"
     },
     {
       "code": "周六023",
@@ -23733,7 +23733,7 @@
           },
           "total": 10,
           "last_date": "2026-10-29",
-          "stale_days": 1
+          "stale_days": 2
         },
         "away": {
           "name": "多特蒙德",
@@ -23784,7 +23784,7 @@
           },
           "total": 10,
           "last_date": "2026-10-28",
-          "stale_days": 2
+          "stale_days": 3
         },
         "h2h": {
           "n": 8,
@@ -23877,7 +23877,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-31 05:07:24"
+      "stats_ts": "2026-10-31 05:12:22"
     },
     {
       "code": "周六024",
@@ -24056,7 +24056,7 @@
           },
           "total": 10,
           "last_date": "2026-10-25",
-          "stale_days": 5
+          "stale_days": 6
         },
         "away": {
           "name": "马拉加",
@@ -24107,7 +24107,7 @@
           },
           "total": 10,
           "last_date": "2026-10-28",
-          "stale_days": 2
+          "stale_days": 3
         },
         "h2h": {
           "n": 6,
@@ -24200,7 +24200,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-31 05:07:24"
+      "stats_ts": "2026-10-31 05:12:22"
     },
     {
       "code": "周六025",
@@ -24379,7 +24379,7 @@
           },
           "total": 10,
           "last_date": "2026-10-29",
-          "stale_days": 1
+          "stale_days": 2
         },
         "away": {
           "name": "国际米兰",
@@ -24429,7 +24429,7 @@
           },
           "total": 10,
           "last_date": "2026-10-29",
-          "stale_days": 1
+          "stale_days": 2
         },
         "h2h": {
           "n": 8,
@@ -24522,7 +24522,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-31 05:07:24"
+      "stats_ts": "2026-10-31 05:12:22"
     },
     {
       "code": "周六026",
@@ -24702,7 +24702,7 @@
           },
           "total": 10,
           "last_date": "2026-10-29",
-          "stale_days": 1
+          "stale_days": 2
         },
         "away": {
           "name": "富勒姆",
@@ -24753,7 +24753,7 @@
           },
           "total": 10,
           "last_date": "2026-10-29",
-          "stale_days": 1
+          "stale_days": 2
         },
         "h2h": {
           "n": 8,
@@ -24846,7 +24846,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-31 05:07:24"
+      "stats_ts": "2026-10-31 05:12:22"
     },
     {
       "code": "周六027",
@@ -25025,7 +25025,7 @@
           },
           "total": 10,
           "last_date": "2026-10-26",
-          "stale_days": 4
+          "stale_days": 5
         },
         "away": {
           "name": "阿拉维斯",
@@ -25075,7 +25075,7 @@
           },
           "total": 10,
           "last_date": "2026-10-24",
-          "stale_days": 6
+          "stale_days": 7
         },
         "h2h": {
           "n": 7,
@@ -25125,7 +25125,7 @@
       },
       "quant_factors": null,
       "detail_schema": 2,
-      "stats_ts": "2026-10-31 05:07:24"
+      "stats_ts": "2026-10-31 05:12:22"
     },
     {
       "code": "周六028",
@@ -25305,7 +25305,7 @@
           },
           "total": 10,
           "last_date": "2026-10-25",
-          "stale_days": 5
+          "stale_days": 6
         },
         "away": {
           "name": "阿尔克马",
@@ -25356,7 +25356,7 @@
           },
           "total": 10,
           "last_date": "2026-10-26",
-          "stale_days": 4
+          "stale_days": 5
         },
         "h2h": {
           "n": 8,
@@ -25417,7 +25417,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-31 05:07:24"
+      "stats_ts": "2026-10-31 05:12:22"
     },
     {
       "code": "周日001",
@@ -25595,7 +25595,7 @@
           },
           "total": 10,
           "last_date": "2026-10-25",
-          "stale_days": 5
+          "stale_days": 6
         },
         "away": {
           "name": "东京绿茵",
@@ -25645,7 +25645,7 @@
           },
           "total": 10,
           "last_date": "2026-10-24",
-          "stale_days": 6
+          "stale_days": 7
         },
         "h2h": {
           "n": 8,
@@ -25706,7 +25706,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-31 05:07:24"
+      "stats_ts": "2026-10-31 05:12:22"
     },
     {
       "code": "周日004",
@@ -25885,7 +25885,7 @@
           },
           "total": 10,
           "last_date": "2026-10-28",
-          "stale_days": 2
+          "stale_days": 3
         },
         "away": {
           "name": "仁川联",
@@ -25936,7 +25936,7 @@
           },
           "total": 10,
           "last_date": "2026-10-24",
-          "stale_days": 6
+          "stale_days": 7
         },
         "h2h": {
           "n": 8,
@@ -25997,7 +25997,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-31 05:07:24"
+      "stats_ts": "2026-10-31 05:12:22"
     },
     {
       "code": "周日005",
@@ -26177,7 +26177,7 @@
           },
           "total": 10,
           "last_date": "2026-10-23",
-          "stale_days": 7
+          "stale_days": 8
         },
         "away": {
           "name": "阿德莱德",
@@ -26226,7 +26226,7 @@
           },
           "total": 10,
           "last_date": "2026-10-29",
-          "stale_days": 1
+          "stale_days": 2
         },
         "h2h": {
           "n": 8,
@@ -26287,7 +26287,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-31 05:07:24"
+      "stats_ts": "2026-10-31 05:12:22"
     },
     {
       "code": "周日006",
@@ -26467,7 +26467,7 @@
           },
           "total": 10,
           "last_date": "2026-10-29",
-          "stale_days": 1
+          "stale_days": 2
         },
         "away": {
           "name": "海牙",
@@ -26518,7 +26518,7 @@
           },
           "total": 10,
           "last_date": "2026-10-28",
-          "stale_days": 2
+          "stale_days": 3
         },
         "h2h": {
           "n": 8,
@@ -26579,7 +26579,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-31 05:07:24"
+      "stats_ts": "2026-10-31 05:12:22"
     },
     {
       "code": "周日007",
@@ -26758,7 +26758,7 @@
           },
           "total": 10,
           "last_date": "2026-10-28",
-          "stale_days": 2
+          "stale_days": 3
         },
         "away": {
           "name": "威尼斯",
@@ -26809,7 +26809,7 @@
           },
           "total": 10,
           "last_date": "2026-10-29",
-          "stale_days": 1
+          "stale_days": 2
         },
         "h2h": {
           "n": 1,
@@ -26892,7 +26892,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-31 05:07:24"
+      "stats_ts": "2026-10-31 05:12:22"
     },
     {
       "code": "周日008",
@@ -27072,7 +27072,7 @@
           },
           "total": 10,
           "last_date": "2026-10-30",
-          "stale_days": 0
+          "stale_days": 1
         },
         "away": {
           "name": "塞维利亚",
@@ -27123,7 +27123,7 @@
           },
           "total": 10,
           "last_date": "2026-10-30",
-          "stale_days": 0
+          "stale_days": 1
         },
         "h2h": {
           "n": 8,
@@ -27216,7 +27216,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-31 05:07:24"
+      "stats_ts": "2026-10-31 05:12:22"
     },
     {
       "code": "周日010",
@@ -27395,7 +27395,7 @@
           },
           "total": 10,
           "last_date": "2026-10-29",
-          "stale_days": 1
+          "stale_days": 2
         },
         "away": {
           "name": "特温特",
@@ -27445,7 +27445,7 @@
           },
           "total": 10,
           "last_date": "2026-10-26",
-          "stale_days": 4
+          "stale_days": 5
         },
         "h2h": {
           "n": 8,
@@ -27506,7 +27506,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-31 05:07:24"
+      "stats_ts": "2026-10-31 05:12:22"
     },
     {
       "code": "周日013",
@@ -27685,7 +27685,7 @@
           },
           "total": 10,
           "last_date": "2026-10-28",
-          "stale_days": 2
+          "stale_days": 3
         },
         "away": {
           "name": "卡利亚里",
@@ -27736,7 +27736,7 @@
           },
           "total": 10,
           "last_date": "2026-10-28",
-          "stale_days": 2
+          "stale_days": 3
         },
         "h2h": {
           "n": 8,
@@ -27829,7 +27829,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-31 05:07:24"
+      "stats_ts": "2026-10-31 05:12:22"
     },
     {
       "code": "周日014",
@@ -28008,7 +28008,7 @@
           },
           "total": 10,
           "last_date": "2026-10-28",
-          "stale_days": 2
+          "stale_days": 3
         },
         "away": {
           "name": "科隆",
@@ -28059,7 +28059,7 @@
           },
           "total": 10,
           "last_date": "2026-10-28",
-          "stale_days": 2
+          "stale_days": 3
         },
         "h2h": {
           "n": 8,
@@ -28152,7 +28152,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-31 05:07:24"
+      "stats_ts": "2026-10-31 05:12:22"
     },
     {
       "code": "周日015",
@@ -28332,7 +28332,7 @@
           },
           "total": 10,
           "last_date": "2026-10-30",
-          "stale_days": 0
+          "stale_days": 1
         },
         "away": {
           "name": "鹿斯巴达",
@@ -28382,7 +28382,7 @@
           },
           "total": 10,
           "last_date": "2026-10-29",
-          "stale_days": 1
+          "stale_days": 2
         },
         "h2h": {
           "n": 6,
@@ -28443,7 +28443,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-31 05:07:24"
+      "stats_ts": "2026-10-31 05:12:22"
     },
     {
       "code": "周日016",
@@ -28621,7 +28621,7 @@
           },
           "total": 10,
           "last_date": "2026-10-29",
-          "stale_days": 1
+          "stale_days": 2
         },
         "away": {
           "name": "阿森纳",
@@ -28670,7 +28670,7 @@
           },
           "total": 10,
           "last_date": "2026-10-28",
-          "stale_days": 2
+          "stale_days": 3
         },
         "h2h": {
           "n": 8,
@@ -28763,7 +28763,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-31 05:07:24"
+      "stats_ts": "2026-10-31 05:12:22"
     },
     {
       "code": "周日017",
@@ -28942,7 +28942,7 @@
           },
           "total": 10,
           "last_date": "2026-10-28",
-          "stale_days": 2
+          "stale_days": 3
         },
         "away": {
           "name": "汉堡",
@@ -29086,7 +29086,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-31 05:07:24"
+      "stats_ts": "2026-10-31 05:12:22"
     },
     {
       "code": "周日019",
@@ -29265,7 +29265,7 @@
           },
           "total": 10,
           "last_date": "2026-10-28",
-          "stale_days": 2
+          "stale_days": 3
         },
         "away": {
           "name": "巴伦西亚",
@@ -29315,7 +29315,7 @@
           },
           "total": 10,
           "last_date": "2026-10-25",
-          "stale_days": 5
+          "stale_days": 6
         },
         "h2h": {
           "n": 7,
@@ -29395,7 +29395,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-31 05:07:24"
+      "stats_ts": "2026-10-31 05:12:22"
     },
     {
       "code": "周日020",
@@ -29573,7 +29573,7 @@
           },
           "total": 10,
           "last_date": "2026-10-29",
-          "stale_days": 1
+          "stale_days": 2
         },
         "away": {
           "name": "里奥阿维",
@@ -29624,7 +29624,7 @@
           },
           "total": 10,
           "last_date": "2026-10-26",
-          "stale_days": 4
+          "stale_days": 5
         },
         "h2h": null,
         "source": "500网即时战绩直连"
@@ -29661,7 +29661,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-31 05:07:24"
+      "stats_ts": "2026-10-31 05:12:22"
     },
     {
       "code": "周日021",
@@ -29840,7 +29840,7 @@
           },
           "total": 10,
           "last_date": "2026-10-29",
-          "stale_days": 1
+          "stale_days": 2
         },
         "away": {
           "name": "那不勒斯",
@@ -29891,7 +29891,7 @@
           },
           "total": 10,
           "last_date": "2026-10-29",
-          "stale_days": 1
+          "stale_days": 2
         },
         "h2h": {
           "n": 8,
@@ -29984,7 +29984,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-31 05:07:24"
+      "stats_ts": "2026-10-31 05:12:22"
     },
     {
       "code": "周日022",
@@ -30163,7 +30163,7 @@
           },
           "total": 10,
           "last_date": "2026-10-26",
-          "stale_days": 4
+          "stale_days": 5
         },
         "away": {
           "name": "图卢兹",
@@ -30213,7 +30213,7 @@
           },
           "total": 10,
           "last_date": "2026-10-26",
-          "stale_days": 4
+          "stale_days": 5
         },
         "h2h": {
           "n": 8,
@@ -30306,7 +30306,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-31 05:07:24"
+      "stats_ts": "2026-10-31 05:12:22"
     },
     {
       "code": "周日023",
@@ -30485,7 +30485,7 @@
           },
           "total": 10,
           "last_date": "2026-10-30",
-          "stale_days": 0
+          "stale_days": 1
         },
         "away": {
           "name": "皇家社会",
@@ -30536,7 +30536,7 @@
           },
           "total": 10,
           "last_date": "2026-10-26",
-          "stale_days": 4
+          "stale_days": 5
         },
         "h2h": {
           "n": 8,
@@ -30616,8 +30616,8 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-10-31 05:07:24"
+      "stats_ts": "2026-10-31 05:12:22"
     }
   ],
-  "version": 1793394440
+  "version": 1793394501
 }
