@@ -3,7 +3,7 @@
   "picks_ready": true,
   "deadline": "10-30 22:00",
   "total_matches": 14,
-  "updated_at": "2026-10-31 05:08:27",
+  "updated_at": "2026-10-31 05:38:27",
   "matches": [
     {
       "no": 1,
@@ -81,7 +81,7 @@
       "away": "美因茨",
       "away_rank": "7",
       "fid": "1428626",
-      "status": "未开赛",
+      "status": "已完赛",
       "postponed": false,
       "matched_id": null,
       "odds": [
@@ -96,8 +96,8 @@
         "market_depth": "百家平均欧赔开出 3.16 / 3.77 / 2.04，三项期望回报（EV）分别为主胜 -0.187、平局 -0.094、客胜 +0.025。盘面诊断：🎯 高赔杀庄大冷：客胜历史打出率 50%，具备极佳正EV回报。",
         "decision_guide": "传足选号方案：核心首选【客胜(0)】，次选防冷补【平局(1)】，🚨大冷预警留意【主胜(3)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
       },
-      "live_status": "",
-      "score": "",
+      "live_status": "FIN",
+      "score": "4-1",
       "pick_primary": "0",
       "pick_secondary": "1",
       "pick_desc": "",
@@ -133,9 +133,9 @@
           "single_threshold": 0.54
         }
       },
-      "outcome": "",
-      "result": null,
-      "result_text": ""
+      "outcome": "3",
+      "result": "HIT_UPSET",
+      "result_text": "防冷命中"
     },
     {
       "no": 3,
