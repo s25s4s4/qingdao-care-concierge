@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-30 11:39:59",
-  "total_tips": 3,
+  "updated_at": "2026-10-30 12:10:37",
+  "total_tips": 2,
   "live_feed": [
     {
       "id": 8017,
@@ -14,21 +14,6 @@
       "match": "利物浦 VS 阿森纳",
       "chinese": "周日英超，利物浦对阿森纳，开赛十一月零二点三十分。阿森纳小将多德曼染红，上诉失败，停三场，周末对利物浦。阵容有变，核心缺席。未提让球或大小，不乱说。老球探看着了，走水不走油。",
       "original": "Arsenal's Max Dowman was sent off against Fleetwood Town, and the club have now failed to overturn the red card 😬 The youngster will serve a THREE-GAME ban, inc",
-      "translated": true,
-      "channel_weight": 0.5
-    },
-    {
-      "id": 8005,
-      "channel": "forepitch_tips",
-      "time": "2026-10-30 03:03",
-      "code": "周四007",
-      "key": "20261030_周四007",
-      "league": "巴甲",
-      "category": "推单·已开赛",
-      "is_tip": true,
-      "match": "格雷米奥 VS 巴竞技",
-      "chinese": "周四巴甲，（格雷米奥）对（巴竞技）。看主胜或平局，主胜四成二，平三成零，客三成零。大球超二又半，双人球进球五成八。预计进球一比三。伤停首发未放。评估可能变，开赛前盯盘口。",
-      "original": "⚽ Brasileirão Série A · 30 October, 00:30 UTC Grêmio — Athletico Paranaense The model sees a clear edge. 🎯 Main pick: Grêmio win or draw · 69% Home 42% · Draw 2",
       "translated": true,
       "channel_weight": 0.5
     },
@@ -49,6 +34,21 @@
     }
   ],
   "archived": [
+    {
+      "id": 8005,
+      "channel": "forepitch_tips",
+      "time": "2026-10-30 03:03",
+      "code": "周四007",
+      "key": "20261030_周四007",
+      "league": "巴甲",
+      "category": "推单·已开赛",
+      "is_tip": true,
+      "match": "格雷米奥 VS 巴竞技",
+      "chinese": "周四巴甲，（格雷米奥）对（巴竞技）。看主胜或平局，主胜四成二，平三成零，客三成零。大球超二又半，双人球进球五成八。预计进球一比三。伤停首发未放。评估可能变，开赛前盯盘口。",
+      "original": "⚽ Brasileirão Série A · 30 October, 00:30 UTC Grêmio — Athletico Paranaense The model sees a clear edge. 🎯 Main pick: Grêmio win or draw · 69% Home 42% · Draw 2",
+      "translated": true,
+      "channel_weight": 0.5
+    },
     {
       "id": 7970,
       "channel": "forepitch_tips",
@@ -1750,16 +1750,16 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-10-30 11:39:59",
-    "last_nonempty_at": "2026-10-30 11:39:59",
-    "live_count": 3,
-    "archived_count": 132,
-    "active_matches": 56,
+    "last_updated": "2026-10-30 12:10:37",
+    "last_nonempty_at": "2026-10-30 12:10:37",
+    "live_count": 2,
+    "archived_count": 133,
+    "active_matches": 55,
     "llm_providers": [
       "local",
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-10-30 11:39:59"
+    "checked_at": "2026-10-30 12:10:37"
   }
 }
