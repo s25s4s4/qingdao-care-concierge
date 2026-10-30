@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-31 06:24:06",
-  "total_tips": 5,
+  "updated_at": "2026-10-31 06:51:58",
+  "total_tips": 4,
   "live_feed": [
     {
       "id": 8345,
@@ -14,21 +14,6 @@
       "match": "不来梅 VS 霍芬海姆",
       "chinese": "周六22:30不来梅(沃尔夫斯堡)VS霍芬海姆(拜耳竞技)! 盘口主胜3.04深盘，资金暗流偏谨慎，返率高提示走盘平局。核心伤停阵容未明，暂无轮换信号。",
       "original": "🌟 Betiper Elite Picks — Tomorrow's Top Tips (October 31, 2026) Handpicked from top tipsters by profit and recent form — up to 3 tips, one tipster each, quality ",
-      "translated": true,
-      "channel_weight": 0.5
-    },
-    {
-      "id": 8277,
-      "channel": "forepitch_tips",
-      "time": "2026-10-31 01:34",
-      "code": "周五008",
-      "key": "20261031_周五008",
-      "league": "英冠",
-      "category": "推单·已开赛",
-      "is_tip": true,
-      "match": "谢菲联 VS 雷克斯",
-      "chinese": "周五谢菲联VS雷克斯，盘口主胜平局占优，大小球偏热看好小球，预测比分1:0，资金明显看主队。赛前盘口或有异动，老客留意！",
-      "original": "⚽ Championship · 30 October, 20:00 UTC Sheffield United — Wrexham The odds lean one way. 🎯 Main pick: Sheffield United win or draw · 69% Home 42% · Draw 28% · A",
       "translated": true,
       "channel_weight": 0.5
     },
@@ -79,6 +64,21 @@
     }
   ],
   "archived": [
+    {
+      "id": 8277,
+      "channel": "forepitch_tips",
+      "time": "2026-10-31 01:34",
+      "code": "周五008",
+      "key": "20261031_周五008",
+      "league": "英冠",
+      "category": "推单·已开赛",
+      "is_tip": true,
+      "match": "谢菲联 VS 雷克斯",
+      "chinese": "周五谢菲联VS雷克斯，盘口主胜平局占优，大小球偏热看好小球，预测比分1:0，资金明显看主队。赛前盘口或有异动，老客留意！",
+      "original": "⚽ Championship · 30 October, 20:00 UTC Sheffield United — Wrexham The odds lean one way. 🎯 Main pick: Sheffield United win or draw · 69% Home 42% · Draw 28% · A",
+      "translated": true,
+      "channel_weight": 0.5
+    },
     {
       "id": 7934,
       "channel": "feedinco",
@@ -1885,16 +1885,16 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-10-31 06:24:06",
-    "last_nonempty_at": "2026-10-31 06:24:06",
-    "live_count": 5,
-    "archived_count": 139,
-    "active_matches": 46,
+    "last_updated": "2026-10-31 06:51:58",
+    "last_nonempty_at": "2026-10-31 06:51:58",
+    "live_count": 4,
+    "archived_count": 140,
+    "active_matches": 44,
     "llm_providers": [
       "local",
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-10-31 06:24:06"
+    "checked_at": "2026-10-31 06:51:58"
   }
 }
