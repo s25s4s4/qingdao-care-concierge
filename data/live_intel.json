@@ -1,7 +1,37 @@
 {
-  "updated_at": "2026-10-30 23:06:26",
-  "total_tips": 7,
+  "updated_at": "2026-10-31 03:20:33",
+  "total_tips": 8,
   "live_feed": [
+    {
+      "id": 7934,
+      "channel": "feedinco",
+      "time": "2026-10-29 23:05",
+      "code": "周五009",
+      "key": "20261031_周五009",
+      "league": "西甲",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "比利亚雷 VS 西班牙人",
+      "chinese": "周五西甲，（比利亚雷）主场对（西班牙人），十月三十一日零四点开。看一球平或主，主不败方向。但只有这条信息，水位、伤停、阵容",
+      "original": "FEEDINCO.com Tips for Friday, 30 October 1X - Villarreal - Espanyol O1.5 - FC Volendam - De Graafschap X2 - Konyaspor - Galatasaray SK X2 - Le Havre - PSG",
+      "translated": true,
+      "channel_weight": 0.8015
+    },
+    {
+      "id": 8276,
+      "channel": "forepitch_tips",
+      "time": "2026-10-31 01:34",
+      "code": "周五009",
+      "key": "20261031_周五009",
+      "league": "西甲",
+      "category": "推单·已开赛",
+      "is_tip": true,
+      "match": "比利亚雷 VS 西班牙人",
+      "chinese": "周五009 比利亚雷对阵西班牙人！模型主胜，大2.5热乎，双方进球看高，预计1:0小胜。盘口赛前或有变盘，老客盯紧资金暗流！",
+      "original": "⚽ LaLiga · 30 October, 20:00 UTC Villarreal — Espanyol The model sees a clear edge. 🎯 Main pick: Villarreal to win · 68% Home 69% · Draw 20% · Away 11% · 1X 89%",
+      "translated": true,
+      "channel_weight": 0.5
+    },
     {
       "id": 8131,
       "channel": "victorspredict",
@@ -91,21 +121,6 @@
       "original": "Arsenal's Max Dowman was sent off against Fleetwood Town, and the club have now failed to overturn the red card 😬 The youngster will serve a THREE-GAME ban, inc",
       "translated": true,
       "channel_weight": 0.5
-    },
-    {
-      "id": 7934,
-      "channel": "feedinco",
-      "time": "2026-10-29 23:05",
-      "code": "周五009",
-      "key": "20261031_周五009",
-      "league": "西甲",
-      "category": "赛前军情",
-      "is_tip": false,
-      "match": "比利亚雷 VS 西班牙人",
-      "chinese": "周五西甲，（比利亚雷）主场对（西班牙人），十月三十一日零四点开。看一球平或主，主不败方向。但只有这条信息，水位、伤停、阵容",
-      "original": "FEEDINCO.com Tips for Friday, 30 October 1X - Villarreal - Espanyol O1.5 - FC Volendam - De Graafschap X2 - Konyaspor - Galatasaray SK X2 - Le Havre - PSG",
-      "translated": true,
-      "channel_weight": 0.8015
     }
   ],
   "archived": [
@@ -1825,9 +1840,9 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-10-30 23:06:26",
-    "last_nonempty_at": "2026-10-30 23:06:26",
-    "live_count": 7,
+    "last_updated": "2026-10-31 03:20:33",
+    "last_nonempty_at": "2026-10-31 03:20:33",
+    "live_count": 8,
     "archived_count": 133,
     "active_matches": 54,
     "llm_providers": [
@@ -1835,6 +1850,6 @@
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-10-30 23:06:26"
+    "checked_at": "2026-10-31 03:20:33"
   }
 }
