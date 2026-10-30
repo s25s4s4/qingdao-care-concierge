@@ -1,7 +1,52 @@
 {
-  "updated_at": "2026-10-30 12:10:37",
-  "total_tips": 2,
+  "updated_at": "2026-10-30 18:36:19",
+  "total_tips": 5,
   "live_feed": [
+    {
+      "id": 8163,
+      "channel": "matchplug",
+      "time": "2026-10-30 17:23",
+      "code": "周五010",
+      "key": "20261031_周五010",
+      "league": "法甲",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "里尔 VS 朗斯",
+      "chinese": "周五010，(里尔)对阵(朗斯)，盘口主赛果大2.5球，水位2。机构态度偏热，资金暗流明显涌向大球。暂无核心缺阵及首发阵容变动情报。",
+      "original": "Lille vs Lens Ligue 1 · 20:05 UTC Market: Over 2.5 Goals Pick: Over 2.5 gls Odds: 2",
+      "translated": true,
+      "channel_weight": 0.5
+    },
+    {
+      "id": 8153,
+      "channel": "matchplug",
+      "time": "2026-10-30 16:53",
+      "code": "周五004",
+      "key": "20261031_周五004",
+      "league": "法甲",
+      "category": "推单",
+      "is_tip": true,
+      "match": "勒阿弗尔 VS 巴黎圣曼",
+      "chinese": "周五004法甲勒阿弗尔对阵巴黎圣曼，大小球倾向“大于0.",
+      "original": "Le Havre vs Paris Saint Germain Ligue 1 · 18:00 UTC Market: Player Tip Pick: L. Koleosho over 0.5 shots on target Odds: 1.77",
+      "translated": true,
+      "channel_weight": 0.5
+    },
+    {
+      "id": 8151,
+      "channel": "forepitch_tips",
+      "time": "2026-10-30 16:01",
+      "code": "周六006",
+      "key": "20261031_周六006",
+      "league": "英超",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "切尔西 VS 曼联",
+      "chinese": "周六(切尔西)打(曼联)，盘口主胜过半，资金明显压注主队。客胜平局不到三成，这场主胜稳。阵容伤停暂无确切情报，老球探看基本面。",
+      "original": "📋 Round preview 1 · X · 2 Premier League Chelsea — Manchester United: 50% · 26% · 24% AFC Bournemouth — Leeds United: 47% · 27% · 26% Brentford — Nottingham For",
+      "translated": true,
+      "channel_weight": 0.5
+    },
     {
       "id": 8017,
       "channel": "tribuna_football",
@@ -1750,9 +1795,9 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-10-30 12:10:37",
-    "last_nonempty_at": "2026-10-30 12:10:37",
-    "live_count": 2,
+    "last_updated": "2026-10-30 18:36:19",
+    "last_nonempty_at": "2026-10-30 18:36:19",
+    "live_count": 5,
     "archived_count": 133,
     "active_matches": 55,
     "llm_providers": [
@@ -1760,6 +1805,6 @@
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-10-30 12:10:37"
+    "checked_at": "2026-10-30 18:36:19"
   }
 }
