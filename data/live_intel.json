@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-31 05:43:33",
-  "total_tips": 7,
+  "updated_at": "2026-10-31 06:24:06",
+  "total_tips": 5,
   "live_feed": [
+    {
+      "id": 8345,
+      "channel": "betiper_official",
+      "time": "2026-10-31 05:11",
+      "code": "周六014",
+      "key": "20261031_周六014",
+      "league": "德甲",
+      "category": "推单",
+      "is_tip": true,
+      "match": "不来梅 VS 霍芬海姆",
+      "chinese": "周六22:30不来梅(沃尔夫斯堡)VS霍芬海姆(拜耳竞技)! 盘口主胜3.04深盘，资金暗流偏谨慎，返率高提示走盘平局。核心伤停阵容未明，暂无轮换信号。",
+      "original": "🌟 Betiper Elite Picks — Tomorrow's Top Tips (October 31, 2026) Handpicked from top tipsters by profit and recent form — up to 3 tips, one tipster each, quality ",
+      "translated": true,
+      "channel_weight": 0.5
+    },
     {
       "id": 8277,
       "channel": "forepitch_tips",
@@ -48,6 +63,23 @@
       "channel_weight": 0.5
     },
     {
+      "id": 8017,
+      "channel": "tribuna_football",
+      "time": "2026-10-30 03:54",
+      "code": "周日016",
+      "key": "20261102_周日016",
+      "league": "英超",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "利物浦 VS 阿森纳",
+      "chinese": "周日英超，利物浦对阿森纳，开赛十一月零二点三十分。阿森纳小将多德曼染红，上诉失败，停三场，周末对利物浦。阵容有变，核心缺席。未提让球或大小，不乱说。老球探看着了，走水不走油。",
+      "original": "Arsenal's Max Dowman was sent off against Fleetwood Town, and the club have now failed to overturn the red card 😬 The youngster will serve a THREE-GAME ban, inc",
+      "translated": true,
+      "channel_weight": 0.5
+    }
+  ],
+  "archived": [
+    {
       "id": 7934,
       "channel": "feedinco",
       "time": "2026-10-29 23:05",
@@ -92,23 +124,6 @@
       "translated": true,
       "channel_weight": 0.5
     },
-    {
-      "id": 8017,
-      "channel": "tribuna_football",
-      "time": "2026-10-30 03:54",
-      "code": "周日016",
-      "key": "20261102_周日016",
-      "league": "英超",
-      "category": "赛前军情",
-      "is_tip": false,
-      "match": "利物浦 VS 阿森纳",
-      "chinese": "周日英超，利物浦对阿森纳，开赛十一月零二点三十分。阿森纳小将多德曼染红，上诉失败，停三场，周末对利物浦。阵容有变，核心缺席。未提让球或大小，不乱说。老球探看着了，走水不走油。",
-      "original": "Arsenal's Max Dowman was sent off against Fleetwood Town, and the club have now failed to overturn the red card 😬 The youngster will serve a THREE-GAME ban, inc",
-      "translated": true,
-      "channel_weight": 0.5
-    }
-  ],
-  "archived": [
     {
       "id": 8131,
       "channel": "victorspredict",
@@ -1870,16 +1885,16 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-10-31 05:43:33",
-    "last_nonempty_at": "2026-10-31 05:43:33",
-    "live_count": 7,
-    "archived_count": 136,
-    "active_matches": 50,
+    "last_updated": "2026-10-31 06:24:06",
+    "last_nonempty_at": "2026-10-31 06:24:06",
+    "live_count": 5,
+    "archived_count": 139,
+    "active_matches": 46,
     "llm_providers": [
       "local",
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-10-31 05:43:33"
+    "checked_at": "2026-10-31 06:24:06"
   }
 }
