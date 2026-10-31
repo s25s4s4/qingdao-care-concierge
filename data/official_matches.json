@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-01 00:23:22",
+  "updated_at": "2026-11-01 00:24:21",
   "total": 105,
   "matches": [
     {
@@ -339,7 +339,7 @@
         "result": "HIT",
         "score": "1 - 3",
         "source": "fotmob",
-        "settled_at": "2026-11-01T00:23:19",
+        "settled_at": "2026-11-01T00:24:18",
         "outcome": "客胜",
         "tip": "客胜/防平",
         "market": "had"
@@ -716,7 +716,7 @@
         "result": "HIT",
         "score": "2 - 6",
         "source": "fotmob",
-        "settled_at": "2026-11-01T00:23:19",
+        "settled_at": "2026-11-01T00:24:18",
         "outcome": "客胜",
         "tip": "客胜",
         "market": "had"
@@ -1062,7 +1062,7 @@
         "result": "HIT",
         "score": "2 - 2",
         "source": "fotmob",
-        "settled_at": "2026-11-01T00:23:19",
+        "settled_at": "2026-11-01T00:24:18",
         "outcome": "平局",
         "tip": "客胜/防平",
         "market": "had"
@@ -1406,7 +1406,7 @@
         "result": "HIT",
         "score": "3 - 2",
         "source": "fotmob",
-        "settled_at": "2026-11-01T00:23:19",
+        "settled_at": "2026-11-01T00:24:18",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -1757,7 +1757,7 @@
         "result": "HIT",
         "score": "5 - 0",
         "source": "fotmob",
-        "settled_at": "2026-11-01T00:23:19",
+        "settled_at": "2026-11-01T00:24:18",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -2139,7 +2139,7 @@
         "result": "HIT",
         "score": "4 - 2",
         "source": "fotmob",
-        "settled_at": "2026-11-01T00:23:19",
+        "settled_at": "2026-11-01T00:24:18",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -2516,7 +2516,7 @@
         "result": "HIT",
         "score": "1 - 3",
         "source": "fotmob",
-        "settled_at": "2026-11-01T00:23:19",
+        "settled_at": "2026-11-01T00:24:18",
         "outcome": "客胜",
         "tip": "客胜",
         "market": "had"
@@ -2856,7 +2856,7 @@
         "result": "MISS",
         "score": "1 - 1",
         "source": "fotmob",
-        "settled_at": "2026-11-01T00:23:19",
+        "settled_at": "2026-11-01T00:24:18",
         "outcome": "平局",
         "tip": "主胜",
         "market": "had"
@@ -3176,7 +3176,7 @@
         "result": "HIT",
         "score": "3 - 0",
         "source": "fotmob",
-        "settled_at": "2026-11-01T00:23:19",
+        "settled_at": "2026-11-01T00:24:18",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -3520,7 +3520,7 @@
         "result": "MISS",
         "score": "4 - 3",
         "source": "fotmob",
-        "settled_at": "2026-11-01T00:23:19",
+        "settled_at": "2026-11-01T00:24:18",
         "outcome": "主胜",
         "tip": "客胜",
         "market": "had"
@@ -3869,7 +3869,7 @@
         "result": "HIT",
         "score": "0 - 1",
         "source": "fotmob",
-        "settled_at": "2026-11-01T00:23:19",
+        "settled_at": "2026-11-01T00:24:18",
         "outcome": "客胜",
         "tip": "客胜",
         "market": "had"
@@ -4233,7 +4233,7 @@
         "result": "HIT",
         "score": "0 - 2",
         "source": "fotmob",
-        "settled_at": "2026-11-01T00:23:19",
+        "settled_at": "2026-11-01T00:24:18",
         "outcome": "客胜",
         "tip": "客胜",
         "market": "had"
@@ -4610,7 +4610,7 @@
         "result": "MISS",
         "score": "2 - 4",
         "source": "fotmob",
-        "settled_at": "2026-11-01T00:23:19",
+        "settled_at": "2026-11-01T00:24:18",
         "outcome": "客胜",
         "tip": "主胜",
         "market": "had"
@@ -4986,7 +4986,7 @@
         "result": "HIT",
         "score": "0 - 0",
         "source": "fotmob",
-        "settled_at": "2026-11-01T00:23:19",
+        "settled_at": "2026-11-01T00:24:18",
         "outcome": "平局",
         "tip": "主胜/防平",
         "market": "had"
@@ -5327,7 +5327,7 @@
         "result": "HIT",
         "score": "2-2",
         "source": "stored_score",
-        "settled_at": "2026-11-01T00:23:19",
+        "settled_at": "2026-11-01T00:24:18",
         "outcome": "平局",
         "tip": "主胜/防平",
         "market": "had"
@@ -5998,7 +5998,7 @@
         "result": "MISS",
         "score": "3 - 2",
         "source": "fotmob",
-        "settled_at": "2026-11-01T00:23:19",
+        "settled_at": "2026-11-01T00:24:18",
         "outcome": "主胜",
         "tip": "客胜",
         "market": "had"
@@ -6338,7 +6338,7 @@
         "result": "HIT",
         "score": "3-0",
         "source": "stored_score",
-        "settled_at": "2026-11-01T00:23:19",
+        "settled_at": "2026-11-01T00:24:18",
         "outcome": "主胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -6680,7 +6680,7 @@
         "result": "MISS",
         "score": "0 - 1",
         "source": "fotmob",
-        "settled_at": "2026-11-01T00:23:19",
+        "settled_at": "2026-11-01T00:24:18",
         "outcome": "客胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -7056,7 +7056,7 @@
         "result": "HIT",
         "score": "1 - 4",
         "source": "fotmob",
-        "settled_at": "2026-11-01T00:23:19",
+        "settled_at": "2026-11-01T00:24:18",
         "outcome": "客胜",
         "tip": "客胜",
         "market": "had"
@@ -7433,7 +7433,7 @@
         "result": "MISS",
         "score": "2 - 0",
         "source": "fotmob",
-        "settled_at": "2026-11-01T00:23:19",
+        "settled_at": "2026-11-01T00:24:18",
         "outcome": "主胜",
         "tip": "客胜",
         "market": "had"
@@ -7776,7 +7776,7 @@
         "result": "HIT",
         "score": "1 - 1",
         "source": "fotmob",
-        "settled_at": "2026-11-01T00:23:19",
+        "settled_at": "2026-11-01T00:24:18",
         "outcome": "平局",
         "tip": "主胜/防平",
         "market": "had"
@@ -8118,7 +8118,7 @@
         "result": "HIT",
         "score": "2 - 1",
         "source": "fotmob",
-        "settled_at": "2026-11-01T00:23:19",
+        "settled_at": "2026-11-01T00:24:18",
         "outcome": "主胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -8434,7 +8434,7 @@
         "result": "MISS",
         "score": "2-2",
         "source": "stored_score",
-        "settled_at": "2026-11-01T00:23:19",
+        "settled_at": "2026-11-01T00:24:18",
         "outcome": "平局",
         "tip": "主胜",
         "market": "had"
@@ -8753,7 +8753,7 @@
         "result": "HIT",
         "score": "0 - 1",
         "source": "fotmob",
-        "settled_at": "2026-11-01T00:23:19",
+        "settled_at": "2026-11-01T00:24:18",
         "outcome": "客胜",
         "tip": "客胜",
         "market": "had"
@@ -9083,7 +9083,7 @@
         "result": "MISS",
         "score": "2-4",
         "source": "stored_score",
-        "settled_at": "2026-11-01T00:23:19",
+        "settled_at": "2026-11-01T00:24:18",
         "outcome": "客胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -9442,7 +9442,7 @@
         "result": "HIT",
         "score": "5 - 1",
         "source": "fotmob",
-        "settled_at": "2026-11-01T00:23:19",
+        "settled_at": "2026-11-01T00:24:18",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -9783,7 +9783,7 @@
         "result": "HIT",
         "score": "2-0",
         "source": "stored_score",
-        "settled_at": "2026-11-01T00:23:19",
+        "settled_at": "2026-11-01T00:24:18",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -10128,7 +10128,7 @@
         "result": "HIT",
         "score": "3 - 1",
         "source": "fotmob",
-        "settled_at": "2026-11-01T00:23:19",
+        "settled_at": "2026-11-01T00:24:18",
         "outcome": "主胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -10505,7 +10505,7 @@
         "result": "HIT",
         "score": "2 - 2",
         "source": "fotmob",
-        "settled_at": "2026-11-01T00:23:19",
+        "settled_at": "2026-11-01T00:24:18",
         "outcome": "平局",
         "tip": "主胜/防平",
         "market": "had"
@@ -10843,7 +10843,7 @@
         "result": "HIT",
         "score": "2-0",
         "source": "stored_score",
-        "settled_at": "2026-11-01T00:23:19",
+        "settled_at": "2026-11-01T00:24:18",
         "outcome": "主胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -11158,7 +11158,7 @@
         "result": "HIT",
         "score": "1-1",
         "source": "stored_score",
-        "settled_at": "2026-11-01T00:23:19",
+        "settled_at": "2026-11-01T00:24:18",
         "outcome": "平局",
         "tip": "主胜/防平",
         "market": "had"
@@ -11477,7 +11477,7 @@
         "result": "HIT",
         "score": "1 - 2",
         "source": "fotmob",
-        "settled_at": "2026-11-01T00:23:19",
+        "settled_at": "2026-11-01T00:24:18",
         "outcome": "客胜",
         "tip": "客胜/防平",
         "market": "had"
@@ -11853,7 +11853,7 @@
         "result": "MISS",
         "score": "5 - 2",
         "source": "fotmob",
-        "settled_at": "2026-11-01T00:23:19",
+        "settled_at": "2026-11-01T00:24:18",
         "outcome": "主胜",
         "tip": "客胜/防平",
         "market": "had"
@@ -12229,7 +12229,7 @@
         "result": "HIT",
         "score": "1 - 5",
         "source": "fotmob",
-        "settled_at": "2026-11-01T00:23:19",
+        "settled_at": "2026-11-01T00:24:18",
         "outcome": "客胜",
         "tip": "客胜",
         "market": "had"
@@ -12574,7 +12574,7 @@
         "result": "HIT",
         "score": "3 - 2",
         "source": "fotmob",
-        "settled_at": "2026-11-01T00:23:19",
+        "settled_at": "2026-11-01T00:24:18",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -12916,7 +12916,7 @@
         "result": "MISS",
         "score": "1-2",
         "source": "stored_score",
-        "settled_at": "2026-11-01T00:23:19",
+        "settled_at": "2026-11-01T00:24:18",
         "outcome": "客胜",
         "tip": "主胜",
         "market": "had"
@@ -13268,7 +13268,7 @@
         "result": "MISS",
         "score": "4 - 1",
         "source": "fotmob",
-        "settled_at": "2026-11-01T00:23:19",
+        "settled_at": "2026-11-01T00:24:18",
         "outcome": "主胜",
         "tip": "客胜/防平",
         "market": "had"
@@ -13584,7 +13584,7 @@
         "result": "HIT",
         "score": "1-0",
         "source": "stored_score",
-        "settled_at": "2026-11-01T00:23:19",
+        "settled_at": "2026-11-01T00:24:18",
         "outcome": "主胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -13957,7 +13957,7 @@
         "result": "MISS",
         "score": "0 - 1",
         "source": "fotmob",
-        "settled_at": "2026-11-01T00:23:19",
+        "settled_at": "2026-11-01T00:24:18",
         "outcome": "客胜",
         "tip": "主胜",
         "market": "had"
@@ -14334,7 +14334,7 @@
         "result": "HIT",
         "score": "1 - 0",
         "source": "fotmob",
-        "settled_at": "2026-11-01T00:23:19",
+        "settled_at": "2026-11-01T00:24:18",
         "outcome": "主胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -14674,7 +14674,7 @@
         "result": "HIT",
         "score": "0 - 2",
         "source": "fotmob",
-        "settled_at": "2026-11-01T00:23:19",
+        "settled_at": "2026-11-01T00:24:18",
         "outcome": "客胜",
         "tip": "客胜",
         "market": "had"
@@ -15012,7 +15012,7 @@
         "result": "HIT",
         "score": "2 - 0",
         "source": "fotmob",
-        "settled_at": "2026-11-01T00:23:19",
+        "settled_at": "2026-11-01T00:24:18",
         "outcome": "主胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -15333,7 +15333,7 @@
         "result": "HIT",
         "score": "0 - 4",
         "source": "fotmob",
-        "settled_at": "2026-11-01T00:23:19",
+        "settled_at": "2026-11-01T00:24:18",
         "outcome": "客胜",
         "tip": "客胜",
         "market": "had"
@@ -15650,7 +15650,7 @@
         "result": "MISS",
         "score": "1-2",
         "source": "stored_score",
-        "settled_at": "2026-11-01T00:23:19",
+        "settled_at": "2026-11-01T00:24:18",
         "outcome": "客胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -15995,7 +15995,7 @@
         "result": "HIT",
         "score": "4 - 0",
         "source": "fotmob",
-        "settled_at": "2026-11-01T00:23:19",
+        "settled_at": "2026-11-01T00:24:18",
         "outcome": "主胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -16341,7 +16341,7 @@
         "result": "HIT",
         "score": "1 - 1",
         "source": "fotmob",
-        "settled_at": "2026-11-01T00:23:19",
+        "settled_at": "2026-11-01T00:24:18",
         "outcome": "平局",
         "tip": "客胜/防平",
         "market": "had"
@@ -16661,7 +16661,7 @@
         "result": "HIT",
         "score": "0 - 0",
         "source": "fotmob",
-        "settled_at": "2026-11-01T00:23:19",
+        "settled_at": "2026-11-01T00:24:18",
         "outcome": "平局",
         "tip": "客胜/防平",
         "market": "had"
@@ -17038,7 +17038,7 @@
         "result": "HIT",
         "score": "2 - 0",
         "source": "fotmob",
-        "settled_at": "2026-11-01T00:23:19",
+        "settled_at": "2026-11-01T00:24:18",
         "outcome": "主胜",
         "tip": "主胜/防平",
         "market": "had"
@@ -17354,7 +17354,7 @@
         "result": "HIT",
         "score": "1-3",
         "source": "stored_score",
-        "settled_at": "2026-11-01T00:23:19",
+        "settled_at": "2026-11-01T00:24:18",
         "outcome": "客胜",
         "tip": "客胜/防平",
         "market": "had"
@@ -17729,7 +17729,7 @@
         "result": "HIT",
         "score": "0 - 2",
         "source": "fotmob",
-        "settled_at": "2026-11-01T00:23:19",
+        "settled_at": "2026-11-01T00:24:18",
         "outcome": "客胜",
         "tip": "客胜",
         "market": "had"
@@ -18100,7 +18100,7 @@
         "result": "HIT",
         "score": "2 - 1",
         "source": "fotmob",
-        "settled_at": "2026-11-01T00:23:19",
+        "settled_at": "2026-11-01T00:24:18",
         "outcome": "主胜",
         "tip": "主胜",
         "market": "had"
@@ -18429,7 +18429,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-11-01 00:23:29",
+      "stats_ts": "2026-11-01 00:24:30",
       "crosscheck": {
         "source": "fotmob",
         "score": "2-4",
@@ -18794,7 +18794,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-11-01 00:23:29",
+      "stats_ts": "2026-11-01 00:24:30",
       "crosscheck": {
         "source": "fotmob",
         "score": "0-2",
@@ -19210,7 +19210,7 @@
         "result": "HIT",
         "score": "1 - 2",
         "source": "fotmob",
-        "settled_at": "2026-11-01T00:23:19",
+        "settled_at": "2026-11-01T00:24:18",
         "outcome": "客胜",
         "tip": "客胜/防平",
         "market": "had"
@@ -19226,7 +19226,7 @@
       "away": "帕德博恩",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "进行中 · 下半场",
+      "status": "已完赛",
       "form_home": [
         "W",
         "W",
@@ -19263,7 +19263,7 @@
         "1-1"
       ],
       "score": "0-0",
-      "result": "PENDING",
+      "result": "HIT",
       "analysis": "去水胜平负 48.8%/23.7%/27.5%，泊松期望进球 1.71:1.23，首选【主胜】+次选【防平】（覆盖率 72.5%）。",
       "dossier": {
         "fundamental": "门兴近10场 3胜1平6负，场均进1.70失2.30（截至2026-10-28）；帕德博恩近10场 4胜2平4负，场均进1.10失1.20（截至2026-10-29）。",
@@ -19542,7 +19542,7 @@
       "crosscheck": {
         "source": "fotmob",
         "score": "0-0",
-        "finished": false
+        "finished": true
       },
       "prediction_snapshot": {
         "tip": "主胜/防平",
@@ -19582,7 +19582,17 @@
         "traceable": true,
         "note": "停售时刻冻结（含临开赛早场），此后不随盘口变动"
       },
-      "locked": true
+      "locked": true,
+      "settlement": {
+        "result": "HIT",
+        "score": "0 - 0",
+        "source": "fotmob",
+        "settled_at": "2026-11-01T00:24:18",
+        "outcome": "平局",
+        "tip": "主胜/防平",
+        "market": "had"
+      },
+      "result_text": "研判命中"
     },
     {
       "code": "周六014",
@@ -19593,7 +19603,7 @@
       "away": "霍芬海姆",
       "home_rank": "-",
       "away_rank": "-",
-      "status": "进行中 · 下半场",
+      "status": "已完赛",
       "form_home": [
         "L",
         "W",
@@ -19630,7 +19640,7 @@
         "1-1"
       ],
       "score": "2-0",
-      "result": "PENDING",
+      "result": "MISS",
       "analysis": "去水胜平负 37.5%/23.4%/39.0%，泊松期望进球 1.59:1.62，首选【客胜】+次选【防平】（覆盖率 62.5%）。",
       "dossier": {
         "fundamental": "不来梅近10场 4胜3平3负，场均进2.00失2.40（截至2026-10-28）；霍芬海姆近10场 4胜1平5负，场均进1.80失1.70（截至2026-10-29）。",
@@ -19894,7 +19904,7 @@
       "crosscheck": {
         "source": "fotmob",
         "score": "2-0",
-        "finished": false
+        "finished": true
       },
       "prediction_snapshot": {
         "tip": "客胜/防平",
@@ -19934,7 +19944,17 @@
         "traceable": true,
         "note": "停售时刻冻结（含临开赛早场），此后不随盘口变动"
       },
-      "locked": true
+      "locked": true,
+      "settlement": {
+        "result": "MISS",
+        "score": "2 - 0",
+        "source": "fotmob",
+        "settled_at": "2026-11-01T00:24:18",
+        "outcome": "主胜",
+        "tip": "客胜/防平",
+        "market": "had"
+      },
+      "result_text": "研判未中"
     },
     {
       "code": "周六015",
@@ -20257,7 +20277,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-11-01 00:23:29",
+      "stats_ts": "2026-11-01 00:24:30",
       "crosscheck": {
         "source": "fotmob",
         "score": "3-0",
@@ -20621,7 +20641,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-11-01 00:23:29",
+      "stats_ts": "2026-11-01 00:24:30",
       "prediction_snapshot": {
         "tip": "主胜/防平",
         "predicted_scores": [
@@ -20981,7 +21001,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-11-01 00:23:29",
+      "stats_ts": "2026-11-01 00:24:30",
       "crosscheck": {
         "source": "fotmob",
         "score": "1-1",
@@ -21333,7 +21353,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-11-01 00:23:29",
+      "stats_ts": "2026-11-01 00:24:30",
       "crosscheck": {
         "source": "fotmob",
         "score": "1-0",
@@ -21666,7 +21686,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-11-01 00:23:29",
+      "stats_ts": "2026-11-01 00:24:30",
       "prediction_snapshot": {
         "tip": "客胜",
         "predicted_scores": [
@@ -22028,7 +22048,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-11-01 00:23:29",
+      "stats_ts": "2026-11-01 00:24:30",
       "crosscheck": {
         "source": "fotmob",
         "score": "1-0",
@@ -22395,7 +22415,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-11-01 00:23:29",
+      "stats_ts": "2026-11-01 00:24:30",
       "locked": true,
       "prediction_snapshot": {
         "tip": "客胜",
@@ -22763,7 +22783,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-11-01 00:23:29",
+      "stats_ts": "2026-11-01 00:24:30",
       "locked": true,
       "prediction_snapshot": {
         "tip": "主胜",
@@ -23131,7 +23151,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-11-01 00:23:29",
+      "stats_ts": "2026-11-01 00:24:30",
       "locked": true,
       "prediction_snapshot": {
         "tip": "主胜",
@@ -23493,7 +23513,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-11-01 00:23:29",
+      "stats_ts": "2026-11-01 00:24:30",
       "locked": true,
       "prediction_snapshot": {
         "tip": "主胜",
@@ -23858,7 +23878,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-11-01 00:23:29",
+      "stats_ts": "2026-11-01 00:24:30",
       "locked": true,
       "prediction_snapshot": {
         "tip": "客胜/防平",
@@ -24225,7 +24245,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-11-01 00:23:29",
+      "stats_ts": "2026-11-01 00:24:30",
       "locked": true,
       "prediction_snapshot": {
         "tip": "主胜/防平",
@@ -24548,7 +24568,7 @@
       },
       "quant_factors": null,
       "detail_schema": 2,
-      "stats_ts": "2026-11-01 00:23:29",
+      "stats_ts": "2026-11-01 00:24:30",
       "locked": true,
       "prediction_snapshot": {
         "tip": "让负/防让平",
@@ -24879,7 +24899,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-11-01 00:23:29",
+      "stats_ts": "2026-11-01 00:24:30",
       "locked": true,
       "prediction_snapshot": {
         "tip": "主胜",
@@ -25212,7 +25232,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-11-01 00:23:29"
+      "stats_ts": "2026-11-01 00:24:30"
     },
     {
       "code": "周日002",
@@ -25501,7 +25521,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-11-01 00:23:29",
+      "stats_ts": "2026-11-01 00:24:30",
       "crosscheck": {
         "source": "fotmob",
         "score": "",
@@ -25787,7 +25807,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-11-01 00:23:29",
+      "stats_ts": "2026-11-01 00:24:30",
       "crosscheck": {
         "source": "fotmob",
         "score": "",
@@ -26083,7 +26103,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-11-01 00:23:29",
+      "stats_ts": "2026-11-01 00:24:30",
       "crosscheck": {
         "source": "fotmob",
         "score": "",
@@ -26378,7 +26398,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-11-01 00:23:29",
+      "stats_ts": "2026-11-01 00:24:30",
       "crosscheck": {
         "source": "fotmob",
         "score": "",
@@ -26675,7 +26695,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-11-01 00:23:29"
+      "stats_ts": "2026-11-01 00:24:30"
     },
     {
       "code": "周日007",
@@ -26988,7 +27008,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-11-01 00:23:29",
+      "stats_ts": "2026-11-01 00:24:30",
       "crosscheck": {
         "source": "fotmob",
         "score": "",
@@ -27317,7 +27337,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-11-01 00:23:29",
+      "stats_ts": "2026-11-01 00:24:30",
       "crosscheck": {
         "source": "fotmob",
         "score": "",
@@ -27613,7 +27633,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-11-01 00:23:29",
+      "stats_ts": "2026-11-01 00:24:30",
       "crosscheck": {
         "source": "fotmob",
         "score": "",
@@ -27908,7 +27928,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-11-01 00:23:29"
+      "stats_ts": "2026-11-01 00:24:30"
     },
     {
       "code": "周日011",
@@ -28197,7 +28217,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-11-01 00:23:29"
+      "stats_ts": "2026-11-01 00:24:30"
     },
     {
       "code": "周日012",
@@ -28488,7 +28508,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-11-01 00:23:29",
+      "stats_ts": "2026-11-01 00:24:30",
       "crosscheck": {
         "source": "fotmob",
         "score": "",
@@ -28816,7 +28836,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-11-01 00:23:29",
+      "stats_ts": "2026-11-01 00:24:30",
       "crosscheck": {
         "source": "fotmob",
         "score": "",
@@ -29144,7 +29164,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-11-01 00:23:29",
+      "stats_ts": "2026-11-01 00:24:30",
       "crosscheck": {
         "source": "fotmob",
         "score": "",
@@ -29440,7 +29460,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-11-01 00:23:29"
+      "stats_ts": "2026-11-01 00:24:30"
     },
     {
       "code": "周日016",
@@ -29760,7 +29780,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-11-01 00:23:29"
+      "stats_ts": "2026-11-01 00:24:30"
     },
     {
       "code": "周日017",
@@ -30083,7 +30103,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-11-01 00:23:29"
+      "stats_ts": "2026-11-01 00:24:30"
     },
     {
       "code": "周日018",
@@ -30372,7 +30392,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-11-01 00:23:29"
+      "stats_ts": "2026-11-01 00:24:30"
     },
     {
       "code": "周日019",
@@ -30681,7 +30701,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-11-01 00:23:29"
+      "stats_ts": "2026-11-01 00:24:30"
     },
     {
       "code": "周日020",
@@ -30947,7 +30967,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-11-01 00:23:29"
+      "stats_ts": "2026-11-01 00:24:30"
     },
     {
       "code": "周日021",
@@ -31270,7 +31290,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-11-01 00:23:29"
+      "stats_ts": "2026-11-01 00:24:30"
     },
     {
       "code": "周日022",
@@ -31592,7 +31612,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-11-01 00:23:29"
+      "stats_ts": "2026-11-01 00:24:30"
     },
     {
       "code": "周日023",
@@ -31902,7 +31922,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-11-01 00:23:29"
+      "stats_ts": "2026-11-01 00:24:30"
     },
     {
       "code": "周日024",
@@ -32191,7 +32211,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-11-01 00:23:29"
+      "stats_ts": "2026-11-01 00:24:30"
     },
     {
       "code": "周日025",
@@ -32457,7 +32477,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-11-01 00:23:29"
+      "stats_ts": "2026-11-01 00:24:30"
     },
     {
       "code": "周一001",
@@ -32724,7 +32744,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-11-01 00:23:29"
+      "stats_ts": "2026-11-01 00:24:30"
     },
     {
       "code": "周一002",
@@ -33015,7 +33035,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-11-01 00:23:29"
+      "stats_ts": "2026-11-01 00:24:30"
     },
     {
       "code": "周一003",
@@ -33305,7 +33325,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-11-01 00:23:29"
+      "stats_ts": "2026-11-01 00:24:30"
     },
     {
       "code": "周一004",
@@ -33596,7 +33616,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-11-01 00:23:29"
+      "stats_ts": "2026-11-01 00:24:30"
     },
     {
       "code": "周一005",
@@ -33887,7 +33907,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-11-01 00:23:29"
+      "stats_ts": "2026-11-01 00:24:30"
     },
     {
       "code": "周一006",
@@ -34210,7 +34230,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-11-01 00:23:29"
+      "stats_ts": "2026-11-01 00:24:30"
     },
     {
       "code": "周一007",
@@ -34526,7 +34546,7 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-11-01 00:23:29"
+      "stats_ts": "2026-11-01 00:24:30"
     },
     {
       "code": "周一008",
@@ -34777,7 +34797,7 @@
       },
       "quant_factors": null,
       "detail_schema": 2,
-      "stats_ts": "2026-11-01 00:23:29"
+      "stats_ts": "2026-11-01 00:24:30"
     },
     {
       "code": "周一009",
@@ -35044,8 +35064,8 @@
           "single_threshold": 0.54
         }
       },
-      "stats_ts": "2026-11-01 00:23:29"
+      "stats_ts": "2026-11-01 00:24:30"
     }
   ],
-  "version": 1793463802
+  "version": 1793463861
 }
