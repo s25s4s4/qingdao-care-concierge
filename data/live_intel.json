@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-31 12:01:20",
-  "total_tips": 5,
+  "updated_at": "2026-10-31 20:54:14",
+  "total_tips": 6,
   "live_feed": [
+    {
+      "id": 8450,
+      "channel": "betminesfootballpredictions",
+      "time": "2026-10-31 16:40",
+      "code": "周六021",
+      "key": "20261101_周六021",
+      "league": "意甲",
+      "category": "推单",
+      "is_tip": true,
+      "match": "乌迪内斯 VS 罗马",
+      "chinese": "老客听好！乌迪内斯主场难拿分，罗马客场硬啃。盘口",
+      "original": "🔥 ⚽ BETMINERS — SERIE A PREDICTIONS ⚽ 🔥 🇮🇹 BOLOGNA 🆚 MONZA 🔴 🔵 Bologna are improving and will look to make the most of their home advantage at the Dall’Ara agai",
+      "translated": true,
+      "channel_weight": 0.5
+    },
     {
       "id": 8096,
       "channel": "football_injuries",
@@ -1900,16 +1915,16 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-10-31 12:01:20",
-    "last_nonempty_at": "2026-10-31 12:01:20",
-    "live_count": 5,
+    "last_updated": "2026-10-31 20:54:14",
+    "last_nonempty_at": "2026-10-31 20:54:14",
+    "live_count": 6,
     "archived_count": 140,
-    "active_matches": 62,
+    "active_matches": 57,
     "llm_providers": [
       "local",
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-10-31 12:01:20"
+    "checked_at": "2026-10-31 20:54:14"
   }
 }
