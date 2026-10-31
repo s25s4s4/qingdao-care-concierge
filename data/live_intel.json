@@ -1,49 +1,19 @@
 {
-  "updated_at": "2026-10-31 22:27:52",
-  "total_tips": 7,
+  "updated_at": "2026-10-31 23:42:46",
+  "total_tips": 5,
   "live_feed": [
     {
-      "id": 8466,
-      "channel": "forepitch_tips",
-      "time": "2026-10-31 17:08",
-      "code": "周六006",
-      "key": "20261031_周六006",
-      "league": "英超",
-      "category": "赛前军情",
-      "is_tip": false,
-      "match": "切尔西 VS 曼联",
-      "chinese": "本场切尔西（主）对曼联（客），模型客胜仅23%，主胜占优。预计进1.9至1.3，大2球靠谱。近5场主负客平，不稳。机构偏主，资金往主队。",
-      "original": "⭐ Match of the day Chelsea — Manchester United Premier League, 12:30 UTC Model: 1 50% · X 26% · 2 23% Most likely score: 2:0 Expected goals: 1.9–1.3 Form (last ",
-      "translated": true,
-      "channel_weight": 0.5
-    },
-    {
-      "id": 8253,
-      "channel": "FabrizioRomano",
-      "time": "2026-10-31 00:33",
-      "code": "周六006",
-      "key": "20261031_周六006",
-      "league": "英超",
-      "category": "赛前军情",
-      "is_tip": false,
-      "match": "切尔西 VS 曼联",
-      "chinese": "周六006切尔西曼联，门将拉科腿筋伤缺阵多周，连国际赛也报销！机构明显看好客队，盘口倾向客让平/负，大小球偏小。资金暗流全涌向客胜！",
-      "original": "🚨 🔵 Maxence Lacroix will be out for several weeks and likely to be back only in 2027 with hamstring injury. Bad news for Chelsea as also France have ruled Lacro",
-      "translated": true,
-      "channel_weight": 0.5
-    },
-    {
-      "id": 8151,
-      "channel": "forepitch_tips",
-      "time": "2026-10-30 16:01",
-      "code": "周六006",
-      "key": "20261031_周六006",
-      "league": "英超",
-      "category": "赛前军情",
-      "is_tip": false,
-      "match": "切尔西 VS 曼联",
-      "chinese": "周六(切尔西)打(曼联)，盘口主胜过半，资金明显压注主队。客胜平局不到三成，这场主胜稳。阵容伤停暂无确切情报，老球探看基本面。",
-      "original": "📋 Round preview 1 · X · 2 Premier League Chelsea — Manchester United: 50% · 26% · 24% AFC Bournemouth — Leeds United: 47% · 27% · 26% Brentford — Nottingham For",
+      "id": 8429,
+      "channel": "sure2scoreprediction",
+      "time": "2026-10-31 15:11",
+      "code": "周六027",
+      "key": "20261101_周六027",
+      "league": "西甲",
+      "category": "推单·已开赛",
+      "is_tip": true,
+      "match": "巴萨 VS 阿拉维斯",
+      "chinese": "本场周六027西甲，巴萨主场打阿拉维斯，机构明确指向大球，盘口水位仅零点二四，资金暗流明显偏热盘，各位老客务必盯紧大球方向！",
+      "original": "FREE FOOTBALL TIPS ✅ ✅ ✅ 31/10/26 Turkey Süper Lig Fenerbahçe vs Göztepe 🚀 🚀 🚀 Prediction: Home to Win Odds .35 Spain - LaLiga Levante vs Atl. Madrid 🚀 🚀 🚀 Pred",
       "translated": true,
       "channel_weight": 0.5
     },
@@ -109,6 +79,51 @@
     }
   ],
   "archived": [
+    {
+      "id": 8466,
+      "channel": "forepitch_tips",
+      "time": "2026-10-31 17:08",
+      "code": "周六006",
+      "key": "20261031_周六006",
+      "league": "英超",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "切尔西 VS 曼联",
+      "chinese": "本场切尔西（主）对曼联（客），模型客胜仅23%，主胜占优。预计进1.9至1.3，大2球靠谱。近5场主负客平，不稳。机构偏主，资金往主队。",
+      "original": "⭐ Match of the day Chelsea — Manchester United Premier League, 12:30 UTC Model: 1 50% · X 26% · 2 23% Most likely score: 2:0 Expected goals: 1.9–1.3 Form (last ",
+      "translated": true,
+      "channel_weight": 0.5
+    },
+    {
+      "id": 8253,
+      "channel": "FabrizioRomano",
+      "time": "2026-10-31 00:33",
+      "code": "周六006",
+      "key": "20261031_周六006",
+      "league": "英超",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "切尔西 VS 曼联",
+      "chinese": "周六006切尔西曼联，门将拉科腿筋伤缺阵多周，连国际赛也报销！机构明显看好客队，盘口倾向客让平/负，大小球偏小。资金暗流全涌向客胜！",
+      "original": "🚨 🔵 Maxence Lacroix will be out for several weeks and likely to be back only in 2027 with hamstring injury. Bad news for Chelsea as also France have ruled Lacro",
+      "translated": true,
+      "channel_weight": 0.5
+    },
+    {
+      "id": 8151,
+      "channel": "forepitch_tips",
+      "time": "2026-10-30 16:01",
+      "code": "周六006",
+      "key": "20261031_周六006",
+      "league": "英超",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "切尔西 VS 曼联",
+      "chinese": "周六(切尔西)打(曼联)，盘口主胜过半，资金明显压注主队。客胜平局不到三成，这场主胜稳。阵容伤停暂无确切情报，老球探看基本面。",
+      "original": "📋 Round preview 1 · X · 2 Premier League Chelsea — Manchester United: 50% · 26% · 24% AFC Bournemouth — Leeds United: 47% · 27% · 26% Brentford — Nottingham For",
+      "translated": true,
+      "channel_weight": 0.5
+    },
     {
       "id": 8277,
       "channel": "forepitch_tips",
@@ -1930,16 +1945,16 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-10-31 22:27:52",
-    "last_nonempty_at": "2026-10-31 22:27:52",
-    "live_count": 7,
-    "archived_count": 140,
-    "active_matches": 57,
+    "last_updated": "2026-10-31 23:42:46",
+    "last_nonempty_at": "2026-10-31 23:42:46",
+    "live_count": 5,
+    "archived_count": 143,
+    "active_matches": 54,
     "llm_providers": [
       "local",
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-10-31 22:27:52"
+    "checked_at": "2026-10-31 23:42:46"
   }
 }
