@@ -235,3 +235,4 @@
 {"code": "周六004", "date": "2026-10-31", "league": "韩职", "home": "光州FC", "away": "金泉尚武", "hg": 1, "ag": 1, "res": "平", "src": "live500"}
 {"code": "周六005", "date": "2026-10-31", "league": "澳超", "home": "麦克阿瑟FC", "away": "西悉尼", "hg": 0, "ag": 0, "res": "平", "src": "live500"}
 {"code": "周六006", "date": "2026-10-31", "league": "英超", "home": "切尔西", "away": "曼联", "hg": 2, "ag": 0, "res": "胜", "src": "live500"}
+{"code": "周六007", "date": "2026-10-31", "league": "英冠", "home": "林肯城", "away": "伯明翰", "hg": 1, "ag": 3, "res": "负", "src": "live500"}
