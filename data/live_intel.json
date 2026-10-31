@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-01 01:11:02",
-  "total_tips": 4,
+  "updated_at": "2026-11-01 03:38:47",
+  "total_tips": 3,
   "live_feed": [
     {
       "id": 8429,
@@ -14,21 +14,6 @@
       "match": "巴萨 VS 阿拉维斯",
       "chinese": "本场周六027西甲，巴萨主场打阿拉维斯，机构明确指向大球，盘口水位仅零点二四，资金暗流明显偏热盘，各位老客务必盯紧大球方向！",
       "original": "FREE FOOTBALL TIPS ✅ ✅ ✅ 31/10/26 Turkey Süper Lig Fenerbahçe vs Göztepe 🚀 🚀 🚀 Prediction: Home to Win Odds .35 Spain - LaLiga Levante vs Atl. Madrid 🚀 🚀 🚀 Pred",
-      "translated": true,
-      "channel_weight": 0.5
-    },
-    {
-      "id": 8450,
-      "channel": "betminesfootballpredictions",
-      "time": "2026-10-31 16:40",
-      "code": "周六021",
-      "key": "20261101_周六021",
-      "league": "意甲",
-      "category": "推单",
-      "is_tip": true,
-      "match": "乌迪内斯 VS 罗马",
-      "chinese": "老客听好！乌迪内斯主场难拿分，罗马客场硬啃。盘口",
-      "original": "🔥 ⚽ BETMINERS — SERIE A PREDICTIONS ⚽ 🔥 🇮🇹 BOLOGNA 🆚 MONZA 🔴 🔵 Bologna are improving and will look to make the most of their home advantage at the Dall’Ara agai",
       "translated": true,
       "channel_weight": 0.5
     },
@@ -64,6 +49,21 @@
     }
   ],
   "archived": [
+    {
+      "id": 8450,
+      "channel": "betminesfootballpredictions",
+      "time": "2026-10-31 16:40",
+      "code": "周六021",
+      "key": "20261101_周六021",
+      "league": "意甲",
+      "category": "推单",
+      "is_tip": true,
+      "match": "乌迪内斯 VS 罗马",
+      "chinese": "老客听好！乌迪内斯主场难拿分，罗马客场硬啃。盘口",
+      "original": "🔥 ⚽ BETMINERS — SERIE A PREDICTIONS ⚽ 🔥 🇮🇹 BOLOGNA 🆚 MONZA 🔴 🔵 Bologna are improving and will look to make the most of their home advantage at the Dall’Ara agai",
+      "translated": true,
+      "channel_weight": 0.5
+    },
     {
       "id": 8345,
       "channel": "betiper_official",
@@ -1945,16 +1945,16 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-11-01 01:11:02",
-    "last_nonempty_at": "2026-11-01 01:11:02",
-    "live_count": 4,
-    "archived_count": 144,
-    "active_matches": 48,
+    "last_updated": "2026-11-01 03:38:47",
+    "last_nonempty_at": "2026-11-01 03:38:47",
+    "live_count": 3,
+    "archived_count": 145,
+    "active_matches": 41,
     "llm_providers": [
       "local",
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-11-01 01:11:02"
+    "checked_at": "2026-11-01 03:38:47"
   }
 }
