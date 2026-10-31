@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-31 06:51:58",
-  "total_tips": 4,
+  "updated_at": "2026-10-31 12:01:20",
+  "total_tips": 5,
   "live_feed": [
+    {
+      "id": 8096,
+      "channel": "football_injuries",
+      "time": "2026-10-30 14:16",
+      "code": "周一006",
+      "key": "20261103_周一006",
+      "league": "英超",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "纽卡斯尔 VS 埃弗顿",
+      "chinese": "赛前情报！周一006纽卡斯尔VS埃弗顿：奥斯拉足踝扭伤半场被换，主帅称周一能否出场尚早。核心缺阵致首发不稳，主胜需谨慎防平。",
+      "original": "🚨 Newcastle: William Osula получил новое повреждение 🏥 William Osula был заменён в перерыве матча Кубка лиги против Everton (1:3). Нападающий подвернул голеност",
+      "translated": true,
+      "channel_weight": 0.5
+    },
     {
       "id": 8345,
       "channel": "betiper_official",
@@ -1885,16 +1900,16 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-10-31 06:51:58",
-    "last_nonempty_at": "2026-10-31 06:51:58",
-    "live_count": 4,
+    "last_updated": "2026-10-31 12:01:20",
+    "last_nonempty_at": "2026-10-31 12:01:20",
+    "live_count": 5,
     "archived_count": 140,
-    "active_matches": 44,
+    "active_matches": 62,
     "llm_providers": [
       "local",
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-10-31 06:51:58"
+    "checked_at": "2026-10-31 12:01:20"
   }
 }
