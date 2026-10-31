@@ -3,7 +3,7 @@
   "picks_ready": true,
   "deadline": "10-31 22:00",
   "total_matches": 14,
-  "updated_at": "2026-10-31 08:08:36",
+  "updated_at": "2026-11-01 00:28:28",
   "matches": [
     {
       "no": 1,
@@ -411,7 +411,7 @@
       "away": "弗赖堡",
       "away_rank": "3",
       "fid": "1428610",
-      "status": "未开赛",
+      "status": "已完赛",
       "postponed": false,
       "matched_id": null,
       "odds": [
@@ -426,8 +426,8 @@
         "market_depth": "百家平均欧赔开出 2.92 / 3.77 / 2.16，三项期望回报（EV）分别为主胜 -0.087、平局 -0.138、客胜 -0.009。盘面诊断：🎯 高赔杀庄大冷：客胜历史打出率 45%，具备极佳正EV回报。",
         "decision_guide": "传足选号方案：核心首选【客胜(0)】，次选防冷补【平局(1)】，🚨大冷预警留意【主胜(3)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
       },
-      "live_status": "",
-      "score": "",
+      "live_status": "FIN",
+      "score": "1-2",
       "pick_primary": "0",
       "pick_secondary": "1",
       "pick_desc": "",
@@ -463,9 +463,9 @@
           "single_threshold": 0.54
         }
       },
-      "outcome": "",
-      "result": null,
-      "result_text": ""
+      "outcome": "0",
+      "result": "HIT_PRIMARY",
+      "result_text": "首选命中"
     },
     {
       "no": 8,
@@ -477,7 +477,7 @@
       "away": "斯图加",
       "away_rank": "15",
       "fid": "1428606",
-      "status": "未开赛",
+      "status": "已完赛",
       "postponed": false,
       "matched_id": null,
       "odds": [
@@ -492,8 +492,8 @@
         "market_depth": "百家平均欧赔开出 1.75 / 4.27 / 3.75，三项期望回报（EV）分别为主胜 -0.099、平局 +0.141、客胜 -0.183。盘面诊断：⚠️ 胶着震荡预警：历史胜率仅 51%，防平局闷平打出。",
         "decision_guide": "传足选号方案：核心首选【主胜(3)】，次选防冷补【平局(1)】。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
       },
-      "live_status": "",
-      "score": "",
+      "live_status": "FIN",
+      "score": "2-4",
       "pick_primary": "3",
       "pick_secondary": "1",
       "pick_desc": "",
@@ -529,9 +529,9 @@
           "single_threshold": 0.54
         }
       },
-      "outcome": "",
-      "result": null,
-      "result_text": ""
+      "outcome": "0",
+      "result": "MISS",
+      "result_text": "未中"
     },
     {
       "no": 9,
