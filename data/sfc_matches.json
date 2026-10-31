@@ -3,7 +3,7 @@
   "picks_ready": true,
   "deadline": "10-31 22:00",
   "total_matches": 14,
-  "updated_at": "2026-11-01 00:28:28",
+  "updated_at": "2026-11-01 00:38:28",
   "matches": [
     {
       "no": 1,
@@ -543,7 +543,7 @@
       "away": "莱比锡红牛",
       "away_rank": "6",
       "fid": "1428622",
-      "status": "未开赛",
+      "status": "已完赛",
       "postponed": false,
       "matched_id": null,
       "odds": [
@@ -558,8 +558,8 @@
         "market_depth": "百家平均欧赔开出 3.67 / 3.86 / 1.85，三项期望回报（EV）分别为主胜 -0.250、平局 +0.338、客胜 -0.170。盘面诊断：盘面处于正常期望区间。",
         "decision_guide": "传足选号方案：核心首选【客胜(0)】（单挑作胆）。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
       },
-      "live_status": "",
-      "score": "",
+      "live_status": "FIN",
+      "score": "0-2",
       "pick_primary": "0",
       "pick_secondary": null,
       "pick_desc": "",
@@ -595,9 +595,9 @@
           "single_threshold": 0.54
         }
       },
-      "outcome": "",
-      "result": null,
-      "result_text": ""
+      "outcome": "0",
+      "result": "HIT_PRIMARY",
+      "result_text": "首选命中"
     },
     {
       "no": 10,
