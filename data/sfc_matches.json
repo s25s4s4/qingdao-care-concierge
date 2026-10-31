@@ -3,7 +3,7 @@
   "picks_ready": true,
   "deadline": "10-31 22:00",
   "total_matches": 14,
-  "updated_at": "2026-11-01 05:48:27",
+  "updated_at": "2026-11-01 06:08:27",
   "matches": [
     {
       "no": 1,
@@ -345,7 +345,7 @@
       "away": "富勒姆",
       "away_rank": "15",
       "fid": "1420516",
-      "status": "未开赛",
+      "status": "已完赛",
       "postponed": false,
       "matched_id": null,
       "odds": [
@@ -360,8 +360,8 @@
         "market_depth": "百家平均欧赔开出 1.98 / 3.55 / 3.54，三项期望回报（EV）分别为主胜 -0.142、平局 -0.036、客胜 +0.045。盘面诊断：盘面处于正常期望区间。",
         "decision_guide": "传足选号方案：核心首选【主胜(3)】（单挑作胆）。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
       },
-      "live_status": "",
-      "score": "",
+      "live_status": "FIN",
+      "score": "1-1",
       "pick_primary": "3",
       "pick_secondary": null,
       "pick_desc": "",
@@ -397,9 +397,9 @@
           "single_threshold": 0.54
         }
       },
-      "outcome": "",
-      "result": null,
-      "result_text": ""
+      "outcome": "1",
+      "result": "MISS",
+      "result_text": "未中"
     },
     {
       "no": 7,
@@ -873,7 +873,7 @@
       "away": "阿拉维",
       "away_rank": "7",
       "fid": "1428121",
-      "status": "未开赛",
+      "status": "已完赛",
       "postponed": false,
       "matched_id": null,
       "odds": [
@@ -888,8 +888,8 @@
         "market_depth": "百家平均欧赔开出 1.12 / 8.87 / 16.64，三项期望回报（EV）分别为主胜 -0.097、平局 +0.161、客胜 +0.048。盘面诊断：盘面处于正常期望区间。",
         "decision_guide": "传足选号方案：核心首选【主胜(3)】（单挑作胆）。任九做胆优先选择★★★★☆及以上高确定性单挑场次，14场复式方案建议在胶着战双选防平容错。"
       },
-      "live_status": "",
-      "score": "",
+      "live_status": "FIN",
+      "score": "6-1",
       "pick_primary": "3",
       "pick_secondary": null,
       "pick_desc": "",
@@ -925,9 +925,9 @@
           "single_threshold": 0.54
         }
       },
-      "outcome": "",
-      "result": null,
-      "result_text": ""
+      "outcome": "3",
+      "result": "HIT_PRIMARY",
+      "result_text": "首选命中"
     }
   ],
   "previous_period": {
