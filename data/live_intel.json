@@ -1,7 +1,52 @@
 {
-  "updated_at": "2026-10-31 20:54:14",
-  "total_tips": 6,
+  "updated_at": "2026-10-31 22:27:52",
+  "total_tips": 7,
   "live_feed": [
+    {
+      "id": 8466,
+      "channel": "forepitch_tips",
+      "time": "2026-10-31 17:08",
+      "code": "周六006",
+      "key": "20261031_周六006",
+      "league": "英超",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "切尔西 VS 曼联",
+      "chinese": "本场切尔西（主）对曼联（客），模型客胜仅23%，主胜占优。预计进1.9至1.3，大2球靠谱。近5场主负客平，不稳。机构偏主，资金往主队。",
+      "original": "⭐ Match of the day Chelsea — Manchester United Premier League, 12:30 UTC Model: 1 50% · X 26% · 2 23% Most likely score: 2:0 Expected goals: 1.9–1.3 Form (last ",
+      "translated": true,
+      "channel_weight": 0.5
+    },
+    {
+      "id": 8253,
+      "channel": "FabrizioRomano",
+      "time": "2026-10-31 00:33",
+      "code": "周六006",
+      "key": "20261031_周六006",
+      "league": "英超",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "切尔西 VS 曼联",
+      "chinese": "周六006切尔西曼联，门将拉科腿筋伤缺阵多周，连国际赛也报销！机构明显看好客队，盘口倾向客让平/负，大小球偏小。资金暗流全涌向客胜！",
+      "original": "🚨 🔵 Maxence Lacroix will be out for several weeks and likely to be back only in 2027 with hamstring injury. Bad news for Chelsea as also France have ruled Lacro",
+      "translated": true,
+      "channel_weight": 0.5
+    },
+    {
+      "id": 8151,
+      "channel": "forepitch_tips",
+      "time": "2026-10-30 16:01",
+      "code": "周六006",
+      "key": "20261031_周六006",
+      "league": "英超",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "切尔西 VS 曼联",
+      "chinese": "周六(切尔西)打(曼联)，盘口主胜过半，资金明显压注主队。客胜平局不到三成，这场主胜稳。阵容伤停暂无确切情报，老球探看基本面。",
+      "original": "📋 Round preview 1 · X · 2 Premier League Chelsea — Manchester United: 50% · 26% · 24% AFC Bournemouth — Leeds United: 47% · 27% · 26% Brentford — Nottingham For",
+      "translated": true,
+      "channel_weight": 0.5
+    },
     {
       "id": 8450,
       "channel": "betminesfootballpredictions",
@@ -44,36 +89,6 @@
       "match": "不来梅 VS 霍芬海姆",
       "chinese": "周六22:30不来梅(沃尔夫斯堡)VS霍芬海姆(拜耳竞技)! 盘口主胜3.04深盘，资金暗流偏谨慎，返率高提示走盘平局。核心伤停阵容未明，暂无轮换信号。",
       "original": "🌟 Betiper Elite Picks — Tomorrow's Top Tips (October 31, 2026) Handpicked from top tipsters by profit and recent form — up to 3 tips, one tipster each, quality ",
-      "translated": true,
-      "channel_weight": 0.5
-    },
-    {
-      "id": 8253,
-      "channel": "FabrizioRomano",
-      "time": "2026-10-31 00:33",
-      "code": "周六006",
-      "key": "20261031_周六006",
-      "league": "英超",
-      "category": "赛前军情",
-      "is_tip": false,
-      "match": "切尔西 VS 曼联",
-      "chinese": "周六006切尔西曼联，门将拉科腿筋伤缺阵多周，连国际赛也报销！机构明显看好客队，盘口倾向客让平/负，大小球偏小。资金暗流全涌向客胜！",
-      "original": "🚨 🔵 Maxence Lacroix will be out for several weeks and likely to be back only in 2027 with hamstring injury. Bad news for Chelsea as also France have ruled Lacro",
-      "translated": true,
-      "channel_weight": 0.5
-    },
-    {
-      "id": 8151,
-      "channel": "forepitch_tips",
-      "time": "2026-10-30 16:01",
-      "code": "周六006",
-      "key": "20261031_周六006",
-      "league": "英超",
-      "category": "赛前军情",
-      "is_tip": false,
-      "match": "切尔西 VS 曼联",
-      "chinese": "周六(切尔西)打(曼联)，盘口主胜过半，资金明显压注主队。客胜平局不到三成，这场主胜稳。阵容伤停暂无确切情报，老球探看基本面。",
-      "original": "📋 Round preview 1 · X · 2 Premier League Chelsea — Manchester United: 50% · 26% · 24% AFC Bournemouth — Leeds United: 47% · 27% · 26% Brentford — Nottingham For",
       "translated": true,
       "channel_weight": 0.5
     },
@@ -1915,9 +1930,9 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-10-31 20:54:14",
-    "last_nonempty_at": "2026-10-31 20:54:14",
-    "live_count": 6,
+    "last_updated": "2026-10-31 22:27:52",
+    "last_nonempty_at": "2026-10-31 22:27:52",
+    "live_count": 7,
     "archived_count": 140,
     "active_matches": 57,
     "llm_providers": [
@@ -1925,6 +1940,6 @@
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-10-31 20:54:14"
+    "checked_at": "2026-10-31 22:27:52"
   }
 }
