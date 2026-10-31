@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-01 04:37:11",
-  "total_tips": 4,
+  "updated_at": "2026-11-01 06:45:28",
+  "total_tips": 3,
   "live_feed": [
     {
       "id": 8607,
@@ -14,21 +14,6 @@
       "match": "埃尔切 VS 巴伦西亚",
       "chinese": "穆里尼奥七日连踢三场仅休两天，埃尔切核心主力轮休概率大。穆帅称愿让客队“伤心”，暗示轮换为主，平局或客胜（巴伦西亚）可期。盘口未明，资金暗流待察。",
       "original": "🚨 José Mourinho: “We had to play tomorrow, we play today. We had to play Sunday in Valencia, we play Saturday”. “Three games with three travels in 7 days, two d",
-      "translated": true,
-      "channel_weight": 0.5
-    },
-    {
-      "id": 8429,
-      "channel": "sure2scoreprediction",
-      "time": "2026-10-31 15:11",
-      "code": "周六027",
-      "key": "20261101_周六027",
-      "league": "西甲",
-      "category": "推单·已开赛",
-      "is_tip": true,
-      "match": "巴萨 VS 阿拉维斯",
-      "chinese": "本场周六027西甲，巴萨主场打阿拉维斯，机构明确指向大球，盘口水位仅零点二四，资金暗流明显偏热盘，各位老客务必盯紧大球方向！",
-      "original": "FREE FOOTBALL TIPS ✅ ✅ ✅ 31/10/26 Turkey Süper Lig Fenerbahçe vs Göztepe 🚀 🚀 🚀 Prediction: Home to Win Odds .35 Spain - LaLiga Levante vs Atl. Madrid 🚀 🚀 🚀 Pred",
       "translated": true,
       "channel_weight": 0.5
     },
@@ -64,6 +49,21 @@
     }
   ],
   "archived": [
+    {
+      "id": 8429,
+      "channel": "sure2scoreprediction",
+      "time": "2026-10-31 15:11",
+      "code": "周六027",
+      "key": "20261101_周六027",
+      "league": "西甲",
+      "category": "推单·已开赛",
+      "is_tip": true,
+      "match": "巴萨 VS 阿拉维斯",
+      "chinese": "本场周六027西甲，巴萨主场打阿拉维斯，机构明确指向大球，盘口水位仅零点二四，资金暗流明显偏热盘，各位老客务必盯紧大球方向！",
+      "original": "FREE FOOTBALL TIPS ✅ ✅ ✅ 31/10/26 Turkey Süper Lig Fenerbahçe vs Göztepe 🚀 🚀 🚀 Prediction: Home to Win Odds .35 Spain - LaLiga Levante vs Atl. Madrid 🚀 🚀 🚀 Pred",
+      "translated": true,
+      "channel_weight": 0.5
+    },
     {
       "id": 8450,
       "channel": "betminesfootballpredictions",
@@ -1960,16 +1960,16 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-11-01 04:37:11",
-    "last_nonempty_at": "2026-11-01 04:37:11",
-    "live_count": 4,
-    "archived_count": 145,
-    "active_matches": 38,
+    "last_updated": "2026-11-01 06:45:28",
+    "last_nonempty_at": "2026-11-01 06:45:28",
+    "live_count": 3,
+    "archived_count": 146,
+    "active_matches": 34,
     "llm_providers": [
       "local",
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-11-01 04:37:11"
+    "checked_at": "2026-11-01 06:45:28"
   }
 }
