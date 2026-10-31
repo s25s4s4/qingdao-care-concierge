@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-11-01 03:38:47",
-  "total_tips": 3,
+  "updated_at": "2026-11-01 04:37:11",
+  "total_tips": 4,
   "live_feed": [
+    {
+      "id": 8607,
+      "channel": "FabrizioRomano",
+      "time": "2026-10-31 22:53",
+      "code": "周日019",
+      "key": "20261102_周日019",
+      "league": "西甲",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "埃尔切 VS 巴伦西亚",
+      "chinese": "穆里尼奥七日连踢三场仅休两天，埃尔切核心主力轮休概率大。穆帅称愿让客队“伤心”，暗示轮换为主，平局或客胜（巴伦西亚）可期。盘口未明，资金暗流待察。",
+      "original": "🚨 José Mourinho: “We had to play tomorrow, we play today. We had to play Sunday in Valencia, we play Saturday”. “Three games with three travels in 7 days, two d",
+      "translated": true,
+      "channel_weight": 0.5
+    },
     {
       "id": 8429,
       "channel": "sure2scoreprediction",
@@ -1945,16 +1960,16 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-11-01 03:38:47",
-    "last_nonempty_at": "2026-11-01 03:38:47",
-    "live_count": 3,
+    "last_updated": "2026-11-01 04:37:11",
+    "last_nonempty_at": "2026-11-01 04:37:11",
+    "live_count": 4,
     "archived_count": 145,
-    "active_matches": 41,
+    "active_matches": 38,
     "llm_providers": [
       "local",
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-11-01 03:38:47"
+    "checked_at": "2026-11-01 04:37:11"
   }
 }
