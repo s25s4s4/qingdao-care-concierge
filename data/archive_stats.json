@@ -95,7 +95,15 @@
       "teams": 250,
       "teams_ge10": 0,
       "leagues": 30
+    },
+    {
+      "date": "2026-11-01",
+      "total": 240,
+      "added": 0,
+      "teams": 250,
+      "teams_ge10": 0,
+      "leagues": 30
     }
   ],
-  "updated_at": "2026-10-31 23:59:21"
+  "updated_at": "2026-11-01 00:00:30"
 }
