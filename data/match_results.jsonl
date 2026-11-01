@@ -260,3 +260,4 @@
 {"code": "周日002", "date": "2026-11-01", "league": "韩职", "home": "蔚山现代", "away": "江原FC", "hg": 2, "ag": 1, "res": "胜", "src": "live500"}
 {"code": "周日001", "date": "2026-11-01", "league": "日职", "home": "长崎航海", "away": "东京绿茵", "hg": 1, "ag": 2, "res": "负", "src": "live500"}
 {"code": "周日003", "date": "2026-11-01", "league": "日职", "home": "町田泽维", "away": "大阪钢巴", "hg": 0, "ag": 0, "res": "平", "src": "live500"}
+{"code": "周日004", "date": "2026-11-01", "league": "韩职", "home": "首尔FC", "away": "仁川联", "hg": 0, "ag": 1, "res": "负", "src": "live500"}
