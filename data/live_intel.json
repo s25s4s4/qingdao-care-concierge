@@ -1,7 +1,37 @@
 {
-  "updated_at": "2026-11-01 06:45:28",
-  "total_tips": 3,
+  "updated_at": "2026-11-01 11:44:20",
+  "total_tips": 4,
   "live_feed": [
+    {
+      "id": 8467,
+      "channel": "forepitch_tips",
+      "time": "2026-10-31 17:08",
+      "code": "周日016",
+      "key": "20261102_周日016",
+      "league": "英超",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "利物浦 VS 阿森纳",
+      "chinese": "争冠模拟：阿森纳57%（+11），利物浦3%（+1）。机构暗流全压主胜，但利物浦背水一战必全力反扑！大小球留意攻守转换，防平局！",
+      "original": "🏆 Title race Premier League Arsenal — 57% (+11) Manchester City — 35% (-9) Brighton & Hove Albion — 4% (-2) Liverpool — 3% (+1) LaLiga Barcelona — 75% (-12) Rea",
+      "translated": true,
+      "channel_weight": 0.5
+    },
+    {
+      "id": 8017,
+      "channel": "tribuna_football",
+      "time": "2026-10-30 03:54",
+      "code": "周日016",
+      "key": "20261102_周日016",
+      "league": "英超",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "利物浦 VS 阿森纳",
+      "chinese": "周日英超，利物浦对阿森纳，开赛十一月零二点三十分。阿森纳小将多德曼染红，上诉失败，停三场，周末对利物浦。阵容有变，核心缺席。未提让球或大小，不乱说。老球探看着了，走水不走油。",
+      "original": "Arsenal's Max Dowman was sent off against Fleetwood Town, and the club have now failed to overturn the red card 😬 The youngster will serve a THREE-GAME ban, inc",
+      "translated": true,
+      "channel_weight": 0.5
+    },
     {
       "id": 8607,
       "channel": "FabrizioRomano",
@@ -29,21 +59,6 @@
       "match": "纽卡斯尔 VS 埃弗顿",
       "chinese": "赛前情报！周一006纽卡斯尔VS埃弗顿：奥斯拉足踝扭伤半场被换，主帅称周一能否出场尚早。核心缺阵致首发不稳，主胜需谨慎防平。",
       "original": "🚨 Newcastle: William Osula получил новое повреждение 🏥 William Osula был заменён в перерыве матча Кубка лиги против Everton (1:3). Нападающий подвернул голеност",
-      "translated": true,
-      "channel_weight": 0.5
-    },
-    {
-      "id": 8017,
-      "channel": "tribuna_football",
-      "time": "2026-10-30 03:54",
-      "code": "周日016",
-      "key": "20261102_周日016",
-      "league": "英超",
-      "category": "赛前军情",
-      "is_tip": false,
-      "match": "利物浦 VS 阿森纳",
-      "chinese": "周日英超，利物浦对阿森纳，开赛十一月零二点三十分。阿森纳小将多德曼染红，上诉失败，停三场，周末对利物浦。阵容有变，核心缺席。未提让球或大小，不乱说。老球探看着了，走水不走油。",
-      "original": "Arsenal's Max Dowman was sent off against Fleetwood Town, and the club have now failed to overturn the red card 😬 The youngster will serve a THREE-GAME ban, inc",
       "translated": true,
       "channel_weight": 0.5
     }
@@ -1960,9 +1975,9 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-11-01 06:45:28",
-    "last_nonempty_at": "2026-11-01 06:45:28",
-    "live_count": 3,
+    "last_updated": "2026-11-01 11:44:20",
+    "last_nonempty_at": "2026-11-01 11:44:20",
+    "live_count": 4,
     "archived_count": 146,
     "active_matches": 34,
     "llm_providers": [
@@ -1970,6 +1985,6 @@
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-11-01 06:45:28"
+    "checked_at": "2026-11-01 11:44:20"
   }
 }
