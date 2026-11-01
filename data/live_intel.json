@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-11-01 11:44:20",
-  "total_tips": 4,
+  "updated_at": "2026-11-01 16:24:07",
+  "total_tips": 5,
   "live_feed": [
+    {
+      "id": 8610,
+      "channel": "feedinco",
+      "time": "2026-10-31 23:05",
+      "code": "周日013",
+      "key": "20261101_周日013",
+      "league": "意甲",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "拉齐奥 VS 卡利亚里",
+      "chinese": "来，老伙计们听好了！周日这场（拉齐奥）对（卡利亚里），外盘目前给出的倾向是主队不败，看好主胜或平局。没太多花哨的，就走这个方向，稳健一点的直接拿主队不败。",
+      "original": "FEEDINCO.com Tips for Sunday, 01 November 1X - Lazio - Cagliari 1X - Sporting Braga - Famalicão 1X - Trabzonspor - Gazişehir Gaziantep F.K. O1.5 - PEC Zwolle - ",
+      "translated": true,
+      "channel_weight": 0.7812
+    },
     {
       "id": 8467,
       "channel": "forepitch_tips",
@@ -1975,16 +1990,16 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-11-01 11:44:20",
-    "last_nonempty_at": "2026-11-01 11:44:20",
-    "live_count": 4,
+    "last_updated": "2026-11-01 16:24:07",
+    "last_nonempty_at": "2026-11-01 16:24:07",
+    "live_count": 5,
     "archived_count": 146,
-    "active_matches": 34,
+    "active_matches": 32,
     "llm_providers": [
       "local",
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-11-01 11:44:20"
+    "checked_at": "2026-11-01 16:24:07"
   }
 }
