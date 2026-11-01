@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-11-01 16:48:47",
-  "total_tips": 7,
+  "updated_at": "2026-11-01 18:21:53",
+  "total_tips": 8,
   "live_feed": [
+    {
+      "id": 8849,
+      "channel": "matchplug",
+      "time": "2026-11-01 16:21",
+      "code": "周日021",
+      "key": "20261102_周日021",
+      "league": "意甲",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "尤文图斯 VS 那不勒斯",
+      "chinese": "来，老伙计们听好了！这场（尤文图斯）对（那不勒斯），外盘现在盯着双方都有进球，水位在一点七五左右。方向很明确，就看两边能不能互捅，倾向于双方进球。赶紧拿好单子！",
+      "original": "Juventus vs Napoli Serie A · 19:45 UTC Market: BTTS/GG Pick: GG Odds: 1.75",
+      "translated": true,
+      "channel_weight": 0.5
+    },
     {
       "id": 8841,
       "channel": "victorspredict",
@@ -2020,16 +2035,16 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-11-01 16:48:47",
-    "last_nonempty_at": "2026-11-01 16:48:47",
-    "live_count": 7,
+    "last_updated": "2026-11-01 18:21:53",
+    "last_nonempty_at": "2026-11-01 18:21:53",
+    "live_count": 8,
     "archived_count": 146,
-    "active_matches": 32,
+    "active_matches": 29,
     "llm_providers": [
       "local",
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-11-01 16:48:47"
+    "checked_at": "2026-11-01 18:21:53"
   }
 }
