@@ -1,22 +1,7 @@
 {
-  "updated_at": "2026-11-01 18:21:53",
-  "total_tips": 8,
+  "updated_at": "2026-11-01 20:06:54",
+  "total_tips": 12,
   "live_feed": [
-    {
-      "id": 8849,
-      "channel": "matchplug",
-      "time": "2026-11-01 16:21",
-      "code": "周日021",
-      "key": "20261102_周日021",
-      "league": "意甲",
-      "category": "赛前军情",
-      "is_tip": false,
-      "match": "尤文图斯 VS 那不勒斯",
-      "chinese": "来，老伙计们听好了！这场（尤文图斯）对（那不勒斯），外盘现在盯着双方都有进球，水位在一点七五左右。方向很明确，就看两边能不能互捅，倾向于双方进球。赶紧拿好单子！",
-      "original": "Juventus vs Napoli Serie A · 19:45 UTC Market: BTTS/GG Pick: GG Odds: 1.75",
-      "translated": true,
-      "channel_weight": 0.5
-    },
     {
       "id": 8841,
       "channel": "victorspredict",
@@ -48,6 +33,96 @@
       "channel_weight": 0.7812
     },
     {
+      "id": 8900,
+      "channel": "bad_man_betting_tips",
+      "time": "2026-11-01 19:15",
+      "code": "周日013",
+      "key": "20261101_周日013",
+      "league": "意甲",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "拉齐奥 VS 卡利亚里",
+      "chinese": "来，老伙计们听好了！这场（拉齐奥）对（卡利亚里）方向很明确，主胜稳如狗。主队联赛九场赢八场，状态火热；客队最近三场被捅了十个球，防线烂透了。机构态度坚决，直接看好主队大胜，跟进主胜就行！",
+      "original": "Right then, let’s keep this form going. Today’s £10 to £100 Acca is live! 🔗 Load here: Two Best Bet winners already, time for the big one. Full research in the ",
+      "translated": true,
+      "channel_weight": 0.5
+    },
+    {
+      "id": 8898,
+      "channel": "betminesfootballpredictions",
+      "time": "2026-11-01 19:01",
+      "code": "周日007",
+      "key": "20261101_周日007",
+      "league": "意甲",
+      "category": "推单·已开赛",
+      "is_tip": true,
+      "match": "科莫 VS 威尼斯",
+      "chinese": "来，老伙计们听好了！周日这场（科莫）对（威尼斯），保级生死战。主队主场强势，客队客战拉胯，方向明确看好（科莫）主胜，且全场进球数起码两个起步。重点关注主队进攻端，这场球大概率会打得比较开放！",
+      "original": "🔥 sunday FOOTBALL TIPS – FOOTBALL & CARDS ⚽ A weekend full of interesting fixtures, with particular attention to player markets, bookings and special bets. Let’",
+      "translated": true,
+      "channel_weight": 0.5
+    },
+    {
+      "id": 8876,
+      "channel": "prognozy",
+      "time": "2026-11-01 17:36",
+      "code": "周日021",
+      "key": "20261102_周日021",
+      "league": "意甲",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "尤文图斯 VS 那不勒斯",
+      "chinese": "来，老客们听好了！这场（尤文图斯）状态烂透了，防线漏洞大，而且主力前腰和中场缺了一大截，轮换捉襟见肘。反观（那不勒斯）火力正猛，近三场轰进11球。虽然客队也有伤停，但进攻端依然能打。看好（那不勒斯）客场能进球，直接关注客队进球数大1。",
+      "original": "🔥 Ставка дня от TelegaBet 🇮🇹 Ювентус - Наполи 🇮🇹 🇮🇹 Италия, Серия, А, Тур - 10 ⏰ Начало матча в 22:45 МСК Туринцы переживают непростой период: в последних 7 тур",
+      "translated": true,
+      "channel_weight": 0.5
+    },
+    {
+      "id": 8849,
+      "channel": "matchplug",
+      "time": "2026-11-01 16:21",
+      "code": "周日021",
+      "key": "20261102_周日021",
+      "league": "意甲",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "尤文图斯 VS 那不勒斯",
+      "chinese": "来，老伙计们听好了！这场（尤文图斯）对（那不勒斯），外盘现在盯着双方都有进球，水位在一点七五左右。方向很明确，就看两边能不能互捅，倾向于双方进球。赶紧拿好单子！",
+      "original": "Juventus vs Napoli Serie A · 19:45 UTC Market: BTTS/GG Pick: GG Odds: 1.75",
+      "translated": true,
+      "channel_weight": 0.5
+    },
+    {
+      "id": 8839,
+      "channel": "focuspredict",
+      "time": "2026-11-01 16:00",
+      "code": "周日016",
+      "key": "20261102_周日016",
+      "league": "英超",
+      "category": "推单",
+      "is_tip": true,
+      "match": "利物浦 VS 阿森纳",
+      "chinese": "周日016英超，利物浦打阿森纳！盘口大球1.28，资金面偏稳。目前无确切伤停与首发变动消息，两队战意如何还需临场确认，看好进球大战就下大球！",
+      "original": "🎯 ACCA TIPS - 01-11-2026 Liverpool vs Arsenal England: Premier League Prediction: Over 1.5 (1.28) 🔗 View Details Trabzonspor vs Gaziantep FK Turkey: Süper Lig P",
+      "translated": true,
+      "channel_weight": 1.0
+    },
+    {
+      "id": 8872,
+      "channel": "forepitch_tips",
+      "time": "2026-11-01 17:05",
+      "code": "周日016",
+      "key": "20261102_周日016",
+      "league": "英超",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "利物浦 VS 阿森纳",
+      "chinese": "来，老伙计们听好了！这场利物浦打阿森纳，模型跑出来客队稍微占优，胜率接近四成。比分倾向于一比二，进球数看好两三个。目前看好客胜，整体走势偏向客队拿分，大家轻仓参考！",
+      "original": "⭐ Match of the day Liverpool — Arsenal Premier League, 16:30 UTC Model: 1 32% · X 29% · 2 39% Most likely score: 1:2 Expected goals: 1.3–1.4 Form (last 5): Live",
+      "translated": true,
+      "channel_weight": 0.5
+    },
+    {
       "id": 8820,
       "channel": "sure2scoreprediction",
       "time": "2026-11-01 14:31",
@@ -74,21 +149,6 @@
       "match": "利物浦 VS 阿森纳",
       "chinese": "争冠模拟：阿森纳57%（+11），利物浦3%（+1）。机构暗流全压主胜，但利物浦背水一战必全力反扑！大小球留意攻守转换，防平局！",
       "original": "🏆 Title race Premier League Arsenal — 57% (+11) Manchester City — 35% (-9) Brighton & Hove Albion — 4% (-2) Liverpool — 3% (+1) LaLiga Barcelona — 75% (-12) Rea",
-      "translated": true,
-      "channel_weight": 0.5
-    },
-    {
-      "id": 8017,
-      "channel": "tribuna_football",
-      "time": "2026-10-30 03:54",
-      "code": "周日016",
-      "key": "20261102_周日016",
-      "league": "英超",
-      "category": "赛前军情",
-      "is_tip": false,
-      "match": "利物浦 VS 阿森纳",
-      "chinese": "周日英超，利物浦对阿森纳，开赛十一月零二点三十分。阿森纳小将多德曼染红，上诉失败，停三场，周末对利物浦。阵容有变，核心缺席。未提让球或大小，不乱说。老球探看着了，走水不走油。",
-      "original": "Arsenal's Max Dowman was sent off against Fleetwood Town, and the club have now failed to overturn the red card 😬 The youngster will serve a THREE-GAME ban, inc",
       "translated": true,
       "channel_weight": 0.5
     },
@@ -124,6 +184,21 @@
     }
   ],
   "archived": [
+    {
+      "id": 8017,
+      "channel": "tribuna_football",
+      "time": "2026-10-30 03:54",
+      "code": "周日016",
+      "key": "20261102_周日016",
+      "league": "英超",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "利物浦 VS 阿森纳",
+      "chinese": "周日英超，利物浦对阿森纳，开赛十一月零二点三十分。阿森纳小将多德曼染红，上诉失败，停三场，周末对利物浦。阵容有变，核心缺席。未提让球或大小，不乱说。老球探看着了，走水不走油。",
+      "original": "Arsenal's Max Dowman was sent off against Fleetwood Town, and the club have now failed to overturn the red card 😬 The youngster will serve a THREE-GAME ban, inc",
+      "translated": true,
+      "channel_weight": 0.5
+    },
     {
       "id": 8429,
       "channel": "sure2scoreprediction",
@@ -2035,16 +2110,16 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-11-01 18:21:53",
-    "last_nonempty_at": "2026-11-01 18:21:53",
-    "live_count": 8,
-    "archived_count": 146,
+    "last_updated": "2026-11-01 20:06:54",
+    "last_nonempty_at": "2026-11-01 20:06:54",
+    "live_count": 12,
+    "archived_count": 147,
     "active_matches": 29,
     "llm_providers": [
       "local",
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-11-01 18:21:53"
+    "checked_at": "2026-11-01 20:06:54"
   }
 }
