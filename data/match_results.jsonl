@@ -266,3 +266,4 @@
 {"code": "周日007", "date": "2026-11-01", "league": "意甲", "home": "科莫", "away": "威尼斯", "hg": 1, "ag": 0, "res": "胜", "src": "live500"}
 {"code": "周日009", "date": "2026-11-01", "league": "瑞超", "home": "马尔默", "away": "哈马比", "hg": 1, "ag": 2, "res": "负", "src": "live500"}
 {"code": "周日008", "date": "2026-11-01", "league": "西甲", "home": "赫塔费", "away": "塞维利亚", "hg": 3, "ag": 1, "res": "胜", "src": "live500"}
+{"code": "周日010", "date": "2026-11-01", "league": "荷甲", "home": "SBV精英", "away": "特温特", "hg": 0, "ag": 9, "res": "负", "src": "live500"}
