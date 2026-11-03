@@ -147,13 +147,28 @@ def settle_all(matches):
         if not snapshot.get("frozen_at"):
             stats["skipped"] += 1
             continue
-        home = aliases.get(m.get("home"), m.get("home"))
-        away = aliases.get(m.get("away"), m.get("away"))
+        # 正确展开别名候选列表（兼容 list 与 str），严防把列表串化成单个错误字符串！
+        home_raw = aliases.get(m.get("home"), m.get("home"))
+        away_raw = aliases.get(m.get("away"), m.get("away"))
+        home_candidates = home_raw if isinstance(home_raw, list) else [home_raw]
+        away_candidates = away_raw if isinstance(away_raw, list) else [away_raw]
+
         remote = None
         for day in (str(m.get("time", ""))[:5], crosscheck._prev(str(m.get("time", ""))[:5]) if hasattr(crosscheck, "_prev") else None):
             if day and cache.get(day):
-                remote = cache[day].get((crosscheck._norm(home), crosscheck._norm(away)))
-                if remote:
+                day_cache = cache[day]
+                # 遍历双方别名候选列表进行笛卡尔匹配
+                found = False
+                for h_cand in home_candidates:
+                    for a_cand in away_candidates:
+                        k = (crosscheck._norm(h_cand), crosscheck._norm(a_cand))
+                        if k in day_cache:
+                            remote = day_cache[k]
+                            found = True
+                            break
+                    if found:
+                        break
+                if found:
                     break
         outcome = settle(m, remote)
         if outcome is None:

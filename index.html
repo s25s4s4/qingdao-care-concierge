@@ -2738,7 +2738,7 @@
         }
 
         // 渲染大账本表格 (不可篡改真实核销)
-                // 赛果大账本当前选中的分页日期 (默认 'ALL' 或最新的一天)
+                // 赛果大账本当前选中的分页日期 (默认自动选择最新一天)
                 let CURRENT_AUDIT_DAY = 'ALL';
 
                 function setAuditDay(day) {
@@ -2772,6 +2772,7 @@
                     // 业务铁律：只计算单日档期的 ROI，拒绝长久跨周跨月滚雪球累计导致 ROI 持续衰减！
                     // 1. 如果用户点击了具体日期分页（如周五、周六、周日），顶部指标即时动态计算该天专属的 ROI 与命中率！
                     // 2. 如果处于全部或初次进入，自动绑定最新有完赛比赛的当天档期（如周日第一场打完出赛果后，立即自动切换计算周日当天的！）
+                    // 1. 如果用户未主动选定具体日期或处于初次进入，自动绑定最新有完赛比赛的当天档期！
                     let activeDayKey = (CURRENT_AUDIT_DAY !== 'ALL' && CURRENT_AUDIT_DAY !== 'ALL_PAGES') ? CURRENT_AUDIT_DAY : null;
                     if (!activeDayKey) {
                         const settledDayMaxDate = {};
@@ -2785,7 +2786,10 @@
                         const distinctSettledDays = Object.keys(settledDayMaxDate).sort((a, b) =>
                             (settledDayMaxDate[b] || '').localeCompare(settledDayMaxDate[a] || '')
                         );
-                        activeDayKey = distinctSettledDays[0] || '周六';
+                        activeDayKey = distinctSettledDays[0] || '周日';
+                        if (CURRENT_AUDIT_DAY === 'ALL') {
+                            CURRENT_AUDIT_DAY = activeDayKey;
+                        }
                     }
 
                     if (todayTitleElem) todayTitleElem.innerText = `${activeDayKey}命中率`;
