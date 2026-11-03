@@ -1,7 +1,82 @@
 {
-  "updated_at": "2026-11-03 17:34:05",
-  "total_tips": 4,
+  "updated_at": "2026-11-03 19:03:02",
+  "total_tips": 8,
   "live_feed": [
+    {
+      "id": 9553,
+      "channel": "forepitch_tips",
+      "time": "2026-11-03 17:04",
+      "code": "周二005",
+      "key": "20261104_周二005",
+      "league": "欧冠",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "马竞 VS 拜仁",
+      "chinese": "来，老伙计们听好了！周二这场马竞对拜仁，模型跑出来客胜概率接近一半，倾向拜仁直接拿走。比分看好一比二，进球数往大走。目前看拜仁状态更稳，机构那边风向偏客队，建议关注客胜。",
+      "original": "⭐ Match of the day Atlético Madrid — Bayern München Champions League, 20:00 UTC Model: 1 27% · X 25% · 2 47% Most likely score: 1:2 Expected goals: 1.2–1.7 Form",
+      "translated": true,
+      "channel_weight": 0.5
+    },
+    {
+      "id": 9466,
+      "channel": "betminesfootballpredictions",
+      "time": "2026-11-03 14:24",
+      "code": "周二005",
+      "key": "20261104_周二005",
+      "league": "欧冠",
+      "category": "推单",
+      "is_tip": true,
+      "match": "马竞 VS 拜仁",
+      "chinese": "来，老客们听好了！马竞对拜仁这场，我看是个死局。两边战术博弈太深，大概率会陷入僵持。方向直接看平局，甚至半场全场双平。重点关注两边核心的个人发挥，整体走势偏保守，别盲目追高。",
+      "original": "⚽ 🔥 CHAMPIONS LEAGUE – OUR PICKS 🔥 ⚽ A fantastic night of European football ahead! Here are our predictions and special player markets for tonight’s games. 🎯 🔴 ",
+      "translated": true,
+      "channel_weight": 0.5
+    },
+    {
+      "id": 9510,
+      "channel": "sure2scoreprediction",
+      "time": "2026-11-03 15:53",
+      "code": "周二008",
+      "key": "20261104_周二008",
+      "league": "欧冠",
+      "category": "推单",
+      "is_tip": true,
+      "match": "曼联 VS 罗马",
+      "chinese": "来，老伙计们听好了！周二这场（曼联）对（罗马），外盘给出的方向很明确，倾向于分胜负，走两头，不看好平局。目前水位在零点二八左右，机构态度比较坚决，建议关注主胜或客胜。",
+      "original": "FREE FOOTBALL TIPS ✅ ✅ ✅ 03/11/26 UEFA Champions League Shakhtar Donetsk Vs Sporting CP 🚀 🚀 🚀 Prediction: Over 1.5 Goals Odds .25 UEFA Champions League Manchest",
+      "translated": true,
+      "channel_weight": 0.5
+    },
+    {
+      "id": 9262,
+      "channel": "FabrizioRomano",
+      "time": "2026-11-02 19:58",
+      "code": "周二008",
+      "key": "20261104_周二008",
+      "league": "欧冠",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "曼联 VS 罗马",
+      "chinese": "老客们听好，曼联这边有新动向，多尔古已经回到了球队训练，这场对阵罗马能顶上。目前看主力阵容在补齐，主队状态在回升。盯着盘口走，关注主胜方向。",
+      "original": "🚨 Patrick Dorgu returns in team training with Man United squad ahead of AS Roma game.",
+      "translated": true,
+      "channel_weight": 0.5
+    },
+    {
+      "id": 9320,
+      "channel": "feedinco",
+      "time": "2026-11-02 23:05",
+      "code": "周二007",
+      "key": "20261104_周二007",
+      "league": "欧冠",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "费耶诺德 VS 国际米兰",
+      "chinese": "老客们听好，周二凌晨这场（费耶诺德）对（国际米兰），情报简单：方向看好大球，预计进球数在两个及以上。目前没看到核心伤停或盘口异动，就盯着进球数走，稳健点。",
+      "original": "FEEDINCO.com Tips for Tuesday, 03 November 1X - Birmingham City - Millwall FC O1.5 - Feyenoord - Inter O1.5 - LASK Linz - Slovan Bratislava X2 - Villarreal - PS",
+      "translated": true,
+      "channel_weight": 0.7931
+    },
     {
       "id": 9513,
       "channel": "football_predictions_ai",
@@ -46,21 +121,6 @@
       "original": "⭐ SUPER SINGLE TIP - 03-11-2026 Villarreal vs Paris Saint Germain World: UEFA Champions League Prediction: Away (1.77) 🔗 View Details ⚠️ All predictions are inf",
       "translated": true,
       "channel_weight": 1.0
-    },
-    {
-      "id": 9466,
-      "channel": "betminesfootballpredictions",
-      "time": "2026-11-03 14:24",
-      "code": "周二005",
-      "key": "20261104_周二005",
-      "league": "欧冠",
-      "category": "推单",
-      "is_tip": true,
-      "match": "马竞 VS 拜仁",
-      "chinese": "来，老客们听好了！马竞对拜仁这场，我看是个死局。两边战术博弈太深，大概率会陷入僵持。方向直接看平局，甚至半场全场双平。重点关注两边核心的个人发挥，整体走势偏保守，别盲目追高。",
-      "original": "⚽ 🔥 CHAMPIONS LEAGUE – OUR PICKS 🔥 ⚽ A fantastic night of European football ahead! Here are our predictions and special player markets for tonight’s games. 🎯 🔴 ",
-      "translated": true,
-      "channel_weight": 0.5
     }
   ],
   "archived": [
@@ -2200,16 +2260,16 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-11-03 17:34:05",
-    "last_nonempty_at": "2026-11-03 17:34:05",
-    "live_count": 4,
+    "last_updated": "2026-11-03 19:03:02",
+    "last_nonempty_at": "2026-11-03 19:03:02",
+    "live_count": 8,
     "archived_count": 161,
-    "active_matches": 21,
+    "active_matches": 20,
     "llm_providers": [
       "local",
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-11-03 17:34:05"
+    "checked_at": "2026-11-03 19:03:02"
   }
 }
