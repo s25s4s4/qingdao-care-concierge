@@ -1,7 +1,37 @@
 {
-  "updated_at": "2026-11-04 00:45:09",
-  "total_tips": 11,
+  "updated_at": "2026-11-04 03:21:32",
+  "total_tips": 12,
   "live_feed": [
+    {
+      "id": 9622,
+      "channel": "forepitch_tips",
+      "time": "2026-11-03 23:16",
+      "code": "周二004",
+      "key": "20261104_周二004",
+      "league": "欧冠",
+      "category": "推单·已开赛",
+      "is_tip": true,
+      "match": "加拉塔萨 VS 斯图加特",
+      "chinese": "本场加拉塔萨对阵斯图加特，主胜或平局方向明确（68%），大2.5球偏热（56%），双方进球看好（57%），预计2:0。盘口模型截至开赛前或异动，资金暗流需防！",
+      "original": "⚽ Champions League · 3 November, 17:45 UTC Galatasaray — VfB Stuttgart A confident lean, not a certainty. 🎯 Main pick: Galatasaray win or draw · 68% Home 50% · ",
+      "translated": true,
+      "channel_weight": 0.5
+    },
+    {
+      "id": 9513,
+      "channel": "football_predictions_ai",
+      "time": "2026-11-03 17:00",
+      "code": "周二004",
+      "key": "20261104_周二004",
+      "league": "欧冠",
+      "category": "推单",
+      "is_tip": true,
+      "match": "加拉塔萨 VS 斯图加特",
+      "chinese": "周二欧冠：加拉塔萨VS斯图加特！大2.5赔率1.33，资金暗流全压大球。客队客场仅赢1胜，但斯图加特五连胜且点球全中，攻击端状态炸裂。暂无核心伤停，机构看好大球。",
+      "original": "🔥 HOT PICK 🌍 UEFA Champions League 🆚 Galatasaray vs VfB Stuttgart 🕐 Tue, 3 Nov · 17:45 UTC 💡 Over/Under: Over 2.5 📊 Odds: 1.33 ✅ Confidence: 71% 📌 Match Facts •",
+      "translated": true,
+      "channel_weight": 0.5
+    },
     {
       "id": 9609,
       "channel": "letalbets",
@@ -121,21 +151,6 @@
       "original": "FEEDINCO.com Tips for Tuesday, 03 November 1X - Birmingham City - Millwall FC O1.5 - Feyenoord - Inter O1.5 - LASK Linz - Slovan Bratislava X2 - Villarreal - PS",
       "translated": true,
       "channel_weight": 0.7931
-    },
-    {
-      "id": 9513,
-      "channel": "football_predictions_ai",
-      "time": "2026-11-03 17:00",
-      "code": "周二004",
-      "key": "20261104_周二004",
-      "league": "欧冠",
-      "category": "推单",
-      "is_tip": true,
-      "match": "加拉塔萨 VS 斯图加特",
-      "chinese": "周二欧冠：加拉塔萨VS斯图加特！大2.5赔率1.33，资金暗流全压大球。客队客场仅赢1胜，但斯图加特五连胜且点球全中，攻击端状态炸裂。暂无核心伤停，机构看好大球。",
-      "original": "🔥 HOT PICK 🌍 UEFA Champions League 🆚 Galatasaray vs VfB Stuttgart 🕐 Tue, 3 Nov · 17:45 UTC 💡 Over/Under: Over 2.5 📊 Odds: 1.33 ✅ Confidence: 71% 📌 Match Facts •",
-      "translated": true,
-      "channel_weight": 0.5
     },
     {
       "id": 9500,
@@ -2305,9 +2320,9 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-11-04 00:45:09",
-    "last_nonempty_at": "2026-11-04 00:45:09",
-    "live_count": 11,
+    "last_updated": "2026-11-04 03:21:32",
+    "last_nonempty_at": "2026-11-04 03:21:32",
+    "live_count": 12,
     "archived_count": 161,
     "active_matches": 18,
     "llm_providers": [
@@ -2315,6 +2330,6 @@
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-11-04 00:45:09"
+    "checked_at": "2026-11-04 03:21:32"
   }
 }
