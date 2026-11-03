@@ -1,7 +1,38 @@
 {
-  "updated_at": "2026-11-03 12:02:23",
-  "total_tips": 0,
-  "live_feed": [],
+  "updated_at": "2026-11-03 16:31:47",
+  "total_tips": 2,
+  "live_feed": [
+    {
+      "id": 9499,
+      "channel": "victorspredict",
+      "time": "2026-11-03 16:00",
+      "code": "周二010",
+      "key": "20261104_周二010",
+      "league": "欧冠",
+      "category": "推单",
+      "is_tip": true,
+      "match": "比利亚雷 VS 巴黎圣曼",
+      "chinese": "来，老伙计们听好了！周二这场欧冠，比利亚雷对巴黎圣曼，外盘现在直接看好客胜，水位在一点七七左右。没啥花活，方向明确，就盯着客队赢球走。稳一手，跟客胜！",
+      "original": "⭐ SUPER SINGLE TIP - 03-11-2026 Villarreal vs Paris Saint Germain World: UEFA Champions League Prediction: Away (1.77) 🔗 View Details ⚠️ All predictions are inf",
+      "translated": true,
+      "channel_weight": 1.0
+    },
+    {
+      "id": 9466,
+      "channel": "betminesfootballpredictions",
+      "time": "2026-11-03 14:24",
+      "code": "周二005",
+      "key": "20261104_周二005",
+      "league": "欧冠",
+      "category": "推单",
+      "is_tip": true,
+      "match": "马竞 VS 拜仁",
+      "chinese": "来，老客们听好了！马竞对拜仁这场，我看是个死局。两边战术博弈太深，大概率会陷入僵持。方向直接看平局，甚至半场全场双平。重点关注两边核心的个人发挥，整体走势偏保守，别盲目追高。",
+      "original": "⚽ 🔥 CHAMPIONS LEAGUE – OUR PICKS 🔥 ⚽ A fantastic night of European football ahead! Here are our predictions and special player markets for tonight’s games. 🎯 🔴 ",
+      "translated": true,
+      "channel_weight": 0.5
+    }
+  ],
   "archived": [
     {
       "id": 8839,
@@ -2139,9 +2170,9 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-11-03 12:02:23",
-    "last_nonempty_at": "2026-11-03 10:47:21",
-    "live_count": 0,
+    "last_updated": "2026-11-03 16:31:47",
+    "last_nonempty_at": "2026-11-03 16:31:47",
+    "live_count": 2,
     "archived_count": 161,
     "active_matches": 21,
     "llm_providers": [
@@ -2149,6 +2180,6 @@
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-11-03 12:02:23"
+    "checked_at": "2026-11-03 16:31:47"
   }
 }
