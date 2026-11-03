@@ -1,7 +1,37 @@
 {
-  "updated_at": "2026-11-03 16:31:47",
-  "total_tips": 2,
+  "updated_at": "2026-11-03 17:34:05",
+  "total_tips": 4,
   "live_feed": [
+    {
+      "id": 9513,
+      "channel": "football_predictions_ai",
+      "time": "2026-11-03 17:00",
+      "code": "周二004",
+      "key": "20261104_周二004",
+      "league": "欧冠",
+      "category": "推单",
+      "is_tip": true,
+      "match": "加拉塔萨 VS 斯图加特",
+      "chinese": "周二欧冠：加拉塔萨VS斯图加特！大2.5赔率1.33，资金暗流全压大球。客队客场仅赢1胜，但斯图加特五连胜且点球全中，攻击端状态炸裂。暂无核心伤停，机构看好大球。",
+      "original": "🔥 HOT PICK 🌍 UEFA Champions League 🆚 Galatasaray vs VfB Stuttgart 🕐 Tue, 3 Nov · 17:45 UTC 💡 Over/Under: Over 2.5 📊 Odds: 1.33 ✅ Confidence: 71% 📌 Match Facts •",
+      "translated": true,
+      "channel_weight": 0.5
+    },
+    {
+      "id": 9500,
+      "channel": "victorspredict",
+      "time": "2026-11-03 16:00",
+      "code": "周二009",
+      "key": "20261104_周二009",
+      "league": "欧冠",
+      "category": "推单",
+      "is_tip": true,
+      "match": "巴萨 VS 维拉",
+      "chinese": "来，老伙计们听好了！周二这场巴塞罗那打阿斯顿维拉，外盘方向很明确，直接看好主胜，目前水位在一点三二左右。没什么花活，就是主队稳赢的节奏，想拿稳的直接跟主胜！",
+      "original": "🏆 BANKER TIPS - 03-11-2026 Barcelona vs Aston Villa World: UEFA Champions League Prediction: Home (1.32) 🔗 View Details River Plate Res. vs Tigre Res. Argentina",
+      "translated": true,
+      "channel_weight": 1.0
+    },
     {
       "id": 9499,
       "channel": "victorspredict",
@@ -2170,9 +2200,9 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-11-03 16:31:47",
-    "last_nonempty_at": "2026-11-03 16:31:47",
-    "live_count": 2,
+    "last_updated": "2026-11-03 17:34:05",
+    "last_nonempty_at": "2026-11-03 17:34:05",
+    "live_count": 4,
     "archived_count": 161,
     "active_matches": 21,
     "llm_providers": [
@@ -2180,6 +2210,6 @@
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-11-03 16:31:47"
+    "checked_at": "2026-11-03 17:34:05"
   }
 }
