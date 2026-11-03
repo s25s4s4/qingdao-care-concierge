@@ -273,3 +273,8 @@
 {"code": "周日014", "date": "2026-11-01", "league": "德甲", "home": "柏林联合", "away": "科隆", "hg": 1, "ag": 0, "res": "胜", "src": "live500"}
 {"code": "周日019", "date": "2026-11-02", "league": "西甲", "home": "埃尔切", "away": "巴伦西亚", "hg": 0, "ag": 1, "res": "负", "src": "live500"}
 {"code": "周日025", "date": "2026-11-02", "league": "美职足", "home": "新英格兰", "away": "迈阿密国际", "hg": 1, "ag": 2, "res": "负", "src": "live500"}
+{"code": "周日016", "date": "2026-11-02", "league": "英超", "home": "利物浦", "away": "阿森纳", "hg": 0, "ag": 1, "res": "负", "src": "live500"}
+{"code": "周日017", "date": "2026-11-02", "league": "德甲", "home": "法兰克福", "away": "汉堡", "hg": 3, "ag": 1, "res": "胜", "src": "live500"}
+{"code": "周日018", "date": "2026-11-02", "league": "意甲", "home": "莱切", "away": "热那亚", "hg": 1, "ag": 2, "res": "负", "src": "live500"}
+{"code": "周日021", "date": "2026-11-02", "league": "意甲", "home": "尤文图斯", "away": "那不勒斯", "hg": 2, "ag": 0, "res": "胜", "src": "live500"}
+{"code": "周日022", "date": "2026-11-02", "league": "法甲", "home": "马赛", "away": "图卢兹", "hg": 2, "ag": 0, "res": "胜", "src": "live500"}
