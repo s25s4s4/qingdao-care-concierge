@@ -1,7 +1,37 @@
 {
-  "updated_at": "2026-11-03 19:03:02",
-  "total_tips": 8,
+  "updated_at": "2026-11-03 21:03:54",
+  "total_tips": 10,
   "live_feed": [
+    {
+      "id": 9561,
+      "channel": "matchplug",
+      "time": "2026-11-03 19:57",
+      "code": "周二005",
+      "key": "20261104_周二005",
+      "league": "欧冠",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "马竞 VS 拜仁",
+      "chinese": "来，老伙计们听好了！周二这场（马德里竞技）对（拜仁慕尼黑），情报很简单：直接看双方都有进球，两边都能破门。目前水位在一点四左右，走势很稳。别想太多，就盯着进球数走，稳健！",
+      "original": "Atletico Madrid vs Bayern München UEFA Champions League · 20:00 UTC Market: BTTS/GG Pick: GG Odds: 1.4",
+      "translated": true,
+      "channel_weight": 0.5
+    },
+    {
+      "id": 9492,
+      "channel": "olimpbet",
+      "time": "2026-11-03 14:59",
+      "code": "周二005",
+      "key": "20261104_周二005",
+      "league": "欧冠",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "马竞 VS 拜仁",
+      "chinese": "来，老伙计们听好了！马竞对拜仁这场，重点看双方能不能都进球。拜仁最近七场比赛全进了也丢了，这个趋势很稳，目前两队互进的赔率在一点四左右，走这个方向比较稳当。",
+      "original": "🔥 МОЩНЕЕ УЖЕ НЕ БУДЕТ — МНОГО СОБЫТИЙ СЕГОДНЯ 👉 Рублёв начнёт в Париже с зарубы с Этчеверри — у аргентинца лузстрик из 6 матчей. Берём победу Андрея за 1.39? 👉 ",
+      "translated": true,
+      "channel_weight": 0.5
+    },
     {
       "id": 9553,
       "channel": "forepitch_tips",
@@ -2260,16 +2290,16 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-11-03 19:03:02",
-    "last_nonempty_at": "2026-11-03 19:03:02",
-    "live_count": 8,
+    "last_updated": "2026-11-03 21:03:54",
+    "last_nonempty_at": "2026-11-03 21:03:54",
+    "live_count": 10,
     "archived_count": 161,
-    "active_matches": 20,
+    "active_matches": 19,
     "llm_providers": [
       "local",
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-11-03 19:03:02"
+    "checked_at": "2026-11-03 21:03:54"
   }
 }
