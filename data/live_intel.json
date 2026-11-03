@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-04 04:53:34",
-  "total_tips": 10,
+  "updated_at": "2026-11-04 06:35:46",
+  "total_tips": 1,
   "live_feed": [
     {
       "id": 9609,
@@ -16,7 +16,9 @@
       "original": "UEFA Champions League RC Lens - Como Más de 3.5 tarjetas Cuota: 1.76 Stake: 1.5 Casa: Kirolbet Cuota mínima: 1.65 Alternativas: .80 888sport, Bet365, .78 Pinnac",
       "translated": true,
       "channel_weight": 0.5
-    },
+    }
+  ],
+  "archived": [
     {
       "id": 9561,
       "channel": "matchplug",
@@ -151,9 +153,7 @@
       "original": "⭐ SUPER SINGLE TIP - 03-11-2026 Villarreal vs Paris Saint Germain World: UEFA Champions League Prediction: Away (1.77) 🔗 View Details ⚠️ All predictions are inf",
       "translated": true,
       "channel_weight": 1.0
-    }
-  ],
-  "archived": [
+    },
     {
       "id": 9622,
       "channel": "forepitch_tips",
@@ -2320,16 +2320,16 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-11-04 04:53:34",
-    "last_nonempty_at": "2026-11-04 04:53:34",
-    "live_count": 10,
-    "archived_count": 163,
-    "active_matches": 17,
+    "last_updated": "2026-11-04 06:35:46",
+    "last_nonempty_at": "2026-11-04 06:35:46",
+    "live_count": 1,
+    "archived_count": 172,
+    "active_matches": 10,
     "llm_providers": [
       "local",
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-11-04 04:53:34"
+    "checked_at": "2026-11-04 06:35:46"
   }
 }
