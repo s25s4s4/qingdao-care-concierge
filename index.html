@@ -3,7 +3,7 @@
 <head>
     <script>
     (function() {
-        const CURRENT_VERSION = '20261103-v2';
+        const CURRENT_VERSION = '20261103-v3';
         const saved = localStorage.getItem('app_root_version');
         if (saved !== CURRENT_VERSION) {
             try {
@@ -1353,7 +1353,7 @@
     // 【强制版本控制】页面级JS代码版本 - 解决浏览器缓存旧代码问题
     // 每次修改index.html后，递增此版本号
     // ========================================================================
-    const APP_JS_VERSION = '20261103-v1';  // ← 修改这里递增版本
+    const APP_JS_VERSION = '20261103-v3';  // ← 修改这里递增版本
     const LAST_JS_VERSION = localStorage.getItem('jc_js_version');
 
     // 版本不匹配 → 强制清除所有缓存并刷新（只刷新一次）
@@ -3117,7 +3117,11 @@
                             }
                         }).join('');
 
-                        const shortTagText = isPostponed ? '🟡 延期' : (isHit ? '✔ 命中' : '✖ 未中');
+                        const shortTagText = isPostponed ? '🟡 延期' : (isHit ? '✔ 命中' : (isMiss ? '✖ 未中' : '⏳ 待核验'));
+                        if (!isHit && !isMiss && !isPostponed) {
+                            tagClass = 'tag-pending';
+                            scoreColor = 'var(--text-tertiary)';
+                        }
                         tr.innerHTML = `
                             <td style="font-size: 11px; line-height: 1.35;">
                                 <div style="font-family: var(--font-mono); font-size: 10px; color: var(--text-secondary);">
