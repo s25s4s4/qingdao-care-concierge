@@ -285,6 +285,37 @@ def fetch_live_scores_and_status():
             }
     except Exception as e:
         print(f"[{datetime.now()}] Error fetching live scores: {e}")
+
+    # 补充拉取前两天完场比分（解决跨天完赛比赛已从 live 首页移出的比分空白问题）
+    try:
+        from datetime import timedelta
+        today = datetime.now()
+        for offset in [1, 2]:
+            dt_str = (today - timedelta(days=offset)).strftime('%Y-%m-%d')
+            wc_url = f"https://live.500.com/wanchang.php?e={dt_str}"
+            wc_req = urllib.request.Request(wc_url, headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"})
+            with urllib.request.urlopen(wc_req, timeout=10) as resp:
+                wc_html = resp.read().decode('gbk', errors='ignore')
+            for m in re.finditer(r'<tr id="a(\d+)" gy="([^"]*)"[^>]*>(.*?)</tr>', wc_html, re.DOTALL):
+                fid, gy, body = m.group(1), m.group(2), m.group(3)
+                parts = [p.strip() for p in gy.split(',')]
+                home = parts[1] if len(parts) > 1 else ''
+                away = parts[2] if len(parts) > 2 else ''
+                pk_m = re.findall(r'<a[^>]*class="clt[13]"[^>]*>([^<]*)</a>', body)
+                if len(pk_m) >= 2 and pk_m[0].strip() != '' and pk_m[1].strip() != '':
+                    score = f"{pk_m[0].strip()}-{pk_m[1].strip()}"
+                    if fid not in live_map or live_map[fid]['score'] == '--':
+                        live_map[fid] = {
+                            'fid': fid, 'code': '', 'home': home, 'away': away, 'kickoff': '',
+                            'status_code': '4',
+                            'status_text': '已完赛',
+                            'is_live': False,
+                            'is_fin': True,
+                            'score': score
+                        }
+    except Exception as e:
+        print(f"[{datetime.now()}] Error fetching wanchang scores: {e}")
+
     return live_map
 
 def full_pipeline_sync(auto_push=True):
