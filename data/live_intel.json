@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-01 21:39:51",
-  "total_tips": 13,
+  "updated_at": "2026-11-03 10:47:21",
+  "total_tips": 8,
   "live_feed": [
     {
       "id": 8839,
@@ -108,6 +108,23 @@
       "channel_weight": 0.5
     },
     {
+      "id": 8096,
+      "channel": "football_injuries",
+      "time": "2026-10-30 14:16",
+      "code": "周一006",
+      "key": "20261103_周一006",
+      "league": "英超",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "纽卡斯尔 VS 埃弗顿",
+      "chinese": "赛前情报！周一006纽卡斯尔VS埃弗顿：奥斯拉足踝扭伤半场被换，主帅称周一能否出场尚早。核心缺阵致首发不稳，主胜需谨慎防平。",
+      "original": "🚨 Newcastle: William Osula получил новое повреждение 🏥 William Osula был заменён в перерыве матча Кубка лиги против Everton (1:3). Нападающий подвернул голеност",
+      "translated": true,
+      "channel_weight": 0.5
+    }
+  ],
+  "archived": [
+    {
       "id": 8841,
       "channel": "victorspredict",
       "time": "2026-11-01 16:00",
@@ -182,23 +199,6 @@
       "translated": true,
       "channel_weight": 0.5
     },
-    {
-      "id": 8096,
-      "channel": "football_injuries",
-      "time": "2026-10-30 14:16",
-      "code": "周一006",
-      "key": "20261103_周一006",
-      "league": "英超",
-      "category": "赛前军情",
-      "is_tip": false,
-      "match": "纽卡斯尔 VS 埃弗顿",
-      "chinese": "赛前情报！周一006纽卡斯尔VS埃弗顿：奥斯拉足踝扭伤半场被换，主帅称周一能否出场尚早。核心缺阵致首发不稳，主胜需谨慎防平。",
-      "original": "🚨 Newcastle: William Osula получил новое повреждение 🏥 William Osula был заменён в перерыве матча Кубка лиги против Everton (1:3). Нападающий подвернул голеност",
-      "translated": true,
-      "channel_weight": 0.5
-    }
-  ],
-  "archived": [
     {
       "id": 8467,
       "channel": "forepitch_tips",
@@ -2140,16 +2140,16 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-11-01 21:39:51",
-    "last_nonempty_at": "2026-11-01 21:39:51",
-    "live_count": 13,
-    "archived_count": 148,
-    "active_matches": 29,
+    "last_updated": "2026-11-03 10:47:21",
+    "last_nonempty_at": "2026-11-03 10:47:21",
+    "live_count": 8,
+    "archived_count": 153,
+    "active_matches": 26,
     "llm_providers": [
       "local",
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-11-01 21:39:51"
+    "checked_at": "2026-11-03 10:47:21"
   }
 }
