@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-11-03 21:03:54",
-  "total_tips": 10,
+  "updated_at": "2026-11-04 00:45:09",
+  "total_tips": 11,
   "live_feed": [
+    {
+      "id": 9609,
+      "channel": "letalbets",
+      "time": "2026-11-03 23:14",
+      "code": "周三010",
+      "key": "20261105_周三010",
+      "league": "欧冠",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "朗斯 VS 科莫",
+      "chinese": "来，老伙计们听好了！这场（朗斯）对（科莫），重点不在胜负，在牌数。外盘现在盯着大三点五张黄牌，水位在一点七六左右，资金倾向明显。这球大概率会打得火爆，关注大牌方向！",
+      "original": "UEFA Champions League RC Lens - Como Más de 3.5 tarjetas Cuota: 1.76 Stake: 1.5 Casa: Kirolbet Cuota mínima: 1.65 Alternativas: .80 888sport, Bet365, .78 Pinnac",
+      "translated": true,
+      "channel_weight": 0.5
+    },
     {
       "id": 9561,
       "channel": "matchplug",
@@ -2290,16 +2305,16 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-11-03 21:03:54",
-    "last_nonempty_at": "2026-11-03 21:03:54",
-    "live_count": 10,
+    "last_updated": "2026-11-04 00:45:09",
+    "last_nonempty_at": "2026-11-04 00:45:09",
+    "live_count": 11,
     "archived_count": 161,
-    "active_matches": 19,
+    "active_matches": 18,
     "llm_providers": [
       "local",
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-11-03 21:03:54"
+    "checked_at": "2026-11-04 00:45:09"
   }
 }
