@@ -278,3 +278,16 @@
 {"code": "周日018", "date": "2026-11-02", "league": "意甲", "home": "莱切", "away": "热那亚", "hg": 1, "ag": 2, "res": "负", "src": "live500"}
 {"code": "周日021", "date": "2026-11-02", "league": "意甲", "home": "尤文图斯", "away": "那不勒斯", "hg": 2, "ag": 0, "res": "胜", "src": "live500"}
 {"code": "周日022", "date": "2026-11-02", "league": "法甲", "home": "马赛", "away": "图卢兹", "hg": 2, "ag": 0, "res": "胜", "src": "live500"}
+{"code": "周日015", "date": "2026-11-01", "league": "荷甲", "home": "格罗宁根", "away": "鹿斯巴达", "hg": 2, "ag": 3, "res": "负", "src": "live500"}
+{"code": "周日020", "date": "2026-11-02", "league": "葡超", "home": "维塞乌", "away": "里奥阿维", "hg": 2, "ag": 1, "res": "胜", "src": "live500"}
+{"code": "周日023", "date": "2026-11-02", "league": "西甲", "home": "毕尔巴鄂", "away": "皇家社会", "hg": 2, "ag": 1, "res": "胜", "src": "live500"}
+{"code": "周日024", "date": "2026-11-02", "league": "巴西杯", "home": "格雷米奥", "away": "米竞技", "hg": 2, "ag": 0, "res": "胜", "src": "live500"}
+{"code": "周一001", "date": "2026-11-03", "league": "芬兰超级联赛", "home": "国际图尔", "away": "赫尔辛基火花", "hg": 4, "ag": 3, "res": "胜", "src": "live500"}
+{"code": "周一002", "date": "2026-11-03", "league": "意甲", "home": "萨索洛", "away": "佛罗伦萨", "hg": 2, "ag": 4, "res": "负", "src": "live500"}
+{"code": "周一003", "date": "2026-11-03", "league": "瑞超", "home": "盖斯", "away": "索尔纳", "hg": 2, "ag": 1, "res": "胜", "src": "live500"}
+{"code": "周一004", "date": "2026-11-03", "league": "意甲", "home": "亚特兰大", "away": "帕尔马", "hg": 0, "ag": 3, "res": "负", "src": "live500"}
+{"code": "周一005", "date": "2026-11-03", "league": "法乙", "home": "圣旺红星", "away": "南锡", "hg": 1, "ag": 4, "res": "负", "src": "live500"}
+{"code": "周一006", "date": "2026-11-03", "league": "英超", "home": "纽卡斯尔", "away": "埃弗顿", "hg": 0, "ag": 1, "res": "负", "src": "live500"}
+{"code": "周一007", "date": "2026-11-03", "league": "西甲", "home": "拉科", "away": "奥萨苏纳", "hg": 2, "ag": 1, "res": "胜", "src": "live500"}
+{"code": "周一008", "date": "2026-11-03", "league": "葡超", "home": "本菲卡", "away": "阿尔维卡", "hg": 1, "ag": 0, "res": "胜", "src": "live500"}
+{"code": "周一009", "date": "2026-11-03", "league": "巴甲", "home": "布拉干蒂诺RB", "away": "桑托斯", "hg": 2, "ag": 1, "res": "胜", "src": "live500"}
