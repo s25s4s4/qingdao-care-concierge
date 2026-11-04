@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-11-04 06:35:46",
-  "total_tips": 1,
+  "updated_at": "2026-11-04 11:38:50",
+  "total_tips": 2,
   "live_feed": [
+    {
+      "id": 9571,
+      "channel": "FabrizioRomano",
+      "time": "2026-11-03 20:23",
+      "code": "周三011",
+      "key": "20261105_周三011",
+      "league": "欧冠",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "斯拉维亚 VS 阿森纳",
+      "chinese": "周三011欧冠：斯拉维亚对阿森纳。萨利巴伤愈",
+      "original": "🚨 🔴 ⚪️ Breaking: William Saliba confirmed back in Arsenal training after long injury as recovery enters its final stages. Excellent news for Arsenal. Back soon.",
+      "translated": true,
+      "channel_weight": 0.5
+    },
     {
       "id": 9609,
       "channel": "letalbets",
@@ -2320,16 +2335,16 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-11-04 06:35:46",
-    "last_nonempty_at": "2026-11-04 06:35:46",
-    "live_count": 1,
+    "last_updated": "2026-11-04 11:38:50",
+    "last_nonempty_at": "2026-11-04 11:38:50",
+    "live_count": 2,
     "archived_count": 172,
-    "active_matches": 10,
+    "active_matches": 13,
     "llm_providers": [
       "local",
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-11-04 06:35:46"
+    "checked_at": "2026-11-04 11:38:50"
   }
 }
