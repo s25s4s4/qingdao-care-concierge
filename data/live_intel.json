@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-28 06:04:19",
-  "total_tips": 7,
+  "updated_at": "2026-11-28 06:33:53",
+  "total_tips": 6,
   "live_feed": [
     {
       "id": 17151,
@@ -14,21 +14,6 @@
       "match": "弗洛西诺 VS 帕尔马",
       "chinese": "周六006意甲弗洛西诺对帕尔马：主队锋线利好，一名前锋火线伤愈进名单，进攻端多一个后手；原文未提盘口异动和资金暗流，方向未明，临场盯首发。",
       "original": "✔️ 🟡 Buone notizie in casa Frosinone : Antonio Raimondo torna tra i convocati per la partita contro il Parma , recupero record per l’attaccante. ⚽️",
-      "translated": true,
-      "channel_weight": 0.5
-    },
-    {
-      "id": 17140,
-      "channel": "bad_man_betting_tips",
-      "time": "2026-11-28 01:03",
-      "code": "周五009",
-      "key": "20261128_周五009",
-      "league": "英冠",
-      "category": "赛前军情",
-      "is_tip": false,
-      "match": "南安普敦 VS 米堡",
-      "chinese": "周五009圣徒战米堡：单挑唐斯犯规2+@1.67。场均1.85犯规队内王，近6首发5场过数，去年双杀米堡均2犯。对位莫里斯被犯规队内最。盘口漏洞：b365列首选，Betfair排第4，价差捡漏。小单跟上，博唐斯犯规大。",
-      "original": "Who’s ready for five Best Bet winners in a row? ✅ ✅ ✅ ✅ ✅ 🌟 Downes 2+ Fouls Committed @ 1.67 Load: This isn’t the biggest price in the world but there’s value i",
       "translated": true,
       "channel_weight": 0.5
     },
@@ -109,6 +94,21 @@
     }
   ],
   "archived": [
+    {
+      "id": 17140,
+      "channel": "bad_man_betting_tips",
+      "time": "2026-11-28 01:03",
+      "code": "周五009",
+      "key": "20261128_周五009",
+      "league": "英冠",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "南安普敦 VS 米堡",
+      "chinese": "周五009圣徒战米堡：单挑唐斯犯规2+@1.67。场均1.85犯规队内王，近6首发5场过数，去年双杀米堡均2犯。对位莫里斯被犯规队内最。盘口漏洞：b365列首选，Betfair排第4，价差捡漏。小单跟上，博唐斯犯规大。",
+      "original": "Who’s ready for five Best Bet winners in a row? ✅ ✅ ✅ ✅ ✅ 🌟 Downes 2+ Fouls Committed @ 1.67 Load: This isn’t the biggest price in the world but there’s value i",
+      "translated": true,
+      "channel_weight": 0.5
+    },
     {
       "id": 17173,
       "channel": "calciomercato",
@@ -3093,35 +3093,20 @@
       "original": "🔥 HOT PICK 🇪🇸 La Liga 🆚 Atletico Madrid vs Barcelona 🕐 Sun, 8 Nov · 20:00 UTC 💡 Over/Under: Over 2.5 📊 Odds: 1.33 ✅ Confidence: 71% 📌 Match Facts • La Liga: Ove",
       "translated": true,
       "channel_weight": 0.5
-    },
-    {
-      "id": 11235,
-      "channel": "focuspredict",
-      "time": "2026-11-08 16:00",
-      "code": "周日024",
-      "key": "20261109_周日024",
-      "league": "西甲",
-      "category": "推单",
-      "is_tip": true,
-      "match": "比利亚雷 VS 赫塔费",
-      "chinese": "电报高手推单：黄潜主胜欧赔1.50，机构倾向主队不败。伤停暂无消息，盘口无异动。胆码主胜，博平防冷。",
-      "original": "🎯 ACCA TIPS - 08-11-2026 Viking vs KFUM Oslo Norway: Eliteserien Prediction: Home (1.21) 🔗 View Details Villarreal vs Getafe Spain: La Liga Prediction: Home (1.",
-      "translated": true,
-      "channel_weight": 1.0
     }
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-11-28 06:04:19",
-    "last_nonempty_at": "2026-11-28 06:04:19",
-    "live_count": 7,
+    "last_updated": "2026-11-28 06:33:53",
+    "last_nonempty_at": "2026-11-28 06:33:53",
+    "live_count": 6,
     "archived_count": 200,
-    "active_matches": 32,
+    "active_matches": 30,
     "llm_providers": [
       "local",
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-11-28 06:04:19"
+    "checked_at": "2026-11-28 06:33:53"
   }
 }
