@@ -571,3 +571,4 @@
 {"code": "周五001", "date": "2026-11-27", "league": "澳超", "home": "麦克阿瑟FC", "away": "墨尔本城", "hg": 2, "ag": 0, "res": "胜", "src": "live500"}
 {"code": "周五002", "date": "2026-11-28", "league": "德乙", "home": "海登海姆", "away": "纽伦堡", "hg": 3, "ag": 1, "res": "胜", "src": "live500"}
 {"code": "周五005", "date": "2026-11-28", "league": "德甲", "home": "不来梅", "away": "门兴", "hg": 3, "ag": 3, "res": "平", "src": "live500"}
+{"code": "周五007", "date": "2026-11-28", "league": "法甲", "home": "布雷斯特", "away": "巴黎FC", "hg": 1, "ag": 0, "res": "胜", "src": "live500"}
