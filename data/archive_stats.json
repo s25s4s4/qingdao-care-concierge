@@ -114,12 +114,196 @@
     },
     {
       "date": "2026-11-04",
-      "total": 304,
+      "total": 306,
       "added": 0,
       "teams": 262,
       "teams_ge10": 0,
       "leagues": 31
+    },
+    {
+      "date": "2026-11-05",
+      "total": 317,
+      "added": 0,
+      "teams": 264,
+      "teams_ge10": 0,
+      "leagues": 31
+    },
+    {
+      "date": "2026-11-06",
+      "total": 330,
+      "added": 0,
+      "teams": 270,
+      "teams_ge10": 0,
+      "leagues": 31
+    },
+    {
+      "date": "2026-11-07",
+      "total": 352,
+      "added": 0,
+      "teams": 280,
+      "teams_ge10": 0,
+      "leagues": 31
+    },
+    {
+      "date": "2026-11-08",
+      "total": 384,
+      "added": 0,
+      "teams": 284,
+      "teams_ge10": 0,
+      "leagues": 31
+    },
+    {
+      "date": "2026-11-09",
+      "total": 402,
+      "added": 0,
+      "teams": 284,
+      "teams_ge10": 0,
+      "leagues": 31
+    },
+    {
+      "date": "2026-11-10",
+      "total": 402,
+      "added": 0,
+      "teams": 284,
+      "teams_ge10": 0,
+      "leagues": 31
+    },
+    {
+      "date": "2026-11-11",
+      "total": 408,
+      "added": 0,
+      "teams": 288,
+      "teams_ge10": 0,
+      "leagues": 32
+    },
+    {
+      "date": "2026-11-12",
+      "total": 410,
+      "added": 0,
+      "teams": 292,
+      "teams_ge10": 0,
+      "leagues": 32
+    },
+    {
+      "date": "2026-11-13",
+      "total": 417,
+      "added": 0,
+      "teams": 306,
+      "teams_ge10": 0,
+      "leagues": 34
+    },
+    {
+      "date": "2026-11-14",
+      "total": 431,
+      "added": 0,
+      "teams": 333,
+      "teams_ge10": 0,
+      "leagues": 34
+    },
+    {
+      "date": "2026-11-15",
+      "total": 450,
+      "added": 2,
+      "teams": 353,
+      "teams_ge10": 0,
+      "leagues": 34
+    },
+    {
+      "date": "2026-11-16",
+      "total": 454,
+      "added": 0,
+      "teams": 355,
+      "teams_ge10": 0,
+      "leagues": 34
+    },
+    {
+      "date": "2026-11-17",
+      "total": 465,
+      "added": 0,
+      "teams": 356,
+      "teams_ge10": 0,
+      "leagues": 34
+    },
+    {
+      "date": "2026-11-18",
+      "total": 472,
+      "added": 0,
+      "teams": 358,
+      "teams_ge10": 0,
+      "leagues": 34
+    },
+    {
+      "date": "2026-11-19",
+      "total": 476,
+      "added": 0,
+      "teams": 360,
+      "teams_ge10": 0,
+      "leagues": 34
+    },
+    {
+      "date": "2026-11-20",
+      "total": 482,
+      "added": 0,
+      "teams": 364,
+      "teams_ge10": 0,
+      "leagues": 34
+    },
+    {
+      "date": "2026-11-21",
+      "total": 494,
+      "added": 0,
+      "teams": 370,
+      "teams_ge10": 0,
+      "leagues": 34
+    },
+    {
+      "date": "2026-11-22",
+      "total": 519,
+      "added": 0,
+      "teams": 371,
+      "teams_ge10": 0,
+      "leagues": 34
+    },
+    {
+      "date": "2026-11-23",
+      "total": 528,
+      "added": 0,
+      "teams": 371,
+      "teams_ge10": 0,
+      "leagues": 34
+    },
+    {
+      "date": "2026-11-24",
+      "total": 539,
+      "added": 0,
+      "teams": 375,
+      "teams_ge10": 1,
+      "leagues": 34
+    },
+    {
+      "date": "2026-11-25",
+      "total": 549,
+      "added": 0,
+      "teams": 375,
+      "teams_ge10": 1,
+      "leagues": 34
+    },
+    {
+      "date": "2026-11-26",
+      "total": 559,
+      "added": 0,
+      "teams": 376,
+      "teams_ge10": 1,
+      "leagues": 34
+    },
+    {
+      "date": "2026-11-27",
+      "total": 570,
+      "added": 0,
+      "teams": 378,
+      "teams_ge10": 1,
+      "leagues": 34
     }
   ],
-  "updated_at": "2026-11-04 16:08:24"
+  "updated_at": "2026-11-27 13:32:25"
 }
