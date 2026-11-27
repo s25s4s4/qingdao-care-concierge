@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>小杨说体彩 · 会员管理中台</title>
+    <link rel="icon" type="image/jpeg" href="./favicon.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700;800&family=PingFang+SC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-body: #07090e;
+            --bg-card: #0d1117;
+            --bg-card-elevated: #161c24;
+            --border-color: rgba(255, 255, 255, 0.08);
+            --border-light: rgba(255, 255, 255, 0.16);
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --text-tertiary: #64748b;
+            --brand-green: #10b981;
+            --primary: #38bdf8;
+            --accent-gold: #f59e0b;
+            --accent-red: #f43f5e;
+            --font-main: -apple-system, BlinkMacSystemFont, "PingFang SC", "Inter", "Microsoft YaHei", sans-serif;
+            --font-mono: "JetBrains Mono", Consolas, monospace;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background-color: var(--bg-body);
+            color: var(--text-primary);
+            font-family: var(--font-main);
+            min-height: 100vh;
+            padding: 24px 16px 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .header-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .header-title h1 {
+            font-size: 20px;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+        }
+
+        .header-title span {
+            font-size: 11px;
+            background: rgba(56, 189, 248, 0.15);
+            color: var(--primary);
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-family: var(--font-mono);
+            font-weight: 700;
+        }
+
+        .btn-home {
+            background: var(--bg-card-elevated);
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 12px;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .btn-home:hover {
+            color: #fff;
+            border-color: var(--border-light);
+        }
+
+        /* 密钥输入卡片 */
+        .auth-panel {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 12px 32px rgba(0,0,0,0.4);
+            margin-bottom: 24px;
+        }
+
+        .auth-panel h2 {
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 12px;
+        }
+
+        .input-secret {
+            flex: 1;
+            background: #07090e;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 12px 16px;
+            font-size: 14px;
+            font-family: var(--font-mono);
+            color: #fff;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        .input-secret:focus {
+            border-color: var(--primary);
+        }
+
+        .btn-query {
+            background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);
+            border: none;
+            color: #fff;
+            padding: 0 20px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: opacity 0.2s;
+            white-space: nowrap;
+        }
+        .btn-query:hover { opacity: 0.9; }
+
+        /* 数据展示面板 */
+        .data-panel {
+            display: none;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 12px 32px rgba(0,0,0,0.4);
+        }
+
+        .stats-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 18px;
+            padding-bottom: 14px;
+            border-bottom: 1px solid var(--border-color);
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .stats-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .stats-badge {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        .stats-badge b {
+            color: #10b981;
+            font-size: 17px;
+            font-family: var(--font-mono);
+            margin-right: 2px;
+        }
+
+        .btn-copy {
+            background: #10b981;
+            border: none;
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .btn-copy:hover {
+            background: #059669;
+        }
+
+        /* 移动端友好表格 */
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+            text-align: left;
+        }
+
+        th {
+            background: var(--bg-card-elevated);
+            color: var(--text-secondary);
+            font-weight: 600;
+            padding: 12px 14px;
+            border-bottom: 1px solid var(--border-color);
+            white-space: nowrap;
+        }
+
+        td {
+            padding: 12px 14px;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-primary);
+            white-space: nowrap;
+        }
+
+        tr:hover td {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .phone-cell {
+            font-family: var(--font-mono);
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .badge-count {
+            display: inline-block;
+            background: rgba(245, 158, 11, 0.15);
+            color: var(--accent-gold);
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-family: var(--font-mono);
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+        .time-cell {
+            font-family: var(--font-mono);
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        .tip-toast {
+            position: fixed;
+            bottom: 30px;
+            background: #10b981;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 700;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+            transform: translateY(100px);
+            opacity: 0;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            z-index: 9999;
+        }
+        .tip-toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-title">
+                <h1>小杨说体彩 · 会员管理中台</h1>
+                <span>ADMIN GATE</span>
+            </div>
+            <a href="./index.html" class="btn-home">← 返回前台</a>
+        </div>
+
+        <div class="auth-panel">
+            <h2>🔑 管理安全鉴权</h2>
+            <div class="form-row">
+                <input type="password" id="secretInput" class="input-secret" placeholder="输入管理密钥 (默认 qingdao2026)" value="qingdao2026">
+                <button type="button" class="btn-query" onclick="loadUsers()">查询会员列表</button>
+            </div>
+            <div id="queryError" style="margin-top: 10px; font-size: 12px; color: var(--accent-red); display: none;"></div>
+        </div>
+
+        <div class="data-panel" id="dataPanel">
+            <div class="stats-bar">
+                <div class="stats-info">
+                    <div class="stats-badge">注册会员总计：<b id="userCount">0</b> 人</div>
+                </div>
+                <button type="button" class="btn-copy" onclick="copyAllPhones()">📋 一键复制所有手机号</button>
+            </div>
+
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>序号</th>
+                            <th>会员手机号</th>
+                            <th>登录次数</th>
+                            <th>最后登录时间</th>
+                            <th>注册时间</th>
+                        </tr>
+                    </thead>
+                    <tbody id="userTableBody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="tip-toast" id="toast">复制成功</div>
+
+    <script>
+        let currentUsers = [];
+
+        function getAdminApiBase() {
+            return (location.protocol === 'https:')
+                ? 'https://api.qingdaocare.top'
+                : 'http://47.121.185.16/football_api';
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            toast.innerText = msg;
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 2000);
+        }
+
+        async function loadUsers() {
+            const secret = document.getElementById('secretInput').value.trim();
+            const errDiv = document.getElementById('queryError');
+            const dataPanel = document.getElementById('dataPanel');
+            const tbody = document.getElementById('userTableBody');
+            const countEl = document.getElementById('userCount');
+
+            errDiv.style.display = 'none';
+            if (!secret) {
+                errDiv.innerText = '请输入管理安全密钥';
+                errDiv.style.display = 'block';
+                return;
+            }
+
+            try {
+                const url = getAdminApiBase() + '/api/admin/users?secret=' + encodeURIComponent(secret);
+                const res = await fetch(url);
+                const data = await res.json();
+
+                if (!res.ok || data.code !== 200) {
+                    errDiv.innerText = data.message || '查询失败，请检查密钥是否正确';
+                    errDiv.style.display = 'block';
+                    dataPanel.style.display = 'none';
+                    return;
+                }
+
+                currentUsers = data.users || [];
+                countEl.innerText = currentUsers.length;
+
+                tbody.innerHTML = currentUsers.map((u, idx) => `
+                    <tr>
+                        <td style="color: var(--text-tertiary); font-family: var(--font-mono);">${idx + 1}</td>
+                        <td class="phone-cell">${u.phone}</td>
+                        <td><span class="badge-count">${u.login_count} 次</span></td>
+                        <td class="time-cell">${u.last_login_at || '--'}</td>
+                        <td class="time-cell">${u.created_at || '--'}</td>
+                    </tr>
+                `).join('');
+
+                dataPanel.style.display = 'block';
+                showToast(`成功加载 ${currentUsers.length} 位会员`);
+            } catch(e) {
+                errDiv.innerText = '网络连接异常，无法连通管理后台 API';
+                errDiv.style.display = 'block';
+            }
+        }
+
+        function copyAllPhones() {
+            if (!currentUsers || currentUsers.length === 0) {
+                showToast('暂无手机号可复制');
+                return;
+            }
+            const phoneList = currentUsers.map(u => u.phone).join('\n');
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(phoneList).then(() => {
+                    showToast(`已复制 ${currentUsers.length} 个手机号到剪贴板！`);
+                }).catch(() => fallbackCopy(phoneList));
+            } else {
+                fallbackCopy(phoneList);
+            }
+        }
+
+        function fallbackCopy(text) {
+            const ta = document.createElement('textarea');
+            ta.value = text;
+            ta.style.position = 'fixed';
+            ta.style.opacity = '0';
+            document.body.appendChild(ta);
+            ta.select();
+            try {
+                document.execCommand('copy');
+                showToast(`已复制 ${currentUsers.length} 个手机号到剪贴板！`);
+            } catch(e) {
+                showToast('复制失败，请手动选取');
+            }
+            document.body.removeChild(ta);
+        }
+
+        // 页面打开时如果填有默认口令自动加载一次
+        window.onload = function() {
+            loadUsers();
+        };
+    </script>
+</body>
+</html>
