@@ -1,7 +1,67 @@
 {
-  "updated_at": "2026-11-28 02:41:01",
+  "updated_at": "2026-11-28 03:39:17",
   "total_tips": 21,
   "live_feed": [
+    {
+      "id": 17156,
+      "channel": "calciomercato",
+      "time": "2026-11-28 02:54",
+      "code": "周五006",
+      "key": "20261128_周五006",
+      "league": "意甲",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "威尼斯 VS 博洛尼亚",
+      "chinese": "周五意甲，（威尼斯）对（博洛尼亚）。官方首发刚公布，我先守名单细节。方向不跟，让球大小观望。伤停阵容随首发看，别碰早。资金也没异动，按教练组摆。",
+      "original": "📄 LE FORMAZIONI UFFICIALI DI 🟠 Venezia 🆚️ Bologna 🔴 🏆 Serie A 🕒 20:45 📺 📺 DAZN/ Sky Sport 🏟 Stadio Pierluigi Penzo 👮‍♂️ Andrea Colombo ⚽️",
+      "translated": true,
+      "channel_weight": 0.5
+    },
+    {
+      "id": 17145,
+      "channel": "forepitch_tips",
+      "time": "2026-11-28 01:23",
+      "code": "周五006",
+      "key": "20261128_周五006",
+      "league": "意甲",
+      "category": "推单·已开赛",
+      "is_tip": true,
+      "match": "威尼斯 VS 博洛尼亚",
+      "chinese": "周五意甲，威尼斯对博洛尼亚。模型偏小球，主胜不稳，客胜反而高。赔率主26、平27、客47，双边74；大小球客47，总进球倾向不足。伤停未明，首发未公布。盘口或有异动，模型十七时后可能调整。",
+      "original": "⚽ Serie A · 27 November, 19:45 UTC Venezia — Bologna The model sees a clear edge. 🎯 Main pick: Venezia under 1.5 goals · 71% Home 26% · Draw 27% · Away 47% · X2",
+      "translated": true,
+      "channel_weight": 0.5
+    },
+    {
+      "id": 17024,
+      "channel": "forepitch_tips",
+      "time": "2026-11-27 16:04",
+      "code": "周五006",
+      "key": "20261128_周五006",
+      "league": "意甲",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "威尼斯 VS 博洛尼亚",
+      "chinese": "周五006意甲威尼斯对博洛尼亚，模型只给主胜二成六、平二成七、客胜四成七，倾向客胜。伤停、阵容、资金都没风吹草动，别加戏。概率归概率，临场再看盘。",
+      "original": "📋 Round preview 1 · X · 2 Premier League Nottingham Forest — Chelsea: 35% · 30% · 35% Leeds United — Coventry City: 53% · 27% · 20% Manchester United — Brentfor",
+      "translated": true,
+      "channel_weight": 0.5
+    },
+    {
+      "id": 17026,
+      "channel": "matchplug",
+      "time": "2026-11-27 16:48",
+      "code": "周五006",
+      "key": "20261128_周五006",
+      "league": "意甲",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "威尼斯 VS 博洛尼亚",
+      "chinese": "周五第六意甲，威尼斯（主）对阵博洛尼亚（客），机构倾向让球大于三点五射正，赔率一七四，暂无伤停与阵容变动，外盘流向明显，建议把握大球。",
+      "original": "Venezia vs Bologna Serie A · 19:45 UTC Market: Accumulator Bet Pick: 1 over 3.5 shots on target Odds: 1.74",
+      "translated": true,
+      "channel_weight": 0.5
+    },
     {
       "id": 17151,
       "channel": "calciomercato",
@@ -74,66 +134,6 @@
       "match": "莱万特 VS 桑坦德",
       "chinese": "周五010西甲（莱万特）对阵（拉赛尔德）大球，赔率1.41，信心67%，整体大球概率55%，莱万特近5场不胜，拉赛尔德8红卡，机构偏大。",
       "original": "🔥 HOT PICK 🇪🇸 La Liga 🆚 Levante vs Racing Santander 🕐 Fri, 27 Nov · 20:00 UTC 💡 Over/Under: Over 2.5 📊 Odds: 1.41 ✅ Confidence: 67% 📌 Match Facts • La Liga: Ove",
-      "translated": true,
-      "channel_weight": 0.5
-    },
-    {
-      "id": 17145,
-      "channel": "forepitch_tips",
-      "time": "2026-11-28 01:23",
-      "code": "周五006",
-      "key": "20261128_周五006",
-      "league": "意甲",
-      "category": "推单·已开赛",
-      "is_tip": true,
-      "match": "威尼斯 VS 博洛尼亚",
-      "chinese": "周五意甲，威尼斯对博洛尼亚。模型偏小球，主胜不稳，客胜反而高。赔率主26、平27、客47，双边74；大小球客47，总进球倾向不足。伤停未明，首发未公布。盘口或有异动，模型十七时后可能调整。",
-      "original": "⚽ Serie A · 27 November, 19:45 UTC Venezia — Bologna The model sees a clear edge. 🎯 Main pick: Venezia under 1.5 goals · 71% Home 26% · Draw 27% · Away 47% · X2",
-      "translated": true,
-      "channel_weight": 0.5
-    },
-    {
-      "id": 17024,
-      "channel": "forepitch_tips",
-      "time": "2026-11-27 16:04",
-      "code": "周五006",
-      "key": "20261128_周五006",
-      "league": "意甲",
-      "category": "赛前军情",
-      "is_tip": false,
-      "match": "威尼斯 VS 博洛尼亚",
-      "chinese": "周五006意甲威尼斯对博洛尼亚，模型只给主胜二成六、平二成七、客胜四成七，倾向客胜。伤停、阵容、资金都没风吹草动，别加戏。概率归概率，临场再看盘。",
-      "original": "📋 Round preview 1 · X · 2 Premier League Nottingham Forest — Chelsea: 35% · 30% · 35% Leeds United — Coventry City: 53% · 27% · 20% Manchester United — Brentfor",
-      "translated": true,
-      "channel_weight": 0.5
-    },
-    {
-      "id": 17026,
-      "channel": "matchplug",
-      "time": "2026-11-27 16:48",
-      "code": "周五006",
-      "key": "20261128_周五006",
-      "league": "意甲",
-      "category": "赛前军情",
-      "is_tip": false,
-      "match": "威尼斯 VS 博洛尼亚",
-      "chinese": "周五第六意甲，威尼斯（主）对阵博洛尼亚（客），机构倾向让球大于三点五射正，赔率一七四，暂无伤停与阵容变动，外盘流向明显，建议把握大球。",
-      "original": "Venezia vs Bologna Serie A · 19:45 UTC Market: Accumulator Bet Pick: 1 over 3.5 shots on target Odds: 1.74",
-      "translated": true,
-      "channel_weight": 0.5
-    },
-    {
-      "id": 16935,
-      "channel": "betiper_official",
-      "time": "2026-11-27 05:13",
-      "code": "周五006",
-      "key": "20261128_周五006",
-      "league": "意甲",
-      "category": "推单",
-      "is_tip": true,
-      "match": "威尼斯 VS 博洛尼亚",
-      "chinese": "这场威尼斯对博洛尼亚，我看客胜，博洛尼亚二点二五。伤停首发没信儿，盘口异动也没提。老规矩别上头别追太热，客队不败更稳，临场看水再下手，稳当。",
-      "original": "📊 Betiper Elite Picks — Recent Results: 🔹 Slavia Praha vs Villarreal (Villarreal) — ✅ Won @ 2.28 Daily profit: +$128 (based on flat $100 stakes) 🌟 Betiper Elite",
       "translated": true,
       "channel_weight": 0.5
     },
@@ -319,6 +319,21 @@
     }
   ],
   "archived": [
+    {
+      "id": 16935,
+      "channel": "betiper_official",
+      "time": "2026-11-27 05:13",
+      "code": "周五006",
+      "key": "20261128_周五006",
+      "league": "意甲",
+      "category": "推单",
+      "is_tip": true,
+      "match": "威尼斯 VS 博洛尼亚",
+      "chinese": "这场威尼斯对博洛尼亚，我看客胜，博洛尼亚二点二五。伤停首发没信儿，盘口异动也没提。老规矩别上头别追太热，客队不败更稳，临场看水再下手，稳当。",
+      "original": "📊 Betiper Elite Picks — Recent Results: 🔹 Slavia Praha vs Villarreal (Villarreal) — ✅ Won @ 2.28 Daily profit: +$128 (based on flat $100 stakes) 🌟 Betiper Elite",
+      "translated": true,
+      "channel_weight": 0.5
+    },
     {
       "id": 17027,
       "channel": "matchplug",
@@ -3303,27 +3318,12 @@
       "original": "🔥 SUNDAY SERIE A – OUR PICKS! ⚽ Here we go with Sunday’s Serie A action! Three interesting fixtures on the schedule, with a selection of markets including goals",
       "translated": true,
       "channel_weight": 0.5
-    },
-    {
-      "id": 11220,
-      "channel": "olimpbet",
-      "time": "2026-11-08 15:00",
-      "code": "周日023",
-      "key": "20261109_周日023",
-      "league": "意甲",
-      "category": "赛前军情",
-      "is_tip": false,
-      "match": "国际米兰 VS 科莫",
-      "chinese": "周日01:00，意甲（国际米兰）主场迎战（科莫）。主队连胜欲劲，客队近六球赛不胜，主胜方向明显，开盘主胜赔率2.06，资金倾向偏主。两队目前无核心伤停，首发保持稳定。建议关注主胜盘，欧赔持续偏好主队。",
-      "original": "🔥 МАТЧИ, КОТОРЫЕ ТЫ НЕ ПРОПУСТИШЬ В ЭТО ВОСКРЕСЕНЬЕ 👉 «Нефтехимик» идёт вторым на Востоке после 24 матчей. П1 за 3.53 👉 Финал «Мастерса»! Алькарас — явный фавор",
-      "translated": true,
-      "channel_weight": 0.5
     }
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-11-28 02:41:01",
-    "last_nonempty_at": "2026-11-28 02:41:01",
+    "last_updated": "2026-11-28 03:39:17",
+    "last_nonempty_at": "2026-11-28 03:39:17",
     "live_count": 21,
     "archived_count": 200,
     "active_matches": 38,
@@ -3332,6 +3332,6 @@
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-11-28 02:41:01"
+    "checked_at": "2026-11-28 03:39:17"
   }
 }
