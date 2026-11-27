@@ -1,7 +1,52 @@
 {
-  "updated_at": "2026-11-27 17:15:31",
-  "total_tips": 11,
+  "updated_at": "2026-11-27 18:13:36",
+  "total_tips": 12,
   "live_feed": [
+    {
+      "id": 16820,
+      "channel": "feedinco",
+      "time": "2026-11-26 23:05",
+      "code": "周五010",
+      "key": "20261128_周五010",
+      "league": "西甲",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "莱万特 VS 桑坦德",
+      "chinese": "老客们，周五这场莱万特对桑坦德，外面消息只给小球方向，倾向总进球小于三个半；伤停、首发和资金异动都没提，别盲目追大，临场看小更稳。",
+      "original": "FEEDINCO.com Tips for Friday, 27 November 1X - Al Qadsiah - Al-Fayha FC O1.5 - Al-Ittihad - Club Neom SC O1.5 - SonderjyskE - Broendby IF U3.5 - Levante - Racin",
+      "translated": true,
+      "channel_weight": 0.7931
+    },
+    {
+      "id": 17032,
+      "channel": "football_predictions_ai",
+      "time": "2026-11-27 17:00",
+      "code": "周五010",
+      "key": "20261128_周五010",
+      "league": "西甲",
+      "category": "推单",
+      "is_tip": true,
+      "match": "莱万特 VS 桑坦德",
+      "chinese": "周五010西甲（莱万特）对阵（拉赛尔德）大球，赔率1.41，信心67%，整体大球概率55%，莱万特近5场不胜，拉赛尔德8红卡，机构偏大。",
+      "original": "🔥 HOT PICK 🇪🇸 La Liga 🆚 Levante vs Racing Santander 🕐 Fri, 27 Nov · 20:00 UTC 💡 Over/Under: Over 2.5 📊 Odds: 1.41 ✅ Confidence: 67% 📌 Match Facts • La Liga: Ove",
+      "translated": true,
+      "channel_weight": 0.5
+    },
+    {
+      "id": 17027,
+      "channel": "matchplug",
+      "time": "2026-11-27 16:50",
+      "code": "周五010",
+      "key": "20261128_周五010",
+      "league": "西甲",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "莱万特 VS 桑坦德",
+      "chinese": "周五010西甲（莱万特）主场对（桑坦德），盘口推荐大球4.5射正，赔率1.95，机构偏高，外盘支持，暂无伤情，首发未变，形势火热。",
+      "original": "Levante vs Racing Santander La Liga · 20:00 UTC Market: Accumulator Bet Pick: 2 over 4.5 shots on target Odds: 1.95",
+      "translated": true,
+      "channel_weight": 0.5
+    },
     {
       "id": 17034,
       "channel": "sure2scoreprediction",
@@ -44,36 +89,6 @@
       "match": "诺丁汉 VS 切尔西",
       "chinese": "各位老客听好，周五008英超，诺丁汉森林主场迎战切尔西。欧洲那边就一句话：买双方进球，水位1.65。伤停、首发、资金异动统统没提，别瞎猜。就这一条，够用了。",
       "original": "Nottingham Forest vs Chelsea Premier League · 20:00 UTC Market: BTTS/GG Pick: GG Odds: 1.65",
-      "translated": true,
-      "channel_weight": 0.5
-    },
-    {
-      "id": 16820,
-      "channel": "feedinco",
-      "time": "2026-11-26 23:05",
-      "code": "周五010",
-      "key": "20261128_周五010",
-      "league": "西甲",
-      "category": "赛前军情",
-      "is_tip": false,
-      "match": "莱万特 VS 桑坦德",
-      "chinese": "老客们，周五这场莱万特对桑坦德，外面消息只给小球方向，倾向总进球小于三个半；伤停、首发和资金异动都没提，别盲目追大，临场看小更稳。",
-      "original": "FEEDINCO.com Tips for Friday, 27 November 1X - Al Qadsiah - Al-Fayha FC O1.5 - Al-Ittihad - Club Neom SC O1.5 - SonderjyskE - Broendby IF U3.5 - Levante - Racin",
-      "translated": true,
-      "channel_weight": 0.7931
-    },
-    {
-      "id": 17027,
-      "channel": "matchplug",
-      "time": "2026-11-27 16:50",
-      "code": "周五010",
-      "key": "20261128_周五010",
-      "league": "西甲",
-      "category": "赛前军情",
-      "is_tip": false,
-      "match": "莱万特 VS 桑坦德",
-      "chinese": "周五010西甲（莱万特）主场对（桑坦德），盘口推荐大球4.5射正，赔率1.95，机构偏高，外盘支持，暂无伤情，首发未变，形势火热。",
-      "original": "Levante vs Racing Santander La Liga · 20:00 UTC Market: Accumulator Bet Pick: 2 over 4.5 shots on target Odds: 1.95",
       "translated": true,
       "channel_weight": 0.5
     },
@@ -3172,9 +3187,9 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-11-27 17:15:31",
-    "last_nonempty_at": "2026-11-27 17:15:31",
-    "live_count": 11,
+    "last_updated": "2026-11-27 18:13:36",
+    "last_nonempty_at": "2026-11-27 18:13:36",
+    "live_count": 12,
     "archived_count": 200,
     "active_matches": 39,
     "llm_providers": [
@@ -3182,6 +3197,6 @@
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-11-27 17:15:31"
+    "checked_at": "2026-11-27 18:13:36"
   }
 }
