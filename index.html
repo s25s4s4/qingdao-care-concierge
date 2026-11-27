@@ -3,25 +3,24 @@
 <head>
     <script>
     (function() {
-        const CURRENT_VERSION = '20261127-v1';
-        const saved = localStorage.getItem('app_root_version');
-        if (saved !== CURRENT_VERSION) {
-            try {
+        const CURRENT_VERSION = '20261127-v2';
+        try {
+            const saved = localStorage.getItem('app_root_version');
+            if (saved !== CURRENT_VERSION) {
                 // 保留会员登录状态，避免版本更新导致误退登
                 const savedToken = localStorage.getItem('auth_token');
                 const savedPhone = localStorage.getItem('auth_phone');
                 localStorage.clear();
                 sessionStorage.clear();
                 localStorage.setItem('app_root_version', CURRENT_VERSION);
+                localStorage.setItem('jc_js_version', CURRENT_VERSION);
                 if (savedToken) localStorage.setItem('auth_token', savedToken);
                 if (savedPhone) localStorage.setItem('auth_phone', savedPhone);
-            } catch(e) {}
-            if ('caches' in window) {
-                caches.keys().then(names => Promise.all(names.map(n => caches.delete(n))));
+                if ('caches' in window) {
+                    caches.keys().then(names => Promise.all(names.map(n => caches.delete(n))));
+                }
             }
-            const cleanUrl = window.location.href.split('?')[0] + '?_t=' + Date.now();
-            window.location.replace(cleanUrl);
-        }
+        } catch(e) {}
     })();
     </script>
     <meta charset="UTF-8">
@@ -1502,26 +1501,20 @@
     // 【强制版本控制】页面级JS代码版本 - 解决浏览器缓存旧代码问题
     // 每次修改index.html后，递增此版本号
     // ========================================================================
-    const APP_JS_VERSION = '20261127-v2';  // ← 修改这里递增版本
+    const APP_JS_VERSION = '20261127-v2';
     const LAST_JS_VERSION = localStorage.getItem('jc_js_version');
 
-    // 版本不匹配 → 强制清除数据缓存并刷新（保留 auth_token 和 auth_phone）
     if (LAST_JS_VERSION !== APP_JS_VERSION) {
         console.log('[版本控制] JS版本变更:', LAST_JS_VERSION, '→', APP_JS_VERSION);
         try {
-            const savedToken = localStorage.getItem('auth_token');
-            const savedPhone = localStorage.getItem('auth_phone');
-            localStorage.clear();
-            sessionStorage.clear();
+            // 只更新版本标识，清理特定缓存键，严禁清空 localStorage 或强刷导致与头部死锁
             localStorage.setItem('jc_js_version', APP_JS_VERSION);
-            if (savedToken) localStorage.setItem('auth_token', savedToken);
-            if (savedPhone) localStorage.setItem('auth_phone', savedPhone);
+            localStorage.removeItem('jc_matches_cache');
+            localStorage.removeItem('jc_matches_timestamp');
         } catch(e) {}
         if ('caches' in window) {
             caches.keys().then(names => Promise.all(names.map(n => caches.delete(n))));
         }
-        // 使用 replaceState 避免刷新按钮重复执行
-        window.location.replace(window.location.href.split('?')[0] + '?v=' + Date.now());
     }
         </script>
         <script>
