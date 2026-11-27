@@ -1,19 +1,19 @@
 {
-  "updated_at": "2026-11-27 19:15:18",
+  "updated_at": "2026-11-27 22:13:13",
   "total_tips": 14,
   "live_feed": [
     {
-      "id": 17044,
-      "channel": "betminesfootballpredictions",
-      "time": "2026-11-27 18:04",
-      "code": "周六020",
-      "key": "20261129_周六020",
-      "league": "意甲",
-      "category": "推单",
-      "is_tip": true,
-      "match": "国际米兰 VS 热那亚",
-      "chinese": "老客们听好，周六020意甲，国际米兰主场打热那亚。那边周单点名主胜，方向就一个：国米赢。伤停、首发、盘口水位一概没提，别当铁料，临场再看。",
-      "original": "🔥 THE WEEKLY DOUBLE 🔥 Four selections as we look to land this week's double! 🎯 ⚽ ROMA – MONZA - 1️⃣ Roma to win ⚽ INTER – GENOA - 1️⃣ Inter to win ⚽ REAL MADRID",
+      "id": 17072,
+      "channel": "TipstrrTips",
+      "time": "2026-11-27 20:39",
+      "code": "周五008",
+      "key": "20261128_周五008",
+      "league": "英超",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "诺丁汉 VS 切尔西",
+      "chinese": "周五英超，诺丁汉森林队对切尔西队。我老球探看，切尔西占优，主队方向没说，让球大小无水分。伤停阵容没提，别编首发。盘口机构走和，赔二买走无赔，抽成返还。周五008，切尔西或平或胜。",
+      "original": "Our first free football tip of the weekend comes from Makenzy1 , who is recommending the Draw No Bet option on Chelsea at around even money to get a positive re",
       "translated": true,
       "channel_weight": 0.5
     },
@@ -63,17 +63,17 @@
       "channel_weight": 0.5
     },
     {
-      "id": 16980,
-      "channel": "matchplug",
-      "time": "2026-11-27 13:54",
-      "code": "周五008",
-      "key": "20261128_周五008",
-      "league": "英超",
-      "category": "赛前军情",
-      "is_tip": false,
-      "match": "诺丁汉 VS 切尔西",
-      "chinese": "各位老客听好，周五008英超，诺丁汉森林主场迎战切尔西。欧洲那边就一句话：买双方进球，水位1.65。伤停、首发、资金异动统统没提，别瞎猜。就这一条，够用了。",
-      "original": "Nottingham Forest vs Chelsea Premier League · 20:00 UTC Market: BTTS/GG Pick: GG Odds: 1.65",
+      "id": 17044,
+      "channel": "betminesfootballpredictions",
+      "time": "2026-11-27 18:04",
+      "code": "周六020",
+      "key": "20261129_周六020",
+      "league": "意甲",
+      "category": "推单",
+      "is_tip": true,
+      "match": "国际米兰 VS 热那亚",
+      "chinese": "老客们听好，周六020意甲，国际米兰主场打热那亚。那边周单点名主胜，方向就一个：国米赢。伤停、首发、盘口水位一概没提，别当铁料，临场再看。",
+      "original": "🔥 THE WEEKLY DOUBLE 🔥 Four selections as we look to land this week's double! 🎯 ⚽ ROMA – MONZA - 1️⃣ Roma to win ⚽ INTER – GENOA - 1️⃣ Inter to win ⚽ REAL MADRID",
       "translated": true,
       "channel_weight": 0.5
     },
@@ -214,6 +214,21 @@
     }
   ],
   "archived": [
+    {
+      "id": 16980,
+      "channel": "matchplug",
+      "time": "2026-11-27 13:54",
+      "code": "周五008",
+      "key": "20261128_周五008",
+      "league": "英超",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "诺丁汉 VS 切尔西",
+      "chinese": "各位老客听好，周五008英超，诺丁汉森林主场迎战切尔西。欧洲那边就一句话：买双方进球，水位1.65。伤停、首发、资金异动统统没提，别瞎猜。就这一条，够用了。",
+      "original": "Nottingham Forest vs Chelsea Premier League · 20:00 UTC Market: BTTS/GG Pick: GG Odds: 1.65",
+      "translated": true,
+      "channel_weight": 0.5
+    },
     {
       "id": 16705,
       "channel": "focuspredict",
@@ -3198,27 +3213,12 @@
       "original": "⚡️ ПРОГНОЗ ПО ЛИНИИ #3 ⚽️ Манчестер Юнайтед - Астон Вилла ⚽️ ➡️ Прогноз на матч: Тотал голов (2.5)Б 👍 Ставим тут: 🎫 Промокод: BANK Промокод дарит бонус на первы",
       "translated": true,
       "channel_weight": 0.5
-    },
-    {
-      "id": 11372,
-      "channel": "stavki",
-      "time": "2026-11-08 21:43",
-      "code": "周日021",
-      "key": "20261109_周日021",
-      "league": "英超",
-      "category": "赛前军情",
-      "is_tip": false,
-      "match": "曼联 VS 维拉",
-      "chinese": "周日00:30 (曼联)对(维拉)，本场建议大球2.5个入球，预计进球数偏多。(曼联)近两场主场比赛均打进2个或以上入球，(维拉)客场近三场比赛也均有3个或以上入球，双方近期比赛普遍进球较多，进攻火力旺盛，(曼联)状态回升，(维拉)防守时有漏洞。关注球数超标的投注方向，盘口目前为2.5，机构对大球态度偏积极，海外盘方向一致。祝您好运！",
-      "original": "⚡️ ПРОГНОЗ ПО ЛИНИИ #3 ⚽️ Манчестер Юнайтед - Астон Вилла ⚽️ ➡️ Прогноз на матч: Тотал голов (2.5)Б 👍 Ставим тут: 🎫 Промокод: BANK Промокод дарит бонус на первы",
-      "translated": true,
-      "channel_weight": 0.5
     }
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-11-27 19:15:18",
-    "last_nonempty_at": "2026-11-27 19:15:18",
+    "last_updated": "2026-11-27 22:13:13",
+    "last_nonempty_at": "2026-11-27 22:13:13",
     "live_count": 14,
     "archived_count": 200,
     "active_matches": 38,
@@ -3227,6 +3227,6 @@
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-11-27 19:15:18"
+    "checked_at": "2026-11-27 22:13:13"
   }
 }
