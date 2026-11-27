@@ -3,7 +3,7 @@
 <head>
     <script>
     (function() {
-        const CURRENT_VERSION = '20261127-v2';
+        const CURRENT_VERSION = '20261127-v3';
         try {
             const saved = localStorage.getItem('app_root_version');
             if (saved !== CURRENT_VERSION) {
@@ -16,6 +16,7 @@
                 localStorage.setItem('jc_js_version', CURRENT_VERSION);
                 if (savedToken) localStorage.setItem('auth_token', savedToken);
                 if (savedPhone) localStorage.setItem('auth_phone', savedPhone);
+                if (savedPasscodeDate) localStorage.setItem('passcode_unlocked_date', savedPasscodeDate);
                 if ('caches' in window) {
                     caches.keys().then(names => Promise.all(names.map(n => caches.delete(n))));
                 }
@@ -900,16 +901,16 @@
             font-weight: 600;
         }
 
-        /* 会员专属暗黑门禁遮罩体系 */
+        /* 会员专属暗黑门禁遮罩体系 - 赛博黑金微光玻璃 */
         .auth-gate-overlay {
             position: fixed;
             inset: 0;
             width: 100%;
             height: 100vh;
             height: 100dvh;
-            background: rgba(4, 7, 12, 0.88);
-            backdrop-filter: blur(24px) saturate(180%);
-            -webkit-backdrop-filter: blur(24px) saturate(180%);
+            background: rgba(3, 6, 10, 0.92);
+            backdrop-filter: blur(28px) saturate(200%);
+            -webkit-backdrop-filter: blur(28px) saturate(200%);
             z-index: 9999;
             display: flex;
             align-items: center;
@@ -917,150 +918,149 @@
             padding: 16px;
             opacity: 0;
             pointer-events: none;
-            transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .auth-gate-overlay.active {
             opacity: 1;
             pointer-events: auto;
         }
         .auth-card {
-            background: linear-gradient(180deg, #161c24 0%, #0d1117 100%);
-            border: 1px solid rgba(255, 255, 255, 0.14);
-            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.9), 0 0 0 1px rgba(56, 189, 248, 0.15);
-            border-radius: 20px;
+            background: linear-gradient(180deg, #181d26 0%, #0d1117 100%);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.95), 0 0 35px rgba(245, 158, 11, 0.15);
+            border-radius: 24px;
             width: 100%;
-            max-width: 400px;
-            padding: 28px 24px 24px;
+            max-width: 420px;
+            padding: 28px 24px 22px;
             color: var(--text-primary);
             position: relative;
             transform: scale(0.96);
-            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            text-align: center;
         }
         .auth-gate-overlay.active .auth-card {
             transform: scale(1);
         }
-        .auth-tabs {
+        .auth-qr-frame {
+            position: relative;
+            width: 190px;
+            height: 190px;
+            margin: 14px auto 14px;
+            padding: 8px;
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(245, 158, 11, 0.35);
+            border: 2px solid rgba(245, 158, 11, 0.6);
             display: flex;
-            background: rgba(0, 0, 0, 0.35);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 10px;
-            padding: 3px;
-            margin-bottom: 20px;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
         }
-        .auth-tab-btn {
-            flex: 1;
-            padding: 9px 0;
-            text-align: center;
-            font-size: 13px;
-            font-weight: 700;
-            color: var(--text-secondary);
-            border: none;
-            background: transparent;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-        .auth-tab-btn.active {
-            background: #21262d;
-            color: #38bdf8;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.4);
-        }
-        .auth-field {
-            margin-bottom: 16px;
-        }
-        .auth-field label {
-            display: block;
-            font-size: 11.5px;
-            font-weight: 600;
-            color: var(--text-secondary);
-            margin-bottom: 6px;
-        }
-        .auth-input {
+        .auth-qr-frame img {
             width: 100%;
-            background: rgba(7, 9, 14, 0.7);
-            border: 1px solid rgba(255, 255, 255, 0.12);
+            height: 100%;
+            object-fit: contain;
             border-radius: 10px;
+            display: block;
+        }
+        .auth-qr-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: rgba(245, 158, 11, 0.12);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            color: #fbbf24;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 11.5px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .auth-input-group {
+            display: flex;
+            gap: 8px;
+            margin-top: 14px;
+        }
+        .auth-passcode-input {
+            flex: 1;
+            background: rgba(7, 9, 14, 0.85);
+            border: 1px solid rgba(245, 158, 11, 0.4);
+            border-radius: 12px;
             padding: 12px 14px;
-            font-size: 14px;
-            font-family: inherit;
-            color: #fff;
+            font-size: 16px;
+            font-family: var(--font-mono);
+            font-weight: 700;
+            letter-spacing: 3px;
+            color: #fbbf24;
+            text-align: center;
             outline: none;
-            transition: border-color 0.2s, box-shadow 0.2s;
+            transition: all 0.2s;
             box-sizing: border-box;
         }
-        .auth-input:focus {
-            border-color: #38bdf8;
-            box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.25);
+        .auth-passcode-input::placeholder {
+            color: #64748b;
+            letter-spacing: 0.5px;
+            font-weight: 500;
+            font-size: 13.5px;
+            font-family: var(--font-main);
         }
-        .auth-btn-submit {
-            width: 100%;
-            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        .auth-passcode-input:focus {
+            border-color: #f59e0b;
+            box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.3);
+            background: rgba(7, 9, 14, 0.95);
+        }
+        .auth-btn-unlock {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
             border: none;
-            color: #fff;
-            padding: 13px;
-            border-radius: 10px;
-            font-size: 14px;
-            font-weight: 700;
+            color: #000;
+            font-weight: 800;
+            padding: 0 20px;
+            border-radius: 12px;
+            font-size: 14.5px;
             cursor: pointer;
-            box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35);
+            box-shadow: 0 4px 16px rgba(245, 158, 11, 0.4);
             transition: all 0.2s;
-            margin-top: 6px;
+            white-space: nowrap;
         }
-        .auth-btn-submit:active {
-            transform: scale(0.98);
+        .auth-btn-unlock:active {
+            transform: scale(0.97);
             opacity: 0.9;
         }
         .auth-msg {
-            margin-top: 12px;
+            margin-top: 10px;
             font-size: 12px;
             text-align: center;
             min-height: 18px;
-            font-weight: 600;
+            font-weight: 700;
         }
         .auth-msg.error { color: #f43f5e; }
         .auth-msg.success { color: #10b981; }
 
-        /* 顶部用户状态指示器 */
+        /* 顶部用户状态指示器 - 赛博黑金胶囊 */
         .user-status-badge {
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            background: rgba(56, 189, 248, 0.1);
-            border: 1px solid rgba(56, 189, 248, 0.25);
-            padding: 4px 8px;
+            background: rgba(245, 158, 11, 0.12);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+            padding: 4px 10px;
             border-radius: 16px;
             font-size: 11px;
-            font-family: var(--font-mono);
-            color: #38bdf8;
+            color: #fbbf24;
             cursor: pointer;
             transition: all 0.2s;
             white-space: nowrap;
             flex-shrink: 0;
             user-select: none;
+            font-weight: 700;
         }
         .user-status-badge:hover {
-            background: rgba(56, 189, 248, 0.2);
-            border-color: rgba(56, 189, 248, 0.4);
+            background: rgba(245, 158, 11, 0.22);
+            border-color: rgba(245, 158, 11, 0.55);
         }
-        .user-status-badge .user-phone-text {
-            display: inline-block;
+        .user-status-badge .lock-icon {
             font-size: 11px;
-            line-height: 1;
-        }
-        .user-status-badge .logout-btn {
-            font-size: 10px;
-            color: #94a3b8;
-            padding: 1px 4px;
-            border-radius: 4px;
-            background: rgba(255, 255, 255, 0.06);
-            display: inline-flex;
-            align-items: center;
-            gap: 2px;
-            transition: all 0.15s;
-        }
-        .user-status-badge:hover .logout-btn {
-            color: #f87171;
-            background: rgba(248, 113, 113, 0.15);
+            opacity: 0.85;
         }
 
         /* 模态弹窗 (移动端极致底部抽屉 Bottom Sheet 规范) - 99分深层毛玻璃与阻尼 */
@@ -1524,7 +1524,7 @@
     // 【强制版本控制】页面级JS代码版本 - 解决浏览器缓存旧代码问题
     // 每次修改index.html后，递增此版本号
     // ========================================================================
-    const APP_JS_VERSION = '20261127-v2';
+    const APP_JS_VERSION = '20261127-v3';
     const LAST_JS_VERSION = localStorage.getItem('jc_js_version');
 
     if (LAST_JS_VERSION !== APP_JS_VERSION) {
@@ -1976,38 +1976,39 @@
         </div>
     </nav>
 
-    <!-- 会员专属暗黑门禁遮罩 -->
+    <!-- 微信扫码领口令暗黑门禁遮罩 -->
     <div class="auth-gate-overlay" id="authGateOverlay">
         <div class="auth-card">
-            <div style="text-align: center; margin-bottom: 20px;">
-                <div style="display: inline-block; width: 44px; height: 44px; border-radius: 12px; overflow: hidden; margin-bottom: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);">
-                    <img src="./images/logo.jpg" alt="Logo" style="width: 100%; height: 100%; object-fit: cover;">
+            <div style="margin-bottom: 6px;">
+                <div class="auth-qr-badge">
+                    <span>🔒</span> 为防同行恶意爬取 · 本站独家内参已加密
                 </div>
-                <h2 style="font-size: 18px; font-weight: 800; color: #f8fafc; letter-spacing: 0.5px;">豪门数据内参 · 会员登录</h2>
-                <p style="font-size: 12px; color: var(--text-secondary); margin-top: 4px;">线下实体彩店专属研判终端 · 会员专享访问</p>
+                <h2 style="font-size: 19px; font-weight: 800; color: #f8fafc; letter-spacing: 0.5px;">【小杨说体彩 · 今日独家内参】</h2>
+                <p style="font-size: 12.5px; color: var(--text-secondary); margin-top: 6px; line-height: 1.5;">
+                    长按或微信扫码添加店主，发送<b style="color: #fbbf24;">【领口令】</b>免费获取今日解锁码！
+                </p>
             </div>
 
-            <div class="auth-tabs">
-                <button type="button" class="auth-tab-btn active" id="authTabLogin" onclick="switchAuthTab('login')">会员登录</button>
-                <button type="button" class="auth-tab-btn" id="authTabRegister" onclick="switchAuthTab('register')">免费注册</button>
+            <!-- 二维码大图 -->
+            <div class="auth-qr-frame">
+                <img src="./assets/wechat_qr.jpg" alt="微信扫码添加店主领口令" onerror="this.onerror=null;this.src='./images/wechat_qr.jpg';">
+            </div>
+            <div style="font-size: 11.5px; color: var(--text-tertiary); margin-bottom: 8px;">
+                微信名片：豪门竞彩 (中国体育彩票线下实体认证)
             </div>
 
-            <form id="authForm" onsubmit="handleAuthSubmit(event)">
-                <div class="auth-field">
-                    <label for="authPhone">手机号码</label>
-                    <input type="tel" id="authPhone" class="auth-input" placeholder="请输入11位中国大陆手机号" maxlength="11" autocomplete="tel" required>
+            <!-- 口令输入与解锁 -->
+            <form id="passcodeForm" onsubmit="handlePasscodeSubmit(event)">
+                <div class="auth-input-group">
+                    <input type="text" id="passcodeInput" class="auth-passcode-input" placeholder="请输入今日解锁口令" maxlength="20" autocomplete="off" required>
+                    <button type="submit" class="auth-btn-unlock" id="authUnlockBtn">立即解锁全站</button>
                 </div>
-                <div class="auth-field">
-                    <label for="authPassword">登录密码</label>
-                    <input type="password" id="authPassword" class="auth-input" placeholder="请输入密码 (至少6位)" minlength="6" autocomplete="current-password" required>
-                </div>
-                <button type="submit" class="auth-btn-submit" id="authSubmitBtn">立即登录终端</button>
             </form>
 
             <div class="auth-msg" id="authMsg"></div>
 
-            <div style="margin-top: 18px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.08); text-align: center; font-size: 11.5px; color: var(--text-tertiary);">
-                <span>💬 遇到账号问题？联系店主小杨微信：<b>haomenjingcai-123</b></span>
+            <div style="margin-top: 14px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.08); text-align: center; font-size: 11px; color: var(--text-tertiary);">
+                <span>💡 每天更新实时独家深指与稳胆模型 · 店主微信直接发放</span>
             </div>
         </div>
     </div>
@@ -4442,42 +4443,30 @@ function copyWechat() {
         })();
 
         // ========================================================================
-        // 【会员系统】暗黑门禁认证与状态控制
+        // 【微信扫码加店主领口令】暗黑门禁认证与全站状态控制
         // ========================================================================
-        let currentAuthMode = 'login';
-
         function getAuthApiBase() {
             return (location.protocol === 'https:')
                 ? 'https://api.qingdaocare.top'
                 : 'http://47.121.185.16/football_api';
         }
 
-        function switchAuthTab(mode) {
-            currentAuthMode = mode;
-            const tabLogin = document.getElementById('authTabLogin');
-            const tabRegister = document.getElementById('authTabRegister');
-            const submitBtn = document.getElementById('authSubmitBtn');
-            const authMsg = document.getElementById('authMsg');
-            if (authMsg) { authMsg.innerText = ''; authMsg.className = 'auth-msg'; }
-
-            if (mode === 'login') {
-                if (tabLogin) tabLogin.classList.add('active');
-                if (tabRegister) tabRegister.classList.remove('active');
-                if (submitBtn) submitBtn.innerText = '立即登录终端';
-            } else {
-                if (tabRegister) tabRegister.classList.add('active');
-                if (tabLogin) tabLogin.classList.remove('active');
-                if (submitBtn) submitBtn.innerText = '立即免费注册';
-            }
+        function getTodayDateStr() {
+            const d = new Date();
+            return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
         }
 
         function checkAuthGate() {
             const token = localStorage.getItem('auth_token');
-            const phone = localStorage.getItem('auth_phone');
+            const unlockDate = localStorage.getItem('passcode_unlocked_date');
+            const today = getTodayDateStr();
             const overlay = document.getElementById('authGateOverlay');
             const statusContainer = document.getElementById('user-status-container');
 
-            if (!token || !phone) {
+            // 拥有有效 token 且日期匹配（当天已解锁）
+            const isUnlocked = !!(token && unlockDate === today);
+
+            if (!isUnlocked) {
                 if (overlay) overlay.classList.add('active');
                 if (statusContainer) statusContainer.innerHTML = '';
                 return false;
@@ -4485,37 +4474,27 @@ function copyWechat() {
 
             if (overlay) overlay.classList.remove('active');
             if (statusContainer) {
-                const maskedPhone = phone.replace(/^(\d{3})\d{4}(\d{4})$/, '$1****$2');
                 statusContainer.innerHTML = `
-                    <div class="user-status-badge" title="账号：${phone} · 点击退出登录" onclick="handleLogout()">
-                        <span class="user-phone-text">${maskedPhone}</span>
-                        <span class="logout-btn">退出</span>
+                    <div class="user-status-badge" title="今日内参已解锁 · 点击可重新锁定" onclick="handleLockGate()">
+                        <span class="lock-icon">✔</span>
+                        <span>今日已解锁</span>
                     </div>
                 `;
             }
             return true;
         }
 
-        async function handleAuthSubmit(e) {
+        async function handlePasscodeSubmit(e) {
             if (e) e.preventDefault();
-            const phoneInput = document.getElementById('authPhone');
-            const passwordInput = document.getElementById('authPassword');
+            const passcodeInput = document.getElementById('passcodeInput');
             const authMsg = document.getElementById('authMsg');
-            const submitBtn = document.getElementById('authSubmitBtn');
+            const submitBtn = document.getElementById('authUnlockBtn');
 
-            const phone = (phoneInput ? phoneInput.value : '').trim();
-            const password = (passwordInput ? passwordInput.value : '').trim();
+            const passcode = (passcodeInput ? passcodeInput.value : '').trim();
 
-            if (!/^1[3-9]\d{9}$/.test(phone)) {
+            if (!passcode) {
                 if (authMsg) {
-                    authMsg.innerText = '请输入正确的11位手机号码';
-                    authMsg.className = 'auth-msg error';
-                }
-                return;
-            }
-            if (password.length < 6) {
-                if (authMsg) {
-                    authMsg.innerText = '密码长度至少需要6位';
+                    authMsg.innerText = '请输入今日解锁口令';
                     authMsg.className = 'auth-msg error';
                 }
                 return;
@@ -4523,49 +4502,44 @@ function copyWechat() {
 
             if (submitBtn) {
                 submitBtn.disabled = true;
-                submitBtn.innerText = '正在验证中...';
+                submitBtn.innerText = '正在解锁...';
             }
             if (authMsg) {
                 authMsg.innerText = '';
                 authMsg.className = 'auth-msg';
             }
 
-            const endpoint = (currentAuthMode === 'register')
-                ? (getAuthApiBase() + '/api/auth/register')
-                : (getAuthApiBase() + '/api/auth/login');
-
             try {
-                const res = await fetch(endpoint, {
+                const res = await fetch(getAuthApiBase() + '/api/passcode/verify', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ phone: phone, password: password })
+                    body: JSON.stringify({ passcode: passcode })
                 });
                 const data = await res.json();
 
-                if (res.ok && data.token) {
+                if (res.ok && data.ok && data.token) {
                     localStorage.setItem('auth_token', data.token);
-                    localStorage.setItem('auth_phone', phone);
+                    localStorage.setItem('passcode_unlocked_date', getTodayDateStr());
                     if (authMsg) {
-                        authMsg.innerText = (currentAuthMode === 'register' ? '注册成功，正在进入...' : '登录成功，正在进入...');
+                        authMsg.innerText = '🎉 解锁成功！欢迎查阅今日独家内参';
                         authMsg.className = 'auth-msg success';
                     }
                     setTimeout(() => {
                         checkAuthGate();
-                        if (phoneInput) phoneInput.value = '';
-                        if (passwordInput) passwordInput.value = '';
+                        if (passcodeInput) passcodeInput.value = '';
                         if (submitBtn) {
                             submitBtn.disabled = false;
-                            submitBtn.innerText = (currentAuthMode === 'register' ? '立即免费注册' : '立即登录终端');
+                            submitBtn.innerText = '立即解锁全站';
                         }
-                    }, 600);
+                    }, 500);
                 } else {
                     if (authMsg) {
-                        authMsg.innerText = data.message || '请求失败，请稍后重试';
+                        authMsg.innerText = data.error || data.message || '口令错误，请长按微信名片获取最新口令';
                         authMsg.className = 'auth-msg error';
                     }
                     if (submitBtn) {
                         submitBtn.disabled = false;
-                        submitBtn.innerText = (currentAuthMode === 'register' ? '立即免费注册' : '立即登录终端');
+                        submitBtn.innerText = '立即解锁全站';
                     }
                 }
             } catch(err) {
@@ -4575,13 +4549,13 @@ function copyWechat() {
                 }
                 if (submitBtn) {
                     submitBtn.disabled = false;
-                    submitBtn.innerText = (currentAuthMode === 'register' ? '立即免费注册' : '立即登录终端');
+                    submitBtn.innerText = '立即解锁全站';
                 }
             }
         }
 
-        function handleLogout() {
-            if (confirm('确认退出当前登录状态？')) {
+        function handleLockGate() {
+            if (confirm('是否重新锁定全站内参？')) {
                 const token = localStorage.getItem('auth_token');
                 if (token) {
                     try {
@@ -4592,7 +4566,7 @@ function copyWechat() {
                     } catch(e) {}
                 }
                 localStorage.removeItem('auth_token');
-                localStorage.removeItem('auth_phone');
+                localStorage.removeItem('passcode_unlocked_date');
                 checkAuthGate();
             }
         }

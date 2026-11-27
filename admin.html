@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>小杨说体彩 · 会员管理中台</title>
+    <title>小杨说体彩 · 会员与口令管理中台</title>
     <link rel="icon" type="image/jpeg" href="./favicon.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700;800&family=PingFang+SC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -148,6 +148,101 @@
         }
         .btn-query:hover { opacity: 0.9; }
 
+        /* 口令管理卡片 */
+        .passcode-card {
+            background: linear-gradient(180deg, #161c24 0%, #0d1117 100%);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 12px 32px rgba(0,0,0,0.5), 0 0 20px rgba(245, 158, 11, 0.08);
+            margin-bottom: 24px;
+        }
+
+        .passcode-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .passcode-header h2 {
+            font-size: 16px;
+            font-weight: 800;
+            color: #f8fafc;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .current-code-box {
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin-bottom: 18px;
+        }
+
+        .code-display {
+            font-size: 36px;
+            font-weight: 800;
+            font-family: var(--font-mono);
+            letter-spacing: 4px;
+            color: #f59e0b;
+            text-shadow: 0 0 16px rgba(245, 158, 11, 0.4);
+        }
+
+        .code-meta {
+            font-size: 12px;
+            color: var(--text-tertiary);
+        }
+
+        .passcode-form-row {
+            display: flex;
+            gap: 12px;
+        }
+
+        .input-new-code {
+            flex: 1;
+            background: #07090e;
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            border-radius: 10px;
+            padding: 12px 16px;
+            font-size: 15px;
+            font-family: var(--font-mono);
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: #fff;
+            outline: none;
+            transition: all 0.2s;
+        }
+        .input-new-code:focus {
+            border-color: #f59e0b;
+            box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.2);
+        }
+
+        .btn-update-code {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            border: none;
+            color: #000;
+            font-weight: 800;
+            padding: 0 22px;
+            border-radius: 10px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.2s;
+            box-shadow: 0 4px 14px rgba(245, 158, 11, 0.3);
+            white-space: nowrap;
+        }
+        .btn-update-code:hover {
+            opacity: 0.95;
+            transform: translateY(-1px);
+        }
+
         /* 数据展示面板 */
         .data-panel {
             display: none;
@@ -286,7 +381,7 @@
     <div class="container">
         <div class="header">
             <div class="header-title">
-                <h1>小杨说体彩 · 会员管理中台</h1>
+                <h1>小杨说体彩 · 管理中台</h1>
                 <span>ADMIN GATE</span>
             </div>
             <a href="./index.html" class="btn-home">← 返回前台</a>
@@ -296,17 +391,40 @@
             <h2>🔑 管理安全鉴权</h2>
             <div class="form-row">
                 <input type="password" id="secretInput" class="input-secret" placeholder="输入管理密钥 (默认 qingdao2026)" value="qingdao2026">
-                <button type="button" class="btn-query" onclick="loadUsers()">查询会员列表</button>
+                <button type="button" class="btn-query" onclick="loadAllAdminData()">刷新中台数据</button>
             </div>
             <div id="queryError" style="margin-top: 10px; font-size: 12px; color: var(--accent-red); display: none;"></div>
         </div>
 
+        <!-- 🔑 今日解锁口令管理卡片 -->
+        <div class="passcode-card" id="passcodeCard">
+            <div class="passcode-header">
+                <h2>🔑 今日解锁口令管理</h2>
+                <span style="font-size: 12px; color: var(--text-tertiary);">修改后全网终端即刻生效</span>
+            </div>
+            <div class="current-code-box">
+                <div>
+                    <div style="font-size: 11.5px; color: var(--text-secondary); margin-bottom: 4px;">当前生效口令：</div>
+                    <div class="code-display" id="currentPasscode">----</div>
+                </div>
+                <div style="margin-left: auto; text-align: right;">
+                    <div class="code-meta" id="passcodeUpdatedAt">更新时间：--</div>
+                    <div class="code-meta" id="passcodeUnlockCount" style="margin-top: 4px;">总解锁次数：-- 次</div>
+                </div>
+            </div>
+            <div class="passcode-form-row">
+                <input type="text" id="newPasscodeInput" class="input-new-code" placeholder="输入新口令 (如 8888 或今日暗号)" maxlength="20">
+                <button type="button" class="btn-update-code" id="btnUpdatePasscode" onclick="updatePasscode()">立即更新口令</button>
+            </div>
+        </div>
+
+        <!-- 历史会员数据展示面板 -->
         <div class="data-panel" id="dataPanel">
             <div class="stats-bar">
                 <div class="stats-info">
-                    <div class="stats-badge">注册会员总计：<b id="userCount">0</b> 人</div>
+                    <div class="stats-badge">历史注册用户统计：<b id="userCount">0</b> 人</div>
                 </div>
-                <button type="button" class="btn-copy" onclick="copyAllPhones()">📋 一键复制所有手机号</button>
+                <button type="button" class="btn-copy" onclick="copyAllPhones()">📋 一键复制手机号</button>
             </div>
 
             <div class="table-responsive">
@@ -327,7 +445,7 @@
         </div>
     </div>
 
-    <div class="tip-toast" id="toast">复制成功</div>
+    <div class="tip-toast" id="toast">操作成功</div>
 
     <script>
         let currentUsers = [];
@@ -338,11 +456,73 @@
                 : 'http://47.121.185.16/football_api';
         }
 
-        function showToast(msg) {
+        function showToast(msg, isError) {
             const toast = document.getElementById('toast');
             toast.innerText = msg;
+            toast.style.background = isError ? '#f43f5e' : '#10b981';
             toast.classList.add('show');
-            setTimeout(() => toast.classList.remove('show'), 2000);
+            setTimeout(() => toast.classList.remove('show'), 2200);
+        }
+
+        async function fetchPasscode() {
+            const secret = document.getElementById('secretInput').value.trim();
+            if (!secret) return;
+
+            try {
+                const url = getAdminApiBase() + '/api/admin/passcode?secret=' + encodeURIComponent(secret);
+                const res = await fetch(url);
+                const data = await res.json();
+                if (res.ok && data.ok) {
+                    document.getElementById('currentPasscode').innerText = data.passcode || '----';
+                    document.getElementById('passcodeUpdatedAt').innerText = '更新时间：' + (data.updated_at || '--');
+                    document.getElementById('passcodeUnlockCount').innerText = '总解锁次数：' + (data.unlock_count ?? 0) + ' 次';
+                }
+            } catch(e) {
+                console.warn('获取口令失败', e);
+            }
+        }
+
+        async function updatePasscode() {
+            const secret = document.getElementById('secretInput').value.trim();
+            const newCodeInput = document.getElementById('newPasscodeInput');
+            const newCode = newCodeInput.value.trim();
+            const btn = document.getElementById('btnUpdatePasscode');
+
+            if (!secret) {
+                showToast('请输入管理密钥', true);
+                return;
+            }
+            if (!newCode) {
+                showToast('请输入新口令内容', true);
+                return;
+            }
+
+            btn.disabled = true;
+            btn.innerText = '正在更新...';
+
+            try {
+                const url = getAdminApiBase() + '/api/admin/passcode';
+                const res = await fetch(url, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ secret: secret, new_passcode: newCode })
+                });
+                const data = await res.json();
+
+                if (res.ok && data.ok) {
+                    showToast('🎉 口令更新成功，全网立刻生效！');
+                    document.getElementById('currentPasscode').innerText = data.passcode;
+                    document.getElementById('passcodeUpdatedAt').innerText = '更新时间：' + (data.updated_at || '刚刚');
+                    newCodeInput.value = '';
+                } else {
+                    showToast(data.message || '更新口令失败', true);
+                }
+            } catch(e) {
+                showToast('网络连接异常，更新口令失败', true);
+            } finally {
+                btn.disabled = false;
+                btn.innerText = '立即更新口令';
+            }
         }
 
         async function loadUsers() {
@@ -365,7 +545,7 @@
                 const data = await res.json();
 
                 if (!res.ok || data.code !== 200) {
-                    errDiv.innerText = data.message || '查询失败，请检查密钥是否正确';
+                    errDiv.innerText = data.message || '鉴权失败，请检查密钥是否正确';
                     errDiv.style.display = 'block';
                     dataPanel.style.display = 'none';
                     return;
@@ -385,16 +565,21 @@
                 `).join('');
 
                 dataPanel.style.display = 'block';
-                showToast(`成功加载 ${currentUsers.length} 位会员`);
             } catch(e) {
                 errDiv.innerText = '网络连接异常，无法连通管理后台 API';
                 errDiv.style.display = 'block';
             }
         }
 
+        async function loadAllAdminData() {
+            await fetchPasscode();
+            await loadUsers();
+            showToast('中台数据已刷新');
+        }
+
         function copyAllPhones() {
             if (!currentUsers || currentUsers.length === 0) {
-                showToast('暂无手机号可复制');
+                showToast('暂无手机号可复制', true);
                 return;
             }
             const phoneList = currentUsers.map(u => u.phone).join('\n');
@@ -418,14 +603,14 @@
                 document.execCommand('copy');
                 showToast(`已复制 ${currentUsers.length} 个手机号到剪贴板！`);
             } catch(e) {
-                showToast('复制失败，请手动选取');
+                showToast('复制失败，请手动选取', true);
             }
             document.body.removeChild(ta);
         }
 
         // 页面打开时如果填有默认口令自动加载一次
         window.onload = function() {
-            loadUsers();
+            loadAllAdminData();
         };
     </script>
 </body>
