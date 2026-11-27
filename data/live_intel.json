@@ -1,19 +1,19 @@
 {
-  "updated_at": "2026-11-28 00:42:10",
+  "updated_at": "2026-11-28 01:14:59",
   "total_tips": 17,
   "live_feed": [
     {
-      "id": 17078,
-      "channel": "football_injuries",
-      "time": "2026-11-27 21:15",
-      "code": "周日009",
-      "key": "20261129_周日009",
-      "league": "意甲",
-      "category": "赛前军情",
-      "is_tip": false,
-      "match": "萨索洛 VS 那不勒斯",
-      "chinese": "老客们注意！那不勒斯中场核心德布劳内肌肉疲劳，今天单独训练，恢复时间短又逢密集赛程，周日八成上不了。这对主帅阿莱格里是实打实的重创，客队中场创造力大打折扣。倾向进球数偏少，让球盘可多留意主队萨索洛这边。",
-      "original": "🚨 Kevin De Bruyne рискует пропустить матч Napoli против Sassuolo . 🚑 По информации Sky, бельгийский полузащитник провёл сегодняшнюю тренировку индивидуально из-",
+      "id": 17135,
+      "channel": "betistry",
+      "time": "2026-11-28 00:30",
+      "code": "周五008",
+      "key": "20261128_周五008",
+      "league": "英超",
+      "category": "推单·已开赛",
+      "is_tip": true,
+      "match": "诺丁汉 VS 切尔西",
+      "chinese": "老客们听好，周五008英超诺丁汉对切尔西，外盘就甩来一句：大1.5球，全场至少俩球。伤停、首发、资金异动一概没提，咱不瞎编。就这一条，自己掂量，别上头。",
+      "original": "Betistry Football Tips (27-11-26) 07:30 PM | 🇦🇹 Austria: Grazer AK vs Altach — Tip: Over 1.5 gls 07:00 PM | 🇩🇰 Denmark: Hvidovre IF vs Kolding IF — Tip: 1 07:00",
       "translated": true,
       "channel_weight": 0.5
     },
@@ -63,17 +63,17 @@
       "channel_weight": 0.5
     },
     {
-      "id": 17034,
-      "channel": "sure2scoreprediction",
-      "time": "2026-11-27 16:54",
-      "code": "周五008",
-      "key": "20261128_周五008",
-      "league": "英超",
-      "category": "推单",
-      "is_tip": true,
-      "match": "诺丁汉 VS 切尔西",
-      "chinese": "老客们，周五008诺丁汉（森林）对切尔西，外盘只透一句：大1.5球，看进球往上走。伤停、首发、盘口水位一概没提，别当铁料。就一个方向，下注自个儿掂量。",
-      "original": "🚀 🚀 🚀 FREE FOOTBALL TIPS 🚀 🚀 🚀 📅 27/11/2026 ⚽ Saudi-Arabia Pro League 🏳️ Al-Ittihad FC vs NEOM ✅ Prediction: Over 2.5 Goals ⚽ England: Premier League 🏳️ Notting",
+      "id": 17078,
+      "channel": "football_injuries",
+      "time": "2026-11-27 21:15",
+      "code": "周日009",
+      "key": "20261129_周日009",
+      "league": "意甲",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "萨索洛 VS 那不勒斯",
+      "chinese": "老客们注意！那不勒斯中场核心德布劳内肌肉疲劳，今天单独训练，恢复时间短又逢密集赛程，周日八成上不了。这对主帅阿莱格里是实打实的重创，客队中场创造力大打折扣。倾向进球数偏少，让球盘可多留意主队萨索洛这边。",
+      "original": "🚨 Kevin De Bruyne рискует пропустить матч Napoli против Sassuolo . 🚑 По информации Sky, бельгийский полузащитник провёл сегодняшнюю тренировку индивидуально из-",
       "translated": true,
       "channel_weight": 0.5
     },
@@ -259,6 +259,21 @@
     }
   ],
   "archived": [
+    {
+      "id": 17034,
+      "channel": "sure2scoreprediction",
+      "time": "2026-11-27 16:54",
+      "code": "周五008",
+      "key": "20261128_周五008",
+      "league": "英超",
+      "category": "推单",
+      "is_tip": true,
+      "match": "诺丁汉 VS 切尔西",
+      "chinese": "老客们，周五008诺丁汉（森林）对切尔西，外盘只透一句：大1.5球，看进球往上走。伤停、首发、盘口水位一概没提，别当铁料。就一个方向，下注自个儿掂量。",
+      "original": "🚀 🚀 🚀 FREE FOOTBALL TIPS 🚀 🚀 🚀 📅 27/11/2026 ⚽ Saudi-Arabia Pro League 🏳️ Al-Ittihad FC vs NEOM ✅ Prediction: Over 2.5 Goals ⚽ England: Premier League 🏳️ Notting",
+      "translated": true,
+      "channel_weight": 0.5
+    },
     {
       "id": 17010,
       "channel": "olimpbet",
@@ -3243,27 +3258,12 @@
       "original": "🔥 Ставка дня от TelegaBet 🐂 Краснодар - ЦСКА 🐴 🐻 Россия, Премьер лига, Тур - 14 ⏰ Начало матча в 19:30 МСК «Быки» не могут выиграть в чемпионате на протяжении 7",
       "translated": true,
       "channel_weight": 0.5
-    },
-    {
-      "id": 11411,
-      "channel": "footballbettingtips10",
-      "time": "2026-11-09 00:29",
-      "code": "周日021",
-      "key": "20261109_周日021",
-      "league": "英超",
-      "category": "赛前军情",
-      "is_tip": false,
-      "match": "曼联 VS 维拉",
-      "chinese": "老客们，周日021英超曼联主场迎战维拉！欧洲电报频道最新消息，本场上半场进球数倾向超过0.5个，适合快速短线投注。伤停阵容信息暂缺，盘口变动需临场留意。祝您投注顺利！",
-      "original": "QUICKFIRE 🔥 DO NOT WORRY ABOUT ODDS ITS A QUICKFIRE BET 2 ⚔️ Man Utd vs Aston Villa 🎯 Over 0.51st half goals ❌ Stake £22.50 🎁 Get £30 in FREE BETS 👉 CLAIM IT NO",
-      "translated": true,
-      "channel_weight": 0.5
     }
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-11-28 00:42:10",
-    "last_nonempty_at": "2026-11-28 00:42:10",
+    "last_updated": "2026-11-28 01:14:59",
+    "last_nonempty_at": "2026-11-28 01:14:59",
     "live_count": 17,
     "archived_count": 200,
     "active_matches": 38,
@@ -3272,6 +3272,6 @@
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-11-28 00:42:10"
+    "checked_at": "2026-11-28 01:14:59"
   }
 }
