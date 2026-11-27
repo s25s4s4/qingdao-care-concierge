@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-11-27 22:13:13",
-  "total_tips": 14,
+  "updated_at": "2026-11-27 22:44:23",
+  "total_tips": 15,
   "live_feed": [
+    {
+      "id": 17074,
+      "channel": "FabrizioRomano",
+      "time": "2026-11-27 20:35",
+      "code": "周日015",
+      "key": "20261129_周日015",
+      "league": "西甲",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "拉科 VS 巴萨",
+      "chinese": "各位老客，巴萨传回好信儿：罗德里伤愈复出，今天已跟队合练，本场大概率进名单。中场硬度拉满，阵容更齐整。盘口暂时没动静，等首发出来再下手，别毛躁。",
+      "original": "🚨 🔵 🔴 Rodri, back available and today in team training with Barcelona squad. 🔛 🎥",
+      "translated": true,
+      "channel_weight": 0.5
+    },
     {
       "id": 17072,
       "channel": "TipstrrTips",
@@ -3217,9 +3232,9 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-11-27 22:13:13",
-    "last_nonempty_at": "2026-11-27 22:13:13",
-    "live_count": 14,
+    "last_updated": "2026-11-27 22:44:23",
+    "last_nonempty_at": "2026-11-27 22:44:23",
+    "live_count": 15,
     "archived_count": 200,
     "active_matches": 38,
     "llm_providers": [
@@ -3227,6 +3242,6 @@
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-11-27 22:13:13"
+    "checked_at": "2026-11-27 22:44:23"
   }
 }
