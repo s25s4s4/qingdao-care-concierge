@@ -1,19 +1,19 @@
 {
-  "updated_at": "2026-11-27 15:36:22",
-  "total_tips": 7,
+  "updated_at": "2026-11-27 16:04:57",
+  "total_tips": 8,
   "live_feed": [
     {
-      "id": 16983,
-      "channel": "football_predictions_ai",
-      "time": "2026-11-27 15:00",
-      "code": "周六018",
-      "key": "20261129_周六018",
-      "league": "德甲",
-      "category": "推单",
-      "is_tip": true,
-      "match": "斯图加特 VS 法兰克福",
-      "chinese": "周六018 斯图加特坐镇法兰克福，外盘三串一头胆锁定双方进球@1.30，德甲攻大守小典型局，伤停无核心变动，盘口纹丝不动，单博双响炮稳健。",
-      "original": "🎰 WEEKEND ACCUMULATOR 1. 🇩🇪 Bundesliga VfB Stuttgart vs Eintracht Frankfurt · Sat 17:30 UTC 💡 BTTS: Yes @ 1.30 2. 🇪🇸 La Liga Real Madrid vs Alaves · Sat 20:00 U",
+      "id": 17010,
+      "channel": "olimpbet",
+      "time": "2026-11-27 15:33",
+      "code": "周五008",
+      "key": "20261128_周五008",
+      "league": "英超",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "诺丁汉 VS 切尔西",
+      "chinese": "周五诺丁汉主场迎切尔西。蓝军两连败，士气低落。机构开主胜2.50，资金明显偏向主队。我看主队有望不败，主胜可重点关注。",
+      "original": "🤩 🤩 🤩 🤩 🤩 ОТЛИЧНОЕ ЗАВЕРШЕНИЕ РАБОЧЕЙ НЕДЕЛИ! 👉 «Лада» пропустила пять и более шайб в двух из четырёх последних матчей. ИТБ «Локомотива» (3.5) за 2.19 👉 СКА заб",
       "translated": true,
       "channel_weight": 0.5
     },
@@ -29,6 +29,21 @@
       "match": "诺丁汉 VS 切尔西",
       "chinese": "各位老客听好，周五008英超，诺丁汉森林主场迎战切尔西。欧洲那边就一句话：买双方进球，水位1.65。伤停、首发、资金异动统统没提，别瞎猜。就这一条，够用了。",
       "original": "Nottingham Forest vs Chelsea Premier League · 20:00 UTC Market: BTTS/GG Pick: GG Odds: 1.65",
+      "translated": true,
+      "channel_weight": 0.5
+    },
+    {
+      "id": 16983,
+      "channel": "football_predictions_ai",
+      "time": "2026-11-27 15:00",
+      "code": "周六018",
+      "key": "20261129_周六018",
+      "league": "德甲",
+      "category": "推单",
+      "is_tip": true,
+      "match": "斯图加特 VS 法兰克福",
+      "chinese": "周六018 斯图加特坐镇法兰克福，外盘三串一头胆锁定双方进球@1.30，德甲攻大守小典型局，伤停无核心变动，盘口纹丝不动，单博双响炮稳健。",
+      "original": "🎰 WEEKEND ACCUMULATOR 1. 🇩🇪 Bundesliga VfB Stuttgart vs Eintracht Frankfurt · Sat 17:30 UTC 💡 BTTS: Yes @ 1.30 2. 🇪🇸 La Liga Real Madrid vs Alaves · Sat 20:00 U",
       "translated": true,
       "channel_weight": 0.5
     },
@@ -3112,9 +3127,9 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-11-27 15:36:22",
-    "last_nonempty_at": "2026-11-27 15:36:22",
-    "live_count": 7,
+    "last_updated": "2026-11-27 16:04:57",
+    "last_nonempty_at": "2026-11-27 16:04:57",
+    "live_count": 8,
     "archived_count": 200,
     "active_matches": 39,
     "llm_providers": [
@@ -3122,6 +3137,6 @@
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-11-27 15:36:22"
+    "checked_at": "2026-11-27 16:04:57"
   }
 }
