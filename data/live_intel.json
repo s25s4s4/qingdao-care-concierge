@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-11-28 03:39:17",
-  "total_tips": 21,
+  "updated_at": "2026-11-28 05:40:31",
+  "total_tips": 20,
   "live_feed": [
+    {
+      "id": 17173,
+      "channel": "calciomercato",
+      "time": "2026-11-28 04:06",
+      "code": "周五006",
+      "key": "20261128_周五006",
+      "league": "意甲",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "威尼斯 VS 博洛尼亚",
+      "chinese": "周五意甲，威尼斯队对博洛尼亚队。开场二十分钟，一个进球被主裁判取消，最终零比零。原本进球没了，双方也没进成，大小球和进球数基本没戏。别追了，先把这场看稳。",
+      "original": "🏆 SERIE A 🏆 13ª Giornata GOAL ANNULLATO 🟠 Venezia 0-0 Bologna 🔴 ❌ R. Halhal ⏱️ 20’ ⚽️",
+      "translated": true,
+      "channel_weight": 0.5
+    },
     {
       "id": 17156,
       "channel": "calciomercato",
@@ -44,21 +59,6 @@
       "match": "威尼斯 VS 博洛尼亚",
       "chinese": "周五006意甲威尼斯对博洛尼亚，模型只给主胜二成六、平二成七、客胜四成七，倾向客胜。伤停、阵容、资金都没风吹草动，别加戏。概率归概率，临场再看盘。",
       "original": "📋 Round preview 1 · X · 2 Premier League Nottingham Forest — Chelsea: 35% · 30% · 35% Leeds United — Coventry City: 53% · 27% · 20% Manchester United — Brentfor",
-      "translated": true,
-      "channel_weight": 0.5
-    },
-    {
-      "id": 17026,
-      "channel": "matchplug",
-      "time": "2026-11-27 16:48",
-      "code": "周五006",
-      "key": "20261128_周五006",
-      "league": "意甲",
-      "category": "赛前军情",
-      "is_tip": false,
-      "match": "威尼斯 VS 博洛尼亚",
-      "chinese": "周五第六意甲，威尼斯（主）对阵博洛尼亚（客），机构倾向让球大于三点五射正，赔率一七四，暂无伤停与阵容变动，外盘流向明显，建议把握大球。",
-      "original": "Venezia vs Bologna Serie A · 19:45 UTC Market: Accumulator Bet Pick: 1 over 3.5 shots on target Odds: 1.74",
       "translated": true,
       "channel_weight": 0.5
     },
@@ -301,7 +301,9 @@
       "original": "🏆 WEEKEND PREVIEW 🏴󠁧󠁢󠁥󠁮󠁧󠁿 Premier League 📊 Season Trends (110 matches) ⚽ Avg goals/match: 2.75 · Over 2.5 in 47% 🏠 Home win 44% · Draw 27% · Away win 29% 🎯 BTTS",
       "translated": true,
       "channel_weight": 0.5
-    },
+    }
+  ],
+  "archived": [
     {
       "id": 16823,
       "channel": "betopickglobal",
@@ -316,9 +318,22 @@
       "original": "Friday, November 27 — 2 Sure Odds ⚽ 🎾 🏀 ⚽ Germany. Bundesliga (Germany) 19:30 1. Werder Bremen vs Borussia M´gladbach - 1X ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ 🎾",
       "translated": true,
       "channel_weight": 0.5
-    }
-  ],
-  "archived": [
+    },
+    {
+      "id": 17026,
+      "channel": "matchplug",
+      "time": "2026-11-27 16:48",
+      "code": "周五006",
+      "key": "20261128_周五006",
+      "league": "意甲",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "威尼斯 VS 博洛尼亚",
+      "chinese": "周五第六意甲，威尼斯（主）对阵博洛尼亚（客），机构倾向让球大于三点五射正，赔率一七四，暂无伤停与阵容变动，外盘流向明显，建议把握大球。",
+      "original": "Venezia vs Bologna Serie A · 19:45 UTC Market: Accumulator Bet Pick: 1 over 3.5 shots on target Odds: 1.74",
+      "translated": true,
+      "channel_weight": 0.5
+    },
     {
       "id": 16935,
       "channel": "betiper_official",
@@ -3288,50 +3303,20 @@
       "original": "⭐ Match of the day Atlético Madrid — Barcelona LaLiga, 20:00 UTC Model: 1 26% · X 29% · 2 45% Most likely score: 0:1 Expected goals: 1.6–1.9 Form (last 5): Atlé",
       "translated": true,
       "channel_weight": 0.5
-    },
-    {
-      "id": 11296,
-      "channel": "matchplug",
-      "time": "2026-11-08 18:20",
-      "code": "周日022",
-      "key": "20261109_周日022",
-      "league": "德甲",
-      "category": "赛前军情",
-      "is_tip": false,
-      "match": "弗赖堡 VS 柏林联合",
-      "chinese": "周日德甲弗赖堡主队迎战柏林联，机构开2.5球高水1.68，关注大球，伤停消息暂无，盘口维持主胜倾向。球队状态稳定，机构倾向主胜。",
-      "original": "SC Freiburg vs Union Berlin Bundesliga · 16:30 UTC Market: Over 2.5 Goals Pick: Over 2.5 gls Odds: 1.68",
-      "translated": true,
-      "channel_weight": 0.5
-    },
-    {
-      "id": 11277,
-      "channel": "betminesfootballpredictions",
-      "time": "2026-11-08 17:08",
-      "code": "周日023",
-      "key": "20261109_周日023",
-      "league": "意甲",
-      "category": "推单",
-      "is_tip": true,
-      "match": "国际米兰 VS 科莫",
-      "chinese": "周日23意甲（国际米兰）对阵（科莫）盘口倾向国米主胜，双方均有进球可能，图拉姆和卡拉汉奥卢若首发则有进球机会，机构偏好国米，外盘支持主胜。",
-      "original": "🔥 SUNDAY SERIE A – OUR PICKS! ⚽ Here we go with Sunday’s Serie A action! Three interesting fixtures on the schedule, with a selection of markets including goals",
-      "translated": true,
-      "channel_weight": 0.5
     }
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-11-28 03:39:17",
-    "last_nonempty_at": "2026-11-28 03:39:17",
-    "live_count": 21,
+    "last_updated": "2026-11-28 05:40:31",
+    "last_nonempty_at": "2026-11-28 05:40:31",
+    "live_count": 20,
     "archived_count": 200,
-    "active_matches": 38,
+    "active_matches": 36,
     "llm_providers": [
       "local",
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-11-28 03:39:17"
+    "checked_at": "2026-11-28 05:40:31"
   }
 }
