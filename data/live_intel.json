@@ -1,7 +1,67 @@
 {
-  "updated_at": "2026-11-28 17:10:45",
-  "total_tips": 16,
+  "updated_at": "2026-11-28 18:47:45",
+  "total_tips": 17,
   "live_feed": [
+    {
+      "id": 17311,
+      "channel": "forepitch_tips",
+      "time": "2026-11-28 17:06",
+      "code": "周六011",
+      "key": "20261128_周六011",
+      "league": "英超",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "曼联 VS 布伦特",
+      "chinese": "周六英超，曼联主场迎布伦特。模型主胜四成二，平两成七，客胜三成一，首选二比一，预期进球一点八对一点五，球数偏小。原文未提伤停盘口，仅参考，谨慎下注。",
+      "original": "⭐ Match of the day Manchester United — Brentford Premier League, 15:00 UTC Model: 1 42% · X 27% · 2 31% Most likely score: 2:1 Expected goals: 1.8–1.5 Form (las",
+      "translated": true,
+      "channel_weight": 0.5
+    },
+    {
+      "id": 17257,
+      "channel": "olimpbet",
+      "time": "2026-11-28 15:19",
+      "code": "周六011",
+      "key": "20261128_周六011",
+      "league": "英超",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "曼联 VS 布伦特",
+      "chinese": "红魔主场废，蜜蜂排前六，外盘挂1.64送客队不败，机构铁心防曼联。盘口纹丝不动锁定客不败，单关博冷稳防平。",
+      "original": "🔥 НА ЧТО ЗАРЯДИТЬ В СУББОТУ? СМОТРИ В ДАЙДЖЕСТЕ! 👉 У «Зенита» лишь 1 победа над ЦСКА в 5 последних матчах, а Семака могут уволить в случае поражения. Ждёшь сенс",
+      "translated": true,
+      "channel_weight": 0.5
+    },
+    {
+      "id": 17236,
+      "channel": "matchplug",
+      "time": "2026-11-28 14:22",
+      "code": "周六011",
+      "key": "20261128_周六011",
+      "league": "英超",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "曼联 VS 布伦特",
+      "chinese": "周六011英超，红魔（曼联）主场迎战蜜蜂（布伦特）。外盘指数直指双方进球（GG），1.51中低水防守端漏洞大，不纠结胜负，直奔对攻入市，胆拖必备，跟上！",
+      "original": "Manchester United vs Brentford Premier League · 15:00 UTC Market: BTTS/GG Pick: GG Odds: 1.51",
+      "translated": true,
+      "channel_weight": 0.5
+    },
+    {
+      "id": 16838,
+      "channel": "football_predictions_ai",
+      "time": "2026-11-27 01:00",
+      "code": "周六011",
+      "key": "20261128_周六011",
+      "league": "英超",
+      "category": "推单",
+      "is_tip": true,
+      "match": "曼联 VS 布伦特",
+      "chinese": "曼联对布伦特这场，机构就认双方进球，开1.47、六成三概率，倾向两队都能破门。布伦特这季8个点球全进，锋线稳当。伤停阵容没动静，盘口方向清楚，别的联赛花絮甭搭理。",
+      "original": "🏆 WEEKEND PREVIEW 🏴󠁧󠁢󠁥󠁮󠁧󠁿 Premier League 📊 Season Trends (110 matches) ⚽ Avg goals/match: 2.75 · Over 2.5 in 47% 🏠 Home win 44% · Draw 27% · Away win 29% 🎯 BTTS",
+      "translated": true,
+      "channel_weight": 0.5
+    },
     {
       "id": 17261,
       "channel": "victorspredict",
@@ -104,51 +164,6 @@
       "match": "国际米兰 VS 热那亚",
       "chinese": "老客们听好，周六020意甲，国际米兰主场打热那亚。那边周单点名主胜，方向就一个：国米赢。伤停、首发、盘口水位一概没提，别当铁料，临场再看。",
       "original": "🔥 THE WEEKLY DOUBLE 🔥 Four selections as we look to land this week's double! 🎯 ⚽ ROMA – MONZA - 1️⃣ Roma to win ⚽ INTER – GENOA - 1️⃣ Inter to win ⚽ REAL MADRID",
-      "translated": true,
-      "channel_weight": 0.5
-    },
-    {
-      "id": 17257,
-      "channel": "olimpbet",
-      "time": "2026-11-28 15:19",
-      "code": "周六011",
-      "key": "20261128_周六011",
-      "league": "英超",
-      "category": "赛前军情",
-      "is_tip": false,
-      "match": "曼联 VS 布伦特",
-      "chinese": "红魔主场废，蜜蜂排前六，外盘挂1.64送客队不败，机构铁心防曼联。盘口纹丝不动锁定客不败，单关博冷稳防平。",
-      "original": "🔥 НА ЧТО ЗАРЯДИТЬ В СУББОТУ? СМОТРИ В ДАЙДЖЕСТЕ! 👉 У «Зенита» лишь 1 победа над ЦСКА в 5 последних матчах, а Семака могут уволить в случае поражения. Ждёшь сенс",
-      "translated": true,
-      "channel_weight": 0.5
-    },
-    {
-      "id": 17236,
-      "channel": "matchplug",
-      "time": "2026-11-28 14:22",
-      "code": "周六011",
-      "key": "20261128_周六011",
-      "league": "英超",
-      "category": "赛前军情",
-      "is_tip": false,
-      "match": "曼联 VS 布伦特",
-      "chinese": "周六011英超，红魔（曼联）主场迎战蜜蜂（布伦特）。外盘指数直指双方进球（GG），1.51中低水防守端漏洞大，不纠结胜负，直奔对攻入市，胆拖必备，跟上！",
-      "original": "Manchester United vs Brentford Premier League · 15:00 UTC Market: BTTS/GG Pick: GG Odds: 1.51",
-      "translated": true,
-      "channel_weight": 0.5
-    },
-    {
-      "id": 16838,
-      "channel": "football_predictions_ai",
-      "time": "2026-11-27 01:00",
-      "code": "周六011",
-      "key": "20261128_周六011",
-      "league": "英超",
-      "category": "推单",
-      "is_tip": true,
-      "match": "曼联 VS 布伦特",
-      "chinese": "曼联对布伦特这场，机构就认双方进球，开1.47、六成三概率，倾向两队都能破门。布伦特这季8个点球全进，锋线稳当。伤停阵容没动静，盘口方向清楚，别的联赛花絮甭搭理。",
-      "original": "🏆 WEEKEND PREVIEW 🏴󠁧󠁢󠁥󠁮󠁧󠁿 Premier League 📊 Season Trends (110 matches) ⚽ Avg goals/match: 2.75 · Over 2.5 in 47% 🏠 Home win 44% · Draw 27% · Away win 29% 🎯 BTTS",
       "translated": true,
       "channel_weight": 0.5
     },
@@ -3247,9 +3262,9 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-11-28 17:10:45",
-    "last_nonempty_at": "2026-11-28 17:10:45",
-    "live_count": 16,
+    "last_updated": "2026-11-28 18:47:45",
+    "last_nonempty_at": "2026-11-28 18:47:45",
+    "live_count": 17,
     "archived_count": 200,
     "active_matches": 51,
     "llm_providers": [
@@ -3257,6 +3272,6 @@
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-11-28 17:10:45"
+    "checked_at": "2026-11-28 18:47:45"
   }
 }
