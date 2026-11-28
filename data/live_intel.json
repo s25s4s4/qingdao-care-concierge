@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-11-28 06:33:53",
-  "total_tips": 6,
+  "updated_at": "2026-11-28 09:07:22",
+  "total_tips": 7,
   "live_feed": [
+    {
+      "id": 17220,
+      "channel": "forepitch_tips",
+      "time": "2026-11-28 08:13",
+      "code": "周六002",
+      "key": "20261128_周六002",
+      "league": "日职",
+      "category": "推单",
+      "is_tip": true,
+      "match": "柏太阳神 VS 广岛三箭",
+      "chinese": "周六002日职柏太阳神对广岛三箭。模型看好客队，广岛三箭受让半球，胜率六成八；主胜、平各两成九，客胜四成三，大球二点五五成四，双方进球六成，预测一比二。伤停、资金面没提。",
+      "original": "⚽ JPN · 28 November, 07:00 UTC Kashiwa Reysol — Sanfrecce Hiroshima The model sees a clear edge. 🎯 Main pick: Sanfrecce Hiroshima +0.5 handicap · 68% Home 29% ·",
+      "translated": true,
+      "channel_weight": 0.5
+    },
     {
       "id": 17151,
       "channel": "calciomercato",
@@ -3097,9 +3112,9 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-11-28 06:33:53",
-    "last_nonempty_at": "2026-11-28 06:33:53",
-    "live_count": 6,
+    "last_updated": "2026-11-28 09:07:22",
+    "last_nonempty_at": "2026-11-28 09:07:22",
+    "live_count": 7,
     "archived_count": 200,
     "active_matches": 30,
     "llm_providers": [
@@ -3107,6 +3122,6 @@
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-11-28 06:33:53"
+    "checked_at": "2026-11-28 09:07:22"
   }
 }
