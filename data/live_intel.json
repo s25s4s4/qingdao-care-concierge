@@ -1,7 +1,52 @@
 {
-  "updated_at": "2026-11-28 16:41:37",
+  "updated_at": "2026-11-28 17:10:45",
   "total_tips": 16,
   "live_feed": [
+    {
+      "id": 17261,
+      "channel": "victorspredict",
+      "time": "2026-11-28 16:00",
+      "code": "周六009",
+      "key": "20261128_周六009",
+      "league": "德甲",
+      "category": "推单",
+      "is_tip": true,
+      "match": "汉堡 VS 拜仁",
+      "chinese": "外盘机构开拜仁客胜1.33低水，铁定看好客队拿分。汉堡主场伤停暂无核心缺阵，拜仁轮换幅度未明。盘口水位纹丝不动，无热门诱盘迹象，单博客胜防平手。",
+      "original": "🏆 BANKER TIPS - 28-11-2026 Paris Saint Germain vs Lorient France: Ligue 1 Prediction: Home (1.24) 🔗 View Details Hamburger SV vs Bayern München Germany: Bundesl",
+      "translated": true,
+      "channel_weight": 1.0
+    },
+    {
+      "id": 17160,
+      "channel": "FabrizioRomano",
+      "time": "2026-11-28 03:29",
+      "code": "周六009",
+      "key": "20261128_周六009",
+      "league": "德甲",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "汉堡 VS 拜仁",
+      "chinese": "本场德甲汉堡对拜仁：拜仁核心穆西亚拉右腿肌肉受伤，2026年前无法出场，进攻端少一爆点；客胜方向可留意，盘口与资金异动暂无可靠消息。",
+      "original": "🚨 ⚠️ FC Bayern confirm that Jamal Musiala sustained a muscle injury in his right thigh and will be sidelined for the time being. Musiala won’t feature anymore i",
+      "translated": true,
+      "channel_weight": 0.5
+    },
+    {
+      "id": 17109,
+      "channel": "FabrizioRomano",
+      "time": "2026-11-27 22:39",
+      "code": "周六009",
+      "key": "20261128_周六009",
+      "league": "德甲",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "汉堡 VS 拜仁",
+      "chinese": "穆西亚拉大腿二度撕裂报销至明年，拜仁核心缺阵实力大打折扣，客让盘口必缩水，汉堡主场留手机会大增，防平博胆可博主胜。",
+      "original": "🚨 ⚠️ Jamal Musiala will be out until the beginning of 2027 for FC Bayern after suffering a muscle injury setback. Musiala has a new muscle fibre tear in his lef",
+      "translated": true,
+      "channel_weight": 0.5
+    },
     {
       "id": 17265,
       "channel": "football_predictions_ai",
@@ -138,51 +183,6 @@
       "channel_weight": 0.5
     },
     {
-      "id": 17160,
-      "channel": "FabrizioRomano",
-      "time": "2026-11-28 03:29",
-      "code": "周六009",
-      "key": "20261128_周六009",
-      "league": "德甲",
-      "category": "赛前军情",
-      "is_tip": false,
-      "match": "汉堡 VS 拜仁",
-      "chinese": "本场德甲汉堡对拜仁：拜仁核心穆西亚拉右腿肌肉受伤，2026年前无法出场，进攻端少一爆点；客胜方向可留意，盘口与资金异动暂无可靠消息。",
-      "original": "🚨 ⚠️ FC Bayern confirm that Jamal Musiala sustained a muscle injury in his right thigh and will be sidelined for the time being. Musiala won’t feature anymore i",
-      "translated": true,
-      "channel_weight": 0.5
-    },
-    {
-      "id": 17109,
-      "channel": "FabrizioRomano",
-      "time": "2026-11-27 22:39",
-      "code": "周六009",
-      "key": "20261128_周六009",
-      "league": "德甲",
-      "category": "赛前军情",
-      "is_tip": false,
-      "match": "汉堡 VS 拜仁",
-      "chinese": "穆西亚拉大腿二度撕裂报销至明年，拜仁核心缺阵实力大打折扣，客让盘口必缩水，汉堡主场留手机会大增，防平博胆可博主胜。",
-      "original": "🚨 ⚠️ Jamal Musiala will be out until the beginning of 2027 for FC Bayern after suffering a muscle injury setback. Musiala has a new muscle fibre tear in his lef",
-      "translated": true,
-      "channel_weight": 0.5
-    },
-    {
-      "id": 17220,
-      "channel": "forepitch_tips",
-      "time": "2026-11-28 08:13",
-      "code": "周六002",
-      "key": "20261128_周六002",
-      "league": "日职",
-      "category": "推单",
-      "is_tip": true,
-      "match": "柏太阳神 VS 广岛三箭",
-      "chinese": "周六002日职柏太阳神对广岛三箭。模型看好客队，广岛三箭受让半球，胜率六成八；主胜、平各两成九，客胜四成三，大球二点五五成四，双方进球六成，预测一比二。伤停、资金面没提。",
-      "original": "⚽ JPN · 28 November, 07:00 UTC Kashiwa Reysol — Sanfrecce Hiroshima The model sees a clear edge. 🎯 Main pick: Sanfrecce Hiroshima +0.5 handicap · 68% Home 29% ·",
-      "translated": true,
-      "channel_weight": 0.5
-    },
-    {
       "id": 17151,
       "channel": "calciomercato",
       "time": "2026-11-28 02:15",
@@ -244,6 +244,21 @@
     }
   ],
   "archived": [
+    {
+      "id": 17220,
+      "channel": "forepitch_tips",
+      "time": "2026-11-28 08:13",
+      "code": "周六002",
+      "key": "20261128_周六002",
+      "league": "日职",
+      "category": "推单",
+      "is_tip": true,
+      "match": "柏太阳神 VS 广岛三箭",
+      "chinese": "周六002日职柏太阳神对广岛三箭。模型看好客队，广岛三箭受让半球，胜率六成八；主胜、平各两成九，客胜四成三，大球二点五五成四，双方进球六成，预测一比二。伤停、资金面没提。",
+      "original": "⚽ JPN · 28 November, 07:00 UTC Kashiwa Reysol — Sanfrecce Hiroshima The model sees a clear edge. 🎯 Main pick: Sanfrecce Hiroshima +0.5 handicap · 68% Home 29% ·",
+      "translated": true,
+      "channel_weight": 0.5
+    },
     {
       "id": 17140,
       "channel": "bad_man_betting_tips",
@@ -3228,35 +3243,20 @@
       "original": "Trying one last live fun bet before Barcelona match later Fredrikstad VS SK Brann (Norwegian League) (Live) HT over 0.5 goals Follow at own risk and good luck 😬",
       "translated": true,
       "channel_weight": 0.5
-    },
-    {
-      "id": 11429,
-      "channel": "football_predictions_ai",
-      "time": "2026-11-09 01:00",
-      "code": "周日030",
-      "key": "20261109_周日030",
-      "league": "西甲",
-      "category": "推单·已开赛",
-      "is_tip": true,
-      "match": "马竞 VS 巴萨",
-      "chinese": "老客们，周日西甲马竞主场硬刚巴萨！情报明确：大小球大球2.5，赔率1.33，置信度七成。西甲大球率五成七，马竞六连胜势如虹，巴萨十一连胜火力全开，无核心伤停。机构盘口力挺大球，跟上！",
-      "original": "🔥 HOT PICK 🇪🇸 La Liga 🆚 Atletico Madrid vs Barcelona 🕐 Sun, 8 Nov · 20:00 UTC 💡 Over/Under: Over 2.5 📊 Odds: 1.33 ✅ Confidence: 71% 📌 Match Facts • La Liga: Ove",
-      "translated": true,
-      "channel_weight": 0.5
     }
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-11-28 16:41:37",
-    "last_nonempty_at": "2026-11-28 16:41:37",
+    "last_updated": "2026-11-28 17:10:45",
+    "last_nonempty_at": "2026-11-28 17:10:45",
     "live_count": 16,
     "archived_count": 200,
-    "active_matches": 52,
+    "active_matches": 51,
     "llm_providers": [
       "local",
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-11-28 16:41:37"
+    "checked_at": "2026-11-28 17:10:45"
   }
 }
