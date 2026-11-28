@@ -1,7 +1,37 @@
 {
-  "updated_at": "2026-11-28 09:07:22",
-  "total_tips": 7,
+  "updated_at": "2026-11-28 11:42:03",
+  "total_tips": 9,
   "live_feed": [
+    {
+      "id": 17160,
+      "channel": "FabrizioRomano",
+      "time": "2026-11-28 03:29",
+      "code": "周六009",
+      "key": "20261128_周六009",
+      "league": "德甲",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "汉堡 VS 拜仁",
+      "chinese": "本场德甲汉堡对拜仁：拜仁核心穆西亚拉右腿肌肉受伤，2026年前无法出场，进攻端少一爆点；客胜方向可留意，盘口与资金异动暂无可靠消息。",
+      "original": "🚨 ⚠️ FC Bayern confirm that Jamal Musiala sustained a muscle injury in his right thigh and will be sidelined for the time being. Musiala won’t feature anymore i",
+      "translated": true,
+      "channel_weight": 0.5
+    },
+    {
+      "id": 17109,
+      "channel": "FabrizioRomano",
+      "time": "2026-11-27 22:39",
+      "code": "周六009",
+      "key": "20261128_周六009",
+      "league": "德甲",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "汉堡 VS 拜仁",
+      "chinese": "穆西亚拉大腿二度撕裂报销至明年，拜仁核心缺阵实力大打折扣，客让盘口必缩水，汉堡主场留手机会大增，防平博胆可博主胜。",
+      "original": "🚨 ⚠️ Jamal Musiala will be out until the beginning of 2027 for FC Bayern after suffering a muscle injury setback. Musiala has a new muscle fibre tear in his lef",
+      "translated": true,
+      "channel_weight": 0.5
+    },
     {
       "id": 17220,
       "channel": "forepitch_tips",
@@ -3112,16 +3142,16 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-11-28 09:07:22",
-    "last_nonempty_at": "2026-11-28 09:07:22",
-    "live_count": 7,
+    "last_updated": "2026-11-28 11:42:03",
+    "last_nonempty_at": "2026-11-28 11:42:03",
+    "live_count": 9,
     "archived_count": 200,
-    "active_matches": 30,
+    "active_matches": 53,
     "llm_providers": [
       "local",
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-11-28 09:07:22"
+    "checked_at": "2026-11-28 11:42:03"
   }
 }
