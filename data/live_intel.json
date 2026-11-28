@@ -1,7 +1,37 @@
 {
-  "updated_at": "2026-11-28 14:44:01",
-  "total_tips": 10,
+  "updated_at": "2026-11-28 15:43:51",
+  "total_tips": 11,
   "live_feed": [
+    {
+      "id": 17236,
+      "channel": "matchplug",
+      "time": "2026-11-28 14:22",
+      "code": "周六011",
+      "key": "20261128_周六011",
+      "league": "英超",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "曼联 VS 布伦特",
+      "chinese": "周六011英超，红魔（曼联）主场迎战蜜蜂（布伦特）。外盘指数直指双方进球（GG），1.51中低水防守端漏洞大，不纠结胜负，直奔对攻入市，胆拖必备，跟上！",
+      "original": "Manchester United vs Brentford Premier League · 15:00 UTC Market: BTTS/GG Pick: GG Odds: 1.51",
+      "translated": true,
+      "channel_weight": 0.5
+    },
+    {
+      "id": 16838,
+      "channel": "football_predictions_ai",
+      "time": "2026-11-27 01:00",
+      "code": "周六011",
+      "key": "20261128_周六011",
+      "league": "英超",
+      "category": "推单",
+      "is_tip": true,
+      "match": "曼联 VS 布伦特",
+      "chinese": "曼联对布伦特这场，机构就认双方进球，开1.47、六成三概率，倾向两队都能破门。布伦特这季8个点球全进，锋线稳当。伤停阵容没动静，盘口方向清楚，别的联赛花絮甭搭理。",
+      "original": "🏆 WEEKEND PREVIEW 🏴󠁧󠁢󠁥󠁮󠁧󠁿 Premier League 📊 Season Trends (110 matches) ⚽ Avg goals/match: 2.75 · Over 2.5 in 47% 🏠 Home win 44% · Draw 27% · Away win 29% 🎯 BTTS",
+      "translated": true,
+      "channel_weight": 0.5
+    },
     {
       "id": 17235,
       "channel": "matchplug",
@@ -134,21 +164,6 @@
       "match": "斯图加特 VS 法兰克福",
       "chinese": "周六018 斯图加特坐镇法兰克福，外盘三串一头胆锁定双方进球@1.30，德甲攻大守小典型局，伤停无核心变动，盘口纹丝不动，单博双响炮稳健。",
       "original": "🎰 WEEKEND ACCUMULATOR 1. 🇩🇪 Bundesliga VfB Stuttgart vs Eintracht Frankfurt · Sat 17:30 UTC 💡 BTTS: Yes @ 1.30 2. 🇪🇸 La Liga Real Madrid vs Alaves · Sat 20:00 U",
-      "translated": true,
-      "channel_weight": 0.5
-    },
-    {
-      "id": 16838,
-      "channel": "football_predictions_ai",
-      "time": "2026-11-27 01:00",
-      "code": "周六011",
-      "key": "20261128_周六011",
-      "league": "英超",
-      "category": "推单",
-      "is_tip": true,
-      "match": "曼联 VS 布伦特",
-      "chinese": "曼联对布伦特这场，机构就认双方进球，开1.47、六成三概率，倾向两队都能破门。布伦特这季8个点球全进，锋线稳当。伤停阵容没动静，盘口方向清楚，别的联赛花絮甭搭理。",
-      "original": "🏆 WEEKEND PREVIEW 🏴󠁧󠁢󠁥󠁮󠁧󠁿 Premier League 📊 Season Trends (110 matches) ⚽ Avg goals/match: 2.75 · Over 2.5 in 47% 🏠 Home win 44% · Draw 27% · Away win 29% 🎯 BTTS",
       "translated": true,
       "channel_weight": 0.5
     }
@@ -3157,16 +3172,16 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-11-28 14:44:01",
-    "last_nonempty_at": "2026-11-28 14:44:01",
-    "live_count": 10,
+    "last_updated": "2026-11-28 15:43:51",
+    "last_nonempty_at": "2026-11-28 15:43:51",
+    "live_count": 11,
     "archived_count": 200,
-    "active_matches": 53,
+    "active_matches": 52,
     "llm_providers": [
       "local",
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-11-28 14:44:01"
+    "checked_at": "2026-11-28 15:43:51"
   }
 }
