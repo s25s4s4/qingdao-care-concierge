@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-11-28 11:42:03",
-  "total_tips": 9,
+  "updated_at": "2026-11-28 14:44:01",
+  "total_tips": 10,
   "live_feed": [
+    {
+      "id": 17235,
+      "channel": "matchplug",
+      "time": "2026-11-28 14:21",
+      "code": "周六012",
+      "key": "20261128_周六012",
+      "league": "英超",
+      "category": "赛前军情",
+      "is_tip": false,
+      "match": "利兹联 VS 考文垂",
+      "chinese": "周六012英超，利兹联（利兹联）主场对考文垂（考文垂）。外盘只给了个方向：双方进球，水位1.81，机构就认这个。伤停、阵容、资金异动一概没提，咱不瞎编。就盯双方进球，1.81能下手。",
+      "original": "Leeds vs Coventry Premier League · 15:00 UTC Market: BTTS/GG Pick: GG Odds: 1.81",
+      "translated": true,
+      "channel_weight": 0.5
+    },
     {
       "id": 17160,
       "channel": "FabrizioRomano",
@@ -3142,9 +3157,9 @@
   ],
   "health": {
     "stale": false,
-    "last_updated": "2026-11-28 11:42:03",
-    "last_nonempty_at": "2026-11-28 11:42:03",
-    "live_count": 9,
+    "last_updated": "2026-11-28 14:44:01",
+    "last_nonempty_at": "2026-11-28 14:44:01",
+    "live_count": 10,
     "archived_count": 200,
     "active_matches": 53,
     "llm_providers": [
@@ -3152,6 +3167,6 @@
       "openrouter"
     ],
     "fuzzy_index": true,
-    "checked_at": "2026-11-28 11:42:03"
+    "checked_at": "2026-11-28 14:44:01"
   }
 }
